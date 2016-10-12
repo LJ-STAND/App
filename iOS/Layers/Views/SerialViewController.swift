@@ -49,7 +49,6 @@ class SerialViewController: UIViewController {
     
     func connect() {
         MKAsync.main {
-            //Show Status
             CRToastManager.dismissAllNotifications(true)
             
             let options = [
@@ -72,8 +71,6 @@ class SerialViewController: UIViewController {
                     alert.addAction(UIAlertAction(title: item.peripheral.name, style: UIAlertActionStyle.default, handler: { (action) in
                         self.selectedPeripheral = item.peripheral
                         serial.connectToPeripheral(item.peripheral)
-//                        self.connectingAlert = UIAlertController(title: "Connecting...", message: nil, preferredStyle: .alert)
-//                        self.present(self.connectingAlert, animated: true, completion: nil)
                     }))
                 }
                 
@@ -98,7 +95,7 @@ class SerialViewController: UIViewController {
 extension SerialViewController: BluetoothSerialDelegate {
     
     func serialDidDiscoverPeripheral(_ peripheral: CBPeripheral, RSSI: NSNumber?) {
-        // check whether it is a duplicate
+        
         for exisiting in peripherals {
             if exisiting.peripheral.identifier == peripheral.identifier { return }
         }
@@ -112,7 +109,6 @@ extension SerialViewController: BluetoothSerialDelegate {
     }
     
     func serialDidConnect(_ peripheral: CBPeripheral) {
-//        connectingAlert.removeFromParentViewController()
         let options = [
             kCRToastTextKey: "Connected to \(peripheral.name!)!",
             kCRToastTextAlignmentKey: NSTextAlignment.center,
@@ -120,6 +116,10 @@ extension SerialViewController: BluetoothSerialDelegate {
             ] as [String : Any]
         
         CRToastManager.showNotification(options: options, completionBlock: {})
+        
+        let text = "Connected to \(peripheral.name!) \n\n"
+        serialOutputTextView.text = text
+        
     }
     
     func serialDidFailToConnect(_ peripheral: CBPeripheral, error: NSError?) {
@@ -131,13 +131,10 @@ extension SerialViewController: BluetoothSerialDelegate {
         
         CRToastManager.showNotification(options: options, completionBlock: {})
         sleep(1)
-//        connectingAlert.removeFromParentViewController()
         connect()
     }
     
     func serialDidReceiveString(_ message: String) {
-        //TODO: Append to TextView
-//        log.debug(message)
         var text = serialOutputTextView.text!
         text += message
         serialOutputTextView.text = text
@@ -150,6 +147,6 @@ extension SerialViewController: BluetoothSerialDelegate {
     }
     
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
-        //TODO: Handle Disconnect
+        connect()
     }
 }

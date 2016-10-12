@@ -34,8 +34,7 @@ class circularView: UIView {
         tsops = []
         
         let interval = Double(360/numberOfTSOPS)
-        let hypt = Double(self.frame.width - 200)
-        
+        let hypt = Double(self.frame.width - 210)
         
         for i in 1...numberOfTSOPS {
             

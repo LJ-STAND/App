@@ -13,11 +13,14 @@ class TSOPViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let width = self.view.frame.width
         let height = self.view.frame.height
+        
         tsopView = circularView(frame: CGRect(x: 0, y: 120, width: width, height: width))
         tsopView.drawTSOPS(numberOfTSOPS: 24)
         tsopView.setCurrent(current: 0)
+        
         self.view.addSubview(tsopView)
     }
     
