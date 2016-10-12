@@ -40,7 +40,6 @@ class SerialViewController: UIViewController {
     }
     
     func reloadView() {
-        log.debug("")
         serial.delegate = self
         
         if !serial.isReady {
@@ -145,11 +144,37 @@ extension SerialViewController: BluetoothSerialDelegate {
     }
     
     func serialDidReceiveString(_ message: String) {
-        var text = serialOutputTextView.text!
-        text += message
-        serialOutputTextView.text = text
-        self.textViewScrollToBottom()
-        log.debug("Recieved String")
+        let comps = message.components(separatedBy: ";")
+        
+        if comps.count > 1 {
+            //We have some Merrick Data
+            
+            if comps[0] == "2" {
+                //log.debug("TSOP: \(comps[1])")
+                
+                let tsopstr = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
+                
+                guard let active = Int(tsopstr) else {
+                    return
+                }
+                
+                log.debug(active)
+                let notif = Notification(name: NSNotification.Name(rawValue: "newActive"), object: active, userInfo: nil)
+                NotificationCenter.default.post(notif)
+            }
+            
+            log.debug(comps)
+            
+        } else {
+            //Boring data
+            var text = serialOutputTextView.text!
+            text += message
+            serialOutputTextView.text = text
+            self.textViewScrollToBottom()
+        }
+        
+        
+        
     }
     
     func serialDidChangeState() {

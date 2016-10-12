@@ -7,21 +7,35 @@
 //
 
 import UIKit
+import CoreBluetooth
+import MKKit
+
 
 class TSOPViewController: UIViewController {
+    
     var tsopView: circularView = circularView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let width = self.view.frame.width - 40
         
-        let width = self.view.frame.width
-        
-        tsopView = circularView(frame: CGRect(x: 0, y: 120, width: width, height: width))
+        tsopView = circularView(frame: CGRect(x: 20, y: 120, width: width, height: width))
         tsopView.drawTSOPS(numberOfTSOPS: 24)
         tsopView.setCurrent(current: 0)
         
         self.view.addSubview(tsopView)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.newActive), name: NSNotification.Name(rawValue: "newActive"), object: nil)
     }
     
-    
+    func newActive(notification: Notification) {
+        log.info("New Active")
+        guard let tsopNum = notification.object as? Int else {
+            return
+        }
+        
+        tsopView.setCurrent(current: tsopNum)
+        log.debug(tsopNum)
+    }
+
 }
