@@ -130,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				EF1B7C2C1DAD01D300B3442E /* LJSTAND.entitlements */,
-				AB3793622466EE2A02CBADDD /* Layers */,
+				AB3793622466EE2A02CBADDD /* LJSTAND */,
 				534AB7A34A3D72BAFA984F6B /* Frameworks */,
 				AC5953FE6C17FE0FB64BBF47 /* Products */,
 			);
@@ -212,7 +212,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		AB3793622466EE2A02CBADDD /* Layers */ = {
+		AB3793622466EE2A02CBADDD /* LJSTAND */ = {
 			isa = PBXGroup;
 			children = (
 				75D7C917E0C54D37E9FEED01 /* Extensions */,
@@ -223,7 +223,7 @@
 				977C38B4FBB19B1FBC4ACC8D /* Views */,
 				1071F4B8BC77949A586EFAB9 /* Resources */,
 			);
-			path = Layers;
+			path = LJSTAND;
 			sourceTree = "<group>";
 		};
 		AC5953FE6C17FE0FB64BBF47 /* Products */ = {
@@ -424,7 +424,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Layers/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/LJSTAND/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -564,7 +564,7 @@
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "Layers/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/LJSTAND/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
