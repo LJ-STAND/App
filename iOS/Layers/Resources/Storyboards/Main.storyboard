@@ -148,17 +148,17 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zDX-I3-2Ea" id="dU2-vY-52O">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nn-Xy-X5p">
-                                                    <rect key="frame" x="15" y="0.0" width="220" height="43.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="220" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDV-O6-HFy">
-                                                    <rect key="frame" x="243" y="0.0" width="124" height="43.5"/>
+                                                    <rect key="frame" x="243" y="0.0" width="124" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="124" id="1iS-rk-gNz"/>
                                                     </constraints>
@@ -303,8 +303,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ngS-Q1-etf">
-                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngS-Q1-etf">
+                                <rect key="frame" x="0.0" y="110" width="375" height="508"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -317,7 +317,7 @@
                                 </constraints>
                                 <state key="normal" title="Send"/>
                                 <connections>
-                                    <action selector="sendAction:" destination="RcR-ls-FlW" eventType="touchUpInside" id="LuP-qW-eup"/>
+                                    <action selector="sendAction:" destination="RcR-ls-FlW" eventType="touchUpInside" id="Pfo-Sg-2rk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -325,12 +325,13 @@
                         <constraints>
                             <constraint firstItem="MCr-LH-JsF" firstAttribute="top" secondItem="sce-86-HTA" secondAttribute="bottom" constant="8" id="66f-t1-9nh"/>
                             <constraint firstItem="yY5-t0-y6Q" firstAttribute="top" secondItem="sce-86-HTA" secondAttribute="bottom" constant="8" id="8aY-Sf-qk5"/>
+                            <constraint firstAttribute="bottom" secondItem="ngS-Q1-etf" secondAttribute="bottom" constant="49" id="C8p-or-nOu"/>
                             <constraint firstItem="yY5-t0-y6Q" firstAttribute="leading" secondItem="MCr-LH-JsF" secondAttribute="trailing" constant="8" id="D5K-Mc-kQh"/>
-                            <constraint firstItem="ngS-Q1-etf" firstAttribute="leading" secondItem="798-eB-VWa" secondAttribute="leading" id="Ixp-1R-rrg"/>
+                            <constraint firstItem="ngS-Q1-etf" firstAttribute="top" secondItem="yY5-t0-y6Q" secondAttribute="bottom" constant="8" id="Uhp-83-KsY"/>
                             <constraint firstItem="yY5-t0-y6Q" firstAttribute="trailing" secondItem="798-eB-VWa" secondAttribute="trailingMargin" id="XTf-b2-5a8"/>
-                            <constraint firstAttribute="bottom" secondItem="ngS-Q1-etf" secondAttribute="bottom" id="fh7-53-293"/>
-                            <constraint firstAttribute="trailing" secondItem="ngS-Q1-etf" secondAttribute="trailing" id="hqC-z7-5SR"/>
+                            <constraint firstItem="ngS-Q1-etf" firstAttribute="leading" secondItem="798-eB-VWa" secondAttribute="leading" id="l5y-EB-0Ya"/>
                             <constraint firstItem="MCr-LH-JsF" firstAttribute="leading" secondItem="798-eB-VWa" secondAttribute="leadingMargin" id="ru9-SX-FZY"/>
+                            <constraint firstAttribute="trailing" secondItem="ngS-Q1-etf" secondAttribute="trailing" id="syj-id-Eie"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Serial" id="uIQ-Eq-CDd"/>
@@ -341,7 +342,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z0b-DF-KyF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="1333.5832083958021"/>
+            <point key="canvasLocation" x="2140" y="1334"/>
         </scene>
         <!--Serial-->
         <scene sceneID="EKU-4L-CPD">
@@ -355,7 +356,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="RcR-ls-FlW" kind="relationship" relationship="rootViewController" id="Afm-wr-iCe"/>
+                        <segue destination="RcR-ls-FlW" kind="relationship" relationship="rootViewController" id="9GP-ER-mbn"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6O-N8-ZYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
