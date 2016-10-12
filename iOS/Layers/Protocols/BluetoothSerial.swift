@@ -1,5 +1,5 @@
 //
-//  BluetoothController.swift
+//  BluetoothSerial.swift
 //  Layers
 //
 //  Created by Lachlan Grant on 11/10/16.
@@ -84,7 +84,7 @@ final class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDel
         if let p = connectedPeripheral {
             centralManager.cancelPeripheralConnection(p)
         } else if let p = pendingPeripheral {
-            centralManager.cancelPeripheralConnection(p) //TODO: Test whether its neccesary to set p to nil
+            centralManager.cancelPeripheralConnection(p)
         }
     }
     

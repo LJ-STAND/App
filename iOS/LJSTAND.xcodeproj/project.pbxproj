@@ -13,6 +13,7 @@
 		B9215D9DD3C26BAAD83D9B7A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1252703980DAFDF3C1A6F9D1 /* Settings.bundle */; };
 		D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE59898617C260F3B4780CF /* Images.xcassets */; };
 		D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */; };
+		EF1635D71DADC3E200D71C66 /* TestingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1635D61DADC3E200D71C66 /* TestingVC.swift */; };
 		EF1B7C141DACFF0900B3442E /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A61DAB8B3500976700 /* MKKit.framework */; };
 		EF1B7C151DACFF0900B3442E /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A71DAB8B3500976700 /* XCGLogger.framework */; };
 		EF1B7C161DACFF0900B3442E /* SwiftyStoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A81DAB8B3500976700 /* SwiftyStoreKit.framework */; };
@@ -32,7 +33,8 @@
 		EF1B7C251DACFF7100B3442E /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9AB1DAB8B3500976700 /* DropDown.framework */; };
 		EF1B7C261DACFF7100B3442E /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9AB1DAB8B3500976700 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF1B7C2B1DAD01D300B3442E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */; };
-		EF22B9D31DAC2C1B0039F1B1 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22B9D21DAC2C1B0039F1B1 /* BluetoothController.swift */; };
+		EF1B7C2E1DAD8A1900B3442E /* TSOPRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1B7C2D1DAD8A1900B3442E /* TSOPRing.swift */; };
+		EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,9 +67,11 @@
 		886869AA91C9C729AA88271F /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFE59898617C260F3B4780CF /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8E706015D603F83004748A1 /* LJSTAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJSTAND.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1635D61DADC3E200D71C66 /* TestingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingVC.swift; sourceTree = "<group>"; };
 		EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		EF1B7C2C1DAD01D300B3442E /* LJSTAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LJSTAND.entitlements; sourceTree = "<group>"; };
-		EF22B9D21DAC2C1B0039F1B1 /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
+		EF1B7C2D1DAD8A1900B3442E /* TSOPRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPRing.swift; sourceTree = "<group>"; };
+		EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 		EF5EB9A61DAB8B3500976700 /* MKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKKit.framework; path = Carthage/Build/iOS/MKKit.framework; sourceTree = "<group>"; };
 		EF5EB9A71DAB8B3500976700 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		EF5EB9A81DAB8B3500976700 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyStoreKit.framework; path = Carthage/Build/iOS/SwiftyStoreKit.framework; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 		977C38B4FBB19B1FBC4ACC8D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EF1B7C2D1DAD8A1900B3442E /* TSOPRing.swift */,
+				EF1635D61DADC3E200D71C66 /* TestingVC.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,7 +234,7 @@
 		C8BB61B6AAC040A7B0BF5B9C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				EF22B9D21DAC2C1B0039F1B1 /* BluetoothController.swift */,
+				EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -389,8 +395,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF1B7C2E1DAD8A1900B3442E /* TSOPRing.swift in Sources */,
 				D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */,
-				EF22B9D31DAC2C1B0039F1B1 /* BluetoothController.swift in Sources */,
+				EF1635D71DADC3E200D71C66 /* TestingVC.swift in Sources */,
+				EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +427,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lachlangrant.LJSTAND;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -558,6 +567,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lachlangrant.LJSTAND;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
