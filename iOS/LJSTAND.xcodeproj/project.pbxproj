@@ -14,6 +14,7 @@
 		D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE59898617C260F3B4780CF /* Images.xcassets */; };
 		D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */; };
 		EF1635D71DADC3E200D71C66 /* TestingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1635D61DADC3E200D71C66 /* TestingVC.swift */; };
+		EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */; };
 		EF1B7C141DACFF0900B3442E /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A61DAB8B3500976700 /* MKKit.framework */; };
 		EF1B7C151DACFF0900B3442E /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A71DAB8B3500976700 /* XCGLogger.framework */; };
 		EF1B7C161DACFF0900B3442E /* SwiftyStoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A81DAB8B3500976700 /* SwiftyStoreKit.framework */; };
@@ -68,6 +69,7 @@
 		AFE59898617C260F3B4780CF /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8E706015D603F83004748A1 /* LJSTAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJSTAND.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1635D61DADC3E200D71C66 /* TestingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingVC.swift; sourceTree = "<group>"; };
+		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
 		EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		EF1B7C2C1DAD01D300B3442E /* LJSTAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LJSTAND.entitlements; sourceTree = "<group>"; };
 		EF1B7C2D1DAD8A1900B3442E /* TSOPRing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPRing.swift; sourceTree = "<group>"; };
@@ -203,8 +205,9 @@
 		977C38B4FBB19B1FBC4ACC8D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EF1B7C2D1DAD8A1900B3442E /* TSOPRing.swift */,
 				EF1635D61DADC3E200D71C66 /* TestingVC.swift */,
+				EF1B7C2D1DAD8A1900B3442E /* TSOPRing.swift */,
+				EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */,
 				EF1635D71DADC3E200D71C66 /* TestingVC.swift in Sources */,
 				EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */,
+				EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

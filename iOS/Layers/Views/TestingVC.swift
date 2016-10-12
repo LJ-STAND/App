@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreBluetooth
+import MKKit
 
 class TestingVC: UIViewController, BluetoothSerialDelegate {
     var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
@@ -17,8 +18,8 @@ class TestingVC: UIViewController, BluetoothSerialDelegate {
     override func viewDidLoad() {
         serial = BluetoothSerial(delegate: self)
         serial.writeType = .withoutResponse
-        
     }
+    
     @IBAction func scanAction(_ sender: AnyObject) {
         log.debug("Starting Scan")
         serial.startScan()
@@ -70,7 +71,7 @@ class TestingVC: UIViewController, BluetoothSerialDelegate {
         
         log.debug("Connection Failed")
     }
-
+    
     
     func serialDidChangeState() {
         //reloadView()

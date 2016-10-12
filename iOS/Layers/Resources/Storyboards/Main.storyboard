@@ -10,7 +10,7 @@
         <!--TSOP-->
         <scene sceneID="TxB-IO-KJ3">
             <objects>
-                <viewController id="E0X-v7-XBp" sceneMemberID="viewController">
+                <viewController id="E0X-v7-XBp" customClass="TSOPViewController" customModule="LJSTAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ALV-hk-cw2"/>
                         <viewControllerLayoutGuide type="bottom" id="hNp-3d-cHv"/>
@@ -127,7 +127,7 @@
         <!--Connect-->
         <scene sceneID="SSZ-if-wRV">
             <objects>
-                <viewController id="7Ql-GY-ly1" customClass="ScannerViewController" customModule="LJSTAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Ql-GY-ly1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bRS-wU-ufg"/>
                         <viewControllerLayoutGuide type="bottom" id="oeG-LH-9a4"/>
@@ -172,10 +172,6 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="7Ql-GY-ly1" id="UaR-8c-CNL"/>
-                                    <outlet property="delegate" destination="7Ql-GY-ly1" id="4Ww-2G-Tbc"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -187,21 +183,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Connect" id="Hve-h2-FDg">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="dae-zX-PR2">
-                            <connections>
-                                <action selector="cancel:" destination="7Ql-GY-ly1" id="PiW-Cv-Do6"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="F3Q-dH-oTT">
-                            <connections>
-                                <action selector="tryAgain:" destination="7Ql-GY-ly1" id="mCG-6f-kLW"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="dae-zX-PR2"/>
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" id="F3Q-dH-oTT"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="tableView" destination="iwd-tS-iV7" id="e1S-8s-G6R"/>
-                        <outlet property="tryAgainButton" destination="F3Q-dH-oTT" id="Bld-Y3-aBQ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tZa-3s-Unc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,7 +203,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="7Ql-GY-ly1" kind="relationship" relationship="rootViewController" id="fPL-KB-Dw7"/>
+                        <segue destination="7Ql-GY-ly1" kind="relationship" relationship="rootViewController" id="sLq-2Y-kt0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBJ-Vc-hdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
