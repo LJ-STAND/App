@@ -15,7 +15,6 @@ class TSOPViewController: UIViewController {
         super.viewDidLoad()
         
         let width = self.view.frame.width
-        let height = self.view.frame.height
         
         tsopView = circularView(frame: CGRect(x: 0, y: 120, width: width, height: width))
         tsopView.drawTSOPS(numberOfTSOPS: 24)

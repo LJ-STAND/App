@@ -23,10 +23,7 @@ class SerialViewController: UIViewController {
     var selectedPeripheral: CBPeripheral?
     
     override func viewDidLoad() {
-        serial = BluetoothSerial(delegate: self)
-        if !serial.isReady {
-            connect()
-        }
+        reloadView()
         serialOutputTextView.text = ""
         serial.writeType = .withoutResponse
         
@@ -34,8 +31,21 @@ class SerialViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        reloadView()
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    func reloadView() {
+        log.debug("")
+        serial.delegate = self
+        
+        if !serial.isReady {
+            connect()
+        }
     }
     
     func textViewScrollToBottom() {
