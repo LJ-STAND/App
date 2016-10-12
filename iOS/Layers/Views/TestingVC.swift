@@ -50,6 +50,10 @@ class TestingVC: UIViewController, BluetoothSerialDelegate {
         log.debug("Disconnecting")
     }
     
+    @IBAction func checkStatus(_ sender: AnyObject) {
+        print(serial.isReady)
+    }
+    
     func serialDidReceiveString(_ message: String) {
         log.debug(message)
     }

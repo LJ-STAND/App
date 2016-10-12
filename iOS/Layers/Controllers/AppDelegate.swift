@@ -8,9 +8,9 @@
 
 import UIKit
 import MKKit
+import CoreBluetooth
 
 let log = MKLogController().log
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,13 +21,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-//let MessageOptionKey = "MessageOption"
-//let ReceivedMessageOptionKey = "ReceivedMessageOption"
-//let WriteWithResponseKey = "WriteWithResponse"
-//
-//
-//
-//UserDefaults.standard.register(defaults: [MessageOptionKey: MessageOption.noLineEnding.rawValue,
-//                                          ReceivedMessageOptionKey: ReceivedMessageOption.none.rawValue,
-//                                          WriteWithResponseKey: false
-//    ])
