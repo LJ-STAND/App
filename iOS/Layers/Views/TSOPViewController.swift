@@ -35,7 +35,6 @@ class TSOPViewController: UIViewController {
         }
         
         tsopView.setCurrent(current: tsopNum)
-        log.debug(tsopNum)
     }
 
 }

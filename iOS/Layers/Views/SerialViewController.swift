@@ -150,15 +150,12 @@ extension SerialViewController: BluetoothSerialDelegate {
             //We have some Merrick Data
             
             if comps[0] == "2" {
-                //log.debug("TSOP: \(comps[1])")
-                
                 let tsopstr = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
                 
                 guard let active = Int(tsopstr) else {
                     return
                 }
                 
-                log.debug(active)
                 let notif = Notification(name: NSNotification.Name(rawValue: "newActive"), object: active, userInfo: nil)
                 NotificationCenter.default.post(notif)
             }
