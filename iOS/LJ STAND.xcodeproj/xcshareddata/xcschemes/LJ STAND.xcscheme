@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D020986916FA04E7BBD68098"
-               BuildableName = "LJSTAND.app"
-               BlueprintName = "LJSTAND"
-               ReferencedContainer = "container:LJSTAND.xcodeproj">
+               BuildableName = "LJ STAND.app"
+               BlueprintName = "LJ STAND"
+               ReferencedContainer = "container:LJ STAND.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "C4870DBC490E7A54F1AF0C7B"
                BuildableName = "UnitTests.xctest"
                BlueprintName = "UnitTests"
-               ReferencedContainer = "container:LJSTAND.xcodeproj">
+               ReferencedContainer = "container:LJ STAND.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D020986916FA04E7BBD68098"
-            BuildableName = "LJSTAND.app"
-            BlueprintName = "LJSTAND"
-            ReferencedContainer = "container:LJSTAND.xcodeproj">
+            BuildableName = "LJ STAND.app"
+            BlueprintName = "LJ STAND"
+            ReferencedContainer = "container:LJ STAND.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D020986916FA04E7BBD68098"
-            BuildableName = "LJSTAND.app"
-            BlueprintName = "LJSTAND"
-            ReferencedContainer = "container:LJSTAND.xcodeproj">
+            BuildableName = "LJ STAND.app"
+            BlueprintName = "LJ STAND"
+            ReferencedContainer = "container:LJ STAND.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D020986916FA04E7BBD68098"
-            BuildableName = "LJSTAND.app"
-            BlueprintName = "LJSTAND"
-            ReferencedContainer = "container:LJSTAND.xcodeproj">
+            BuildableName = "LJ STAND.app"
+            BlueprintName = "LJ STAND"
+            ReferencedContainer = "container:LJ STAND.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

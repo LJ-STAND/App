@@ -66,7 +66,7 @@
 		581C1A4891F43E30617A28DB /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		886869AA91C9C729AA88271F /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFE59898617C260F3B4780CF /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C8E706015D603F83004748A1 /* LJSTAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LJSTAND.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8E706015D603F83004748A1 /* LJ STAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LJ STAND.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1635D61DADC3E200D71C66 /* TestingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingVC.swift; sourceTree = "<group>"; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
 		EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
@@ -229,7 +229,7 @@
 		AC5953FE6C17FE0FB64BBF47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C8E706015D603F83004748A1 /* LJSTAND.app */,
+				C8E706015D603F83004748A1 /* LJ STAND.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,9 +253,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D020986916FA04E7BBD68098 /* LJSTAND */ = {
+		D020986916FA04E7BBD68098 /* LJ STAND */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJSTAND" */;
+			buildConfigurationList = F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJ STAND" */;
 			buildPhases = (
 				876DD3D9D9926CE2EBE64DDB /* Sources */,
 				EF1B7C1A1DACFF1B00B3442E /* Carthage */,
@@ -270,9 +270,9 @@
 			);
 			dependencies = (
 			);
-			name = LJSTAND;
+			name = "LJ STAND";
 			productName = Layers;
-			productReference = C8E706015D603F83004748A1 /* LJSTAND.app */;
+			productReference = C8E706015D603F83004748A1 /* LJ STAND.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -297,7 +297,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4B642AFBC9C0D7805E207890 /* Build configuration list for PBXProject "LJSTAND" */;
+			buildConfigurationList = 4B642AFBC9C0D7805E207890 /* Build configuration list for PBXProject "LJ STAND" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -309,7 +309,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D020986916FA04E7BBD68098 /* LJSTAND */,
+				D020986916FA04E7BBD68098 /* LJ STAND */,
 			);
 		};
 /* End PBXProject section */
@@ -581,7 +581,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B642AFBC9C0D7805E207890 /* Build configuration list for PBXProject "LJSTAND" */ = {
+		4B642AFBC9C0D7805E207890 /* Build configuration list for PBXProject "LJ STAND" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				50B81CF5791DF42581CEB360 /* Debug */,
@@ -590,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJSTAND" */ = {
+		F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJ STAND" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F703D29C38C3E92F300FDC2 /* Release */,
