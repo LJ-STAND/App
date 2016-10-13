@@ -23,6 +23,7 @@ class SerialViewController: UIViewController {
     var selectedPeripheral: CBPeripheral?
     
     override func viewDidLoad() {
+        serial = BluetoothSerial(delegate: self)
         reloadView()
         serialOutputTextView.text = ""
         serial.writeType = .withoutResponse

@@ -17,7 +17,6 @@ class circularView: UIView {
         self.backgroundColor = UIColor.lightGray
         self.layer.cornerRadius = frame.width/2
         self.clipsToBounds = true
-        drawTSOPS(numberOfTSOPS: 24)
     }
     
     required init?(coder aDecoder: NSCoder) {
