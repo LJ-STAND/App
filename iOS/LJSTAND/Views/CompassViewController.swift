@@ -10,7 +10,7 @@ import UIKit
 import MKKit
 
 class CompassViewController: UIViewController {
-    
+    @IBOutlet weak var angleLabel: UILabel!
     var compass: CompassView = CompassView()
     
     override func viewDidLoad() {
@@ -32,5 +32,6 @@ class CompassViewController: UIViewController {
         }
         
         compass.rotate(angle: ang)
+        angleLabel.text = "Angle: \(ang)"
     }
 }

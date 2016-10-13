@@ -21,9 +21,24 @@
                     <view key="view" contentMode="scaleToFill" id="VcN-cd-ybD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mx2-yK-nvb">
+                                <rect key="frame" x="16" y="589" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mx2-yK-nvb" firstAttribute="leading" secondItem="VcN-cd-ybD" secondAttribute="leadingMargin" id="Mfh-An-c20"/>
+                            <constraint firstItem="hNp-3d-cHv" firstAttribute="top" secondItem="mx2-yK-nvb" secondAttribute="bottom" constant="8" id="wgO-Rz-3tZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TSOP" id="XGt-lm-neA"/>
+                    <connections>
+                        <outlet property="tsopLabel" destination="mx2-yK-nvb" id="WyS-GJ-GOB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIN-Ik-414" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,7 +84,7 @@
             </objects>
             <point key="canvasLocation" x="1200.8" y="2005.5472263868066"/>
         </scene>
-        <!--Lights-->
+        <!--Compass-->
         <scene sceneID="HWR-1T-B3b">
             <objects>
                 <viewController id="NAj-T6-Tpc" customClass="CompassViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,19 +95,34 @@
                     <view key="view" contentMode="scaleToFill" id="AeP-xa-f7I">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PS-PJ-VrY">
+                                <rect key="frame" x="16" y="589" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7PS-PJ-VrY" firstAttribute="leading" secondItem="AeP-xa-f7I" secondAttribute="leadingMargin" id="Jjm-sL-5uW"/>
+                            <constraint firstItem="H7A-Wt-MZU" firstAttribute="top" secondItem="7PS-PJ-VrY" secondAttribute="bottom" constant="8" id="maS-Jy-TIj"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Lights" id="U1A-NH-kYL"/>
+                    <navigationItem key="navigationItem" title="Compass" id="U1A-NH-kYL"/>
+                    <connections>
+                        <outlet property="angleLabel" destination="7PS-PJ-VrY" id="aED-Lv-xam"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7E-6y-c9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2140" y="2725.1874062968518"/>
         </scene>
-        <!--Lights-->
+        <!--Compass-->
         <scene sceneID="vW4-w2-pmD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ri-AN-RSI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lights" id="ueA-te-T2a"/>
+                    <tabBarItem key="tabBarItem" title="Compass" id="ueA-te-T2a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tyQ-nz-Bcu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>

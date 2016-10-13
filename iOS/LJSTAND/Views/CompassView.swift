@@ -18,13 +18,13 @@ class CompassView: UIView {
         self.layer.cornerRadius = frame.width/2
         self.clipsToBounds = true
         
-        self.needle = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.width/2, height: 10))
+        self.needle = UIView(frame: CGRect(x: self.frame.width / 4, y: self.frame.height / 2, width: self.frame.width/2, height: 10))
         self.needle.backgroundColor = .green
         self.needle.layer.cornerRadius = 5
         self.needle.clipsToBounds = true
         
-        self.needle.layer.anchorPoint = CGPoint(x: 0, y: 0)
-        self.needle.frame.origin = self.center
+        self.needle.layer.anchorPoint = CGPoint(x: 0, y: 0.5)
+//        self.needle.frame.origin = self.center
         self.addSubview(needle)
     }
     
@@ -35,6 +35,7 @@ class CompassView: UIView {
     func rotate(angle:Double) {
         let rad = degToRad(angle: angle)
         self.needle.transform = CGAffineTransform(rotationAngle: CGFloat(rad))
+//        self.needle.center = self.center
     }
     
     func degToRad(angle: Double) -> Double {

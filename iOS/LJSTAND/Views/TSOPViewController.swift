@@ -13,6 +13,7 @@ import MKKit
 
 class TSOPViewController: UIViewController {
     
+    @IBOutlet weak var tsopLabel: UILabel!
     var tsopView: circularView = circularView()
     
     override func viewDidLoad() {
@@ -33,6 +34,7 @@ class TSOPViewController: UIViewController {
             return
         }
         
+        tsopLabel.text = "Current TSOP: \(tsopNum)"
         tsopView.setCurrent(current: tsopNum)
     }
 
