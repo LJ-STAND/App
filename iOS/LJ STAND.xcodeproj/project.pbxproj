@@ -34,6 +34,7 @@
 		EF1B7C2B1DAD01D300B3442E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */; };
 		EF1B7C2E1DAD8A1900B3442E /* TSOPRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1B7C2D1DAD8A1900B3442E /* TSOPRing.swift */; };
 		EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */; };
+		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		EF5EB9A91DAB8B3500976700 /* CRToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CRToast.framework; path = Carthage/Build/iOS/CRToast.framework; sourceTree = "<group>"; };
 		EF5EB9AA1DAB8B3500976700 /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
 		EF5EB9AB1DAB8B3500976700 /* DropDown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropDown.framework; path = Carthage/Build/iOS/DropDown.framework; sourceTree = "<group>"; };
+		EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,8 +205,9 @@
 			isa = PBXGroup;
 			children = (
 				EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */,
-				EF1B7C2D1DAD8A1900B3442E /* TSOPRing.swift */,
 				EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */,
+				EF1B7C2D1DAD8A1900B3442E /* TSOPRing.swift */,
+				EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				EF1B7C2E1DAD8A1900B3442E /* TSOPRing.swift in Sources */,
 				D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */,
 				EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */,
+				EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */,
 				EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */,
 				EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */,
 			);

@@ -161,8 +161,6 @@ extension SerialViewController: BluetoothSerialDelegate {
                 NotificationCenter.default.post(notif)
             }
             
-            log.debug(comps)
-            
         } else {
             //Boring data
             var text = serialOutputTextView.text!
