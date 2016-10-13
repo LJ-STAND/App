@@ -29,7 +29,6 @@ class TSOPViewController: UIViewController {
     }
     
     func newActive(notification: Notification) {
-        log.info("New Active")
         guard let tsopNum = notification.object as? Int else {
             return
         }

@@ -159,6 +159,17 @@ extension SerialViewController: BluetoothSerialDelegate {
                 
                 let notif = Notification(name: NSNotification.Name(rawValue: "newActive"), object: active, userInfo: nil)
                 NotificationCenter.default.post(notif)
+            } else if comps[0] == "4" {
+                
+                let ang = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
+                
+                guard let angle = Double(ang) else {
+                    return
+                }
+                
+                let notif = Notification(name: Notification.Name(rawValue: "newCompass"), object: angle, userInfo: nil)
+                NotificationCenter.default.post(notif)
+                
             }
             
         } else {

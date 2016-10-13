@@ -72,7 +72,7 @@
         <!--Lights-->
         <scene sceneID="HWR-1T-B3b">
             <objects>
-                <viewController id="NAj-T6-Tpc" sceneMemberID="viewController">
+                <viewController id="NAj-T6-Tpc" customClass="CompassViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cKU-Wc-0uI"/>
                         <viewControllerLayoutGuide type="bottom" id="H7A-Wt-MZU"/>
