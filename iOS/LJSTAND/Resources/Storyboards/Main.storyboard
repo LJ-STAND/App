@@ -69,7 +69,7 @@
         <scene sceneID="Pht-gu-XQS">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Lv-Dx-lxZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="TSOP" id="8hn-FL-sIH"/>
+                    <tabBarItem key="tabBarItem" title="TSOP" image="TSOP" id="8hn-FL-sIH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VJT-gi-bDN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -122,7 +122,7 @@
         <scene sceneID="vW4-w2-pmD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ri-AN-RSI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Compass" id="ueA-te-T2a"/>
+                    <tabBarItem key="tabBarItem" title="Compass" image="Compass" id="ueA-te-T2a"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tyQ-nz-Bcu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -200,7 +200,7 @@
         <scene sceneID="EKU-4L-CPD">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xY0-yC-bjt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Serial" id="3W7-Hv-Czb"/>
+                    <tabBarItem key="tabBarItem" title="Serial" selectedImage="Serial" id="3W7-Hv-Czb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JG9-Q9-vaS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -216,4 +216,9 @@
             <point key="canvasLocation" x="1200.8" y="1333.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Compass" width="30" height="30"/>
+        <image name="Serial" width="30" height="30"/>
+        <image name="TSOP" width="30" height="30"/>
+    </resources>
 </document>
