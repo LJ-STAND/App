@@ -59,15 +59,15 @@ class SerialViewController: UIViewController {
     
     func connect() {
         MKAsync.main {
-            CRToastManager.dismissAllNotifications(true)
-            
-            let options = [
-                kCRToastTextKey: "Scanning for Bluetooth Devices...",
-                kCRToastTextAlignmentKey: NSTextAlignment.center,
-                kCRToastBackgroundColorKey: UIColor.flatBlue()
-                ] as [String : Any]
-            
-            CRToastManager.showNotification(options: options, completionBlock: {})
+            if !CRToastManager.isShowingNotification() {
+                let options = [
+                    kCRToastTextKey: "Scanning for Bluetooth Devices...",
+                    kCRToastBackgroundColorKey: UIColor.flatBlue(),
+                    kCRToastKeepNavigationBarBorderKey: true
+                    ] as [String : Any]
+                
+                CRToastManager.showNotification(options: options, completionBlock: {})
+            }
         }.background {
             serial.startScan()
             sleep(2)
@@ -91,7 +91,6 @@ class SerialViewController: UIViewController {
                 
                 self.present(alert, animated: true, completion: nil)
             } else {
-                CRToastManager.dismissAllNotifications(false)
                 self.connect()
             }
         }
@@ -119,14 +118,11 @@ extension SerialViewController: BluetoothSerialDelegate {
         let theRSSI = RSSI?.floatValue ?? 0.0
         peripherals.append(peripheral: peripheral, RSSI: theRSSI)
         peripherals.sort { $0.RSSI < $1.RSSI }
-        
-        log.debug("Found Device")
     }
     
     func serialDidConnect(_ peripheral: CBPeripheral) {
         let options = [
             kCRToastTextKey: "Connected to \(peripheral.name!)!",
-            kCRToastTextAlignmentKey: NSTextAlignment.center,
             kCRToastBackgroundColorKey: UIColor.flatGreen()
             ] as [String : Any]
         
@@ -140,7 +136,6 @@ extension SerialViewController: BluetoothSerialDelegate {
     func serialDidFailToConnect(_ peripheral: CBPeripheral, error: NSError?) {
         let options = [
             kCRToastTextKey: "Connection Failed. \(error?.localizedDescription)",
-            kCRToastTextAlignmentKey: NSTextAlignment.center,
             kCRToastBackgroundColorKey: UIColor.flatRed()
             ] as [String : Any]
         
@@ -153,8 +148,6 @@ extension SerialViewController: BluetoothSerialDelegate {
         let comps = message.components(separatedBy: ";")
         
         if comps.count > 1 {
-            //We have some Merrick Data
-            
             if comps[0] == "2" {
                 let tsopstr = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
                 
@@ -178,7 +171,6 @@ extension SerialViewController: BluetoothSerialDelegate {
             }
             
         } else {
-            //Boring data
             var text = serialOutputTextView.text!
             text += message
             serialOutputTextView.text = text

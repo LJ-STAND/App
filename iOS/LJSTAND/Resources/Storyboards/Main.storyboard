@@ -31,7 +31,6 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqt-rb-qVs" customClass="tsopRingView" customModule="LJ_STAND" customModuleProvider="target">
                                 <rect key="frame" x="75" y="221" width="225" height="225"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uqt-rb-qVs" secondAttribute="height" multiplier="1:1" id="OCZ-II-yIa"/>
                                 </constraints>
@@ -119,7 +118,6 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Td9-LQ-XI5" customClass="CompassView" customModule="LJ_STAND" customModuleProvider="target">
                                 <rect key="frame" x="75" y="221" width="225" height="225"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Td9-LQ-XI5" secondAttribute="height" multiplier="1:1" id="fGr-Qi-DtJ"/>
                                 </constraints>
