@@ -45,12 +45,12 @@ class CompassView: UIView {
     }
     
     func commonInit() {
-        self.backgroundColor = UIColor.lightGray
+        self.backgroundColor = UIColor.flatGray()
         self.makeCircular()
         
         let center = self.frame.width / 2
         self.needle = UIView(frame: CGRect(x: center - center / 2, y: center, width: center, height: 10))
-        self.needle.backgroundColor = .green
+        self.needle.backgroundColor = .flatGreen()
         self.needle.layer.cornerRadius = 5
         self.needle.clipsToBounds = true
         
