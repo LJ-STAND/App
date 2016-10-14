@@ -146,6 +146,7 @@ extension SerialViewController: BluetoothSerialDelegate {
     
     func serialDidReceiveString(_ message: String) {
         let comps = message.components(separatedBy: ";")
+        log.debug(message)
         
         if comps.count > 1 {
             if comps[0] == "2" {
@@ -157,8 +158,25 @@ extension SerialViewController: BluetoothSerialDelegate {
                 
                 let notif = Notification(name: NSNotification.Name(rawValue: "newActive"), object: active, userInfo: nil)
                 NotificationCenter.default.post(notif)
-            } else if comps[0] == "4" {
+            } else if comps[0] == "3" {
+                let boolArr = Array(comps[1].characters)
                 
+                if boolArr.count == 24 {
+                    var sensorNumbers: [Int] = []
+                    
+                    for i in 1...boolArr.count {
+                        let item = boolArr[i]
+                        let intValue = Int(String(item))
+                        
+                        if (intValue == 1) {
+                            sensorNumbers.append(i)
+                        }
+                    }
+                    
+                    let notif = Notification(name: Notification.Name(rawValue: "newLights"), object: sensorNumbers, userInfo: nil)
+                    NotificationCenter.default.post(notif)
+                }
+            } else if comps[0] == "4" {
                 let ang = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
                 
                 guard let angle = Double(ang) else {
@@ -167,7 +185,6 @@ extension SerialViewController: BluetoothSerialDelegate {
                 
                 let notif = Notification(name: Notification.Name(rawValue: "newCompass"), object: angle, userInfo: nil)
                 NotificationCenter.default.post(notif)
-                
             }
             
         } else {
