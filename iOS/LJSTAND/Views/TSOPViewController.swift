@@ -74,9 +74,7 @@ class tsopRingView: UIView {
         
         for i in 1...numberOfTSOPS {
             
-            //FIXME: Wrong Offset, 90deg off
             let angle = (interval * Double(i)) - degToRad(angle: 90.0)
-//            let angleRad = (angle * M_PI / 180.0)
             let angleRad = degToRad(angle: angle)
             
             let xVal = (Double(self.frame.width/2) + (hypt * sin(angleRad)) - offset)

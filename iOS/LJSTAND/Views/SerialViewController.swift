@@ -182,7 +182,8 @@ extension SerialViewController: BluetoothSerialDelegate {
     }
     
     func serialDidChangeState() {
-        //TODO: Handle State Changes (eg. Disconnect)
+        log.info(serial.centralManager.state)
+        connect()
     }
     
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
