@@ -74,7 +74,6 @@
                         <segue destination="xY0-yC-bjt" kind="relationship" relationship="viewControllers" id="Pna-gJ-iez"/>
                         <segue destination="0Lv-Dx-lxZ" kind="relationship" relationship="viewControllers" id="OQ8-NX-1Qg"/>
                         <segue destination="0ri-AN-RSI" kind="relationship" relationship="viewControllers" id="H5G-0e-2I7"/>
-                        <segue destination="TwV-nv-c5I" kind="relationship" relationship="viewControllers" id="qyI-gI-wx3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eC6-TY-h10" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,25 +166,6 @@
             </objects>
             <point key="canvasLocation" x="1200.8" y="2724.2878560719641"/>
         </scene>
-        <!--Light Sensors-->
-        <scene sceneID="4zE-xr-urr">
-            <objects>
-                <viewController id="m0M-SM-nuN" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cfa-J5-P5g"/>
-                        <viewControllerLayoutGuide type="bottom" id="V7a-h0-fPm"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fpe-aq-Ktf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Light Sensors" id="9LD-wl-a7C"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bRD-Xb-eD1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2140" y="3415.1424287856075"/>
-        </scene>
         <!--Serial-->
         <scene sceneID="2HY-RX-e0a">
             <objects>
@@ -263,25 +243,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6O-N8-ZYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1200.8" y="1333.5832083958021"/>
-        </scene>
-        <!--Light Sensors-->
-        <scene sceneID="PT7-TL-fKk">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TwV-nv-c5I" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Light Sensors" id="How-c1-v0r"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="juV-EB-aPW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="m0M-SM-nuN" kind="relationship" relationship="rootViewController" id="oEo-DL-Pkh"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N2M-aV-Qi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1200.8" y="3414.2428785607199"/>
         </scene>
     </scenes>
     <resources>
