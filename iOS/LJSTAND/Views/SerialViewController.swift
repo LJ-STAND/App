@@ -74,7 +74,12 @@ class SerialViewController: UIViewController {
         }.main {
             serial.stopScan()
             
-            if self.peripherals.count > 0 {
+            if self.peripherals.count == 1 {
+                
+                self.selectedPeripheral = self.peripherals.first?.peripheral
+                serial.connectToPeripheral(self.selectedPeripheral!)
+                
+            } else if self.peripherals.count > 0 {
                 let alert = UIAlertController(title: "Connect to Device", message: nil, preferredStyle: .alert)
                 
                 for item in self.peripherals {
