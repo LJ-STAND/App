@@ -15,13 +15,7 @@ class CompassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let width = self.view.frame.width - 40
-        
-//        compass = CompassView(frame: CGRect(x: 20, y: 120, width: width, height: width))
         compass.rotate(angle: 0.0)
-        
-//        self.view.addSubview(compass)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.newCompass), name: NSNotification.Name(rawValue: "newCompass"), object: nil)
     }
@@ -46,31 +40,27 @@ class CompassView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
         super.init(coder: aDecoder)
         commonInit()
     }
     
     func commonInit() {
         self.backgroundColor = UIColor.lightGray
-//        self.layer.cornerRadius = frame.height/2
-//        self.clipsToBounds = true
         self.makeCircular()
         
-        self.needle = UIView(frame: CGRect(x: self.frame.width / 4, y: self.frame.height / 2, width: self.frame.width/2, height: 10))
+        let center = self.frame.width / 2
+        self.needle = UIView(frame: CGRect(x: center - center / 2, y: center, width: center, height: 10))
         self.needle.backgroundColor = .green
         self.needle.layer.cornerRadius = 5
         self.needle.clipsToBounds = true
         
         self.needle.layer.anchorPoint = CGPoint(x: 0, y: 0.5)
-        //        self.needle.frame.origin = self.center
         self.addSubview(needle)
     }
     
     func rotate(angle:Double) {
         let rad = degToRad(angle: angle)
         self.needle.transform = CGAffineTransform(rotationAngle: CGFloat(rad))
-        //        self.needle.center = self.center
     }
     
     func degToRad(angle: Double) -> Double {

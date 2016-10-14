@@ -10,18 +10,23 @@ import UIKit
 import CoreBluetooth
 import MKKit
 import QuartzCore
+import Chameleon
 
 class TSOPViewController: UIViewController {
     
     @IBOutlet weak var tsopLabel: UILabel!
-    @IBOutlet weak var tsopView: circularView!
+    @IBOutlet weak var tsopView: tsopRingView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tsopView.drawTSOPS(numberOfTSOPS: 24)
         tsopView.setCurrent(current: 0)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.newActive), name: NSNotification.Name(rawValue: "newActive"), object: nil)
+        let rad = 105 * M_PI/180
+        self.tsopView.transform = CGAffineTransform(rotationAngle: CGFloat(rad))
+        
+        let notif = Notification.Name(rawValue: "new Active")
+        NotificationCenter.default.addObserver(self, selector: #selector(self.newActive), name: notif, object: nil)
     }
     
     func newActive(notification: Notification) {
@@ -35,7 +40,7 @@ class TSOPViewController: UIViewController {
 
 }
 
-class circularView: UIView {
+class tsopRingView: UIView {
     var tsops: [tsop] = []
     
     override init(frame: CGRect) {
@@ -44,19 +49,19 @@ class circularView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        //fatalError("init(coder:) has not been implemented")
         super.init(coder: aDecoder)
         commonInit()
     }
     
     func commonInit() {
-        self.backgroundColor = UIColor.lightGray
-//        self.layer.cornerRadius = frame.width/2
-//        self.clipsToBounds = true
+        self.backgroundColor = UIColor.flatGray()
         self.makeCircular()
     }
     
     func drawTSOPS(numberOfTSOPS: Int) {
+        
+        let radOfTSOP = 15.0
+        let offset = radOfTSOP / 2.0
         
         for tsp in tsops {
             tsp.removeFromSuperview()
@@ -65,22 +70,19 @@ class circularView: UIView {
         tsops = []
         
         let interval = Double(360/numberOfTSOPS)
-        let hypt = Double(self.frame.width/2 - 30)
+        let hypt = Double(self.frame.width/2) - radOfTSOP
         
         for i in 1...numberOfTSOPS {
             
-            //Maths stuffs
-            let angle = (interval * Double(i)) - 105
-            let angleRad = (angle * M_PI / 180.0)
+            //FIXME: Wrong Offset, 90deg off
+            let angle = (interval * Double(i)) - degToRad(angle: 90.0)
+//            let angleRad = (angle * M_PI / 180.0)
+            let angleRad = degToRad(angle: angle)
             
-            let radOfTSOP = 15.0
-            let offset = radOfTSOP / 2.0
+            let xVal = (Double(self.frame.width/2) + (hypt * sin(angleRad)) - offset)
+            let yVal = (Double(self.frame.height/2) + (hypt * cos(angleRad)) - offset)
             
-            let hei = (hypt * sin(angleRad)) + Double(self.frame.height / 2) - offset
-            let wid = (hypt * cos(angleRad)) + Double(self.frame.width / 2) - offset
-            
-            
-            let tempTSOP = tsop(frame: CGRect(x: wid, y: hei, width: radOfTSOP, height: radOfTSOP))
+            let tempTSOP = tsop(frame: CGRect(x: xVal, y: yVal, width: radOfTSOP, height: radOfTSOP))
             tempTSOP.setTSOP()
             self.addSubview(tempTSOP)
             
@@ -100,6 +102,10 @@ class circularView: UIView {
         curr.current = true
         curr.setTSOP()
     }
+    
+    func degToRad(angle: Double) -> Double {
+        return (angle - 90) * M_PI/180
+    }
 }
 
 class tsop: UIView {
@@ -107,7 +113,7 @@ class tsop: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .green
+        self.backgroundColor = UIColor.flatBlack()
 //        self.layer.cornerRadius = frame.width/2
 //        self.clipsToBounds = true
         self.makeCircular()
@@ -119,9 +125,9 @@ class tsop: UIView {
     
     func setTSOP() {
         if (current) {
-            self.backgroundColor = .green
+            self.backgroundColor = .flatGreen()
         } else {
-            self.backgroundColor = .black
+            self.backgroundColor = .flatBlack()
         }
     }
     
