@@ -14,17 +14,12 @@ import QuartzCore
 class TSOPViewController: UIViewController {
     
     @IBOutlet weak var tsopLabel: UILabel!
-    var tsopView: circularView = circularView()
+    @IBOutlet weak var tsopView: circularView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let width = self.view.frame.width - 40
-        
-        tsopView = circularView(frame: CGRect(x: 20, y: 120, width: width, height: width))
         tsopView.drawTSOPS(numberOfTSOPS: 24)
         tsopView.setCurrent(current: 0)
-        
-        self.view.addSubview(tsopView)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.newActive), name: NSNotification.Name(rawValue: "newActive"), object: nil)
     }
@@ -45,26 +40,32 @@ class circularView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.lightGray
-        self.layer.cornerRadius = frame.width/2
-        self.clipsToBounds = true
+        commonInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        //fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    func commonInit() {
+        self.backgroundColor = UIColor.lightGray
+//        self.layer.cornerRadius = frame.width/2
+//        self.clipsToBounds = true
+        self.makeCircular()
     }
     
     func drawTSOPS(numberOfTSOPS: Int) {
         
         for tsp in tsops {
             tsp.removeFromSuperview()
-            
         }
         
         tsops = []
         
         let interval = Double(360/numberOfTSOPS)
-        let hypt = Double(self.frame.width - 210)
+        let hypt = Double(self.frame.width/2 - 30)
         
         for i in 1...numberOfTSOPS {
             
@@ -72,11 +73,14 @@ class circularView: UIView {
             let angle = (interval * Double(i)) - 105
             let angleRad = (angle * M_PI / 180.0)
             
-            let hei = (hypt * sin(angleRad)) + Double(self.frame.height / 2) - 15
-            let wid = (hypt * cos(angleRad)) + Double(self.frame.width / 2) - 15
+            let radOfTSOP = 15.0
+            let offset = radOfTSOP / 2.0
+            
+            let hei = (hypt * sin(angleRad)) + Double(self.frame.height / 2) - offset
+            let wid = (hypt * cos(angleRad)) + Double(self.frame.width / 2) - offset
             
             
-            let tempTSOP = tsop(frame: CGRect(x: wid, y: hei, width: 30, height: 30))
+            let tempTSOP = tsop(frame: CGRect(x: wid, y: hei, width: radOfTSOP, height: radOfTSOP))
             tempTSOP.setTSOP()
             self.addSubview(tempTSOP)
             
@@ -104,8 +108,9 @@ class tsop: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .green
-        self.layer.cornerRadius = frame.width/2
-        self.clipsToBounds = true
+//        self.layer.cornerRadius = frame.width/2
+//        self.clipsToBounds = true
+        self.makeCircular()
     }
     
     required init?(coder aDecoder: NSCoder) {

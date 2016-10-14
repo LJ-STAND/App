@@ -28,16 +28,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqt-rb-qVs" customClass="circularView" customModule="LJ_STAND" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="3O0-G8-oaW"/>
+                                    <constraint firstAttribute="height" constant="250" id="dB0-1s-kMz"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mx2-yK-nvb" firstAttribute="leading" secondItem="VcN-cd-ybD" secondAttribute="leadingMargin" id="Mfh-An-c20"/>
+                            <constraint firstItem="uqt-rb-qVs" firstAttribute="centerX" secondItem="VcN-cd-ybD" secondAttribute="centerX" id="eoS-Mo-u2n"/>
+                            <constraint firstItem="uqt-rb-qVs" firstAttribute="centerY" secondItem="VcN-cd-ybD" secondAttribute="centerY" id="hQC-2H-kE1"/>
                             <constraint firstItem="hNp-3d-cHv" firstAttribute="top" secondItem="mx2-yK-nvb" secondAttribute="bottom" constant="8" id="wgO-Rz-3tZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TSOP" id="XGt-lm-neA"/>
                     <connections>
                         <outlet property="tsopLabel" destination="mx2-yK-nvb" id="WyS-GJ-GOB"/>
+                        <outlet property="tsopView" destination="uqt-rb-qVs" id="hpw-rm-75z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIN-Ik-414" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -103,21 +114,32 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Td9-LQ-XI5" customClass="CompassView" customModule="LJ_STAND" customModuleProvider="target">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="T6I-e7-zSm"/>
+                                    <constraint firstAttribute="width" constant="250" id="wTc-8O-Kan"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7PS-PJ-VrY" firstAttribute="leading" secondItem="AeP-xa-f7I" secondAttribute="leadingMargin" id="Jjm-sL-5uW"/>
+                            <constraint firstItem="Td9-LQ-XI5" firstAttribute="centerX" secondItem="AeP-xa-f7I" secondAttribute="centerX" id="Rg0-uj-vuM"/>
                             <constraint firstItem="H7A-Wt-MZU" firstAttribute="top" secondItem="7PS-PJ-VrY" secondAttribute="bottom" constant="8" id="maS-Jy-TIj"/>
+                            <constraint firstItem="Td9-LQ-XI5" firstAttribute="centerY" secondItem="AeP-xa-f7I" secondAttribute="centerY" id="x1v-g1-fNo"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Compass" id="U1A-NH-kYL"/>
                     <connections>
                         <outlet property="angleLabel" destination="7PS-PJ-VrY" id="aED-Lv-xam"/>
+                        <outlet property="compass" destination="Td9-LQ-XI5" id="JsG-ek-jAH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7E-6y-c9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2140" y="2725.1874062968518"/>
+            <point key="canvasLocation" x="2139.375" y="2725"/>
         </scene>
         <!--Compass-->
         <scene sceneID="vW4-w2-pmD">
