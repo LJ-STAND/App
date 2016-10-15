@@ -25,7 +25,7 @@ class TSOPViewController: UIViewController {
         let rad = 105 * M_PI/180
         self.tsopView.transform = CGAffineTransform(rotationAngle: CGFloat(rad))
         
-        let notif = Notification.Name(rawValue: "new Active")
+        let notif = Notification.Name(rawValue: "newActive")
         NotificationCenter.default.addObserver(self, selector: #selector(self.newActive), name: notif, object: nil)
     }
     
