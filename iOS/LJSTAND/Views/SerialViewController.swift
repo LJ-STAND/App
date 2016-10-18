@@ -47,12 +47,10 @@ class SerialViewController: UIViewController {
     }
     
     func keyboardWillShow(_ notification: Notification) {
-        // animate the text field to stay above the keyboard
         var info = (notification as NSNotification).userInfo!
         let value = info[UIKeyboardFrameEndUserInfoKey] as! NSValue
         let keyboardFrame = value.cgRectValue
         
-        //TODO: Not animating properly
         UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
             self.bottomConstraint.constant = keyboardFrame.size.height - 50
         }, completion: { Bool -> Void in
@@ -61,7 +59,6 @@ class SerialViewController: UIViewController {
     }
     
     func keyboardWillHide(_ notification: Notification) {
-        // bring the text field back down..
         UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
             self.bottomConstraint.constant = 0
         }, completion: nil)
@@ -268,7 +265,6 @@ extension SerialViewController: BluetoothSerialDelegate {
     }
     
     func serialDidChangeState() {
-        log.info(serial.centralManager.state)
         connect()
     }
     
