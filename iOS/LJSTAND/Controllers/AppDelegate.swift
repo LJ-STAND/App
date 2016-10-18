@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     let releasedVer = json["currentRelease"] as! Int
                     
-                    let thisBuild = Int(MKAppSettingsController().build.components(separatedBy: "-")[0])!
+                    let thisBuild = Int(MKAppSettingsController().build)!
                     
                     if releasedVer > thisBuild {
                         //Update
