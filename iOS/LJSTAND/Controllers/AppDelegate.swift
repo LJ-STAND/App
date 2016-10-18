@@ -17,6 +17,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         log.logAppDetails()
+        checkForUpdate()
         return true
     }
+    
+    
+    func checkForUpdate() {
+        if !MKAppSettingsController().isDebugBuild {
+            if MKReachability().connectedToNetwork() {
+                do {
+                    let urlStr = "https://lj-stand.github.io/ota-dist/config.json"
+                    let url = URL(string: urlStr)
+                    
+                    let data = try Data(contentsOf: url!)
+                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
+                    
+                    let releasedVer = json["currentRelease"] as! Int
+                    
+                    let thisBuild = Int(MKAppSettingsController().build.components(separatedBy: "-")[0])!
+                    
+                    if releasedVer > thisBuild {
+                        //Update
+                        let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/ota-dist/apps/iOS/manifest.plist")!
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                        
+                    }
+                } catch {
+                    log.info("Unable to retrieve JSON data from server")
+                }
+                
+            } else {
+                log.info("No Internet Connection")
+            }
+        }
+    }
+    
 }
