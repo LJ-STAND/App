@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,27 +28,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uqt-rb-qVs" customClass="tsopRingView" customModule="LJ_STAND" customModuleProvider="target">
-                                <rect key="frame" x="20" y="181.33333333333337" width="374" height="374"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="uqt-rb-qVs" secondAttribute="height" multiplier="1:1" id="HPZ-fl-25l"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uqt-rb-qVs" firstAttribute="centerX" secondItem="VcN-cd-ybD" secondAttribute="centerX" id="5Mi-gS-Xll"/>
-                            <constraint firstItem="uqt-rb-qVs" firstAttribute="leading" secondItem="VcN-cd-ybD" secondAttribute="leadingMargin" id="9hN-sB-sHc"/>
                             <constraint firstItem="mx2-yK-nvb" firstAttribute="leading" secondItem="VcN-cd-ybD" secondAttribute="leadingMargin" id="Mfh-An-c20"/>
-                            <constraint firstItem="uqt-rb-qVs" firstAttribute="trailing" secondItem="VcN-cd-ybD" secondAttribute="trailingMargin" id="dhU-Km-ojR"/>
-                            <constraint firstItem="uqt-rb-qVs" firstAttribute="centerY" secondItem="VcN-cd-ybD" secondAttribute="centerY" id="fSL-6o-daG"/>
                             <constraint firstItem="hNp-3d-cHv" firstAttribute="top" secondItem="mx2-yK-nvb" secondAttribute="bottom" constant="8" id="wgO-Rz-3tZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TSOP" id="XGt-lm-neA"/>
                     <connections>
                         <outlet property="tsopLabel" destination="mx2-yK-nvb" id="WyS-GJ-GOB"/>
-                        <outlet property="tsopView" destination="uqt-rb-qVs" id="hpw-rm-75z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SIN-Ik-414" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -115,27 +103,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Td9-LQ-XI5" customClass="CompassView" customModule="LJ_STAND" customModuleProvider="target">
-                                <rect key="frame" x="20" y="181" width="374" height="374"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Td9-LQ-XI5" secondAttribute="height" multiplier="1:1" id="y85-Oj-0RZ"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Td9-LQ-XI5" firstAttribute="leading" secondItem="AeP-xa-f7I" secondAttribute="leadingMargin" id="FEz-o9-tI0"/>
                             <constraint firstItem="7PS-PJ-VrY" firstAttribute="leading" secondItem="AeP-xa-f7I" secondAttribute="leadingMargin" id="Jjm-sL-5uW"/>
                             <constraint firstItem="H7A-Wt-MZU" firstAttribute="top" secondItem="7PS-PJ-VrY" secondAttribute="bottom" constant="8" id="maS-Jy-TIj"/>
-                            <constraint firstItem="Td9-LQ-XI5" firstAttribute="centerY" secondItem="AeP-xa-f7I" secondAttribute="centerY" id="nob-VA-UwG"/>
-                            <constraint firstItem="Td9-LQ-XI5" firstAttribute="trailing" secondItem="AeP-xa-f7I" secondAttribute="trailingMargin" id="vdx-Xe-b85"/>
-                            <constraint firstItem="Td9-LQ-XI5" firstAttribute="centerX" secondItem="AeP-xa-f7I" secondAttribute="centerX" id="zoY-eX-gyG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Compass" id="U1A-NH-kYL"/>
                     <connections>
                         <outlet property="angleLabel" destination="7PS-PJ-VrY" id="aED-Lv-xam"/>
-                        <outlet property="compass" destination="Td9-LQ-XI5" id="JsG-ek-jAH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7E-6y-c9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -250,27 +227,9 @@
                     <view key="view" contentMode="scaleToFill" id="HDc-PV-m5s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WjU-Hs-TKd" customClass="lightSensorView" customModule="LJ_STAND" customModuleProvider="target">
-                                <rect key="frame" x="20" y="181" width="374" height="374"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="WjU-Hs-TKd" secondAttribute="height" multiplier="1:1" id="sbB-bq-z9V"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="WjU-Hs-TKd" firstAttribute="centerY" secondItem="HDc-PV-m5s" secondAttribute="centerY" id="vDP-LP-xMX"/>
-                            <constraint firstItem="WjU-Hs-TKd" firstAttribute="trailing" secondItem="HDc-PV-m5s" secondAttribute="trailingMargin" id="yqm-ct-ZLi"/>
-                            <constraint firstItem="WjU-Hs-TKd" firstAttribute="leading" secondItem="HDc-PV-m5s" secondAttribute="leadingMargin" id="zTr-6T-YEz"/>
-                            <constraint firstItem="WjU-Hs-TKd" firstAttribute="centerX" secondItem="HDc-PV-m5s" secondAttribute="centerX" id="zyo-Dc-5MJ"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Light Sensors" id="SdF-Fv-Tst"/>
-                    <connections>
-                        <outlet property="lightSensView" destination="WjU-Hs-TKd" id="S0V-4L-HLT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V1V-xw-rWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

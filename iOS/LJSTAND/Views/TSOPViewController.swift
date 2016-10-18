@@ -15,10 +15,20 @@ import Chameleon
 class TSOPViewController: UIViewController {
     
     @IBOutlet weak var tsopLabel: UILabel!
-    @IBOutlet weak var tsopView: tsopRingView!
+//    @IBOutlet weak var tsopView: tsopRingView!
+    var tsopView: tsopRingView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let dist = min(self.view.frame.width, self.view.frame.height) - (0.15 * self.view.frame.height)
+        let maxDimention = CGSize(width: dist, height: dist)
+        let origin = CGPoint(x: ((self.view.frame.width / 2) - (dist / 2)), y: ((self.view.frame.height / 2) - (dist / 2)))
+
+        tsopView = tsopRingView(frame: CGRect(origin: origin, size: maxDimention))
+        
+        self.view.addSubview(tsopView)
+        
         tsopView.drawTSOPS(numberOfTSOPS: 24)
         tsopView.setCurrent(current: 0)
         

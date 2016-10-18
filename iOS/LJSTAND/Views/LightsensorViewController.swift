@@ -12,10 +12,19 @@ import Chameleon
 import QuartzCore
 
 class LightSensorViewController: UIViewController {    
-    @IBOutlet weak var lightSensView: lightSensorView!
+    var lightSensView: lightSensorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let dist = min(self.view.frame.width, self.view.frame.height) - (0.15 * self.view.frame.height)
+        let maxDimention = CGSize(width: dist, height: dist)
+        let origin = CGPoint(x: ((self.view.frame.width / 2) - (dist / 2)), y: ((self.view.frame.height / 2) - (dist / 2)))
+        
+        lightSensView = lightSensorView(frame: CGRect(origin: origin, size: maxDimention))
+        
+        self.view.addSubview(lightSensView)
+        
         lightSensView.drawLights(numberOfLights: 24)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.newData), name: NSNotification.Name(rawValue: "newLights"), object: nil)
