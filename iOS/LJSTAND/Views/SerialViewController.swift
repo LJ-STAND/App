@@ -105,22 +105,33 @@ class SerialViewController: UIViewController {
         }.main {
             serial.stopScan()
             
-            if self.peripherals.count == 1 {
+            if self.peripherals.count > 0 {
                 
-                self.selectedPeripheral = self.peripherals.first?.peripheral
-                serial.connectToPeripheral(self.selectedPeripheral!)
+                let lastDevice = UserDefaults.standard.string(forKey: "lastConnected")
                 
-            } else if self.peripherals.count > 0 {
-                let alert = UIAlertController(title: "Connect to Device", message: nil, preferredStyle: .alert)
-                
-                for item in self.peripherals {
-                    alert.addAction(UIAlertAction(title: item.peripheral.name, style: UIAlertActionStyle.default, handler: { (action) in
-                        self.selectedPeripheral = item.peripheral
-                        serial.connectToPeripheral(item.peripheral)
-                    }))
+                var last: CBPeripheral?
+                for device in self.peripherals {
+                    if device.peripheral.name == lastDevice {
+                        last = device.peripheral
+                    }
                 }
                 
-                self.present(alert, animated: true, completion: nil)
+                if last != nil {
+                    self.selectedPeripheral = last!
+                    serial.connectToPeripheral(last!)
+                } else {
+                    let alert = UIAlertController(title: "Connect to Device", message: nil, preferredStyle: .alert)
+                    
+                    for item in self.peripherals {
+                        alert.addAction(UIAlertAction(title: item.peripheral.name, style: UIAlertActionStyle.default, handler: { (action) in
+                            self.selectedPeripheral = item.peripheral
+                            serial.connectToPeripheral(item.peripheral)
+                        }))
+                    }
+                    
+                    self.present(alert, animated: true, completion: nil)
+
+                }
             } else {
                 self.connect()
             }
@@ -165,6 +176,8 @@ extension SerialViewController: BluetoothSerialDelegate {
         let text = "Connected to \(peripheral.name!) \n\n"
         serialOutputTextView.text = text
         
+        //Save Device Name
+        UserDefaults.standard.set(peripheral.name!, forKey: "lastConnected")
     }
     
     func serialDidFailToConnect(_ peripheral: CBPeripheral, error: NSError?) {
