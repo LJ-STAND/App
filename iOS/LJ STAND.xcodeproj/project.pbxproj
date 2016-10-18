@@ -28,6 +28,7 @@
 		EF1B7C261DACFF7100B3442E /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9AB1DAB8B3500976700 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF1B7C2B1DAD01D300B3442E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */; };
 		EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */; };
+		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
 		EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */; };
@@ -67,6 +68,7 @@
 		EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		EF1B7C2C1DAD01D300B3442E /* LJSTAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LJSTAND.entitlements; sourceTree = "<group>"; };
 		EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
+		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EF5EB9A61DAB8B3500976700 /* MKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKKit.framework; path = Carthage/Build/iOS/MKKit.framework; sourceTree = "<group>"; };
 		EF5EB9A71DAB8B3500976700 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		EF5EB9A81DAB8B3500976700 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyStoreKit.framework; path = Carthage/Build/iOS/SwiftyStoreKit.framework; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				EF9518231DB08CB4009B1F6F /* UIView.swift */,
+				EF3D33D61DB5F1210022275E /* UITextView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */,
+				EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */,
 				EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */,
 				EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */,
 				EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */,

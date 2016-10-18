@@ -16,8 +16,7 @@ class SerialViewController: UIViewController {
     
     @IBOutlet weak var sendTextField: UITextField!
     @IBOutlet weak var serialOutputTextView: UITextView!
-    @IBOutlet weak var bottomView: UIView!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+
     
     var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
     var selectedPeripheral: CBPeripheral?
@@ -46,11 +45,6 @@ class SerialViewController: UIViewController {
         if !serial.isReady {
             connect()
         }
-    }
-    
-    func textViewScrollToBottom() {
-        let range = NSMakeRange(NSString(string: serialOutputTextView.text).length - 1, 1)
-        serialOutputTextView.scrollRangeToVisible(range)
     }
     
     func dismissKeyboard() {
@@ -189,7 +183,7 @@ extension SerialViewController: BluetoothSerialDelegate {
             var text = serialOutputTextView.text!
             text += message
             serialOutputTextView.text = text
-            self.textViewScrollToBottom()
+            self.serialOutputTextView.scrollToBotom()
         }
         
         

@@ -235,11 +235,11 @@
             </objects>
             <point key="canvasLocation" x="2139.130434782609" y="3402.717391304348"/>
         </scene>
-        <!--Light Sens-->
+        <!--Light Sensors-->
         <scene sceneID="Y6m-4W-oQ8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MmI-KE-kHC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Light Sens" id="AJq-KF-uIO"/>
+                    <tabBarItem key="tabBarItem" title="Light Sensors" id="AJq-KF-uIO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DrA-53-E8z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
