@@ -29,6 +29,8 @@
 		EF1B7C2B1DAD01D300B3442E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */; };
 		EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */; };
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
+		EF471E4A1DB6C31900CED76B /* DesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF471E491DB6C31900CED76B /* DesignViewController.swift */; };
+		EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */ = {isa = PBXBuildFile; fileRef = EF471E4B1DB6C37900CED76B /* Robot.obj */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
 		EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */; };
@@ -69,6 +71,8 @@
 		EF1B7C2C1DAD01D300B3442E /* LJSTAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LJSTAND.entitlements; sourceTree = "<group>"; };
 		EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
+		EF471E491DB6C31900CED76B /* DesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignViewController.swift; sourceTree = "<group>"; };
+		EF471E4B1DB6C37900CED76B /* Robot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Robot.obj; sourceTree = "<group>"; };
 		EF5EB9A61DAB8B3500976700 /* MKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKKit.framework; path = Carthage/Build/iOS/MKKit.framework; sourceTree = "<group>"; };
 		EF5EB9A71DAB8B3500976700 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
 		EF5EB9A81DAB8B3500976700 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyStoreKit.framework; path = Carthage/Build/iOS/SwiftyStoreKit.framework; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		502C7F60ADB0031044FDB59F /* Other-Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EF471E4B1DB6C37900CED76B /* Robot.obj */,
 				22525608FFE2DEB5D519B0F1 /* Info.plist */,
 			);
 			path = "Other-Sources";
@@ -204,6 +209,7 @@
 				EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */,
 				EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */,
 				EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */,
+				EF471E491DB6C31900CED76B /* DesignViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */,
 				D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */,
 				0FE982DBB7126C7560A3FE1B /* Main.storyboard in Resources */,
 				4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */,
@@ -402,6 +409,7 @@
 				EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */,
 				EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */,
 				EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */,
+				EF471E4A1DB6C31900CED76B /* DesignViewController.swift in Sources */,
 				EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */,
 				EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */,
 			);
