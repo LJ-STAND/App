@@ -57,7 +57,7 @@ class lightSensorView: UIView {
     }
     
     func commonInit() {
-        self.backgroundColor = UIColor.lightGray
+        self.backgroundColor = UIColor.flatGray()
         self.makeCircular()
     }
     
@@ -122,9 +122,9 @@ class lightSensor: UIView {
     
     func setLight() {
         if (enabled) {
-            self.backgroundColor = .green
+            self.backgroundColor = UIColor.flatGreen()
         } else {
-            self.backgroundColor = .black
+            self.backgroundColor = UIColor.flatBlack()
         }
     }
     

@@ -180,7 +180,7 @@
         <scene sceneID="Y6m-4W-oQ8">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MmI-KE-kHC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Light Sensors" id="AJq-KF-uIO"/>
+                    <tabBarItem key="tabBarItem" title="Light Sensors" image="LightBulb" id="AJq-KF-uIO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DrA-53-E8z">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -262,8 +262,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Compass" width="30" height="30"/>
-        <image name="Serial" width="30" height="30"/>
+        <image name="Compass" width="25" height="25"/>
+        <image name="LightBulb" width="25" height="25"/>
+        <image name="Serial" width="25" height="25"/>
         <image name="TSOP" width="30" height="30"/>
     </resources>
 </document>
