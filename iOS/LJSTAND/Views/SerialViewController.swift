@@ -192,22 +192,45 @@ extension SerialViewController: BluetoothSerialDelegate {
                 let notif = Notification(name: NSNotification.Name(rawValue: "newActive"), object: active, userInfo: nil)
                 NotificationCenter.default.post(notif)
             } else if comps[0] == "3" {
-                let boolArr = Array(comps[1].characters)
-                
-                if boolArr.count == 24 {
-                    var sensorNumbers: [Int] = []
+                let string = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
+                let boolArr = Array(string.characters)
+
+                if boolArr.count == 12 {
+                    var sensorStatus: [Int] = []
                     
-                    for i in 1...boolArr.count {
+                    for i in 0...11 {
                         let item = boolArr[i]
                         let intValue = Int(String(item))
                         
-                        if (intValue == 1) {
-                            sensorNumbers.append(i)
+                        if intValue == 1 {
+                            sensorStatus.append(1)
+                            sensorStatus.append(0)
+                        } else if intValue == 2 {
+                            sensorStatus.append(0)
+                            sensorStatus.append(1)
+                        } else if intValue == 3 {
+                            sensorStatus.append(1)
+                            sensorStatus.append(1)
+                        } else {
+                            sensorStatus.append(0)
+                            sensorStatus.append(0)
+                        }
+                        
+                        var sensorNumbers: [Int] = []
+                        
+                        if sensorStatus.count == 24 {
+                            for i in 0...23 {
+                                let value = sensorStatus[i]
+                                
+                                if value == 1 {
+                                    sensorNumbers.append(i)
+                                }
+                            }
+                            
+                            let notif = Notification(name: Notification.Name(rawValue: "newLights"), object: sensorNumbers, userInfo: nil)
+                            NotificationCenter.default.post(notif)
                         }
                     }
-                    
-                    let notif = Notification(name: Notification.Name(rawValue: "newLights"), object: sensorNumbers, userInfo: nil)
-                    NotificationCenter.default.post(notif)
                 }
             } else if comps[0] == "4" {
                 let ang = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
