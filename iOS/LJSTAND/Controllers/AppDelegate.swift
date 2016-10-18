@@ -38,9 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     if releasedVer > thisBuild {
                         //Update
+                        log.info("Update")
                         let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/ota-dist/apps/iOS/manifest.plist")!
                         UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                        
                     }
                 } catch {
                     log.info("Unable to retrieve JSON data from server")
