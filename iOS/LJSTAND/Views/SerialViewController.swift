@@ -114,7 +114,6 @@ extension SerialViewController: BluetoothSerialDelegate {
             if exisiting.peripheral.identifier == peripheral.identifier { return }
         }
         
-        // add to the array, next sort & reload
         let theRSSI = RSSI?.floatValue ?? 0.0
         peripherals.append(peripheral: peripheral, RSSI: theRSSI)
         peripherals.sort { $0.RSSI < $1.RSSI }
@@ -146,7 +145,6 @@ extension SerialViewController: BluetoothSerialDelegate {
     
     func serialDidReceiveString(_ message: String) {
         let comps = message.components(separatedBy: ";")
-        log.debug(message)
         
         if comps.count > 1 {
             if comps[0] == "2" {

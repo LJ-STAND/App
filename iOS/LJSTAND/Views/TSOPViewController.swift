@@ -15,7 +15,6 @@ import Chameleon
 class TSOPViewController: UIViewController {
     
     @IBOutlet weak var tsopLabel: UILabel!
-//    @IBOutlet weak var tsopView: tsopRingView!
     var tsopView: tsopRingView!
     
     override func viewDidLoad() {
@@ -122,8 +121,6 @@ class tsop: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = UIColor.flatBlack()
-//        self.layer.cornerRadius = frame.width/2
-//        self.clipsToBounds = true
         self.makeCircular()
     }
     

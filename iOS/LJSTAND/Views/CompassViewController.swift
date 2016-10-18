@@ -11,7 +11,6 @@ import MKKit
 
 class CompassViewController: UIViewController {
     @IBOutlet weak var angleLabel: UILabel!
-//    @IBOutlet weak var compass: CompassView!
     var compass: CompassView!
     
     override func viewDidLoad() {
