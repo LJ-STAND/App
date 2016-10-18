@@ -16,6 +16,8 @@ class SerialViewController: UIViewController {
     
     @IBOutlet weak var sendTextField: UITextField!
     @IBOutlet weak var serialOutputTextView: UITextView!
+    @IBOutlet weak var bottomView: UIView!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 
     
     var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
@@ -27,8 +29,43 @@ class SerialViewController: UIViewController {
         serialOutputTextView.text = ""
         serial.writeType = .withoutResponse
         
+        sendTextField.delegate = self
+        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        
+        bottomView.layer.masksToBounds = false
+        bottomView.layer.shadowOffset = CGSize(width: 0, height: -1)
+        bottomView.layer.shadowRadius = 0
+        bottomView.layer.shadowOpacity = 0.5
+        bottomView.layer.shadowColor = UIColor.gray.cgColor
+        
+    }
+    
+    func keyboardWillShow(_ notification: Notification) {
+        // animate the text field to stay above the keyboard
+        var info = (notification as NSNotification).userInfo!
+        let value = info[UIKeyboardFrameEndUserInfoKey] as! NSValue
+        let keyboardFrame = value.cgRectValue
+        
+        //TODO: Not animating properly
+        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
+            self.bottomConstraint.constant = keyboardFrame.size.height - 50
+        }, completion: { Bool -> Void in
+            self.serialOutputTextView.scrollToBotom()
+        })
+    }
+    
+    func keyboardWillHide(_ notification: Notification) {
+        // bring the text field back down..
+        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
+            self.bottomConstraint.constant = 0
+        }, completion: nil)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -89,13 +126,17 @@ class SerialViewController: UIViewController {
             }
         }
     }
-    
-    @IBAction func sendAction(_ sender: Any) {
+}
+
+extension SerialViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let textToSend = sendTextField.text else {
-            return
+            return true
         }
         
         serial.sendMessageToDevice(textToSend)
+        sendTextField.text = ""
+        return true
     }
 }
 
