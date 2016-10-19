@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         log.logAppDetails()
         
+        UITabBar.appearance().tintColor = UIColor.flatOrange()
+        
 // TODO
 //        checkForUpdate()
         return true
