@@ -38,11 +38,9 @@ class DesignTableViewController: UITableViewController {
             case 4:
                 view.url = URL(fileURLWithPath: Bundle.main.path(forResource: "MotorCtrl", ofType: "pdf")!)
                 view.navTitle = "Motor Controller"
-            case 5:
+            default:
                 view.url = URL(fileURLWithPath: Bundle.main.path(forResource: "TSOP", ofType: "pdf")!)
                 view.navTitle = "TSOP"
-            default:
-                log.error("Um wat")
             }
             view.title = view.navTitle
             self.navigationController?.pushViewController(view, animated: true)
