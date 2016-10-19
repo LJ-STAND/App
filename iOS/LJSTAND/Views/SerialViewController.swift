@@ -86,6 +86,11 @@ class SerialViewController: UIViewController {
     }
     
     func connect() {
+        
+        if Platform.isSimulator {
+            return
+        }
+        
         MKAsync.main {
             if !CRToastManager.isShowingNotification() {
                 let options = [

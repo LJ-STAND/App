@@ -11,12 +11,16 @@ import MKKit
 import Chameleon
 
 class WebViewController: UIViewController {
-    var url: URL!
+    var url: URL! = URL(string: "https://google.com")
     var navTitle: String! = ""
     @IBOutlet weak var webView: UIWebView!
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        loadWeb()
+    }
+    
+    func loadWeb() {
         let request = URLRequest(url: url)
         webView.loadRequest(request)
         

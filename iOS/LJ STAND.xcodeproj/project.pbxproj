@@ -40,6 +40,13 @@
 		EFAA535F1DB6E90B00EBFA89 /* PartsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */; };
 		EFAA53611DB6EAC700EBFA89 /* PartDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */; };
 		EFAA53631DB6FB0C00EBFA89 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53621DB6FB0C00EBFA89 /* WebViewController.swift */; };
+		EFAA53651DB6FCC600EBFA89 /* DesignTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53641DB6FCC600EBFA89 /* DesignTableViewController.swift */; };
+		EFAA53721DB701AB00EBFA89 /* Fuse.PDF in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53661DB6FF7E00EBFA89 /* Fuse.PDF */; };
+		EFAA53731DB701AB00EBFA89 /* LM.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53671DB6FF7E00EBFA89 /* LM.pdf */; };
+		EFAA53741DB701AB00EBFA89 /* MotorCtrl.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53681DB6FF7E00EBFA89 /* MotorCtrl.pdf */; };
+		EFAA53751DB701AB00EBFA89 /* Photo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53691DB6FF7E00EBFA89 /* Photo.pdf */; };
+		EFAA53761DB701AB00EBFA89 /* Regulator.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA536A1DB6FF7E00EBFA89 /* Regulator.pdf */; };
+		EFAA53771DB701AB00EBFA89 /* TSOP.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA536B1DB6FF7E00EBFA89 /* TSOP.pdf */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +101,13 @@
 		EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartsListTableViewController.swift; sourceTree = "<group>"; };
 		EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartDetailViewController.swift; sourceTree = "<group>"; };
 		EFAA53621DB6FB0C00EBFA89 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		EFAA53641DB6FCC600EBFA89 /* DesignTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignTableViewController.swift; sourceTree = "<group>"; };
+		EFAA53661DB6FF7E00EBFA89 /* Fuse.PDF */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Fuse.PDF; sourceTree = "<group>"; };
+		EFAA53671DB6FF7E00EBFA89 /* LM.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LM.pdf; sourceTree = "<group>"; };
+		EFAA53681DB6FF7E00EBFA89 /* MotorCtrl.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MotorCtrl.pdf; sourceTree = "<group>"; };
+		EFAA53691DB6FF7E00EBFA89 /* Photo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Photo.pdf; sourceTree = "<group>"; };
+		EFAA536A1DB6FF7E00EBFA89 /* Regulator.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Regulator.pdf; sourceTree = "<group>"; };
+		EFAA536B1DB6FF7E00EBFA89 /* TSOP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TSOP.pdf; sourceTree = "<group>"; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +166,12 @@
 		502C7F60ADB0031044FDB59F /* Other-Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EFAA53661DB6FF7E00EBFA89 /* Fuse.PDF */,
+				EFAA53671DB6FF7E00EBFA89 /* LM.pdf */,
+				EFAA53681DB6FF7E00EBFA89 /* MotorCtrl.pdf */,
+				EFAA53691DB6FF7E00EBFA89 /* Photo.pdf */,
+				EFAA536A1DB6FF7E00EBFA89 /* Regulator.pdf */,
+				EFAA536B1DB6FF7E00EBFA89 /* TSOP.pdf */,
 				EF471E4B1DB6C37900CED76B /* Robot.obj */,
 				EFAA535C1DB6E36400EBFA89 /* parts.csv */,
 				22525608FFE2DEB5D519B0F1 /* Info.plist */,
@@ -224,6 +244,7 @@
 				EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */,
 				EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */,
 				EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */,
+				EFAA53641DB6FCC600EBFA89 /* DesignTableViewController.swift */,
 				EF471E491DB6C31900CED76B /* ModelViewController.swift */,
 				EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */,
 				EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */,
@@ -342,11 +363,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAA53761DB701AB00EBFA89 /* Regulator.pdf in Resources */,
 				EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */,
 				D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */,
+				EFAA53731DB701AB00EBFA89 /* LM.pdf in Resources */,
+				EFAA53771DB701AB00EBFA89 /* TSOP.pdf in Resources */,
+				EFAA53751DB701AB00EBFA89 /* Photo.pdf in Resources */,
+				EFAA53741DB701AB00EBFA89 /* MotorCtrl.pdf in Resources */,
 				0FE982DBB7126C7560A3FE1B /* Main.storyboard in Resources */,
 				EFAA535D1DB6E36400EBFA89 /* parts.csv in Resources */,
 				4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */,
+				EFAA53721DB701AB00EBFA89 /* Fuse.PDF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFAA53651DB6FCC600EBFA89 /* DesignTableViewController.swift in Sources */,
 				D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */,
 				EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */,
 				EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */,

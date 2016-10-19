@@ -504,7 +504,7 @@
         <!--Design-->
         <scene sceneID="IBn-GL-ddn">
             <objects>
-                <tableViewController id="6jJ-8Z-QeX" sceneMemberID="viewController">
+                <tableViewController id="6jJ-8Z-QeX" customClass="DesignTableViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ysJ-tX-mAE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
