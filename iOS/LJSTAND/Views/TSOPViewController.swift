@@ -13,26 +13,18 @@ import QuartzCore
 import Chameleon
 
 class TSOPViewController: UIViewController {
-    
-    @IBOutlet weak var tsopLabel: UILabel!
     var tsopView: tsopRingView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dist = min(self.view.frame.width, self.view.frame.height) - (0.2 * self.view.frame.height)
+        let dist = min(self.view.frame.width, self.view.frame.height) - (0.1 * self.view.frame.height)
         let maxDimention = CGSize(width: dist, height: dist)
         let origin = CGPoint(x: ((self.view.frame.width / 2) - (dist / 2)), y: ((self.view.frame.height / 2) - (dist / 2)))
 
         tsopView = tsopRingView(frame: CGRect(origin: origin, size: maxDimention))
         
         self.view.addSubview(tsopView)
-        
-        tsopView.drawTSOPS(numberOfTSOPS: 24)
-        tsopView.setCurrent(current: 0)
-        
-        let rad = 105 * M_PI/180
-        self.tsopView.transform = CGAffineTransform(rotationAngle: CGFloat(rad))
         
         let notif = Notification.Name(rawValue: "newActive")
         NotificationCenter.default.addObserver(self, selector: #selector(self.newActive), name: notif, object: nil)
@@ -43,14 +35,16 @@ class TSOPViewController: UIViewController {
             return
         }
         
-        tsopLabel.text = "Current TSOP: \(tsopNum)"
         tsopView.setCurrent(current: tsopNum)
     }
 
 }
 
 class tsopRingView: UIView {
-    var tsops: [tsop] = []
+    var tsops: [Bool] = [Bool]()
+    
+    var tsopNumberLabel: UILabel!
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -63,78 +57,73 @@ class tsopRingView: UIView {
     }
     
     func commonInit() {
-        self.backgroundColor = UIColor.flatGray()
-        self.makeCircular()
+        tsopNumberLabel = UILabel(frame: CGRect(origin: bounds.origin, size: frame.size))
+        tsopNumberLabel.font = tsopNumberLabel.font.withSize(50)
+        tsopNumberLabel.textColor = UIColor.flatBlack()
+        tsopNumberLabel.textAlignment = .center
+        
+        tsopNumberLabel.text = "No Data"
+        
+        addSubview(tsopNumberLabel)
+        
+        for _ in 1...24 {
+            tsops.append(false)
+        }
+        
+        setCurrent(current: -1)
     }
     
-    func drawTSOPS(numberOfTSOPS: Int) {
+    override func draw(_ rect: CGRect) {
+        let path = UIBezierPath(rect: rect)
+        UIColor.white.setFill()
+        
+        path.fill()
+        
+        let numberOfTSOPS = 24
         
         let radOfTSOP = 15.0
         let offset = radOfTSOP / 2.0
         
-        for tsp in tsops {
-            tsp.removeFromSuperview()
-        }
-        
-        tsops = []
-        
-        let interval = Double(360/numberOfTSOPS)
+        let interval = Double(360 / numberOfTSOPS)
         let hypt = Double(self.frame.width/2) - radOfTSOP
         
-        for i in 1...numberOfTSOPS {
-            
-            let angle = (interval * Double(i)) - degToRad(angle: 90.0)
+        for i in 0..<numberOfTSOPS {
+            let angle = 360 - ((interval * Double(i)) + 90)
             let angleRad = degToRad(angle: angle)
             
             let xVal = (Double(self.frame.width/2) + (hypt * sin(angleRad)) - offset)
             let yVal = (Double(self.frame.height/2) + (hypt * cos(angleRad)) - offset)
             
-            let tempTSOP = tsop(frame: CGRect(x: xVal, y: yVal, width: radOfTSOP, height: radOfTSOP))
-            tempTSOP.setTSOP()
-            self.addSubview(tempTSOP)
+            let path = UIBezierPath(ovalIn: CGRect(x: xVal, y: yVal, width: radOfTSOP, height: radOfTSOP))
+            UIColor.flatBlack().setFill()
+            UIColor.flatBlack().setStroke()
             
-            tsops.append(tempTSOP)
+            if tsops[i] {
+                path.fill()
+            } else {
+                path.stroke()
+            }
         }
     }
     
     func setCurrent(current: Int) {
         
-        for tSP in tsops {
-            tSP.current = false
-            tSP.setTSOP()
+        for i in 0..<tsops.count {
+            tsops[i] = false
         }
         
-        let curr = tsops[current]
+        if (current != -1) {
+            tsops[current] = true
+            tsopNumberLabel.text = "\(current)"
+        } else {
+            tsopNumberLabel.text = "No Data"
+        }
         
-        curr.current = true
-        curr.setTSOP()
+        setNeedsDisplay()
     }
     
     func degToRad(angle: Double) -> Double {
         return (angle - 90) * M_PI/180
     }
-}
-
-class tsop: UIView {
-    var current = false
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = UIColor.flatBlack()
-        self.makeCircular()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError()
-    }
-    
-    func setTSOP() {
-        if (current) {
-            self.backgroundColor = .flatGreen()
-        } else {
-            self.backgroundColor = .flatBlack()
-        }
-    }
-    
 }
 
