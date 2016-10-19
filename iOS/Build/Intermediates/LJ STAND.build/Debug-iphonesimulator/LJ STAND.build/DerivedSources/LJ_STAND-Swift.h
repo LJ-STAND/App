@@ -173,10 +173,10 @@ SWIFT_CLASS("_TtC8LJ_STAND15BluetoothSerial")
 
 SWIFT_CLASS("_TtC8LJ_STAND11CompassView")
 @interface CompassView : UIView
-@property (nonatomic, strong) UIView * _Nonnull needle;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)commonInit;
+- (void)drawRect:(CGRect)rect;
 - (void)rotateWithAngle:(double)angle;
 - (double)degToRadWithAngle:(double)angle;
 @end
@@ -294,7 +294,6 @@ SWIFT_CLASS("_TtC8LJ_STAND20SerialViewController")
 
 SWIFT_CLASS("_TtC8LJ_STAND18TSOPViewController")
 @interface TSOPViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified tsopLabel;
 @property (nonatomic, strong) tsopRingView * _Null_unspecified tsopView;
 - (void)viewDidLoad;
 - (void)newActiveWithNotification:(NSNotification * _Nonnull)notification;
@@ -325,40 +324,23 @@ SWIFT_CLASS("_TtC8LJ_STAND17WebViewController")
 @end
 
 
-SWIFT_CLASS("_TtC8LJ_STAND11lightSensor")
-@interface lightSensor : UIView
-@property (nonatomic) BOOL enabled;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)setLight;
-@end
-
-
 SWIFT_CLASS("_TtC8LJ_STAND15lightSensorView")
 @interface lightSensorView : UIView
-@property (nonatomic, copy) NSArray<lightSensor *> * _Nonnull lights;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull lights;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)commonInit;
-- (void)drawLightsWithNumberOfLights:(NSInteger)numberOfLights;
+- (void)drawRect:(CGRect)rect;
 - (void)setValuesWithSensorNumber:(NSInteger)sensorNumber;
 - (void)clearValues;
-@end
-
-
-SWIFT_CLASS("_TtC8LJ_STAND4tsop")
-@interface tsop : UIView
-@property (nonatomic) BOOL current;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-- (void)setTSOP;
-- (void)drawRect:(CGRect)rect;
+- (double)degToRadWithAngle:(double)angle;
 @end
 
 
 SWIFT_CLASS("_TtC8LJ_STAND12tsopRingView")
 @interface tsopRingView : UIView
 @property (nonatomic, copy) NSArray<NSNumber *> * _Nonnull tsops;
+@property (nonatomic, strong) UILabel * _Null_unspecified tsopNumberLabel;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)commonInit;
