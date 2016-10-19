@@ -15,8 +15,15 @@ import Chameleon
 class TSOPViewController: UIViewController {
     var tsopView: tsopRingView!
     
+    var titleView: TitleView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.isHidden = true
+        
+        titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "TSOP")
+        self.view.addSubview(titleView)
         
         let dist = min(self.view.frame.width, self.view.frame.height) - (0.1 * self.view.frame.height)
         let maxDimention = CGSize(width: dist, height: dist)

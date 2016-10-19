@@ -19,6 +19,9 @@ class WebViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.flatBlack()]
+
+        
         webView = WKWebView(frame: self.view.frame)
         
         webView.translatesAutoresizingMaskIntoConstraints = false

@@ -8,8 +8,8 @@ provides-dynamic-lookup:
 - "scrollToBotom"
 depends-top-level:
 - !private "-"
-- "UITextView"
 - !private "NSMakeRange"
+- "UITextView"
 depends-member:
 - !private ["Ps9AnyObject", "NSMakeRange"]
 - !private ["Ps9AnyObject", "characters"]

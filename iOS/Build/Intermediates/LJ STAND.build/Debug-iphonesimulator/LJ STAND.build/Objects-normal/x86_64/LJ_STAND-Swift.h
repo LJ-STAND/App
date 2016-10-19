@@ -181,6 +181,7 @@ SWIFT_CLASS("_TtC8LJ_STAND11CompassView")
 - (double)degToRadWithAngle:(double)angle;
 @end
 
+@class TitleView;
 @class UILabel;
 @class NSBundle;
 
@@ -188,8 +189,20 @@ SWIFT_CLASS("_TtC8LJ_STAND21CompassViewController")
 @interface CompassViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified angleLabel;
 @property (nonatomic, strong) CompassView * _Null_unspecified compass;
+@property (nonatomic, strong) TitleView * _Null_unspecified titleView;
 - (void)viewDidLoad;
 - (void)newCompassWithNotification:(NSNotification * _Nonnull)notification;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class UITableView;
+
+SWIFT_CLASS("_TtC8LJ_STAND25DesignTableViewController")
+@interface DesignTableViewController : UITableViewController
+- (void)viewDidLoad;
+- (void)tableView:(UITableView * _Nonnull)tableView didSelectRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
+- (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -199,6 +212,7 @@ SWIFT_CLASS("_TtC8LJ_STAND21CompassViewController")
 SWIFT_CLASS("_TtC8LJ_STAND25LightSensorViewController")
 @interface LightSensorViewController : UIViewController
 @property (nonatomic, strong) lightSensorView * _Null_unspecified lightSensView;
+@property (nonatomic, strong) TitleView * _Null_unspecified titleView;
 - (void)viewDidLoad;
 - (void)newDataWithNotification:(NSNotification * _Nonnull)notification;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -215,30 +229,33 @@ SWIFT_CLASS("_TtC8LJ_STAND19ModelViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITextView;
+@class UIButton;
 
 SWIFT_CLASS("_TtC8LJ_STAND24PartDetailViewController")
 @interface PartDetailViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified descriptionLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified supplierLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified vendorPartLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified totalQtyLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified sparesLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified priceInORGCurrencyLabel;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified currencyLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified priceAudLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified totalPrice;
-@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified linkLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified weightPerItem;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified qtyLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified totalWeight;
+@property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified notesTextView;
+@property (nonatomic, weak) IBOutlet UIButton * _Null_unspecified productButton;
 - (void)viewDidAppear:(BOOL)animated;
+- (void)viewDidLoad;
 - (void)updateLabel;
+- (IBAction)openProductPageAction:(id _Nonnull)sender;
+- (NSString * _Nonnull)trimStringWithStr:(NSString * _Nonnull)str;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UITableView;
 @class UITableViewCell;
 
 SWIFT_CLASS("_TtC8LJ_STAND28PartsListTableViewController")
@@ -253,7 +270,6 @@ SWIFT_CLASS("_TtC8LJ_STAND28PartsListTableViewController")
 @end
 
 @class UITextField;
-@class UITextView;
 @class NSLayoutConstraint;
 
 SWIFT_CLASS("_TtC8LJ_STAND20SerialViewController")
@@ -262,6 +278,7 @@ SWIFT_CLASS("_TtC8LJ_STAND20SerialViewController")
 @property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified serialOutputTextView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified bottomView;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified bottomConstraint;
+@property (nonatomic, strong) TitleView * _Null_unspecified titleView;
 @property (nonatomic, strong) CBPeripheral * _Nullable selectedPeripheral;
 - (void)viewDidLoad;
 - (void)keyboardWillShow:(NSNotification * _Nonnull)notification;
@@ -295,10 +312,21 @@ SWIFT_CLASS("_TtC8LJ_STAND20SerialViewController")
 SWIFT_CLASS("_TtC8LJ_STAND18TSOPViewController")
 @interface TSOPViewController : UIViewController
 @property (nonatomic, strong) tsopRingView * _Null_unspecified tsopView;
+@property (nonatomic, strong) TitleView * _Null_unspecified titleView;
 - (void)viewDidLoad;
 - (void)newActiveWithNotification:(NSNotification * _Nonnull)notification;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8LJ_STAND9TitleView")
+@interface TitleView : UIView
+@property (nonatomic, strong) UILabel * _Null_unspecified titleLabel;
+- (nonnull instancetype)initWithFrame:(CGRect)frame title:(NSString * _Nonnull)title OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+- (void)drawRect:(CGRect)rect;
+- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
@@ -311,14 +339,16 @@ SWIFT_CLASS("_TtC8LJ_STAND18TSOPViewController")
 - (void)makeCircular;
 @end
 
-@class UIWebView;
+@class WKWebView;
 
 SWIFT_CLASS("_TtC8LJ_STAND17WebViewController")
 @interface WebViewController : UIViewController
 @property (nonatomic, copy) NSURL * _Null_unspecified url;
 @property (nonatomic, copy) NSString * _Null_unspecified navTitle;
-@property (nonatomic, weak) IBOutlet UIWebView * _Null_unspecified webView;
+@property (nonatomic, strong) WKWebView * _Null_unspecified webView;
+- (void)viewDidLoad;
 - (void)viewDidAppear:(BOOL)animated;
+- (void)loadWeb;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end

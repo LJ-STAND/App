@@ -13,7 +13,14 @@ class CompassViewController: UIViewController {
     @IBOutlet weak var angleLabel: UILabel!
     var compass: CompassView!
     
+    var titleView: TitleView!
+    
     override func viewDidLoad() {
+        self.navigationController?.navigationBar.isHidden = true
+        
+        titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "Compass")
+        self.view.addSubview(titleView)
+        
         super.viewDidLoad()
         
         let dist = min(self.view.frame.width, self.view.frame.height) - (0.1 * self.view.frame.height)

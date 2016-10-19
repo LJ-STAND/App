@@ -14,7 +14,14 @@ import QuartzCore
 class LightSensorViewController: UIViewController {    
     var lightSensView: lightSensorView!
     
+    var titleView: TitleView!
+    
     override func viewDidLoad() {
+        self.navigationController?.navigationBar.isHidden = true
+        
+        titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "Light Sensors")
+        self.view.addSubview(titleView)
+
         super.viewDidLoad()
         
         let dist = min(self.view.frame.width, self.view.frame.height) - (0.1 * self.view.frame.height)

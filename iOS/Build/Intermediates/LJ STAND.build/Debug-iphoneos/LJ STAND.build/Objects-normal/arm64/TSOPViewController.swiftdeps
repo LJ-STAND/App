@@ -9,47 +9,49 @@ provides-member:
 - ["C8LJ_STAND18TSOPViewController", ""]
 - ["C8LJ_STAND12tsopRingView", ""]
 provides-dynamic-lookup:
-- "draw"
-- "tsopNumberLabel"
 - "setCurrent"
-- "newActive"
-- "tsopView"
-- "viewDidLoad"
-- "commonInit"
 - "degToRad"
+- "draw"
+- "newActive"
+- "tsopNumberLabel"
+- "viewDidLoad"
+- "tsopView"
 - "tsops"
+- "titleView"
+- "commonInit"
 depends-top-level:
-- "UIView"
-- "CGRect"
-- "Double"
-- !private "NotificationCenter"
-- !private "/"
 - !private "sin"
-- "TSOPViewController"
-- "CastingPrecedence"
-- !private "cos"
-- "AssignmentPrecedence"
-- !private "-"
+- !private "BooleanLiteralType"
+- !private "/"
+- !private "+"
 - "Notification"
-- "UIViewController"
 - !private "M_PI"
 - "NSCoder"
-- "Int"
-- !private "min"
-- !private "CGSize"
+- !private "cos"
 - !private "CGPoint"
+- !private "-"
+- !private "UIBezierPath"
+- "UIViewController"
+- "TSOPViewController"
 - !private "StringLiteralType"
-- !private "..<"
+- "CGRect"
+- !private "*"
 - "Bool"
-- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- "UIView"
+- !private "CGSize"
+- "AssignmentPrecedence"
+- !private "UIColor"
+- !private "min"
+- !private "NotificationCenter"
 - "tsopRingView"
 - !private "..."
-- !private "UIBezierPath"
-- "UILabel"
-- !private "+"
-- !private "UIColor"
+- !private "..<"
+- "TitleView"
 - !private "!="
-- !private "*"
+- "UILabel"
+- "Int"
+- "Double"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "Stride"]
 - !private ["Ps16AbsoluteValuable", "init"]
@@ -61,6 +63,7 @@ depends-member:
 - !private ["Ps9AnyObject", "M_PI"]
 - !private ["Ps9AnyObject", "Notification"]
 - !private ["Ps9AnyObject", "NotificationCenter"]
+- !private ["Ps9AnyObject", "TitleView"]
 - !private ["Ps9AnyObject", "UIBezierPath"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "UILabel"]
@@ -77,7 +80,10 @@ depends-member:
 - !private ["Ps9AnyObject", "font"]
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isHidden"]
 - !private ["Ps9AnyObject", "min"]
+- !private ["Ps9AnyObject", "navigationBar"]
+- !private ["Ps9AnyObject", "navigationController"]
 - ["Ps9AnyObject", "newActive"]
 - ["Ps9AnyObject", "setCurrent"]
 - !private ["Ps9AnyObject", "setFill"]
@@ -88,6 +94,7 @@ depends-member:
 - !private ["Ps9AnyObject", "text"]
 - !private ["Ps9AnyObject", "textAlignment"]
 - !private ["Ps9AnyObject", "textColor"]
+- ["Ps9AnyObject", "titleView"]
 - ["Ps9AnyObject", "tsopNumberLabel"]
 - !private ["Ps9AnyObject", "tsopRingView"]
 - ["Ps9AnyObject", "tsopView"]
@@ -156,6 +163,7 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "font"]
 - !private ["PSo15CALayerDelegate", "frame"]
 - ["PSo15CALayerDelegate", "init"]
+- !private ["PSo15CALayerDelegate", "isHidden"]
 - ["PSo15CALayerDelegate", "setCurrent"]
 - !private ["PSo15CALayerDelegate", "setNeedsDisplay"]
 - !private ["PSo15CALayerDelegate", "sin"]
@@ -168,6 +176,8 @@ depends-member:
 - ["V12CoreGraphics7CGFloat", "deinit"]
 - ["VSC7CGPoint", "deinit"]
 - !private ["VSC7CGPoint", "init"]
+- !private ["VSC7CGPoint", "x"]
+- !private ["VSC7CGPoint", "y"]
 - ["VSC6CGRect", "deinit"]
 - !private ["VSC6CGRect", "height"]
 - !private ["VSC6CGRect", "init"]
@@ -192,6 +202,7 @@ depends-member:
 - !private ["Ps7CVarArg", "NotificationCenter"]
 - !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "SubSequence"]
+- !private ["Ps7CVarArg", "TitleView"]
 - !private ["Ps7CVarArg", "UIBezierPath"]
 - !private ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "UILabel"]
@@ -212,7 +223,10 @@ depends-member:
 - !private ["Ps7CVarArg", "font"]
 - !private ["Ps7CVarArg", "frame"]
 - ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isHidden"]
 - !private ["Ps7CVarArg", "min"]
+- !private ["Ps7CVarArg", "navigationBar"]
+- !private ["Ps7CVarArg", "navigationController"]
 - ["Ps7CVarArg", "newActive"]
 - ["Ps7CVarArg", "setCurrent"]
 - !private ["Ps7CVarArg", "setFill"]
@@ -224,6 +238,7 @@ depends-member:
 - !private ["Ps7CVarArg", "text"]
 - !private ["Ps7CVarArg", "textAlignment"]
 - !private ["Ps7CVarArg", "textColor"]
+- ["Ps7CVarArg", "titleView"]
 - ["Ps7CVarArg", "tsopNumberLabel"]
 - !private ["Ps7CVarArg", "tsopRingView"]
 - ["Ps7CVarArg", "tsopView"]
@@ -269,6 +284,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "NotificationCenter"]
 - !private ["Ps28CustomDebugStringConvertible", "Stride"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "TitleView"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBezierPath"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "UILabel"]
@@ -289,7 +305,10 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - !private ["Ps28CustomDebugStringConvertible", "height"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isHidden"]
 - !private ["Ps28CustomDebugStringConvertible", "min"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationBar"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationController"]
 - ["Ps28CustomDebugStringConvertible", "newActive"]
 - !private ["Ps28CustomDebugStringConvertible", "object"]
 - !private ["Ps28CustomDebugStringConvertible", "origin"]
@@ -304,6 +323,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "text"]
 - !private ["Ps28CustomDebugStringConvertible", "textAlignment"]
 - !private ["Ps28CustomDebugStringConvertible", "textColor"]
+- ["Ps28CustomDebugStringConvertible", "titleView"]
 - ["Ps28CustomDebugStringConvertible", "tsopNumberLabel"]
 - !private ["Ps28CustomDebugStringConvertible", "tsopRingView"]
 - ["Ps28CustomDebugStringConvertible", "tsopView"]
@@ -313,6 +333,8 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "white"]
 - !private ["Ps28CustomDebugStringConvertible", "width"]
 - !private ["Ps28CustomDebugStringConvertible", "withSize"]
+- !private ["Ps28CustomDebugStringConvertible", "x"]
+- !private ["Ps28CustomDebugStringConvertible", "y"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps29CustomPlaygroundQuickLookable", "IntegerLiteralType"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "Stride"]
@@ -323,6 +345,8 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "origin"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "size"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "width"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "x"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "y"]
 - !private ["Ps17CustomReflectable", "Index"]
 - !private ["Ps17CustomReflectable", "IndexDistance"]
 - !private ["Ps17CustomReflectable", "IntegerLiteralType"]
@@ -342,6 +366,8 @@ depends-member:
 - !private ["Ps17CustomReflectable", "size"]
 - !private ["Ps17CustomReflectable", "subscript"]
 - !private ["Ps17CustomReflectable", "width"]
+- !private ["Ps17CustomReflectable", "x"]
+- !private ["Ps17CustomReflectable", "y"]
 - ["Ps23CustomStringConvertible", "Bool"]
 - !private ["Ps23CustomStringConvertible", "CGPoint"]
 - !private ["Ps23CustomStringConvertible", "CGRect"]
@@ -357,6 +383,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "NotificationCenter"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "TitleView"]
 - !private ["Ps23CustomStringConvertible", "UIBezierPath"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "UILabel"]
@@ -378,7 +405,10 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "font"]
 - !private ["Ps23CustomStringConvertible", "frame"]
 - ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isHidden"]
 - !private ["Ps23CustomStringConvertible", "min"]
+- !private ["Ps23CustomStringConvertible", "navigationBar"]
+- !private ["Ps23CustomStringConvertible", "navigationController"]
 - ["Ps23CustomStringConvertible", "newActive"]
 - !private ["Ps23CustomStringConvertible", "object"]
 - ["Ps23CustomStringConvertible", "setCurrent"]
@@ -391,6 +421,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "text"]
 - !private ["Ps23CustomStringConvertible", "textAlignment"]
 - !private ["Ps23CustomStringConvertible", "textColor"]
+- ["Ps23CustomStringConvertible", "titleView"]
 - ["Ps23CustomStringConvertible", "tsopNumberLabel"]
 - !private ["Ps23CustomStringConvertible", "tsopRingView"]
 - ["Ps23CustomStringConvertible", "tsopView"]
@@ -425,6 +456,7 @@ depends-member:
 - !private ["Ps9Equatable", "Notification"]
 - !private ["Ps9Equatable", "NotificationCenter"]
 - !private ["Ps9Equatable", "Stride"]
+- !private ["Ps9Equatable", "TitleView"]
 - !private ["Ps9Equatable", "UIBezierPath"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "UILabel"]
@@ -446,7 +478,10 @@ depends-member:
 - !private ["Ps9Equatable", "frame"]
 - !private ["Ps9Equatable", "height"]
 - ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isHidden"]
 - !private ["Ps9Equatable", "min"]
+- !private ["Ps9Equatable", "navigationBar"]
+- !private ["Ps9Equatable", "navigationController"]
 - ["Ps9Equatable", "newActive"]
 - !private ["Ps9Equatable", "object"]
 - !private ["Ps9Equatable", "origin"]
@@ -460,6 +495,7 @@ depends-member:
 - !private ["Ps9Equatable", "text"]
 - !private ["Ps9Equatable", "textAlignment"]
 - !private ["Ps9Equatable", "textColor"]
+- ["Ps9Equatable", "titleView"]
 - ["Ps9Equatable", "tsopNumberLabel"]
 - !private ["Ps9Equatable", "tsopRingView"]
 - ["Ps9Equatable", "tsopView"]
@@ -469,6 +505,8 @@ depends-member:
 - !private ["Ps9Equatable", "white"]
 - !private ["Ps9Equatable", "width"]
 - !private ["Ps9Equatable", "withSize"]
+- !private ["Ps9Equatable", "x"]
+- !private ["Ps9Equatable", "y"]
 - ["Ps9Equatable", ""]
 - !private ["Ps25ExpressibleByArrayLiteral", "Index"]
 - !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
@@ -504,6 +542,7 @@ depends-member:
 - !private ["Ps8Hashable", "Notification"]
 - !private ["Ps8Hashable", "NotificationCenter"]
 - !private ["Ps8Hashable", "Stride"]
+- !private ["Ps8Hashable", "TitleView"]
 - !private ["Ps8Hashable", "UIBezierPath"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "UILabel"]
@@ -523,7 +562,10 @@ depends-member:
 - !private ["Ps8Hashable", "font"]
 - !private ["Ps8Hashable", "frame"]
 - ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isHidden"]
 - !private ["Ps8Hashable", "min"]
+- !private ["Ps8Hashable", "navigationBar"]
+- !private ["Ps8Hashable", "navigationController"]
 - ["Ps8Hashable", "newActive"]
 - !private ["Ps8Hashable", "object"]
 - ["Ps8Hashable", "setCurrent"]
@@ -535,6 +577,7 @@ depends-member:
 - !private ["Ps8Hashable", "text"]
 - !private ["Ps8Hashable", "textAlignment"]
 - !private ["Ps8Hashable", "textColor"]
+- ["Ps8Hashable", "titleView"]
 - ["Ps8Hashable", "tsopNumberLabel"]
 - !private ["Ps8Hashable", "tsopRingView"]
 - ["Ps8Hashable", "tsopView"]
@@ -615,6 +658,7 @@ depends-member:
 - !private ["PSo8NSCoding", "M_PI"]
 - !private ["PSo8NSCoding", "Notification"]
 - !private ["PSo8NSCoding", "NotificationCenter"]
+- !private ["PSo8NSCoding", "TitleView"]
 - !private ["PSo8NSCoding", "UIBezierPath"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "UILabel"]
@@ -629,7 +673,10 @@ depends-member:
 - !private ["PSo8NSCoding", "font"]
 - !private ["PSo8NSCoding", "frame"]
 - ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isHidden"]
 - !private ["PSo8NSCoding", "min"]
+- !private ["PSo8NSCoding", "navigationBar"]
+- !private ["PSo8NSCoding", "navigationController"]
 - ["PSo8NSCoding", "newActive"]
 - ["PSo8NSCoding", "setCurrent"]
 - !private ["PSo8NSCoding", "setFill"]
@@ -640,6 +687,7 @@ depends-member:
 - !private ["PSo8NSCoding", "text"]
 - !private ["PSo8NSCoding", "textAlignment"]
 - !private ["PSo8NSCoding", "textColor"]
+- ["PSo8NSCoding", "titleView"]
 - ["PSo8NSCoding", "tsopNumberLabel"]
 - !private ["PSo8NSCoding", "tsopRingView"]
 - ["PSo8NSCoding", "tsopView"]
@@ -661,9 +709,13 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CGSize"]
 - !private ["PSo26NSExtensionRequestHandling", "Notification"]
 - !private ["PSo26NSExtensionRequestHandling", "NotificationCenter"]
+- !private ["PSo26NSExtensionRequestHandling", "TitleView"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "min"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationBar"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - ["PSo26NSExtensionRequestHandling", "newActive"]
+- ["PSo26NSExtensionRequestHandling", "titleView"]
 - !private ["PSo26NSExtensionRequestHandling", "tsopRingView"]
 - ["PSo26NSExtensionRequestHandling", "tsopView"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
@@ -681,6 +733,7 @@ depends-member:
 - ["CSo8NSObject", "NSCoder"]
 - ["CSo8NSObject", "Notification"]
 - !private ["CSo8NSObject", "NotificationCenter"]
+- ["CSo8NSObject", "TitleView"]
 - !private ["CSo8NSObject", "UIBezierPath"]
 - !private ["CSo8NSObject", "UIColor"]
 - ["CSo8NSObject", "UILabel"]
@@ -697,7 +750,10 @@ depends-member:
 - !private ["CSo8NSObject", "font"]
 - !private ["CSo8NSObject", "frame"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isHidden"]
 - !private ["CSo8NSObject", "min"]
+- !private ["CSo8NSObject", "navigationBar"]
+- !private ["CSo8NSObject", "navigationController"]
 - ["CSo8NSObject", "newActive"]
 - ["CSo8NSObject", "setCurrent"]
 - !private ["CSo8NSObject", "setFill"]
@@ -708,6 +764,7 @@ depends-member:
 - !private ["CSo8NSObject", "text"]
 - !private ["CSo8NSObject", "textAlignment"]
 - !private ["CSo8NSObject", "textColor"]
+- ["CSo8NSObject", "titleView"]
 - ["CSo8NSObject", "tsopNumberLabel"]
 - ["CSo8NSObject", "tsopRingView"]
 - ["CSo8NSObject", "tsopView"]
@@ -724,6 +781,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "M_PI"]
 - !private ["PSo16NSObjectProtocol", "Notification"]
 - !private ["PSo16NSObjectProtocol", "NotificationCenter"]
+- !private ["PSo16NSObjectProtocol", "TitleView"]
 - !private ["PSo16NSObjectProtocol", "UIBezierPath"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "UILabel"]
@@ -740,7 +798,10 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "font"]
 - !private ["PSo16NSObjectProtocol", "frame"]
 - ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isHidden"]
 - !private ["PSo16NSObjectProtocol", "min"]
+- !private ["PSo16NSObjectProtocol", "navigationBar"]
+- !private ["PSo16NSObjectProtocol", "navigationController"]
 - ["PSo16NSObjectProtocol", "newActive"]
 - ["PSo16NSObjectProtocol", "setCurrent"]
 - !private ["PSo16NSObjectProtocol", "setFill"]
@@ -751,6 +812,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "text"]
 - !private ["PSo16NSObjectProtocol", "textAlignment"]
 - !private ["PSo16NSObjectProtocol", "textColor"]
+- ["PSo16NSObjectProtocol", "titleView"]
 - ["PSo16NSObjectProtocol", "tsopNumberLabel"]
 - !private ["PSo16NSObjectProtocol", "tsopRingView"]
 - ["PSo16NSObjectProtocol", "tsopView"]
@@ -862,16 +924,21 @@ depends-member:
 - !private ["C8LJ_STAND18TSOPViewController", "Int"]
 - ["C8LJ_STAND18TSOPViewController", "Notification"]
 - !private ["C8LJ_STAND18TSOPViewController", "NotificationCenter"]
+- ["C8LJ_STAND18TSOPViewController", "TitleView"]
 - ["C8LJ_STAND18TSOPViewController", "deinit"]
 - ["C8LJ_STAND18TSOPViewController", "init"]
 - !private ["C8LJ_STAND18TSOPViewController", "min"]
+- !private ["C8LJ_STAND18TSOPViewController", "navigationController"]
 - ["C8LJ_STAND18TSOPViewController", "newActive"]
+- ["C8LJ_STAND18TSOPViewController", "titleView"]
 - ["C8LJ_STAND18TSOPViewController", "tsopRingView"]
 - ["C8LJ_STAND18TSOPViewController", "tsopView"]
 - !private ["C8LJ_STAND18TSOPViewController", "view"]
 - ["C8LJ_STAND18TSOPViewController", "viewDidLoad"]
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
+- ["C8LJ_STAND9TitleView", "deinit"]
+- !private ["C8LJ_STAND9TitleView", "init"]
 - ["PSo29UIAccessibilityIdentification", "Bool"]
 - !private ["PSo29UIAccessibilityIdentification", "CGRect"]
 - !private ["PSo29UIAccessibilityIdentification", "Double"]
@@ -888,6 +955,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "font"]
 - !private ["PSo29UIAccessibilityIdentification", "frame"]
 - ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "isHidden"]
 - ["PSo29UIAccessibilityIdentification", "setCurrent"]
 - !private ["PSo29UIAccessibilityIdentification", "setNeedsDisplay"]
 - !private ["PSo29UIAccessibilityIdentification", "sin"]
@@ -913,6 +981,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "font"]
 - !private ["PSo12UIAppearance", "frame"]
 - ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "isHidden"]
 - ["PSo12UIAppearance", "setCurrent"]
 - !private ["PSo12UIAppearance", "setNeedsDisplay"]
 - !private ["PSo12UIAppearance", "sin"]
@@ -930,6 +999,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "M_PI"]
 - !private ["PSo21UIAppearanceContainer", "Notification"]
 - !private ["PSo21UIAppearanceContainer", "NotificationCenter"]
+- !private ["PSo21UIAppearanceContainer", "TitleView"]
 - !private ["PSo21UIAppearanceContainer", "UIBezierPath"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "UILabel"]
@@ -942,7 +1012,10 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "font"]
 - !private ["PSo21UIAppearanceContainer", "frame"]
 - ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "isHidden"]
 - !private ["PSo21UIAppearanceContainer", "min"]
+- !private ["PSo21UIAppearanceContainer", "navigationBar"]
+- !private ["PSo21UIAppearanceContainer", "navigationController"]
 - ["PSo21UIAppearanceContainer", "newActive"]
 - ["PSo21UIAppearanceContainer", "setCurrent"]
 - !private ["PSo21UIAppearanceContainer", "setNeedsDisplay"]
@@ -950,6 +1023,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "text"]
 - !private ["PSo21UIAppearanceContainer", "textAlignment"]
 - !private ["PSo21UIAppearanceContainer", "textColor"]
+- ["PSo21UIAppearanceContainer", "titleView"]
 - ["PSo21UIAppearanceContainer", "tsopNumberLabel"]
 - !private ["PSo21UIAppearanceContainer", "tsopRingView"]
 - ["PSo21UIAppearanceContainer", "tsopView"]
@@ -957,6 +1031,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo16UIBarPositioning", "isHidden"]
 - ["CSo12UIBezierPath", "deinit"]
 - !private ["CSo12UIBezierPath", "fill"]
 - !private ["CSo12UIBezierPath", "init"]
@@ -971,9 +1046,13 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CGSize"]
 - !private ["PSo18UIContentContainer", "Notification"]
 - !private ["PSo18UIContentContainer", "NotificationCenter"]
+- !private ["PSo18UIContentContainer", "TitleView"]
 - !private ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "min"]
+- !private ["PSo18UIContentContainer", "navigationBar"]
+- !private ["PSo18UIContentContainer", "navigationController"]
 - ["PSo18UIContentContainer", "newActive"]
+- ["PSo18UIContentContainer", "titleView"]
 - !private ["PSo18UIContentContainer", "tsopRingView"]
 - ["PSo18UIContentContainer", "tsopView"]
 - !private ["PSo18UIContentContainer", "view"]
@@ -1000,6 +1079,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "font"]
 - !private ["PSo17UICoordinateSpace", "frame"]
 - ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "isHidden"]
 - ["PSo17UICoordinateSpace", "setCurrent"]
 - !private ["PSo17UICoordinateSpace", "setNeedsDisplay"]
 - !private ["PSo17UICoordinateSpace", "sin"]
@@ -1025,6 +1105,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "font"]
 - !private ["PSo13UIDynamicItem", "frame"]
 - ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "isHidden"]
 - ["PSo13UIDynamicItem", "setCurrent"]
 - !private ["PSo13UIDynamicItem", "setNeedsDisplay"]
 - !private ["PSo13UIDynamicItem", "sin"]
@@ -1042,6 +1123,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "M_PI"]
 - !private ["PSo18UIFocusEnvironment", "Notification"]
 - !private ["PSo18UIFocusEnvironment", "NotificationCenter"]
+- !private ["PSo18UIFocusEnvironment", "TitleView"]
 - !private ["PSo18UIFocusEnvironment", "UIBezierPath"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "UILabel"]
@@ -1054,7 +1136,10 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "font"]
 - !private ["PSo18UIFocusEnvironment", "frame"]
 - ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "isHidden"]
 - !private ["PSo18UIFocusEnvironment", "min"]
+- !private ["PSo18UIFocusEnvironment", "navigationBar"]
+- !private ["PSo18UIFocusEnvironment", "navigationController"]
 - ["PSo18UIFocusEnvironment", "newActive"]
 - ["PSo18UIFocusEnvironment", "setCurrent"]
 - !private ["PSo18UIFocusEnvironment", "setNeedsDisplay"]
@@ -1062,6 +1147,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "text"]
 - !private ["PSo18UIFocusEnvironment", "textAlignment"]
 - !private ["PSo18UIFocusEnvironment", "textColor"]
+- ["PSo18UIFocusEnvironment", "titleView"]
 - ["PSo18UIFocusEnvironment", "tsopNumberLabel"]
 - !private ["PSo18UIFocusEnvironment", "tsopRingView"]
 - ["PSo18UIFocusEnvironment", "tsopView"]
@@ -1085,6 +1171,7 @@ depends-member:
 - !private ["PSo11UIFocusItem", "font"]
 - !private ["PSo11UIFocusItem", "frame"]
 - ["PSo11UIFocusItem", "init"]
+- !private ["PSo11UIFocusItem", "isHidden"]
 - ["PSo11UIFocusItem", "setCurrent"]
 - !private ["PSo11UIFocusItem", "setNeedsDisplay"]
 - !private ["PSo11UIFocusItem", "sin"]
@@ -1102,6 +1189,10 @@ depends-member:
 - !private ["CSo7UILabel", "text"]
 - !private ["CSo7UILabel", "textAlignment"]
 - !private ["CSo7UILabel", "textColor"]
+- ["CSo15UINavigationBar", "deinit"]
+- !private ["CSo15UINavigationBar", "isHidden"]
+- ["CSo22UINavigationController", "deinit"]
+- !private ["CSo22UINavigationController", "navigationBar"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CGPoint"]
 - ["CSo11UIResponder", "CGRect"]
@@ -1112,6 +1203,7 @@ depends-member:
 - ["CSo11UIResponder", "NSCoder"]
 - ["CSo11UIResponder", "Notification"]
 - !private ["CSo11UIResponder", "NotificationCenter"]
+- ["CSo11UIResponder", "TitleView"]
 - !private ["CSo11UIResponder", "UIBezierPath"]
 - !private ["CSo11UIResponder", "UIColor"]
 - ["CSo11UIResponder", "UILabel"]
@@ -1124,7 +1216,10 @@ depends-member:
 - !private ["CSo11UIResponder", "font"]
 - !private ["CSo11UIResponder", "frame"]
 - ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "isHidden"]
 - !private ["CSo11UIResponder", "min"]
+- !private ["CSo11UIResponder", "navigationBar"]
+- !private ["CSo11UIResponder", "navigationController"]
 - ["CSo11UIResponder", "newActive"]
 - ["CSo11UIResponder", "setCurrent"]
 - !private ["CSo11UIResponder", "setNeedsDisplay"]
@@ -1132,6 +1227,7 @@ depends-member:
 - !private ["CSo11UIResponder", "text"]
 - !private ["CSo11UIResponder", "textAlignment"]
 - !private ["CSo11UIResponder", "textColor"]
+- ["CSo11UIResponder", "titleView"]
 - ["CSo11UIResponder", "tsopNumberLabel"]
 - ["CSo11UIResponder", "tsopRingView"]
 - ["CSo11UIResponder", "tsopView"]
@@ -1146,6 +1242,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "M_PI"]
 - !private ["PSo30UIResponderStandardEditActions", "Notification"]
 - !private ["PSo30UIResponderStandardEditActions", "NotificationCenter"]
+- !private ["PSo30UIResponderStandardEditActions", "TitleView"]
 - !private ["PSo30UIResponderStandardEditActions", "UIBezierPath"]
 - !private ["PSo30UIResponderStandardEditActions", "UIColor"]
 - !private ["PSo30UIResponderStandardEditActions", "UILabel"]
@@ -1158,7 +1255,10 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "font"]
 - !private ["PSo30UIResponderStandardEditActions", "frame"]
 - ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "isHidden"]
 - !private ["PSo30UIResponderStandardEditActions", "min"]
+- !private ["PSo30UIResponderStandardEditActions", "navigationBar"]
+- !private ["PSo30UIResponderStandardEditActions", "navigationController"]
 - ["PSo30UIResponderStandardEditActions", "newActive"]
 - ["PSo30UIResponderStandardEditActions", "setCurrent"]
 - !private ["PSo30UIResponderStandardEditActions", "setNeedsDisplay"]
@@ -1166,6 +1266,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "text"]
 - !private ["PSo30UIResponderStandardEditActions", "textAlignment"]
 - !private ["PSo30UIResponderStandardEditActions", "textColor"]
+- ["PSo30UIResponderStandardEditActions", "titleView"]
 - ["PSo30UIResponderStandardEditActions", "tsopNumberLabel"]
 - !private ["PSo30UIResponderStandardEditActions", "tsopRingView"]
 - ["PSo30UIResponderStandardEditActions", "tsopView"]
@@ -1178,9 +1279,13 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CGSize"]
 - !private ["PSo16UIStateRestoring", "Notification"]
 - !private ["PSo16UIStateRestoring", "NotificationCenter"]
+- !private ["PSo16UIStateRestoring", "TitleView"]
 - !private ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "min"]
+- !private ["PSo16UIStateRestoring", "navigationBar"]
+- !private ["PSo16UIStateRestoring", "navigationController"]
 - ["PSo16UIStateRestoring", "newActive"]
+- ["PSo16UIStateRestoring", "titleView"]
 - !private ["PSo16UIStateRestoring", "tsopRingView"]
 - ["PSo16UIStateRestoring", "tsopView"]
 - !private ["PSo16UIStateRestoring", "view"]
@@ -1194,6 +1299,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "M_PI"]
 - !private ["PSo18UITraitEnvironment", "Notification"]
 - !private ["PSo18UITraitEnvironment", "NotificationCenter"]
+- !private ["PSo18UITraitEnvironment", "TitleView"]
 - !private ["PSo18UITraitEnvironment", "UIBezierPath"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "UILabel"]
@@ -1206,7 +1312,10 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "font"]
 - !private ["PSo18UITraitEnvironment", "frame"]
 - ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "isHidden"]
 - !private ["PSo18UITraitEnvironment", "min"]
+- !private ["PSo18UITraitEnvironment", "navigationBar"]
+- !private ["PSo18UITraitEnvironment", "navigationController"]
 - ["PSo18UITraitEnvironment", "newActive"]
 - ["PSo18UITraitEnvironment", "setCurrent"]
 - !private ["PSo18UITraitEnvironment", "setNeedsDisplay"]
@@ -1214,6 +1323,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "text"]
 - !private ["PSo18UITraitEnvironment", "textAlignment"]
 - !private ["PSo18UITraitEnvironment", "textColor"]
+- ["PSo18UITraitEnvironment", "titleView"]
 - ["PSo18UITraitEnvironment", "tsopNumberLabel"]
 - !private ["PSo18UITraitEnvironment", "tsopRingView"]
 - ["PSo18UITraitEnvironment", "tsopView"]
@@ -1240,6 +1350,7 @@ depends-member:
 - !private ["CSo6UIView", "font"]
 - !private ["CSo6UIView", "frame"]
 - ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "isHidden"]
 - ["CSo6UIView", "setCurrent"]
 - !private ["CSo6UIView", "setNeedsDisplay"]
 - !private ["CSo6UIView", "sin"]
@@ -1255,10 +1366,14 @@ depends-member:
 - !private ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "Notification"]
 - !private ["CSo16UIViewController", "NotificationCenter"]
+- ["CSo16UIViewController", "TitleView"]
 - ["CSo16UIViewController", "deinit"]
 - ["CSo16UIViewController", "init"]
 - !private ["CSo16UIViewController", "min"]
+- !private ["CSo16UIViewController", "navigationBar"]
+- !private ["CSo16UIViewController", "navigationController"]
 - ["CSo16UIViewController", "newActive"]
+- ["CSo16UIViewController", "titleView"]
 - ["CSo16UIViewController", "tsopRingView"]
 - ["CSo16UIViewController", "tsopView"]
 - !private ["CSo16UIViewController", "view"]
@@ -1299,6 +1414,7 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "font"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "frame"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isHidden"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "setCurrent"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setNeedsDisplay"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "sin"]
@@ -1344,6 +1460,7 @@ depends-member:
 - !private ["Ps9_Hashable", "Notification"]
 - !private ["Ps9_Hashable", "NotificationCenter"]
 - !private ["Ps9_Hashable", "Stride"]
+- !private ["Ps9_Hashable", "TitleView"]
 - !private ["Ps9_Hashable", "UIBezierPath"]
 - !private ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "UILabel"]
@@ -1363,7 +1480,10 @@ depends-member:
 - !private ["Ps9_Hashable", "font"]
 - !private ["Ps9_Hashable", "frame"]
 - ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isHidden"]
 - !private ["Ps9_Hashable", "min"]
+- !private ["Ps9_Hashable", "navigationBar"]
+- !private ["Ps9_Hashable", "navigationController"]
 - ["Ps9_Hashable", "newActive"]
 - !private ["Ps9_Hashable", "object"]
 - ["Ps9_Hashable", "setCurrent"]
@@ -1375,6 +1495,7 @@ depends-member:
 - !private ["Ps9_Hashable", "text"]
 - !private ["Ps9_Hashable", "textAlignment"]
 - !private ["Ps9_Hashable", "textColor"]
+- ["Ps9_Hashable", "titleView"]
 - ["Ps9_Hashable", "tsopNumberLabel"]
 - !private ["Ps9_Hashable", "tsopRingView"]
 - ["Ps9_Hashable", "tsopView"]
@@ -1412,6 +1533,8 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "size"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Ps21_ObjectiveCBridgeable", "width"]
+- !private ["Ps21_ObjectiveCBridgeable", "x"]
+- !private ["Ps21_ObjectiveCBridgeable", "y"]
 - !private ["Ps14_SignedInteger", "IntegerLiteralType"]
 - !private ["Ps14_SignedInteger", "Stride"]
 - !private ["Ps14_SignedInteger", "_DisabledRangeIndex"]
@@ -1536,9 +1659,11 @@ depends-nominal:
 - "C8LJ_STAND18TSOPViewController"
 - !private "Ps16TextOutputStream"
 - !private "Ps20TextOutputStreamable"
+- "C8LJ_STAND9TitleView"
 - "PSo29UIAccessibilityIdentification"
 - "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
+- !private "PSo16UIBarPositioning"
 - "CSo12UIBezierPath"
 - "CSo7UIColor"
 - "PSo18UIContentContainer"
@@ -1549,6 +1674,8 @@ depends-nominal:
 - "PSo11UIFocusItem"
 - "CSo6UIFont"
 - "CSo7UILabel"
+- "CSo15UINavigationBar"
+- "CSo22UINavigationController"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
 - "PSo16UIStateRestoring"
@@ -1637,4 +1764,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
-interface-hash: "4a159affbdda580ab76ba376344703f9"
+interface-hash: "eb667669dcb43bfb3bfffbf6ba26c6e9"

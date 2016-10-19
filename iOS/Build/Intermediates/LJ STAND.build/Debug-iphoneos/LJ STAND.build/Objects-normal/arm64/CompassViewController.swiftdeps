@@ -9,41 +9,44 @@ provides-member:
 - ["C8LJ_STAND21CompassViewController", ""]
 - ["C8LJ_STAND11CompassView", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "draw"
 - "newCompass"
-- "rotate"
+- "draw"
 - "angleLabel"
-- "commonInit"
+- "rotate"
+- "titleView"
 - "compass"
 - "degToRad"
+- "viewDidLoad"
+- "commonInit"
 depends-top-level:
-- !private "cos"
 - "UILabel"
-- !private "sin"
-- "CGRect"
-- !private "+"
-- !private "CGSize"
+- "UIView"
 - !private "/"
 - !private "StringLiteralType"
-- !private "-"
+- !private "CGSize"
 - "Double"
-- "UIViewController"
-- "Notification"
-- !private "M_PI"
-- "UIView"
-- "AssignmentPrecedence"
-- !private "UIBezierPath"
-- "CompassViewController"
-- !private "CGPoint"
-- "NSCoder"
-- !private "min"
-- "CastingPrecedence"
+- !private "BooleanLiteralType"
 - !private "UIColor"
-- !private "NSNotification"
-- !private "NotificationCenter"
-- "CompassView"
+- "TitleView"
+- !private "cos"
+- "CompassViewController"
+- !private "M_PI"
 - !private "*"
+- !private "sin"
+- !private "min"
+- "NSCoder"
+- !private "+"
+- "CompassView"
+- !private "UIBezierPath"
+- !private "NotificationCenter"
+- !private "-"
+- !private "NSNotification"
+- "UIViewController"
+- "CGRect"
+- "Notification"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- !private "CGPoint"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "Stride"]
 - !private ["Ps16AbsoluteValuable", "init"]
@@ -56,6 +59,7 @@ depends-member:
 - !private ["Ps9AnyObject", "NSNotification"]
 - !private ["Ps9AnyObject", "Name"]
 - !private ["Ps9AnyObject", "NotificationCenter"]
+- !private ["Ps9AnyObject", "TitleView"]
 - !private ["Ps9AnyObject", "UIBezierPath"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "addLine"]
@@ -72,10 +76,13 @@ depends-member:
 - !private ["Ps9AnyObject", "flatBlack"]
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isHidden"]
 - !private ["Ps9AnyObject", "lineCapStyle"]
 - !private ["Ps9AnyObject", "lineWidth"]
 - !private ["Ps9AnyObject", "min"]
 - !private ["Ps9AnyObject", "move"]
+- !private ["Ps9AnyObject", "navigationBar"]
+- !private ["Ps9AnyObject", "navigationController"]
 - ["Ps9AnyObject", "needleAngle"]
 - ["Ps9AnyObject", "newCompass"]
 - ["Ps9AnyObject", "rotate"]
@@ -85,6 +92,7 @@ depends-member:
 - !private ["Ps9AnyObject", "sin"]
 - !private ["Ps9AnyObject", "stroke"]
 - !private ["Ps9AnyObject", "text"]
+- ["Ps9AnyObject", "titleView"]
 - !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - !private ["Ps9AnyObject", "white"]
@@ -93,7 +101,7 @@ depends-member:
 - !private ["Ps19BinaryFloatingPoint", "init"]
 - !private ["Ps17BitwiseOperations", "Stride"]
 - !private ["Ps17BitwiseOperations", "_DisallowMixedSignArithmetic"]
-- !private ["Sb", "deinit"]
+- ["Sb", "deinit"]
 - !private ["PSo15CALayerDelegate", "CGPoint"]
 - !private ["PSo15CALayerDelegate", "CGRect"]
 - !private ["PSo15CALayerDelegate", "CGSize"]
@@ -108,6 +116,7 @@ depends-member:
 - ["PSo15CALayerDelegate", "draw"]
 - !private ["PSo15CALayerDelegate", "frame"]
 - ["PSo15CALayerDelegate", "init"]
+- !private ["PSo15CALayerDelegate", "isHidden"]
 - ["PSo15CALayerDelegate", "needleAngle"]
 - ["PSo15CALayerDelegate", "rotate"]
 - !private ["PSo15CALayerDelegate", "setNeedsDisplay"]
@@ -144,6 +153,7 @@ depends-member:
 - !private ["Ps7CVarArg", "Name"]
 - !private ["Ps7CVarArg", "NotificationCenter"]
 - !private ["Ps7CVarArg", "Stride"]
+- !private ["Ps7CVarArg", "TitleView"]
 - !private ["Ps7CVarArg", "UIBezierPath"]
 - !private ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "_DisallowMixedSignArithmetic"]
@@ -161,10 +171,13 @@ depends-member:
 - !private ["Ps7CVarArg", "flatBlack"]
 - !private ["Ps7CVarArg", "frame"]
 - ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isHidden"]
 - !private ["Ps7CVarArg", "lineCapStyle"]
 - !private ["Ps7CVarArg", "lineWidth"]
 - !private ["Ps7CVarArg", "min"]
 - !private ["Ps7CVarArg", "move"]
+- !private ["Ps7CVarArg", "navigationBar"]
+- !private ["Ps7CVarArg", "navigationController"]
 - ["Ps7CVarArg", "needleAngle"]
 - ["Ps7CVarArg", "newCompass"]
 - ["Ps7CVarArg", "rotate"]
@@ -174,6 +187,7 @@ depends-member:
 - !private ["Ps7CVarArg", "sin"]
 - !private ["Ps7CVarArg", "stroke"]
 - !private ["Ps7CVarArg", "text"]
+- ["Ps7CVarArg", "titleView"]
 - !private ["Ps7CVarArg", "view"]
 - ["Ps7CVarArg", "viewDidLoad"]
 - !private ["Ps7CVarArg", "white"]
@@ -209,13 +223,16 @@ depends-member:
 - !private ["C8LJ_STAND21CompassViewController", "NSNotification"]
 - ["C8LJ_STAND21CompassViewController", "Notification"]
 - !private ["C8LJ_STAND21CompassViewController", "NotificationCenter"]
+- ["C8LJ_STAND21CompassViewController", "TitleView"]
 - ["C8LJ_STAND21CompassViewController", "UILabel"]
 - ["C8LJ_STAND21CompassViewController", "angleLabel"]
 - ["C8LJ_STAND21CompassViewController", "compass"]
 - ["C8LJ_STAND21CompassViewController", "deinit"]
 - ["C8LJ_STAND21CompassViewController", "init"]
 - !private ["C8LJ_STAND21CompassViewController", "min"]
+- !private ["C8LJ_STAND21CompassViewController", "navigationController"]
 - ["C8LJ_STAND21CompassViewController", "newCompass"]
+- ["C8LJ_STAND21CompassViewController", "titleView"]
 - !private ["C8LJ_STAND21CompassViewController", "view"]
 - ["C8LJ_STAND21CompassViewController", "viewDidLoad"]
 - !private ["Ps28CustomDebugStringConvertible", "CGPoint"]
@@ -228,6 +245,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Name"]
 - !private ["Ps28CustomDebugStringConvertible", "NotificationCenter"]
 - !private ["Ps28CustomDebugStringConvertible", "Stride"]
+- !private ["Ps28CustomDebugStringConvertible", "TitleView"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBezierPath"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "addLine"]
@@ -245,10 +263,13 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - !private ["Ps28CustomDebugStringConvertible", "height"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isHidden"]
 - !private ["Ps28CustomDebugStringConvertible", "lineCapStyle"]
 - !private ["Ps28CustomDebugStringConvertible", "lineWidth"]
 - !private ["Ps28CustomDebugStringConvertible", "min"]
 - !private ["Ps28CustomDebugStringConvertible", "move"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationBar"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationController"]
 - ["Ps28CustomDebugStringConvertible", "needleAngle"]
 - ["Ps28CustomDebugStringConvertible", "newCompass"]
 - !private ["Ps28CustomDebugStringConvertible", "object"]
@@ -261,6 +282,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "size"]
 - !private ["Ps28CustomDebugStringConvertible", "stroke"]
 - !private ["Ps28CustomDebugStringConvertible", "text"]
+- ["Ps28CustomDebugStringConvertible", "titleView"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - !private ["Ps28CustomDebugStringConvertible", "white"]
@@ -297,6 +319,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Name"]
 - !private ["Ps23CustomStringConvertible", "NotificationCenter"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
+- !private ["Ps23CustomStringConvertible", "TitleView"]
 - !private ["Ps23CustomStringConvertible", "UIBezierPath"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "_DisallowMixedSignArithmetic"]
@@ -314,10 +337,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "flatBlack"]
 - !private ["Ps23CustomStringConvertible", "frame"]
 - ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isHidden"]
 - !private ["Ps23CustomStringConvertible", "lineCapStyle"]
 - !private ["Ps23CustomStringConvertible", "lineWidth"]
 - !private ["Ps23CustomStringConvertible", "min"]
 - !private ["Ps23CustomStringConvertible", "move"]
+- !private ["Ps23CustomStringConvertible", "navigationBar"]
+- !private ["Ps23CustomStringConvertible", "navigationController"]
 - ["Ps23CustomStringConvertible", "needleAngle"]
 - ["Ps23CustomStringConvertible", "newCompass"]
 - !private ["Ps23CustomStringConvertible", "object"]
@@ -328,6 +354,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "sin"]
 - !private ["Ps23CustomStringConvertible", "stroke"]
 - !private ["Ps23CustomStringConvertible", "text"]
+- ["Ps23CustomStringConvertible", "titleView"]
 - !private ["Ps23CustomStringConvertible", "view"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - !private ["Ps23CustomStringConvertible", "white"]
@@ -351,6 +378,7 @@ depends-member:
 - !private ["Ps9Equatable", "Name"]
 - !private ["Ps9Equatable", "NotificationCenter"]
 - !private ["Ps9Equatable", "Stride"]
+- !private ["Ps9Equatable", "TitleView"]
 - !private ["Ps9Equatable", "UIBezierPath"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "_DisallowMixedSignArithmetic"]
@@ -369,10 +397,13 @@ depends-member:
 - !private ["Ps9Equatable", "frame"]
 - !private ["Ps9Equatable", "height"]
 - ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isHidden"]
 - !private ["Ps9Equatable", "lineCapStyle"]
 - !private ["Ps9Equatable", "lineWidth"]
 - !private ["Ps9Equatable", "min"]
 - !private ["Ps9Equatable", "move"]
+- !private ["Ps9Equatable", "navigationBar"]
+- !private ["Ps9Equatable", "navigationController"]
 - ["Ps9Equatable", "needleAngle"]
 - ["Ps9Equatable", "newCompass"]
 - !private ["Ps9Equatable", "object"]
@@ -386,6 +417,7 @@ depends-member:
 - !private ["Ps9Equatable", "size"]
 - !private ["Ps9Equatable", "stroke"]
 - !private ["Ps9Equatable", "text"]
+- ["Ps9Equatable", "titleView"]
 - !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidLoad"]
 - !private ["Ps9Equatable", "white"]
@@ -416,6 +448,7 @@ depends-member:
 - !private ["Ps8Hashable", "Name"]
 - !private ["Ps8Hashable", "NotificationCenter"]
 - !private ["Ps8Hashable", "Stride"]
+- !private ["Ps8Hashable", "TitleView"]
 - !private ["Ps8Hashable", "UIBezierPath"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "_DisallowMixedSignArithmetic"]
@@ -433,10 +466,13 @@ depends-member:
 - !private ["Ps8Hashable", "flatBlack"]
 - !private ["Ps8Hashable", "frame"]
 - ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isHidden"]
 - !private ["Ps8Hashable", "lineCapStyle"]
 - !private ["Ps8Hashable", "lineWidth"]
 - !private ["Ps8Hashable", "min"]
 - !private ["Ps8Hashable", "move"]
+- !private ["Ps8Hashable", "navigationBar"]
+- !private ["Ps8Hashable", "navigationController"]
 - ["Ps8Hashable", "needleAngle"]
 - ["Ps8Hashable", "newCompass"]
 - !private ["Ps8Hashable", "object"]
@@ -448,6 +484,7 @@ depends-member:
 - !private ["Ps8Hashable", "sin"]
 - !private ["Ps8Hashable", "stroke"]
 - !private ["Ps8Hashable", "text"]
+- ["Ps8Hashable", "titleView"]
 - !private ["Ps8Hashable", "view"]
 - ["Ps8Hashable", "viewDidLoad"]
 - !private ["Ps8Hashable", "white"]
@@ -481,6 +518,7 @@ depends-member:
 - !private ["PSo8NSCoding", "NSNotification"]
 - !private ["PSo8NSCoding", "Name"]
 - !private ["PSo8NSCoding", "NotificationCenter"]
+- !private ["PSo8NSCoding", "TitleView"]
 - !private ["PSo8NSCoding", "UIBezierPath"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "addLine"]
@@ -495,10 +533,13 @@ depends-member:
 - !private ["PSo8NSCoding", "flatBlack"]
 - !private ["PSo8NSCoding", "frame"]
 - ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isHidden"]
 - !private ["PSo8NSCoding", "lineCapStyle"]
 - !private ["PSo8NSCoding", "lineWidth"]
 - !private ["PSo8NSCoding", "min"]
 - !private ["PSo8NSCoding", "move"]
+- !private ["PSo8NSCoding", "navigationBar"]
+- !private ["PSo8NSCoding", "navigationController"]
 - ["PSo8NSCoding", "needleAngle"]
 - ["PSo8NSCoding", "newCompass"]
 - ["PSo8NSCoding", "rotate"]
@@ -508,6 +549,7 @@ depends-member:
 - !private ["PSo8NSCoding", "sin"]
 - !private ["PSo8NSCoding", "stroke"]
 - !private ["PSo8NSCoding", "text"]
+- ["PSo8NSCoding", "titleView"]
 - !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - !private ["PSo8NSCoding", "white"]
@@ -530,11 +572,15 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CompassView"]
 - !private ["PSo26NSExtensionRequestHandling", "NSNotification"]
 - !private ["PSo26NSExtensionRequestHandling", "NotificationCenter"]
+- !private ["PSo26NSExtensionRequestHandling", "TitleView"]
 - ["PSo26NSExtensionRequestHandling", "angleLabel"]
 - ["PSo26NSExtensionRequestHandling", "compass"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "min"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationBar"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - ["PSo26NSExtensionRequestHandling", "newCompass"]
+- ["PSo26NSExtensionRequestHandling", "titleView"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
@@ -552,6 +598,7 @@ depends-member:
 - !private ["CSo8NSObject", "Name"]
 - ["CSo8NSObject", "Notification"]
 - !private ["CSo8NSObject", "NotificationCenter"]
+- ["CSo8NSObject", "TitleView"]
 - !private ["CSo8NSObject", "UIBezierPath"]
 - !private ["CSo8NSObject", "UIColor"]
 - ["CSo8NSObject", "UILabel"]
@@ -569,10 +616,13 @@ depends-member:
 - !private ["CSo8NSObject", "flatBlack"]
 - !private ["CSo8NSObject", "frame"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isHidden"]
 - !private ["CSo8NSObject", "lineCapStyle"]
 - !private ["CSo8NSObject", "lineWidth"]
 - !private ["CSo8NSObject", "min"]
 - !private ["CSo8NSObject", "move"]
+- !private ["CSo8NSObject", "navigationBar"]
+- !private ["CSo8NSObject", "navigationController"]
 - ["CSo8NSObject", "needleAngle"]
 - ["CSo8NSObject", "newCompass"]
 - ["CSo8NSObject", "rotate"]
@@ -582,6 +632,7 @@ depends-member:
 - !private ["CSo8NSObject", "sin"]
 - !private ["CSo8NSObject", "stroke"]
 - !private ["CSo8NSObject", "text"]
+- ["CSo8NSObject", "titleView"]
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["CSo8NSObject", "white"]
@@ -594,6 +645,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSNotification"]
 - !private ["PSo16NSObjectProtocol", "Name"]
 - !private ["PSo16NSObjectProtocol", "NotificationCenter"]
+- !private ["PSo16NSObjectProtocol", "TitleView"]
 - !private ["PSo16NSObjectProtocol", "UIBezierPath"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "addLine"]
@@ -610,10 +662,13 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "flatBlack"]
 - !private ["PSo16NSObjectProtocol", "frame"]
 - ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isHidden"]
 - !private ["PSo16NSObjectProtocol", "lineCapStyle"]
 - !private ["PSo16NSObjectProtocol", "lineWidth"]
 - !private ["PSo16NSObjectProtocol", "min"]
 - !private ["PSo16NSObjectProtocol", "move"]
+- !private ["PSo16NSObjectProtocol", "navigationBar"]
+- !private ["PSo16NSObjectProtocol", "navigationController"]
 - ["PSo16NSObjectProtocol", "needleAngle"]
 - ["PSo16NSObjectProtocol", "newCompass"]
 - ["PSo16NSObjectProtocol", "rotate"]
@@ -623,6 +678,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "sin"]
 - !private ["PSo16NSObjectProtocol", "stroke"]
 - !private ["PSo16NSObjectProtocol", "text"]
+- ["PSo16NSObjectProtocol", "titleView"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "white"]
@@ -655,6 +711,8 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
+- ["C8LJ_STAND9TitleView", "deinit"]
+- !private ["C8LJ_STAND9TitleView", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "CGPoint"]
 - !private ["PSo29UIAccessibilityIdentification", "CGRect"]
 - !private ["PSo29UIAccessibilityIdentification", "CGSize"]
@@ -669,6 +727,7 @@ depends-member:
 - ["PSo29UIAccessibilityIdentification", "draw"]
 - !private ["PSo29UIAccessibilityIdentification", "frame"]
 - ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "isHidden"]
 - ["PSo29UIAccessibilityIdentification", "needleAngle"]
 - ["PSo29UIAccessibilityIdentification", "rotate"]
 - !private ["PSo29UIAccessibilityIdentification", "setNeedsDisplay"]
@@ -689,6 +748,7 @@ depends-member:
 - ["PSo12UIAppearance", "draw"]
 - !private ["PSo12UIAppearance", "frame"]
 - ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "isHidden"]
 - ["PSo12UIAppearance", "needleAngle"]
 - ["PSo12UIAppearance", "rotate"]
 - !private ["PSo12UIAppearance", "setNeedsDisplay"]
@@ -703,6 +763,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "M_PI"]
 - !private ["PSo21UIAppearanceContainer", "NSNotification"]
 - !private ["PSo21UIAppearanceContainer", "NotificationCenter"]
+- !private ["PSo21UIAppearanceContainer", "TitleView"]
 - !private ["PSo21UIAppearanceContainer", "UIBezierPath"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "addSubview"]
@@ -714,16 +775,21 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "draw"]
 - !private ["PSo21UIAppearanceContainer", "frame"]
 - ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "isHidden"]
 - !private ["PSo21UIAppearanceContainer", "min"]
+- !private ["PSo21UIAppearanceContainer", "navigationBar"]
+- !private ["PSo21UIAppearanceContainer", "navigationController"]
 - ["PSo21UIAppearanceContainer", "needleAngle"]
 - ["PSo21UIAppearanceContainer", "newCompass"]
 - ["PSo21UIAppearanceContainer", "rotate"]
 - !private ["PSo21UIAppearanceContainer", "setNeedsDisplay"]
 - !private ["PSo21UIAppearanceContainer", "sin"]
 - !private ["PSo21UIAppearanceContainer", "text"]
+- ["PSo21UIAppearanceContainer", "titleView"]
 - !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo16UIBarPositioning", "isHidden"]
 - !private ["CSo12UIBezierPath", "addLine"]
 - ["CSo12UIBezierPath", "deinit"]
 - !private ["CSo12UIBezierPath", "fill"]
@@ -743,11 +809,15 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CompassView"]
 - !private ["PSo18UIContentContainer", "NSNotification"]
 - !private ["PSo18UIContentContainer", "NotificationCenter"]
+- !private ["PSo18UIContentContainer", "TitleView"]
 - ["PSo18UIContentContainer", "angleLabel"]
 - ["PSo18UIContentContainer", "compass"]
 - !private ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "min"]
+- !private ["PSo18UIContentContainer", "navigationBar"]
+- !private ["PSo18UIContentContainer", "navigationController"]
 - ["PSo18UIContentContainer", "newCompass"]
+- ["PSo18UIContentContainer", "titleView"]
 - !private ["PSo18UIContentContainer", "view"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
@@ -766,6 +836,7 @@ depends-member:
 - ["PSo17UICoordinateSpace", "draw"]
 - !private ["PSo17UICoordinateSpace", "frame"]
 - ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "isHidden"]
 - ["PSo17UICoordinateSpace", "needleAngle"]
 - ["PSo17UICoordinateSpace", "rotate"]
 - !private ["PSo17UICoordinateSpace", "setNeedsDisplay"]
@@ -786,6 +857,7 @@ depends-member:
 - ["PSo13UIDynamicItem", "draw"]
 - !private ["PSo13UIDynamicItem", "frame"]
 - ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "isHidden"]
 - ["PSo13UIDynamicItem", "needleAngle"]
 - ["PSo13UIDynamicItem", "rotate"]
 - !private ["PSo13UIDynamicItem", "setNeedsDisplay"]
@@ -800,6 +872,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "M_PI"]
 - !private ["PSo18UIFocusEnvironment", "NSNotification"]
 - !private ["PSo18UIFocusEnvironment", "NotificationCenter"]
+- !private ["PSo18UIFocusEnvironment", "TitleView"]
 - !private ["PSo18UIFocusEnvironment", "UIBezierPath"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "addSubview"]
@@ -811,13 +884,17 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "draw"]
 - !private ["PSo18UIFocusEnvironment", "frame"]
 - ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "isHidden"]
 - !private ["PSo18UIFocusEnvironment", "min"]
+- !private ["PSo18UIFocusEnvironment", "navigationBar"]
+- !private ["PSo18UIFocusEnvironment", "navigationController"]
 - ["PSo18UIFocusEnvironment", "needleAngle"]
 - ["PSo18UIFocusEnvironment", "newCompass"]
 - ["PSo18UIFocusEnvironment", "rotate"]
 - !private ["PSo18UIFocusEnvironment", "setNeedsDisplay"]
 - !private ["PSo18UIFocusEnvironment", "sin"]
 - !private ["PSo18UIFocusEnvironment", "text"]
+- ["PSo18UIFocusEnvironment", "titleView"]
 - !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
@@ -835,6 +912,7 @@ depends-member:
 - ["PSo11UIFocusItem", "draw"]
 - !private ["PSo11UIFocusItem", "frame"]
 - ["PSo11UIFocusItem", "init"]
+- !private ["PSo11UIFocusItem", "isHidden"]
 - ["PSo11UIFocusItem", "needleAngle"]
 - ["PSo11UIFocusItem", "rotate"]
 - !private ["PSo11UIFocusItem", "setNeedsDisplay"]
@@ -842,6 +920,10 @@ depends-member:
 - !private ["PSo11UIFocusItem", "text"]
 - ["PSo11UIFocusItem", ""]
 - !private ["CSo7UILabel", "text"]
+- ["CSo15UINavigationBar", "deinit"]
+- !private ["CSo15UINavigationBar", "isHidden"]
+- ["CSo22UINavigationController", "deinit"]
+- !private ["CSo22UINavigationController", "navigationBar"]
 - !private ["CSo11UIResponder", "CGPoint"]
 - ["CSo11UIResponder", "CGRect"]
 - !private ["CSo11UIResponder", "CGSize"]
@@ -852,6 +934,7 @@ depends-member:
 - !private ["CSo11UIResponder", "NSNotification"]
 - ["CSo11UIResponder", "Notification"]
 - !private ["CSo11UIResponder", "NotificationCenter"]
+- ["CSo11UIResponder", "TitleView"]
 - !private ["CSo11UIResponder", "UIBezierPath"]
 - !private ["CSo11UIResponder", "UIColor"]
 - ["CSo11UIResponder", "UILabel"]
@@ -864,13 +947,17 @@ depends-member:
 - ["CSo11UIResponder", "draw"]
 - !private ["CSo11UIResponder", "frame"]
 - ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "isHidden"]
 - !private ["CSo11UIResponder", "min"]
+- !private ["CSo11UIResponder", "navigationBar"]
+- !private ["CSo11UIResponder", "navigationController"]
 - ["CSo11UIResponder", "needleAngle"]
 - ["CSo11UIResponder", "newCompass"]
 - ["CSo11UIResponder", "rotate"]
 - !private ["CSo11UIResponder", "setNeedsDisplay"]
 - !private ["CSo11UIResponder", "sin"]
 - !private ["CSo11UIResponder", "text"]
+- ["CSo11UIResponder", "titleView"]
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["PSo30UIResponderStandardEditActions", "CGPoint"]
@@ -881,6 +968,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "M_PI"]
 - !private ["PSo30UIResponderStandardEditActions", "NSNotification"]
 - !private ["PSo30UIResponderStandardEditActions", "NotificationCenter"]
+- !private ["PSo30UIResponderStandardEditActions", "TitleView"]
 - !private ["PSo30UIResponderStandardEditActions", "UIBezierPath"]
 - !private ["PSo30UIResponderStandardEditActions", "UIColor"]
 - !private ["PSo30UIResponderStandardEditActions", "addSubview"]
@@ -892,13 +980,17 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "draw"]
 - !private ["PSo30UIResponderStandardEditActions", "frame"]
 - ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "isHidden"]
 - !private ["PSo30UIResponderStandardEditActions", "min"]
+- !private ["PSo30UIResponderStandardEditActions", "navigationBar"]
+- !private ["PSo30UIResponderStandardEditActions", "navigationController"]
 - ["PSo30UIResponderStandardEditActions", "needleAngle"]
 - ["PSo30UIResponderStandardEditActions", "newCompass"]
 - ["PSo30UIResponderStandardEditActions", "rotate"]
 - !private ["PSo30UIResponderStandardEditActions", "setNeedsDisplay"]
 - !private ["PSo30UIResponderStandardEditActions", "sin"]
 - !private ["PSo30UIResponderStandardEditActions", "text"]
+- ["PSo30UIResponderStandardEditActions", "titleView"]
 - !private ["PSo30UIResponderStandardEditActions", "view"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
@@ -908,11 +1000,15 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CompassView"]
 - !private ["PSo16UIStateRestoring", "NSNotification"]
 - !private ["PSo16UIStateRestoring", "NotificationCenter"]
+- !private ["PSo16UIStateRestoring", "TitleView"]
 - ["PSo16UIStateRestoring", "angleLabel"]
 - ["PSo16UIStateRestoring", "compass"]
 - !private ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "min"]
+- !private ["PSo16UIStateRestoring", "navigationBar"]
+- !private ["PSo16UIStateRestoring", "navigationController"]
 - ["PSo16UIStateRestoring", "newCompass"]
+- ["PSo16UIStateRestoring", "titleView"]
 - !private ["PSo16UIStateRestoring", "view"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
@@ -924,6 +1020,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "M_PI"]
 - !private ["PSo18UITraitEnvironment", "NSNotification"]
 - !private ["PSo18UITraitEnvironment", "NotificationCenter"]
+- !private ["PSo18UITraitEnvironment", "TitleView"]
 - !private ["PSo18UITraitEnvironment", "UIBezierPath"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "addSubview"]
@@ -935,13 +1032,17 @@ depends-member:
 - ["PSo18UITraitEnvironment", "draw"]
 - !private ["PSo18UITraitEnvironment", "frame"]
 - ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "isHidden"]
 - !private ["PSo18UITraitEnvironment", "min"]
+- !private ["PSo18UITraitEnvironment", "navigationBar"]
+- !private ["PSo18UITraitEnvironment", "navigationController"]
 - ["PSo18UITraitEnvironment", "needleAngle"]
 - ["PSo18UITraitEnvironment", "newCompass"]
 - ["PSo18UITraitEnvironment", "rotate"]
 - !private ["PSo18UITraitEnvironment", "setNeedsDisplay"]
 - !private ["PSo18UITraitEnvironment", "sin"]
 - !private ["PSo18UITraitEnvironment", "text"]
+- ["PSo18UITraitEnvironment", "titleView"]
 - !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
@@ -961,6 +1062,7 @@ depends-member:
 - ["CSo6UIView", "draw"]
 - !private ["CSo6UIView", "frame"]
 - ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "isHidden"]
 - ["CSo6UIView", "needleAngle"]
 - ["CSo6UIView", "rotate"]
 - !private ["CSo6UIView", "setNeedsDisplay"]
@@ -975,13 +1077,17 @@ depends-member:
 - !private ["CSo16UIViewController", "NSNotification"]
 - ["CSo16UIViewController", "Notification"]
 - !private ["CSo16UIViewController", "NotificationCenter"]
+- ["CSo16UIViewController", "TitleView"]
 - ["CSo16UIViewController", "UILabel"]
 - ["CSo16UIViewController", "angleLabel"]
 - ["CSo16UIViewController", "compass"]
 - ["CSo16UIViewController", "deinit"]
 - ["CSo16UIViewController", "init"]
 - !private ["CSo16UIViewController", "min"]
+- !private ["CSo16UIViewController", "navigationBar"]
+- !private ["CSo16UIViewController", "navigationController"]
 - ["CSo16UIViewController", "newCompass"]
+- ["CSo16UIViewController", "titleView"]
 - !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
@@ -1022,6 +1128,7 @@ depends-member:
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "draw"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "frame"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isHidden"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "needleAngle"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "rotate"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setNeedsDisplay"]
@@ -1055,6 +1162,7 @@ depends-member:
 - !private ["Ps9_Hashable", "Name"]
 - !private ["Ps9_Hashable", "NotificationCenter"]
 - !private ["Ps9_Hashable", "Stride"]
+- !private ["Ps9_Hashable", "TitleView"]
 - !private ["Ps9_Hashable", "UIBezierPath"]
 - !private ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "_DisallowMixedSignArithmetic"]
@@ -1072,10 +1180,13 @@ depends-member:
 - !private ["Ps9_Hashable", "flatBlack"]
 - !private ["Ps9_Hashable", "frame"]
 - ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isHidden"]
 - !private ["Ps9_Hashable", "lineCapStyle"]
 - !private ["Ps9_Hashable", "lineWidth"]
 - !private ["Ps9_Hashable", "min"]
 - !private ["Ps9_Hashable", "move"]
+- !private ["Ps9_Hashable", "navigationBar"]
+- !private ["Ps9_Hashable", "navigationController"]
 - ["Ps9_Hashable", "needleAngle"]
 - ["Ps9_Hashable", "newCompass"]
 - !private ["Ps9_Hashable", "object"]
@@ -1087,6 +1198,7 @@ depends-member:
 - !private ["Ps9_Hashable", "sin"]
 - !private ["Ps9_Hashable", "stroke"]
 - !private ["Ps9_Hashable", "text"]
+- ["Ps9_Hashable", "titleView"]
 - !private ["Ps9_Hashable", "view"]
 - ["Ps9_Hashable", "viewDidLoad"]
 - !private ["Ps9_Hashable", "white"]
@@ -1119,7 +1231,7 @@ depends-nominal:
 - "Ps9AnyObject"
 - !private "Ps19BinaryFloatingPoint"
 - !private "Ps17BitwiseOperations"
-- !private "Sb"
+- "Sb"
 - "PSo15CALayerDelegate"
 - "V12CoreGraphics7CGFloat"
 - "OSC9CGLineCap"
@@ -1187,9 +1299,11 @@ depends-nominal:
 - "SS"
 - !private "Ps16TextOutputStream"
 - !private "Ps20TextOutputStreamable"
+- "C8LJ_STAND9TitleView"
 - "PSo29UIAccessibilityIdentification"
 - "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
+- !private "PSo16UIBarPositioning"
 - "CSo12UIBezierPath"
 - "CSo7UIColor"
 - "PSo18UIContentContainer"
@@ -1199,6 +1313,8 @@ depends-nominal:
 - "PSo18UIFocusEnvironment"
 - "PSo11UIFocusItem"
 - !private "CSo7UILabel"
+- "CSo15UINavigationBar"
+- "CSo22UINavigationController"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
 - "PSo16UIStateRestoring"
@@ -1286,4 +1402,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
-interface-hash: "6eb98a9a360f35e137e233a6637a1c4f"
+interface-hash: "eba52a7a42a2f589cbbef31954a5c6ac"

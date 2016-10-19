@@ -9,46 +9,48 @@ provides-member:
 - ["C8LJ_STAND25LightSensorViewController", ""]
 - ["C8LJ_STAND15lightSensorView", ""]
 provides-dynamic-lookup:
+- "setValues"
 - "lightSensView"
 - "lights"
-- "clearValues"
-- "viewDidLoad"
-- "draw"
 - "newData"
-- "degToRad"
+- "draw"
+- "viewDidLoad"
+- "titleView"
+- "clearValues"
 - "commonInit"
-- "setValues"
+- "degToRad"
 depends-top-level:
-- "Notification"
-- !private "+"
-- !private "CGSize"
-- "Int"
-- !private "BooleanLiteralType"
-- !private "UIColor"
-- "Bool"
-- !private "cos"
-- !private "StringLiteralType"
-- "LightSensorViewController"
-- !private "CGPoint"
-- !private "NSNotification"
-- "AssignmentPrecedence"
-- "UIViewController"
-- !private "M_PI"
-- "CastingPrecedence"
-- !private "sin"
-- !private "-"
-- !private "NotificationCenter"
-- !private "min"
-- "CGRect"
-- !private "..<"
-- !private "/"
 - "NSCoder"
+- "CGRect"
+- !private "CGPoint"
+- !private "min"
 - !private "*"
-- "lightSensorView"
 - !private "UIBezierPath"
+- !private "NSNotification"
+- "TitleView"
+- "lightSensorView"
+- !private "+"
+- !private "M_PI"
+- !private "CGSize"
+- !private "BooleanLiteralType"
+- !private "/"
 - !private "..."
+- "Bool"
+- !private "-"
+- !private "UIColor"
 - "UIView"
+- "CastingPrecedence"
+- "AssignmentPrecedence"
+- !private "cos"
+- "UIViewController"
 - "Double"
+- !private "sin"
+- "Int"
+- "Notification"
+- "LightSensorViewController"
+- !private "NotificationCenter"
+- !private "..<"
+- !private "StringLiteralType"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "Stride"]
 - !private ["Ps16AbsoluteValuable", "init"]
@@ -61,6 +63,7 @@ depends-member:
 - !private ["Ps9AnyObject", "NSNotification"]
 - !private ["Ps9AnyObject", "Name"]
 - !private ["Ps9AnyObject", "NotificationCenter"]
+- !private ["Ps9AnyObject", "TitleView"]
 - !private ["Ps9AnyObject", "UIBezierPath"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "addObserver"]
@@ -75,10 +78,13 @@ depends-member:
 - !private ["Ps9AnyObject", "flatBlack"]
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "isHidden"]
 - ["Ps9AnyObject", "lightSensView"]
 - !private ["Ps9AnyObject", "lightSensorView"]
 - ["Ps9AnyObject", "lights"]
 - !private ["Ps9AnyObject", "min"]
+- !private ["Ps9AnyObject", "navigationBar"]
+- !private ["Ps9AnyObject", "navigationController"]
 - ["Ps9AnyObject", "newData"]
 - !private ["Ps9AnyObject", "setFill"]
 - !private ["Ps9AnyObject", "setNeedsDisplay"]
@@ -86,6 +92,7 @@ depends-member:
 - ["Ps9AnyObject", "setValues"]
 - !private ["Ps9AnyObject", "sin"]
 - !private ["Ps9AnyObject", "stroke"]
+- ["Ps9AnyObject", "titleView"]
 - !private ["Ps9AnyObject", "view"]
 - ["Ps9AnyObject", "viewDidLoad"]
 - !private ["Ps9AnyObject", "white"]
@@ -147,6 +154,7 @@ depends-member:
 - ["PSo15CALayerDelegate", "draw"]
 - !private ["PSo15CALayerDelegate", "frame"]
 - ["PSo15CALayerDelegate", "init"]
+- !private ["PSo15CALayerDelegate", "isHidden"]
 - ["PSo15CALayerDelegate", "lights"]
 - !private ["PSo15CALayerDelegate", "setNeedsDisplay"]
 - ["PSo15CALayerDelegate", "setValues"]
@@ -155,9 +163,12 @@ depends-member:
 - ["V12CoreGraphics7CGFloat", "deinit"]
 - ["VSC7CGPoint", "deinit"]
 - !private ["VSC7CGPoint", "init"]
+- !private ["VSC7CGPoint", "x"]
+- !private ["VSC7CGPoint", "y"]
 - ["VSC6CGRect", "deinit"]
 - !private ["VSC6CGRect", "height"]
 - !private ["VSC6CGRect", "init"]
+- !private ["VSC6CGRect", "origin"]
 - !private ["VSC6CGRect", "width"]
 - ["VSC6CGSize", "deinit"]
 - !private ["VSC6CGSize", "init"]
@@ -178,6 +189,7 @@ depends-member:
 - !private ["Ps7CVarArg", "NotificationCenter"]
 - !private ["Ps7CVarArg", "Stride"]
 - !private ["Ps7CVarArg", "SubSequence"]
+- !private ["Ps7CVarArg", "TitleView"]
 - !private ["Ps7CVarArg", "UIBezierPath"]
 - !private ["Ps7CVarArg", "UIColor"]
 - !private ["Ps7CVarArg", "_DisabledRangeIndex"]
@@ -196,10 +208,13 @@ depends-member:
 - !private ["Ps7CVarArg", "flatBlack"]
 - !private ["Ps7CVarArg", "frame"]
 - ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "isHidden"]
 - ["Ps7CVarArg", "lightSensView"]
 - !private ["Ps7CVarArg", "lightSensorView"]
 - ["Ps7CVarArg", "lights"]
 - !private ["Ps7CVarArg", "min"]
+- !private ["Ps7CVarArg", "navigationBar"]
+- !private ["Ps7CVarArg", "navigationController"]
 - ["Ps7CVarArg", "newData"]
 - !private ["Ps7CVarArg", "setFill"]
 - !private ["Ps7CVarArg", "setNeedsDisplay"]
@@ -208,6 +223,7 @@ depends-member:
 - !private ["Ps7CVarArg", "sin"]
 - !private ["Ps7CVarArg", "stroke"]
 - !private ["Ps7CVarArg", "subscript"]
+- ["Ps7CVarArg", "titleView"]
 - !private ["Ps7CVarArg", "view"]
 - ["Ps7CVarArg", "viewDidLoad"]
 - !private ["Ps7CVarArg", "white"]
@@ -247,6 +263,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "NotificationCenter"]
 - !private ["Ps28CustomDebugStringConvertible", "Stride"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
+- !private ["Ps28CustomDebugStringConvertible", "TitleView"]
 - !private ["Ps28CustomDebugStringConvertible", "UIBezierPath"]
 - !private ["Ps28CustomDebugStringConvertible", "UIColor"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
@@ -265,12 +282,16 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - !private ["Ps28CustomDebugStringConvertible", "height"]
 - ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "isHidden"]
 - ["Ps28CustomDebugStringConvertible", "lightSensView"]
 - !private ["Ps28CustomDebugStringConvertible", "lightSensorView"]
 - ["Ps28CustomDebugStringConvertible", "lights"]
 - !private ["Ps28CustomDebugStringConvertible", "min"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationBar"]
+- !private ["Ps28CustomDebugStringConvertible", "navigationController"]
 - ["Ps28CustomDebugStringConvertible", "newData"]
 - !private ["Ps28CustomDebugStringConvertible", "object"]
+- !private ["Ps28CustomDebugStringConvertible", "origin"]
 - !private ["Ps28CustomDebugStringConvertible", "setFill"]
 - !private ["Ps28CustomDebugStringConvertible", "setNeedsDisplay"]
 - !private ["Ps28CustomDebugStringConvertible", "setStroke"]
@@ -278,10 +299,13 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "sin"]
 - !private ["Ps28CustomDebugStringConvertible", "stroke"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- ["Ps28CustomDebugStringConvertible", "titleView"]
 - !private ["Ps28CustomDebugStringConvertible", "view"]
 - ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
 - !private ["Ps28CustomDebugStringConvertible", "white"]
 - !private ["Ps28CustomDebugStringConvertible", "width"]
+- !private ["Ps28CustomDebugStringConvertible", "x"]
+- !private ["Ps28CustomDebugStringConvertible", "y"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps29CustomPlaygroundQuickLookable", "IntegerLiteralType"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "Stride"]
@@ -289,7 +313,10 @@ depends-member:
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "height"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "origin"]
 - !private ["Ps29CustomPlaygroundQuickLookable", "width"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "x"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "y"]
 - !private ["Ps17CustomReflectable", "Index"]
 - !private ["Ps17CustomReflectable", "IndexDistance"]
 - !private ["Ps17CustomReflectable", "IntegerLiteralType"]
@@ -304,8 +331,11 @@ depends-member:
 - !private ["Ps17CustomReflectable", "height"]
 - ["Ps17CustomReflectable", "init"]
 - !private ["Ps17CustomReflectable", "object"]
+- !private ["Ps17CustomReflectable", "origin"]
 - !private ["Ps17CustomReflectable", "subscript"]
 - !private ["Ps17CustomReflectable", "width"]
+- !private ["Ps17CustomReflectable", "x"]
+- !private ["Ps17CustomReflectable", "y"]
 - ["Ps23CustomStringConvertible", "Bool"]
 - !private ["Ps23CustomStringConvertible", "CGPoint"]
 - !private ["Ps23CustomStringConvertible", "CGRect"]
@@ -321,6 +351,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "NotificationCenter"]
 - !private ["Ps23CustomStringConvertible", "Stride"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
+- !private ["Ps23CustomStringConvertible", "TitleView"]
 - !private ["Ps23CustomStringConvertible", "UIBezierPath"]
 - !private ["Ps23CustomStringConvertible", "UIColor"]
 - !private ["Ps23CustomStringConvertible", "_DisabledRangeIndex"]
@@ -340,10 +371,13 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "flatBlack"]
 - !private ["Ps23CustomStringConvertible", "frame"]
 - ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "isHidden"]
 - ["Ps23CustomStringConvertible", "lightSensView"]
 - !private ["Ps23CustomStringConvertible", "lightSensorView"]
 - ["Ps23CustomStringConvertible", "lights"]
 - !private ["Ps23CustomStringConvertible", "min"]
+- !private ["Ps23CustomStringConvertible", "navigationBar"]
+- !private ["Ps23CustomStringConvertible", "navigationController"]
 - ["Ps23CustomStringConvertible", "newData"]
 - !private ["Ps23CustomStringConvertible", "object"]
 - !private ["Ps23CustomStringConvertible", "setFill"]
@@ -353,6 +387,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "sin"]
 - !private ["Ps23CustomStringConvertible", "stroke"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
+- ["Ps23CustomStringConvertible", "titleView"]
 - !private ["Ps23CustomStringConvertible", "view"]
 - ["Ps23CustomStringConvertible", "viewDidLoad"]
 - !private ["Ps23CustomStringConvertible", "white"]
@@ -382,6 +417,7 @@ depends-member:
 - !private ["Ps9Equatable", "Name"]
 - !private ["Ps9Equatable", "NotificationCenter"]
 - !private ["Ps9Equatable", "Stride"]
+- !private ["Ps9Equatable", "TitleView"]
 - !private ["Ps9Equatable", "UIBezierPath"]
 - !private ["Ps9Equatable", "UIColor"]
 - !private ["Ps9Equatable", "_DisabledRangeIndex"]
@@ -400,22 +436,29 @@ depends-member:
 - !private ["Ps9Equatable", "frame"]
 - !private ["Ps9Equatable", "height"]
 - ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "isHidden"]
 - ["Ps9Equatable", "lightSensView"]
 - !private ["Ps9Equatable", "lightSensorView"]
 - ["Ps9Equatable", "lights"]
 - !private ["Ps9Equatable", "min"]
+- !private ["Ps9Equatable", "navigationBar"]
+- !private ["Ps9Equatable", "navigationController"]
 - ["Ps9Equatable", "newData"]
 - !private ["Ps9Equatable", "object"]
+- !private ["Ps9Equatable", "origin"]
 - !private ["Ps9Equatable", "setFill"]
 - !private ["Ps9Equatable", "setNeedsDisplay"]
 - !private ["Ps9Equatable", "setStroke"]
 - ["Ps9Equatable", "setValues"]
 - !private ["Ps9Equatable", "sin"]
 - !private ["Ps9Equatable", "stroke"]
+- ["Ps9Equatable", "titleView"]
 - !private ["Ps9Equatable", "view"]
 - ["Ps9Equatable", "viewDidLoad"]
 - !private ["Ps9Equatable", "white"]
 - !private ["Ps9Equatable", "width"]
+- !private ["Ps9Equatable", "x"]
+- !private ["Ps9Equatable", "y"]
 - ["Ps9Equatable", ""]
 - !private ["Ps25ExpressibleByArrayLiteral", "Index"]
 - !private ["Ps25ExpressibleByArrayLiteral", "IndexDistance"]
@@ -452,6 +495,7 @@ depends-member:
 - !private ["Ps8Hashable", "Name"]
 - !private ["Ps8Hashable", "NotificationCenter"]
 - !private ["Ps8Hashable", "Stride"]
+- !private ["Ps8Hashable", "TitleView"]
 - !private ["Ps8Hashable", "UIBezierPath"]
 - !private ["Ps8Hashable", "UIColor"]
 - !private ["Ps8Hashable", "_DisabledRangeIndex"]
@@ -468,10 +512,13 @@ depends-member:
 - !private ["Ps8Hashable", "flatBlack"]
 - !private ["Ps8Hashable", "frame"]
 - ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "isHidden"]
 - ["Ps8Hashable", "lightSensView"]
 - !private ["Ps8Hashable", "lightSensorView"]
 - ["Ps8Hashable", "lights"]
 - !private ["Ps8Hashable", "min"]
+- !private ["Ps8Hashable", "navigationBar"]
+- !private ["Ps8Hashable", "navigationController"]
 - ["Ps8Hashable", "newData"]
 - !private ["Ps8Hashable", "object"]
 - !private ["Ps8Hashable", "setFill"]
@@ -480,6 +527,7 @@ depends-member:
 - ["Ps8Hashable", "setValues"]
 - !private ["Ps8Hashable", "sin"]
 - !private ["Ps8Hashable", "stroke"]
+- ["Ps8Hashable", "titleView"]
 - !private ["Ps8Hashable", "view"]
 - ["Ps8Hashable", "viewDidLoad"]
 - !private ["Ps8Hashable", "white"]
@@ -528,12 +576,15 @@ depends-member:
 - !private ["C8LJ_STAND25LightSensorViewController", "NSNotification"]
 - ["C8LJ_STAND25LightSensorViewController", "Notification"]
 - !private ["C8LJ_STAND25LightSensorViewController", "NotificationCenter"]
+- ["C8LJ_STAND25LightSensorViewController", "TitleView"]
 - ["C8LJ_STAND25LightSensorViewController", "deinit"]
 - ["C8LJ_STAND25LightSensorViewController", "init"]
 - ["C8LJ_STAND25LightSensorViewController", "lightSensView"]
 - ["C8LJ_STAND25LightSensorViewController", "lightSensorView"]
 - !private ["C8LJ_STAND25LightSensorViewController", "min"]
+- !private ["C8LJ_STAND25LightSensorViewController", "navigationController"]
 - ["C8LJ_STAND25LightSensorViewController", "newData"]
+- ["C8LJ_STAND25LightSensorViewController", "titleView"]
 - !private ["C8LJ_STAND25LightSensorViewController", "view"]
 - ["C8LJ_STAND25LightSensorViewController", "viewDidLoad"]
 - !private ["Ps25LosslessStringConvertible", "Stride"]
@@ -571,6 +622,7 @@ depends-member:
 - !private ["PSo8NSCoding", "NSNotification"]
 - !private ["PSo8NSCoding", "Name"]
 - !private ["PSo8NSCoding", "NotificationCenter"]
+- !private ["PSo8NSCoding", "TitleView"]
 - !private ["PSo8NSCoding", "UIBezierPath"]
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "addSubview"]
@@ -583,10 +635,13 @@ depends-member:
 - !private ["PSo8NSCoding", "flatBlack"]
 - !private ["PSo8NSCoding", "frame"]
 - ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "isHidden"]
 - ["PSo8NSCoding", "lightSensView"]
 - !private ["PSo8NSCoding", "lightSensorView"]
 - ["PSo8NSCoding", "lights"]
 - !private ["PSo8NSCoding", "min"]
+- !private ["PSo8NSCoding", "navigationBar"]
+- !private ["PSo8NSCoding", "navigationController"]
 - ["PSo8NSCoding", "newData"]
 - !private ["PSo8NSCoding", "setFill"]
 - !private ["PSo8NSCoding", "setNeedsDisplay"]
@@ -594,6 +649,7 @@ depends-member:
 - ["PSo8NSCoding", "setValues"]
 - !private ["PSo8NSCoding", "sin"]
 - !private ["PSo8NSCoding", "stroke"]
+- ["PSo8NSCoding", "titleView"]
 - !private ["PSo8NSCoding", "view"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - !private ["PSo8NSCoding", "white"]
@@ -611,11 +667,15 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "CGSize"]
 - !private ["PSo26NSExtensionRequestHandling", "NSNotification"]
 - !private ["PSo26NSExtensionRequestHandling", "NotificationCenter"]
+- !private ["PSo26NSExtensionRequestHandling", "TitleView"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - ["PSo26NSExtensionRequestHandling", "lightSensView"]
 - !private ["PSo26NSExtensionRequestHandling", "lightSensorView"]
 - !private ["PSo26NSExtensionRequestHandling", "min"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationBar"]
+- !private ["PSo26NSExtensionRequestHandling", "navigationController"]
 - ["PSo26NSExtensionRequestHandling", "newData"]
+- ["PSo26NSExtensionRequestHandling", "titleView"]
 - !private ["PSo26NSExtensionRequestHandling", "view"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
@@ -634,6 +694,7 @@ depends-member:
 - !private ["CSo8NSObject", "Name"]
 - ["CSo8NSObject", "Notification"]
 - !private ["CSo8NSObject", "NotificationCenter"]
+- ["CSo8NSObject", "TitleView"]
 - !private ["CSo8NSObject", "UIBezierPath"]
 - !private ["CSo8NSObject", "UIColor"]
 - !private ["CSo8NSObject", "addObserver"]
@@ -648,10 +709,13 @@ depends-member:
 - !private ["CSo8NSObject", "flatBlack"]
 - !private ["CSo8NSObject", "frame"]
 - ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "isHidden"]
 - ["CSo8NSObject", "lightSensView"]
 - ["CSo8NSObject", "lightSensorView"]
 - ["CSo8NSObject", "lights"]
 - !private ["CSo8NSObject", "min"]
+- !private ["CSo8NSObject", "navigationBar"]
+- !private ["CSo8NSObject", "navigationController"]
 - ["CSo8NSObject", "newData"]
 - !private ["CSo8NSObject", "setFill"]
 - !private ["CSo8NSObject", "setNeedsDisplay"]
@@ -659,6 +723,7 @@ depends-member:
 - ["CSo8NSObject", "setValues"]
 - !private ["CSo8NSObject", "sin"]
 - !private ["CSo8NSObject", "stroke"]
+- ["CSo8NSObject", "titleView"]
 - !private ["CSo8NSObject", "view"]
 - ["CSo8NSObject", "viewDidLoad"]
 - !private ["CSo8NSObject", "white"]
@@ -671,6 +736,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSNotification"]
 - !private ["PSo16NSObjectProtocol", "Name"]
 - !private ["PSo16NSObjectProtocol", "NotificationCenter"]
+- !private ["PSo16NSObjectProtocol", "TitleView"]
 - !private ["PSo16NSObjectProtocol", "UIBezierPath"]
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "addObserver"]
@@ -685,10 +751,13 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "flatBlack"]
 - !private ["PSo16NSObjectProtocol", "frame"]
 - ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "isHidden"]
 - ["PSo16NSObjectProtocol", "lightSensView"]
 - !private ["PSo16NSObjectProtocol", "lightSensorView"]
 - ["PSo16NSObjectProtocol", "lights"]
 - !private ["PSo16NSObjectProtocol", "min"]
+- !private ["PSo16NSObjectProtocol", "navigationBar"]
+- !private ["PSo16NSObjectProtocol", "navigationController"]
 - ["PSo16NSObjectProtocol", "newData"]
 - !private ["PSo16NSObjectProtocol", "setFill"]
 - !private ["PSo16NSObjectProtocol", "setNeedsDisplay"]
@@ -696,6 +765,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "setValues"]
 - !private ["PSo16NSObjectProtocol", "sin"]
 - !private ["PSo16NSObjectProtocol", "stroke"]
+- ["PSo16NSObjectProtocol", "titleView"]
 - !private ["PSo16NSObjectProtocol", "view"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - !private ["PSo16NSObjectProtocol", "white"]
@@ -793,6 +863,8 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
+- ["C8LJ_STAND9TitleView", "deinit"]
+- !private ["C8LJ_STAND9TitleView", "init"]
 - ["PSo29UIAccessibilityIdentification", "Bool"]
 - !private ["PSo29UIAccessibilityIdentification", "CGRect"]
 - !private ["PSo29UIAccessibilityIdentification", "Double"]
@@ -807,6 +879,7 @@ depends-member:
 - ["PSo29UIAccessibilityIdentification", "draw"]
 - !private ["PSo29UIAccessibilityIdentification", "frame"]
 - ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "isHidden"]
 - ["PSo29UIAccessibilityIdentification", "lights"]
 - !private ["PSo29UIAccessibilityIdentification", "setNeedsDisplay"]
 - ["PSo29UIAccessibilityIdentification", "setValues"]
@@ -826,6 +899,7 @@ depends-member:
 - ["PSo12UIAppearance", "draw"]
 - !private ["PSo12UIAppearance", "frame"]
 - ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "isHidden"]
 - ["PSo12UIAppearance", "lights"]
 - !private ["PSo12UIAppearance", "setNeedsDisplay"]
 - ["PSo12UIAppearance", "setValues"]
@@ -839,6 +913,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "M_PI"]
 - !private ["PSo21UIAppearanceContainer", "NSNotification"]
 - !private ["PSo21UIAppearanceContainer", "NotificationCenter"]
+- !private ["PSo21UIAppearanceContainer", "TitleView"]
 - !private ["PSo21UIAppearanceContainer", "UIBezierPath"]
 - !private ["PSo21UIAppearanceContainer", "UIColor"]
 - !private ["PSo21UIAppearanceContainer", "addSubview"]
@@ -849,17 +924,22 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "draw"]
 - !private ["PSo21UIAppearanceContainer", "frame"]
 - ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "isHidden"]
 - ["PSo21UIAppearanceContainer", "lightSensView"]
 - !private ["PSo21UIAppearanceContainer", "lightSensorView"]
 - ["PSo21UIAppearanceContainer", "lights"]
 - !private ["PSo21UIAppearanceContainer", "min"]
+- !private ["PSo21UIAppearanceContainer", "navigationBar"]
+- !private ["PSo21UIAppearanceContainer", "navigationController"]
 - ["PSo21UIAppearanceContainer", "newData"]
 - !private ["PSo21UIAppearanceContainer", "setNeedsDisplay"]
 - ["PSo21UIAppearanceContainer", "setValues"]
 - !private ["PSo21UIAppearanceContainer", "sin"]
+- ["PSo21UIAppearanceContainer", "titleView"]
 - !private ["PSo21UIAppearanceContainer", "view"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo16UIBarPositioning", "isHidden"]
 - ["CSo12UIBezierPath", "deinit"]
 - !private ["CSo12UIBezierPath", "fill"]
 - !private ["CSo12UIBezierPath", "init"]
@@ -874,11 +954,15 @@ depends-member:
 - !private ["PSo18UIContentContainer", "CGSize"]
 - !private ["PSo18UIContentContainer", "NSNotification"]
 - !private ["PSo18UIContentContainer", "NotificationCenter"]
+- !private ["PSo18UIContentContainer", "TitleView"]
 - !private ["PSo18UIContentContainer", "init"]
 - ["PSo18UIContentContainer", "lightSensView"]
 - !private ["PSo18UIContentContainer", "lightSensorView"]
 - !private ["PSo18UIContentContainer", "min"]
+- !private ["PSo18UIContentContainer", "navigationBar"]
+- !private ["PSo18UIContentContainer", "navigationController"]
 - ["PSo18UIContentContainer", "newData"]
+- ["PSo18UIContentContainer", "titleView"]
 - !private ["PSo18UIContentContainer", "view"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
@@ -896,6 +980,7 @@ depends-member:
 - ["PSo17UICoordinateSpace", "draw"]
 - !private ["PSo17UICoordinateSpace", "frame"]
 - ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "isHidden"]
 - ["PSo17UICoordinateSpace", "lights"]
 - !private ["PSo17UICoordinateSpace", "setNeedsDisplay"]
 - ["PSo17UICoordinateSpace", "setValues"]
@@ -915,6 +1000,7 @@ depends-member:
 - ["PSo13UIDynamicItem", "draw"]
 - !private ["PSo13UIDynamicItem", "frame"]
 - ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "isHidden"]
 - ["PSo13UIDynamicItem", "lights"]
 - !private ["PSo13UIDynamicItem", "setNeedsDisplay"]
 - ["PSo13UIDynamicItem", "setValues"]
@@ -928,6 +1014,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "M_PI"]
 - !private ["PSo18UIFocusEnvironment", "NSNotification"]
 - !private ["PSo18UIFocusEnvironment", "NotificationCenter"]
+- !private ["PSo18UIFocusEnvironment", "TitleView"]
 - !private ["PSo18UIFocusEnvironment", "UIBezierPath"]
 - !private ["PSo18UIFocusEnvironment", "UIColor"]
 - !private ["PSo18UIFocusEnvironment", "addSubview"]
@@ -938,14 +1025,18 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "draw"]
 - !private ["PSo18UIFocusEnvironment", "frame"]
 - ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "isHidden"]
 - ["PSo18UIFocusEnvironment", "lightSensView"]
 - !private ["PSo18UIFocusEnvironment", "lightSensorView"]
 - ["PSo18UIFocusEnvironment", "lights"]
 - !private ["PSo18UIFocusEnvironment", "min"]
+- !private ["PSo18UIFocusEnvironment", "navigationBar"]
+- !private ["PSo18UIFocusEnvironment", "navigationController"]
 - ["PSo18UIFocusEnvironment", "newData"]
 - !private ["PSo18UIFocusEnvironment", "setNeedsDisplay"]
 - ["PSo18UIFocusEnvironment", "setValues"]
 - !private ["PSo18UIFocusEnvironment", "sin"]
+- ["PSo18UIFocusEnvironment", "titleView"]
 - !private ["PSo18UIFocusEnvironment", "view"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
@@ -963,11 +1054,16 @@ depends-member:
 - ["PSo11UIFocusItem", "draw"]
 - !private ["PSo11UIFocusItem", "frame"]
 - ["PSo11UIFocusItem", "init"]
+- !private ["PSo11UIFocusItem", "isHidden"]
 - ["PSo11UIFocusItem", "lights"]
 - !private ["PSo11UIFocusItem", "setNeedsDisplay"]
 - ["PSo11UIFocusItem", "setValues"]
 - !private ["PSo11UIFocusItem", "sin"]
 - ["PSo11UIFocusItem", ""]
+- ["CSo15UINavigationBar", "deinit"]
+- !private ["CSo15UINavigationBar", "isHidden"]
+- ["CSo22UINavigationController", "deinit"]
+- !private ["CSo22UINavigationController", "navigationBar"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "CGPoint"]
 - ["CSo11UIResponder", "CGRect"]
@@ -979,6 +1075,7 @@ depends-member:
 - !private ["CSo11UIResponder", "NSNotification"]
 - ["CSo11UIResponder", "Notification"]
 - !private ["CSo11UIResponder", "NotificationCenter"]
+- ["CSo11UIResponder", "TitleView"]
 - !private ["CSo11UIResponder", "UIBezierPath"]
 - !private ["CSo11UIResponder", "UIColor"]
 - !private ["CSo11UIResponder", "addSubview"]
@@ -989,14 +1086,18 @@ depends-member:
 - ["CSo11UIResponder", "draw"]
 - !private ["CSo11UIResponder", "frame"]
 - ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "isHidden"]
 - ["CSo11UIResponder", "lightSensView"]
 - ["CSo11UIResponder", "lightSensorView"]
 - ["CSo11UIResponder", "lights"]
 - !private ["CSo11UIResponder", "min"]
+- !private ["CSo11UIResponder", "navigationBar"]
+- !private ["CSo11UIResponder", "navigationController"]
 - ["CSo11UIResponder", "newData"]
 - !private ["CSo11UIResponder", "setNeedsDisplay"]
 - ["CSo11UIResponder", "setValues"]
 - !private ["CSo11UIResponder", "sin"]
+- ["CSo11UIResponder", "titleView"]
 - !private ["CSo11UIResponder", "view"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", "Bool"]
@@ -1007,6 +1108,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "M_PI"]
 - !private ["PSo30UIResponderStandardEditActions", "NSNotification"]
 - !private ["PSo30UIResponderStandardEditActions", "NotificationCenter"]
+- !private ["PSo30UIResponderStandardEditActions", "TitleView"]
 - !private ["PSo30UIResponderStandardEditActions", "UIBezierPath"]
 - !private ["PSo30UIResponderStandardEditActions", "UIColor"]
 - !private ["PSo30UIResponderStandardEditActions", "addSubview"]
@@ -1017,14 +1119,18 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "draw"]
 - !private ["PSo30UIResponderStandardEditActions", "frame"]
 - ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "isHidden"]
 - ["PSo30UIResponderStandardEditActions", "lightSensView"]
 - !private ["PSo30UIResponderStandardEditActions", "lightSensorView"]
 - ["PSo30UIResponderStandardEditActions", "lights"]
 - !private ["PSo30UIResponderStandardEditActions", "min"]
+- !private ["PSo30UIResponderStandardEditActions", "navigationBar"]
+- !private ["PSo30UIResponderStandardEditActions", "navigationController"]
 - ["PSo30UIResponderStandardEditActions", "newData"]
 - !private ["PSo30UIResponderStandardEditActions", "setNeedsDisplay"]
 - ["PSo30UIResponderStandardEditActions", "setValues"]
 - !private ["PSo30UIResponderStandardEditActions", "sin"]
+- ["PSo30UIResponderStandardEditActions", "titleView"]
 - !private ["PSo30UIResponderStandardEditActions", "view"]
 - ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
 - ["PSo30UIResponderStandardEditActions", ""]
@@ -1033,11 +1139,15 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "CGSize"]
 - !private ["PSo16UIStateRestoring", "NSNotification"]
 - !private ["PSo16UIStateRestoring", "NotificationCenter"]
+- !private ["PSo16UIStateRestoring", "TitleView"]
 - !private ["PSo16UIStateRestoring", "init"]
 - ["PSo16UIStateRestoring", "lightSensView"]
 - !private ["PSo16UIStateRestoring", "lightSensorView"]
 - !private ["PSo16UIStateRestoring", "min"]
+- !private ["PSo16UIStateRestoring", "navigationBar"]
+- !private ["PSo16UIStateRestoring", "navigationController"]
 - ["PSo16UIStateRestoring", "newData"]
+- ["PSo16UIStateRestoring", "titleView"]
 - !private ["PSo16UIStateRestoring", "view"]
 - ["PSo16UIStateRestoring", "viewDidLoad"]
 - ["PSo16UIStateRestoring", ""]
@@ -1049,6 +1159,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "M_PI"]
 - !private ["PSo18UITraitEnvironment", "NSNotification"]
 - !private ["PSo18UITraitEnvironment", "NotificationCenter"]
+- !private ["PSo18UITraitEnvironment", "TitleView"]
 - !private ["PSo18UITraitEnvironment", "UIBezierPath"]
 - !private ["PSo18UITraitEnvironment", "UIColor"]
 - !private ["PSo18UITraitEnvironment", "addSubview"]
@@ -1059,14 +1170,18 @@ depends-member:
 - ["PSo18UITraitEnvironment", "draw"]
 - !private ["PSo18UITraitEnvironment", "frame"]
 - ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "isHidden"]
 - ["PSo18UITraitEnvironment", "lightSensView"]
 - !private ["PSo18UITraitEnvironment", "lightSensorView"]
 - ["PSo18UITraitEnvironment", "lights"]
 - !private ["PSo18UITraitEnvironment", "min"]
+- !private ["PSo18UITraitEnvironment", "navigationBar"]
+- !private ["PSo18UITraitEnvironment", "navigationController"]
 - ["PSo18UITraitEnvironment", "newData"]
 - !private ["PSo18UITraitEnvironment", "setNeedsDisplay"]
 - ["PSo18UITraitEnvironment", "setValues"]
 - !private ["PSo18UITraitEnvironment", "sin"]
+- ["PSo18UITraitEnvironment", "titleView"]
 - !private ["PSo18UITraitEnvironment", "view"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
@@ -1087,6 +1202,7 @@ depends-member:
 - ["CSo6UIView", "draw"]
 - !private ["CSo6UIView", "frame"]
 - ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "isHidden"]
 - ["CSo6UIView", "lights"]
 - !private ["CSo6UIView", "setNeedsDisplay"]
 - ["CSo6UIView", "setValues"]
@@ -1099,12 +1215,16 @@ depends-member:
 - !private ["CSo16UIViewController", "NSNotification"]
 - ["CSo16UIViewController", "Notification"]
 - !private ["CSo16UIViewController", "NotificationCenter"]
+- ["CSo16UIViewController", "TitleView"]
 - ["CSo16UIViewController", "deinit"]
 - ["CSo16UIViewController", "init"]
 - ["CSo16UIViewController", "lightSensView"]
 - ["CSo16UIViewController", "lightSensorView"]
 - !private ["CSo16UIViewController", "min"]
+- !private ["CSo16UIViewController", "navigationBar"]
+- !private ["CSo16UIViewController", "navigationController"]
 - ["CSo16UIViewController", "newData"]
+- ["CSo16UIViewController", "titleView"]
 - !private ["CSo16UIViewController", "view"]
 - ["CSo16UIViewController", "viewDidLoad"]
 - ["CSo16UIViewController", ""]
@@ -1140,6 +1260,7 @@ depends-member:
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "draw"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "frame"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "isHidden"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "lights"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "setNeedsDisplay"]
 - ["Ps37_DefaultCustomPlaygroundQuickLookable", "setValues"]
@@ -1182,6 +1303,7 @@ depends-member:
 - !private ["Ps9_Hashable", "Name"]
 - !private ["Ps9_Hashable", "NotificationCenter"]
 - !private ["Ps9_Hashable", "Stride"]
+- !private ["Ps9_Hashable", "TitleView"]
 - !private ["Ps9_Hashable", "UIBezierPath"]
 - !private ["Ps9_Hashable", "UIColor"]
 - !private ["Ps9_Hashable", "_DisabledRangeIndex"]
@@ -1198,10 +1320,13 @@ depends-member:
 - !private ["Ps9_Hashable", "flatBlack"]
 - !private ["Ps9_Hashable", "frame"]
 - ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "isHidden"]
 - ["Ps9_Hashable", "lightSensView"]
 - !private ["Ps9_Hashable", "lightSensorView"]
 - ["Ps9_Hashable", "lights"]
 - !private ["Ps9_Hashable", "min"]
+- !private ["Ps9_Hashable", "navigationBar"]
+- !private ["Ps9_Hashable", "navigationController"]
 - ["Ps9_Hashable", "newData"]
 - !private ["Ps9_Hashable", "object"]
 - !private ["Ps9_Hashable", "setFill"]
@@ -1210,6 +1335,7 @@ depends-member:
 - ["Ps9_Hashable", "setValues"]
 - !private ["Ps9_Hashable", "sin"]
 - !private ["Ps9_Hashable", "stroke"]
+- ["Ps9_Hashable", "titleView"]
 - !private ["Ps9_Hashable", "view"]
 - ["Ps9_Hashable", "viewDidLoad"]
 - !private ["Ps9_Hashable", "white"]
@@ -1237,8 +1363,11 @@ depends-member:
 - !private ["Ps21_ObjectiveCBridgeable", "height"]
 - ["Ps21_ObjectiveCBridgeable", "init"]
 - !private ["Ps21_ObjectiveCBridgeable", "object"]
+- !private ["Ps21_ObjectiveCBridgeable", "origin"]
 - !private ["Ps21_ObjectiveCBridgeable", "subscript"]
 - !private ["Ps21_ObjectiveCBridgeable", "width"]
+- !private ["Ps21_ObjectiveCBridgeable", "x"]
+- !private ["Ps21_ObjectiveCBridgeable", "y"]
 - !private ["Ps14_SignedInteger", "IntegerLiteralType"]
 - !private ["Ps14_SignedInteger", "Stride"]
 - !private ["Ps14_SignedInteger", "_DisabledRangeIndex"]
@@ -1360,9 +1489,11 @@ depends-nominal:
 - "SS"
 - !private "Ps16TextOutputStream"
 - !private "Ps20TextOutputStreamable"
+- "C8LJ_STAND9TitleView"
 - "PSo29UIAccessibilityIdentification"
 - "PSo12UIAppearance"
 - "PSo21UIAppearanceContainer"
+- !private "PSo16UIBarPositioning"
 - "CSo12UIBezierPath"
 - "CSo7UIColor"
 - "PSo18UIContentContainer"
@@ -1370,6 +1501,8 @@ depends-nominal:
 - "PSo13UIDynamicItem"
 - "PSo18UIFocusEnvironment"
 - "PSo11UIFocusItem"
+- "CSo15UINavigationBar"
+- "CSo22UINavigationController"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
 - "PSo16UIStateRestoring"
@@ -1457,4 +1590,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SceneKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/GLKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
-interface-hash: "60e5c135f48c578c6704743d3652cd4e"
+interface-hash: "bbb484aaae949a2716b253f8aac8506e"

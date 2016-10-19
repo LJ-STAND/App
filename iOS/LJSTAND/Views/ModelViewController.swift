@@ -16,6 +16,9 @@ class ModelViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.flatBlack()]
+
         sceneView = SCNView(frame: self.view.frame)
         sceneView.scene = try! SCNScene(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Robot", ofType: "obj")!), options: nil)
         sceneView.backgroundColor = UIColor.flatWhite()

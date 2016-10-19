@@ -19,14 +19,21 @@ class SerialViewController: UIViewController {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
 
+    var titleView: TitleView!
     
     var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
     var selectedPeripheral: CBPeripheral?
     
     override func viewDidLoad() {
+        self.navigationController?.navigationBar.isHidden = true
+        
+        titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "Serial")
+    
+        self.view.addSubview(titleView)
+        
         serial = BluetoothSerial(delegate: self)
         reloadView()
-        serialOutputTextView.text = ""
+        serialOutputTextView.text = "asdsadsadajsdhsajhd"
         serial.writeType = .withoutResponse
         
         sendTextField.delegate = self
