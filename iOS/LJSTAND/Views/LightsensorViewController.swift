@@ -17,15 +17,13 @@ class LightSensorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dist = min(self.view.frame.width, self.view.frame.height) - (0.2 * self.view.frame.height)
+        let dist = min(self.view.frame.width, self.view.frame.height) - (0.1 * self.view.frame.height)
         let maxDimention = CGSize(width: dist, height: dist)
         let origin = CGPoint(x: ((self.view.frame.width / 2) - (dist / 2)), y: ((self.view.frame.height / 2) - (dist / 2)))
         
         lightSensView = lightSensorView(frame: CGRect(origin: origin, size: maxDimention))
         
         self.view.addSubview(lightSensView)
-        
-        lightSensView.drawLights(numberOfLights: 24)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.newData), name: NSNotification.Name(rawValue: "newLights"), object: nil)
     }
@@ -44,7 +42,7 @@ class LightSensorViewController: UIViewController {
 
 
 class lightSensorView: UIView {
-    var lights: [lightSensor] = []
+    var lights: [Bool] = [Bool]()
  
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -57,75 +55,59 @@ class lightSensorView: UIView {
     }
     
     func commonInit() {
-        self.backgroundColor = UIColor.flatGray()
-        self.makeCircular()
+        for _ in 1...24 {
+            lights.append(false)
+        }
     }
     
-    func drawLights(numberOfLights: Int) {
+    override func draw(_ rect: CGRect) {
+        let path = UIBezierPath(rect: rect)
+        UIColor.white.setFill()
         
-        for light in lights {
-            light.removeFromSuperview()
-        }
+        path.fill()
         
-        lights = []
+        let numberOfLights = 24
         
-        let interval = Double(360/numberOfLights)
-        let hypt = Double(self.frame.width/2 - 30)
+        let radOfLight = 15.0
+        let offset = radOfLight / 2.0
         
-        for i in 1...numberOfLights {
+        let interval = Double(360 / numberOfLights)
+        let hypt = Double(self.frame.width/2) - radOfLight
+        
+        for i in 0..<numberOfLights {
+            let angle = 360 - ((interval * Double(i)) + 90)
+            let angleRad = degToRad(angle: angle)
             
-            //Maths stuffs
-            let angle = (interval * Double(i)) - 105
-            let angleRad = (angle * M_PI / 180.0)
+            let xVal = (Double(self.frame.width/2) + (hypt * sin(angleRad)) - offset)
+            let yVal = (Double(self.frame.height/2) + (hypt * cos(angleRad)) - offset)
             
-            let radOfLight = 15.0
-            let offset = radOfLight / 2.0
+            let path = UIBezierPath(ovalIn: CGRect(x: xVal, y: yVal, width: radOfLight, height: radOfLight))
+            UIColor.flatBlack().setFill()
+            UIColor.flatBlack().setStroke()
             
-            let hei = (hypt * sin(angleRad)) + Double(self.frame.height / 2) - offset
-            let wid = (hypt * cos(angleRad)) + Double(self.frame.width / 2) - offset
-            
-            
-            let tempLight = lightSensor(frame: CGRect(x: wid, y: hei, width: radOfLight, height: radOfLight))
-            tempLight.setLight()
-            self.addSubview(tempLight)
-            
-            lights.append(tempLight)
+            if lights[i] {
+                path.fill()
+            } else {
+                path.stroke()
+            }
         }
     }
     
     func setValues(sensorNumber: Int) {
-        let sensor = lights[sensorNumber]
-        sensor.enabled = true
-        sensor.setLight()
+        lights[sensorNumber] = true
+        
+        setNeedsDisplay()
     }
     
     func clearValues() {
-        for item in lights {
-            item.enabled = false
-            item.setLight()
+        for i in 0..<lights.count {
+            lights[i] = false
         }
-    }
-}
-
-class lightSensor: UIView {
-    var enabled = false
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.backgroundColor = .green
-        self.makeCircular()
+        
+        setNeedsDisplay()
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError()
+    func degToRad(angle: Double) -> Double {
+        return (angle - 90) * M_PI/180
     }
-    
-    func setLight() {
-        if (enabled) {
-            self.backgroundColor = UIColor.flatGreen()
-        } else {
-            self.backgroundColor = UIColor.flatBlack()
-        }
-    }
-    
 }

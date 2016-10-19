@@ -1,0 +1,18 @@
+version: "Apple Swift version 3.0.1 (swiftlang-800.0.56 clang-800.0.42)"
+options: "87e857431e0d432af8b05160830617dd"
+build_time: [530185191, 969500000]
+inputs:
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Controllers/AppDelegate.swift": [530157253, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Extensions/UITextView.swift": [530149591, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Views/SerialViewController.swift": [530149591, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Views/CompassViewController.swift": [530185009, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Protocols/BluetoothSerial.swift": [529586028, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Views/PartDetailViewController.swift": [530153777, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Extensions/UIView.swift": [530149591, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Views/PartsListTableViewController.swift": [530153777, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Views/ModelViewController.swift": [530154724, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Views/LightsensorViewController.swift": [530183357, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Controllers/PartParser.swift": [530153777, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Views/WebViewController.swift": [530154724, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Models/Part.swift": [530153777, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Views/TSOPViewController.swift": [530183551, 0]

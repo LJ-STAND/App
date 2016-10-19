@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         log.logAppDetails()
-        checkForUpdate()
+        
+// TODO
+//        checkForUpdate()
         return true
     }
     
@@ -34,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 let releasedVer = json["currentRelease"] as! Int
                 
-                let thisBuild = Int(MKAppSettingsController().build)!
+                let thisBuild = Int(MKAppSettingsController().build.components(separatedBy: "-")[0])!
                 
                 if releasedVer > thisBuild {
                     //Update

@@ -15,15 +15,14 @@ class CompassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let dist = min(self.view.frame.width, self.view.frame.height) - (0.2 * self.view.frame.height)
+        
+        let dist = min(self.view.frame.width, self.view.frame.height) - (0.1 * self.view.frame.height)
         let maxDimention = CGSize(width: dist, height: dist)
         let origin = CGPoint(x: ((self.view.frame.width / 2) - (dist / 2)), y: ((self.view.frame.height / 2) - (dist / 2)))
         
         compass = CompassView(frame: CGRect(origin: origin, size: maxDimention))
         
         self.view.addSubview(compass)
-        
-        compass.rotate(angle: 0.0)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.newCompass), name: NSNotification.Name(rawValue: "newCompass"), object: nil)
     }
@@ -40,7 +39,7 @@ class CompassViewController: UIViewController {
 
 
 class CompassView: UIView {
-    var needle: UIView = UIView()
+    var needleAngle: Double!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -53,22 +52,43 @@ class CompassView: UIView {
     }
     
     func commonInit() {
-        self.backgroundColor = UIColor.flatGray()
-        self.makeCircular()
+        needleAngle = 0
+    }
+    
+    override func draw(_ rect: CGRect) {
+        let backgroundPath = UIBezierPath(rect: rect)
+        UIColor.white.setFill()
         
-        let center = self.frame.width / 2
-        self.needle = UIView(frame: CGRect(x: center - center / 2, y: center, width: center, height: 10))
-        self.needle.backgroundColor = .flatGreen()
-        self.needle.layer.cornerRadius = 5
-        self.needle.clipsToBounds = true
+        backgroundPath.fill()
+        let path = UIBezierPath(ovalIn: CGRect(origin: CGPoint(x: rect.origin.x + 0.05 * rect.size.width, y: rect.origin.y + 0.05 * rect.size.width), size: CGSize(width: 0.9 * rect.size.width, height: 0.9 * rect.size.height)))
+        UIColor.flatBlack().setStroke()
+        path.lineWidth = 3
+        path.stroke()
         
-        self.needle.layer.anchorPoint = CGPoint(x: 0, y: 0.5)
-        self.addSubview(needle)
+        let xCenter = Double(self.frame.width / 2)
+        let yCenter = Double(self.frame.height / 2)
+        
+        let angleRadians = degToRad(angle: 360 - (needleAngle + 90))
+        
+        let needleRadius = (0.8 * Double(self.frame.width)) / 2
+        let xPoint = xCenter + (needleRadius * sin(angleRadians))
+        let yPoint = yCenter + (needleRadius * cos(angleRadians))
+        
+        let needlePath = UIBezierPath()
+        
+        needlePath.move(to: CGPoint(x: xCenter, y: yCenter))
+        needlePath.addLine(to: CGPoint(x: xPoint, y: yPoint))
+        
+        needlePath.lineWidth = 9
+        needlePath.lineCapStyle = .round
+        
+        needlePath.stroke()
     }
     
     func rotate(angle:Double) {
-        let rad = degToRad(angle: angle)
-        self.needle.transform = CGAffineTransform(rotationAngle: CGFloat(rad))
+        needleAngle = angle
+        
+        setNeedsDisplay()
     }
     
     func degToRad(angle: Double) -> Double {

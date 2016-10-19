@@ -1,0 +1,320 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "log"
+- "AppDelegate"
+provides-nominal:
+- "C7LJSTAND11AppDelegate"
+provides-member:
+- ["C7LJSTAND11AppDelegate", ""]
+provides-dynamic-lookup:
+- "window"
+- "application"
+depends-top-level:
+- "UIApplication"
+- "UIApplicationDelegate"
+- !private "BooleanLiteralType"
+- "log"
+- "UIWindow"
+- "UIApplicationLaunchOptionsKey"
+- "AppDelegate"
+- "UIResponder"
+- "Bool"
+- "MKLogController"
+depends-member:
+- ["Ps9AnyObject", "application"]
+- ["Ps9AnyObject", "applicationDidBecomeActive"]
+- ["Ps9AnyObject", "applicationDidEnterBackground"]
+- ["Ps9AnyObject", "applicationDidFinishLaunching"]
+- ["Ps9AnyObject", "applicationDidReceiveMemoryWarning"]
+- ["Ps9AnyObject", "applicationProtectedDataDidBecomeAvailable"]
+- ["Ps9AnyObject", "applicationProtectedDataWillBecomeUnavailable"]
+- ["Ps9AnyObject", "applicationShouldRequestHealthAuthorization"]
+- ["Ps9AnyObject", "applicationSignificantTimeChange"]
+- ["Ps9AnyObject", "applicationWillEnterForeground"]
+- ["Ps9AnyObject", "applicationWillResignActive"]
+- ["Ps9AnyObject", "applicationWillTerminate"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "log"]
+- !private ["Ps9AnyObject", "logAppDetails"]
+- ["Ps9AnyObject", "window"]
+- ["Ps9AnyObject", ""]
+- ["C7LJSTAND11AppDelegate", "Bool"]
+- ["C7LJSTAND11AppDelegate", "UIApplication"]
+- ["C7LJSTAND11AppDelegate", "UIApplicationLaunchOptionsKey"]
+- ["C7LJSTAND11AppDelegate", "UIWindow"]
+- ["C7LJSTAND11AppDelegate", "application"]
+- ["C7LJSTAND11AppDelegate", "applicationDidBecomeActive"]
+- ["C7LJSTAND11AppDelegate", "applicationDidEnterBackground"]
+- ["C7LJSTAND11AppDelegate", "applicationDidFinishLaunching"]
+- ["C7LJSTAND11AppDelegate", "applicationDidReceiveMemoryWarning"]
+- ["C7LJSTAND11AppDelegate", "applicationProtectedDataDidBecomeAvailable"]
+- ["C7LJSTAND11AppDelegate", "applicationProtectedDataWillBecomeUnavailable"]
+- ["C7LJSTAND11AppDelegate", "applicationShouldRequestHealthAuthorization"]
+- ["C7LJSTAND11AppDelegate", "applicationSignificantTimeChange"]
+- ["C7LJSTAND11AppDelegate", "applicationWillEnterForeground"]
+- ["C7LJSTAND11AppDelegate", "applicationWillResignActive"]
+- ["C7LJSTAND11AppDelegate", "applicationWillTerminate"]
+- ["C7LJSTAND11AppDelegate", "deinit"]
+- ["C7LJSTAND11AppDelegate", "init"]
+- !private ["C7LJSTAND11AppDelegate", "log"]
+- ["C7LJSTAND11AppDelegate", "window"]
+- ["Sb", "deinit"]
+- ["Ps7CVarArg", "application"]
+- ["Ps7CVarArg", "applicationDidBecomeActive"]
+- ["Ps7CVarArg", "applicationDidEnterBackground"]
+- ["Ps7CVarArg", "applicationDidFinishLaunching"]
+- ["Ps7CVarArg", "applicationDidReceiveMemoryWarning"]
+- ["Ps7CVarArg", "applicationProtectedDataDidBecomeAvailable"]
+- ["Ps7CVarArg", "applicationProtectedDataWillBecomeUnavailable"]
+- ["Ps7CVarArg", "applicationShouldRequestHealthAuthorization"]
+- ["Ps7CVarArg", "applicationSignificantTimeChange"]
+- ["Ps7CVarArg", "applicationWillEnterForeground"]
+- ["Ps7CVarArg", "applicationWillResignActive"]
+- ["Ps7CVarArg", "applicationWillTerminate"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "log"]
+- ["Ps7CVarArg", "window"]
+- ["Ps7CVarArg", ""]
+- ["Ps28CustomDebugStringConvertible", "application"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidEnterBackground"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidFinishLaunching"]
+- ["Ps28CustomDebugStringConvertible", "applicationDidReceiveMemoryWarning"]
+- ["Ps28CustomDebugStringConvertible", "applicationProtectedDataDidBecomeAvailable"]
+- ["Ps28CustomDebugStringConvertible", "applicationProtectedDataWillBecomeUnavailable"]
+- ["Ps28CustomDebugStringConvertible", "applicationShouldRequestHealthAuthorization"]
+- ["Ps28CustomDebugStringConvertible", "applicationSignificantTimeChange"]
+- ["Ps28CustomDebugStringConvertible", "applicationWillEnterForeground"]
+- ["Ps28CustomDebugStringConvertible", "applicationWillResignActive"]
+- ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "log"]
+- !private ["Ps28CustomDebugStringConvertible", "logAppDetails"]
+- ["Ps28CustomDebugStringConvertible", "window"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- ["Ps23CustomStringConvertible", "application"]
+- ["Ps23CustomStringConvertible", "applicationDidBecomeActive"]
+- ["Ps23CustomStringConvertible", "applicationDidEnterBackground"]
+- ["Ps23CustomStringConvertible", "applicationDidFinishLaunching"]
+- ["Ps23CustomStringConvertible", "applicationDidReceiveMemoryWarning"]
+- ["Ps23CustomStringConvertible", "applicationProtectedDataDidBecomeAvailable"]
+- ["Ps23CustomStringConvertible", "applicationProtectedDataWillBecomeUnavailable"]
+- ["Ps23CustomStringConvertible", "applicationShouldRequestHealthAuthorization"]
+- ["Ps23CustomStringConvertible", "applicationSignificantTimeChange"]
+- ["Ps23CustomStringConvertible", "applicationWillEnterForeground"]
+- ["Ps23CustomStringConvertible", "applicationWillResignActive"]
+- ["Ps23CustomStringConvertible", "applicationWillTerminate"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "log"]
+- ["Ps23CustomStringConvertible", "window"]
+- ["Ps23CustomStringConvertible", ""]
+- ["Ps9Equatable", "application"]
+- ["Ps9Equatable", "applicationDidBecomeActive"]
+- ["Ps9Equatable", "applicationDidEnterBackground"]
+- ["Ps9Equatable", "applicationDidFinishLaunching"]
+- ["Ps9Equatable", "applicationDidReceiveMemoryWarning"]
+- ["Ps9Equatable", "applicationProtectedDataDidBecomeAvailable"]
+- ["Ps9Equatable", "applicationProtectedDataWillBecomeUnavailable"]
+- ["Ps9Equatable", "applicationShouldRequestHealthAuthorization"]
+- ["Ps9Equatable", "applicationSignificantTimeChange"]
+- ["Ps9Equatable", "applicationWillEnterForeground"]
+- ["Ps9Equatable", "applicationWillResignActive"]
+- ["Ps9Equatable", "applicationWillTerminate"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "log"]
+- ["Ps9Equatable", "window"]
+- ["Ps9Equatable", ""]
+- ["Ps8Hashable", "application"]
+- ["Ps8Hashable", "applicationDidBecomeActive"]
+- ["Ps8Hashable", "applicationDidEnterBackground"]
+- ["Ps8Hashable", "applicationDidFinishLaunching"]
+- ["Ps8Hashable", "applicationDidReceiveMemoryWarning"]
+- ["Ps8Hashable", "applicationProtectedDataDidBecomeAvailable"]
+- ["Ps8Hashable", "applicationProtectedDataWillBecomeUnavailable"]
+- ["Ps8Hashable", "applicationShouldRequestHealthAuthorization"]
+- ["Ps8Hashable", "applicationSignificantTimeChange"]
+- ["Ps8Hashable", "applicationWillEnterForeground"]
+- ["Ps8Hashable", "applicationWillResignActive"]
+- ["Ps8Hashable", "applicationWillTerminate"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "log"]
+- ["Ps8Hashable", "window"]
+- ["Ps8Hashable", ""]
+- ["C5MKKit15MKLogController", "deinit"]
+- ["C5MKKit15MKLogController", "init"]
+- ["C5MKKit15MKLogController", "log"]
+- ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "UIApplication"]
+- ["CSo8NSObject", "UIApplicationLaunchOptionsKey"]
+- ["CSo8NSObject", "UIWindow"]
+- ["CSo8NSObject", "application"]
+- ["CSo8NSObject", "applicationDidBecomeActive"]
+- ["CSo8NSObject", "applicationDidEnterBackground"]
+- ["CSo8NSObject", "applicationDidFinishLaunching"]
+- ["CSo8NSObject", "applicationDidReceiveMemoryWarning"]
+- ["CSo8NSObject", "applicationProtectedDataDidBecomeAvailable"]
+- ["CSo8NSObject", "applicationProtectedDataWillBecomeUnavailable"]
+- ["CSo8NSObject", "applicationShouldRequestHealthAuthorization"]
+- ["CSo8NSObject", "applicationSignificantTimeChange"]
+- ["CSo8NSObject", "applicationWillEnterForeground"]
+- ["CSo8NSObject", "applicationWillResignActive"]
+- ["CSo8NSObject", "applicationWillTerminate"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "log"]
+- ["CSo8NSObject", "window"]
+- ["PSo16NSObjectProtocol", "application"]
+- ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
+- ["PSo16NSObjectProtocol", "applicationDidEnterBackground"]
+- ["PSo16NSObjectProtocol", "applicationDidFinishLaunching"]
+- ["PSo16NSObjectProtocol", "applicationDidReceiveMemoryWarning"]
+- ["PSo16NSObjectProtocol", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSo16NSObjectProtocol", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSo16NSObjectProtocol", "applicationShouldRequestHealthAuthorization"]
+- ["PSo16NSObjectProtocol", "applicationSignificantTimeChange"]
+- ["PSo16NSObjectProtocol", "applicationWillEnterForeground"]
+- ["PSo16NSObjectProtocol", "applicationWillResignActive"]
+- ["PSo16NSObjectProtocol", "applicationWillTerminate"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "log"]
+- ["PSo16NSObjectProtocol", "window"]
+- ["PSo16NSObjectProtocol", ""]
+- ["Sq", "deinit"]
+- ["PSo21UIApplicationDelegate", "application"]
+- ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
+- ["PSo21UIApplicationDelegate", "applicationDidEnterBackground"]
+- ["PSo21UIApplicationDelegate", "applicationDidFinishLaunching"]
+- ["PSo21UIApplicationDelegate", "applicationDidReceiveMemoryWarning"]
+- ["PSo21UIApplicationDelegate", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSo21UIApplicationDelegate", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSo21UIApplicationDelegate", "applicationShouldRequestHealthAuthorization"]
+- ["PSo21UIApplicationDelegate", "applicationSignificantTimeChange"]
+- ["PSo21UIApplicationDelegate", "applicationWillEnterForeground"]
+- ["PSo21UIApplicationDelegate", "applicationWillResignActive"]
+- ["PSo21UIApplicationDelegate", "applicationWillTerminate"]
+- !private ["PSo21UIApplicationDelegate", "log"]
+- ["PSo21UIApplicationDelegate", "window"]
+- ["PSo21UIApplicationDelegate", ""]
+- ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "UIApplication"]
+- ["CSo11UIResponder", "UIApplicationLaunchOptionsKey"]
+- ["CSo11UIResponder", "UIWindow"]
+- ["CSo11UIResponder", "application"]
+- ["CSo11UIResponder", "applicationDidBecomeActive"]
+- ["CSo11UIResponder", "applicationDidEnterBackground"]
+- ["CSo11UIResponder", "applicationDidFinishLaunching"]
+- ["CSo11UIResponder", "applicationDidReceiveMemoryWarning"]
+- ["CSo11UIResponder", "applicationProtectedDataDidBecomeAvailable"]
+- ["CSo11UIResponder", "applicationProtectedDataWillBecomeUnavailable"]
+- ["CSo11UIResponder", "applicationShouldRequestHealthAuthorization"]
+- ["CSo11UIResponder", "applicationSignificantTimeChange"]
+- ["CSo11UIResponder", "applicationWillEnterForeground"]
+- ["CSo11UIResponder", "applicationWillResignActive"]
+- ["CSo11UIResponder", "applicationWillTerminate"]
+- ["CSo11UIResponder", "deinit"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "log"]
+- ["CSo11UIResponder", "window"]
+- ["CSo11UIResponder", ""]
+- ["PSo30UIResponderStandardEditActions", "application"]
+- ["PSo30UIResponderStandardEditActions", "applicationDidBecomeActive"]
+- ["PSo30UIResponderStandardEditActions", "applicationDidEnterBackground"]
+- ["PSo30UIResponderStandardEditActions", "applicationDidFinishLaunching"]
+- ["PSo30UIResponderStandardEditActions", "applicationDidReceiveMemoryWarning"]
+- ["PSo30UIResponderStandardEditActions", "applicationProtectedDataDidBecomeAvailable"]
+- ["PSo30UIResponderStandardEditActions", "applicationProtectedDataWillBecomeUnavailable"]
+- ["PSo30UIResponderStandardEditActions", "applicationShouldRequestHealthAuthorization"]
+- ["PSo30UIResponderStandardEditActions", "applicationSignificantTimeChange"]
+- ["PSo30UIResponderStandardEditActions", "applicationWillEnterForeground"]
+- ["PSo30UIResponderStandardEditActions", "applicationWillResignActive"]
+- ["PSo30UIResponderStandardEditActions", "applicationWillTerminate"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "log"]
+- ["PSo30UIResponderStandardEditActions", "window"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- ["C9XCGLogger9XCGLogger", "deinit"]
+- !private ["C9XCGLogger9XCGLogger", "logAppDetails"]
+- ["Ps9_Hashable", "application"]
+- ["Ps9_Hashable", "applicationDidBecomeActive"]
+- ["Ps9_Hashable", "applicationDidEnterBackground"]
+- ["Ps9_Hashable", "applicationDidFinishLaunching"]
+- ["Ps9_Hashable", "applicationDidReceiveMemoryWarning"]
+- ["Ps9_Hashable", "applicationProtectedDataDidBecomeAvailable"]
+- ["Ps9_Hashable", "applicationProtectedDataWillBecomeUnavailable"]
+- ["Ps9_Hashable", "applicationShouldRequestHealthAuthorization"]
+- ["Ps9_Hashable", "applicationSignificantTimeChange"]
+- ["Ps9_Hashable", "applicationWillEnterForeground"]
+- ["Ps9_Hashable", "applicationWillResignActive"]
+- ["Ps9_Hashable", "applicationWillTerminate"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "log"]
+- ["Ps9_Hashable", "window"]
+- ["Ps9_Hashable", ""]
+depends-nominal:
+- "Ps9AnyObject"
+- "C7LJSTAND11AppDelegate"
+- "Sb"
+- "Ps7CVarArg"
+- "Ps28CustomDebugStringConvertible"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps8Hashable"
+- "C5MKKit15MKLogController"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "Sq"
+- "PSo21UIApplicationDelegate"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "C9XCGLogger9XCGLogger"
+- "Ps9_Hashable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/MKKit.framework/Modules/MKKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/MKKit.framework/Headers/MKKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/MKKit.framework/Headers/MKKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/MKKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/SwiftyStoreKit.framework/Modules/SwiftyStoreKit.swiftmodule/arm64.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/SwiftyStoreKit.framework/Headers/SwiftyStoreKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/SwiftyStoreKit.framework/Headers/SwiftyStoreKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/SwiftyStoreKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/XCGLogger.framework/Modules/XCGLogger.swiftmodule/arm64.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/XCGLogger.framework/Headers/XCGLogger-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/XCGLogger.framework/Headers/XCGLogger.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/XCGLogger.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/CRToast.framework/Headers/CRToastManager.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/CRToast.framework/Headers/CRToastConfig.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/CRToast.framework/Headers/CRToast.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/CRToast.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Modules/Chameleon.swiftmodule/arm64.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/UIApplication+CHSharedApplication.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/UIAppearance+Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/UIView+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/UIImage+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/UIColor+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/UILabel+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/UIButton+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/UIViewController+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/UINavigationController+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/NSArray+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/UIColor+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/ChameleonMacros.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/ChameleonEnums.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/ChameleonConstants.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon_.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Build/iOS/Chameleon.framework/Modules/module.modulemap"
+interface-hash: "31a4319737d6781e19cf14df6aea7ce4"
