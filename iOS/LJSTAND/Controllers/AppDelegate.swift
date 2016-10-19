@@ -18,9 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         log.logAppDetails()
-        
-// TODO
-//        checkForUpdate()
+        checkForUpdate()
         return true
     }
     
@@ -36,10 +34,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 let releasedVer = json["currentRelease"] as! Int
                 
-                let thisBuild = Int(MKAppSettingsController().build.components(separatedBy: "-")[0])!
+                let thisBuild = Int(MKAppSettingsController().build)!
                 
                 if releasedVer > thisBuild {
-                    //Update
                     log.info("Update")
                     let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/ota-dist/apps/iOS/manifest.plist")!
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
