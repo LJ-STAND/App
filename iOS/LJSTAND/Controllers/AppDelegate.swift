@@ -10,6 +10,7 @@ import UIKit
 import MKKit
 
 let log = MKLogController().log
+let parts = PartParser()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,32 +24,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func checkForUpdate() {
-        if !MKAppSettingsController().isDebugBuild {
-            if MKReachability().connectedToNetwork() {
-                do {
-                    let urlStr = "https://lj-stand.github.io/ota-dist/config.json"
-                    let url = URL(string: urlStr)
-                    
-                    let data = try Data(contentsOf: url!)
-                    let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
-                    
-                    let releasedVer = json["currentRelease"] as! Int
-                    
-                    let thisBuild = Int(MKAppSettingsController().build)!
-                    
-                    if releasedVer > thisBuild {
-                        //Update
-                        log.info("Update")
-                        let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/ota-dist/apps/iOS/manifest.plist")!
-                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                    }
-                } catch {
-                    log.info("Unable to retrieve JSON data from server")
-                }
+        if !MKAppSettingsController().isDebugBuild && MKReachability().connectedToNetwork() {
+            do {
+                let urlStr = "https://lj-stand.github.io/ota-dist/config.json"
+                let url = URL(string: urlStr)
                 
-            } else {
-                log.info("No Internet Connection")
+                let data = try Data(contentsOf: url!)
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
+                
+                let releasedVer = json["currentRelease"] as! Int
+                
+                let thisBuild = Int(MKAppSettingsController().build)!
+                
+                if releasedVer > thisBuild {
+                    //Update
+                    log.info("Update")
+                    let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/ota-dist/apps/iOS/manifest.plist")!
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                }
+            } catch {
+                log.info("Unable to retrieve JSON data from server")
             }
+            
+        } else {
+            log.info("No Internet Connection or Debug")
         }
     }
     
