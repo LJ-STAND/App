@@ -275,10 +275,10 @@
             </objects>
             <point key="canvasLocation" x="2139" y="6165"/>
         </scene>
-        <!--Render 1-->
+        <!--View Controller-->
         <scene sceneID="IbM-ft-u0g">
             <objects>
-                <viewController storyboardIdentifier="render1" title="Render 1" id="4f3-ml-fi5" sceneMemberID="viewController">
+                <viewController id="4f3-ml-fi5" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AFn-9Y-OCo"/>
                         <viewControllerLayoutGuide type="bottom" id="sdB-sf-EHy"/>
@@ -287,7 +287,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Render 1.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="AGj-Y3-yPe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Render 1.bmp" translatesAutoresizingMaskIntoConstraints="NO" id="AGj-Y3-yPe">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                         </subviews>
