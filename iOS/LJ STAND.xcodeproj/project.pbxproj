@@ -29,7 +29,7 @@
 		EF1B7C2B1DAD01D300B3442E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */; };
 		EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */; };
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
-		EF471E4A1DB6C31900CED76B /* DesignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF471E491DB6C31900CED76B /* DesignViewController.swift */; };
+		EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF471E491DB6C31900CED76B /* ModelViewController.swift */; };
 		EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */ = {isa = PBXBuildFile; fileRef = EF471E4B1DB6C37900CED76B /* Robot.obj */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
@@ -39,6 +39,7 @@
 		EFAA535D1DB6E36400EBFA89 /* parts.csv in Resources */ = {isa = PBXBuildFile; fileRef = EFAA535C1DB6E36400EBFA89 /* parts.csv */; };
 		EFAA535F1DB6E90B00EBFA89 /* PartsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */; };
 		EFAA53611DB6EAC700EBFA89 /* PartDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */; };
+		EFAA53631DB6FB0C00EBFA89 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53621DB6FB0C00EBFA89 /* WebViewController.swift */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,7 +77,7 @@
 		EF1B7C2C1DAD01D300B3442E /* LJSTAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LJSTAND.entitlements; sourceTree = "<group>"; };
 		EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
-		EF471E491DB6C31900CED76B /* DesignViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignViewController.swift; sourceTree = "<group>"; };
+		EF471E491DB6C31900CED76B /* ModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
 		EF471E4B1DB6C37900CED76B /* Robot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Robot.obj; sourceTree = "<group>"; };
 		EF5EB9A61DAB8B3500976700 /* MKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKKit.framework; path = Carthage/Build/iOS/MKKit.framework; sourceTree = "<group>"; };
 		EF5EB9A71DAB8B3500976700 /* XCGLogger.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCGLogger.framework; path = Carthage/Build/iOS/XCGLogger.framework; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 		EFAA535C1DB6E36400EBFA89 /* parts.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parts.csv; sourceTree = "<group>"; };
 		EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartsListTableViewController.swift; sourceTree = "<group>"; };
 		EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartDetailViewController.swift; sourceTree = "<group>"; };
+		EFAA53621DB6FB0C00EBFA89 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,9 +224,10 @@
 				EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */,
 				EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */,
 				EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */,
-				EF471E491DB6C31900CED76B /* DesignViewController.swift */,
+				EF471E491DB6C31900CED76B /* ModelViewController.swift */,
 				EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */,
 				EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */,
+				EFAA53621DB6FB0C00EBFA89 /* WebViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -427,9 +430,10 @@
 				EFAA53611DB6EAC700EBFA89 /* PartDetailViewController.swift in Sources */,
 				EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */,
 				EFAA535F1DB6E90B00EBFA89 /* PartsListTableViewController.swift in Sources */,
-				EF471E4A1DB6C31900CED76B /* DesignViewController.swift in Sources */,
+				EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */,
 				EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */,
 				EFAA535B1DB6E12F00EBFA89 /* PartParser.swift in Sources */,
+				EFAA53631DB6FB0C00EBFA89 /* WebViewController.swift in Sources */,
 				EFAA53591DB6DED700EBFA89 /* Part.swift in Sources */,
 				EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */,
 			);

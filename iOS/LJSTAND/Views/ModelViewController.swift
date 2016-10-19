@@ -1,5 +1,5 @@
 //
-//  DesignViewController.swift
+//  ModelViewController.swift
 //  LJ STAND
 //
 //  Created by Lachlan Grant on 19/10/16.
@@ -11,7 +11,7 @@ import SceneKit
 import Chameleon
 import MKKit
 
-class DesignViewController: UIViewController {
+class ModelViewController: UIViewController {
     var sceneView: SCNView!
     
     override func viewDidLoad() {
