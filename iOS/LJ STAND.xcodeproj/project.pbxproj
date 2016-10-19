@@ -47,6 +47,7 @@
 		EFAA53751DB701AB00EBFA89 /* Photo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53691DB6FF7E00EBFA89 /* Photo.pdf */; };
 		EFAA53761DB701AB00EBFA89 /* Regulator.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA536A1DB6FF7E00EBFA89 /* Regulator.pdf */; };
 		EFAA53771DB701AB00EBFA89 /* TSOP.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA536B1DB6FF7E00EBFA89 /* TSOP.pdf */; };
+		EFAA53791DB705B000EBFA89 /* Render 1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53781DB705B000EBFA89 /* Render 1.bmp */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 		EFAA53691DB6FF7E00EBFA89 /* Photo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Photo.pdf; sourceTree = "<group>"; };
 		EFAA536A1DB6FF7E00EBFA89 /* Regulator.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Regulator.pdf; sourceTree = "<group>"; };
 		EFAA536B1DB6FF7E00EBFA89 /* TSOP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TSOP.pdf; sourceTree = "<group>"; };
+		EFAA53781DB705B000EBFA89 /* Render 1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = "Render 1.bmp"; sourceTree = "<group>"; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +168,7 @@
 		502C7F60ADB0031044FDB59F /* Other-Sources */ = {
 			isa = PBXGroup;
 			children = (
+				EFAA53781DB705B000EBFA89 /* Render 1.bmp */,
 				EFAA53661DB6FF7E00EBFA89 /* Fuse.PDF */,
 				EFAA53671DB6FF7E00EBFA89 /* LM.pdf */,
 				EFAA53681DB6FF7E00EBFA89 /* MotorCtrl.pdf */,
@@ -373,6 +376,7 @@
 				0FE982DBB7126C7560A3FE1B /* Main.storyboard in Resources */,
 				EFAA535D1DB6E36400EBFA89 /* parts.csv in Resources */,
 				4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */,
+				EFAA53791DB705B000EBFA89 /* Render 1.bmp in Resources */,
 				EFAA53721DB701AB00EBFA89 /* Fuse.PDF in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

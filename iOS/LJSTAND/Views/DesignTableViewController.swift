@@ -15,6 +15,14 @@ class DesignTableViewController: UITableViewController {
     }
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath[0] == 1 && indexPath[1] == 1 {
+            let view = getViewController(sbName: "Main", vcName: "render1")
+//            view.url = URL(fileURLWithPath: Bundle.main.path(forResource: "Render 1", ofType: "bmp")!)
+//            view.title = "Render 1"
+//            
+            self.navigationController?.pushViewController(view, animated: true)
+        }
+        
         if indexPath[0] == 2 {
             let view = getViewController(sbName: "Main", vcName: "webView") as! WebViewController
             switch indexPath[1] {
