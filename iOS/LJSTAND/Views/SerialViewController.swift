@@ -33,7 +33,7 @@ class SerialViewController: UIViewController {
         
         serial = BluetoothSerial(delegate: self)
         reloadView()
-        serialOutputTextView.text = "asdsadsadajsdhsajhd"
+        serialOutputTextView.text = ""
         serial.writeType = .withoutResponse
         
         sendTextField.delegate = self
