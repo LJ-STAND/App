@@ -20,7 +20,7 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.flatBlack()]
-
+        self.navigationController?.navigationBar.tintColor = UIColor.flatOrange()
         
         webView = WKWebView(frame: self.view.frame)
         

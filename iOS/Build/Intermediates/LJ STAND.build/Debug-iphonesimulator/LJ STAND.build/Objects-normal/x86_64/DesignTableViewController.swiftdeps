@@ -6,33 +6,34 @@ provides-nominal:
 provides-member:
 - ["C8LJ_STAND25DesignTableViewController", ""]
 provides-dynamic-lookup:
-- "tableView"
 - "viewDidLoad"
+- "tableView"
 depends-top-level:
-- !private "getViewController"
-- !private "Dictionary"
+- !private "BooleanLiteralType"
 - "UITableViewController"
 - !private "WebViewController"
+- !private "getViewController"
 - !private "Bundle"
-- !private "~="
-- "AssignmentPrecedence"
-- !private "=="
-- !private "NSForegroundColorAttributeName"
 - !private "URL"
-- "CastingPrecedence"
-- "UITableView"
-- "IndexPath"
+- !private "NSForegroundColorAttributeName"
 - !private "StringLiteralType"
 - !private "UIColor"
+- "CastingPrecedence"
+- !private "~="
+- "AssignmentPrecedence"
+- "UITableView"
+- "IndexPath"
+- !private "Dictionary"
+- !private "=="
 - !private "&&"
 - "DesignTableViewController"
-- !private "BooleanLiteralType"
 depends-member:
 - !private ["Ps9AnyObject", "Bundle"]
 - !private ["Ps9AnyObject", "NSForegroundColorAttributeName"]
 - !private ["Ps9AnyObject", "UIColor"]
 - !private ["Ps9AnyObject", "URL"]
 - !private ["Ps9AnyObject", "flatBlack"]
+- !private ["Ps9AnyObject", "flatOrange"]
 - !private ["Ps9AnyObject", "getViewController"]
 - !private ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "main"]
@@ -42,6 +43,7 @@ depends-member:
 - !private ["Ps9AnyObject", "path"]
 - !private ["Ps9AnyObject", "pushViewController"]
 - ["Ps9AnyObject", "tableView"]
+- !private ["Ps9AnyObject", "tintColor"]
 - !private ["Ps9AnyObject", "title"]
 - !private ["Ps9AnyObject", "titleTextAttributes"]
 - !private ["Ps9AnyObject", "url"]
@@ -75,6 +77,7 @@ depends-member:
 - ["CSo6Bundle", "deinit"]
 - !private ["CSo6Bundle", "main"]
 - !private ["CSo6Bundle", "path"]
+- !private ["PSo15CALayerDelegate", "tintColor"]
 - !private ["PSo15CALayerDelegate", "titleTextAttributes"]
 - !private ["PSo13CKRecordValue", "init"]
 - !private ["PSo15CNKeyDescriptor", "init"]
@@ -88,6 +91,7 @@ depends-member:
 - !private ["Ps7CVarArg", "Value"]
 - !private ["Ps7CVarArg", "_DisabledRangeIndex"]
 - !private ["Ps7CVarArg", "flatBlack"]
+- !private ["Ps7CVarArg", "flatOrange"]
 - !private ["Ps7CVarArg", "getViewController"]
 - !private ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "main"]
@@ -97,6 +101,7 @@ depends-member:
 - !private ["Ps7CVarArg", "path"]
 - !private ["Ps7CVarArg", "pushViewController"]
 - ["Ps7CVarArg", "tableView"]
+- !private ["Ps7CVarArg", "tintColor"]
 - !private ["Ps7CVarArg", "title"]
 - !private ["Ps7CVarArg", "titleTextAttributes"]
 - !private ["Ps7CVarArg", "url"]
@@ -134,6 +139,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "Value"]
 - !private ["Ps28CustomDebugStringConvertible", "_Element"]
 - !private ["Ps28CustomDebugStringConvertible", "flatBlack"]
+- !private ["Ps28CustomDebugStringConvertible", "flatOrange"]
 - !private ["Ps28CustomDebugStringConvertible", "getViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "main"]
@@ -144,6 +150,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "pushViewController"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
+- !private ["Ps28CustomDebugStringConvertible", "tintColor"]
 - !private ["Ps28CustomDebugStringConvertible", "title"]
 - !private ["Ps28CustomDebugStringConvertible", "titleTextAttributes"]
 - !private ["Ps28CustomDebugStringConvertible", "url"]
@@ -181,6 +188,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "_Element"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "flatBlack"]
+- !private ["Ps23CustomStringConvertible", "flatOrange"]
 - !private ["Ps23CustomStringConvertible", "getViewController"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "main"]
@@ -191,6 +199,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "pushViewController"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "tableView"]
+- !private ["Ps23CustomStringConvertible", "tintColor"]
 - !private ["Ps23CustomStringConvertible", "title"]
 - !private ["Ps23CustomStringConvertible", "titleTextAttributes"]
 - !private ["Ps23CustomStringConvertible", "url"]
@@ -235,6 +244,7 @@ depends-member:
 - !private ["Ps9Equatable", "_Element"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - !private ["Ps9Equatable", "flatBlack"]
+- !private ["Ps9Equatable", "flatOrange"]
 - !private ["Ps9Equatable", "getViewController"]
 - !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "main"]
@@ -245,6 +255,7 @@ depends-member:
 - !private ["Ps9Equatable", "pushViewController"]
 - !private ["Ps9Equatable", "subscript"]
 - ["Ps9Equatable", "tableView"]
+- !private ["Ps9Equatable", "tintColor"]
 - !private ["Ps9Equatable", "title"]
 - !private ["Ps9Equatable", "titleTextAttributes"]
 - !private ["Ps9Equatable", "url"]
@@ -278,6 +289,7 @@ depends-member:
 - !private ["Ps8Hashable", "_Element"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps8Hashable", "flatBlack"]
+- !private ["Ps8Hashable", "flatOrange"]
 - !private ["Ps8Hashable", "getViewController"]
 - !private ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "main"]
@@ -288,6 +300,7 @@ depends-member:
 - !private ["Ps8Hashable", "pushViewController"]
 - !private ["Ps8Hashable", "subscript"]
 - ["Ps8Hashable", "tableView"]
+- !private ["Ps8Hashable", "tintColor"]
 - !private ["Ps8Hashable", "title"]
 - !private ["Ps8Hashable", "titleTextAttributes"]
 - !private ["Ps8Hashable", "url"]
@@ -353,6 +366,7 @@ depends-member:
 - !private ["PSo8NSCoding", "UIColor"]
 - !private ["PSo8NSCoding", "URL"]
 - !private ["PSo8NSCoding", "flatBlack"]
+- !private ["PSo8NSCoding", "flatOrange"]
 - !private ["PSo8NSCoding", "getViewController"]
 - !private ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "navTitle"]
@@ -360,12 +374,14 @@ depends-member:
 - !private ["PSo8NSCoding", "navigationController"]
 - !private ["PSo8NSCoding", "pushViewController"]
 - ["PSo8NSCoding", "tableView"]
+- !private ["PSo8NSCoding", "tintColor"]
 - !private ["PSo8NSCoding", "title"]
 - !private ["PSo8NSCoding", "titleTextAttributes"]
 - !private ["PSo8NSCoding", "url"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "flatBlack"]
+- !private ["PSo9NSCopying", "flatOrange"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "Bundle"]
 - !private ["PSo26NSExtensionRequestHandling", "NSForegroundColorAttributeName"]
@@ -391,6 +407,7 @@ depends-member:
 - !private ["CSo8NSObject", "URL"]
 - !private ["CSo8NSObject", "WebViewController"]
 - !private ["CSo8NSObject", "flatBlack"]
+- !private ["CSo8NSObject", "flatOrange"]
 - !private ["CSo8NSObject", "getViewController"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "main"]
@@ -400,6 +417,7 @@ depends-member:
 - !private ["CSo8NSObject", "path"]
 - !private ["CSo8NSObject", "pushViewController"]
 - ["CSo8NSObject", "tableView"]
+- !private ["CSo8NSObject", "tintColor"]
 - !private ["CSo8NSObject", "title"]
 - !private ["CSo8NSObject", "titleTextAttributes"]
 - !private ["CSo8NSObject", "url"]
@@ -409,6 +427,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIColor"]
 - !private ["PSo16NSObjectProtocol", "URL"]
 - !private ["PSo16NSObjectProtocol", "flatBlack"]
+- !private ["PSo16NSObjectProtocol", "flatOrange"]
 - !private ["PSo16NSObjectProtocol", "getViewController"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "main"]
@@ -418,12 +437,14 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "path"]
 - !private ["PSo16NSObjectProtocol", "pushViewController"]
 - ["PSo16NSObjectProtocol", "tableView"]
+- !private ["PSo16NSObjectProtocol", "tintColor"]
 - !private ["PSo16NSObjectProtocol", "title"]
 - !private ["PSo16NSObjectProtocol", "titleTextAttributes"]
 - !private ["PSo16NSObjectProtocol", "url"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "flatBlack"]
+- !private ["PSo14NSSecureCoding", "flatOrange"]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "init"]
 - ["Sq", "deinit"]
@@ -481,7 +502,9 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "tintColor"]
 - !private ["PSo29UIAccessibilityIdentification", "titleTextAttributes"]
+- !private ["PSo12UIAppearance", "tintColor"]
 - !private ["PSo12UIAppearance", "titleTextAttributes"]
 - !private ["PSo21UIAppearanceContainer", "Bundle"]
 - !private ["PSo21UIAppearanceContainer", "NSForegroundColorAttributeName"]
@@ -494,13 +517,16 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
 - !private ["PSo21UIAppearanceContainer", "pushViewController"]
 - ["PSo21UIAppearanceContainer", "tableView"]
+- !private ["PSo21UIAppearanceContainer", "tintColor"]
 - !private ["PSo21UIAppearanceContainer", "title"]
 - !private ["PSo21UIAppearanceContainer", "titleTextAttributes"]
 - !private ["PSo21UIAppearanceContainer", "url"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo16UIBarPositioning", "tintColor"]
 - !private ["PSo16UIBarPositioning", "titleTextAttributes"]
 - !private ["CSo7UIColor", "flatBlack"]
+- !private ["CSo7UIColor", "flatOrange"]
 - !private ["PSo18UIContentContainer", "Bundle"]
 - !private ["PSo18UIContentContainer", "NSForegroundColorAttributeName"]
 - !private ["PSo18UIContentContainer", "UIColor"]
@@ -516,7 +542,9 @@ depends-member:
 - !private ["PSo18UIContentContainer", "url"]
 - ["PSo18UIContentContainer", "viewDidLoad"]
 - ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "tintColor"]
 - !private ["PSo17UICoordinateSpace", "titleTextAttributes"]
+- !private ["PSo13UIDynamicItem", "tintColor"]
 - !private ["PSo13UIDynamicItem", "titleTextAttributes"]
 - !private ["PSo18UIFocusEnvironment", "Bundle"]
 - !private ["PSo18UIFocusEnvironment", "NSForegroundColorAttributeName"]
@@ -529,13 +557,16 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
 - !private ["PSo18UIFocusEnvironment", "pushViewController"]
 - ["PSo18UIFocusEnvironment", "tableView"]
+- !private ["PSo18UIFocusEnvironment", "tintColor"]
 - !private ["PSo18UIFocusEnvironment", "title"]
 - !private ["PSo18UIFocusEnvironment", "titleTextAttributes"]
 - !private ["PSo18UIFocusEnvironment", "url"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
 - ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "tintColor"]
 - !private ["PSo11UIFocusItem", "titleTextAttributes"]
 - ["CSo15UINavigationBar", "deinit"]
+- !private ["CSo15UINavigationBar", "tintColor"]
 - !private ["CSo15UINavigationBar", "titleTextAttributes"]
 - ["CSo22UINavigationController", "deinit"]
 - !private ["CSo22UINavigationController", "navigationBar"]
@@ -554,6 +585,7 @@ depends-member:
 - !private ["CSo11UIResponder", "navigationController"]
 - !private ["CSo11UIResponder", "pushViewController"]
 - ["CSo11UIResponder", "tableView"]
+- !private ["CSo11UIResponder", "tintColor"]
 - !private ["CSo11UIResponder", "title"]
 - !private ["CSo11UIResponder", "titleTextAttributes"]
 - !private ["CSo11UIResponder", "url"]
@@ -569,6 +601,7 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "navigationController"]
 - !private ["PSo30UIResponderStandardEditActions", "pushViewController"]
 - ["PSo30UIResponderStandardEditActions", "tableView"]
+- !private ["PSo30UIResponderStandardEditActions", "tintColor"]
 - !private ["PSo30UIResponderStandardEditActions", "title"]
 - !private ["PSo30UIResponderStandardEditActions", "titleTextAttributes"]
 - !private ["PSo30UIResponderStandardEditActions", "url"]
@@ -645,11 +678,13 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "navigationController"]
 - !private ["PSo18UITraitEnvironment", "pushViewController"]
 - ["PSo18UITraitEnvironment", "tableView"]
+- !private ["PSo18UITraitEnvironment", "tintColor"]
 - !private ["PSo18UITraitEnvironment", "title"]
 - !private ["PSo18UITraitEnvironment", "titleTextAttributes"]
 - !private ["PSo18UITraitEnvironment", "url"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
 - ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "tintColor"]
 - !private ["CSo6UIView", "titleTextAttributes"]
 - !private ["CSo16UIViewController", "Bundle"]
 - ["CSo16UIViewController", "IndexPath"]
@@ -675,6 +710,7 @@ depends-member:
 - !private ["C8LJ_STAND17WebViewController", "navTitle"]
 - !private ["C8LJ_STAND17WebViewController", "title"]
 - !private ["C8LJ_STAND17WebViewController", "url"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "tintColor"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "titleTextAttributes"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
@@ -685,6 +721,7 @@ depends-member:
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
 - !private ["Ps26_ExpressibleByColorLiteral", "flatBlack"]
+- !private ["Ps26_ExpressibleByColorLiteral", "flatOrange"]
 - !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "Bundle"]
@@ -700,6 +737,7 @@ depends-member:
 - !private ["Ps9_Hashable", "_Element"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
 - !private ["Ps9_Hashable", "flatBlack"]
+- !private ["Ps9_Hashable", "flatOrange"]
 - !private ["Ps9_Hashable", "getViewController"]
 - !private ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "main"]
@@ -710,6 +748,7 @@ depends-member:
 - !private ["Ps9_Hashable", "pushViewController"]
 - !private ["Ps9_Hashable", "subscript"]
 - ["Ps9_Hashable", "tableView"]
+- !private ["Ps9_Hashable", "tintColor"]
 - !private ["Ps9_Hashable", "title"]
 - !private ["Ps9_Hashable", "titleTextAttributes"]
 - !private ["Ps9_Hashable", "url"]
