@@ -18,6 +18,9 @@ class SerialViewController: UIViewController {
     @IBOutlet weak var serialOutputTextView: UITextView!
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
+    
+    var connectCount = 0
 
     var titleView: TitleView!
     
@@ -33,7 +36,7 @@ class SerialViewController: UIViewController {
         
         serial = BluetoothSerial(delegate: self)
         reloadView()
-        serialOutputTextView.text = "asdsadsadajsdhsajhd"
+        serialOutputTextView.text = ""
         serial.writeType = .withoutResponse
         
         sendTextField.delegate = self
@@ -84,6 +87,7 @@ class SerialViewController: UIViewController {
         serial.delegate = self
         
         if !serial.isReady {
+            connectCount = 0
             connect()
         }
     }
@@ -95,6 +99,10 @@ class SerialViewController: UIViewController {
     func connect() {
         
         if Platform.isSimulator {
+            return
+        }
+        
+        if connectCount > 5 {
             return
         }
         
@@ -142,6 +150,7 @@ class SerialViewController: UIViewController {
 
                 }
             } else {
+                self.connectCount = self.connectCount + 1
                 self.connect()
             }
         }
@@ -197,6 +206,7 @@ extension SerialViewController: BluetoothSerialDelegate {
         
         CRToastManager.showNotification(options: options, completionBlock: {})
         sleep(1)
+        self.connectCount = 0
         connect()
     }
     
@@ -277,10 +287,12 @@ extension SerialViewController: BluetoothSerialDelegate {
     }
     
     func serialDidChangeState() {
+        self.connectCount = 0
         connect()
     }
     
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
+        self.connectCount = 0
         connect()
     }
 }

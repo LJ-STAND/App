@@ -6,88 +6,89 @@ provides-nominal:
 provides-member:
 - ["C8LJ_STAND20SerialViewController", ""]
 provides-dynamic-lookup:
-- "viewDidAppear"
+- "connectCount"
 - "dismissKeyboard"
-- "serialDidFailToConnect"
-- "bottomView"
-- "selectedPeripheral"
-- "titleView"
-- "serialDidReceiveString"
 - "serialDidChangeState"
-- "serialDidConnect"
-- "serialOutputTextView"
-- "viewDidLoad"
-- "reloadView"
-- "connect"
-- "textFieldShouldReturn"
 - "serialDidDisconnect"
+- "serialOutputTextView"
 - "keyboardWillHide"
 - "keyboardWillShow"
+- "serialDidConnect"
+- "viewDidLoad"
+- "reloadView"
+- "textFieldShouldReturn"
 - "bottomConstraint"
+- "connect"
+- "viewDidAppear"
+- "bottomView"
+- "titleView"
+- "selectedPeripheral"
+- "serialDidFailToConnect"
 - "serialDidDiscoverPeripheral"
+- "serialDidReceiveString"
 - "sendTextField"
 depends-top-level:
-- !private "..."
-- !private ">"
-- !private "BluetoothSerial"
-- !private "+"
-- !private "UIViewAnimationOptions"
-- "UITextFieldDelegate"
-- !private "!"
-- !private "<"
-- "UIViewController"
-- !private "Platform"
-- !private "Double"
-- !private "CGSize"
-- !private "sleep"
-- "Float"
-- "BluetoothSerialDelegate"
-- "CBPeripheral"
-- !private "kCRToastBackgroundColorKey"
-- "UIView"
-- !private "kCRToastKeepNavigationBarBorderKey"
-- !private "UIAlertActionStyle"
-- "Bool"
-- "NSError"
-- !private "UnicodeScalarType"
-- !private "Void"
-- !private "ExtendedGraphemeClusterType"
-- "String"
-- "Dictionary"
-- !private "BooleanLiteralType"
-- "UITextField"
-- !private "??"
-- "TitleView"
-- !private "UIAlertAction"
-- "NSNumber"
-- !private "NotificationCenter"
-- !private "!="
-- !private "+="
-- !private "UIKeyboardFrameEndUserInfoKey"
-- !private "kCRToastTextKey"
-- !private "CGRect"
-- "SerialViewController"
-- !private "CGPoint"
-- !private "StringLiteralType"
-- !private "-"
-- !private "UserDefaults"
-- "NSLayoutConstraint"
-- !private "MKAsync"
-- "CastingPrecedence"
-- !private "NSNotification"
-- "UITextView"
-- "Notification"
-- !private "UITapGestureRecognizer"
-- !private "Int"
-- "AssignmentPrecedence"
-- !private "=="
-- !private "CharacterSet"
-- !private "UIColor"
-- !private "Array"
-- !private "CRToastManager"
-- !private "UIAlertController"
 - !private "NSValue"
+- !private "MKAsync"
+- !private "NSNotification"
+- "UIViewController"
+- "NSError"
+- !private "ExtendedGraphemeClusterType"
+- "UITextFieldDelegate"
+- !private "Int"
+- !private "UIKeyboardFrameEndUserInfoKey"
+- !private "UIAlertAction"
+- "NSLayoutConstraint"
+- !private "UserDefaults"
+- !private "..."
+- !private "!="
+- "UITextView"
+- "TitleView"
+- !private "UITapGestureRecognizer"
+- !private "CRToastManager"
+- !private "UIColor"
+- !private "kCRToastTextKey"
+- !private "NotificationCenter"
+- !private "CGSize"
+- !private "UIAlertController"
+- !private "UnicodeScalarType"
+- !private "BooleanLiteralType"
+- !private "??"
+- "UITextField"
+- "SerialViewController"
+- "NSNumber"
+- !private "sleep"
+- "String"
+- !private "Void"
+- !private "BluetoothSerial"
+- !private "+="
+- "Float"
+- !private "Platform"
+- !private "Array"
+- "Bool"
 - !private "serial"
+- "CBPeripheral"
+- !private "-"
+- !private "StringLiteralType"
+- !private "CharacterSet"
+- !private "UIViewAnimationOptions"
+- !private ">"
+- !private "+"
+- !private "kCRToastBackgroundColorKey"
+- !private "Double"
+- "BluetoothSerialDelegate"
+- !private "CGRect"
+- "CastingPrecedence"
+- "UIView"
+- "AssignmentPrecedence"
+- !private "CGPoint"
+- !private "UIAlertActionStyle"
+- "Dictionary"
+- !private "kCRToastKeepNavigationBarBorderKey"
+- !private "=="
+- !private "<"
+- !private "!"
+- "Notification"
 depends-member:
 - !private ["Ps16AbsoluteValuable", "init"]
 - !private ["Ps9AnyObject", "Array"]
@@ -128,6 +129,7 @@ depends-member:
 - !private ["Ps9AnyObject", "characters"]
 - !private ["Ps9AnyObject", "components"]
 - ["Ps9AnyObject", "connect"]
+- ["Ps9AnyObject", "connectCount"]
 - !private ["Ps9AnyObject", "connectToPeripheral"]
 - !private ["Ps9AnyObject", "constant"]
 - !private ["Ps9AnyObject", "default"]
@@ -285,6 +287,7 @@ depends-member:
 - !private ["P8LJ_STAND23BluetoothSerialDelegate", "bottomConstraint"]
 - !private ["P8LJ_STAND23BluetoothSerialDelegate", "bottomView"]
 - !private ["P8LJ_STAND23BluetoothSerialDelegate", "connect"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "connectCount"]
 - !private ["P8LJ_STAND23BluetoothSerialDelegate", "dismissKeyboard"]
 - !private ["P8LJ_STAND23BluetoothSerialDelegate", "kCRToastBackgroundColorKey"]
 - !private ["P8LJ_STAND23BluetoothSerialDelegate", "kCRToastKeepNavigationBarBorderKey"]
@@ -441,6 +444,7 @@ depends-member:
 - !private ["Ps7CVarArg", "characters"]
 - !private ["Ps7CVarArg", "components"]
 - ["Ps7CVarArg", "connect"]
+- ["Ps7CVarArg", "connectCount"]
 - !private ["Ps7CVarArg", "connectToPeripheral"]
 - !private ["Ps7CVarArg", "constant"]
 - !private ["Ps7CVarArg", "count"]
@@ -598,6 +602,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "characters"]
 - !private ["Ps28CustomDebugStringConvertible", "components"]
 - ["Ps28CustomDebugStringConvertible", "connect"]
+- ["Ps28CustomDebugStringConvertible", "connectCount"]
 - !private ["Ps28CustomDebugStringConvertible", "connectToPeripheral"]
 - !private ["Ps28CustomDebugStringConvertible", "constant"]
 - !private ["Ps28CustomDebugStringConvertible", "count"]
@@ -773,6 +778,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "characters"]
 - !private ["Ps23CustomStringConvertible", "components"]
 - ["Ps23CustomStringConvertible", "connect"]
+- ["Ps23CustomStringConvertible", "connectCount"]
 - !private ["Ps23CustomStringConvertible", "connectToPeripheral"]
 - !private ["Ps23CustomStringConvertible", "constant"]
 - !private ["Ps23CustomStringConvertible", "count"]
@@ -920,6 +926,7 @@ depends-member:
 - !private ["Ps9Equatable", "characters"]
 - !private ["Ps9Equatable", "components"]
 - ["Ps9Equatable", "connect"]
+- ["Ps9Equatable", "connectCount"]
 - !private ["Ps9Equatable", "connectToPeripheral"]
 - !private ["Ps9Equatable", "constant"]
 - !private ["Ps9Equatable", "default"]
@@ -1095,6 +1102,7 @@ depends-member:
 - !private ["Ps8Hashable", "characters"]
 - !private ["Ps8Hashable", "components"]
 - ["Ps8Hashable", "connect"]
+- ["Ps8Hashable", "connectCount"]
 - !private ["Ps8Hashable", "connectToPeripheral"]
 - !private ["Ps8Hashable", "constant"]
 - !private ["Ps8Hashable", "default"]
@@ -1291,6 +1299,7 @@ depends-member:
 - !private ["PSo8NSCoding", "characters"]
 - !private ["PSo8NSCoding", "components"]
 - ["PSo8NSCoding", "connect"]
+- ["PSo8NSCoding", "connectCount"]
 - !private ["PSo8NSCoding", "delegate"]
 - ["PSo8NSCoding", "dismissKeyboard"]
 - !private ["PSo8NSCoding", "endEditing"]
@@ -1397,6 +1406,7 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "bottomConstraint"]
 - ["PSo26NSExtensionRequestHandling", "bottomView"]
 - ["PSo26NSExtensionRequestHandling", "connect"]
+- ["PSo26NSExtensionRequestHandling", "connectCount"]
 - ["PSo26NSExtensionRequestHandling", "dismissKeyboard"]
 - !private ["PSo26NSExtensionRequestHandling", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "kCRToastBackgroundColorKey"]
@@ -1494,6 +1504,7 @@ depends-member:
 - !private ["CSo8NSObject", "characters"]
 - !private ["CSo8NSObject", "components"]
 - ["CSo8NSObject", "connect"]
+- ["CSo8NSObject", "connectCount"]
 - !private ["CSo8NSObject", "connectToPeripheral"]
 - !private ["CSo8NSObject", "constant"]
 - !private ["CSo8NSObject", "default"]
@@ -1607,6 +1618,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "characters"]
 - !private ["PSo16NSObjectProtocol", "components"]
 - ["PSo16NSObjectProtocol", "connect"]
+- ["PSo16NSObjectProtocol", "connectCount"]
 - !private ["PSo16NSObjectProtocol", "connectToPeripheral"]
 - !private ["PSo16NSObjectProtocol", "constant"]
 - !private ["PSo16NSObjectProtocol", "default"]
@@ -1831,6 +1843,7 @@ depends-member:
 - ["C8LJ_STAND20SerialViewController", "bottomConstraint"]
 - ["C8LJ_STAND20SerialViewController", "bottomView"]
 - ["C8LJ_STAND20SerialViewController", "connect"]
+- ["C8LJ_STAND20SerialViewController", "connectCount"]
 - ["C8LJ_STAND20SerialViewController", "deinit"]
 - ["C8LJ_STAND20SerialViewController", "dismissKeyboard"]
 - ["C8LJ_STAND20SerialViewController", "init"]
@@ -1966,6 +1979,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "bottomConstraint"]
 - ["PSo21UIAppearanceContainer", "bottomView"]
 - ["PSo21UIAppearanceContainer", "connect"]
+- ["PSo21UIAppearanceContainer", "connectCount"]
 - !private ["PSo21UIAppearanceContainer", "delegate"]
 - ["PSo21UIAppearanceContainer", "dismissKeyboard"]
 - !private ["PSo21UIAppearanceContainer", "endEditing"]
@@ -2048,6 +2062,7 @@ depends-member:
 - ["PSo18UIContentContainer", "bottomConstraint"]
 - ["PSo18UIContentContainer", "bottomView"]
 - ["PSo18UIContentContainer", "connect"]
+- ["PSo18UIContentContainer", "connectCount"]
 - ["PSo18UIContentContainer", "dismissKeyboard"]
 - !private ["PSo18UIContentContainer", "init"]
 - !private ["PSo18UIContentContainer", "kCRToastBackgroundColorKey"]
@@ -2146,6 +2161,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "bottomConstraint"]
 - ["PSo18UIFocusEnvironment", "bottomView"]
 - ["PSo18UIFocusEnvironment", "connect"]
+- ["PSo18UIFocusEnvironment", "connectCount"]
 - !private ["PSo18UIFocusEnvironment", "delegate"]
 - ["PSo18UIFocusEnvironment", "dismissKeyboard"]
 - !private ["PSo18UIFocusEnvironment", "endEditing"]
@@ -2253,6 +2269,7 @@ depends-member:
 - ["CSo11UIResponder", "bottomConstraint"]
 - ["CSo11UIResponder", "bottomView"]
 - ["CSo11UIResponder", "connect"]
+- ["CSo11UIResponder", "connectCount"]
 - !private ["CSo11UIResponder", "delegate"]
 - ["CSo11UIResponder", "dismissKeyboard"]
 - !private ["CSo11UIResponder", "endEditing"]
@@ -2330,6 +2347,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "bottomConstraint"]
 - ["PSo30UIResponderStandardEditActions", "bottomView"]
 - ["PSo30UIResponderStandardEditActions", "connect"]
+- ["PSo30UIResponderStandardEditActions", "connectCount"]
 - !private ["PSo30UIResponderStandardEditActions", "delegate"]
 - ["PSo30UIResponderStandardEditActions", "dismissKeyboard"]
 - !private ["PSo30UIResponderStandardEditActions", "endEditing"]
@@ -2407,6 +2425,7 @@ depends-member:
 - ["PSo16UIStateRestoring", "bottomConstraint"]
 - ["PSo16UIStateRestoring", "bottomView"]
 - ["PSo16UIStateRestoring", "connect"]
+- ["PSo16UIStateRestoring", "connectCount"]
 - ["PSo16UIStateRestoring", "dismissKeyboard"]
 - !private ["PSo16UIStateRestoring", "init"]
 - !private ["PSo16UIStateRestoring", "kCRToastBackgroundColorKey"]
@@ -2478,6 +2497,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "bottomConstraint"]
 - !private ["PSo19UITextFieldDelegate", "bottomView"]
 - !private ["PSo19UITextFieldDelegate", "connect"]
+- !private ["PSo19UITextFieldDelegate", "connectCount"]
 - !private ["PSo19UITextFieldDelegate", "dismissKeyboard"]
 - !private ["PSo19UITextFieldDelegate", "kCRToastBackgroundColorKey"]
 - !private ["PSo19UITextFieldDelegate", "kCRToastKeepNavigationBarBorderKey"]
@@ -2553,6 +2573,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "bottomConstraint"]
 - ["PSo18UITraitEnvironment", "bottomView"]
 - ["PSo18UITraitEnvironment", "connect"]
+- ["PSo18UITraitEnvironment", "connectCount"]
 - !private ["PSo18UITraitEnvironment", "delegate"]
 - ["PSo18UITraitEnvironment", "dismissKeyboard"]
 - !private ["PSo18UITraitEnvironment", "endEditing"]
@@ -2652,6 +2673,7 @@ depends-member:
 - ["CSo16UIViewController", "bottomConstraint"]
 - ["CSo16UIViewController", "bottomView"]
 - ["CSo16UIViewController", "connect"]
+- ["CSo16UIViewController", "connectCount"]
 - ["CSo16UIViewController", "deinit"]
 - ["CSo16UIViewController", "dismissKeyboard"]
 - ["CSo16UIViewController", "init"]
@@ -2815,6 +2837,7 @@ depends-member:
 - !private ["Ps9_Hashable", "characters"]
 - !private ["Ps9_Hashable", "components"]
 - ["Ps9_Hashable", "connect"]
+- ["Ps9_Hashable", "connectCount"]
 - !private ["Ps9_Hashable", "connectToPeripheral"]
 - !private ["Ps9_Hashable", "constant"]
 - !private ["Ps9_Hashable", "default"]
@@ -3180,4 +3203,4 @@ depends-external:
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
-interface-hash: "35578b3af19cda419010ae6125e73a93"
+interface-hash: "83852aff61ba2a9c5c73e7614b705a14"
