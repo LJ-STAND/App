@@ -12,7 +12,6 @@ import SafariServices
 class PartDetailViewController: UIViewController {
     var index: Int!
     
-//    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var supplierLabel: UILabel!
     @IBOutlet weak var vendorPartLabel: UILabel!
@@ -41,7 +40,6 @@ class PartDetailViewController: UIViewController {
         let part = parts.parts[index]
         
         self.title = trimString(str: part.item)
-//        titleLabel.text = trimString(str: part.item)
         descriptionLabel.text = trimString(str: part.description)
         supplierLabel.text = "Supplier: \(trimString(str: part.supplier))"
         vendorPartLabel.text = "Part #: \(trimString(str: part.vendorPartNumber))"
@@ -61,7 +59,6 @@ class PartDetailViewController: UIViewController {
     }
     
     @IBAction func openProductPageAction(_ sender: Any) {
-//        print(parts.parts[index].link)
         let url = URL(string: trimString(str: parts.parts[index].link))
         if url != nil {
             let safariVC = SFSafariViewController(url: url!, entersReaderIfAvailable: false)
