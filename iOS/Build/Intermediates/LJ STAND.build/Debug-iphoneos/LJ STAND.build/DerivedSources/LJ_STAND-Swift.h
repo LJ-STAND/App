@@ -278,6 +278,7 @@ SWIFT_CLASS("_TtC8LJ_STAND20SerialViewController")
 @property (nonatomic, weak) IBOutlet UITextView * _Null_unspecified serialOutputTextView;
 @property (nonatomic, weak) IBOutlet UIView * _Null_unspecified bottomView;
 @property (nonatomic, weak) IBOutlet NSLayoutConstraint * _Null_unspecified bottomConstraint;
+@property (nonatomic) NSInteger connectCount;
 @property (nonatomic, strong) TitleView * _Null_unspecified titleView;
 @property (nonatomic, strong) CBPeripheral * _Nullable selectedPeripheral;
 - (void)viewDidLoad;

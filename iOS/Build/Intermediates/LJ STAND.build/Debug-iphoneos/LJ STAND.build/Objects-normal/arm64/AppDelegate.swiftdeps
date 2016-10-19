@@ -8,37 +8,40 @@ provides-nominal:
 provides-member:
 - ["C8LJ_STAND11AppDelegate", ""]
 provides-dynamic-lookup:
-- "window"
-- "checkForUpdate"
 - "application"
+- "checkForUpdate"
+- "window"
 depends-top-level:
-- "UIApplication"
-- "log"
-- "UIApplicationDelegate"
-- !private "&&"
-- !private "BooleanLiteralType"
-- !private "Data"
-- "Bool"
-- "AppDelegate"
-- !private "Array"
-- !private "StringLiteralType"
-- "UIResponder"
-- "UIWindow"
-- !private "AnyObject"
-- "PartParser"
-- !private "JSONSerialization"
-- "UIApplicationLaunchOptionsKey"
 - !private "Int"
-- "CastingPrecedence"
-- !private "MKReachability"
 - !private "URL"
-- "parts"
-- !private "Dictionary"
 - !private ">"
+- !private "UITabBar"
+- !private "BooleanLiteralType"
+- "UIResponder"
+- !private "Array"
+- "PartParser"
+- !private "!"
+- "log"
+- !private "StringLiteralType"
+- !private "JSONSerialization"
+- "UIApplication"
+- "Bool"
 - !private "MKAppSettingsController"
+- "AppDelegate"
+- "AssignmentPrecedence"
+- "UIWindow"
+- !private "&&"
+- "CastingPrecedence"
+- "UIApplicationDelegate"
+- !private "Dictionary"
 - "MKLogController"
 - !private "String"
-- !private "!"
+- !private "AnyObject"
+- "UIApplicationLaunchOptionsKey"
+- !private "MKReachability"
+- "parts"
+- !private "UIColor"
+- !private "Data"
 depends-member:
 - !private ["Ps9AnyObject", "Data"]
 - !private ["Ps9AnyObject", "Int"]
@@ -46,7 +49,10 @@ depends-member:
 - !private ["Ps9AnyObject", "MKAppSettingsController"]
 - !private ["Ps9AnyObject", "MKReachability"]
 - !private ["Ps9AnyObject", "UIApplication"]
+- !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "UITabBar"]
 - !private ["Ps9AnyObject", "URL"]
+- !private ["Ps9AnyObject", "appearance"]
 - ["Ps9AnyObject", "application"]
 - ["Ps9AnyObject", "applicationDidBecomeActive"]
 - ["Ps9AnyObject", "applicationDidEnterBackground"]
@@ -62,6 +68,7 @@ depends-member:
 - !private ["Ps9AnyObject", "build"]
 - ["Ps9AnyObject", "checkForUpdate"]
 - !private ["Ps9AnyObject", "connectedToNetwork"]
+- !private ["Ps9AnyObject", "flatOrange"]
 - !private ["Ps9AnyObject", "info"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "isDebugBuild"]
@@ -70,6 +77,7 @@ depends-member:
 - !private ["Ps9AnyObject", "logAppDetails"]
 - !private ["Ps9AnyObject", "open"]
 - !private ["Ps9AnyObject", "shared"]
+- !private ["Ps9AnyObject", "tintColor"]
 - ["Ps9AnyObject", "window"]
 - ["Ps9AnyObject", ""]
 - !private ["C8LJ_STAND11AppDelegate", "AnyObject"]
@@ -82,6 +90,8 @@ depends-member:
 - !private ["C8LJ_STAND11AppDelegate", "String"]
 - ["C8LJ_STAND11AppDelegate", "UIApplication"]
 - ["C8LJ_STAND11AppDelegate", "UIApplicationLaunchOptionsKey"]
+- !private ["C8LJ_STAND11AppDelegate", "UIColor"]
+- !private ["C8LJ_STAND11AppDelegate", "UITabBar"]
 - ["C8LJ_STAND11AppDelegate", "UIWindow"]
 - !private ["C8LJ_STAND11AppDelegate", "URL"]
 - ["C8LJ_STAND11AppDelegate", "application"]
@@ -106,6 +116,8 @@ depends-member:
 - !private ["Ps17BitwiseOperations", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - ["Sb", "deinit"]
+- !private ["PSo15CALayerDelegate", "appearance"]
+- !private ["PSo15CALayerDelegate", "tintColor"]
 - !private ["PSo13CKRecordValue", "init"]
 - !private ["PSo15CNKeyDescriptor", "init"]
 - !private ["Ps7CVarArg", "Data"]
@@ -117,8 +129,11 @@ depends-member:
 - !private ["Ps7CVarArg", "MKReachability"]
 - !private ["Ps7CVarArg", "SubSequence"]
 - !private ["Ps7CVarArg", "UIApplication"]
+- !private ["Ps7CVarArg", "UIColor"]
+- !private ["Ps7CVarArg", "UITabBar"]
 - !private ["Ps7CVarArg", "URL"]
 - !private ["Ps7CVarArg", "Value"]
+- !private ["Ps7CVarArg", "appearance"]
 - ["Ps7CVarArg", "application"]
 - ["Ps7CVarArg", "applicationDidBecomeActive"]
 - ["Ps7CVarArg", "applicationDidEnterBackground"]
@@ -132,12 +147,14 @@ depends-member:
 - ["Ps7CVarArg", "applicationWillResignActive"]
 - ["Ps7CVarArg", "applicationWillTerminate"]
 - ["Ps7CVarArg", "checkForUpdate"]
+- !private ["Ps7CVarArg", "flatOrange"]
 - !private ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "jsonObject"]
 - !private ["Ps7CVarArg", "log"]
 - !private ["Ps7CVarArg", "open"]
 - !private ["Ps7CVarArg", "shared"]
 - !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps7CVarArg", "tintColor"]
 - ["Ps7CVarArg", "window"]
 - ["Ps7CVarArg", ""]
 - !private ["Ps10Collection", "Index"]
@@ -158,8 +175,11 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "MKReachability"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UIApplication"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "UITabBar"]
 - !private ["Ps28CustomDebugStringConvertible", "URL"]
 - !private ["Ps28CustomDebugStringConvertible", "Value"]
+- !private ["Ps28CustomDebugStringConvertible", "appearance"]
 - ["Ps28CustomDebugStringConvertible", "application"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidBecomeActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationDidEnterBackground"]
@@ -173,6 +193,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "applicationWillResignActive"]
 - ["Ps28CustomDebugStringConvertible", "applicationWillTerminate"]
 - ["Ps28CustomDebugStringConvertible", "checkForUpdate"]
+- !private ["Ps28CustomDebugStringConvertible", "flatOrange"]
 - !private ["Ps28CustomDebugStringConvertible", "info"]
 - !private ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "jsonObject"]
@@ -181,6 +202,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "open"]
 - !private ["Ps28CustomDebugStringConvertible", "shared"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "tintColor"]
 - ["Ps28CustomDebugStringConvertible", "window"]
 - ["Ps28CustomDebugStringConvertible", ""]
 - !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
@@ -201,9 +223,12 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "MKReachability"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "UIApplication"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "UITabBar"]
 - !private ["Ps23CustomStringConvertible", "URL"]
 - !private ["Ps23CustomStringConvertible", "Value"]
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "appearance"]
 - ["Ps23CustomStringConvertible", "application"]
 - ["Ps23CustomStringConvertible", "applicationDidBecomeActive"]
 - ["Ps23CustomStringConvertible", "applicationDidEnterBackground"]
@@ -217,12 +242,14 @@ depends-member:
 - ["Ps23CustomStringConvertible", "applicationWillResignActive"]
 - ["Ps23CustomStringConvertible", "applicationWillTerminate"]
 - ["Ps23CustomStringConvertible", "checkForUpdate"]
+- !private ["Ps23CustomStringConvertible", "flatOrange"]
 - !private ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "jsonObject"]
 - !private ["Ps23CustomStringConvertible", "log"]
 - !private ["Ps23CustomStringConvertible", "open"]
 - !private ["Ps23CustomStringConvertible", "shared"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "tintColor"]
 - ["Ps23CustomStringConvertible", "window"]
 - ["Ps23CustomStringConvertible", ""]
 - ["V10Foundation4Data", "deinit"]
@@ -240,8 +267,11 @@ depends-member:
 - !private ["Ps9Equatable", "MKAppSettingsController"]
 - !private ["Ps9Equatable", "MKReachability"]
 - !private ["Ps9Equatable", "UIApplication"]
+- !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "UITabBar"]
 - !private ["Ps9Equatable", "URL"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "appearance"]
 - ["Ps9Equatable", "application"]
 - ["Ps9Equatable", "applicationDidBecomeActive"]
 - ["Ps9Equatable", "applicationDidEnterBackground"]
@@ -255,11 +285,13 @@ depends-member:
 - ["Ps9Equatable", "applicationWillResignActive"]
 - ["Ps9Equatable", "applicationWillTerminate"]
 - ["Ps9Equatable", "checkForUpdate"]
+- !private ["Ps9Equatable", "flatOrange"]
 - !private ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "jsonObject"]
 - !private ["Ps9Equatable", "log"]
 - !private ["Ps9Equatable", "open"]
 - !private ["Ps9Equatable", "shared"]
+- !private ["Ps9Equatable", "tintColor"]
 - ["Ps9Equatable", "window"]
 - ["Ps9Equatable", ""]
 - !private ["Ps25ExpressibleByArrayLiteral", "Element"]
@@ -280,8 +312,11 @@ depends-member:
 - !private ["Ps8Hashable", "MKAppSettingsController"]
 - !private ["Ps8Hashable", "MKReachability"]
 - !private ["Ps8Hashable", "UIApplication"]
+- !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "UITabBar"]
 - !private ["Ps8Hashable", "URL"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "appearance"]
 - ["Ps8Hashable", "application"]
 - ["Ps8Hashable", "applicationDidBecomeActive"]
 - ["Ps8Hashable", "applicationDidEnterBackground"]
@@ -295,13 +330,16 @@ depends-member:
 - ["Ps8Hashable", "applicationWillResignActive"]
 - ["Ps8Hashable", "applicationWillTerminate"]
 - ["Ps8Hashable", "checkForUpdate"]
+- !private ["Ps8Hashable", "flatOrange"]
 - !private ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "jsonObject"]
 - !private ["Ps8Hashable", "log"]
 - !private ["Ps8Hashable", "open"]
 - !private ["Ps8Hashable", "shared"]
+- !private ["Ps8Hashable", "tintColor"]
 - ["Ps8Hashable", "window"]
 - ["Ps8Hashable", ""]
+- ["SQ", "deinit"]
 - !private ["Ps9Indexable", "Index"]
 - !private ["Ps9Indexable", "Iterator"]
 - !private ["Ps9Indexable", "Key"]
@@ -340,7 +378,11 @@ depends-member:
 - !private ["Ps10MirrorPath", "init"]
 - !private ["Ps17MutableCollection", "init"]
 - !private ["Ps16MutableIndexable", "init"]
+- !private ["PSo8NSCoding", "appearance"]
+- !private ["PSo8NSCoding", "flatOrange"]
 - !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "tintColor"]
+- !private ["PSo9NSCopying", "flatOrange"]
 - !private ["PSo9NSCopying", "init"]
 - !private ["PSo16NSMutableCopying", "init"]
 - !private ["CSo8NSObject", "AnyObject"]
@@ -353,8 +395,11 @@ depends-member:
 - !private ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "UIApplication"]
 - ["CSo8NSObject", "UIApplicationLaunchOptionsKey"]
+- !private ["CSo8NSObject", "UIColor"]
+- !private ["CSo8NSObject", "UITabBar"]
 - ["CSo8NSObject", "UIWindow"]
 - !private ["CSo8NSObject", "URL"]
+- !private ["CSo8NSObject", "appearance"]
 - ["CSo8NSObject", "application"]
 - ["CSo8NSObject", "applicationDidBecomeActive"]
 - ["CSo8NSObject", "applicationDidEnterBackground"]
@@ -368,11 +413,13 @@ depends-member:
 - ["CSo8NSObject", "applicationWillResignActive"]
 - ["CSo8NSObject", "applicationWillTerminate"]
 - ["CSo8NSObject", "checkForUpdate"]
+- !private ["CSo8NSObject", "flatOrange"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "jsonObject"]
 - !private ["CSo8NSObject", "log"]
 - !private ["CSo8NSObject", "open"]
 - !private ["CSo8NSObject", "shared"]
+- !private ["CSo8NSObject", "tintColor"]
 - ["CSo8NSObject", "window"]
 - !private ["PSo16NSObjectProtocol", "Data"]
 - !private ["PSo16NSObjectProtocol", "Int"]
@@ -380,7 +427,10 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "MKAppSettingsController"]
 - !private ["PSo16NSObjectProtocol", "MKReachability"]
 - !private ["PSo16NSObjectProtocol", "UIApplication"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "UITabBar"]
 - !private ["PSo16NSObjectProtocol", "URL"]
+- !private ["PSo16NSObjectProtocol", "appearance"]
 - ["PSo16NSObjectProtocol", "application"]
 - ["PSo16NSObjectProtocol", "applicationDidBecomeActive"]
 - ["PSo16NSObjectProtocol", "applicationDidEnterBackground"]
@@ -394,13 +444,16 @@ depends-member:
 - ["PSo16NSObjectProtocol", "applicationWillResignActive"]
 - ["PSo16NSObjectProtocol", "applicationWillTerminate"]
 - ["PSo16NSObjectProtocol", "checkForUpdate"]
+- !private ["PSo16NSObjectProtocol", "flatOrange"]
 - !private ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "jsonObject"]
 - !private ["PSo16NSObjectProtocol", "log"]
 - !private ["PSo16NSObjectProtocol", "open"]
 - !private ["PSo16NSObjectProtocol", "shared"]
+- !private ["PSo16NSObjectProtocol", "tintColor"]
 - ["PSo16NSObjectProtocol", "window"]
 - ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "flatOrange"]
 - !private ["PSo14NSSecureCoding", "init"]
 - !private ["CSo8NSString", "init"]
 - !private ["Ps9OptionSet", "Element"]
@@ -438,6 +491,12 @@ depends-member:
 - !private ["SS", "init"]
 - !private ["Ps16TextOutputStream", "init"]
 - !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "appearance"]
+- !private ["PSo29UIAccessibilityIdentification", "tintColor"]
+- !private ["PSo12UIAppearance", "appearance"]
+- !private ["PSo12UIAppearance", "tintColor"]
+- !private ["PSo21UIAppearanceContainer", "appearance"]
+- !private ["PSo21UIAppearanceContainer", "tintColor"]
 - ["CSo13UIApplication", "deinit"]
 - !private ["CSo13UIApplication", "open"]
 - !private ["CSo13UIApplication", "shared"]
@@ -447,6 +506,8 @@ depends-member:
 - !private ["PSo21UIApplicationDelegate", "MKAppSettingsController"]
 - !private ["PSo21UIApplicationDelegate", "MKReachability"]
 - !private ["PSo21UIApplicationDelegate", "UIApplication"]
+- !private ["PSo21UIApplicationDelegate", "UIColor"]
+- !private ["PSo21UIApplicationDelegate", "UITabBar"]
 - !private ["PSo21UIApplicationDelegate", "URL"]
 - ["PSo21UIApplicationDelegate", "application"]
 - ["PSo21UIApplicationDelegate", "applicationDidBecomeActive"]
@@ -460,9 +521,19 @@ depends-member:
 - ["PSo21UIApplicationDelegate", "applicationWillEnterForeground"]
 - ["PSo21UIApplicationDelegate", "applicationWillResignActive"]
 - ["PSo21UIApplicationDelegate", "applicationWillTerminate"]
+- !private ["PSo21UIApplicationDelegate", "checkForUpdate"]
 - !private ["PSo21UIApplicationDelegate", "log"]
 - ["PSo21UIApplicationDelegate", "window"]
 - ["PSo21UIApplicationDelegate", ""]
+- !private ["CSo7UIColor", "flatOrange"]
+- !private ["PSo17UICoordinateSpace", "appearance"]
+- !private ["PSo17UICoordinateSpace", "tintColor"]
+- !private ["PSo13UIDynamicItem", "appearance"]
+- !private ["PSo13UIDynamicItem", "tintColor"]
+- !private ["PSo18UIFocusEnvironment", "appearance"]
+- !private ["PSo18UIFocusEnvironment", "tintColor"]
+- !private ["PSo11UIFocusItem", "appearance"]
+- !private ["PSo11UIFocusItem", "tintColor"]
 - !private ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
 - !private ["CSo11UIResponder", "Data"]
@@ -473,8 +544,11 @@ depends-member:
 - !private ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "UIApplication"]
 - ["CSo11UIResponder", "UIApplicationLaunchOptionsKey"]
+- !private ["CSo11UIResponder", "UIColor"]
+- !private ["CSo11UIResponder", "UITabBar"]
 - ["CSo11UIResponder", "UIWindow"]
 - !private ["CSo11UIResponder", "URL"]
+- !private ["CSo11UIResponder", "appearance"]
 - ["CSo11UIResponder", "application"]
 - ["CSo11UIResponder", "applicationDidBecomeActive"]
 - ["CSo11UIResponder", "applicationDidEnterBackground"]
@@ -493,6 +567,7 @@ depends-member:
 - !private ["CSo11UIResponder", "log"]
 - !private ["CSo11UIResponder", "open"]
 - !private ["CSo11UIResponder", "shared"]
+- !private ["CSo11UIResponder", "tintColor"]
 - ["CSo11UIResponder", "window"]
 - ["CSo11UIResponder", ""]
 - !private ["PSo30UIResponderStandardEditActions", "Data"]
@@ -501,7 +576,10 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "MKAppSettingsController"]
 - !private ["PSo30UIResponderStandardEditActions", "MKReachability"]
 - !private ["PSo30UIResponderStandardEditActions", "UIApplication"]
+- !private ["PSo30UIResponderStandardEditActions", "UIColor"]
+- !private ["PSo30UIResponderStandardEditActions", "UITabBar"]
 - !private ["PSo30UIResponderStandardEditActions", "URL"]
+- !private ["PSo30UIResponderStandardEditActions", "appearance"]
 - ["PSo30UIResponderStandardEditActions", "application"]
 - ["PSo30UIResponderStandardEditActions", "applicationDidBecomeActive"]
 - ["PSo30UIResponderStandardEditActions", "applicationDidEnterBackground"]
@@ -519,19 +597,30 @@ depends-member:
 - !private ["PSo30UIResponderStandardEditActions", "log"]
 - !private ["PSo30UIResponderStandardEditActions", "open"]
 - !private ["PSo30UIResponderStandardEditActions", "shared"]
+- !private ["PSo30UIResponderStandardEditActions", "tintColor"]
 - ["PSo30UIResponderStandardEditActions", "window"]
 - ["PSo30UIResponderStandardEditActions", ""]
+- !private ["CSo8UITabBar", "appearance"]
+- ["CSo8UITabBar", "deinit"]
+- !private ["CSo8UITabBar", "tintColor"]
+- !private ["PSo18UITraitEnvironment", "appearance"]
+- !private ["PSo18UITraitEnvironment", "tintColor"]
+- !private ["CSo6UIView", "appearance"]
+- !private ["CSo6UIView", "tintColor"]
 - ["V10Foundation3URL", "deinit"]
 - !private ["V10Foundation3URL", "init"]
 - ["C9XCGLogger9XCGLogger", "deinit"]
 - !private ["C9XCGLogger9XCGLogger", "info"]
 - !private ["C9XCGLogger9XCGLogger", "logAppDetails"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "appearance"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "tintColor"]
 - !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
 - !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
 - !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
 - !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
 - !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps26_ExpressibleByColorLiteral", "flatOrange"]
 - !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
 - !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "Data"]
@@ -540,8 +629,11 @@ depends-member:
 - !private ["Ps9_Hashable", "MKAppSettingsController"]
 - !private ["Ps9_Hashable", "MKReachability"]
 - !private ["Ps9_Hashable", "UIApplication"]
+- !private ["Ps9_Hashable", "UIColor"]
+- !private ["Ps9_Hashable", "UITabBar"]
 - !private ["Ps9_Hashable", "URL"]
 - !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "appearance"]
 - ["Ps9_Hashable", "application"]
 - ["Ps9_Hashable", "applicationDidBecomeActive"]
 - ["Ps9_Hashable", "applicationDidEnterBackground"]
@@ -555,11 +647,13 @@ depends-member:
 - ["Ps9_Hashable", "applicationWillResignActive"]
 - ["Ps9_Hashable", "applicationWillTerminate"]
 - ["Ps9_Hashable", "checkForUpdate"]
+- !private ["Ps9_Hashable", "flatOrange"]
 - !private ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "jsonObject"]
 - !private ["Ps9_Hashable", "log"]
 - !private ["Ps9_Hashable", "open"]
 - !private ["Ps9_Hashable", "shared"]
+- !private ["Ps9_Hashable", "tintColor"]
 - ["Ps9_Hashable", "window"]
 - ["Ps9_Hashable", ""]
 - !private ["Ps14_Incrementable", "init"]
@@ -582,6 +676,7 @@ depends-nominal:
 - !private "Ps22BidirectionalIndexable"
 - !private "Ps17BitwiseOperations"
 - "Sb"
+- !private "PSo15CALayerDelegate"
 - !private "PSo13CKRecordValue"
 - !private "PSo15CNKeyDescriptor"
 - "Ps7CVarArg"
@@ -603,6 +698,7 @@ depends-nominal:
 - !private "Ps26ExpressibleByStringLiteral"
 - !private "Ps33ExpressibleByUnicodeScalarLiteral"
 - "Ps8Hashable"
+- "SQ"
 - !private "Ps9Indexable"
 - !private "Ps13IndexableBase"
 - !private "Vs16IndexingIterator"
@@ -645,18 +741,31 @@ depends-nominal:
 - "SS"
 - !private "Ps16TextOutputStream"
 - !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
 - "CSo13UIApplication"
 - "PSo21UIApplicationDelegate"
+- !private "CSo7UIColor"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
 - "CSo11UIResponder"
 - "PSo30UIResponderStandardEditActions"
+- "CSo8UITabBar"
+- !private "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
 - "V10Foundation3URL"
 - "C9XCGLogger9XCGLogger"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
 - !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
 - !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
 - !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
 - !private "Ps34_ExpressibleByBuiltinStringLiteral"
 - !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
 - !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps26_ExpressibleByColorLiteral"
 - !private "Ps34_ExpressibleByFileReferenceLiteral"
 - !private "Ps35_HasCustomAnyHashableRepresentation"
 - "Ps9_Hashable"
