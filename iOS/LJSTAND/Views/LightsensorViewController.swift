@@ -35,19 +35,6 @@ class LightSensorViewController: UIViewController {
         lightSensView = lightSensorView(frame: CGRect(origin: origin, size: maxDimention))
         
         self.view.addSubview(lightSensView)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.newData), name: NSNotification.Name(rawValue: "newLights"), object: nil)
-    }
-    
-    func newData(notification: Notification) {
-        guard let bools = notification.object as? [Int] else {
-            return
-        }
-        self.lightSensView.clearValues()
-        
-        for item in bools {
-            self.lightSensView.setValues(sensorNumber: item)
-        }
     }
 }
 

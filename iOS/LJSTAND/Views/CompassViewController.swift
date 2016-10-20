@@ -10,7 +10,6 @@ import UIKit
 import MKKit
 
 class CompassViewController: UIViewController {
-//    @IBOutlet weak var angleLabel: UILabel!
     var compass: CompassView!
     
     var titleView: TitleView!
@@ -34,17 +33,6 @@ class CompassViewController: UIViewController {
         compass = CompassView(frame: CGRect(origin: origin, size: maxDimention))
         
         self.view.addSubview(compass)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.newCompass), name: NSNotification.Name(rawValue: "newCompass"), object: nil)
-    }
-    
-    func newCompass(notification: Notification) {
-        guard let ang = notification.object as? Double else {
-            return
-        }
-        
-        compass.rotate(angle: ang)
-        
     }
 }
 

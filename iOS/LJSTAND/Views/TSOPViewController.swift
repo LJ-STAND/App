@@ -34,17 +34,6 @@ class TSOPViewController: UIViewController {
         tsopView = tsopRingView(frame: CGRect(origin: origin, size: maxDimention))
         
         self.view.addSubview(tsopView)
-        
-        let notif = Notification.Name(rawValue: "newActive")
-        NotificationCenter.default.addObserver(self, selector: #selector(self.newActive), name: notif, object: nil)
-    }
-    
-    func newActive(notification: Notification) {
-        guard let tsopNum = notification.object as? Int else {
-            return
-        }
-        
-        tsopView.setCurrent(current: tsopNum)
     }
 
 }
