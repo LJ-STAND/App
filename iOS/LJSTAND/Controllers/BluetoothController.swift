@@ -47,13 +47,8 @@ class BluetoothController {
     
     func connect() {
         
-        if Platform.isSimulator {
-            return
-        }
-        
-        if connectCount > 5 {
-            return
-        }
+        if Platform.isSimulator { return }
+        if connectCount > 5 { return }
         
         MKAsync.main {
             if !CRToastManager.isShowingNotification() {
@@ -135,8 +130,7 @@ extension BluetoothController: BluetoothSerialDelegate {
         let text = "Connected to \(peripheral.name!) \n\n"
         serialOutput = text
         serialDelegate?.hasNewOutput(serial: serialOutput)
-        
-        //Save Device Name
+
         UserDefaults.standard.set(peripheral.name!, forKey: "lastConnected")
     }
     
