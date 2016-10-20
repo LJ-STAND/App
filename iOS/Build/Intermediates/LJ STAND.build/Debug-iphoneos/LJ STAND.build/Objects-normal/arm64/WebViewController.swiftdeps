@@ -6,27 +6,27 @@ provides-nominal:
 provides-member:
 - ["C8LJ_STAND17WebViewController", ""]
 provides-dynamic-lookup:
+- "loadWeb"
+- "webView"
+- "navTitle"
+- "url"
 - "viewDidAppear"
 - "viewDidLoad"
-- "url"
-- "webView"
-- "loadWeb"
-- "navTitle"
 depends-top-level:
-- "StringLiteralType"
-- !private "NSForegroundColorAttributeName"
-- "String"
-- !private "BooleanLiteralType"
-- "WKWebView"
-- "Bool"
 - !private "URLRequest"
-- "URL"
 - !private "Dictionary"
-- "AssignmentPrecedence"
-- "WebViewController"
 - !private "UIColor"
-- "UIViewController"
+- "AssignmentPrecedence"
+- "Bool"
+- "URL"
+- "StringLiteralType"
+- "String"
+- "WKWebView"
+- "WebViewController"
+- !private "NSForegroundColorAttributeName"
+- !private "BooleanLiteralType"
 - !private "NSLayoutConstraint"
+- "UIViewController"
 depends-member:
 - !private ["Ps9AnyObject", "NSForegroundColorAttributeName"]
 - !private ["Ps9AnyObject", "NSLayoutConstraint"]
@@ -38,6 +38,7 @@ depends-member:
 - !private ["Ps9AnyObject", "addSubview"]
 - !private ["Ps9AnyObject", "allowsLinkPreview"]
 - !private ["Ps9AnyObject", "flatBlack"]
+- !private ["Ps9AnyObject", "flatOrange"]
 - !private ["Ps9AnyObject", "frame"]
 - ["Ps9AnyObject", "init"]
 - !private ["Ps9AnyObject", "layoutIfNeeded"]
@@ -46,6 +47,7 @@ depends-member:
 - ["Ps9AnyObject", "navTitle"]
 - !private ["Ps9AnyObject", "navigationBar"]
 - !private ["Ps9AnyObject", "navigationController"]
+- !private ["Ps9AnyObject", "tintColor"]
 - !private ["Ps9AnyObject", "title"]
 - !private ["Ps9AnyObject", "titleTextAttributes"]
 - !private ["Ps9AnyObject", "translatesAutoresizingMaskIntoConstraints"]
@@ -63,6 +65,7 @@ depends-member:
 - !private ["PSo15CALayerDelegate", "init"]
 - !private ["PSo15CALayerDelegate", "layoutIfNeeded"]
 - !private ["PSo15CALayerDelegate", "load"]
+- !private ["PSo15CALayerDelegate", "tintColor"]
 - !private ["PSo15CALayerDelegate", "titleTextAttributes"]
 - !private ["PSo15CALayerDelegate", "translatesAutoresizingMaskIntoConstraints"]
 - ["V12CoreGraphics7CGFloat", "deinit"]
@@ -80,6 +83,7 @@ depends-member:
 - !private ["Ps7CVarArg", "addSubview"]
 - !private ["Ps7CVarArg", "allowsLinkPreview"]
 - !private ["Ps7CVarArg", "flatBlack"]
+- !private ["Ps7CVarArg", "flatOrange"]
 - !private ["Ps7CVarArg", "frame"]
 - ["Ps7CVarArg", "init"]
 - !private ["Ps7CVarArg", "layoutIfNeeded"]
@@ -88,6 +92,7 @@ depends-member:
 - ["Ps7CVarArg", "navTitle"]
 - !private ["Ps7CVarArg", "navigationBar"]
 - !private ["Ps7CVarArg", "navigationController"]
+- !private ["Ps7CVarArg", "tintColor"]
 - !private ["Ps7CVarArg", "title"]
 - !private ["Ps7CVarArg", "titleTextAttributes"]
 - !private ["Ps7CVarArg", "translatesAutoresizingMaskIntoConstraints"]
@@ -112,6 +117,7 @@ depends-member:
 - !private ["Ps28CustomDebugStringConvertible", "addSubview"]
 - !private ["Ps28CustomDebugStringConvertible", "allowsLinkPreview"]
 - !private ["Ps28CustomDebugStringConvertible", "flatBlack"]
+- !private ["Ps28CustomDebugStringConvertible", "flatOrange"]
 - !private ["Ps28CustomDebugStringConvertible", "frame"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - !private ["Ps28CustomDebugStringConvertible", "layoutIfNeeded"]
@@ -120,6 +126,7 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "navTitle"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationBar"]
 - !private ["Ps28CustomDebugStringConvertible", "navigationController"]
+- !private ["Ps28CustomDebugStringConvertible", "tintColor"]
 - !private ["Ps28CustomDebugStringConvertible", "title"]
 - !private ["Ps28CustomDebugStringConvertible", "titleTextAttributes"]
 - !private ["Ps28CustomDebugStringConvertible", "translatesAutoresizingMaskIntoConstraints"]
@@ -145,6 +152,7 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "addSubview"]
 - !private ["Ps23CustomStringConvertible", "allowsLinkPreview"]
 - !private ["Ps23CustomStringConvertible", "flatBlack"]
+- !private ["Ps23CustomStringConvertible", "flatOrange"]
 - !private ["Ps23CustomStringConvertible", "frame"]
 - ["Ps23CustomStringConvertible", "init"]
 - !private ["Ps23CustomStringConvertible", "layoutIfNeeded"]
@@ -153,6 +161,7 @@ depends-member:
 - ["Ps23CustomStringConvertible", "navTitle"]
 - !private ["Ps23CustomStringConvertible", "navigationBar"]
 - !private ["Ps23CustomStringConvertible", "navigationController"]
+- !private ["Ps23CustomStringConvertible", "tintColor"]
 - !private ["Ps23CustomStringConvertible", "title"]
 - !private ["Ps23CustomStringConvertible", "titleTextAttributes"]
 - !private ["Ps23CustomStringConvertible", "translatesAutoresizingMaskIntoConstraints"]
@@ -177,6 +186,7 @@ depends-member:
 - !private ["Ps9Equatable", "bottom"]
 - !private ["Ps9Equatable", "equal"]
 - !private ["Ps9Equatable", "flatBlack"]
+- !private ["Ps9Equatable", "flatOrange"]
 - !private ["Ps9Equatable", "frame"]
 - ["Ps9Equatable", "init"]
 - !private ["Ps9Equatable", "layoutIfNeeded"]
@@ -187,6 +197,7 @@ depends-member:
 - !private ["Ps9Equatable", "navigationBar"]
 - !private ["Ps9Equatable", "navigationController"]
 - !private ["Ps9Equatable", "right"]
+- !private ["Ps9Equatable", "tintColor"]
 - !private ["Ps9Equatable", "title"]
 - !private ["Ps9Equatable", "titleTextAttributes"]
 - !private ["Ps9Equatable", "top"]
@@ -215,6 +226,7 @@ depends-member:
 - !private ["Ps8Hashable", "bottom"]
 - !private ["Ps8Hashable", "equal"]
 - !private ["Ps8Hashable", "flatBlack"]
+- !private ["Ps8Hashable", "flatOrange"]
 - !private ["Ps8Hashable", "frame"]
 - ["Ps8Hashable", "init"]
 - !private ["Ps8Hashable", "layoutIfNeeded"]
@@ -225,6 +237,7 @@ depends-member:
 - !private ["Ps8Hashable", "navigationBar"]
 - !private ["Ps8Hashable", "navigationController"]
 - !private ["Ps8Hashable", "right"]
+- !private ["Ps8Hashable", "tintColor"]
 - !private ["Ps8Hashable", "title"]
 - !private ["Ps8Hashable", "titleTextAttributes"]
 - !private ["Ps8Hashable", "top"]
@@ -253,6 +266,7 @@ depends-member:
 - !private ["PSo8NSCoding", "addSubview"]
 - !private ["PSo8NSCoding", "allowsLinkPreview"]
 - !private ["PSo8NSCoding", "flatBlack"]
+- !private ["PSo8NSCoding", "flatOrange"]
 - !private ["PSo8NSCoding", "frame"]
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "layoutIfNeeded"]
@@ -261,6 +275,7 @@ depends-member:
 - ["PSo8NSCoding", "navTitle"]
 - !private ["PSo8NSCoding", "navigationBar"]
 - !private ["PSo8NSCoding", "navigationController"]
+- !private ["PSo8NSCoding", "tintColor"]
 - !private ["PSo8NSCoding", "title"]
 - !private ["PSo8NSCoding", "titleTextAttributes"]
 - !private ["PSo8NSCoding", "translatesAutoresizingMaskIntoConstraints"]
@@ -271,6 +286,7 @@ depends-member:
 - ["PSo8NSCoding", "webView"]
 - ["PSo8NSCoding", ""]
 - !private ["PSo9NSCopying", "flatBlack"]
+- !private ["PSo9NSCopying", "flatOrange"]
 - ["PSo9NSCopying", "init"]
 - !private ["PSo26NSExtensionRequestHandling", "NSForegroundColorAttributeName"]
 - !private ["PSo26NSExtensionRequestHandling", "NSLayoutConstraint"]
@@ -312,6 +328,7 @@ depends-member:
 - !private ["CSo8NSObject", "addSubview"]
 - !private ["CSo8NSObject", "allowsLinkPreview"]
 - !private ["CSo8NSObject", "flatBlack"]
+- !private ["CSo8NSObject", "flatOrange"]
 - !private ["CSo8NSObject", "frame"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "layoutIfNeeded"]
@@ -320,6 +337,7 @@ depends-member:
 - ["CSo8NSObject", "navTitle"]
 - !private ["CSo8NSObject", "navigationBar"]
 - !private ["CSo8NSObject", "navigationController"]
+- !private ["CSo8NSObject", "tintColor"]
 - !private ["CSo8NSObject", "title"]
 - !private ["CSo8NSObject", "titleTextAttributes"]
 - !private ["CSo8NSObject", "translatesAutoresizingMaskIntoConstraints"]
@@ -338,6 +356,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "addSubview"]
 - !private ["PSo16NSObjectProtocol", "allowsLinkPreview"]
 - !private ["PSo16NSObjectProtocol", "flatBlack"]
+- !private ["PSo16NSObjectProtocol", "flatOrange"]
 - !private ["PSo16NSObjectProtocol", "frame"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "layoutIfNeeded"]
@@ -346,6 +365,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "navTitle"]
 - !private ["PSo16NSObjectProtocol", "navigationBar"]
 - !private ["PSo16NSObjectProtocol", "navigationController"]
+- !private ["PSo16NSObjectProtocol", "tintColor"]
 - !private ["PSo16NSObjectProtocol", "title"]
 - !private ["PSo16NSObjectProtocol", "titleTextAttributes"]
 - !private ["PSo16NSObjectProtocol", "translatesAutoresizingMaskIntoConstraints"]
@@ -356,6 +376,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "webView"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "flatBlack"]
+- !private ["PSo14NSSecureCoding", "flatOrange"]
 - ["PSo14NSSecureCoding", "init"]
 - ["CSo8NSString", "init"]
 - ["Sq", "deinit"]
@@ -378,6 +399,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo29UIAccessibilityIdentification", "layoutIfNeeded"]
 - !private ["PSo29UIAccessibilityIdentification", "load"]
+- !private ["PSo29UIAccessibilityIdentification", "tintColor"]
 - !private ["PSo29UIAccessibilityIdentification", "titleTextAttributes"]
 - !private ["PSo29UIAccessibilityIdentification", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["PSo12UIAppearance", "addConstraint"]
@@ -387,6 +409,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "init"]
 - !private ["PSo12UIAppearance", "layoutIfNeeded"]
 - !private ["PSo12UIAppearance", "load"]
+- !private ["PSo12UIAppearance", "tintColor"]
 - !private ["PSo12UIAppearance", "titleTextAttributes"]
 - !private ["PSo12UIAppearance", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["PSo21UIAppearanceContainer", "NSForegroundColorAttributeName"]
@@ -406,6 +429,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "navTitle"]
 - !private ["PSo21UIAppearanceContainer", "navigationBar"]
 - !private ["PSo21UIAppearanceContainer", "navigationController"]
+- !private ["PSo21UIAppearanceContainer", "tintColor"]
 - !private ["PSo21UIAppearanceContainer", "title"]
 - !private ["PSo21UIAppearanceContainer", "titleTextAttributes"]
 - !private ["PSo21UIAppearanceContainer", "translatesAutoresizingMaskIntoConstraints"]
@@ -415,8 +439,10 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", "webView"]
 - ["PSo21UIAppearanceContainer", ""]
+- !private ["PSo16UIBarPositioning", "tintColor"]
 - !private ["PSo16UIBarPositioning", "titleTextAttributes"]
 - !private ["CSo7UIColor", "flatBlack"]
+- !private ["CSo7UIColor", "flatOrange"]
 - !private ["PSo18UIContentContainer", "NSForegroundColorAttributeName"]
 - !private ["PSo18UIContentContainer", "NSLayoutConstraint"]
 - !private ["PSo18UIContentContainer", "UIColor"]
@@ -442,6 +468,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "init"]
 - !private ["PSo17UICoordinateSpace", "layoutIfNeeded"]
 - !private ["PSo17UICoordinateSpace", "load"]
+- !private ["PSo17UICoordinateSpace", "tintColor"]
 - !private ["PSo17UICoordinateSpace", "titleTextAttributes"]
 - !private ["PSo17UICoordinateSpace", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["PSo13UIDynamicItem", "addConstraint"]
@@ -451,6 +478,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "init"]
 - !private ["PSo13UIDynamicItem", "layoutIfNeeded"]
 - !private ["PSo13UIDynamicItem", "load"]
+- !private ["PSo13UIDynamicItem", "tintColor"]
 - !private ["PSo13UIDynamicItem", "titleTextAttributes"]
 - !private ["PSo13UIDynamicItem", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["PSo18UIFocusEnvironment", "NSForegroundColorAttributeName"]
@@ -470,6 +498,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "navTitle"]
 - !private ["PSo18UIFocusEnvironment", "navigationBar"]
 - !private ["PSo18UIFocusEnvironment", "navigationController"]
+- !private ["PSo18UIFocusEnvironment", "tintColor"]
 - !private ["PSo18UIFocusEnvironment", "title"]
 - !private ["PSo18UIFocusEnvironment", "titleTextAttributes"]
 - !private ["PSo18UIFocusEnvironment", "translatesAutoresizingMaskIntoConstraints"]
@@ -486,9 +515,11 @@ depends-member:
 - !private ["PSo11UIFocusItem", "init"]
 - !private ["PSo11UIFocusItem", "layoutIfNeeded"]
 - !private ["PSo11UIFocusItem", "load"]
+- !private ["PSo11UIFocusItem", "tintColor"]
 - !private ["PSo11UIFocusItem", "titleTextAttributes"]
 - !private ["PSo11UIFocusItem", "translatesAutoresizingMaskIntoConstraints"]
 - ["CSo15UINavigationBar", "deinit"]
+- !private ["CSo15UINavigationBar", "tintColor"]
 - !private ["CSo15UINavigationBar", "titleTextAttributes"]
 - ["CSo22UINavigationController", "deinit"]
 - !private ["CSo22UINavigationController", "navigationBar"]
@@ -512,6 +543,7 @@ depends-member:
 - ["CSo11UIResponder", "navTitle"]
 - !private ["CSo11UIResponder", "navigationBar"]
 - !private ["CSo11UIResponder", "navigationController"]
+- !private ["CSo11UIResponder", "tintColor"]
 - !private ["CSo11UIResponder", "title"]
 - !private ["CSo11UIResponder", "titleTextAttributes"]
 - !private ["CSo11UIResponder", "translatesAutoresizingMaskIntoConstraints"]
@@ -537,6 +569,7 @@ depends-member:
 - ["PSo30UIResponderStandardEditActions", "navTitle"]
 - !private ["PSo30UIResponderStandardEditActions", "navigationBar"]
 - !private ["PSo30UIResponderStandardEditActions", "navigationController"]
+- !private ["PSo30UIResponderStandardEditActions", "tintColor"]
 - !private ["PSo30UIResponderStandardEditActions", "title"]
 - !private ["PSo30UIResponderStandardEditActions", "titleTextAttributes"]
 - !private ["PSo30UIResponderStandardEditActions", "translatesAutoresizingMaskIntoConstraints"]
@@ -581,6 +614,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "navTitle"]
 - !private ["PSo18UITraitEnvironment", "navigationBar"]
 - !private ["PSo18UITraitEnvironment", "navigationController"]
+- !private ["PSo18UITraitEnvironment", "tintColor"]
 - !private ["PSo18UITraitEnvironment", "title"]
 - !private ["PSo18UITraitEnvironment", "titleTextAttributes"]
 - !private ["PSo18UITraitEnvironment", "translatesAutoresizingMaskIntoConstraints"]
@@ -597,6 +631,7 @@ depends-member:
 - !private ["CSo6UIView", "init"]
 - !private ["CSo6UIView", "layoutIfNeeded"]
 - !private ["CSo6UIView", "load"]
+- !private ["CSo6UIView", "tintColor"]
 - !private ["CSo6UIView", "titleTextAttributes"]
 - !private ["CSo6UIView", "translatesAutoresizingMaskIntoConstraints"]
 - ["CSo16UIViewController", "Bool"]
@@ -653,6 +688,7 @@ depends-member:
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "layoutIfNeeded"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "load"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "tintColor"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "titleTextAttributes"]
 - !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "translatesAutoresizingMaskIntoConstraints"]
 - ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
@@ -660,6 +696,7 @@ depends-member:
 - ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
 - ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
 - !private ["Ps26_ExpressibleByColorLiteral", "flatBlack"]
+- !private ["Ps26_ExpressibleByColorLiteral", "flatOrange"]
 - ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
 - ["Ps35_HasCustomAnyHashableRepresentation", "init"]
 - !private ["Ps9_Hashable", "NSForegroundColorAttributeName"]
@@ -674,6 +711,7 @@ depends-member:
 - !private ["Ps9_Hashable", "bottom"]
 - !private ["Ps9_Hashable", "equal"]
 - !private ["Ps9_Hashable", "flatBlack"]
+- !private ["Ps9_Hashable", "flatOrange"]
 - !private ["Ps9_Hashable", "frame"]
 - ["Ps9_Hashable", "init"]
 - !private ["Ps9_Hashable", "layoutIfNeeded"]
@@ -684,6 +722,7 @@ depends-member:
 - !private ["Ps9_Hashable", "navigationBar"]
 - !private ["Ps9_Hashable", "navigationController"]
 - !private ["Ps9_Hashable", "right"]
+- !private ["Ps9_Hashable", "tintColor"]
 - !private ["Ps9_Hashable", "title"]
 - !private ["Ps9_Hashable", "titleTextAttributes"]
 - !private ["Ps9_Hashable", "top"]
