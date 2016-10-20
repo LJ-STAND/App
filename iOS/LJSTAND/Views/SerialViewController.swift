@@ -19,11 +19,9 @@ class SerialViewController: UIViewController {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
-    
     var connectCount = 0
 
     var titleView: TitleView!
-    
     var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
     var selectedPeripheral: CBPeripheral?
     

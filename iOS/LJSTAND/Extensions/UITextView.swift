@@ -13,5 +13,4 @@ extension UITextView {
         let range = NSMakeRange(text.characters.count - 1, 1);
         scrollRangeToVisible(range);
     }
-    
 }

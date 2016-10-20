@@ -17,14 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        log.logAppDetails()
-
         UITabBar.appearance().tintColor = UIColor.flatOrange()
-
+        
+        log.logAppDetails()
         checkForUpdate()
         return true
     }
-    
     
     func checkForUpdate() {
         if !MKAppSettingsController().isDebugBuild && MKReachability().connectedToNetwork() {
@@ -47,7 +45,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } catch {
                 log.info("Unable to retrieve JSON data from server")
             }
-            
         } else {
             log.info("No Internet Connection or Debug")
         }
