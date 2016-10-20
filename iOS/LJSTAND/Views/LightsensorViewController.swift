@@ -17,6 +17,10 @@ class LightSensorViewController: UIViewController {
     var titleView: TitleView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        BluetoothController.shared.lightSensDelegate = self
+        
         self.navigationController?.navigationBar.isHidden = true
         
         titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "Light Sensors")
@@ -42,6 +46,16 @@ class LightSensorViewController: UIViewController {
         self.lightSensView.clearValues()
         
         for item in bools {
+            self.lightSensView.setValues(sensorNumber: item)
+        }
+    }
+}
+
+extension LightSensorViewController: BluetoothControllerLightSensorDelegate {
+    func updatedCurrentLightSensors(sensors: [Int]) {
+        self.lightSensView.clearValues()
+        
+        for item in sensors {
             self.lightSensView.setValues(sensorNumber: item)
         }
     }

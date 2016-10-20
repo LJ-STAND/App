@@ -32,6 +32,7 @@
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
 		EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF471E491DB6C31900CED76B /* ModelViewController.swift */; };
 		EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */ = {isa = PBXBuildFile; fileRef = EF471E4B1DB6C37900CED76B /* Robot.obj */; };
+		EF734A571DB8B894000E6D8C /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734A561DB8B894000E6D8C /* BluetoothController.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
 		EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */; };
@@ -95,6 +96,7 @@
 		EF5EB9A91DAB8B3500976700 /* CRToast.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CRToast.framework; path = Carthage/Build/iOS/CRToast.framework; sourceTree = "<group>"; };
 		EF5EB9AA1DAB8B3500976700 /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
 		EF5EB9AB1DAB8B3500976700 /* DropDown.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropDown.framework; path = Carthage/Build/iOS/DropDown.framework; sourceTree = "<group>"; };
+		EF734A561DB8B894000E6D8C /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 		EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EF9518231DB08CB4009B1F6F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsensorViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			children = (
 				47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */,
 				EFAA535A1DB6E12F00EBFA89 /* PartParser.swift */,
+				EF734A561DB8B894000E6D8C /* BluetoothController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 			files = (
 				EFAA53651DB6FCC600EBFA89 /* DesignTableViewController.swift in Sources */,
 				D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */,
+				EF734A571DB8B894000E6D8C /* BluetoothController.swift in Sources */,
 				EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */,
 				EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */,
 				EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */,

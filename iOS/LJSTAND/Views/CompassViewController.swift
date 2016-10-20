@@ -10,12 +10,16 @@ import UIKit
 import MKKit
 
 class CompassViewController: UIViewController {
-    @IBOutlet weak var angleLabel: UILabel!
+//    @IBOutlet weak var angleLabel: UILabel!
     var compass: CompassView!
     
     var titleView: TitleView!
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        BluetoothController.shared.compassDelegate = self
+        
         self.navigationController?.navigationBar.isHidden = true
         
         titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "Compass")
@@ -40,7 +44,13 @@ class CompassViewController: UIViewController {
         }
         
         compass.rotate(angle: ang)
-        angleLabel.text = "Angle: \(ang)"
+        
+    }
+}
+
+extension CompassViewController: BluetoothControllerCompassDelegate {
+    func hasNewHeading(angle: Double) {
+        compass.rotate(angle: angle)
     }
 }
 
@@ -75,7 +85,7 @@ class CompassView: UIView {
         let xCenter = Double(self.frame.width / 2)
         let yCenter = Double(self.frame.height / 2)
         
-        let angleRadians = degToRad(angle: 360 - (needleAngle + 90))
+        let angleRadians = degToRad(angle: needleAngle - 90)
         
         let needleRadius = (0.8 * Double(self.frame.width)) / 2
         let xPoint = xCenter + (needleRadius * sin(angleRadians))

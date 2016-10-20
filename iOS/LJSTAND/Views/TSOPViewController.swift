@@ -20,6 +20,8 @@ class TSOPViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        BluetoothController.shared.tsopDelegate = self
+        
         self.navigationController?.navigationBar.isHidden = true
         
         titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "TSOP")
@@ -45,6 +47,12 @@ class TSOPViewController: UIViewController {
         tsopView.setCurrent(current: tsopNum)
     }
 
+}
+
+extension TSOPViewController: BluetoothControllerTSOPDelegate {
+    func hasNewActiveTSOP(tsopNum: Int) {
+        tsopView.setCurrent(current: tsopNum)
+    }
 }
 
 class tsopRingView: UIView {
