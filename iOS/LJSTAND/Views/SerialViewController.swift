@@ -293,6 +293,15 @@ extension SerialViewController: BluetoothSerialDelegate {
     
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
         self.connectCount = 0
+        
+        let name = ["newLights", "newActive", "newCompass"]
+        let data = [[], -1, 0] as [Any]
+        
+        for i in 1...3 {
+            let notif = Notification(name: Notification.Name(rawValue: name[i]), object: data[i], userInfo: nil)
+            NotificationCenter.default.post(notif)
+        }
+        
         connect()
     }
 }
