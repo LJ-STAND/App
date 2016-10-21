@@ -149,9 +149,10 @@ extension BluetoothController: BluetoothSerialDelegate {
     func serialDidReceiveString(_ message: String) {
         let comps = message.components(separatedBy: ";")
         
-        let tsop = "100" //FIXME: Should be 2
+        //NOTE: TSOP = 2, Light = 3, compass = 4
+        let tsop = "100"
         let light = "3"
-        let compass = "2" //FIXME: Should be 4
+        let compass = "2"
         
         if comps.count > 1 {
             if comps[0] == tsop {
