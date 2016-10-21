@@ -26,7 +26,13 @@ class CompassViewController: UIViewController {
         
         super.viewDidLoad()
         
-        let dist = min(self.view.frame.width, self.view.frame.height) - (0.1 * self.view.frame.height)
+        var multiplyer = CGFloat(0.1)
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            multiplyer = CGFloat(0.3)
+        }
+        
+        let dist = min(self.view.frame.width, self.view.frame.height) - (multiplyer * self.view.frame.height)
         let maxDimention = CGSize(width: dist, height: dist)
         let origin = CGPoint(x: ((self.view.frame.width / 2) - (dist / 2)), y: ((self.view.frame.height / 2) - (dist / 2)))
         
