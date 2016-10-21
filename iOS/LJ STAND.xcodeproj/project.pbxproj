@@ -18,7 +18,6 @@
 		EF1B7C151DACFF0900B3442E /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A71DAB8B3500976700 /* XCGLogger.framework */; };
 		EF1B7C181DACFF0900B3442E /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9AA1DAB8B3500976700 /* Chameleon.framework */; };
 		EF1B7C1C1DACFF7100B3442E /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A61DAB8B3500976700 /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF1B7C1D1DACFF7100B3442E /* XCGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A71DAB8B3500976700 /* XCGLogger.framework */; };
 		EF1B7C1E1DACFF7100B3442E /* XCGLogger.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A71DAB8B3500976700 /* XCGLogger.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF1B7C1F1DACFF7100B3442E /* SwiftyStoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A81DAB8B3500976700 /* SwiftyStoreKit.framework */; };
 		EF1B7C201DACFF7100B3442E /* SwiftyStoreKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9A81DAB8B3500976700 /* SwiftyStoreKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -130,7 +129,6 @@
 				EF1B7C181DACFF0900B3442E /* Chameleon.framework in Frameworks */,
 				EF1B7C1F1DACFF7100B3442E /* SwiftyStoreKit.framework in Frameworks */,
 				162D8C3B1E4A153094F4530A /* Foundation.framework in Frameworks */,
-				EF1B7C1D1DACFF7100B3442E /* XCGLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,7 +331,7 @@
 			attributes = {
 				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Lachlan Grant";
 				TargetAttributes = {
 					D020986916FA04E7BBD68098 = {
@@ -531,17 +529,21 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -589,16 +591,20 @@
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
@@ -619,6 +625,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

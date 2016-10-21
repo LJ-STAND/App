@@ -38,7 +38,6 @@ class CompassViewController: UIViewController {
 
 extension CompassViewController: BluetoothControllerCompassDelegate {
     func hasNewHeading(angle: Double) {
-        
         UIView.animate(withDuration: 0.025, delay: 0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
             self.compass.rotate(angle: angle)
         })
