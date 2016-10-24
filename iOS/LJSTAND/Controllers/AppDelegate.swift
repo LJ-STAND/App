@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func checkForUpdate() {
         if !MKAppSettingsController().isDebugBuild && MKReachability().connectedToNetwork() {
             do {
-                let urlStr = "https://lj-stand.github.io/ota-dist/config.json"
+                let urlStr = "https://lj-stand.github.io/Apps/config.json"
                 let url = URL(string: urlStr)
                 
                 let data = try Data(contentsOf: url!)
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 if releasedVer > thisBuild {
                     log.info("Update")
-                    let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/ota-dist/apps/iOS/manifest.plist")!
+                    let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/Apps/dist/iOS/manifest.plist")!
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
             } catch {
