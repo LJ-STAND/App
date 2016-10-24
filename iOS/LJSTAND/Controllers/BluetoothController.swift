@@ -35,7 +35,8 @@ class BluetoothController {
     var compassDelegate: BluetoothControllerCompassDelegate?
     var lightSensDelegate: BluetoothControllerLightSensorDelegate?
     
-    var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
+    var peripherals: [CBPeripheral] = []
+    var rssis: [Float] = []
     var selectedPeripheral: CBPeripheral?
     var serialOutput: String = ""
     var connectCount = 0
@@ -51,18 +52,16 @@ class BluetoothController {
         if connectCount > 5 { return }
         
         MKAsync.main {
-            if !CRToastManager.isShowingNotification() {
-                let options = [
-                    kCRToastTextKey: "Scanning for Bluetooth Devices...",
-                    kCRToastBackgroundColorKey: UIColor.flatBlue(),
-                    kCRToastKeepNavigationBarBorderKey: true
-                    ] as [String : Any]
-                
-                CRToastManager.showNotification(options: options, completionBlock: {})
-            }
+            let options = [
+                kCRToastTextKey: "Scanning for Bluetooth Devices...",
+                kCRToastBackgroundColorKey: UIColor.flatBlue(),
+                kCRToastKeepNavigationBarBorderKey: true
+                ] as [String : Any]
+            
+            CRToastManager.showNotification(options: options, completionBlock: {})
             }.background {
                 serial.startScan()
-                sleep(2)
+                sleep(1)
             }.main {
                 serial.stopScan()
                 
@@ -72,8 +71,8 @@ class BluetoothController {
                     
                     var last: CBPeripheral?
                     for device in self.peripherals {
-                        if device.peripheral.name == lastDevice {
-                            last = device.peripheral
+                        if device.name == lastDevice {
+                            last = device
                         }
                     }
                     
@@ -84,9 +83,9 @@ class BluetoothController {
                         let alert = UIAlertController(title: "Connect to Device", message: nil, preferredStyle: .alert)
                         
                         for item in self.peripherals {
-                            alert.addAction(UIAlertAction(title: item.peripheral.name, style: UIAlertActionStyle.default, handler: { (action) in
-                                self.selectedPeripheral = item.peripheral
-                                serial.connectToPeripheral(item.peripheral)
+                            alert.addAction(UIAlertAction(title: item.name, style: .default, handler: { (action) in
+                                self.selectedPeripheral = item
+                                serial.connectToPeripheral(item)
                             }))
                         }
                         
@@ -94,7 +93,9 @@ class BluetoothController {
                         
                     }
                 } else {
-                    self.connectCount = self.connectCount + 1
+                    var count = self.connectCount
+                    count = count + 1
+                    self.connectCount = count
                     self.connect()
                 }
         }
@@ -110,12 +111,12 @@ extension BluetoothController: BluetoothSerialDelegate {
     
     func serialDidDiscoverPeripheral(_ peripheral: CBPeripheral, RSSI: NSNumber?) {
         for exisiting in peripherals {
-            if exisiting.peripheral.identifier == peripheral.identifier { return }
+            if exisiting.identifier == peripheral.identifier { return }
         }
         
         let theRSSI = RSSI?.floatValue ?? 0.0
-        peripherals.append(peripheral: peripheral, RSSI: theRSSI)
-        peripherals.sort { $0.RSSI < $1.RSSI }
+        peripherals.append(peripheral)
+        rssis.append(theRSSI)
     }
     
     
@@ -130,7 +131,7 @@ extension BluetoothController: BluetoothSerialDelegate {
         let text = "Connected to \(peripheral.name!) \n\n"
         serialOutput = text
         serialDelegate?.hasNewOutput(serial: serialOutput)
-
+        
         UserDefaults.standard.set(peripheral.name!, forKey: "lastConnected")
     }
     
@@ -150,9 +151,9 @@ extension BluetoothController: BluetoothSerialDelegate {
         let comps = message.components(separatedBy: ";")
         
         //NOTE: TSOP = 2, Light = 3, compass = 4
-        let tsop = "100"
+        let tsop = "2"
         let light = "3"
-        let compass = "2"
+        let compass = "4"
         
         if comps.count > 1 {
             if comps[0] == tsop {
