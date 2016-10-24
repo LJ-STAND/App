@@ -26,7 +26,6 @@
 		EF1B7C241DACFF7100B3442E /* Chameleon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9AA1DAB8B3500976700 /* Chameleon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF1B7C251DACFF7100B3442E /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9AB1DAB8B3500976700 /* DropDown.framework */; };
 		EF1B7C261DACFF7100B3442E /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF5EB9AB1DAB8B3500976700 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF1B7C2B1DAD01D300B3442E /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */; };
 		EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */; };
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
 		EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF471E491DB6C31900CED76B /* ModelViewController.swift */; };
@@ -83,7 +82,6 @@
 		C8E706015D603F83004748A1 /* LJ STAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LJ STAND.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD06FA991DB77E45004F3F68 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
-		EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		EF1B7C2C1DAD01D300B3442E /* LJSTAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LJSTAND.entitlements; sourceTree = "<group>"; };
 		EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
@@ -123,7 +121,6 @@
 			files = (
 				EF1B7C141DACFF0900B3442E /* MKKit.framework in Frameworks */,
 				EF1B7C151DACFF0900B3442E /* XCGLogger.framework in Frameworks */,
-				EF1B7C2B1DAD01D300B3442E /* ExternalAccessory.framework in Frameworks */,
 				EF1B7C211DACFF7100B3442E /* CRToast.framework in Frameworks */,
 				EF1B7C251DACFF7100B3442E /* DropDown.framework in Frameworks */,
 				EF1B7C181DACFF0900B3442E /* Chameleon.framework in Frameworks */,
@@ -187,7 +184,6 @@
 		534AB7A34A3D72BAFA984F6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EF1B7C2A1DAD01D300B3442E /* ExternalAccessory.framework */,
 				EF5EB9A61DAB8B3500976700 /* MKKit.framework */,
 				EF5EB9A71DAB8B3500976700 /* XCGLogger.framework */,
 				EF5EB9A81DAB8B3500976700 /* SwiftyStoreKit.framework */,
@@ -339,10 +335,10 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.WAC = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -485,7 +481,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = LJSTAND.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = QSCWPBA77U;
@@ -635,7 +630,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = LJSTAND.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QSCWPBA77U;
