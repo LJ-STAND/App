@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 if releasedVer > thisBuild {
                     log.info("Update")
-                    let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/Apps/dist/iOS/manifest.plist")!
+                    let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/Apps/dist/manifest.plist")!
                     UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
             } catch {
