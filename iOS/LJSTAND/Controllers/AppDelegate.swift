@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func checkForUpdate() {
-        if !MKAppSettingsController().isDebugBuild && MKReachability().connectedToNetwork() {
+        if MKReachability().connectedToNetwork() {
             do {
                 let urlStr = "https://lj-stand.github.io/Apps/config.json"
                 let url = URL(string: urlStr)
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 let releasedVer = json["currentRelease"] as! Int
                 
-                let thisBuild = Int(MKAppSettingsController().build)!
+                let thisBuild = Int(MKAppSettingsController().build.components(separatedBy: "-")[0])!
                 
                 if releasedVer > thisBuild {
                     log.info("Update")
@@ -55,3 +55,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 }
+
