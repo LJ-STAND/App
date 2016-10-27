@@ -50,6 +50,7 @@ class BluetoothController {
         
         if Platform.isSimulator { return }
         if connectCount > 5 { return }
+        if serial.centralManager.state != .poweredOn { return }
         
         MKAsync.main {
             let options = [
