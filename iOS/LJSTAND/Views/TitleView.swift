@@ -16,7 +16,7 @@ class TitleView: UIView {
         
         titleLabel = UILabel(frame: CGRect(origin: CGPoint(x: 0.05 * frame.size.width, y: 0.0), size: CGSize(width: frame.size.width, height: frame.size.height)))
         titleLabel.font = UIFont.systemFont(ofSize: 46, weight: UIFontWeightBold)
-        titleLabel.textColor = UIColor.flatOrange()
+        titleLabel.textColor = ljStandGreen
         titleLabel.text = title
         titleLabel.sizeToFit()
         
