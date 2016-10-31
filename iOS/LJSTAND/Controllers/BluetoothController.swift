@@ -47,10 +47,7 @@ class BluetoothController {
     }
     
     func connect() {
-        
-        if Platform.isSimulator { return }
-        if connectCount > 5 { return }
-        if serial.centralManager.state != .poweredOn { return }
+        if Platform.isSimulator || connectCount > 5 || serial.centralManager.state != .poweredOn { return }
         
         MKAsync.main {
             let options = [
@@ -151,7 +148,6 @@ extension BluetoothController: BluetoothSerialDelegate {
     func serialDidReceiveString(_ message: String) {
         let comps = message.components(separatedBy: ";")
         
-        //NOTE: TSOP = 2, Light = 3, compass = 4
         let tsop = "2"
         let light = "3"
         let compass = "4"
@@ -232,13 +228,11 @@ extension BluetoothController: BluetoothSerialDelegate {
     
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
         self.connectCount = 0
-        
         serialOutput = ""
         serialDelegate?.hasNewOutput(serial: "")
         tsopDelegate?.hasNewActiveTSOP(tsopNum: -1)
         compassDelegate?.hasNewHeading(angle: 0)
         lightSensDelegate?.updatedCurrentLightSensors(sensors: [])
-        
         connect()
     }
 }

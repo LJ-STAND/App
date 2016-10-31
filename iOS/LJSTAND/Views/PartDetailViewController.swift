@@ -11,7 +11,6 @@ import SafariServices
 
 class PartDetailViewController: UIViewController {
     var index: Int!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var supplierLabel: UILabel!
     @IBOutlet weak var vendorPartLabel: UILabel!
@@ -28,13 +27,11 @@ class PartDetailViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tintNavigationController()
-
         updateLabel()
     }
     

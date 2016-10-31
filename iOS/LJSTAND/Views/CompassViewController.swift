@@ -11,7 +11,6 @@ import MKKit
 
 class CompassViewController: UIViewController {
     var compass: CompassView!
-    
     var titleView: TitleView!
     
     override func viewDidLoad() {
@@ -100,7 +99,6 @@ class CompassView: UIView {
     
     func rotate(angle:Double) {
         needleAngle = angle
-        
         setNeedsDisplay()
     }
     

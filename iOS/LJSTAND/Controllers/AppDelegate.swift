@@ -13,7 +13,6 @@ import Chameleon
 let log = MKLogController().log
 let parts = PartParser()
 
-//let ljStandGreen = UIColor(colorLiteralRed: 25, green: 142, blue: 44, alpha: 1.0)
 let ljStandGreen = UIColor.flatGreenColorDark()
 
 @UIApplicationMain

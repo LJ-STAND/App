@@ -45,7 +45,6 @@ class SerialViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        
         bottomView.layer.masksToBounds = false
         bottomView.layer.shadowOffset = CGSize(width: 0, height: -1)
         bottomView.layer.shadowRadius = 0

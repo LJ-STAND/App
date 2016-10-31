@@ -21,7 +21,6 @@ class WebViewController: UIViewController {
         tintNavigationController()
         
         webView = WKWebView(frame: self.view.frame)
-        
         webView.translatesAutoresizingMaskIntoConstraints = false
         webView.allowsLinkPreview = true
         self.view.addSubview(webView)

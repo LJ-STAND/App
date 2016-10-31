@@ -22,7 +22,6 @@ class PartsListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
         let item = parts.parts[indexPath.row]
         
         cell.textLabel?.text = item.item.replacingOccurrences(of: "\"", with: "")

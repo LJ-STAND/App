@@ -13,12 +13,10 @@ import QuartzCore
 
 class LightSensorViewController: UIViewController {    
     var lightSensView: lightSensorView!
-    
     var titleView: TitleView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         BluetoothController.shared.lightSensDelegate = self
         
         self.navigationController?.navigationBar.isHidden = true
@@ -29,11 +27,9 @@ class LightSensorViewController: UIViewController {
         super.viewDidLoad()
         
         var multiplyer = CGFloat(0.1)
-        
         if UIDevice.current.userInterfaceIdiom == .pad {
             multiplyer = CGFloat(0.3)
         }
-        
         
         let dist = min(self.view.frame.width, self.view.frame.height) - (multiplyer * self.view.frame.height)
         let maxDimention = CGSize(width: dist, height: dist)

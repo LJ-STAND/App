@@ -15,7 +15,6 @@ class PartParser {
     init() {
         parts = []
         errored = false
-        
         getData()
     }
     
