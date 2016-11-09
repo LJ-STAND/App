@@ -1,9 +1,0 @@
-version: "Apple Swift version 3.0.1 (swiftlang-800.0.56 clang-800.0.42)"
-options: "a5cc85bdc50fad77f5a676141038ef30"
-build_time: [529648164, 895269000]
-inputs:
-  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Views/TSOPRing.swift": [529586028, 0]
-  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Controllers/AppDelegate.swift": [529586028, 0]
-  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Views/SerialViewController.swift": [529586028, 0]
-  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Protocols/BluetoothSerial.swift": [529586028, 0]
-  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/LJSTAND/Views/TSOPViewController.swift": [529586028, 0]
