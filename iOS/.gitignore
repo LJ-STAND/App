@@ -25,3 +25,5 @@ Carthage/Checkouts
 # AppCode specific files
 .idea/
 *.iml
+
+Build/
