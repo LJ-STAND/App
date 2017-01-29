@@ -9,7 +9,9 @@
 import UIKit
 import MKKit
 
-class CompassViewController: UIViewController {
+class CompassViewController: UIViewController, AnimationViewController {
+    internal var tappedButton: UIButton?
+
     var compass: CompassView!
     var titleView: TitleView!
     

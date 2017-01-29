@@ -9,7 +9,9 @@
 import UIKit
 import MKKit
 
-class DesignTableViewController: UITableViewController {
+class DesignTableViewController: UITableViewController, AnimationViewController {
+    internal var tappedButton: UIButton?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tintNavigationController()

@@ -12,7 +12,9 @@ import CoreBluetooth
 import CRToast
 import Chameleon
 
-class SerialViewController: UIViewController {
+class SerialViewController: UIViewController, AnimationViewController {
+    internal var tappedButton: UIButton?
+
     
     @IBOutlet weak var sendTextField: UITextField!
     @IBOutlet weak var serialOutputTextView: UITextView!
@@ -50,6 +52,7 @@ class SerialViewController: UIViewController {
         bottomView.layer.shadowRadius = 0
         bottomView.layer.shadowOpacity = 0.5
         bottomView.layer.shadowColor = UIColor.gray.cgColor
+        
         
     }
     

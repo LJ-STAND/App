@@ -12,7 +12,9 @@ import MKKit
 import QuartzCore
 import Chameleon
 
-class TSOPViewController: UIViewController {
+class TSOPViewController: UIViewController, AnimationViewController {
+    internal var tappedButton: UIButton?
+    
     var tsopView: tsopRingView!
     
     var titleView: TitleView!

@@ -11,7 +11,9 @@ import MKKit
 import Chameleon
 import QuartzCore
 
-class LightSensorViewController: UIViewController {    
+class LightSensorViewController: UIViewController, AnimationViewController {
+    internal var tappedButton: UIButton?
+    
     var lightSensView: lightSensorView!
     var titleView: TitleView!
     

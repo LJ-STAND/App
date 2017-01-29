@@ -52,6 +52,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             log.info("No Internet Connection or Debug")
         }
     }
-    
 }
 
