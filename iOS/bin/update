@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-carthage update --platform iOS
+carthage update --no-use-binaries --no-build --use-submodules

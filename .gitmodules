@@ -1,0 +1,3 @@
+[submodule "Carthage/Checkouts/Chameleon"]
+	path = iOS/Carthage/Checkouts/Chameleon
+	url = https://github.com/ViccAlexander/Chameleon.git
