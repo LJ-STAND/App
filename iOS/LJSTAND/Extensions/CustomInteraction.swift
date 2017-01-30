@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MKUIKit
+import MKUtilityKit
 
 class CustomInteraction: UIPercentDrivenInteractiveTransition {
     var navigationController: UINavigationController?
@@ -32,6 +34,8 @@ class CustomInteraction: UIPercentDrivenInteractiveTransition {
         guard let gestureSuperview = gestureRecognizer.view?.superview else {
             return
         }
+        
+        MKUIToast.shared.dismissAllNotifications(animated: false)
         
         let viewTranslation = gestureRecognizer.translation(in: gestureSuperview)
         let location = gestureRecognizer.location(in: gestureSuperview)

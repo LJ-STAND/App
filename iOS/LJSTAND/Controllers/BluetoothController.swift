@@ -114,6 +114,7 @@ extension BluetoothController: BluetoothSerialDelegate {
     
     
     func serialDidConnect(_ peripheral: CBPeripheral) {
+        MKUIToast.shared.dismissAllNotifications(animated: false)
         MKUIToast.shared.showNotification(text: "Connected to \(peripheral.name!)", alignment: .center, color: UIColor.flatGreen(), identifier: nil) {}
         
         let text = "Connected to \(peripheral.name!) \n\n"
