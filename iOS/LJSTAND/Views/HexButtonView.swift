@@ -22,10 +22,15 @@ class HexButtonView: UIButton {
     }
     
     override func draw(_ rect: CGRect) {
-        let path = UIBezierPath.polygonIn(rect: rect, numberOfSides: 6, rotationOffset: 0)
+        let path = UIBezierPath.roundedPolygonIn(rect: rect, numberOfSides: 6, cornerRadius: 6, lineWidth: 3, rotationOffset: 0)
             
-        UIColor(colorLiteralRed: 41/255, green: 128/255, blue: 185/255, alpha: 1.0).setFill()
+        UIColor(colorLiteralRed: 66/255, green: 66/255, blue: 66/255, alpha: 1.0).setFill()
         path.fill()
+        
+        path.lineWidth = 3
+        UIColor.white.setStroke()
+        path.stroke()
+        
         
         let style = NSMutableParagraphStyle()
         style.alignment = NSTextAlignment.center

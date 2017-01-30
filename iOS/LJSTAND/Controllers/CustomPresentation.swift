@@ -9,10 +9,6 @@
 import UIKit
 
 class CustomPresentation: NSObject, UIViewControllerAnimatedTransitioning, CAAnimationDelegate {
-    private var portholeSize = CGSize(width: 10, height: 10)
-    private var screenSize = UIScreen.main.bounds.size
-    private let scale = UIScreen.main.scale
-    private let identity = CATransform3DIdentity
     var transitionContext: UIViewControllerContextTransitioning?
     
     var reverse: Bool = false
@@ -53,17 +49,17 @@ class CustomPresentation: NSObject, UIViewControllerAnimatedTransitioning, CAAni
         
         if reverse {
             hexMaskPathInitial = UIBezierPath(rect: toViewController.view.frame)
-            hexMaskPathInitial.append(UIBezierPath.polygonIn(rect: button.frame.insetBy(dx: -radius, dy: -radius), numberOfSides: 6, rotationOffset: 0))
+            hexMaskPathInitial.append(UIBezierPath.roundedPolygonIn(rect: button.frame.insetBy(dx: -radius, dy: -radius), numberOfSides: 6, cornerRadius: 6, lineWidth: 3, rotationOffset: 0))
             hexMaskPathInitial.usesEvenOddFillRule = true
             hexMaskPathInitial.addClip()
             
             hexMaskPathFinal = UIBezierPath(rect: toViewController.view.frame)
-            hexMaskPathFinal.append(UIBezierPath.polygonIn(rect: button.frame, numberOfSides: 6, rotationOffset: 0))
+            hexMaskPathFinal.append(UIBezierPath.roundedPolygonIn(rect: button.frame, numberOfSides: 6, cornerRadius: 6, lineWidth: 3, rotationOffset: 0))
             hexMaskPathFinal.usesEvenOddFillRule = true
             hexMaskPathFinal.addClip()
         } else {
-            hexMaskPathInitial = UIBezierPath.polygonIn(rect: button.frame, numberOfSides: 6, rotationOffset: 0)
-            hexMaskPathFinal = UIBezierPath.polygonIn(rect: button.frame.insetBy(dx: -radius, dy: -radius), numberOfSides: 6, rotationOffset: 0)
+            hexMaskPathInitial = UIBezierPath.roundedPolygonIn(rect: button.frame, numberOfSides: 6, cornerRadius: 6, lineWidth: 3, rotationOffset: 0)
+            hexMaskPathFinal = UIBezierPath.roundedPolygonIn(rect: button.frame.insetBy(dx: -radius, dy: -radius), numberOfSides: 6, cornerRadius: 6, lineWidth: 3, rotationOffset: 0)
         }
 
         let maskLayer = CAShapeLayer()
@@ -74,7 +70,7 @@ class CustomPresentation: NSObject, UIViewControllerAnimatedTransitioning, CAAni
         let maskLayerAnimation = CABasicAnimation(keyPath: "path")
         maskLayerAnimation.fromValue = hexMaskPathInitial.cgPath
         maskLayerAnimation.toValue = hexMaskPathFinal.cgPath
-        maskLayerAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        maskLayerAnimation.timingFunction = CAMediaTimingFunction(name: reverse ? kCAMediaTimingFunctionEaseIn : kCAMediaTimingFunctionEaseOut)
         maskLayerAnimation.isRemovedOnCompletion = false
         maskLayerAnimation.fillMode = kCAFillModeBoth
         maskLayerAnimation.duration = transitionDuration(using: transitionContext)

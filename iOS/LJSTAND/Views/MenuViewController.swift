@@ -31,7 +31,7 @@ class MenuViewController: UIViewController, AnimationViewController, UINavigatio
         let differenceWidth = hexagonWidth * CGFloat(cos(M_PI/6))
         
         self.navigationController?.delegate = self
-        self.view.backgroundColor = UIColor(colorLiteralRed: 44/255, green: 62/255, blue: 80/255, alpha: 1.0)
+        self.view.backgroundColor = UIColor(colorLiteralRed: 48/255, green: 48/255, blue: 48/255, alpha: 1.0)
         
         serialButton = HexButtonView(frame: CGRect(x: self.view.frame.midX - differenceWidth / 2 - hexagonWidth / 2, y: topBottomPadding, width: hexagonWidth, height: hexagonWidth))
         serialButton.text = "Serial"

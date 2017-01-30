@@ -9,23 +9,30 @@
 import UIKit
 
 extension UIBezierPath {
-    static func polygonIn(rect: CGRect, numberOfSides: Int, rotationOffset: CGFloat) -> UIBezierPath {
+    static func roundedPolygonIn(rect: CGRect, numberOfSides: Int, cornerRadius: CGFloat, lineWidth: CGFloat, rotationOffset: CGFloat) -> UIBezierPath {
         let path = UIBezierPath()
         let theta = CGFloat(2.0 * M_PI) / CGFloat(numberOfSides)
+        let offset = cornerRadius * tan(theta)
         let width = min(rect.size.width, rect.size.height)
         let center = CGPoint(x: rect.midX, y: rect.midY)
         
-        let radius = width / 2.0
+        let radius = (width - lineWidth + cornerRadius - (cos(theta) * cornerRadius)) / 2.0
         
         var angle = rotationOffset
         
-        let corner = CGPoint(x: center.x + radius * cos(angle), y: center.y + radius * sin(angle))
-        path.move(to: corner)
+        let corner = CGPoint(x: center.x + (radius - cornerRadius) * cos(angle), y: center.y + (radius - cornerRadius) * sin(angle))
+        path.move(to: CGPoint(x: corner.x + cornerRadius * cos(angle + theta), y: corner.y + cornerRadius * sin(angle + theta)))
         
         for _ in 0..<numberOfSides {
             angle += theta
-            let corner = CGPoint(x: center.x + radius * cos(angle), y: center.y + radius * sin(angle))
-            path.addLine(to: corner)
+            let corner = CGPoint(x: center.x + (radius - cornerRadius) * cos(angle), y: center.y + (radius - cornerRadius) * sin(angle))
+            
+            let tip = CGPoint(x: center.x + radius * cos(angle), y: center.y + radius * sin(angle))
+            let start = CGPoint(x: corner.x + cornerRadius * cos(angle - theta), y: corner.y + cornerRadius * sin(angle - theta))
+            let end = CGPoint(x: corner.x + cornerRadius * cos(angle + theta), y: corner.y + cornerRadius * sin(angle + theta))
+
+            path.addLine(to: start)
+            path.addQuadCurve(to: end, controlPoint: tip)
         }
         
         path.close()
