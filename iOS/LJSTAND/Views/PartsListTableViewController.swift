@@ -19,12 +19,12 @@ class PartsListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return parts.parts.count
+        return PartParser.shared.parts.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let item = parts.parts[indexPath.row]
+        let item = PartParser.shared.parts[indexPath.row]
         
         cell.textLabel?.text = item.item.replacingOccurrences(of: "\"", with: "")
         cell.detailTextLabel?.text = item.description.replacingOccurrences(of: "\"", with: "")

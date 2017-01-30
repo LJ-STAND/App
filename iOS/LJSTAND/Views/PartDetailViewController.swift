@@ -36,7 +36,7 @@ class PartDetailViewController: UIViewController {
     }
     
     func updateLabel() {
-        let part = parts.parts[index]
+        let part = PartParser.shared.parts[index]
         
         self.title = trimString(str: part.item)
         descriptionLabel.text = trimString(str: part.description)
@@ -58,7 +58,7 @@ class PartDetailViewController: UIViewController {
     }
     
     @IBAction func openProductPageAction(_ sender: Any) {
-        let url = URL(string: trimString(str: parts.parts[index].link))
+        let url = URL(string: trimString(str: PartParser.shared.parts[index].link))
         if url != nil {
             let safariVC = SFSafariViewController(url: url!, entersReaderIfAvailable: false)
             self.present(safariVC, animated: true, completion: nil)

@@ -9,6 +9,7 @@
 import Foundation
 
 class PartParser {
+    static let shared = PartParser()
     var parts: [Part]
     var errored: Bool
     

@@ -12,7 +12,6 @@ import MKUtilityKit
 import Chameleon
 
 let log = MKULog.shared
-let parts = PartParser()
 
 let ljStandGreen = UIColor.flatGreenColorDark()
 
@@ -21,10 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window?.backgroundColor = .white
-//        window?.makeKeyAndVisible()
         
         let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "Main")
         let logVC = MKUConsoleManager.shared.getWindow(withRootViewController: view, withBounds: UIScreen.main.bounds)
@@ -35,36 +30,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
         
         UITabBar.appearance().tintColor = ljStandGreen
-        
-        log.logAppDetails()
-        checkForUpdate()
+        backgroundLaunch()
         return true
     }
     
+    func backgroundLaunch() {
+        MKUAsync.background {
+            log.logAppDetails()
+            self.checkForUpdate()
+        }
+    }
+    
     func checkForUpdate() {
-//        if MKReachability().connectedToNetwork() {
-//            do {
-//                let urlStr = "https://lj-stand.github.io/Apps/config.json"
-//                let url = URL(string: urlStr)
-//                
-//                let data = try Data(contentsOf: url!)
-//                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
-//                
-//                let releasedVer = json["currentRelease"] as! Int
-//                
-//                let thisBuild = Int(MKAppSettingsController().build.components(separatedBy: "-")[0])!
-//                
-//                if releasedVer > thisBuild {
-//                    log.info("Update")
-//                    let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/Apps/dist/manifest.plist")!
-//                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-//                }
-//            } catch {
-//                log.info("Unable to retrieve JSON data from server")
-//            }
-//        } else {
-//            log.info("No Internet Connection or Debug")
-//        }
+        if MKUReachability().isConnectedToNetwork /*&& MKUAppSettings.shared.isDebugBuild != true*/ {
+            do {
+                let urlStr = "https://lj-stand.github.io/Apps/config.json"
+                let url = URL(string: urlStr)
+                
+                let data = try Data(contentsOf: url!)
+                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
+                
+                let releasedVer = json["currentRelease"] as! Int
+                
+                let thisBuild = Int(MKUAppSettings.shared.build)!
+                
+                if releasedVer > thisBuild {
+                    log.info("Update")
+                    let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/Apps/dist/manifest.plist")!
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    log.info("Latest or Development Version of App")
+                }
+            } catch {
+                log.info("Unable to retrieve JSON data from server")
+            }
+        } else {
+            log.info("No Internet Connection or Debug")
+        }
     }
 }
 
