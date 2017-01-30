@@ -26,7 +26,7 @@ class DesignTableViewController: UITableViewController, AnimationViewController 
         }
         
         if indexPath[0] == 2 {
-            let view = getViewController(sbName: "Main", vcName: "webView") as! WebViewController
+            let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "webView") as! WebViewController
             switch indexPath[1] {
             case 0:
                 view.url = URL(fileURLWithPath: Bundle.main.path(forResource: "Fuse", ofType: "PDF")!)
