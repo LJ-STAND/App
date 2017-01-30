@@ -8,8 +8,9 @@
 
 import Foundation
 import CoreBluetooth
-import CRToast
+import MKUIKit
 import MKKit
+import MKUtilityKit
 
 protocol BluetoothControllerSerialDelegate {
     func hasNewOutput(serial: String)
@@ -47,16 +48,10 @@ class BluetoothController {
     }
     
     func connect() {
-        if Platform.isSimulator || connectCount > 5 || serial.centralManager.state != .poweredOn { return }
+//        if Platform.isSimulator || connectCount > 5 /*|| serial.centralManager.state != .poweredOn*/ { return }
         
-        MKAsync.main {
-            let options = [
-                kCRToastTextKey: "Scanning for Bluetooth Devices...",
-                kCRToastBackgroundColorKey: UIColor.flatBlue(),
-                kCRToastKeepNavigationBarBorderKey: true
-                ] as [String : Any]
-            
-            CRToastManager.showNotification(options: options, completionBlock: {})
+        MKUAsync.main {
+            MKUIToast.shared.showNotification(text: "Scanning for Bluetooth Devices...", alignment: .center, color: UIColor.flatBlue(), identifier: nil, callback: {})
             }.background {
                 serial.startScan()
                 sleep(1)
@@ -119,12 +114,7 @@ extension BluetoothController: BluetoothSerialDelegate {
     
     
     func serialDidConnect(_ peripheral: CBPeripheral) {
-        let options = [
-            kCRToastTextKey: "Connected to \(peripheral.name!)!",
-            kCRToastBackgroundColorKey: UIColor.flatGreen()
-            ] as [String : Any]
-        
-        CRToastManager.showNotification(options: options, completionBlock: {})
+        MKUIToast.shared.showNotification(text: "Connected to \(peripheral.name!)", alignment: .center, color: UIColor.flatGreen(), identifier: nil) {}
         
         let text = "Connected to \(peripheral.name!) \n\n"
         serialOutput = text
@@ -134,12 +124,7 @@ extension BluetoothController: BluetoothSerialDelegate {
     }
     
     func serialDidFailToConnect(_ peripheral: CBPeripheral, error: NSError?) {
-        let options = [
-            kCRToastTextKey: "Connection Failed. \(error?.localizedDescription)",
-            kCRToastBackgroundColorKey: UIColor.flatRed()
-            ] as [String : Any]
-        
-        CRToastManager.showNotification(options: options, completionBlock: {})
+        MKUIToast.shared.showNotification(text: "Connection Failed. \(error?.localizedDescription)", alignment: .center, color: UIColor.flatRed(), identifier: nil) {}
         sleep(1)
         self.connectCount = 0
         connect()

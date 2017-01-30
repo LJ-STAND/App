@@ -308,9 +308,11 @@
 				876DD3D9D9926CE2EBE64DDB /* Sources */,
 				35EDF3B6A1B1848E58424BF3 /* Warn for TODO and FIXME comments */,
 				5848C3664EFEE9C0725AEAFA /* Frameworks */,
+				EFB29C6B1E3F1E1D00906D5A /* Tag Icons */,
 				E103AE9143FC4D78FD557160 /* Resources */,
 				9A0DC08F846703B65F22E608 /* Set version number */,
 				EFB29C641E3F1D5400906D5A /* CopyFiles */,
+				EFB29C6C1E3F1E4500906D5A /* Restore Icons */,
 			);
 			buildRules = (
 			);
@@ -412,7 +414,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "git=`sh /etc/profile; which git`\nappBuild=`\"$git\" rev-list HEAD --count`\nif [ $CONFIGURATION = \"Debug\" ]; then\nbranchName=`\"$git\" rev-parse --abbrev-ref HEAD`\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild-$branchName\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nelse\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $appBuild\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}.dSYM/Contents/Info.plist\"\nfi\necho \"Incremented the build number ${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"";
+			shellScript = "${SRCROOT}/bin/gitVersion";
+		};
+		EFB29C6B1E3F1E1D00906D5A /* Tag Icons */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Tag Icons";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "build=$(<build.conf)\nif [ $build = \"DEBUG\" ] ; then\n${SRCROOT}/bin/tag_icons tag ${SRCROOT}/LJSTAND/Resources/Images.xcassets/AppIcon.appiconset\nfi";
+		};
+		EFB29C6C1E3F1E4500906D5A /* Restore Icons */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Restore Icons";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "build=$(<build.conf)\nif [ $build = \"DEBUG\" ] ; then\n${SRCROOT}/bin/tag_icons cleanup LJSTAND/Resources/Images.xcassets/AppIcon.appiconset\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

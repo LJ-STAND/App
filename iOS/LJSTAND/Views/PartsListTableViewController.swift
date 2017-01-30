@@ -8,6 +8,8 @@
 
 import UIKit
 import MKKit
+import MKUtilityKit
+import MKUIKit
 
 class PartsListTableViewController: UITableViewController {
     
@@ -31,7 +33,8 @@ class PartsListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let view = getViewController(sbName: "Main", vcName: "partDetail") as! PartDetailViewController
+        //TODO: Crashing
+        let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "partDetail") as! PartDetailViewController
         view.index = indexPath.row
         self.navigationController?.pushViewController(view, animated: true)
     }

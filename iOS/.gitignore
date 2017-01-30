@@ -27,3 +27,4 @@ Carthage/Checkouts
 *.iml
 
 Build/
+build.conf

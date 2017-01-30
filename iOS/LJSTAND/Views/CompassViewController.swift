@@ -8,6 +8,8 @@
 
 import UIKit
 import MKKit
+import MKUtilityKit
+import MKUIKit
 
 class CompassViewController: UIViewController, AnimationViewController {
     internal var tappedButton: UIButton?
