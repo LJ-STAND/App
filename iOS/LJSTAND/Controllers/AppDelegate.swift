@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func backgroundLaunch() {
-        log.logAppDetails()
+        log.logDetails()
         self.checkForUpdate()
     }
     
