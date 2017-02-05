@@ -55,8 +55,7 @@ class WindowManagerViewController: UIViewController, ResizableViewController {
     }
     
     func calculateFrame() -> CGRect {
-        let windowFrame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: self.view.frame.width, height: self.view.frame.height)
-        print(windowFrame)
+        let windowFrame = self.view.bounds
         let maxSize = windowFrame.size.width > windowFrame.size.height ? windowFrame.size.height * 0.9 : windowFrame.size.width * 0.9
         let returnFrame = CGRect(x: windowFrame.origin.x + windowFrame.size.width / 2 - maxSize / 2, y: windowFrame.origin.y + windowFrame.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
         

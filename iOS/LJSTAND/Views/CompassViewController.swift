@@ -82,25 +82,6 @@ class CompassView: UIView {
         path.lineWidth = 3
         path.stroke()
         
-        let xCenter = Double(self.frame.width / 2)
-        let yCenter = Double(self.frame.height / 2)
-        
-        let angleRadians = degToRad(angle: needleAngle - 90)
-        
-        let needleRadius = (0.8 * Double(self.frame.width)) / 2
-        let xPoint = xCenter + (needleRadius * sin(angleRadians))
-        let yPoint = yCenter + (needleRadius * cos(angleRadians))
-        
-        let needlePath = UIBezierPath()
-        
-        needlePath.move(to: CGPoint(x: xCenter, y: yCenter))
-        needlePath.addLine(to: CGPoint(x: xPoint, y: yPoint))
-        
-        needlePath.lineWidth = 3
-        needlePath.lineCapStyle = .round
-        
-        needlePath.stroke()
-        
         if !BluetoothController.shared.connected {
             let ovalRect = rect.insetBy(dx: 0.9 * (rect.size.width / 2), dy: 0.9 * (rect.size.height / 2))
             let ovalPath = UIBezierPath(ovalIn: ovalRect)
@@ -110,6 +91,25 @@ class CompassView: UIView {
             UIColor.flatRed().setStroke()
             ovalPath.lineWidth = 3
             ovalPath.stroke()
+        } else {
+            let xCenter = Double(self.frame.width / 2)
+            let yCenter = Double(self.frame.height / 2)
+            
+            let angleRadians = degToRad(angle: needleAngle - 90)
+            
+            let needleRadius = (0.8 * Double(self.frame.width)) / 2
+            let xPoint = xCenter + (needleRadius * sin(angleRadians))
+            let yPoint = yCenter + (needleRadius * cos(angleRadians))
+            
+            let needlePath = UIBezierPath()
+            
+            needlePath.move(to: CGPoint(x: xCenter, y: yCenter))
+            needlePath.addLine(to: CGPoint(x: xPoint, y: yPoint))
+            
+            needlePath.lineWidth = 3
+            needlePath.lineCapStyle = .round
+            
+            needlePath.stroke()
         }
     }
     

@@ -155,6 +155,7 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
     
     func updateText() {
         serialOutputTextView.text = previousText + ">" + enteredText + (blinkOn ? "_" : "")
+        serialOutputTextView.scrollToBottom()
     }
     
     func send() {
@@ -163,7 +164,6 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
             previousText += ">" + enteredText + "\n"
             enteredText = ""
             updateText()
-            serialOutputTextView.scrollToBottom()
         }
     }
     
@@ -179,6 +179,6 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
 extension SerialViewController: BluetoothControllerSerialDelegate {
     func hasNewOutput(serial: String) {
         previousText += serial + "\n"
-        serialOutputTextView.scrollToBottom()
+        updateText()
     }
 }

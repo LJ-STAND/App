@@ -21,6 +21,7 @@ class HexButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        self.adjustsImageWhenHighlighted = true
         self.backgroundColor = UIColor.clear
     }
     

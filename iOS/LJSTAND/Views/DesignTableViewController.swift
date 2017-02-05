@@ -19,9 +19,9 @@ class DesignTableViewController: UITableViewController {
     }
  
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath)
         if indexPath[0] == 1 && indexPath[1] == 1 {
-            let view = getViewController(sbName: "Main", vcName: "render1")
-            self.navigationController?.pushViewController(view, animated: true)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addWindow"), object: "render1")
         }
         
         if indexPath[0] == 2 {
@@ -46,9 +46,9 @@ class DesignTableViewController: UITableViewController {
                 view.url = URL(fileURLWithPath: Bundle.main.path(forResource: "TSOP", ofType: "pdf")!)
                 view.navTitle = "TSOP"
             }
+            
             view.title = view.navTitle
             self.navigationController?.pushViewController(view, animated: true)
-            
         }
     }
 }
