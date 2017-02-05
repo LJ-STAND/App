@@ -39,7 +39,6 @@ class BluetoothController {
     var peripherals: [CBPeripheral] = []
     var rssis: [Float] = []
     var selectedPeripheral: CBPeripheral?
-    var serialOutput: String = ""
     var connectCount = 0
     
     var connected: Bool = false
@@ -53,45 +52,45 @@ class BluetoothController {
         if !UIDevice.current.isSimulator || connectCount < 5 {
             MKUAsync.main {
                 MKUIToast.shared.showNotification(text: "Scanning for Bluetooth Devices...", alignment: .center, color: UIColor.flatBlue(), identifier: nil, callback: {})
-                }.background {
-                    serial.startScan()
-                    sleep(1)
-                }.main {
-                    serial.stopScan()
+            }.background {
+                serial.startScan()
+                sleep(1)
+            }.main {
+                serial.stopScan()
+                
+                if self.peripherals.count > 0 {
                     
-                    if self.peripherals.count > 0 {
-                        
-                        let lastDevice = UserDefaults.standard.string(forKey: "lastConnected")
-                        
-                        var last: CBPeripheral?
-                        for device in self.peripherals {
-                            if device.name == lastDevice {
-                                last = device
-                            }
+                    let lastDevice = UserDefaults.standard.string(forKey: "lastConnected")
+                    
+                    var last: CBPeripheral?
+                    for device in self.peripherals {
+                        if device.name == lastDevice {
+                            last = device
                         }
-                        
-                        if last != nil {
-                            self.selectedPeripheral = last!
-                            serial.connectToPeripheral(last!)
-                        } else {
-                            let alert = UIAlertController(title: "Connect to Device", message: nil, preferredStyle: .alert)
-                            
-                            for item in self.peripherals {
-                                alert.addAction(UIAlertAction(title: item.name, style: .default, handler: { (action) in
-                                    self.selectedPeripheral = item
-                                    serial.connectToPeripheral(item)
-                                }))
-                            }
-                            
-                            self.getRootView().present(alert, animated: true, completion: nil)
-                            
-                        }
-                    } else {
-                        var count = self.connectCount
-                        count = count + 1
-                        self.connectCount = count
-                        self.connect()
                     }
+                    
+                    if last != nil {
+                        self.selectedPeripheral = last!
+                        serial.connectToPeripheral(last!)
+                    } else {
+                        let alert = UIAlertController(title: "Connect to Device", message: nil, preferredStyle: .alert)
+                        
+                        for item in self.peripherals {
+                            alert.addAction(UIAlertAction(title: item.name, style: .default, handler: { (action) in
+                                self.selectedPeripheral = item
+                                serial.connectToPeripheral(item)
+                            }))
+                        }
+                        
+                        self.getRootView().present(alert, animated: true, completion: nil)
+                        
+                    }
+                } else {
+                    var count = self.connectCount
+                    count = count + 1
+                    self.connectCount = count
+                    self.connect()
+                }
             }
         }
     }
@@ -117,11 +116,10 @@ extension BluetoothController: BluetoothSerialDelegate {
     
     func serialDidConnect(_ peripheral: CBPeripheral) {
         MKUIToast.shared.dismissAllNotifications(animated: false)
-        MKUIToast.shared.showNotification(text: "Connected to \(peripheral.name!)", alignment: .center, color: UIColor.flatGreen(), identifier: nil) {}
+        MKUIToast.shared.showNotification(text: "Connected to \(peripheral.name ?? "")", alignment: .center, color: UIColor.flatGreen(), identifier: nil) {}
         
-        let text = "Connected to \(peripheral.name!) \n\n"
-        serialOutput = text
-        serialDelegate?.hasNewOutput(serial: serialOutput)
+        let text = "Connected to \(peripheral.name ?? "")"
+        serialDelegate?.hasNewOutput(serial: text)
         self.connected = true
         
         UserDefaults.standard.set(peripheral.name!, forKey: "lastConnected")
@@ -202,8 +200,7 @@ extension BluetoothController: BluetoothSerialDelegate {
             }
             
         } else {
-            serialOutput += message
-            serialDelegate?.hasNewOutput(serial: serialOutput)
+            serialDelegate?.hasNewOutput(serial: message)
         }
         
         
@@ -218,8 +215,7 @@ extension BluetoothController: BluetoothSerialDelegate {
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
         self.connected = false
         self.connectCount = 0
-        serialOutput = ""
-        serialDelegate?.hasNewOutput(serial: "")
+        serialDelegate?.hasNewOutput(serial: "Disconnected from \(peripheral.name!)")
         tsopDelegate?.hasNewActiveTSOP(tsopNum: -1)
         compassDelegate?.hasNewHeading(angle: 0)
         lightSensDelegate?.updatedCurrentLightSensors(sensors: [])

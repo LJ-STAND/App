@@ -194,7 +194,18 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
     }
     
     @objc func didTap(_ rec: UIGestureRecognizer) {
+        let wasKey = self.isKeyWindow
         self.makeKeyAndVisible()
+        
+        if let navVC = self.rootViewController as? UINavigationController {
+            if let viewController = navVC.visibleViewController as? SerialViewController {
+                if !wasKey {
+                    viewController.resignFirstResponder()
+                }
+                
+                viewController.showHideKeyboard(rec)
+            }
+        }
     }
     
     func setFrame(_frame: CGRect) {
@@ -257,6 +268,12 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         } else if recognizer.state == .changed {
             if _inWindowMove {
                 self.frame = CGRectMake(gp.x-_originPoint.x, min(max(gp.y-_originPoint.y, kStatusBarHeight - kWindowResizeGutterSize), UIScreen.main.bounds.height - (kWindowButtonFrameSize + kWindowResizeGutterSize)), self.frame.size.width, self.frame.size.height)
+               
+                if let navVC = self.rootViewController as? UINavigationController {
+                    if let viewController = navVC.visibleViewController as? ResizableViewController {
+                        viewController.windowWasMoved?()
+                    }
+                }
             }
             if _inWindowResize {
                 if resizeAxis == WMResizeAxis.WMResizeRight {

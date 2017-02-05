@@ -10,5 +10,6 @@ import Foundation
 import UIKit
 
 @objc protocol ResizableViewController {
-     @objc optional func windowWasResized()
+    @objc optional func windowWasResized()
+    @objc optional func windowWasMoved()
 }
