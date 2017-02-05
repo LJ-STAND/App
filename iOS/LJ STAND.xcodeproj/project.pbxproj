@@ -296,6 +296,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJ STAND" */;
 			buildPhases = (
+				EFEDAA3E1E46D172005BEE4E /* Environment Vars */,
 				876DD3D9D9926CE2EBE64DDB /* Sources */,
 				35EDF3B6A1B1848E58424BF3 /* Warn for TODO and FIXME comments */,
 				5848C3664EFEE9C0725AEAFA /* Frameworks */,
@@ -434,6 +435,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
 			shellScript = "build=$(<build.conf)\nif [ $build = \"DEBUG\" ] ; then\n${SRCROOT}/bin/tag_icons cleanup LJSTAND/Resources/Images.xcassets/AppIcon.appiconset\nfi";
+		};
+		EFEDAA3E1E46D172005BEE4E /* Environment Vars */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Environment Vars";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 

@@ -75,7 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func checkForUpdate() {
-        if MKUReachability().isConnectedToNetwork /*&& MKUAppSettings.shared.isDebugBuild != true*/ {
+        if MKUReachability().isConnectedToNetwork && MKUAppSettings.shared.isDebugBuild != true {
             do {
                 let urlStr = "https://lj-stand.github.io/Apps/config.json"
                 let url = URL(string: urlStr)
@@ -98,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 log.info("Unable to retrieve JSON data from server")
             }
         } else {
-            log.info("No Internet Connection or Debug")
+            log.info("No Internet Connection or Debug build.")
         }
     }
 }
