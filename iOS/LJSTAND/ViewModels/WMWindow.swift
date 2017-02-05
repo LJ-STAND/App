@@ -11,7 +11,7 @@ enum WMResizeAxis {
     case WMResizeNone, WMResizeLeft, WMResizeRight, WMResizeTop, WMResizeBottom
 }
 
-let kStatusBarHeight:CGFloat = 0.0
+let kStatusBarHeight:CGFloat = UIApplication.shared.statusBarFrame.height
 let kTitleBarHeight:CGFloat = 0.0
 let kMoveGrabHeight:CGFloat = 44.0
 let kWindowButtonFrameSize:CGFloat = 44.0
@@ -41,6 +41,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
     var title: String?
     var windowButtons: Array<UIButton>?
     var maximized: Bool = false
+    var minSize: CGSize = CGSize(width: kWindowButtonFrameSize * 5 + kWindowResizeGutterSize * 2, height: kWindowResizeGutterKnobSize + kWindowResizeGutterSize * 2)
     
     func _commonInit() {
         self.windowButtons = Array()
@@ -219,6 +220,11 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
             if titleBarRect.contains(lp) {
                 _inWindowMove = true
                 _inWindowResize = false
+                
+                if !self.isKeyWindow {
+                    self.makeKey()
+                }
+                
                 return
             }
             if !self.isKeyWindow {
@@ -246,19 +252,20 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
             }
         } else if recognizer.state == .changed {
             if _inWindowMove {
-                self.frame = CGRectMake(gp.x-_originPoint.x, gp.y-_originPoint.y, self.frame.size.width, self.frame.size.height)
+                self.frame = CGRectMake(gp.x-_originPoint.x, min(max(gp.y-_originPoint.y, kStatusBarHeight - kWindowResizeGutterSize), UIScreen.main.bounds.height - (kWindowButtonFrameSize + kWindowResizeGutterSize)), self.frame.size.width, self.frame.size.height)
             }
             if _inWindowResize {
                 if resizeAxis == WMResizeAxis.WMResizeRight {
-                    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, gp.x-self.frame.origin.x, self.frame.size.height)
+                    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, max(gp.x-self.frame.origin.x, minSize.width), self.frame.size.height)
                 }
                 if resizeAxis == WMResizeAxis.WMResizeLeft {
-                    self.frame = CGRectMake(gp.x, self.frame.origin.y, (-gp.x+self.frame.origin.x)+self.frame.size.width, self.frame.size.height)
+                    self.frame = CGRectMake(gp.x, self.frame.origin.y, max((-gp.x+self.frame.origin.x)+self.frame.size.width, minSize.width), self.frame.size.height)
                 }
                 if resizeAxis == WMResizeAxis.WMResizeBottom {
-                    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, gp.y-self.frame.origin.y)
+                    self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, max(gp.y-self.frame.origin.y, minSize.height))
                 }
             }
+            self.setNeedsDisplay()
         } else if recognizer.state == .ended {
             _inWindowMove = false
             _inWindowResize = false
@@ -270,10 +277,10 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         let contentBounds: CGRect = self.rootViewController!.view.bounds
         let contentFrame: CGRect = CGRectMake(self.bounds.origin.x+kWindowResizeGutterSize, self.bounds.origin.y+kWindowResizeGutterSize, self.bounds.size.width-(kWindowResizeGutterSize*2), self.bounds.size.height-(kWindowResizeGutterSize*2))
         let maskLayer: CAShapeLayer = CAShapeLayer()
-        maskLayer.path = UIBezierPath(roundedRect: contentBounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSizeMake(8.0, 8.0)).cgPath
+        maskLayer.path = UIBezierPath(roundedRect: contentBounds, byRoundingCorners: [.topLeft, .topRight, .bottomLeft, .bottomRight], cornerRadii: CGSizeMake(8.0, 8.0)).cgPath
         maskLayer.frame = contentBounds
         self.rootViewController?.view.layer.mask = maskLayer
-        self.layer.shadowPath = UIBezierPath(roundedRect: contentFrame, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSizeMake(8.0, 8.0)).cgPath
+        self.layer.shadowPath = UIBezierPath(roundedRect: contentFrame, byRoundingCorners: [.topLeft, .topRight, .bottomLeft, .bottomRight], cornerRadii: CGSizeMake(8.0, 8.0)).cgPath
         self.layer.shadowRadius = 30.0
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.3

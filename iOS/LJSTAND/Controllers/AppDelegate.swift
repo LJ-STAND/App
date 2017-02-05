@@ -20,8 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        application.setStatusBarStyle(.lightContent, animated: false)
         
-        let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
+        let view = BackgroundViewController()
+        view.navigationController?.navigationBar.tintColor = UIColor.white
         let logVC = MKUConsoleManager.shared.getWindow(withRootViewController: view, withBounds: UIScreen.main.bounds)
         window = logVC
         window?.makeKeyAndVisible()
@@ -35,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         backgroundLaunch()
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
+        
         return true
     }
     
