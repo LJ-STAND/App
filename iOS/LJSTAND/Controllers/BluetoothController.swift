@@ -42,6 +42,8 @@ class BluetoothController {
     var serialOutput: String = ""
     var connectCount = 0
     
+    var connected: Bool = false
+    
     init() {
         serial = BluetoothSerial(delegate: self)
         serial.writeType = .withoutResponse
@@ -120,6 +122,7 @@ extension BluetoothController: BluetoothSerialDelegate {
         let text = "Connected to \(peripheral.name!) \n\n"
         serialOutput = text
         serialDelegate?.hasNewOutput(serial: serialOutput)
+        self.connected = true
         
         UserDefaults.standard.set(peripheral.name!, forKey: "lastConnected")
     }
@@ -213,6 +216,7 @@ extension BluetoothController: BluetoothSerialDelegate {
     }
     
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
+        self.connected = false
         self.connectCount = 0
         serialOutput = ""
         serialDelegate?.hasNewOutput(serial: "")

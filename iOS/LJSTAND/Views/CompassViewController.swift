@@ -73,15 +73,10 @@ class CompassView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        
-        
         let backgroundPath = UIBezierPath(rect: rect)
         UIColor.white.setFill()
         backgroundPath.fill()
         
-        UIColor.green.setFill()
-        
-        UIBezierPath(rect: rect.insetBy(dx: 10, dy: 10)).fill()
         let path = UIBezierPath(ovalIn: CGRect(origin: CGPoint(x: rect.origin.x + 0.05 * rect.size.width, y: rect.origin.y + 0.05 * rect.size.width), size: CGSize(width: 0.9 * rect.size.width, height: 0.9 * rect.size.height)))
         UIColor.flatBlack().setStroke()
         path.lineWidth = 3
@@ -101,10 +96,22 @@ class CompassView: UIView {
         needlePath.move(to: CGPoint(x: xCenter, y: yCenter))
         needlePath.addLine(to: CGPoint(x: xPoint, y: yPoint))
         
-        needlePath.lineWidth = 9
+        needlePath.lineWidth = 3
         needlePath.lineCapStyle = .round
         
         needlePath.stroke()
+        
+        if !BluetoothController.shared.connected {
+            let ovalRect = rect.insetBy(dx: 0.9 * (rect.size.width / 2), dy: 0.9 * (rect.size.height / 2))
+            print(ovalRect)
+            let ovalPath = UIBezierPath(ovalIn: ovalRect)
+            ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*M_PI_4)), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*M_PI_4))))
+            ovalPath.addLine(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-M_PI_4)), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-M_PI_4))))
+            
+            UIColor.flatRed().setStroke()
+            ovalPath.lineWidth = 3
+            ovalPath.stroke()
+        }
     }
     
     func rotate(angle:Double) {

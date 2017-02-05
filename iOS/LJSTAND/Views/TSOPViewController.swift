@@ -55,9 +55,6 @@ extension TSOPViewController: BluetoothControllerTSOPDelegate {
 class tsopRingView: UIView {
     var tsops: [Bool] = [Bool]()
     
-    var tsopNumberLabel: UILabel!
-    
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -69,15 +66,6 @@ class tsopRingView: UIView {
     }
     
     func commonInit() {
-        tsopNumberLabel = UILabel(frame: CGRect(origin: bounds.origin, size: frame.size))
-        tsopNumberLabel.font = tsopNumberLabel.font.withSize(50)
-        tsopNumberLabel.textColor = UIColor.flatBlack()
-        tsopNumberLabel.textAlignment = .center
-        
-        tsopNumberLabel.text = "No Data"
-        
-        addSubview(tsopNumberLabel)
-        
         for _ in 1...24 {
             tsops.append(false)
         }
@@ -116,6 +104,18 @@ class tsopRingView: UIView {
                 path.stroke()
             }
         }
+        
+        if !BluetoothController.shared.connected {
+            let ovalRect = rect.insetBy(dx: 0.9 * (rect.size.width / 2), dy: 0.9 * (rect.size.height / 2))
+            print(ovalRect)
+            let ovalPath = UIBezierPath(ovalIn: ovalRect)
+            ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*M_PI_4)), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*M_PI_4))))
+            ovalPath.addLine(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-M_PI_4)), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-M_PI_4))))
+            
+            UIColor.flatRed().setStroke()
+            ovalPath.lineWidth = 3
+            ovalPath.stroke()
+        }
     }
     
     func setCurrent(current: Int) {
@@ -126,9 +126,6 @@ class tsopRingView: UIView {
         
         if (current != -1) {
             tsops[current] = true
-            tsopNumberLabel.text = "\(current)"
-        } else {
-            tsopNumberLabel.text = "No Data"
         }
         
         setNeedsDisplay()

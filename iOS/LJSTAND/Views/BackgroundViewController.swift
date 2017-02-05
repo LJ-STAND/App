@@ -15,6 +15,7 @@ class BackgroundViewController: UIViewController {
         let imageView = UIImageView(frame: self.view.frame)
         imageView.image = #imageLiteral(resourceName: "DarkLogo")
         imageView.contentMode = .scaleAspectFill
+        imageView.contentScaleFactor = 1.1
         
         self.view.addSubview(imageView)
 

@@ -153,6 +153,13 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
             self.frame = _savedFrame
             
         }
+        
+        if let navVC = self.rootViewController as? UINavigationController {
+            if let viewController = navVC.visibleViewController as? ResizableViewController {
+                viewController.windowWasResized?()
+            }
+        }
+        
         UIView.commitAnimations()
     }
     

@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.setStatusBarStyle(.lightContent, animated: false)
         
         let view = BackgroundViewController()
-        view.navigationController?.navigationBar.tintColor = UIColor.white
         let logVC = MKUConsoleManager.shared.getWindow(withRootViewController: view, withBounds: UIScreen.main.bounds)
         window = logVC
         window?.makeKeyAndVisible()
