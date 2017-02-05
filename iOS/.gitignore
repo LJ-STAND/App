@@ -28,3 +28,5 @@ Carthage/Checkouts
 
 Build/
 build.conf
+*.bcsymbolmap
+*.framework.dSYM
