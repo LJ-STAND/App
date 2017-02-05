@@ -39,10 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func backgroundLaunch() {
-        MKUAsync.background {
-            log.logAppDetails()
-            self.checkForUpdate()
-        }
+        log.logAppDetails()
+        self.checkForUpdate()
     }
     
     func addWindow(notification: NSNotification) {
