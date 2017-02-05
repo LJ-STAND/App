@@ -11,7 +11,7 @@ import MKKit
 import MKUtilityKit
 import MKUIKit
 
-class DesignTableViewController: UITableViewController, AnimationViewController {
+class DesignTableViewController: UITableViewController {
     internal var tappedButton: UIButton?
 
     override func viewDidLoad() {

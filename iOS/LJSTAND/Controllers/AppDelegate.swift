@@ -21,16 +21,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         
-        let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "Main")
+        let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
         let logVC = MKUConsoleManager.shared.getWindow(withRootViewController: view, withBounds: UIScreen.main.bounds)
-        
         window = logVC
-        
         window?.makeKeyAndVisible()
-        window?.backgroundColor = .white
+        window?.backgroundColor = .gray
+        
+        swizzleUIWindow()
         
         UITabBar.appearance().tintColor = ljStandGreen
+        
+        initialWindow()
         backgroundLaunch()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
+        
         return true
     }
     
@@ -39,6 +44,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             log.logAppDetails()
             self.checkForUpdate()
         }
+    }
+    
+    func addWindow(notification: NSNotification) {
+//        print(notification.object)
+        let viewName = notification.object as! String
+        
+        let newWindow = WMWindow(frame: CGRectMake(44, 344, 300, 300))
+        newWindow.title = viewName
+        
+        let mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: viewName)
+        mainView.title = viewName
+        
+        newWindow.rootViewController = mainView
+        newWindow.makeKeyAndVisible()
+    
+        window?.addSubview(newWindow)
+    }
+    
+    func initialWindow() {
+                let window1 = WMWindow(frame: CGRectMake(44, 44, 300, 300))
+                window1.title = "Root"
+        
+                let mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "windowMain")
+                mainView.title = "Root"
+        
+                window1.rootViewController = mainView
+                window1.makeKeyAndVisible()
+                window1.windowButtons?.first?.isUserInteractionEnabled = false
+                
+                window?.addSubview(window1)
     }
     
     func checkForUpdate() {

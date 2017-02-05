@@ -13,10 +13,7 @@ import MKUIKit
 import CoreBluetooth
 import Chameleon
 
-class SerialViewController: UIViewController, AnimationViewController {
-    internal var tappedButton: UIButton?
-
-    
+class SerialViewController: UIViewController {
     @IBOutlet weak var sendTextField: UITextField!
     @IBOutlet weak var serialOutputTextView: UITextView!
     @IBOutlet weak var bottomView: UIView!
@@ -24,18 +21,18 @@ class SerialViewController: UIViewController, AnimationViewController {
     
     var connectCount = 0
 
-    var titleView: TitleView!
+//    var titleView: TitleView!
     var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
     var selectedPeripheral: CBPeripheral?
     
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.isHidden = true
+//        self.navigationController?.navigationBar.isHidden = true
         
         BluetoothController.shared.serialDelegate = self
         
-        titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "Serial")
+//        titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "Serial")
     
-        self.view.addSubview(titleView)
+//        self.view.addSubview(titleView)
         
         reloadView()
         serialOutputTextView.text = ""
@@ -87,7 +84,9 @@ class SerialViewController: UIViewController, AnimationViewController {
     func reloadView() {
         if !serial.isReady {
             connectCount = 0
-            BluetoothController.shared.connect()
+            if !UIDevice.current.isSimulator {
+                BluetoothController.shared.connect()
+            }
         }
     }
     

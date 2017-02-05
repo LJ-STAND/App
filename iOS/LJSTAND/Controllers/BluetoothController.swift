@@ -48,49 +48,49 @@ class BluetoothController {
     }
     
     func connect() {
-//        if Platform.isSimulator || connectCount > 5 /*|| serial.centralManager.state != .poweredOn*/ { return }
-        
-        MKUAsync.main {
-            MKUIToast.shared.showNotification(text: "Scanning for Bluetooth Devices...", alignment: .center, color: UIColor.flatBlue(), identifier: nil, callback: {})
-            }.background {
-                serial.startScan()
-                sleep(1)
-            }.main {
-                serial.stopScan()
-                
-                if self.peripherals.count > 0 {
+        if !UIDevice.current.isSimulator || connectCount < 5 {
+            MKUAsync.main {
+                MKUIToast.shared.showNotification(text: "Scanning for Bluetooth Devices...", alignment: .center, color: UIColor.flatBlue(), identifier: nil, callback: {})
+                }.background {
+                    serial.startScan()
+                    sleep(1)
+                }.main {
+                    serial.stopScan()
                     
-                    let lastDevice = UserDefaults.standard.string(forKey: "lastConnected")
-                    
-                    var last: CBPeripheral?
-                    for device in self.peripherals {
-                        if device.name == lastDevice {
-                            last = device
+                    if self.peripherals.count > 0 {
+                        
+                        let lastDevice = UserDefaults.standard.string(forKey: "lastConnected")
+                        
+                        var last: CBPeripheral?
+                        for device in self.peripherals {
+                            if device.name == lastDevice {
+                                last = device
+                            }
                         }
-                    }
-                    
-                    if last != nil {
-                        self.selectedPeripheral = last!
-                        serial.connectToPeripheral(last!)
+                        
+                        if last != nil {
+                            self.selectedPeripheral = last!
+                            serial.connectToPeripheral(last!)
+                        } else {
+                            let alert = UIAlertController(title: "Connect to Device", message: nil, preferredStyle: .alert)
+                            
+                            for item in self.peripherals {
+                                alert.addAction(UIAlertAction(title: item.name, style: .default, handler: { (action) in
+                                    self.selectedPeripheral = item
+                                    serial.connectToPeripheral(item)
+                                }))
+                            }
+                            
+                            self.getRootView().present(alert, animated: true, completion: nil)
+                            
+                        }
                     } else {
-                        let alert = UIAlertController(title: "Connect to Device", message: nil, preferredStyle: .alert)
-                        
-                        for item in self.peripherals {
-                            alert.addAction(UIAlertAction(title: item.name, style: .default, handler: { (action) in
-                                self.selectedPeripheral = item
-                                serial.connectToPeripheral(item)
-                            }))
-                        }
-                        
-                        self.getRootView().present(alert, animated: true, completion: nil)
-                        
+                        var count = self.connectCount
+                        count = count + 1
+                        self.connectCount = count
+                        self.connect()
                     }
-                } else {
-                    var count = self.connectCount
-                    count = count + 1
-                    self.connectCount = count
-                    self.connect()
-                }
+            }
         }
     }
     

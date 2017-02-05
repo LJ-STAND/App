@@ -14,20 +14,20 @@ import MKUtilityKit
 import QuartzCore
 import Chameleon
 
-class TSOPViewController: UIViewController, AnimationViewController {
+class TSOPViewController: UIViewController {
     internal var tappedButton: UIButton?
     
     var tsopView: tsopRingView!
     
-    var titleView: TitleView!
+//    var titleView: TitleView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         BluetoothController.shared.tsopDelegate = self
         
-        self.navigationController?.navigationBar.isHidden = true
-        titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "TSOP")
-        self.view.addSubview(titleView)
+//        self.navigationController?.navigationBar.isHidden = true
+//        titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "TSOP")
+//        self.view.addSubview(titleView)
         
         var multiplyer = CGFloat(0.1)
         if UIDevice.current.userInterfaceIdiom == .pad {
