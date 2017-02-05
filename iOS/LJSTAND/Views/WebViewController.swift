@@ -14,7 +14,7 @@ import Chameleon
 import WebKit
 
 class WebViewController: UIViewController {
-    var url: URL! = URL(string: "https://google.com")
+    var url: URL! = URL(string: "https://lj-stand.github.io")
     var navTitle: String! = ""
     var webView: WKWebView!
     

@@ -35,7 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         backgroundLaunch()
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
-        
         return true
     }
     
@@ -47,7 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func addWindow(notification: NSNotification) {
-//        print(notification.object)
         let viewName = notification.object as! String
         
         let newWindow = WMWindow(frame: CGRectMake(44, 344, 300, 300))
@@ -63,17 +61,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func initialWindow() {
-                let window1 = WMWindow(frame: CGRectMake(44, 44, 300, 300))
-                window1.title = "Root"
+        let window1 = WMWindow(frame: CGRectMake(44, 44, 300, 300))
+        window1.title = "Root"
         
-                let mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "windowMain")
-                mainView.title = "Root"
+        let mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "windowMain")
+        mainView.title = "Root"
         
-                window1.rootViewController = mainView
-                window1.makeKeyAndVisible()
-                window1.windowButtons?.first?.isUserInteractionEnabled = false
-                
-                window?.addSubview(window1)
+        window1.rootViewController = mainView
+        window1.makeKeyAndVisible()
+        window1.windowButtons?.first?.isUserInteractionEnabled = false
+        
+        window?.addSubview(window1)
     }
     
     func checkForUpdate() {

@@ -17,16 +17,10 @@ class LightSensorViewController: UIViewController {
     internal var tappedButton: UIButton?
     
     var lightSensView: lightSensorView!
-//    var titleView: TitleView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         BluetoothController.shared.lightSensDelegate = self
-        
-//        self.navigationController?.navigationBar.isHidden = true
-        
-//        titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "Light Sensors")
-//        self.view.addSubview(titleView)
 
         super.viewDidLoad()
         
