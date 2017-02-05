@@ -18,6 +18,7 @@ let ljStandGreen = UIColor.flatGreenColorDark()
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var windows: [WMWindow] = []
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
@@ -47,16 +48,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func addWindow(notification: NSNotification) {
         let viewName = notification.object as! String
         
-        let newWindow = WMWindow(frame: CGRectMake(44, 344, 300, 300))
-        newWindow.title = viewName
+        var shouldAdd = true
+        for item in windows {
+            if item.isHidden == false && item.title == viewName {
+                shouldAdd = false
+            }
+        }
         
-        let mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: viewName)
-        mainView.title = viewName
-        
-        newWindow.rootViewController = mainView
-        newWindow.makeKeyAndVisible()
-    
-        window?.addSubview(newWindow)
+        if shouldAdd {
+            let newWindow = WMWindow(frame: CGRectMake(44, 344, 300, 300))
+            newWindow.title = viewName
+            
+            let mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: viewName)
+            mainView.title = viewName
+            
+            newWindow.rootViewController = mainView
+            newWindow.makeKeyAndVisible()
+            
+            windows.append(newWindow)
+            
+            window?.addSubview(newWindow)
+
+        }
     }
     
     func initialWindow() {
