@@ -102,6 +102,7 @@ extension SerialViewController: UITextFieldDelegate {
         
         serial.sendMessageToDevice(textToSend)
         sendTextField.text = ""
+        dismissKeyboard()
         return true
     }
 }

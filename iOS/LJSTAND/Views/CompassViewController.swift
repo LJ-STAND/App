@@ -103,7 +103,6 @@ class CompassView: UIView {
         
         if !BluetoothController.shared.connected {
             let ovalRect = rect.insetBy(dx: 0.9 * (rect.size.width / 2), dy: 0.9 * (rect.size.height / 2))
-            print(ovalRect)
             let ovalPath = UIBezierPath(ovalIn: ovalRect)
             ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*M_PI_4)), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*M_PI_4))))
             ovalPath.addLine(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-M_PI_4)), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-M_PI_4))))

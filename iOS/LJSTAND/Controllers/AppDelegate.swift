@@ -20,9 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        application.setStatusBarStyle(.lightContent, animated: false)
-        
-        let view = BackgroundViewController()
+        let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
         let logVC = MKUConsoleManager.shared.getWindow(withRootViewController: view, withBounds: UIScreen.main.bounds)
         window = logVC
         window?.makeKeyAndVisible()
@@ -31,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         swizzleUIWindow()
         
         UITabBar.appearance().tintColor = ljStandGreen
+        application.setStatusBarStyle(.lightContent, animated: false)
         
         initialWindow()
         backgroundLaunch()

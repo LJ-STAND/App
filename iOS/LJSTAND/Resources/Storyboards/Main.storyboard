@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E144f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -723,6 +723,41 @@
             </objects>
             <point key="canvasLocation" x="2958" y="2716"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="DPE-if-FyA">
+            <objects>
+                <viewController storyboardIdentifier="background" id="9OB-xp-bHD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eBZ-J8-2mV"/>
+                        <viewControllerLayoutGuide type="bottom" id="8uM-ZS-gcz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GWO-qY-g6M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DarkLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cqd-Oq-SV2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="contentScaleFactor">
+                                        <real key="value" value="1.1000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cqd-Oq-SV2" firstAttribute="top" secondItem="GWO-qY-g6M" secondAttribute="top" id="8eg-bm-JN4"/>
+                            <constraint firstItem="8uM-ZS-gcz" firstAttribute="top" secondItem="cqd-Oq-SV2" secondAttribute="bottom" id="RJk-7y-vJx"/>
+                            <constraint firstAttribute="trailing" secondItem="cqd-Oq-SV2" secondAttribute="trailing" id="bhq-UF-gWT"/>
+                            <constraint firstItem="cqd-Oq-SV2" firstAttribute="leading" secondItem="GWO-qY-g6M" secondAttribute="leading" id="eAv-cc-L6R"/>
+                        </constraints>
+                    </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYf-C7-24v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1320.8" y="-671.51424287856082"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="8T1-Fj-SbE">
             <objects>
@@ -744,6 +779,7 @@
     </scenes>
     <resources>
         <image name="Compass" width="25" height="25"/>
+        <image name="DarkLogo" width="3840" height="2161"/>
         <image name="LightBulb" width="25" height="25"/>
         <image name="Render 1.bmp" width="1920" height="1080"/>
         <image name="Serial" width="25" height="25"/>
