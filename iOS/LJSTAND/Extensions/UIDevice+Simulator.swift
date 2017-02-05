@@ -11,7 +11,7 @@ import UIKit
 extension UIDevice {
     var isSimulator: Bool {
         get {
-            #if (arch(i386) || arch(x86_64)) && (os(iOS) || os(watchOS) || os(tvOS))
+            #if (arch(i386) || arch(x86_64))
                 return true
             #endif
             
