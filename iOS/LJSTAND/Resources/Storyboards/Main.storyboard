@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E144f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -462,57 +462,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZG-se-mjP">
-                                <rect key="frame" x="12" y="100" width="351" height="511"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" red="0.40000000600000002" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="send"/>
                             </textView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wx1-Ja-UNo">
-                                <rect key="frame" x="-6" y="623" width="387" height="44"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S9r-sA-eDb">
-                                        <rect key="frame" x="20" y="7" width="347" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="send"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="l7V-Go-gFU" id="liJ-J6-8Uj"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="S9r-sA-eDb" secondAttribute="trailing" constant="20" id="MhA-MZ-5rO"/>
-                                    <constraint firstAttribute="centerY" secondItem="S9r-sA-eDb" secondAttribute="centerY" id="Qzy-sA-9XQ"/>
-                                    <constraint firstItem="S9r-sA-eDb" firstAttribute="leading" secondItem="wx1-Ja-UNo" secondAttribute="leading" constant="20" id="bqJ-Kp-aZO"/>
-                                    <constraint firstAttribute="height" constant="44" id="xSj-L7-wmG"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="iZG-se-mjP" secondAttribute="centerX" id="9vK-wY-6t7"/>
-                            <constraint firstItem="wx1-Ja-UNo" firstAttribute="leading" secondItem="bMD-Eg-5T2" secondAttribute="leadingMargin" constant="-22" id="JLN-bE-d4D"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="wx1-Ja-UNo" secondAttribute="trailing" constant="-22" id="K7X-Cb-QjQ"/>
-                            <constraint firstItem="iZG-se-mjP" firstAttribute="trailing" secondItem="bMD-Eg-5T2" secondAttribute="trailingMargin" constant="4" id="QWp-fo-IRN"/>
-                            <constraint firstItem="iZG-se-mjP" firstAttribute="leading" secondItem="bMD-Eg-5T2" secondAttribute="leadingMargin" constant="-4" id="cvE-sV-bgI"/>
-                            <constraint firstItem="wx1-Ja-UNo" firstAttribute="top" secondItem="iZG-se-mjP" secondAttribute="bottom" constant="12" id="jsS-UB-zSl"/>
-                            <constraint firstItem="Q8e-0Z-A9j" firstAttribute="top" secondItem="wx1-Ja-UNo" secondAttribute="bottom" id="w7R-f1-M2g"/>
-                            <constraint firstItem="iZG-se-mjP" firstAttribute="top" secondItem="1ru-ga-Wna" secondAttribute="bottom" constant="80" id="zxf-PS-Wg7"/>
+                            <constraint firstItem="iZG-se-mjP" firstAttribute="top" secondItem="1ru-ga-Wna" secondAttribute="bottom" id="1ES-8X-sPu"/>
+                            <constraint firstItem="Q8e-0Z-A9j" firstAttribute="top" secondItem="iZG-se-mjP" secondAttribute="bottom" id="ASh-h0-9hb"/>
+                            <constraint firstItem="iZG-se-mjP" firstAttribute="leading" secondItem="bMD-Eg-5T2" secondAttribute="leading" id="Fqh-9x-FHf"/>
+                            <constraint firstAttribute="trailing" secondItem="iZG-se-mjP" secondAttribute="trailing" id="uPJ-g5-yUI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Serial" id="CdX-az-MQE"/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="bottomConstraint" destination="w7R-f1-M2g" id="64Z-dg-3Wa"/>
-                        <outlet property="bottomView" destination="wx1-Ja-UNo" id="ZgK-fm-Fk9"/>
-                        <outlet property="sendTextField" destination="S9r-sA-eDb" id="lYU-r3-ljb"/>
                         <outlet property="serialOutputTextView" destination="iZG-se-mjP" id="fxQ-Y1-Q0k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdI-iF-AG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2958" y="654"/>
+            <point key="canvasLocation" x="2957.5999999999999" y="653.52323838080963"/>
         </scene>
         <!--Design-->
         <scene sceneID="F9i-HB-MTP">

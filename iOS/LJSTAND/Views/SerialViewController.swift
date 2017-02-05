@@ -13,56 +13,38 @@ import MKUIKit
 import CoreBluetooth
 import Chameleon
 
-class SerialViewController: UIViewController {
-    @IBOutlet weak var sendTextField: UITextField!
+class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits {
+    public var hasText: Bool {
+        return true
+    }
+
     @IBOutlet weak var serialOutputTextView: UITextView!
-    @IBOutlet weak var bottomView: UIView!
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     var connectCount = 0
     var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
     var selectedPeripheral: CBPeripheral?
+    var blinkOn: Bool = false
+    
+    var enteredText: String = ""
+    var previousText: String = ""
     
     override func viewDidLoad() {
-
         BluetoothController.shared.serialDelegate = self
         reloadView()
         serialOutputTextView.text = ""
         
-        sendTextField.delegate = self
+        self.automaticallyAdjustsScrollViewInsets = false
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.showHideKeyboard))
         view.addGestureRecognizer(tap)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        bottomView.layer.masksToBounds = false
-        bottomView.layer.shadowOffset = CGSize(width: 0, height: -1)
-        bottomView.layer.shadowRadius = 0
-        bottomView.layer.shadowOpacity = 0.5
-        bottomView.layer.shadowColor = UIColor.gray.cgColor
-        
-        
+        _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.blink), userInfo: nil, repeats: true)
     }
     
-    func keyboardWillShow(_ notification: Notification) {
-        var info = (notification as NSNotification).userInfo!
-        let value = info[UIKeyboardFrameEndUserInfoKey] as! NSValue
-        let keyboardFrame = value.cgRectValue
+    func blink() {
+        blinkOn = !blinkOn
         
-        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
-            self.bottomConstraint.constant = keyboardFrame.size.height - 50
-        }, completion: { Bool -> Void in
-            self.serialOutputTextView.scrollToBotom()
-        })
-    }
-    
-    func keyboardWillHide(_ notification: Notification) {
-        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
-            self.bottomConstraint.constant = 0
-        }, completion: nil)
-        
+        updateText()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -82,27 +64,62 @@ class SerialViewController: UIViewController {
         }
     }
     
-    func dismissKeyboard() {
-        view.endEditing(true)
+    func showHideKeyboard() {
+        if !self.isFirstResponder {
+            self.becomeFirstResponder()
+        } else {
+            self.resignFirstResponder()
+        }
+    }
+
+    func insertText(_ text: String) {
+        if text == "\n" {
+            send()
+        } else {
+            enteredText.append(text)
+            updateText()
+        }
+    }
+    
+    func deleteBackward() {
+        if enteredText != "" {
+           enteredText.remove(at: enteredText.index(before: enteredText.endIndex))
+        }
+        
+        updateText()
+    }
+    
+    func updateText() {
+        serialOutputTextView.text = previousText + ">" + enteredText + (blinkOn ? "_" : "")
+    }
+    
+    func send() {
+        if enteredText != "" {
+            serial.sendMessageToDevice(enteredText)
+            previousText += ">" + enteredText + "\n"
+            enteredText = ""
+        }
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
+    var returnKeyType: UIReturnKeyType {
+        return UIReturnKeyType.send
     }
 }
 
 extension SerialViewController: BluetoothControllerSerialDelegate {
     func hasNewOutput(serial: String) {
-        serialOutputTextView.text = serial
+        previousText += serial + "\n"
         serialOutputTextView.scrollToBotom()
     }
 }
 
 extension SerialViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let textToSend = sendTextField.text else {
-            return true
-        }
-        
-        serial.sendMessageToDevice(textToSend)
-        sendTextField.text = ""
-        dismissKeyboard()
+
         return true
     }
 }
