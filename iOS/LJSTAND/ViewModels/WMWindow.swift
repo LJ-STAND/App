@@ -142,8 +142,6 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         self._commonInit()
     }
     
-    
-    
     func maximize(_ sender: AnyObject) {
         self.maximized = !self.maximized
         let rootWindow: UIWindow = self.window!
@@ -176,7 +174,6 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
     override func resignKey() {
         self.setNeedsDisplay()
         
-        self.layer.shadowRadius = 10.0
         for btn in self.windowButtons! {
             btn.isEnabled = false
         }
@@ -263,6 +260,12 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
                 }
                 if resizeAxis == WMResizeAxis.WMResizeBottom {
                     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, max(gp.y-self.frame.origin.y, minSize.height))
+                }
+                
+                if let navVC = self.rootViewController as? UINavigationController {
+                    if let viewController = navVC.visibleViewController as? ResizableViewController {
+                        viewController.windowWasResized?()
+                    }
                 }
             }
             self.setNeedsDisplay()

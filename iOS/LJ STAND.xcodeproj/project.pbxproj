@@ -10,6 +10,7 @@
 		0FE982DBB7126C7560A3FE1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886869AA91C9C729AA88271F /* Main.storyboard */; };
 		162D8C3B1E4A153094F4530A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4293BF4DD68684083470C404 /* Foundation.framework */; };
 		4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581C1A4891F43E30617A28DB /* LaunchScreen.xib */; };
+		CD2A02941E46EB080037C8E5 /* ResizableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */; };
 		CDEDF54D1E46D9C70037D180 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEDF54C1E46D9C70037D180 /* BackgroundViewController.swift */; };
 		CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */; };
 		D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE59898617C260F3B4780CF /* Images.xcassets */; };
@@ -76,6 +77,7 @@
 		886869AA91C9C729AA88271F /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFE59898617C260F3B4780CF /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8E706015D603F83004748A1 /* LJ STAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LJ STAND.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewController.swift; sourceTree = "<group>"; };
 		CDEDF54C1E46D9C70037D180 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */,
+				CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				EFAA53651DB6FCC600EBFA89 /* DesignTableViewController.swift in Sources */,
 				D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */,
 				EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */,
+				CD2A02941E46EB080037C8E5 /* ResizableViewController.swift in Sources */,
 				EF734A571DB8B894000E6D8C /* BluetoothController.swift in Sources */,
 				EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */,
 				EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */,

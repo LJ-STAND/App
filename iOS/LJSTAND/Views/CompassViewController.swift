@@ -11,7 +11,7 @@ import MKKit
 import MKUtilityKit
 import MKUIKit
 
-class CompassViewController: UIViewController {
+class CompassViewController: UIViewController, ResizableViewController {
     internal var tappedButton: UIButton?
 
     var compass: CompassView!
@@ -23,19 +23,26 @@ class CompassViewController: UIViewController {
         
         super.viewDidLoad()
         
-        var multiplyer = CGFloat(0.1)
-        
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            multiplyer = CGFloat(0.3)
-        }
-        
-        let dist = min(self.view.frame.width, self.view.frame.height) - (multiplyer * self.view.frame.height)
-        let maxDimention = CGSize(width: dist, height: dist)
-        let origin = CGPoint(x: ((self.view.frame.width / 2) - (dist / 2)), y: ((self.view.frame.height / 2) - (dist / 2)))
-        
-        compass = CompassView(frame: CGRect(origin: origin, size: maxDimention))
+        compass = CompassView(frame: calculateFrame())
         
         self.view.addSubview(compass)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        windowWasResized()
+    }
+    
+    func calculateFrame() -> CGRect {
+        let windowFrame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 44.0, width: self.view.frame.width, height: self.view.frame.height - 44.0)
+        let maxSize = windowFrame.size.width > windowFrame.size.height ? windowFrame.size.height * 0.9 : windowFrame.size.width * 0.9
+        let returnFrame = CGRect(x: windowFrame.origin.x + windowFrame.size.width / 2 - maxSize / 2, y: windowFrame.origin.y + windowFrame.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
+        
+        return returnFrame
+    }
+    
+    func windowWasResized() {
+        compass.frame = calculateFrame()
+        compass.setNeedsDisplay()
     }
 }
 
@@ -66,10 +73,15 @@ class CompassView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
+        
+        
         let backgroundPath = UIBezierPath(rect: rect)
         UIColor.white.setFill()
-        
         backgroundPath.fill()
+        
+        UIColor.green.setFill()
+        
+        UIBezierPath(rect: rect.insetBy(dx: 10, dy: 10)).fill()
         let path = UIBezierPath(ovalIn: CGRect(origin: CGPoint(x: rect.origin.x + 0.05 * rect.size.width, y: rect.origin.y + 0.05 * rect.size.width), size: CGSize(width: 0.9 * rect.size.width, height: 0.9 * rect.size.height)))
         UIColor.flatBlack().setStroke()
         path.lineWidth = 3

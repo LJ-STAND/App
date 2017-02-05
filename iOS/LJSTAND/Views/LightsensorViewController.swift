@@ -13,7 +13,7 @@ import MKUIKit
 import Chameleon
 import QuartzCore
 
-class LightSensorViewController: UIViewController {
+class LightSensorViewController: UIViewController, ResizableViewController {
     internal var tappedButton: UIButton?
     
     var lightSensView: lightSensorView!
@@ -24,18 +24,26 @@ class LightSensorViewController: UIViewController {
 
         super.viewDidLoad()
         
-        var multiplyer = CGFloat(0.1)
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            multiplyer = CGFloat(0.3)
-        }
-        
-        let dist = min(self.view.frame.width, self.view.frame.height) - (multiplyer * self.view.frame.height)
-        let maxDimention = CGSize(width: dist, height: dist)
-        let origin = CGPoint(x: ((self.view.frame.width / 2) - (dist / 2)), y: ((self.view.frame.height / 2) - (dist / 2)))
-        
-        lightSensView = lightSensorView(frame: CGRect(origin: origin, size: maxDimention))
+        lightSensView = lightSensorView(frame: calculateFrame())
         
         self.view.addSubview(lightSensView)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        windowWasResized()
+    }
+    
+    func calculateFrame() -> CGRect {
+        let windowFrame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 44.0, width: self.view.frame.width, height: self.view.frame.height - 44.0)
+        let maxSize = windowFrame.size.width > windowFrame.size.height ? windowFrame.size.height * 0.9 : windowFrame.size.width * 0.9
+        let returnFrame = CGRect(x: windowFrame.origin.x + windowFrame.size.width / 2 - maxSize / 2, y: windowFrame.origin.y + windowFrame.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
+        
+        return returnFrame
+    }
+    
+    func windowWasResized() {
+        lightSensView.frame = calculateFrame()
+        lightSensView.setNeedsDisplay()
     }
 }
 
