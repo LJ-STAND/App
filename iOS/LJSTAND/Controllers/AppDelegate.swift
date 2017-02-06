@@ -103,7 +103,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nav.navigationBar.barStyle = .black
         logWindow.rootViewController = nav
         logWindow.makeKeyAndVisible()
-        logWindow.disableClose()
         window?.addSubview(logWindow)
     }
     
