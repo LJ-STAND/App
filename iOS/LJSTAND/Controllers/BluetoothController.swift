@@ -51,7 +51,8 @@ class BluetoothController {
     func connect() {
         if !UIDevice.current.isSimulator && connectCount < 3 {
             MKUAsync.main {
-                MKUIToast.shared.showNotification(text: "Scanning for Bluetooth Devices...", alignment: .center, color: UIColor.flatBlue(), identifier: nil, callback: {})
+                MKUIToast.shared.showNotification(text: "Scanning for Bluetooth Devices...", alignment: .center, color: UIColor.flatBlue(), identifier: nil, callback: {
+                })
             }.background {
                 serial.startScan()
                 sleep(2)

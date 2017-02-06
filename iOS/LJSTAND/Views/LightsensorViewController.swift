@@ -85,7 +85,7 @@ class lightSensorView: UIView {
         
         let numberOfLights = 24
         
-        let radOfLight = 15.0
+        let radOfLight = Double(self.frame.width / 24)
         let offset = radOfLight / 2.0
         
         let interval = Double(360 / numberOfLights)

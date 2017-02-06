@@ -22,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
-//        let logVC = MKUConsoleManager.shared.getWindow(withRootViewController: view, withBounds: UIScreen.main.bounds)
-//        window = logVC
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = view
         window?.makeKeyAndVisible()
@@ -44,7 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func backgroundLaunch() {
-        log.logDetails()
         self.checkForUpdate()
     }
     
@@ -94,8 +91,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func logWindow() {
-        let logWindow = WMWindow(frame: CGRectMake(44, 344, 300, 300))
+        let logWindow = WMWindow(frame: CGRectMake(44, 344, 400, 300))
         logWindow.title = "App Log"
+        
+        let view = MKUConsoleViewController()
+        
+        view.title = "App Log"
+        
+        let nav = UINavigationController(rootViewController: view)
+        nav.navigationBar.isTranslucent = false
+        nav.navigationBar.barStyle = .black
+        logWindow.rootViewController = nav
+        logWindow.makeKeyAndVisible()
+        logWindow.disableClose()
+        window?.addSubview(logWindow)
     }
     
     func checkForUpdate() {

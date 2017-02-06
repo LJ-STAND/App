@@ -34,6 +34,7 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barStyle = .black
         
         BluetoothController.shared.serialDelegate = self
         reloadView()
