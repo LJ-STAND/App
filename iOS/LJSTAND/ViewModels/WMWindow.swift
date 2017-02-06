@@ -163,6 +163,10 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         UIView.commitAnimations()
     }
     
+    func disableClose() {
+        windowButtons?[0].isUserInteractionEnabled = false
+    }
+    
     
     func close(_ sender: AnyObject) {
         self.isHidden = true

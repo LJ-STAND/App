@@ -116,10 +116,27 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import MessageUI;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
 #pragma clang diagnostic ignored "-Wduplicate-method-arg"
+@class NSBundle;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC12MKUtilityKit24MKUConsoleViewController")
+@interface MKUConsoleViewController : UIViewController
+- (void)viewDidLoad;
+- (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+@class MFMailComposeViewController;
+
+@interface MKUConsoleViewController (SWIFT_EXTENSION(MKUtilityKit)) <MFMailComposeViewControllerDelegate>
+- (void)mailComposeController:(MFMailComposeViewController * _Nonnull)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError * _Nullable)error;
+@end
+
 
 @interface UIView (SWIFT_EXTENSION(MKUtilityKit))
 @end
