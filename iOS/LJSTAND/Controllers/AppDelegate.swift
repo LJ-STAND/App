@@ -34,15 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         logWindow()
         initialWindow()
-        backgroundLaunch()
+        checkForUpdate()
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
         
         return true
-    }
-    
-    func backgroundLaunch() {
-        self.checkForUpdate()
     }
     
     func addWindow(notification: NSNotification) {
