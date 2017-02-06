@@ -7,7 +7,4 @@
    <FileRef
       location = "group:Carthage/Checkouts/Chameleon/Chameleon.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:../../../MKKit/MKKit.xcodeproj">
-   </FileRef>
 </Workspace>

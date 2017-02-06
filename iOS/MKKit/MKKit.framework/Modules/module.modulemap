@@ -1,0 +1,10 @@
+framework module MKKit {
+  umbrella header "MKKit.h"
+
+  export *
+  module * { export * }
+}
+
+module MKKit.Swift {
+    header "MKKit-Swift.h"
+}
