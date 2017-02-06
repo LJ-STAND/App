@@ -22,16 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
-        let logVC = MKUConsoleManager.shared.getWindow(withRootViewController: view, withBounds: UIScreen.main.bounds)
-        window = logVC
+//        let logVC = MKUConsoleManager.shared.getWindow(withRootViewController: view, withBounds: UIScreen.main.bounds)
+//        window = logVC
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = view
         window?.makeKeyAndVisible()
-        window?.backgroundColor = .gray
+        window?.backgroundColor = .white
         
         swizzleUIWindow()
         
         UITabBar.appearance().tintColor = ljStandGreen
         application.setStatusBarStyle(.lightContent, animated: false)
         
+        logWindow()
         initialWindow()
         backgroundLaunch()
         
@@ -84,10 +87,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window1.rootViewController = mainView
         window1.makeKeyAndVisible()
-        window1.windowButtons?.first?.isUserInteractionEnabled = false
+        window1.disableClose()
         
         windows.append(window1)
         window?.addSubview(window1)
+    }
+    
+    func logWindow() {
+        let logWindow = WMWindow(frame: CGRectMake(44, 344, 300, 300))
+        logWindow.title = "App Log"
     }
     
     func checkForUpdate() {
