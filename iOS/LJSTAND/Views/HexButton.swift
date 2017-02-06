@@ -33,7 +33,7 @@ class HexButton: UIButton {
         let path = UIBezierPath.roundedPolygonIn(rect: rect, numberOfSides: 6, cornerRadius: 10, lineWidth: 5, rotationOffset: 0)
         self.layer.shadowPath = path.cgPath
         self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowRadius = rect.width / 12
+        self.layer.shadowRadius = rect.width / 24
         self.layer.shadowOpacity = 0.7
         
         UIColor(colorLiteralRed: 66/255, green: 66/255, blue: 66/255, alpha: 1.0).setFill()
