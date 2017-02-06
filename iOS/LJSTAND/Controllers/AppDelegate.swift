@@ -48,14 +48,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func addWindow(notification: NSNotification) {
         let viewName = notification.object as! String
         
-        var shouldAdd = true
+        var isShown = false
+        var hiddenWindow: WMWindow!
         for item in windows {
-            if item.isHidden == false && item.title == viewName {
-                shouldAdd = false
+            if item.title == viewName {
+                isShown = true
+                hiddenWindow = item
             }
         }
         
-        if shouldAdd {
+        if !isShown {
             let newWindow = WMWindow(frame: CGRectMake(44, 344, 300, 300))
             newWindow.title = viewName
             
@@ -68,7 +70,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             windows.append(newWindow)
             
             window?.addSubview(newWindow)
-
+        } else {
+            hiddenWindow.makeKeyAndVisible()
         }
     }
     
@@ -83,6 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window1.makeKeyAndVisible()
         window1.windowButtons?.first?.isUserInteractionEnabled = false
         
+        windows.append(window1)
         window?.addSubview(window1)
     }
     
