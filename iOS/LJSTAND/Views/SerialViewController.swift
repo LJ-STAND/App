@@ -39,6 +39,7 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
         BluetoothController.shared.serialDelegate = self
         reloadView()
         serialOutputTextView.text = ""
+        serialOutputTextView.layoutManager.allowsNonContiguousLayout = false
         
         self.automaticallyAdjustsScrollViewInsets = false
         
@@ -98,7 +99,7 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
     func blink() {
         blinkOn = !blinkOn
         
-        updateText()
+        updateTextNoScroll()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -157,6 +158,10 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
     func updateText() {
         serialOutputTextView.text = previousText + ">" + enteredText + (blinkOn ? "_" : "")
         serialOutputTextView.scrollToBottom()
+    }
+    
+    func updateTextNoScroll() {
+        serialOutputTextView.text = previousText + ">" + enteredText + (blinkOn ? "_" : "")
     }
     
     func send() {
