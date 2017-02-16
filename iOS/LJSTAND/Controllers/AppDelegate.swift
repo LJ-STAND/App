@@ -34,10 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         logWindow()
         initialWindow()
-        checkForUpdate()
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
         
+        let timer = Timer(timeInterval: 2.0, target: self, selector: #selector(AppDelegate.checkForUpdate), userInfo: nil, repeats: false)
+        
+        timer.fire()
         return true
     }
     
@@ -103,30 +105,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func checkForUpdate() {
-        if MKUReachability().isConnectedToNetwork && MKUAppSettings.shared.isDebugBuild != true {
-            do {
-                let urlStr = "https://lj-stand.github.io/Apps/config.json"
-                let url = URL(string: urlStr)
-                
-                let data = try Data(contentsOf: url!)
-                let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
-                
-                let releasedVer = json["currentRelease"] as! Int
-                
-                let thisBuild = Int(MKUAppSettings.shared.build)!
-                
-                if releasedVer > thisBuild {
-                    log.info("Update")
-                    let url = URL(string: "itms-services://?action=download-manifest&url=https://lj-stand.github.io/Apps/dist/manifest.plist")!
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        MKUAsync.background {
+            MKULog.shared.info("Checking for update")
+            MKUAppSettings.shared.checkForAppUpdate(urlString: "https://lj-stand.github.io/Apps/config.json", jsonKey: "currentRelease", manifestURL: "https://lj-stand.github.io/Apps/dist/manifest.plist", messageCallback: { (error, message) in
+                if error {
+                    MKULog.shared.error(message)
                 } else {
-                    log.info("Latest or Development Version of App")
+                    MKULog.shared.info(message)
                 }
-            } catch {
-                log.info("Unable to retrieve JSON data from server")
+            }) { (url, message) in
+                MKULog.shared.info(message)
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
             }
-        } else {
-            log.info("No Internet Connection or Debug build.")
+            MKULog.shared.mark()
         }
     }
 }
