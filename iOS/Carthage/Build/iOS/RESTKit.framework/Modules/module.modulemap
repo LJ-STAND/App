@@ -1,0 +1,10 @@
+framework module RESTKit {
+  umbrella header "RESTKit.h"
+
+  export *
+  module * { export * }
+}
+
+module RESTKit.Swift {
+    header "RESTKit-Swift.h"
+}
