@@ -48,9 +48,7 @@ class CompassViewController: UIViewController, ResizableViewController {
 
 extension CompassViewController: BluetoothControllerCompassDelegate {
     func hasNewHeading(angle: Double) {
-        UIView.animate(withDuration: 0.025, delay: 0, options: UIViewAnimationOptions.curveLinear, animations: { () -> Void in
-            self.compass.rotate(angle: angle)
-        })
+        self.compass.rotate(angle: angle)
     }
 }
 
@@ -95,7 +93,7 @@ class CompassView: UIView {
             let xCenter = Double(self.frame.width / 2)
             let yCenter = Double(self.frame.height / 2)
             
-            let angleRadians = degToRad(angle: needleAngle - 90)
+            let angleRadians = degToRad(angle: (360 - needleAngle) - 90)
             
             let needleRadius = (0.8 * Double(self.frame.width)) / 2
             let xPoint = xCenter + (needleRadius * sin(angleRadians))

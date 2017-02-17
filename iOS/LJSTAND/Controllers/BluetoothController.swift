@@ -203,8 +203,6 @@ extension BluetoothController: BluetoothSerialDelegate {
                 compassDelegate?.hasNewHeading(angle: angle)
             } else if comps[0] == string {
                 serialDelegate?.hasNewOutput(serial: comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n")))
-            } else {
-               serialDelegate?.hasNewOutput(serial: message)
             }
         } else {
             serialDelegate?.hasNewOutput(serial: message)
