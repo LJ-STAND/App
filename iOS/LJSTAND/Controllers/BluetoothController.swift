@@ -138,6 +138,7 @@ extension BluetoothController: BluetoothSerialDelegate {
     func serialDidReceiveString(_ message: String) {
         let comps = message.components(separatedBy: ";")
         
+        let string = "1"
         let tsop = "2"
         let light = "3"
         let compass = "4"
@@ -200,14 +201,14 @@ extension BluetoothController: BluetoothSerialDelegate {
                 }
                 
                 compassDelegate?.hasNewHeading(angle: angle)
+            } else if comps[0] == string {
+                serialDelegate?.hasNewOutput(serial: comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n")))
+            } else {
+               serialDelegate?.hasNewOutput(serial: message)
             }
-            
         } else {
             serialDelegate?.hasNewOutput(serial: message)
         }
-        
-        
-        
     }
     
     func serialDidChangeState() {
