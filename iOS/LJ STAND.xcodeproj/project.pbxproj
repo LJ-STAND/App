@@ -24,10 +24,6 @@
 		EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */ = {isa = PBXBuildFile; fileRef = EF471E4B1DB6C37900CED76B /* Robot.obj */; };
 		EF734A571DB8B894000E6D8C /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734A561DB8B894000E6D8C /* BluetoothController.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
-		EF82EED21E5582EC007AC9DB /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF82EECA1E5582E5007AC9DB /* MKKit.framework */; };
-		EF82EED41E5582EC007AC9DB /* MKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF82EECB1E5582E5007AC9DB /* MKUIKit.framework */; };
-		EF82EED61E5582EC007AC9DB /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF82EECC1E5582E5007AC9DB /* MKUtilityKit.framework */; };
-		EF82EED81E5582EC007AC9DB /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF82EECD1E5582E5007AC9DB /* RESTKit.framework */; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
 		EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */; };
 		EFAA53591DB6DED700EBFA89 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53581DB6DED700EBFA89 /* Part.swift */; };
@@ -47,6 +43,21 @@
 		EFB29C691E3F1D7800906D5A /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB29C681E3F1D7800906D5A /* Chameleon.framework */; };
 		EFB29C6A1E3F1D7800906D5A /* Chameleon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFB29C681E3F1D7800906D5A /* Chameleon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
+		EFDEABB81E57A6110067C370 /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB31E57A6110067C370 /* Chameleon.framework */; };
+		EFDEABB91E57A6110067C370 /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB41E57A6110067C370 /* MKKit.framework */; };
+		EFDEABBA1E57A6110067C370 /* MKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB51E57A6110067C370 /* MKUIKit.framework */; };
+		EFDEABBB1E57A6110067C370 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB61E57A6110067C370 /* MKUtilityKit.framework */; };
+		EFDEABBC1E57A6110067C370 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB71E57A6110067C370 /* RESTKit.framework */; };
+		EFDEABBD1E57A6250067C370 /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB31E57A6110067C370 /* Chameleon.framework */; };
+		EFDEABBE1E57A6250067C370 /* Chameleon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFDEABB31E57A6110067C370 /* Chameleon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EFDEABBF1E57A6250067C370 /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB41E57A6110067C370 /* MKKit.framework */; };
+		EFDEABC01E57A6250067C370 /* MKKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFDEABB41E57A6110067C370 /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EFDEABC11E57A6250067C370 /* MKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB51E57A6110067C370 /* MKUIKit.framework */; };
+		EFDEABC21E57A6250067C370 /* MKUIKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFDEABB51E57A6110067C370 /* MKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EFDEABC31E57A6250067C370 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB61E57A6110067C370 /* MKUtilityKit.framework */; };
+		EFDEABC41E57A6250067C370 /* MKUtilityKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFDEABB61E57A6110067C370 /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EFDEABC51E57A6250067C370 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB71E57A6110067C370 /* RESTKit.framework */; };
+		EFDEABC61E57A6250067C370 /* RESTKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFDEABB71E57A6110067C370 /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */; };
 		EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA381E469A4E005BEE4E /* WMWindow.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
@@ -61,6 +72,11 @@
 			dstSubfolderSpec = 10;
 			files = (
 				EFB29C6A1E3F1D7800906D5A /* Chameleon.framework in CopyFiles */,
+				EFDEABC41E57A6250067C370 /* MKUtilityKit.framework in CopyFiles */,
+				EFDEABC01E57A6250067C370 /* MKKit.framework in CopyFiles */,
+				EFDEABBE1E57A6250067C370 /* Chameleon.framework in CopyFiles */,
+				EFDEABC21E57A6250067C370 /* MKUIKit.framework in CopyFiles */,
+				EFDEABC61E57A6250067C370 /* RESTKit.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,10 +103,6 @@
 		EF471E4B1DB6C37900CED76B /* Robot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Robot.obj; sourceTree = "<group>"; };
 		EF734A561DB8B894000E6D8C /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 		EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
-		EF82EECA1E5582E5007AC9DB /* MKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKKit.framework; path = "/Users/lachlangrant/Developer/LJ-STAND/Apps/iOS/MKKit/MKKit.framework"; sourceTree = "<absolute>"; };
-		EF82EECB1E5582E5007AC9DB /* MKUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKUIKit.framework; path = "/Users/lachlangrant/Developer/LJ-STAND/Apps/iOS/MKKit/MKUIKit.framework"; sourceTree = "<absolute>"; };
-		EF82EECC1E5582E5007AC9DB /* MKUtilityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKUtilityKit.framework; path = "/Users/lachlangrant/Developer/LJ-STAND/Apps/iOS/MKKit/MKUtilityKit.framework"; sourceTree = "<absolute>"; };
-		EF82EECD1E5582E5007AC9DB /* RESTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESTKit.framework; path = "/Users/lachlangrant/Developer/LJ-STAND/Apps/iOS/MKKit/RESTKit.framework"; sourceTree = "<absolute>"; };
 		EF9518231DB08CB4009B1F6F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsensorViewController.swift; sourceTree = "<group>"; };
 		EFAA53581DB6DED700EBFA89 /* Part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
@@ -109,6 +121,11 @@
 		EFAA53781DB705B000EBFA89 /* Render 1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = "Render 1.bmp"; sourceTree = "<group>"; };
 		EFB29C681E3F1D7800906D5A /* Chameleon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chameleon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
+		EFDEABB31E57A6110067C370 /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
+		EFDEABB41E57A6110067C370 /* MKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKKit.framework; path = Carthage/Build/iOS/MKKit.framework; sourceTree = "<group>"; };
+		EFDEABB51E57A6110067C370 /* MKUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKUIKit.framework; path = Carthage/Build/iOS/MKUIKit.framework; sourceTree = "<group>"; };
+		EFDEABB61E57A6110067C370 /* MKUtilityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKUtilityKit.framework; path = Carthage/Build/iOS/MKUtilityKit.framework; sourceTree = "<group>"; };
+		EFDEABB71E57A6110067C370 /* RESTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESTKit.framework; path = Carthage/Build/iOS/RESTKit.framework; sourceTree = "<group>"; };
 		EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		EFEDAA381E469A4E005BEE4E /* WMWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMWindow.swift; sourceTree = "<group>"; };
 		EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
@@ -120,12 +137,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF82EED61E5582EC007AC9DB /* MKUtilityKit.framework in Frameworks */,
-				EF82EED81E5582EC007AC9DB /* RESTKit.framework in Frameworks */,
+				EFDEABB81E57A6110067C370 /* Chameleon.framework in Frameworks */,
+				EFDEABC11E57A6250067C370 /* MKUIKit.framework in Frameworks */,
+				EFDEABB91E57A6110067C370 /* MKKit.framework in Frameworks */,
 				162D8C3B1E4A153094F4530A /* Foundation.framework in Frameworks */,
-				EF82EED21E5582EC007AC9DB /* MKKit.framework in Frameworks */,
-				EF82EED41E5582EC007AC9DB /* MKUIKit.framework in Frameworks */,
+				EFDEABBD1E57A6250067C370 /* Chameleon.framework in Frameworks */,
+				EFDEABBF1E57A6250067C370 /* MKKit.framework in Frameworks */,
+				EFDEABBB1E57A6110067C370 /* MKUtilityKit.framework in Frameworks */,
+				EFDEABC31E57A6250067C370 /* MKUtilityKit.framework in Frameworks */,
+				EFDEABBA1E57A6110067C370 /* MKUIKit.framework in Frameworks */,
+				EFDEABBC1E57A6110067C370 /* RESTKit.framework in Frameworks */,
 				EFB29C691E3F1D7800906D5A /* Chameleon.framework in Frameworks */,
+				EFDEABC51E57A6250067C370 /* RESTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +207,11 @@
 		534AB7A34A3D72BAFA984F6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFDEABB31E57A6110067C370 /* Chameleon.framework */,
+				EFDEABB41E57A6110067C370 /* MKKit.framework */,
+				EFDEABB51E57A6110067C370 /* MKUIKit.framework */,
+				EFDEABB61E57A6110067C370 /* MKUtilityKit.framework */,
+				EFDEABB71E57A6110067C370 /* RESTKit.framework */,
 				D83A68AAD9837795A414B570 /* iOS */,
 			);
 			name = Frameworks;
