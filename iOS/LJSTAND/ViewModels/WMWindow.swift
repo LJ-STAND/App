@@ -8,7 +8,7 @@
 
 import UIKit
 enum WMResizeAxis {
-    case WMResizeNone, WMResizeLeft, WMResizeRight, WMResizeTop, WMResizeBottom
+    case wmResizeNone, wmResizeLeft, wmResizeRight, wmResizeTop, wmResizeBottom
 }
 
 let kStatusBarHeight:CGFloat = UIApplication.shared.statusBarFrame.height
@@ -37,7 +37,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
     var _inWindowMove: Bool = false
     var _inWindowResize: Bool = false
     var _originPoint: CGPoint = CGPoint.zero
-    var resizeAxis: WMResizeAxis = WMResizeAxis.WMResizeNone
+    var resizeAxis: WMResizeAxis = WMResizeAxis.wmResizeNone
     var title: String?
     var windowButtons: Array<UIButton>?
     var maximized: Bool = false
@@ -103,10 +103,10 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         self.addSubview(windowButton)
         self.windowButtons?.append(windowButton)
         
-        var panRecognizer: UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action:#selector(WMWindow.didPan(_:)))
+        let panRecognizer: UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action:#selector(WMWindow.didPan(_:)))
         panRecognizer.delegate = self
         self.addGestureRecognizer(panRecognizer)
-        let focusRecognizers: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:"didTap:")
+        let focusRecognizers: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:#selector(WMWindow.didTap(_:)))
         self.addGestureRecognizer(focusRecognizers)
         self.layer.shadowRadius = 30.0
         self.layer.shadowColor = UIColor.black.cgColor
@@ -119,22 +119,19 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         {
             let rootView: UIView = (self.rootViewController?.view)!
             
-            if (rootView != nil)
-            {
-                
-                let contentRect: CGRect = CGRectMake(kWindowResizeGutterSize, kWindowResizeGutterSize+kTitleBarHeight, self.bounds.size.width-(kWindowResizeGutterSize*2), self.bounds.size.height-kTitleBarHeight-(kWindowResizeGutterSize*2))
-                rootView.frame = contentRect
-                self.adjustMask()
-            }
+            let contentRect: CGRect = CGRectMake(kWindowResizeGutterSize, kWindowResizeGutterSize+kTitleBarHeight, self.bounds.size.width-(kWindowResizeGutterSize*2), self.bounds.size.height-kTitleBarHeight-(kWindowResizeGutterSize*2))
+            rootView.frame = contentRect
+            self.adjustMask()
         }
         
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        if self != nil {
-            self._commonInit()
-        }
+//        if self != nil {
+//            self._commonInit()
+//        }
+        self._commonInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -212,7 +209,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         }
     }
     
-    func setFrame(_frame: CGRect) {
+    func setFrame(frame: CGRect) {
         super.frame = frame
         self.setNeedsDisplay()
     }
@@ -252,22 +249,22 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
             if leftResizeRect.contains(lp) {
                 _inWindowResize = true
                 _inWindowMove = false
-                resizeAxis = WMResizeAxis.WMResizeLeft
+                resizeAxis = WMResizeAxis.wmResizeLeft
             }
             if rightResizeRect.contains(lp) {
                 _inWindowResize = true
                 _inWindowMove = false
-                resizeAxis = WMResizeAxis.WMResizeRight
+                resizeAxis = WMResizeAxis.wmResizeRight
             }
             if topResizeRect.contains(lp) {
                 _inWindowResize = true
                 _inWindowMove = false
-                resizeAxis = WMResizeAxis.WMResizeTop
+                resizeAxis = WMResizeAxis.wmResizeTop
             }
             if bottomResizeRect.contains(lp) {
                 _inWindowResize = true
                 _inWindowMove = false
-                resizeAxis = WMResizeAxis.WMResizeBottom
+                resizeAxis = WMResizeAxis.wmResizeBottom
             }
         } else if recognizer.state == .changed {
             if _inWindowMove {
@@ -280,13 +277,13 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
                 }
             }
             if _inWindowResize {
-                if resizeAxis == WMResizeAxis.WMResizeRight {
+                if resizeAxis == WMResizeAxis.wmResizeRight {
                     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, max(gp.x-self.frame.origin.x, minSize.width), self.frame.size.height)
                 }
-                if resizeAxis == WMResizeAxis.WMResizeLeft {
+                if resizeAxis == WMResizeAxis.wmResizeLeft {
                     self.frame = CGRectMake(gp.x, self.frame.origin.y, max((-gp.x+self.frame.origin.x)+self.frame.size.width, minSize.width), self.frame.size.height)
                 }
-                if resizeAxis == WMResizeAxis.WMResizeBottom {
+                if resizeAxis == WMResizeAxis.wmResizeBottom {
                     self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, max(gp.y-self.frame.origin.y, minSize.height))
                 }
                 
@@ -329,13 +326,13 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
                 let bottomResizeRect: CGRect = CGRectMake(self.bounds.origin.x+kWindowResizeGutterSize, self.bounds.origin.y+self.bounds.size.height-kWindowResizeGutterSize, self.bounds.size.width-(kWindowResizeGutterSize*2), kWindowResizeGutterSize)
                 UIColor(white: 0.0, alpha: 0.3).setFill()
                 
-                if resizeAxis == WMResizeAxis.WMResizeRight {
+                if resizeAxis == WMResizeAxis.wmResizeRight {
                     UIBezierPath(roundedRect: rightResizeRect, cornerRadius: 3.0).fill()
                 }
-                if resizeAxis == WMResizeAxis.WMResizeLeft {
+                if resizeAxis == WMResizeAxis.wmResizeLeft {
                     UIBezierPath(roundedRect: leftResizeRect, cornerRadius: 3.0).fill()
                 }
-                if resizeAxis == WMResizeAxis.WMResizeBottom {
+                if resizeAxis == WMResizeAxis.wmResizeBottom {
                     UIBezierPath(roundedRect: bottomResizeRect, cornerRadius: 3.0).fill()
                 }
             }

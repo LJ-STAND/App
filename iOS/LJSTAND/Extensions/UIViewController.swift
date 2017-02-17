@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     func tintNavigationController() {
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.flatBlack()]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.flatBlack]
         self.navigationController?.navigationBar.tintColor = ljStandGreen
     }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIBezierPath {
-    static func roundedPolygonIn(rect: CGRect, numberOfSides: Int, cornerRadius: CGFloat, lineWidth: CGFloat, rotationOffset: CGFloat) -> UIBezierPath {
+    static func roundedPolygonIn(_ rect: CGRect, numberOfSides: Int, cornerRadius: CGFloat, lineWidth: CGFloat, rotationOffset: CGFloat) -> UIBezierPath {
         let path = UIBezierPath()
         let theta = CGFloat(2.0 * M_PI) / CGFloat(numberOfSides)
         let offset = cornerRadius * tan(theta)

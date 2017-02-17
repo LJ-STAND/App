@@ -47,8 +47,8 @@ class CompassViewController: UIViewController, ResizableViewController {
 }
 
 extension CompassViewController: BluetoothControllerCompassDelegate {
-    func hasNewHeading(angle: Double) {
-        self.compass.rotate(angle: angle)
+    func hasNewHeading(_ angle: Double) {
+        self.compass.rotate(angle)
     }
 }
 
@@ -76,24 +76,24 @@ class CompassView: UIView {
         backgroundPath.fill()
         
         let path = UIBezierPath(ovalIn: CGRect(origin: CGPoint(x: rect.origin.x + 0.05 * rect.size.width, y: rect.origin.y + 0.05 * rect.size.width), size: CGSize(width: 0.9 * rect.size.width, height: 0.9 * rect.size.height)))
-        UIColor.flatBlack().setStroke()
+        UIColor.flatBlack.setStroke()
         path.lineWidth = 3
         path.stroke()
         
         if !BluetoothController.shared.connected {
             let ovalRect = rect.insetBy(dx: 0.9 * (rect.size.width / 2), dy: 0.9 * (rect.size.height / 2))
             let ovalPath = UIBezierPath(ovalIn: ovalRect)
-            ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*M_PI_4)), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*M_PI_4))))
-            ovalPath.addLine(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-M_PI_4)), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-M_PI_4))))
+            ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*(Double.pi / 4)))))
+            ovalPath.addLine(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-(Double.pi / 4)))))
             
-            UIColor.flatRed().setStroke()
+            UIColor.flatRed.setStroke()
             ovalPath.lineWidth = 3
             ovalPath.stroke()
         } else {
             let xCenter = Double(self.frame.width / 2)
             let yCenter = Double(self.frame.height / 2)
             
-            let angleRadians = degToRad(angle: (360 - needleAngle) - 90)
+            let angleRadians = degToRad((360 - needleAngle) - 90)
             
             let needleRadius = (0.8 * Double(self.frame.width)) / 2
             let xPoint = xCenter + (needleRadius * sin(angleRadians))
@@ -111,12 +111,12 @@ class CompassView: UIView {
         }
     }
     
-    func rotate(angle:Double) {
+    func rotate(_ angle:Double) {
         needleAngle = angle
         setNeedsDisplay()
     }
     
-    func degToRad(angle: Double) -> Double {
-        return (angle - 90) * M_PI/180
+    func degToRad(_ angle: Double) -> Double {
+        return (angle - 90) * Double.pi/180
     }
 }

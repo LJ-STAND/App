@@ -47,8 +47,8 @@ class TSOPViewController: UIViewController, ResizableViewController {
 }
 
 extension TSOPViewController: BluetoothControllerTSOPDelegate {
-    func hasNewActiveTSOP(tsopNum: Int) {
-        tsopView.setCurrent(current: tsopNum)
+    func hasNewActiveTSOP(_ tsopNum: Int) {
+        tsopView.setCurrent(tsopNum)
     }
 }
 
@@ -70,7 +70,7 @@ class tsopRingView: UIView {
             tsops.append(false)
         }
         
-        setCurrent(current: -1)
+        setCurrent(-1)
     }
     
     override func draw(_ rect: CGRect) {
@@ -89,14 +89,14 @@ class tsopRingView: UIView {
         
         for i in 0..<numberOfTSOPS {
             let angle = 360 - ((interval * Double(i)) + 90)
-            let angleRad = degToRad(angle: angle)
+            let angleRad = degToRad(angle)
             
             let xVal = (Double(self.frame.width/2) + (hypt * sin(angleRad)) - offset)
             let yVal = (Double(self.frame.height/2) + (hypt * cos(angleRad)) - offset)
             
             let path = UIBezierPath(ovalIn: CGRect(x: xVal, y: yVal, width: radOfTSOP, height: radOfTSOP))
-            UIColor.flatBlack().setFill()
-            UIColor.flatBlack().setStroke()
+            UIColor.flatBlack.setFill()
+            UIColor.flatBlack.setStroke()
             
             if tsops[i] {
                 path.fill()
@@ -108,16 +108,16 @@ class tsopRingView: UIView {
         if !BluetoothController.shared.connected {
             let ovalRect = rect.insetBy(dx: 0.9 * (rect.size.width / 2), dy: 0.9 * (rect.size.height / 2))
             let ovalPath = UIBezierPath(ovalIn: ovalRect)
-            ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*M_PI_4)), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*M_PI_4))))
-            ovalPath.addLine(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-M_PI_4)), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-M_PI_4))))
+            ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*(Double.pi / 4)))))
+            ovalPath.addLine(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-(Double.pi / 4)))))
             
-            UIColor.flatRed().setStroke()
+            UIColor.flatRed.setStroke()
             ovalPath.lineWidth = 3
             ovalPath.stroke()
         }
     }
     
-    func setCurrent(current: Int) {
+    func setCurrent(_ current: Int) {
         
         for i in 0..<tsops.count {
             tsops[i] = false
@@ -130,8 +130,8 @@ class tsopRingView: UIView {
         setNeedsDisplay()
     }
     
-    func degToRad(angle: Double) -> Double {
-        return (angle - 90) * M_PI/180
+    func degToRad(_ angle: Double) -> Double {
+        return (angle - 90) * Double.pi/180
     }
 }
 

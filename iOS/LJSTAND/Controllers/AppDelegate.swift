@@ -13,7 +13,7 @@ import Chameleon
 
 let log = MKULog.shared
 
-let ljStandGreen = UIColor.flatGreenColorDark()
+let ljStandGreen = UIColor.flatGreenDark
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

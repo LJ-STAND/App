@@ -38,19 +38,19 @@ class PartDetailViewController: UIViewController {
     func updateLabel() {
         let part = PartParser.shared.parts[index]
         
-        self.title = trimString(str: part.item)
-        descriptionLabel.text = trimString(str: part.description)
-        supplierLabel.text = "Supplier: \(trimString(str: part.supplier))"
-        vendorPartLabel.text = "Part #: \(trimString(str: part.vendorPartNumber))"
-        totalQtyLabel.text = "Quantity: \(trimString(str: part.totalQty))"
-        sparesLabel.text = "Spares: \(trimString(str: part.spares))"
-        priceInORGCurrencyLabel.text = "\(trimString(str: part.priceInOrgCurrency)) \(trimString(str: part.currency))"
-        priceAudLabel.text = trimString(str: part.priceInAUD)
-        totalPrice.text = trimString(str: part.totalPrice)
-        weightPerItem.text = "\(trimString(str: part.weightPerItem))g/part"
-        qtyLabel.text = "# per robot: \(trimString(str: part.qtyPerRobot))"
-        totalWeight.text = "Total Weight: \(trimString(str: part.totalWeight))"
-        notesTextView.text = trimString(str: part.notes)
+        self.title = trimString(part.item)
+        descriptionLabel.text = trimString(part.description)
+        supplierLabel.text = "Supplier: \(trimString(part.supplier))"
+        vendorPartLabel.text = "Part #: \(trimString(part.vendorPartNumber))"
+        totalQtyLabel.text = "Quantity: \(trimString(part.totalQty))"
+        sparesLabel.text = "Spares: \(trimString(part.spares))"
+        priceInORGCurrencyLabel.text = "\(trimString(part.priceInOrgCurrency)) \(trimString(part.currency))"
+        priceAudLabel.text = trimString(part.priceInAUD)
+        totalPrice.text = trimString(part.totalPrice)
+        weightPerItem.text = "\(trimString(part.weightPerItem))g/part"
+        qtyLabel.text = "# per robot: \(trimString(part.qtyPerRobot))"
+        totalWeight.text = "Total Weight: \(trimString(part.totalWeight))"
+        notesTextView.text = trimString(part.notes)
         
         if (part.link == "") {
             productButton.isEnabled = false
@@ -58,7 +58,7 @@ class PartDetailViewController: UIViewController {
     }
     
     @IBAction func openProductPageAction(_ sender: Any) {
-        let url = URL(string: trimString(str: PartParser.shared.parts[index].link))
+        let url = URL(string: trimString(PartParser.shared.parts[index].link))
         if url != nil {
             let safariVC = SFSafariViewController(url: url!, entersReaderIfAvailable: false)
             self.present(safariVC, animated: true, completion: nil)
@@ -66,7 +66,7 @@ class PartDetailViewController: UIViewController {
         
     }
     
-    func trimString(str: String) -> String {
+    func trimString(_ str: String) -> String {
         return str.replacingOccurrences(of: "\"", with: "")
     }
 }

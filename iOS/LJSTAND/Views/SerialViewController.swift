@@ -14,7 +14,7 @@ import CoreBluetooth
 import Chameleon
 
 class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, ResizableViewController {
-    public var hasText: Bool {
+    open var hasText: Bool {
         return true
     }
 
@@ -177,13 +177,13 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
         return true
     }
     
-    var returnKeyType: UIReturnKeyType {
+    private var returnKeyType: UIReturnKeyType {
         return UIReturnKeyType.send
     }
 }
 
 extension SerialViewController: BluetoothControllerSerialDelegate {
-    func hasNewOutput(serial: String) {
+    func hasNewOutput(_ serial: String) {
         previousText += serial + "\n"
         updateText()
     }

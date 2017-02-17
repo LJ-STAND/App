@@ -13,19 +13,19 @@ import MKKit
 import MKUtilityKit
 
 protocol BluetoothControllerSerialDelegate {
-    func hasNewOutput(serial: String)
+    func hasNewOutput(_ serial: String)
 }
 
 protocol BluetoothControllerTSOPDelegate {
-    func hasNewActiveTSOP(tsopNum: Int)
+    func hasNewActiveTSOP(_ tsopNum: Int)
 }
 
 protocol BluetoothControllerCompassDelegate {
-    func hasNewHeading(angle: Double)
+    func hasNewHeading(_ angle: Double)
 }
 
 protocol BluetoothControllerLightSensorDelegate {
-    func updatedCurrentLightSensors(sensors: [Int])
+    func updatedCurrentLightSensors(_ sensors: [Int])
 }
 
 class BluetoothController {
@@ -51,7 +51,7 @@ class BluetoothController {
     func connect() {
         if !UIDevice.current.isSimulator && connectCount < 3 {
             MKUAsync.main {
-                MKUIToast.shared.showNotification(text: "Scanning for Bluetooth Devices...", alignment: .center, color: UIColor.flatBlue(), identifier: nil, callback: {
+                MKUIToast.shared.showNotification(text: "Scanning for Bluetooth Devices...", alignment: .center, color: UIColor.flatBlue, identifier: nil, callback: {
                 })
             }.background {
                 serial.startScan()
@@ -98,7 +98,7 @@ class BluetoothController {
         }
     }
     
-    private func getRootView() -> UIViewController {
+    fileprivate func getRootView() -> UIViewController {
         return ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController)!!
     }
 }
@@ -119,17 +119,17 @@ extension BluetoothController: BluetoothSerialDelegate {
     
     func serialDidConnect(_ peripheral: CBPeripheral) {
         MKUIToast.shared.dismissAllNotifications(animated: false)
-        MKUIToast.shared.showNotification(text: "Connected to \(peripheral.name ?? "")", alignment: .center, color: UIColor.flatGreen(), identifier: nil) {}
+        MKUIToast.shared.showNotification(text: "Connected to \(peripheral.name ?? "")", alignment: .center, color: UIColor.flatGreen, identifier: nil) {}
         
         let text = "Connected to \(peripheral.name ?? "")"
-        serialDelegate?.hasNewOutput(serial: text)
+        serialDelegate?.hasNewOutput(text)
         self.connected = true
         
         UserDefaults.standard.set(peripheral.name!, forKey: "lastConnected")
     }
     
     func serialDidFailToConnect(_ peripheral: CBPeripheral, error: NSError?) {
-        MKUIToast.shared.showNotification(text: "Connection Failed. \(error?.localizedDescription)", alignment: .center, color: UIColor.flatRed(), identifier: nil) {}
+        MKUIToast.shared.showNotification(text: "Connection Failed. \(String(describing: error?.localizedDescription))", alignment: .center, color: UIColor.flatRed, identifier: nil) {}
         sleep(1)
         self.connectCount = 0
         connect()
@@ -151,7 +151,7 @@ extension BluetoothController: BluetoothSerialDelegate {
                     return
                 }
                 
-                tsopDelegate?.hasNewActiveTSOP(tsopNum: active)
+                tsopDelegate?.hasNewActiveTSOP(active)
                 
             } else if comps[0] == light {
                 let string = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
@@ -189,7 +189,7 @@ extension BluetoothController: BluetoothSerialDelegate {
                                 }
                             }
                             
-                            lightSensDelegate?.updatedCurrentLightSensors(sensors: sensorNumbers)
+                            lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers)
                         }
                     }
                 }
@@ -200,12 +200,12 @@ extension BluetoothController: BluetoothSerialDelegate {
                     return
                 }
                 
-                compassDelegate?.hasNewHeading(angle: angle)
+                compassDelegate?.hasNewHeading(angle)
             } else if comps[0] == string {
-                serialDelegate?.hasNewOutput(serial: comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n")))
+                serialDelegate?.hasNewOutput(comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n")))
             }
         } else {
-            serialDelegate?.hasNewOutput(serial: message)
+            serialDelegate?.hasNewOutput(message)
         }
     }
     
@@ -217,10 +217,10 @@ extension BluetoothController: BluetoothSerialDelegate {
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
         self.connected = false
         self.connectCount = 0
-        serialDelegate?.hasNewOutput(serial: "Disconnected from \(peripheral.name!)")
-        tsopDelegate?.hasNewActiveTSOP(tsopNum: -1)
-        compassDelegate?.hasNewHeading(angle: 0)
-        lightSensDelegate?.updatedCurrentLightSensors(sensors: [])
+        serialDelegate?.hasNewOutput("Disconnected from \(peripheral.name!)")
+        tsopDelegate?.hasNewActiveTSOP(-1)
+        compassDelegate?.hasNewHeading(0)
+        lightSensDelegate?.updatedCurrentLightSensors([])
         connect()
     }
 }

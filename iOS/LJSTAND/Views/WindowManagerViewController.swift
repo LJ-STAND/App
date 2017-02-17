@@ -24,8 +24,8 @@ class WindowManagerViewController: UIViewController, ResizableViewController {
         
         let hexagonWidth = hexFrame.width / 3
         let topBottomPadding = (hexFrame.height - hexagonWidth * 3) / 2
-        let differenceHeight = hexagonWidth * CGFloat(sin(M_PI/6))
-        let differenceWidth = hexagonWidth * CGFloat(cos(M_PI/6))
+        let differenceHeight = hexagonWidth * CGFloat(sin(Double.pi/6))
+        let differenceWidth = hexagonWidth * CGFloat(cos(Double.pi/6))
         self.view.backgroundColor = UIColor.white
         
         serialButton = HexButton(frame: CGRect(x: hexFrame.midX - differenceWidth / 2 - hexagonWidth / 2, y: hexFrame.origin.y + topBottomPadding, width: hexagonWidth, height: hexagonWidth))
@@ -75,8 +75,8 @@ class WindowManagerViewController: UIViewController, ResizableViewController {
         
         let hexagonWidth = hexFrame.width / 3
         let topBottomPadding = (hexFrame.height - hexagonWidth * 3) / 2
-        let differenceHeight = hexagonWidth * CGFloat(sin(M_PI/6))
-        let differenceWidth = hexagonWidth * CGFloat(cos(M_PI/6))
+        let differenceHeight = hexagonWidth * CGFloat(sin(Double.pi/6))
+        let differenceWidth = hexagonWidth * CGFloat(cos(Double.pi/6))
         
         serialButton.frame = CGRect(x: hexFrame.midX - differenceWidth / 2 - hexagonWidth / 2, y: hexFrame.origin.y + topBottomPadding, width: hexagonWidth, height: hexagonWidth)
     

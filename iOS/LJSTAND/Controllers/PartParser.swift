@@ -19,7 +19,7 @@ class PartParser {
         getData()
     }
     
-    private func getData() {
+    fileprivate func getData() {
         do {
             let filePath = Bundle.main.path(forResource: "parts", ofType: "csv")!
             let fileURL = URL(fileURLWithPath: filePath)
