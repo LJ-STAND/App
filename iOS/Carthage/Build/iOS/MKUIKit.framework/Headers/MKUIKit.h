@@ -2,8 +2,8 @@
 //  MKUIKit.h
 //  MKUIKit
 //
-//  Created by Lachlan Grant on 19/12/16.
-//  Copyright © 2016 Lachlan Grant. All rights reserved.
+//  Created by Lachlan Grant on 19/2/17.
+//  Copyright © 2017 Lachlan Grant. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -15,6 +15,6 @@ FOUNDATION_EXPORT double MKUIKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char MKUIKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <MKUIKit/PublicHeader.h>
+
 #import <MKUIKit/CRToastConfig.h>
 #import <MKUIKit/CRToastManager.h>
-

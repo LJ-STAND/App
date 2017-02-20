@@ -36,10 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initialWindow()
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
-        
-        let timer = Timer(timeInterval: 2.0, target: self, selector: #selector(AppDelegate.checkForUpdate), userInfo: nil, repeats: false)
-        
-        timer.fire()
         return true
     }
     
@@ -102,6 +98,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         logWindow.rootViewController = nav
         logWindow.makeKeyAndVisible()
         window?.addSubview(logWindow)
+        
+        checkForUpdate()
     }
     
     func checkForUpdate() {

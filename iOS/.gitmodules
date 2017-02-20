@@ -4,3 +4,9 @@
 	url = https://github.com/LachlanGrant/MKKit.git
 [submodule "Carthage/Checkouts/Chameleon-Swift3.0.2"]
 	url = https://github.com/LachlanGrant/Chameleon-Swift3.0.2.git
+[submodule "Carthage/Checkouts/MKUIKit"]
+	url = https://github.com/LachlanGrant/MKUIKit.git
+[submodule "Carthage/Checkouts/RESTKit"]
+	url = https://github.com/LachlanGrant/RESTKit.git
+[submodule "Carthage/Checkouts/MKUtilityKit"]
+	url = https://github.com/LachlanGrant/MKUtilityKit.git
