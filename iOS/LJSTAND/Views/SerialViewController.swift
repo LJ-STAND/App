@@ -13,59 +13,54 @@ import MKUIKit
 import CoreBluetooth
 import Chameleon
 
-class SerialViewController: UIViewController, AnimationViewController {
-    internal var tappedButton: UIButton?
+class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, ResizableViewController {
+    open var hasText: Bool {
+        return true
+    }
 
-    
-    @IBOutlet weak var sendTextField: UITextField!
     @IBOutlet weak var serialOutputTextView: UITextView!
-    @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     var connectCount = 0
-
-    var titleView: TitleView!
     var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
     var selectedPeripheral: CBPeripheral?
+    var blinkOn: Bool = false
+    
+    var enteredText: String = ""
+    var previousText: String = ""
+    
+    var keyboardFrame: CGRect = CGRect.zero
     
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.isHidden = true
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barStyle = .black
         
         BluetoothController.shared.serialDelegate = self
-        
-        titleView = TitleView(frame: CGRect(origin: CGPoint(x: self.view.frame.origin.x, y: self.view.frame.origin.y + 20.0), size: CGSize(width: self.view.frame.width, height: 80.0)), title: "Serial")
-    
-        self.view.addSubview(titleView)
-        
         reloadView()
         serialOutputTextView.text = ""
+        serialOutputTextView.layoutManager.allowsNonContiguousLayout = false
         
-        sendTextField.delegate = self
+        self.automaticallyAdjustsScrollViewInsets = false
         
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
-        view.addGestureRecognizer(tap)
+        _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.blink), userInfo: nil, repeats: true)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        bottomView.layer.masksToBounds = false
-        bottomView.layer.shadowOffset = CGSize(width: 0, height: -1)
-        bottomView.layer.shadowRadius = 0
-        bottomView.layer.shadowOpacity = 0.5
-        bottomView.layer.shadowColor = UIColor.gray.cgColor
-        
-        
     }
     
     func keyboardWillShow(_ notification: Notification) {
         var info = (notification as NSNotification).userInfo!
         let value = info[UIKeyboardFrameEndUserInfoKey] as! NSValue
-        let keyboardFrame = value.cgRectValue
+        keyboardFrame = value.cgRectValue
         
         UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
-            self.bottomConstraint.constant = keyboardFrame.size.height - 50
+            if let window = UIApplication.shared.keyWindow {
+                let difference = -((UIScreen.main.bounds.height - (window.frame.origin.y + window.frame.height - kWindowResizeGutterSize)) - self.keyboardFrame.size.height)
+                self.bottomConstraint.constant = difference > 0 ? difference : 0
+            }
         }, completion: { Bool -> Void in
-            self.serialOutputTextView.scrollToBotom()
+            self.serialOutputTextView.scrollToBottom()
         })
     }
     
@@ -74,6 +69,37 @@ class SerialViewController: UIViewController, AnimationViewController {
             self.bottomConstraint.constant = 0
         }, completion: nil)
         
+    }
+    
+    func windowWasResized() {
+        if self.isFirstResponder {
+            UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
+                if let window = UIApplication.shared.keyWindow {
+                    let difference = -((UIScreen.main.bounds.height - (window.frame.origin.y + window.frame.height - kWindowResizeGutterSize)) - self.keyboardFrame.size.height)
+                    self.bottomConstraint.constant = difference > 0 ? difference : 0
+                }
+            }, completion: { Bool -> Void in
+                self.serialOutputTextView.scrollToBottom()
+            })
+        }
+    }
+    
+    func windowWasMoved() {
+        resignFirstResponder()
+    }
+    
+    override func becomeFirstResponder() -> Bool {
+        return false
+    }
+    
+    func superBecomeFirstResponder() {
+        super.becomeFirstResponder()
+    }
+    
+    func blink() {
+        blinkOn = !blinkOn
+        
+        updateTextNoScroll()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -87,30 +113,78 @@ class SerialViewController: UIViewController, AnimationViewController {
     func reloadView() {
         if !serial.isReady {
             connectCount = 0
-            BluetoothController.shared.connect()
+            if !UIDevice.current.isSimulator {
+                BluetoothController.shared.connect()
+            }
         }
     }
     
-    func dismissKeyboard() {
-        view.endEditing(true)
+    func showHideKeyboard(_ rec: UIGestureRecognizer) {
+        if !self.isFirstResponder {
+            if let navVC = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+                if navVC.visibleViewController == self {
+                    if let window = UIApplication.shared.keyWindow as? WMWindow {
+                        let point = rec.location(in: window)
+                        let titleBarRect: CGRect = CGRectMake(window.bounds.origin.x, window.bounds.origin.y, window.bounds.size.width, kMoveGrabHeight)
+
+                        if !titleBarRect.contains(point) {
+                            super.becomeFirstResponder()
+                        }
+                    }
+                }
+            }
+        } else {
+            self.resignFirstResponder()
+        }
+    }
+
+    func insertText(_ text: String) {
+        if text == "\n" {
+            send()
+        } else {
+            enteredText.append(text)
+            updateText()
+        }
+    }
+    
+    func deleteBackward() {
+        if enteredText != "" {
+           enteredText.remove(at: enteredText.index(before: enteredText.endIndex))
+        }
+        
+        updateText()
+    }
+    
+    func updateText() {
+        serialOutputTextView.text = previousText + ">" + enteredText + (blinkOn ? "_" : "")
+        serialOutputTextView.scrollToBottom()
+    }
+    
+    func updateTextNoScroll() {
+        serialOutputTextView.text = previousText + ">" + enteredText + (blinkOn ? "_" : "")
+    }
+    
+    func send() {
+        if enteredText != "" {
+            serial.sendMessageToDevice(enteredText)
+            previousText += ">" + enteredText + "\n"
+            enteredText = ""
+            updateText()
+        }
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
+    private var returnKeyType: UIReturnKeyType {
+        return UIReturnKeyType.send
     }
 }
 
 extension SerialViewController: BluetoothControllerSerialDelegate {
-    func hasNewOutput(serial: String) {
-        serialOutputTextView.text = serial
-        serialOutputTextView.scrollToBotom()
-    }
-}
-
-extension SerialViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        guard let textToSend = sendTextField.text else {
-            return true
-        }
-        
-        serial.sendMessageToDevice(textToSend)
-        sendTextField.text = ""
-        return true
+    func hasNewOutput(_ serial: String) {
+        previousText += serial + "\n"
+        updateText()
     }
 }

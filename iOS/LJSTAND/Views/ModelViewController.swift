@@ -22,7 +22,7 @@ class ModelViewController: UIViewController {
 
         sceneView = SCNView(frame: self.view.frame)
         sceneView.scene = try! SCNScene(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Robot", ofType: "obj")!), options: nil)
-        sceneView.backgroundColor = UIColor.flatBlack()
+        sceneView.backgroundColor = UIColor.flatBlack
         sceneView.autoenablesDefaultLighting = true
         sceneView.allowsCameraControl = true
         sceneView.preferredFramesPerSecond = 60

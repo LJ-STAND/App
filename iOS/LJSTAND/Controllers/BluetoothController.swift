@@ -13,19 +13,19 @@ import MKKit
 import MKUtilityKit
 
 protocol BluetoothControllerSerialDelegate {
-    func hasNewOutput(serial: String)
+    func hasNewOutput(_ serial: String)
 }
 
 protocol BluetoothControllerTSOPDelegate {
-    func hasNewActiveTSOP(tsopNum: Int)
+    func hasNewActiveTSOP(_ tsopNum: Int)
 }
 
 protocol BluetoothControllerCompassDelegate {
-    func hasNewHeading(angle: Double)
+    func hasNewHeading(_ angle: Double)
 }
 
 protocol BluetoothControllerLightSensorDelegate {
-    func updatedCurrentLightSensors(sensors: [Int])
+    func updatedCurrentLightSensors(_ sensors: [Int])
 }
 
 class BluetoothController {
@@ -39,8 +39,9 @@ class BluetoothController {
     var peripherals: [CBPeripheral] = []
     var rssis: [Float] = []
     var selectedPeripheral: CBPeripheral?
-    var serialOutput: String = ""
     var connectCount = 0
+    
+    var connected: Bool = false
     
     init() {
         serial = BluetoothSerial(delegate: self)
@@ -48,13 +49,13 @@ class BluetoothController {
     }
     
     func connect() {
-//        if Platform.isSimulator || connectCount > 5 /*|| serial.centralManager.state != .poweredOn*/ { return }
-        
-        MKUAsync.main {
-            MKUIToast.shared.showNotification(text: "Scanning for Bluetooth Devices...", alignment: .center, color: UIColor.flatBlue(), identifier: nil, callback: {})
+        if !UIDevice.current.isSimulator && connectCount < 3 {
+            MKUAsync.main {
+                MKUIToast.shared.showNotification(text: "Scanning for Bluetooth Devices...", alignment: .center, color: UIColor.flatBlue, identifier: nil, callback: {
+                })
             }.background {
                 serial.startScan()
-                sleep(1)
+                sleep(2)
             }.main {
                 serial.stopScan()
                 
@@ -91,10 +92,13 @@ class BluetoothController {
                     self.connectCount = count
                     self.connect()
                 }
+            }
+        } else {
+            MKUIToast.shared.dismissAllNotifications(animated: true)
         }
     }
     
-    private func getRootView() -> UIViewController {
+    fileprivate func getRootView() -> UIViewController {
         return ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController)!!
     }
 }
@@ -115,17 +119,17 @@ extension BluetoothController: BluetoothSerialDelegate {
     
     func serialDidConnect(_ peripheral: CBPeripheral) {
         MKUIToast.shared.dismissAllNotifications(animated: false)
-        MKUIToast.shared.showNotification(text: "Connected to \(peripheral.name!)", alignment: .center, color: UIColor.flatGreen(), identifier: nil) {}
+        MKUIToast.shared.showNotification(text: "Connected to \(peripheral.name ?? "")", alignment: .center, color: UIColor.flatGreen, identifier: nil) {}
         
-        let text = "Connected to \(peripheral.name!) \n\n"
-        serialOutput = text
-        serialDelegate?.hasNewOutput(serial: serialOutput)
+        let text = "Connected to \(peripheral.name ?? "")"
+        serialDelegate?.hasNewOutput(text)
+        self.connected = true
         
         UserDefaults.standard.set(peripheral.name!, forKey: "lastConnected")
     }
     
     func serialDidFailToConnect(_ peripheral: CBPeripheral, error: NSError?) {
-        MKUIToast.shared.showNotification(text: "Connection Failed. \(error?.localizedDescription)", alignment: .center, color: UIColor.flatRed(), identifier: nil) {}
+        MKUIToast.shared.showNotification(text: "Connection Failed. \(String(describing: error?.localizedDescription))", alignment: .center, color: UIColor.flatRed, identifier: nil) {}
         sleep(1)
         self.connectCount = 0
         connect()
@@ -134,6 +138,7 @@ extension BluetoothController: BluetoothSerialDelegate {
     func serialDidReceiveString(_ message: String) {
         let comps = message.components(separatedBy: ";")
         
+        let string = "1"
         let tsop = "2"
         let light = "3"
         let compass = "4"
@@ -146,7 +151,7 @@ extension BluetoothController: BluetoothSerialDelegate {
                     return
                 }
                 
-                tsopDelegate?.hasNewActiveTSOP(tsopNum: active)
+                tsopDelegate?.hasNewActiveTSOP(active)
                 
             } else if comps[0] == light {
                 let string = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
@@ -184,7 +189,7 @@ extension BluetoothController: BluetoothSerialDelegate {
                                 }
                             }
                             
-                            lightSensDelegate?.updatedCurrentLightSensors(sensors: sensorNumbers)
+                            lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers)
                         }
                     }
                 }
@@ -195,16 +200,13 @@ extension BluetoothController: BluetoothSerialDelegate {
                     return
                 }
                 
-                compassDelegate?.hasNewHeading(angle: angle)
+                compassDelegate?.hasNewHeading(angle)
+            } else if comps[0] == string {
+                serialDelegate?.hasNewOutput(comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n")))
             }
-            
         } else {
-            serialOutput += message
-            serialDelegate?.hasNewOutput(serial: serialOutput)
+            serialDelegate?.hasNewOutput(message)
         }
-        
-        
-        
     }
     
     func serialDidChangeState() {
@@ -213,12 +215,12 @@ extension BluetoothController: BluetoothSerialDelegate {
     }
     
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
+        self.connected = false
         self.connectCount = 0
-        serialOutput = ""
-        serialDelegate?.hasNewOutput(serial: "")
-        tsopDelegate?.hasNewActiveTSOP(tsopNum: -1)
-        compassDelegate?.hasNewHeading(angle: 0)
-        lightSensDelegate?.updatedCurrentLightSensors(sensors: [])
+        serialDelegate?.hasNewOutput("Disconnected from \(peripheral.name!)")
+        tsopDelegate?.hasNewActiveTSOP(-1)
+        compassDelegate?.hasNewHeading(0)
+        lightSensDelegate?.updatedCurrentLightSensors([])
         connect()
     }
 }

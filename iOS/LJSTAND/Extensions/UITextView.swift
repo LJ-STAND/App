@@ -9,8 +9,8 @@
 import UIKit
 
 extension UITextView {
-    func scrollToBotom() {
-        let range = NSMakeRange(text.characters.count - 1, 1);
+    func scrollToBottom() {
+        let range = NSMakeRange(text.characters.count - 1, 0);
         scrollRangeToVisible(range);
     }
 }

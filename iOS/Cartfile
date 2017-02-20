@@ -1,1 +1,5 @@
-github "ViccAlexander/Chameleon"
+github "LachlanGrant/Chameleon-Swift3.0.2"
+github "LachlanGrant/MKKit"
+github "LachlanGrant/MKUIKit"
+github "LachlanGrant/MKUtilityKit"
+github "LachlanGrant/RESTKit"

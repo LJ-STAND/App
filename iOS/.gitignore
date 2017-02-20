@@ -20,11 +20,13 @@ xcuserdata
 
 # Cocoapods
 Pods
-Carthage/Checkouts
+#Carthage/Build
 
 # AppCode specific files
 .idea/
 *.iml
 
-Build/
+#Build/
 build.conf
+#*.bcsymbolmap
+#*.framework.dSYM

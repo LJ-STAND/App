@@ -176,7 +176,7 @@ final class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDel
         }
         
         var bytes = [UInt8](repeating: 0, count: data!.count / MemoryLayout<UInt8>.size)
-        (data! as NSData).getBytes(&bytes, length: data!.count)
+        (data! as Data).copyBytes(to: &bytes, count: data!.count)
         delegate.serialDidReceiveBytes(bytes)
     }
     

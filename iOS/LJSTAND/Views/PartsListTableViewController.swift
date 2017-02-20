@@ -33,7 +33,6 @@ class PartsListTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //TODO: Crashing
         let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "partDetail") as! PartDetailViewController
         view.index = indexPath.row
         self.navigationController?.pushViewController(view, animated: true)
