@@ -18,11 +18,23 @@ let ljStandGreen = UIColor.flatGreenDark
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var dock: UIWindow?
     var windows: [WMWindow] = []
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        let screenBounds = UIScreen.main.bounds
+        let dockWidth = 100
+        let dockFrame = CGRect(x: 0, y: 0, width: dockWidth, height: Int(screenBounds.height))
+        let windowFrame = CGRect(x: dockWidth, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
+        
+        dock = UIWindow(frame: dockFrame)
+        dock?.windowLevel = 3
+        dock?.rootViewController = viewController(fromStoryboardWithName: "Dock", viewControllerWithIdentifier: "init")
+        dock?.makeKeyAndVisible()
+        dock?.backgroundColor = .clear
+        
         let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
-        window = UIWindow(frame: UIScreen.main.bounds)
+        window = UIWindow(frame: windowFrame)
         window?.rootViewController = view
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
@@ -33,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.setStatusBarStyle(.lightContent, animated: false)
         
         logWindow()
-        initialWindow()
+//        initialWindow()
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
         return true

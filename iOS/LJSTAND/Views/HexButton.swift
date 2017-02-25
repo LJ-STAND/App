@@ -8,8 +8,9 @@
 
 import UIKit
 
+@IBDesignable
 class HexButton: UIButton {
-    var text: String = ""
+    @IBInspectable var text: String = ""
     
     override var frame: CGRect {
         didSet {
@@ -20,13 +21,20 @@ class HexButton: UIButton {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.adjustsImageWhenHighlighted = true
-        self.backgroundColor = UIColor.clear
+        commonInit()
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    func commonInit() {
+        self.adjustsImageWhenHighlighted = true
+        self.backgroundColor = UIColor.clear
+        
+        self.titleLabel?.textColor = .clear
+        self.titleLabel?.text = ""
     }
     
     override func draw(_ rect: CGRect) {
