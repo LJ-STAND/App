@@ -1,5 +1,5 @@
 github "LachlanGrant/Chameleon-Swift3.0.2" "2.2.0.2"
-github "LachlanGrant/MKKit" "6.1.0"
+github "LachlanGrant/MKKit" "6.1.1"
 github "LachlanGrant/MKUIKit" "1.1.0"
 github "LachlanGrant/RESTKit" "1.1.0"
 github "LachlanGrant/MKUtilityKit" "1.3.1"

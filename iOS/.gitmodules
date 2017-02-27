@@ -1,5 +1,3 @@
-[submodule "Carthage/Checkouts/Chameleon"]
-	url = https://github.com/ViccAlexander/Chameleon.git
 [submodule "Carthage/Checkouts/MKKit"]
 	url = https://github.com/LachlanGrant/MKKit.git
 [submodule "Carthage/Checkouts/Chameleon-Swift3.0.2"]
