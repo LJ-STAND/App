@@ -16,3 +16,7 @@ extension MKAppGroups {
 extension MKBundleID {
     static let LJSTAND = "com.lachlangrant.LJSTAND"
 }
+
+extension MKCloudKitContainers {
+    static let LJSTAND = "iCloud.com.lachlangrant.LJSTAND"
+}

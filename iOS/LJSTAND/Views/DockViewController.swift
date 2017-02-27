@@ -41,6 +41,6 @@ class DockViewController: UIViewController {
     }
     
     @IBAction func settingsAction(_ sender: Any) {
-//        commonAction(name: (sender as! HexButton).text)
+        commonAction(name: (sender as! HexButton).text)
     }
 }

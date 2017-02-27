@@ -36,6 +36,8 @@
 		EF608FF01E63A331005361F9 /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF608FF21E63A331005361F9 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FF11E63A331005361F9 /* RESTKit.framework */; };
 		EF608FF31E63A331005361F9 /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FF11E63A331005361F9 /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */; };
+		EF608FFB1E63AF75005361F9 /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FFA1E63AF75005361F9 /* DefaultKeys.swift */; };
 		EF734A571DB8B894000E6D8C /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734A561DB8B894000E6D8C /* BluetoothController.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
@@ -106,6 +108,8 @@
 		EF608FEB1E63A331005361F9 /* MKUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUtilityKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF608FF11E63A331005361F9 /* RESTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RESTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		EF608FFA1E63AF75005361F9 /* DefaultKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
 		EF734A561DB8B894000E6D8C /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 		EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EF9518231DB08CB4009B1F6F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 			children = (
 				EFAA53581DB6DED700EBFA89 /* Part.swift */,
 				EF608FE01E639E21005361F9 /* MKKitExt.swift */,
+				EF608FFA1E63AF75005361F9 /* DefaultKeys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -280,6 +285,7 @@
 				EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */,
 				EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */,
 				EFAA53621DB6FB0C00EBFA89 /* WebViewController.swift */,
+				EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -338,7 +344,6 @@
 				EFB29C6B1E3F1E1D00906D5A /* Tag Icons */,
 				E103AE9143FC4D78FD557160 /* Resources */,
 				9A0DC08F846703B65F22E608 /* Set version number */,
-				EFB29C6C1E3F1E4500906D5A /* Restore Icons */,
 				EF608FF41E63A331005361F9 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -468,21 +473,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "build=$(<build.conf)\nif [ $build = \"DEBUG\" ] ; then\n${SRCROOT}/bin/tag_icons tag ${SRCROOT}/LJSTAND/Resources/Images.xcassets/AppIcon.appiconset\nfi";
-		};
-		EFB29C6C1E3F1E4500906D5A /* Restore Icons */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Restore Icons";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "build=$(<build.conf)\nif [ $build = \"DEBUG\" ] ; then\n${SRCROOT}/bin/tag_icons cleanup LJSTAND/Resources/Images.xcassets/AppIcon.appiconset\nfi";
+			shellScript = "cp -r ${SRCROOT}/LJSTAND/Resources/Images.xcassets/AppIcon.appiconset ${SRCROOT}/LJSTAND/Resources/Images.xcassets/OverlayIcon.appiconset\n${SRCROOT}/bin/tag_icons tag ${SRCROOT}/LJSTAND/Resources/Images.xcassets/OverlayIcon.appiconset";
 		};
 		EFEDAA3E1E46D172005BEE4E /* Environment Vars */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -506,6 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFAA53651DB6FCC600EBFA89 /* DesignTableViewController.swift in Sources */,
+				EF608FFB1E63AF75005361F9 /* DefaultKeys.swift in Sources */,
 				D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */,
 				EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */,
 				CD2A02941E46EB080037C8E5 /* ResizableViewController.swift in Sources */,
@@ -522,6 +514,7 @@
 				EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */,
 				EFAA535F1DB6E90B00EBFA89 /* PartsListTableViewController.swift in Sources */,
 				EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */,
+				EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */,
 				CD29B26E1E48076A00EEF6B7 /* BackgroundViewController.swift in Sources */,
 				EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */,
 				EFAFC6861E61068D00DB37E3 /* DockViewController.swift in Sources */,

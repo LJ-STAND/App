@@ -39,13 +39,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
         
+        let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
+        
         swizzleUIWindow()
         
         UITabBar.appearance().tintColor = ljStandGreen
         application.setStatusBarStyle(.lightContent, animated: false)
         
-        logWindow()
-//        initialWindow()
+        if defaults.bool(forKey: DefaultKeys.showLog) == true {
+            logWindow()
+        }
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
         return true
@@ -97,37 +100,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func logWindow() {
-        let logWindow = WMWindow(frame: CGRectMake(44, 344, 400, 300))
-        logWindow.title = "App Log"
+        let viewName = "App Log"
         
-        let view = MKUConsoleViewController()
+        var isShown = false
+        var hiddenWindow: WMWindow!
+        for item in windows {
+            if item.title == viewName {
+                isShown = true
+                hiddenWindow = item
+            }
+        }
         
-        view.title = "App Log"
-        
-        let nav = UINavigationController(rootViewController: view)
-        nav.navigationBar.isTranslucent = false
-        nav.navigationBar.barStyle = .black
-        logWindow.rootViewController = nav
-        logWindow.makeKeyAndVisible()
-        window?.addSubview(logWindow)
-        
-        checkForUpdate()
+        if !isShown {
+            let newWindow = WMWindow(frame: CGRectMake(44, 344, 300, 300))
+            newWindow.title = viewName
+            
+            let mainView = MKUConsoleViewController()
+            let nav = UINavigationController(rootViewController: mainView)
+            nav.title = viewName
+            mainView.title = viewName
+            nav.navigationBar.isTranslucent = false
+            nav.navigationBar.barStyle = .black
+            
+            
+            newWindow.rootViewController = nav
+            newWindow.makeKeyAndVisible()
+            
+            windows.append(newWindow)
+            
+            window?.addSubview(newWindow)
+        } else {
+            hiddenWindow.makeKeyAndVisible()
+        }
     }
     
-    func checkForUpdate() {
-        MKUAsync.background {
-            MKULog.shared.info("Checking for update")
-            MKUAppSettings.shared.checkForAppUpdate(urlString: "https://lj-stand.github.io/Apps/config.json", jsonKey: "currentRelease", manifestURL: "https://lj-stand.github.io/Apps/dist/manifest.plist", messageCallback: { (error, message) in
-                if error {
-                    MKULog.shared.error(message)
-                } else {
-                    MKULog.shared.info(message)
-                }
-            }) { (url, message) in
-                MKULog.shared.info(message)
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    func removeWindow(name: String) {
+        print(name)
+        for item in windows {
+            if item.title == name {
+                item.close(self)
             }
-            MKULog.shared.mark()
         }
     }
 }
