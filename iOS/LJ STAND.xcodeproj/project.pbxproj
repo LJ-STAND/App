@@ -23,6 +23,19 @@
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
 		EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF471E491DB6C31900CED76B /* ModelViewController.swift */; };
 		EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */ = {isa = PBXBuildFile; fileRef = EF471E4B1DB6C37900CED76B /* Robot.obj */; };
+		EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FDC1E639DE1005361F9 /* CloudKit.framework */; };
+		EF608FDF1E639DFB005361F9 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FDE1E639DFB005361F9 /* ExternalAccessory.framework */; };
+		EF608FE11E639E21005361F9 /* MKKitExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FE01E639E21005361F9 /* MKKitExt.swift */; };
+		EF608FE61E63A331005361F9 /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE51E63A331005361F9 /* Chameleon.framework */; };
+		EF608FE71E63A331005361F9 /* Chameleon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE51E63A331005361F9 /* Chameleon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF608FE91E63A331005361F9 /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE81E63A331005361F9 /* MKKit.framework */; };
+		EF608FEA1E63A331005361F9 /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE81E63A331005361F9 /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF608FEC1E63A331005361F9 /* MKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FEB1E63A331005361F9 /* MKUIKit.framework */; };
+		EF608FED1E63A331005361F9 /* MKUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FEB1E63A331005361F9 /* MKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF608FEF1E63A331005361F9 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */; };
+		EF608FF01E63A331005361F9 /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF608FF21E63A331005361F9 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FF11E63A331005361F9 /* RESTKit.framework */; };
+		EF608FF31E63A331005361F9 /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FF11E63A331005361F9 /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF734A571DB8B894000E6D8C /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734A561DB8B894000E6D8C /* BluetoothController.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
@@ -43,34 +56,25 @@
 		EFAA53791DB705B000EBFA89 /* Render 1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53781DB705B000EBFA89 /* Render 1.bmp */; };
 		EFAFC6861E61068D00DB37E3 /* DockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFC6851E61068D00DB37E3 /* DockViewController.swift */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
-		EFDEABB91E57A6110067C370 /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB41E57A6110067C370 /* MKKit.framework */; };
-		EFDEABBB1E57A6110067C370 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB61E57A6110067C370 /* MKUtilityKit.framework */; };
-		EFDEABBC1E57A6110067C370 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB71E57A6110067C370 /* RESTKit.framework */; };
-		EFDEABC01E57A6250067C370 /* MKKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFDEABB41E57A6110067C370 /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EFDEABC11E57A6250067C370 /* MKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFDEABB51E57A6110067C370 /* MKUIKit.framework */; };
-		EFDEABC21E57A6250067C370 /* MKUIKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFDEABB51E57A6110067C370 /* MKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EFDEABC41E57A6250067C370 /* MKUtilityKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFDEABB61E57A6110067C370 /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EFDEABC61E57A6250067C370 /* RESTKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFDEABB71E57A6110067C370 /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */; };
 		EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA381E469A4E005BEE4E /* WMWindow.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
-		EFEF06BB1E57A99E0017824A /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFEF06B91E57A99B0017824A /* Chameleon.framework */; };
-		EFEF06BC1E57A99E0017824A /* Chameleon.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EFEF06B91E57A99B0017824A /* Chameleon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EFB29C641E3F1D5400906D5A /* CopyFiles */ = {
+		EF608FF41E63A331005361F9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EFDEABC41E57A6250067C370 /* MKUtilityKit.framework in CopyFiles */,
-				EFDEABC01E57A6250067C370 /* MKKit.framework in CopyFiles */,
-				EFDEABC21E57A6250067C370 /* MKUIKit.framework in CopyFiles */,
-				EFDEABC61E57A6250067C370 /* RESTKit.framework in CopyFiles */,
-				EFEF06BC1E57A99E0017824A /* Chameleon.framework in CopyFiles */,
+				EF608FED1E63A331005361F9 /* MKUIKit.framework in Embed Frameworks */,
+				EF608FF31E63A331005361F9 /* RESTKit.framework in Embed Frameworks */,
+				EF608FE71E63A331005361F9 /* Chameleon.framework in Embed Frameworks */,
+				EF608FF01E63A331005361F9 /* MKUtilityKit.framework in Embed Frameworks */,
+				EF608FEA1E63A331005361F9 /* MKKit.framework in Embed Frameworks */,
 			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -89,12 +93,19 @@
 		CD7C1EBC1E475487006F8512 /* WindowManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowManagerViewController.swift; sourceTree = "<group>"; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
-		EF1B7C2C1DAD01D300B3442E /* LJSTAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LJSTAND.entitlements; sourceTree = "<group>"; };
 		EF1E983F1E61019D00C70420 /* Dock.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dock.storyboard; sourceTree = "<group>"; };
 		EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EF471E491DB6C31900CED76B /* ModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
 		EF471E4B1DB6C37900CED76B /* Robot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Robot.obj; sourceTree = "<group>"; };
+		EF608FDC1E639DE1005361F9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		EF608FDE1E639DFB005361F9 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
+		EF608FE01E639E21005361F9 /* MKKitExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKKitExt.swift; sourceTree = "<group>"; };
+		EF608FE51E63A331005361F9 /* Chameleon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chameleon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF608FE81E63A331005361F9 /* MKKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF608FEB1E63A331005361F9 /* MKUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUtilityKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF608FF11E63A331005361F9 /* RESTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RESTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF734A561DB8B894000E6D8C /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 		EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EF9518231DB08CB4009B1F6F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -117,14 +128,9 @@
 		EFB29C681E3F1D7800906D5A /* Chameleon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chameleon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 		EFC213881E5A636000233E6E /* LJ STAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LJ STAND.entitlements"; sourceTree = "<group>"; };
-		EFDEABB41E57A6110067C370 /* MKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKKit.framework; path = Carthage/Build/iOS/MKKit.framework; sourceTree = "<group>"; };
-		EFDEABB51E57A6110067C370 /* MKUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKUIKit.framework; path = Carthage/Build/iOS/MKUIKit.framework; sourceTree = "<group>"; };
-		EFDEABB61E57A6110067C370 /* MKUtilityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKUtilityKit.framework; path = Carthage/Build/iOS/MKUtilityKit.framework; sourceTree = "<group>"; };
-		EFDEABB71E57A6110067C370 /* RESTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESTKit.framework; path = Carthage/Build/iOS/RESTKit.framework; sourceTree = "<group>"; };
 		EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		EFEDAA381E469A4E005BEE4E /* WMWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMWindow.swift; sourceTree = "<group>"; };
 		EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
-		EFEF06B91E57A99B0017824A /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,12 +138,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFDEABC11E57A6250067C370 /* MKUIKit.framework in Frameworks */,
-				EFDEABB91E57A6110067C370 /* MKKit.framework in Frameworks */,
+				EF608FE91E63A331005361F9 /* MKKit.framework in Frameworks */,
+				EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */,
 				162D8C3B1E4A153094F4530A /* Foundation.framework in Frameworks */,
-				EFDEABBB1E57A6110067C370 /* MKUtilityKit.framework in Frameworks */,
-				EFEF06BB1E57A99E0017824A /* Chameleon.framework in Frameworks */,
-				EFDEABBC1E57A6110067C370 /* RESTKit.framework in Frameworks */,
+				EF608FF21E63A331005361F9 /* RESTKit.framework in Frameworks */,
+				EF608FEC1E63A331005361F9 /* MKUIKit.framework in Frameworks */,
+				EF608FDF1E639DFB005361F9 /* ExternalAccessory.framework in Frameworks */,
+				EF608FEF1E63A331005361F9 /* MKUtilityKit.framework in Frameworks */,
+				EF608FE61E63A331005361F9 /* Chameleon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +175,6 @@
 			isa = PBXGroup;
 			children = (
 				EFC213881E5A636000233E6E /* LJ STAND.entitlements */,
-				EF1B7C2C1DAD01D300B3442E /* LJSTAND.entitlements */,
 				AB3793622466EE2A02CBADDD /* LJSTAND */,
 				534AB7A34A3D72BAFA984F6B /* Frameworks */,
 				AC5953FE6C17FE0FB64BBF47 /* Products */,
@@ -197,11 +204,13 @@
 		534AB7A34A3D72BAFA984F6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EFEF06B91E57A99B0017824A /* Chameleon.framework */,
-				EFDEABB41E57A6110067C370 /* MKKit.framework */,
-				EFDEABB51E57A6110067C370 /* MKUIKit.framework */,
-				EFDEABB61E57A6110067C370 /* MKUtilityKit.framework */,
-				EFDEABB71E57A6110067C370 /* RESTKit.framework */,
+				EF608FF11E63A331005361F9 /* RESTKit.framework */,
+				EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */,
+				EF608FEB1E63A331005361F9 /* MKUIKit.framework */,
+				EF608FE81E63A331005361F9 /* MKKit.framework */,
+				EF608FE51E63A331005361F9 /* Chameleon.framework */,
+				EF608FDE1E639DFB005361F9 /* ExternalAccessory.framework */,
+				EF608FDC1E639DE1005361F9 /* CloudKit.framework */,
 				D83A68AAD9837795A414B570 /* iOS */,
 			);
 			name = Frameworks;
@@ -242,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				EFAA53581DB6DED700EBFA89 /* Part.swift */,
+				EF608FE01E639E21005361F9 /* MKKitExt.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -328,8 +338,8 @@
 				EFB29C6B1E3F1E1D00906D5A /* Tag Icons */,
 				E103AE9143FC4D78FD557160 /* Resources */,
 				9A0DC08F846703B65F22E608 /* Set version number */,
-				EFB29C641E3F1D5400906D5A /* CopyFiles */,
 				EFB29C6C1E3F1E4500906D5A /* Restore Icons */,
+				EF608FF41E63A331005361F9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -355,14 +365,23 @@
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.NetworkExtensions = {
 								enabled = 0;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.WAC = {
-								enabled = 0;
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
 							};
 						};
 					};
@@ -496,6 +515,7 @@
 				EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */,
 				EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */,
 				EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */,
+				EF608FE11E639E21005361F9 /* MKKitExt.swift in Sources */,
 				EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */,
 				CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */,
 				EFAA53611DB6EAC700EBFA89 /* PartDetailViewController.swift in Sources */,
@@ -522,6 +542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "LJ STAND.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = QSCWPBA77U;
@@ -674,6 +695,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "LJ STAND.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QSCWPBA77U;

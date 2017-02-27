@@ -1,0 +1,58 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "E9F37395EDE43EA924C72300D5B38DFF514F51EA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "E0B209C7A4E91C81F6E11778DB7ADBB4E577529E" : 9223372036854775807,
+    "2EFD9E9BB522E948C7839ECD2EEB5A45F1231981" : 9223372036854775807,
+    "91F5EEA16748E5492360C0226DB3AA209732BE88" : 9223372036854775807,
+    "7D00071B9C16C841CF7B39F067D63CE6DF318F1D" : 9223372036854775807,
+    "E9F37395EDE43EA924C72300D5B38DFF514F51EA" : 9223372036854775807,
+    "0C419E6AD3FCA820D515E166ABF0745952668AB7" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8005EB40-B5ED-43D1-AFEE-2D00018FD5E8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "E0B209C7A4E91C81F6E11778DB7ADBB4E577529E" : "Apps\/iOS\/Carthage\/Checkouts\/Chameleon-Swift3.0.2\/",
+    "2EFD9E9BB522E948C7839ECD2EEB5A45F1231981" : "Apps\/iOS\/Carthage\/Checkouts\/MKUtilityKit\/",
+    "91F5EEA16748E5492360C0226DB3AA209732BE88" : "Apps\/iOS\/Carthage\/Checkouts\/RESTKit\/",
+    "7D00071B9C16C841CF7B39F067D63CE6DF318F1D" : "Apps\/iOS\/Carthage\/Checkouts\/MKKit\/",
+    "E9F37395EDE43EA924C72300D5B38DFF514F51EA" : "Apps\/",
+    "0C419E6AD3FCA820D515E166ABF0745952668AB7" : "Apps\/iOS\/Carthage\/Checkouts\/MKUIKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "LJ STAND",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "iOS\/LJ STAND.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LachlanGrant\/MKUIKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0C419E6AD3FCA820D515E166ABF0745952668AB7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LachlanGrant\/MKUtilityKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2EFD9E9BB522E948C7839ECD2EEB5A45F1231981"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LachlanGrant\/MKKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7D00071B9C16C841CF7B39F067D63CE6DF318F1D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LachlanGrant\/RESTKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "91F5EEA16748E5492360C0226DB3AA209732BE88"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/LachlanGrant\/Chameleon-Swift3.0.2.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E0B209C7A4E91C81F6E11778DB7ADBB4E577529E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:LJ-STAND\/Apps.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "E9F37395EDE43EA924C72300D5B38DFF514F51EA"
+    }
+  ]
+}
