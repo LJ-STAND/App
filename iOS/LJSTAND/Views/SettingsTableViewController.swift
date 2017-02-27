@@ -28,7 +28,7 @@ class SettingsTableViewController: UITableViewController {
         if #available(iOS 10.3, *) {
             MKULog.shared.info("Running iOS 10.3")
             if (MKUDefaults.init(suiteName: MKAppGroups.LJSTAND).defaults.bool(forKey: DefaultKeys.alternativeIcon)) {
-                UIApplication.shared.setAlternateIconName("OverlayIcon") { (error) in
+                UIApplication.shared.setAlternateIconName("Overlay") { (error) in
                     if ((error) != nil) {
                         MKUIToast.shared.showNotification(text: (error?.localizedDescription)!, alignment: .center, color: .flatRed, identifier: nil, callback: {})
                         MKULog.shared.error(error?.localizedDescription)

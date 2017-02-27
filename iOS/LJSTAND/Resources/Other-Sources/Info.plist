@@ -12,24 +12,22 @@
 	<dict>
 		<key>CFBundleAlternateIcons</key>
 		<dict>
-			<key>OverlayIcon</key>
+			<key>Overlay</key>
 			<dict>
 				<key>CFBundleIconFiles</key>
 				<array>
-					<string>OverlayIcon</string>
+					<string>Overlay</string>
 				</array>
 				<key>UIPrerenderedIcon</key>
-				<true/>
+				<false/>
 			</dict>
 		</dict>
 		<key>CFBundlePrimaryIcon</key>
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>AppIcon</string>
+				<string>Icon</string>
 			</array>
-			<key>UIPrerenderedIcon</key>
-			<true/>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>

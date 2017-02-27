@@ -23,6 +23,10 @@
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
 		EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF471E491DB6C31900CED76B /* ModelViewController.swift */; };
 		EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */ = {isa = PBXBuildFile; fileRef = EF471E4B1DB6C37900CED76B /* Robot.obj */; };
+		EF5190CE1E64EBE600867617 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5190CC1E64EBE600867617 /* Icon@2x.png */; };
+		EF5190CF1E64EBE600867617 /* Icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5190CD1E64EBE600867617 /* Icon@3x.png */; };
+		EF5190D21E64EBED00867617 /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5190D01E64EBED00867617 /* Overlay@2x.png */; };
+		EF5190D31E64EBED00867617 /* Overlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5190D11E64EBED00867617 /* Overlay@3x.png */; };
 		EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FDC1E639DE1005361F9 /* CloudKit.framework */; };
 		EF608FDF1E639DFB005361F9 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FDE1E639DFB005361F9 /* ExternalAccessory.framework */; };
 		EF608FE11E639E21005361F9 /* MKKitExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FE01E639E21005361F9 /* MKKitExt.swift */; };
@@ -100,6 +104,10 @@
 		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EF471E491DB6C31900CED76B /* ModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
 		EF471E4B1DB6C37900CED76B /* Robot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Robot.obj; sourceTree = "<group>"; };
+		EF5190CC1E64EBE600867617 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Icons/AppIcon.appiconset/Icon@2x.png"; sourceTree = SOURCE_ROOT; };
+		EF5190CD1E64EBE600867617 /* Icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@3x.png"; path = "Icons/AppIcon.appiconset/Icon@3x.png"; sourceTree = SOURCE_ROOT; };
+		EF5190D01E64EBED00867617 /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Overlay@2x.png"; path = "Icons/OverlayIcon.appiconset/Overlay@2x.png"; sourceTree = SOURCE_ROOT; };
+		EF5190D11E64EBED00867617 /* Overlay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Overlay@3x.png"; path = "Icons/OverlayIcon.appiconset/Overlay@3x.png"; sourceTree = SOURCE_ROOT; };
 		EF608FDC1E639DE1005361F9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EF608FDE1E639DFB005361F9 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		EF608FE01E639E21005361F9 /* MKKitExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKKitExt.swift; sourceTree = "<group>"; };
@@ -159,6 +167,8 @@
 		1071F4B8BC77949A586EFAB9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				EF51909B1E64E71000867617 /* OverlayIcon */,
+				EF51906A1E64E6FC00867617 /* Icon */,
 				AFE59898617C260F3B4780CF /* Images.xcassets */,
 				8A26421F0F283F89FE67E912 /* Storyboards */,
 				46AA05DF757B75F62DB4D893 /* Nibs */,
@@ -330,6 +340,24 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		EF51906A1E64E6FC00867617 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				EF5190CC1E64EBE600867617 /* Icon@2x.png */,
+				EF5190CD1E64EBE600867617 /* Icon@3x.png */,
+			);
+			name = Icon;
+			sourceTree = "<group>";
+		};
+		EF51909B1E64E71000867617 /* OverlayIcon */ = {
+			isa = PBXGroup;
+			children = (
+				EF5190D01E64EBED00867617 /* Overlay@2x.png */,
+				EF5190D11E64EBED00867617 /* Overlay@3x.png */,
+			);
+			name = OverlayIcon;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,10 +367,9 @@
 			buildPhases = (
 				EFEDAA3E1E46D172005BEE4E /* Environment Vars */,
 				876DD3D9D9926CE2EBE64DDB /* Sources */,
+				E103AE9143FC4D78FD557160 /* Resources */,
 				35EDF3B6A1B1848E58424BF3 /* Warn for TODO and FIXME comments */,
 				5848C3664EFEE9C0725AEAFA /* Frameworks */,
-				EFB29C6B1E3F1E1D00906D5A /* Tag Icons */,
-				E103AE9143FC4D78FD557160 /* Resources */,
 				9A0DC08F846703B65F22E608 /* Set version number */,
 				EF608FF41E63A331005361F9 /* Embed Frameworks */,
 			);
@@ -417,14 +444,18 @@
 				EFAA53761DB701AB00EBFA89 /* Regulator.pdf in Resources */,
 				EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */,
 				D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */,
+				EF5190D31E64EBED00867617 /* Overlay@3x.png in Resources */,
 				EFAA53731DB701AB00EBFA89 /* LM.pdf in Resources */,
 				EFAA53771DB701AB00EBFA89 /* TSOP.pdf in Resources */,
 				EF1E98401E61019D00C70420 /* Dock.storyboard in Resources */,
 				EFAA53751DB701AB00EBFA89 /* Photo.pdf in Resources */,
+				EF5190CF1E64EBE600867617 /* Icon@3x.png in Resources */,
 				EFAA53741DB701AB00EBFA89 /* MotorCtrl.pdf in Resources */,
 				0FE982DBB7126C7560A3FE1B /* Main.storyboard in Resources */,
+				EF5190CE1E64EBE600867617 /* Icon@2x.png in Resources */,
 				EFAA535D1DB6E36400EBFA89 /* parts.csv in Resources */,
 				4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */,
+				EF5190D21E64EBED00867617 /* Overlay@2x.png in Resources */,
 				EFAA53791DB705B000EBFA89 /* Render 1.bmp in Resources */,
 				EFAA53721DB701AB00EBFA89 /* Fuse.PDF in Resources */,
 			);
@@ -460,20 +491,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "${SRCROOT}/bin/gitVersion";
-		};
-		EFB29C6B1E3F1E1D00906D5A /* Tag Icons */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Tag Icons";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "cp -r ${SRCROOT}/LJSTAND/Resources/Images.xcassets/AppIcon.appiconset ${SRCROOT}/LJSTAND/Resources/Images.xcassets/OverlayIcon.appiconset\n${SRCROOT}/bin/tag_icons tag ${SRCROOT}/LJSTAND/Resources/Images.xcassets/OverlayIcon.appiconset";
 		};
 		EFEDAA3E1E46D172005BEE4E /* Environment Vars */ = {
 			isa = PBXShellScriptBuildPhase;

@@ -9,8 +9,24 @@
          <ExecutionAction
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
-               title = "Run Script"
+               title = "Debug"
                scriptText = "echo &quot;DEBUG&quot; &gt; ${SRCROOT}/build.conf">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "D020986916FA04E7BBD68098"
+                     BuildableName = "LJ STAND.app"
+                     BlueprintName = "LJ STAND"
+                     ReferencedContainer = "container:LJ STAND.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Icons"
+               scriptText = "rm -rf Icons/OverlayIcon.appiconset&#10;unzip Icons/OverlayIcon.appiconset.zip -d Icons&#10;rm -rf Icons/__MACOSX&#10;${SRCROOT}/bin/tag_icons tag ${SRCROOT}/Icons/OverlayIcon.appiconset">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
