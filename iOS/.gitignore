@@ -30,3 +30,4 @@ Pods
 build.conf
 *.bcsymbolmap
 #*.framework.dSYM
+Icons/OverlayIcon.appiconset/
