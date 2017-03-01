@@ -17,9 +17,9 @@ let ljStandGreen = UIColor.flatGreenDark
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+    var windowManager: UIWindow?
     var dock: UIWindow?
-    var windows: [WMWindow] = []
+    @nonobjc var windows: [WMWindow] = []
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         let screenBounds = UIScreen.main.bounds
@@ -34,10 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dock?.backgroundColor = .clear
         
         let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
-        window = UIWindow(frame: windowFrame)
-        window?.rootViewController = view
-        window?.makeKeyAndVisible()
-        window?.backgroundColor = .white
+        windowManager = UIWindow(frame: windowFrame)
+        windowManager?.rootViewController = view
+        windowManager?.makeKeyAndVisible()
+        windowManager?.backgroundColor = .white
+        windowManager?.windowLevel = 1
         
         let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
         
@@ -51,12 +52,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
+        
+        addWindow(viewName: "Settings")
+        
         return true
     }
     
     func addWindow(notification: NSNotification) {
         let viewName = notification.object as! String
-        
+        addWindow(viewName: viewName)
+    }
+    
+    func addWindow(viewName: String) {
         var isShown = false
         var hiddenWindow: WMWindow!
         for item in windows {
@@ -69,6 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !isShown {
             let newWindow = WMWindow(frame: CGRectMake(44, 344, 300, 300))
             newWindow.title = viewName
+            newWindow.windowLevel = 1
             
             let mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: viewName)
             mainView.title = viewName
@@ -78,7 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             windows.append(newWindow)
             
-            window?.addSubview(newWindow)
+            windowManager?.addSubview(newWindow)
         } else {
             hiddenWindow.makeKeyAndVisible()
         }
@@ -96,7 +104,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window1.disableClose()
         
         windows.append(window1)
-        window?.addSubview(window1)
+        windowManager?.addSubview(window1)
     }
     
     func logWindow() {
@@ -122,13 +130,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             nav.navigationBar.isTranslucent = false
             nav.navigationBar.barStyle = .black
             
-            
             newWindow.rootViewController = nav
             newWindow.makeKeyAndVisible()
             
             windows.append(newWindow)
             
-            window?.addSubview(newWindow)
+            windowManager?.addSubview(newWindow)
         } else {
             hiddenWindow.makeKeyAndVisible()
         }

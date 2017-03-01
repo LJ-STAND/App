@@ -99,7 +99,7 @@ class BluetoothController {
     }
     
     fileprivate func getRootView() -> UIViewController {
-        return ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController)!!
+        return ((UIApplication.shared.delegate as! AppDelegate).windowManager?.rootViewController)!!
     }
 }
 
