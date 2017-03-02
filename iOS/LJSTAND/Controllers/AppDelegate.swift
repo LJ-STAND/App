@@ -54,6 +54,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
         
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        
+//        window?.rootViewController = tempViewController()
+//        window?.makeKeyAndVisible()
+//        window?.backgroundColor = .white
+        
         return true
     }
     
@@ -151,3 +157,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+class tempViewController: UIViewController {
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if #available(iOS 10.3, *) {
+            UIApplication.shared.setAlternateIconName("Overlay") { (error) in
+                if (error != nil) {
+                    print(error)
+                }
+            }
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+}
