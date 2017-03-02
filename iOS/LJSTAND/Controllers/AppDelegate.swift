@@ -20,7 +20,9 @@ let ljStandGreen = UIColor.flatGreenDark
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var dock: UIWindow?
+    
     @nonobjc var windows: [WMWindow] = []
+    var shortcutItem: UIApplicationShortcutItem?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         let screenBounds = UIScreen.main.bounds
@@ -54,13 +56,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
         
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        
-//        window?.rootViewController = tempViewController()
-//        window?.makeKeyAndVisible()
-//        window?.backgroundColor = .white
+        var performShortcutDelegate = true
         
-        return true
+        if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
+            
+            print("Application launched via shortcut")
+            self.shortcutItem = shortcutItem
+            
+            performShortcutDelegate = false
+        }
+        
+        return performShortcutDelegate
     }
     
     func addWindow(notification: NSNotification) {
@@ -157,19 +163,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-class tempViewController: UIViewController {
+struct ShortcutIDS {
+    static let base = "com.lachlangrant.LJSTAND"
+    static let tsop = base + ".tsop"
+    static let light = base + ".light"
+    static let compass = base + ".compass"
+    static let settings = base + ".settings"
+}
+
+extension AppDelegate {
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        print("Application performActionForShortcutItem")
+        completionHandler( handleShortcut(shortcutItem: shortcutItem) )
+    }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        if #available(iOS 10.3, *) {
-            UIApplication.shared.setAlternateIconName("Overlay") { (error) in
-                if (error != nil) {
-                    print(error)
-                }
-            }
-        } else {
-            // Fallback on earlier versions
+    func handleShortcut( shortcutItem:UIApplicationShortcutItem ) -> Bool {
+        var succeeded = false
+        var view = ""
+        switch shortcutItem.type {
+        case ShortcutIDS.tsop:
+            view = "TSOP"
+        case ShortcutIDS.compass:
+            view = "Compass"
+        case ShortcutIDS.light:
+            view = "Light"
+        case ShortcutIDS.settings:
+            view = "Settings"
+        default:
+            view = ""
         }
+        
+        if (view != "") {
+            addWindow(viewName: view)
+            succeeded = true
+        }
+        
+        return succeeded
+    }
+    
+    func applicationDidBecomeActive(application: UIApplication) {
+        guard let shortcut = shortcutItem else { return }
+        handleShortcut(shortcutItem: shortcut)
+        self.shortcutItem = nil
+        
     }
 }

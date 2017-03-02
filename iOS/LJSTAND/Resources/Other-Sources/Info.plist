@@ -2,6 +2,43 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeHome</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Settings</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.lachlangrant.LJSTAND.settings</string>
+			<key>UIApplicationShortcutItemUserInfo</key>
+			<dict/>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeHome</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>TSOP</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>com.lachlangrant.LJSTAND.tsop</string>
+		</dict>
+        <dict>
+            <key>UIApplicationShortcutItemIconType</key>
+            <string>UIApplicationShortcutIconTypeHome</string>
+            <key>UIApplicationShortcutItemTitle</key>
+            <string>Light</string>
+            <key>UIApplicationShortcutItemType</key>
+            <string>com.lachlangrant.LJSTAND.light</string>
+        </dict>
+        <dict>
+            <key>UIApplicationShortcutItemIconType</key>
+            <string>UIApplicationShortcutIconTypeHome</string>
+            <key>UIApplicationShortcutItemTitle</key>
+            <string>Compass</string>
+            <key>UIApplicationShortcutItemType</key>
+            <string>com.lachlangrant.LJSTAND.compass</string>
+        </dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
