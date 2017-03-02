@@ -28,7 +28,6 @@
 		EF5190D21E64EBED00867617 /* Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5190D01E64EBED00867617 /* Overlay@2x.png */; };
 		EF5190D31E64EBED00867617 /* Overlay@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = EF5190D11E64EBED00867617 /* Overlay@3x.png */; };
 		EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FDC1E639DE1005361F9 /* CloudKit.framework */; };
-		EF608FDF1E639DFB005361F9 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FDE1E639DFB005361F9 /* ExternalAccessory.framework */; };
 		EF608FE11E639E21005361F9 /* MKKitExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FE01E639E21005361F9 /* MKKitExt.swift */; };
 		EF608FE61E63A331005361F9 /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE51E63A331005361F9 /* Chameleon.framework */; };
 		EF608FE71E63A331005361F9 /* Chameleon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE51E63A331005361F9 /* Chameleon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -109,7 +108,6 @@
 		EF5190D01E64EBED00867617 /* Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Overlay@2x.png"; path = "Icons/OverlayIcon.appiconset/Overlay@2x.png"; sourceTree = SOURCE_ROOT; };
 		EF5190D11E64EBED00867617 /* Overlay@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Overlay@3x.png"; path = "Icons/OverlayIcon.appiconset/Overlay@3x.png"; sourceTree = SOURCE_ROOT; };
 		EF608FDC1E639DE1005361F9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		EF608FDE1E639DFB005361F9 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		EF608FE01E639E21005361F9 /* MKKitExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKKitExt.swift; sourceTree = "<group>"; };
 		EF608FE51E63A331005361F9 /* Chameleon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chameleon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF608FE81E63A331005361F9 /* MKKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +153,6 @@
 				162D8C3B1E4A153094F4530A /* Foundation.framework in Frameworks */,
 				EF608FF21E63A331005361F9 /* RESTKit.framework in Frameworks */,
 				EF608FEC1E63A331005361F9 /* MKUIKit.framework in Frameworks */,
-				EF608FDF1E639DFB005361F9 /* ExternalAccessory.framework in Frameworks */,
 				EF608FEF1E63A331005361F9 /* MKUtilityKit.framework in Frameworks */,
 				EF608FE61E63A331005361F9 /* Chameleon.framework in Frameworks */,
 			);
@@ -223,7 +220,6 @@
 				EF608FEB1E63A331005361F9 /* MKUIKit.framework */,
 				EF608FE81E63A331005361F9 /* MKKit.framework */,
 				EF608FE51E63A331005361F9 /* Chameleon.framework */,
-				EF608FDE1E639DFB005361F9 /* ExternalAccessory.framework */,
 				EF608FDC1E639DE1005361F9 /* CloudKit.framework */,
 				D83A68AAD9837795A414B570 /* iOS */,
 			);
@@ -401,7 +397,7 @@
 								enabled = 1;
 							};
 							com.apple.BackgroundModes = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.NetworkExtensions = {
 								enabled = 0;
@@ -410,7 +406,7 @@
 								enabled = 1;
 							};
 							com.apple.WAC = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
 								enabled = 1;

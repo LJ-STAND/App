@@ -8,6 +8,7 @@
 
 import UIKit
 import MKKit
+import MKUIKit
 import MKUtilityKit
 import Chameleon
 
@@ -17,7 +18,7 @@ let ljStandGreen = UIColor.flatGreenDark
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var windowManager: UIWindow?
+    var window: UIWindow?
     var dock: UIWindow?
     @nonobjc var windows: [WMWindow] = []
     
@@ -34,11 +35,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dock?.backgroundColor = .clear
         
         let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
-        windowManager = UIWindow(frame: windowFrame)
-        windowManager?.rootViewController = view
-        windowManager?.makeKeyAndVisible()
-        windowManager?.backgroundColor = .white
-        windowManager?.windowLevel = 1
+        window = UIWindow(frame: windowFrame)
+        window?.rootViewController = view
+        window?.makeKeyAndVisible()
+        window?.backgroundColor = .white
+        window?.windowLevel = 1
         
         let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
         
@@ -52,8 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
-        
-        addWindow(viewName: "Settings")
         
         return true
     }
@@ -86,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             windows.append(newWindow)
             
-            windowManager?.addSubview(newWindow)
+            window?.addSubview(newWindow)
         } else {
             hiddenWindow.makeKeyAndVisible()
         }
@@ -104,10 +103,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window1.disableClose()
         
         windows.append(window1)
-        windowManager?.addSubview(window1)
+        window?.addSubview(window1)
     }
     
     func logWindow() {
+        MKUIToast.shared.showNotification(text: "Testing", alignment: .center, color: .flatBlue, identifier: nil, callback: {})
         let viewName = "App Log"
         
         var isShown = false
@@ -135,7 +135,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             windows.append(newWindow)
             
-            windowManager?.addSubview(newWindow)
+            window?.addSubview(newWindow)
         } else {
             hiddenWindow.makeKeyAndVisible()
         }
