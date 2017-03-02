@@ -361,7 +361,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJ STAND" */;
 			buildPhases = (
-				EFEDAA3E1E46D172005BEE4E /* Environment Vars */,
+				EFEDAA3E1E46D172005BEE4E /* Icons */,
 				876DD3D9D9926CE2EBE64DDB /* Sources */,
 				E103AE9143FC4D78FD557160 /* Resources */,
 				35EDF3B6A1B1848E58424BF3 /* Warn for TODO and FIXME comments */,
@@ -488,19 +488,19 @@
 			shellPath = /bin/sh;
 			shellScript = "${SRCROOT}/bin/gitVersion";
 		};
-		EFEDAA3E1E46D172005BEE4E /* Environment Vars */ = {
+		EFEDAA3E1E46D172005BEE4E /* Icons */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Environment Vars";
+			name = Icons;
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "rm -rf ${SRCROOT}/Icons/OverlayIcon.appiconset\nunzip ${SRCROOT}/Icons/OverlayIcon.appiconset.zip -d ${SRCROOT}/Icons\nrm -rf ${SRCROOT}/Icons/__MACOSX\n${SRCROOT}/bin/tag_icons tag ${SRCROOT}/Icons/OverlayIcon.appiconset";
 		};
 /* End PBXShellScriptBuildPhase section */
 

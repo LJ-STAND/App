@@ -26,7 +26,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Icons"
-               scriptText = "rm -rf Icons/OverlayIcon.appiconset&#10;unzip Icons/OverlayIcon.appiconset.zip -d Icons&#10;rm -rf Icons/__MACOSX&#10;${SRCROOT}/bin/tag_icons tag ${SRCROOT}/Icons/OverlayIcon.appiconset">
+               scriptText = "">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
