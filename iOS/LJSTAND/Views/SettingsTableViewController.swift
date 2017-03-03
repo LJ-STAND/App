@@ -45,24 +45,7 @@ class SettingsTableViewController: UITableViewController {
         } else {
             MKUIToast.shared.showNotification(text: "Dynamic Icons is not supported on this version of iOS", alignment: .center, color: .flatBlue, identifier: nil, callback: {})
         }
-	}
-	
-	@IBAction func checkForUpdate(_ sender: Any) {
-        MKUAsync.background {
-            MKULog.shared.info("Checking for update")
-            MKUAppSettings.shared.checkForAppUpdate(urlString: "https://lj-stand.github.io/Apps/config.json", jsonKey: "currentRelease", manifestURL: "https://lj-stand.github.io/Apps/dist/manifest.plist", messageCallback: { (error, message) in
-                if error {
-                    MKULog.shared.error(message)
-                } else {
-                    MKULog.shared.info(message)
-                }
-            }) { (url, message) in
-                MKULog.shared.info(message)
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
-            }
-            MKULog.shared.mark()
-        }
-	}
+    }
     
 	@IBAction func logWindowAction(_ sender: Any) {
         let value = logWindowSwitch.isOn
