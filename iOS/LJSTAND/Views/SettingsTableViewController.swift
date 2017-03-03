@@ -70,7 +70,7 @@ class SettingsTableViewController: UITableViewController {
         let delegate = UIApplication.shared.delegate as! AppDelegate
         
         if value == true {
-            delegate.logWindow()
+            delegate.addWindow(viewName: "App Log")
         } else {
             delegate.removeWindow(name: "App Log")
         }

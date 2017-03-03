@@ -51,7 +51,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.setStatusBarStyle(.lightContent, animated: false)
         
         if defaults.bool(forKey: DefaultKeys.showLog) == true {
-            logWindow()
+            addWindow(viewName: "App Log")
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
@@ -89,8 +89,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             newWindow.title = viewName
             newWindow.windowLevel = 1
             
-            let mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: viewName)
-            mainView.title = viewName
+            var mainView: UIViewController?
+            
+            if viewName == "App Log" {
+                let logVc = MKUConsoleViewController()
+                
+                mainView = UINavigationController(rootViewController: logVc)
+                mainView?.title = viewName
+                logVc.title = viewName
+                (mainView as! UINavigationController).navigationBar.isTranslucent = false
+                (mainView as! UINavigationController).navigationBar.barStyle = .black
+            } else {
+                mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: viewName)
+                mainView?.title = viewName
+            }
             
             newWindow.rootViewController = mainView
             newWindow.makeKeyAndVisible()
@@ -100,6 +112,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.addSubview(newWindow)
             
             if (UIDevice.current.userInterfaceIdiom == .phone) {
+                newWindow.maximized = true
+                newWindow._savedFrame = CGRect(x: 44, y: 44, width: 300, height: 300)
                 newWindow.setFrame(frame: CGRectMake(-kWindowResizeGutterSize, kStatusBarHeight + -kWindowResizeGutterSize, (window?.bounds.size.width)!+(kWindowResizeGutterSize*2), (window?.bounds.size.height)!-kStatusBarHeight+(kWindowResizeGutterSize*2)))
             }
             
@@ -121,41 +135,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         windows.append(window1)
         window?.addSubview(window1)
-    }
-    
-    func logWindow() {
-        MKUIToast.shared.showNotification(text: "Testing", alignment: .center, color: .flatBlue, identifier: nil, callback: {})
-        let viewName = "App Log"
-        
-        var isShown = false
-        var hiddenWindow: WMWindow!
-        for item in windows {
-            if item.title == viewName {
-                isShown = true
-                hiddenWindow = item
-            }
-        }
-        
-        if !isShown {
-            let newWindow = WMWindow(frame: CGRectMake(44, 344, 300, 300))
-            newWindow.title = viewName
-            
-            let mainView = MKUConsoleViewController()
-            let nav = UINavigationController(rootViewController: mainView)
-            nav.title = viewName
-            mainView.title = viewName
-            nav.navigationBar.isTranslucent = false
-            nav.navigationBar.barStyle = .black
-            
-            newWindow.rootViewController = nav
-            newWindow.makeKeyAndVisible()
-            
-            windows.append(newWindow)
-            
-            window?.addSubview(newWindow)
-        } else {
-            hiddenWindow.makeKeyAndVisible()
-        }
     }
     
     func removeWindow(name: String) {
