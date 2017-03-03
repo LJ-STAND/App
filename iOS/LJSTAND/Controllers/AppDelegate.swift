@@ -98,6 +98,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             windows.append(newWindow)
             
             window?.addSubview(newWindow)
+            
+            if (UIDevice.current.userInterfaceIdiom == .phone) {
+                newWindow.setFrame(frame: CGRectMake(-kWindowResizeGutterSize, kStatusBarHeight + -kWindowResizeGutterSize, (window?.bounds.size.width)!+(kWindowResizeGutterSize*2), (window?.bounds.size.height)!-kStatusBarHeight+(kWindowResizeGutterSize*2)))
+            }
+            
         } else {
             hiddenWindow.makeKeyAndVisible()
         }
