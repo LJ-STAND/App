@@ -167,6 +167,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
     
     func close(_ sender: AnyObject) {
         self.isHidden = true
+        NotificationCenter.default.post(name: NotificationKeys.closedWindow, object: self.title)
     }
     
     override func becomeKey() {

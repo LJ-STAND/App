@@ -20,41 +20,22 @@ let ljStandGreen = UIColor.flatGreenDark
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var dock: UIWindow?
+    let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
+    var dockFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
+    var windowFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
     
     @nonobjc var windows: [WMWindow] = []
     var shortcutItem: UIApplicationShortcutItem?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        let screenBounds = UIScreen.main.bounds
-        let dockWidth = 100
-        let dockFrame = CGRect(x: 0, y: 0, width: dockWidth, height: Int(screenBounds.height))
-        let windowFrame = CGRect(x: dockWidth, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
-        
-        dock = UIWindow(frame: dockFrame)
-        dock?.windowLevel = 3
-        dock?.rootViewController = viewController(fromStoryboardWithName: "Dock", viewControllerWithIdentifier: "init")
-        dock?.makeKeyAndVisible()
-        dock?.backgroundColor = .clear
-        
-        let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
-        window = UIWindow(frame: windowFrame)
-        window?.rootViewController = view
-        window?.makeKeyAndVisible()
-        window?.backgroundColor = .white
-        window?.windowLevel = 1
-        
-        let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
-        
-        swizzleUIWindow()
-        
-        UITabBar.appearance().tintColor = ljStandGreen
-        application.setStatusBarStyle(.lightContent, animated: false)
+        setUpWindows()
         
         if defaults.bool(forKey: DefaultKeys.showLog) == true {
             addWindow(viewName: "App Log")
         }
         
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.orientationDidChange), name: Notification.Name.UIDeviceOrientationDidChange, object: nil)
         
         var performShortcutDelegate = true
         
@@ -65,13 +46,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             performShortcutDelegate = false
         }
-        
+        application.setStatusBarStyle(.lightContent, animated: false)
         return performShortcutDelegate
+    }
+    
+    func setUpWindows() {
+        setFrames()
+        
+        dock = UIWindow(frame: dockFrame)
+        dock?.windowLevel = 3
+        dock?.rootViewController = viewController(fromStoryboardWithName: "Dock", viewControllerWithIdentifier: "init")
+        dock?.isHidden = false
+        dock?.backgroundColor = .clear
+        
+        let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
+        window = UIWindow(frame: windowFrame)
+        window?.rootViewController = view
+        window?.makeKeyAndVisible()
+        window?.backgroundColor = .white
+        window?.windowLevel = 1
+        
+        swizzleUIWindow()
+        
+        UITabBar.appearance().tintColor = ljStandGreen
+        
     }
     
     func addWindow(notification: NSNotification) {
         let viewName = notification.object as! String
         addWindow(viewName: viewName)
+    }
+    
+    func setFrames() {
+        let screenBounds = UIScreen.main.bounds
+        let dockWidth = 100
+        
+        let isDockOnRight = defaults.bool(forKey: DefaultKeys.isDockOnRight)
+        
+        if isDockOnRight == true {
+            windowFrame = CGRect(x: 0, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
+            dockFrame = CGRect(x: (Int(screenBounds.width) - dockWidth), y: 0, width: dockWidth, height: Int(screenBounds.height))
+        } else {
+            dockFrame = CGRect(x: 0, y: 0, width: dockWidth, height: Int(screenBounds.height))
+            windowFrame = CGRect(x: dockWidth, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
+        }
+    }
+    
+    func orientationDidChange() {
+        dock?.frame = dockFrame
+        window?.frame = windowFrame
+        
+        dock?.layoutIfNeeded()
+        window?.layoutIfNeeded()
     }
     
     func addWindow(viewName: String) {
@@ -120,6 +146,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             hiddenWindow.makeKeyAndVisible()
         }
+        
+        NotificationCenter.default.post(name: NotificationKeys.addedWindow, object: viewName)
     }
     
     func initialWindow() {

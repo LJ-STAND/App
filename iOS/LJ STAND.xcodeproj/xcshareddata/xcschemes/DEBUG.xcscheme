@@ -22,22 +22,6 @@
                </EnvironmentBuildable>
             </ActionContent>
          </ExecutionAction>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Icons"
-               scriptText = "">
-               <EnvironmentBuildable>
-                  <BuildableReference
-                     BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "D020986916FA04E7BBD68098"
-                     BuildableName = "LJ STAND.app"
-                     BlueprintName = "LJ STAND"
-                     ReferencedContainer = "container:LJ STAND.xcodeproj">
-                  </BuildableReference>
-               </EnvironmentBuildable>
-            </ActionContent>
-         </ExecutionAction>
       </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
