@@ -128,6 +128,7 @@
 		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EF471E491DB6C31900CED76B /* ModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
 		EF471E4B1DB6C37900CED76B /* Robot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Robot.obj; sourceTree = "<group>"; };
+		EF5A2C441E6E89DB00A3E401 /* Stickers.xcstickers */ = {isa = PBXFileReference; lastKnownFileType = folder.stickers; name = Stickers.xcstickers; path = StickerPackExtension/Stickers.xcstickers; sourceTree = "<group>"; };
 		EF608FDC1E639DE1005361F9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EF608FE01E639E21005361F9 /* MKKitExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKKitExt.swift; sourceTree = "<group>"; };
 		EF608FE51E63A331005361F9 /* Chameleon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chameleon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				EFC213881E5A636000233E6E /* LJ STAND.entitlements */,
+				EF5A2C441E6E89DB00A3E401 /* Stickers.xcstickers */,
 				AB3793622466EE2A02CBADDD /* LJSTAND */,
 				EF1705C91E682D910029DD0E /* LJ STAND Stickers */,
 				534AB7A34A3D72BAFA984F6B /* Frameworks */,
