@@ -13,7 +13,6 @@
 		CD29B26E1E48076A00EEF6B7 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD29B26D1E48076A00EEF6B7 /* BackgroundViewController.swift */; };
 		CD2A02941E46EB080037C8E5 /* ResizableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */; };
 		CD7C1EBB1E4753DE006F8512 /* HexButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C1EBA1E4753DE006F8512 /* HexButton.swift */; };
-		CD7C1EBD1E475487006F8512 /* WindowManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C1EBC1E475487006F8512 /* WindowManagerViewController.swift */; };
 		CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */; };
 		D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE59898617C260F3B4780CF /* Images.xcassets */; };
 		D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */; };
@@ -116,7 +115,6 @@
 		CD29B26D1E48076A00EEF6B7 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundViewController.swift; path = LJSTAND/Views/BackgroundViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewController.swift; sourceTree = "<group>"; };
 		CD7C1EBA1E4753DE006F8512 /* HexButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexButton.swift; path = LJSTAND/Views/HexButton.swift; sourceTree = SOURCE_ROOT; };
-		CD7C1EBC1E475487006F8512 /* WindowManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowManagerViewController.swift; sourceTree = "<group>"; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		EF0E2D801E6E262F00E24D72 /* NotificationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
@@ -304,7 +302,6 @@
 				EFAFC6851E61068D00DB37E3 /* DockViewController.swift */,
 				CD29B26D1E48076A00EEF6B7 /* BackgroundViewController.swift */,
 				CD7C1EBA1E4753DE006F8512 /* HexButton.swift */,
-				CD7C1EBC1E475487006F8512 /* WindowManagerViewController.swift */,
 				EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */,
 				EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */,
 				EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */,
@@ -559,7 +556,6 @@
 				EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */,
 				EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */,
 				EFAFC6861E61068D00DB37E3 /* DockViewController.swift in Sources */,
-				CD7C1EBD1E475487006F8512 /* WindowManagerViewController.swift in Sources */,
 				EFAA535B1DB6E12F00EBFA89 /* PartParser.swift in Sources */,
 				EFAA53631DB6FB0C00EBFA89 /* WebViewController.swift in Sources */,
 				EFAA53591DB6DED700EBFA89 /* Part.swift in Sources */,
