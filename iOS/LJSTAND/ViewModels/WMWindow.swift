@@ -232,8 +232,6 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         }
         if recognizer.state == .began {
             _originPoint = lp
-            dump(lp)
-            dump(_originPoint)
             if titleBarRect.contains(lp) {
                 _inWindowMove = true
                 _inWindowResize = false
