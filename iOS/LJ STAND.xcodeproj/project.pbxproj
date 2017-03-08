@@ -19,7 +19,6 @@
 		EF0E2D811E6E262F00E24D72 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E2D801E6E262F00E24D72 /* NotificationKeys.swift */; };
 		EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */; };
 		EF1705CB1E682D910029DD0E /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1705CA1E682D910029DD0E /* Stickers.xcassets */; };
-		EF1705D01E682D910029DD0E /* LJ STAND Stickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF1705C81E682D910029DD0E /* LJ STAND Stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EF1E98401E61019D00C70420 /* Dock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1E983F1E61019D00C70420 /* Dock.storyboard */; };
 		EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */; };
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
@@ -65,28 +64,7 @@
 		EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		EF1705CD1E682D910029DD0E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9182D5ACF04E754040DED730 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EF1705C71E682D910029DD0E;
-			remoteInfo = "LJ STAND Stickers";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
-		EF1705CF1E682D910029DD0E /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				EF1705D01E682D910029DD0E /* LJ STAND Stickers.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EF608FF41E63A331005361F9 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,12 +357,10 @@
 				5848C3664EFEE9C0725AEAFA /* Frameworks */,
 				9A0DC08F846703B65F22E608 /* Set version number */,
 				EF608FF41E63A331005361F9 /* Embed Frameworks */,
-				EF1705CF1E682D910029DD0E /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EF1705CE1E682D910029DD0E /* PBXTargetDependency */,
 			);
 			name = "LJ STAND";
 			productName = Layers;
@@ -565,14 +541,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		EF1705CE1E682D910029DD0E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EF1705C71E682D910029DD0E /* LJ STAND Stickers */;
-			targetProxy = EF1705CD1E682D910029DD0E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1328577D1210908FA29C34EC /* Debug */ = {
