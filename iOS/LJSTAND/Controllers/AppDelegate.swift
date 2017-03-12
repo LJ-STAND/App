@@ -12,8 +12,6 @@ import MKUIKit
 import MKUtilityKit
 import Chameleon
 
-let log = MKULog.shared
-
 let ljStandGreen = UIColor.flatGreenDark
 
 @UIApplicationMain

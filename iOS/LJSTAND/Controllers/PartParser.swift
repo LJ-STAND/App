@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MKUtilityKit
 
 class PartParser {
     static let shared = PartParser()
@@ -77,7 +78,7 @@ class PartParser {
             errored = false
             
         } catch {
-            log.error("CSV Parsing Error")
+            MKULog.shared.error("CSV Parsing Error")
             errored = true
         }
     }
