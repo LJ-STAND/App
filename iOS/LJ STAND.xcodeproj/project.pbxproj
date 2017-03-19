@@ -74,6 +74,7 @@
 		EFED2CA71E7F4A1800E02440 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C9A1E7F4A1800E02440 /* Part.swift */; };
 		EFED2CA81E7F4A1800E02440 /* PartParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C9B1E7F4A1800E02440 /* PartParser.swift */; };
 		EFED2CA91E7F4A1800E02440 /* PartParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C9B1E7F4A1800E02440 /* PartParser.swift */; };
+		EFED2CAB1E7F4DCF00E02440 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */; };
 		EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA381E469A4E005BEE4E /* WMWindow.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
 		EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */; };
@@ -171,6 +172,7 @@
 		EFED2C991E7F4A1800E02440 /* NotificationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
 		EFED2C9A1E7F4A1800E02440 /* Part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		EFED2C9B1E7F4A1800E02440 /* PartParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartParser.swift; sourceTree = "<group>"; };
+		EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		EFEDAA381E469A4E005BEE4E /* WMWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMWindow.swift; sourceTree = "<group>"; };
 		EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
 		EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInterfaceIdom.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFED2CAB1E7F4DCF00E02440 /* CoreBluetooth.framework in Frameworks */,
 				EFED2C911E7F49A100E02440 /* MKUtilityKit.framework in Frameworks */,
 				EFED2C8E1E7F49A100E02440 /* MKKit.framework in Frameworks */,
 			);
@@ -258,6 +261,7 @@
 		534AB7A34A3D72BAFA984F6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */,
 				EFED2C901E7F49A100E02440 /* MKUtilityKit.framework */,
 				EFED2C8D1E7F49A100E02440 /* MKKit.framework */,
 				EF608FF11E63A331005361F9 /* RESTKit.framework */,
