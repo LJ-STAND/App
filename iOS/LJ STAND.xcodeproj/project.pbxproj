@@ -227,9 +227,9 @@
 			children = (
 				EFC213881E5A636000233E6E /* LJ STAND.entitlements */,
 				EFED2C941E7F49CF00E02440 /* Common */,
-				AB3793622466EE2A02CBADDD /* LJSTAND */,
-				EF1705C91E682D910029DD0E /* LJ STAND Stickers */,
+				AB3793622466EE2A02CBADDD /* iOS */,
 				EFED2C7F1E7F497300E02440 /* macOS */,
+				EF1705C91E682D910029DD0E /* Stickers */,
 				534AB7A34A3D72BAFA984F6B /* Frameworks */,
 				AC5953FE6C17FE0FB64BBF47 /* Products */,
 			);
@@ -336,7 +336,7 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		AB3793622466EE2A02CBADDD /* LJSTAND */ = {
+		AB3793622466EE2A02CBADDD /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				75D7C917E0C54D37E9FEED01 /* Extensions */,
@@ -347,6 +347,7 @@
 				977C38B4FBB19B1FBC4ACC8D /* Views */,
 				1071F4B8BC77949A586EFAB9 /* Resources */,
 			);
+			name = iOS;
 			path = LJSTAND;
 			sourceTree = "<group>";
 		};
@@ -377,12 +378,13 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		EF1705C91E682D910029DD0E /* LJ STAND Stickers */ = {
+		EF1705C91E682D910029DD0E /* Stickers */ = {
 			isa = PBXGroup;
 			children = (
 				EF1705CA1E682D910029DD0E /* Stickers.xcassets */,
 				EF1705CC1E682D910029DD0E /* Info.plist */,
 			);
+			name = Stickers;
 			path = "LJ STAND Stickers";
 			sourceTree = "<group>";
 		};
