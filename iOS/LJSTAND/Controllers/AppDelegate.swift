@@ -11,6 +11,7 @@ import MKKit
 import MKUIKit
 import MKUtilityKit
 import Chameleon
+import CoreBluetooth
 
 let ljStandGreen = UIColor.flatGreenDark
 
@@ -45,6 +46,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             performShortcutDelegate = false
         }
         application.setStatusBarStyle(.lightContent, animated: false)
+        
+        BluetoothController.shared.messageDelegate = self
         return performShortcutDelegate
     }
     
@@ -216,5 +219,33 @@ extension AppDelegate {
         handleShortcut(shortcutItem: shortcut)
         self.shortcutItem = nil
         
+    }
+}
+
+
+extension AppDelegate: BluetoothMessageDelegate {
+    func showInformation(_ message: String) {
+        MKUIToast.shared.showNotification(text: message, alignment: .center, color: .flatBlue, identifier: nil, callback: {})
+    }
+    
+    func showError(_ message: String) {
+        MKUIToast.shared.showNotification(text: message, alignment: .center, color: .flatRed, identifier: nil, callback: {})
+    }
+    
+    func foundDevices(_ peripherals: [CBPeripheral]) {
+        let alert = UIAlertController(title: "Connect to Device", message: nil, preferredStyle: .alert)
+        
+        for item in peripherals {
+            alert.addAction(UIAlertAction(title: item.name, style: .default, handler: { (action) in
+                BluetoothController.shared.connectTo(peripheral: item)
+            }))
+        }
+        
+        window?.rootViewController?.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func dismissNotifications() {
+        MKUIToast.shared.dismissAllNotifications(animated: false)
     }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2016 Lachlan Grant. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import CoreBluetooth
 
 var serial: BluetoothSerial!

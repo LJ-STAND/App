@@ -8,9 +8,15 @@
 
 import Foundation
 import CoreBluetooth
-import MKUIKit
 import MKKit
 import MKUtilityKit
+
+protocol BluetoothMessageDelegate {
+    func showInformation(_ message: String)
+    func showError(_ message: String)
+    func foundDevices(_ peripherals: [CBPeripheral])
+    func dismissNotifications()
+}
 
 protocol BluetoothControllerSerialDelegate {
     func hasNewOutput(_ serial: String)
@@ -35,11 +41,13 @@ class BluetoothController {
     var tsopDelegate: BluetoothControllerTSOPDelegate?
     var compassDelegate: BluetoothControllerCompassDelegate?
     var lightSensDelegate: BluetoothControllerLightSensorDelegate?
+    var messageDelegate: BluetoothMessageDelegate?
     
     var peripherals: [CBPeripheral] = []
     var rssis: [Float] = []
     var selectedPeripheral: CBPeripheral?
     var connectCount = 0
+    var overrideConnect = false
     
     var connected: Bool = false
     
@@ -48,12 +56,16 @@ class BluetoothController {
         serial.writeType = .withoutResponse
     }
     
+    func connectTo(peripheral: CBPeripheral) {
+        self.selectedPeripheral = peripheral
+        serial.connectToPeripheral(peripheral)
+    }
+    
     func connect() {
-        if !UIDevice.current.isSimulator && connectCount < 3 {
+        if !overrideConnect && connectCount < 3 {
             MKUAsync.main {
-                MKUIToast.shared.showNotification(text: "Scanning for Bluetooth Devices...", alignment: .center, color: UIColor.flatBlue, identifier: nil, callback: {
-                })
-            }.background {
+                self.messageDelegate?.showInformation("Scanning for Bluetooth Devices...")
+            }.background {_ in 
                 serial.startScan()
                 sleep(2)
             }.main {
@@ -74,17 +86,7 @@ class BluetoothController {
                         self.selectedPeripheral = last!
                         serial.connectToPeripheral(last!)
                     } else {
-                        let alert = UIAlertController(title: "Connect to Device", message: nil, preferredStyle: .alert)
-                        
-                        for item in self.peripherals {
-                            alert.addAction(UIAlertAction(title: item.name, style: .default, handler: { (action) in
-                                self.selectedPeripheral = item
-                                serial.connectToPeripheral(item)
-                            }))
-                        }
-                        
-                        self.getRootView().present(alert, animated: true, completion: nil)
-                        
+                        self.messageDelegate?.foundDevices(self.peripherals)
                     }
                 } else {
                     var count = self.connectCount
@@ -94,12 +96,8 @@ class BluetoothController {
                 }
             }
         } else {
-            MKUIToast.shared.dismissAllNotifications(animated: true)
+            messageDelegate?.dismissNotifications()
         }
-    }
-    
-    fileprivate func getRootView() -> UIViewController {
-        return ((UIApplication.shared.delegate as! AppDelegate).window?.rootViewController)!!
     }
 }
 
@@ -118,18 +116,19 @@ extension BluetoothController: BluetoothSerialDelegate {
     
     
     func serialDidConnect(_ peripheral: CBPeripheral) {
-        MKUIToast.shared.dismissAllNotifications(animated: false)
-        MKUIToast.shared.showNotification(text: "Connected to \(peripheral.name ?? "")", alignment: .center, color: UIColor.flatGreen, identifier: nil) {}
+        messageDelegate?.dismissNotifications()
+        messageDelegate?.showInformation("Connected to \(peripheral.name ?? "")")
         
         let text = "Connected to \(peripheral.name ?? "")"
         serialDelegate?.hasNewOutput(text)
         self.connected = true
         
-        UserDefaults.standard.set(peripheral.name!, forKey: "lastConnected")
+        MKUDefaults().defaults.set(peripheral.name!, forKey: "lastConnected")
     }
     
     func serialDidFailToConnect(_ peripheral: CBPeripheral, error: NSError?) {
-        MKUIToast.shared.showNotification(text: "Connection Failed. \(String(describing: error?.localizedDescription))", alignment: .center, color: UIColor.flatRed, identifier: nil) {}
+        messageDelegate?.showError("Connection Failed. \(String(describing: error?.localizedDescription))")
+        
         sleep(1)
         self.connectCount = 0
         connect()

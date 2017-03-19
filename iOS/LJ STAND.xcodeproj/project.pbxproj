@@ -16,16 +16,13 @@
 		CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */; };
 		D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE59898617C260F3B4780CF /* Images.xcassets */; };
 		D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */; };
-		EF0E2D811E6E262F00E24D72 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0E2D801E6E262F00E24D72 /* NotificationKeys.swift */; };
 		EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */; };
 		EF1705CB1E682D910029DD0E /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1705CA1E682D910029DD0E /* Stickers.xcassets */; };
 		EF1E98401E61019D00C70420 /* Dock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1E983F1E61019D00C70420 /* Dock.storyboard */; };
-		EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */; };
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
 		EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF471E491DB6C31900CED76B /* ModelViewController.swift */; };
 		EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */ = {isa = PBXBuildFile; fileRef = EF471E4B1DB6C37900CED76B /* Robot.obj */; };
 		EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FDC1E639DE1005361F9 /* CloudKit.framework */; };
-		EF608FE11E639E21005361F9 /* MKKitExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FE01E639E21005361F9 /* MKKitExt.swift */; };
 		EF608FE61E63A331005361F9 /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE51E63A331005361F9 /* Chameleon.framework */; };
 		EF608FE71E63A331005361F9 /* Chameleon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE51E63A331005361F9 /* Chameleon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF608FE91E63A331005361F9 /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE81E63A331005361F9 /* MKKit.framework */; };
@@ -37,13 +34,9 @@
 		EF608FF21E63A331005361F9 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FF11E63A331005361F9 /* RESTKit.framework */; };
 		EF608FF31E63A331005361F9 /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FF11E63A331005361F9 /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */; };
-		EF608FFB1E63AF75005361F9 /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FFA1E63AF75005361F9 /* DefaultKeys.swift */; };
-		EF734A571DB8B894000E6D8C /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734A561DB8B894000E6D8C /* BluetoothController.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
 		EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */; };
-		EFAA53591DB6DED700EBFA89 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53581DB6DED700EBFA89 /* Part.swift */; };
-		EFAA535B1DB6E12F00EBFA89 /* PartParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA535A1DB6E12F00EBFA89 /* PartParser.swift */; };
 		EFAA535D1DB6E36400EBFA89 /* parts.csv in Resources */ = {isa = PBXBuildFile; fileRef = EFAA535C1DB6E36400EBFA89 /* parts.csv */; };
 		EFAA535F1DB6E90B00EBFA89 /* PartsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */; };
 		EFAA53611DB6EAC700EBFA89 /* PartDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */; };
@@ -59,6 +52,28 @@
 		EFAFC6861E61068D00DB37E3 /* DockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFC6851E61068D00DB37E3 /* DockViewController.swift */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
 		EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */; };
+		EFED2C811E7F497300E02440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C801E7F497300E02440 /* AppDelegate.swift */; };
+		EFED2C831E7F497300E02440 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C821E7F497300E02440 /* ViewController.swift */; };
+		EFED2C851E7F497300E02440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFED2C841E7F497300E02440 /* Assets.xcassets */; };
+		EFED2C881E7F497300E02440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFED2C861E7F497300E02440 /* Main.storyboard */; };
+		EFED2C8E1E7F49A100E02440 /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2C8D1E7F49A100E02440 /* MKKit.framework */; };
+		EFED2C8F1E7F49A100E02440 /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2C8D1E7F49A100E02440 /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EFED2C911E7F49A100E02440 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2C901E7F49A100E02440 /* MKUtilityKit.framework */; };
+		EFED2C921E7F49A100E02440 /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2C901E7F49A100E02440 /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EFED2C9C1E7F4A1800E02440 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C951E7F4A1800E02440 /* BluetoothController.swift */; };
+		EFED2C9D1E7F4A1800E02440 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C951E7F4A1800E02440 /* BluetoothController.swift */; };
+		EFED2C9E1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */; };
+		EFED2C9F1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */; };
+		EFED2CA01E7F4A1800E02440 /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */; };
+		EFED2CA11E7F4A1800E02440 /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */; };
+		EFED2CA21E7F4A1800E02440 /* MKKitExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C981E7F4A1800E02440 /* MKKitExt.swift */; };
+		EFED2CA31E7F4A1800E02440 /* MKKitExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C981E7F4A1800E02440 /* MKKitExt.swift */; };
+		EFED2CA41E7F4A1800E02440 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C991E7F4A1800E02440 /* NotificationKeys.swift */; };
+		EFED2CA51E7F4A1800E02440 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C991E7F4A1800E02440 /* NotificationKeys.swift */; };
+		EFED2CA61E7F4A1800E02440 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C9A1E7F4A1800E02440 /* Part.swift */; };
+		EFED2CA71E7F4A1800E02440 /* Part.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C9A1E7F4A1800E02440 /* Part.swift */; };
+		EFED2CA81E7F4A1800E02440 /* PartParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C9B1E7F4A1800E02440 /* PartParser.swift */; };
+		EFED2CA91E7F4A1800E02440 /* PartParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C9B1E7F4A1800E02440 /* PartParser.swift */; };
 		EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA381E469A4E005BEE4E /* WMWindow.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
 		EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */; };
@@ -80,6 +95,18 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFED2C931E7F49A100E02440 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				EFED2C921E7F49A100E02440 /* MKUtilityKit.framework in Embed Frameworks */,
+				EFED2C8F1E7F49A100E02440 /* MKKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -94,31 +121,24 @@
 		CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewController.swift; sourceTree = "<group>"; };
 		CD7C1EBA1E4753DE006F8512 /* HexButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexButton.swift; path = LJSTAND/Views/HexButton.swift; sourceTree = SOURCE_ROOT; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
-		EF0E2D801E6E262F00E24D72 /* NotificationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
 		EF1705C81E682D910029DD0E /* LJ STAND Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LJ STAND Stickers.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1705CA1E682D910029DD0E /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		EF1705CC1E682D910029DD0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1E983F1E61019D00C70420 /* Dock.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dock.storyboard; sourceTree = "<group>"; };
-		EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EF471E491DB6C31900CED76B /* ModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
 		EF471E4B1DB6C37900CED76B /* Robot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Robot.obj; sourceTree = "<group>"; };
 		EF608FDC1E639DE1005361F9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		EF608FE01E639E21005361F9 /* MKKitExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKKitExt.swift; sourceTree = "<group>"; };
 		EF608FE51E63A331005361F9 /* Chameleon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chameleon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF608FE81E63A331005361F9 /* MKKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF608FEB1E63A331005361F9 /* MKUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUtilityKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF608FF11E63A331005361F9 /* RESTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RESTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		EF608FFA1E63AF75005361F9 /* DefaultKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
-		EF734A561DB8B894000E6D8C /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 		EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EF9518231DB08CB4009B1F6F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsensorViewController.swift; sourceTree = "<group>"; };
-		EFAA53581DB6DED700EBFA89 /* Part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
-		EFAA535A1DB6E12F00EBFA89 /* PartParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartParser.swift; sourceTree = "<group>"; };
 		EFAA535C1DB6E36400EBFA89 /* parts.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parts.csv; sourceTree = "<group>"; };
 		EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartsListTableViewController.swift; sourceTree = "<group>"; };
 		EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartDetailViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +156,21 @@
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 		EFC213881E5A636000233E6E /* LJ STAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LJ STAND.entitlements"; sourceTree = "<group>"; };
 		EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		EFED2C7E1E7F497300E02440 /* LJ STAND macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LJ STAND macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFED2C801E7F497300E02440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EFED2C821E7F497300E02440 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EFED2C841E7F497300E02440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFED2C871E7F497300E02440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFED2C891E7F497300E02440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFED2C8D1E7F49A100E02440 /* MKKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFED2C901E7F49A100E02440 /* MKUtilityKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUtilityKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFED2C951E7F4A1800E02440 /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
+		EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
+		EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
+		EFED2C981E7F4A1800E02440 /* MKKitExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKKitExt.swift; sourceTree = "<group>"; };
+		EFED2C991E7F4A1800E02440 /* NotificationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
+		EFED2C9A1E7F4A1800E02440 /* Part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
+		EFED2C9B1E7F4A1800E02440 /* PartParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartParser.swift; sourceTree = "<group>"; };
 		EFEDAA381E469A4E005BEE4E /* WMWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMWindow.swift; sourceTree = "<group>"; };
 		EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
 		EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInterfaceIdom.swift; sourceTree = "<group>"; };
@@ -153,6 +188,15 @@
 				EF608FEC1E63A331005361F9 /* MKUIKit.framework in Frameworks */,
 				EF608FEF1E63A331005361F9 /* MKUtilityKit.framework in Frameworks */,
 				EF608FE61E63A331005361F9 /* Chameleon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFED2C7B1E7F497300E02440 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFED2C911E7F49A100E02440 /* MKUtilityKit.framework in Frameworks */,
+				EFED2C8E1E7F49A100E02440 /* MKKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,8 +226,10 @@
 			isa = PBXGroup;
 			children = (
 				EFC213881E5A636000233E6E /* LJ STAND.entitlements */,
+				EFED2C941E7F49CF00E02440 /* Common */,
 				AB3793622466EE2A02CBADDD /* LJSTAND */,
 				EF1705C91E682D910029DD0E /* LJ STAND Stickers */,
+				EFED2C7F1E7F497300E02440 /* macOS */,
 				534AB7A34A3D72BAFA984F6B /* Frameworks */,
 				AC5953FE6C17FE0FB64BBF47 /* Products */,
 			);
@@ -212,6 +258,8 @@
 		534AB7A34A3D72BAFA984F6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFED2C901E7F49A100E02440 /* MKUtilityKit.framework */,
+				EFED2C8D1E7F49A100E02440 /* MKKit.framework */,
 				EF608FF11E63A331005361F9 /* RESTKit.framework */,
 				EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */,
 				EF608FEB1E63A331005361F9 /* MKUIKit.framework */,
@@ -227,8 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */,
-				EFAA535A1DB6E12F00EBFA89 /* PartParser.swift */,
-				EF734A561DB8B894000E6D8C /* BluetoothController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -258,10 +304,6 @@
 		924BCA1E22B5177CDCE5286D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EFAA53581DB6DED700EBFA89 /* Part.swift */,
-				EF608FE01E639E21005361F9 /* MKKitExt.swift */,
-				EF608FFA1E63AF75005361F9 /* DefaultKeys.swift */,
-				EF0E2D801E6E262F00E24D72 /* NotificationKeys.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -313,6 +355,7 @@
 			children = (
 				C8E706015D603F83004748A1 /* LJ STAND.app */,
 				EF1705C81E682D910029DD0E /* LJ STAND Stickers.appex */,
+				EFED2C7E1E7F497300E02440 /* LJ STAND macOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -320,7 +363,6 @@
 		C8BB61B6AAC040A7B0BF5B9C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				EF22B9D21DAC2C1B0039F1B1 /* BluetoothSerial.swift */,
 				CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */,
 			);
 			path = Protocols;
@@ -342,6 +384,33 @@
 				EF1705CC1E682D910029DD0E /* Info.plist */,
 			);
 			path = "LJ STAND Stickers";
+			sourceTree = "<group>";
+		};
+		EFED2C7F1E7F497300E02440 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				EFED2C801E7F497300E02440 /* AppDelegate.swift */,
+				EFED2C821E7F497300E02440 /* ViewController.swift */,
+				EFED2C841E7F497300E02440 /* Assets.xcassets */,
+				EFED2C861E7F497300E02440 /* Main.storyboard */,
+				EFED2C891E7F497300E02440 /* Info.plist */,
+			);
+			name = macOS;
+			path = "LJ STAND macOS";
+			sourceTree = "<group>";
+		};
+		EFED2C941E7F49CF00E02440 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EFED2C951E7F4A1800E02440 /* BluetoothController.swift */,
+				EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */,
+				EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */,
+				EFED2C981E7F4A1800E02440 /* MKKitExt.swift */,
+				EFED2C991E7F4A1800E02440 /* NotificationKeys.swift */,
+				EFED2C9A1E7F4A1800E02440 /* Part.swift */,
+				EFED2C9B1E7F4A1800E02440 /* PartParser.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -382,6 +451,24 @@
 			productReference = EF1705C81E682D910029DD0E /* LJ STAND Stickers.appex */;
 			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
+		EFED2C7D1E7F497300E02440 /* LJ STAND macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFED2C8C1E7F497300E02440 /* Build configuration list for PBXNativeTarget "LJ STAND macOS" */;
+			buildPhases = (
+				EFED2C7A1E7F497300E02440 /* Sources */,
+				EFED2C7B1E7F497300E02440 /* Frameworks */,
+				EFED2C7C1E7F497300E02440 /* Resources */,
+				EFED2C931E7F49A100E02440 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LJ STAND macOS";
+			productName = "LJ STAND macOS";
+			productReference = EFED2C7E1E7F497300E02440 /* LJ STAND macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -389,7 +476,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = "";
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Lachlan Grant";
 				TargetAttributes = {
@@ -421,6 +508,10 @@
 						CreatedOnToolsVersion = 8.3;
 						ProvisioningStyle = Automatic;
 					};
+					EFED2C7D1E7F497300E02440 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 4B642AFBC9C0D7805E207890 /* Build configuration list for PBXProject "LJ STAND" */;
@@ -429,6 +520,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 4A3FAAA8F24E251A68153041;
 			productRefGroup = AC5953FE6C17FE0FB64BBF47 /* Products */;
@@ -437,6 +529,7 @@
 			targets = (
 				D020986916FA04E7BBD68098 /* LJ STAND */,
 				EF1705C71E682D910029DD0E /* LJ STAND Stickers */,
+				EFED2C7D1E7F497300E02440 /* LJ STAND macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -467,6 +560,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF1705CB1E682D910029DD0E /* Stickers.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFED2C7C1E7F497300E02440 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFED2C851E7F497300E02440 /* Assets.xcassets in Resources */,
+				EFED2C881E7F497300E02440 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,38 +611,65 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFAA53651DB6FCC600EBFA89 /* DesignTableViewController.swift in Sources */,
-				EF608FFB1E63AF75005361F9 /* DefaultKeys.swift in Sources */,
 				D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */,
 				EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */,
+				EFED2C9C1E7F4A1800E02440 /* BluetoothController.swift in Sources */,
 				CD2A02941E46EB080037C8E5 /* ResizableViewController.swift in Sources */,
-				EF734A571DB8B894000E6D8C /* BluetoothController.swift in Sources */,
-				EF0E2D811E6E262F00E24D72 /* NotificationKeys.swift in Sources */,
 				EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */,
 				EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */,
 				EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */,
 				EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */,
 				EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */,
-				EF608FE11E639E21005361F9 /* MKKitExt.swift in Sources */,
-				EF22B9D31DAC2C1B0039F1B1 /* BluetoothSerial.swift in Sources */,
+				EFED2C9E1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */,
 				CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */,
 				EFAA53611DB6EAC700EBFA89 /* PartDetailViewController.swift in Sources */,
 				EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */,
 				EFAA535F1DB6E90B00EBFA89 /* PartsListTableViewController.swift in Sources */,
 				EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */,
+				EFED2CA61E7F4A1800E02440 /* Part.swift in Sources */,
 				EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */,
+				EFED2CA41E7F4A1800E02440 /* NotificationKeys.swift in Sources */,
 				CD29B26E1E48076A00EEF6B7 /* BackgroundViewController.swift in Sources */,
+				EFED2CA01E7F4A1800E02440 /* DefaultKeys.swift in Sources */,
 				EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */,
 				EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */,
 				EFAFC6861E61068D00DB37E3 /* DockViewController.swift in Sources */,
-				EFAA535B1DB6E12F00EBFA89 /* PartParser.swift in Sources */,
+				EFED2CA21E7F4A1800E02440 /* MKKitExt.swift in Sources */,
 				EFAA53631DB6FB0C00EBFA89 /* WebViewController.swift in Sources */,
-				EFAA53591DB6DED700EBFA89 /* Part.swift in Sources */,
+				EFED2CA81E7F4A1800E02440 /* PartParser.swift in Sources */,
 				EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */,
 				CD7C1EBB1E4753DE006F8512 /* HexButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFED2C7A1E7F497300E02440 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFED2CA51E7F4A1800E02440 /* NotificationKeys.swift in Sources */,
+				EFED2C831E7F497300E02440 /* ViewController.swift in Sources */,
+				EFED2C9D1E7F4A1800E02440 /* BluetoothController.swift in Sources */,
+				EFED2CA31E7F4A1800E02440 /* MKKitExt.swift in Sources */,
+				EFED2CA71E7F4A1800E02440 /* Part.swift in Sources */,
+				EFED2CA11E7F4A1800E02440 /* DefaultKeys.swift in Sources */,
+				EFED2C9F1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */,
+				EFED2C811E7F497300E02440 /* AppDelegate.swift in Sources */,
+				EFED2CA91E7F4A1800E02440 /* PartParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EFED2C861E7F497300E02440 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFED2C871E7F497300E02440 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1328577D1210908FA29C34EC /* Debug */ = {
@@ -775,6 +904,59 @@
 			};
 			name = Release;
 		};
+		EFED2C8A1E7F497300E02440 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = QSCWPBA77U;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "LJ STAND macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lachlangrant.LJSTAND.macOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EFED2C8B1E7F497300E02440 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = QSCWPBA77U;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "LJ STAND macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lachlangrant.LJSTAND.macOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -795,6 +977,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		EFED2C8C1E7F497300E02440 /* Build configuration list for PBXNativeTarget "LJ STAND macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFED2C8A1E7F497300E02440 /* Debug */,
+				EFED2C8B1E7F497300E02440 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJ STAND" */ = {
 			isa = XCConfigurationList;
