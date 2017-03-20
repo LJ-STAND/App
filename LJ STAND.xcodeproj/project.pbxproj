@@ -35,6 +35,7 @@
 		EF608FF31E63A331005361F9 /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FF11E63A331005361F9 /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
+		EF941FD81E7F73E00081B8F3 /* parts.csv in Resources */ = {isa = PBXBuildFile; fileRef = EFAA535C1DB6E36400EBFA89 /* parts.csv */; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
 		EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */; };
 		EFAA535D1DB6E36400EBFA89 /* parts.csv in Resources */ = {isa = PBXBuildFile; fileRef = EFAA535C1DB6E36400EBFA89 /* parts.csv */; };
@@ -621,6 +622,7 @@
 			files = (
 				EFED2C851E7F497300E02440 /* Assets.xcassets in Resources */,
 				EFED2C881E7F497300E02440 /* Main.storyboard in Resources */,
+				EF941FD81E7F73E00081B8F3 /* parts.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
