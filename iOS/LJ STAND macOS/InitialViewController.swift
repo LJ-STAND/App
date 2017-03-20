@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import MKKit
+import MKUtilityKit
 
 class InitialViewController: NSViewController {
     
@@ -16,8 +18,7 @@ class InitialViewController: NSViewController {
     
 	@IBAction func lightSensorsAction(_ sender: Any) {
         let viewID = "lightsensor"
-        
-        let lightSensor = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: viewID) as! NSViewController
+        let lightSensor = getViewControllerFromID(viewID)
         
         lightSensor.title = "Light Sensors"
         
@@ -29,6 +30,15 @@ class InitialViewController: NSViewController {
 	}
     
 	@IBAction func tsopAction(_ sender: Any) {
+        let viewID = "tsop"
+        let tsop = getViewControllerFromID(viewID)
         
+        tsop.title = "TSOP"
+        
+        self.presentViewControllerAsModalWindow(tsop)
+    }
+    
+    func getViewControllerFromID(_ id: String) -> NSViewController {
+        return NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: id) as! NSViewController
     }
 }

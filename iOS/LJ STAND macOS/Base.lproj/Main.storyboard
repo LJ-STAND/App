@@ -788,5 +788,37 @@
             </objects>
             <point key="canvasLocation" x="789.5" y="638"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="5Gl-18-HaM">
+            <objects>
+                <viewController storyboardIdentifier="tsop" id="Pb7-dG-H46" customClass="TSOPViewController" customModule="LJ_STAND_macOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="m5y-IZ-s1s">
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="416"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="V23-mQ-QK3" customClass="TSOPRingView" customModule="LJ_STAND_macOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="416" height="416"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="V23-mQ-QK3" secondAttribute="height" multiplier="1:1" id="w9i-5H-Ttm"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="V23-mQ-QK3" firstAttribute="centerX" secondItem="m5y-IZ-s1s" secondAttribute="centerX" id="67c-3p-ezT"/>
+                            <constraint firstItem="V23-mQ-QK3" firstAttribute="width" relation="lessThanOrEqual" secondItem="m5y-IZ-s1s" secondAttribute="width" id="KZ9-KQ-DB0"/>
+                            <constraint firstItem="V23-mQ-QK3" firstAttribute="height" secondItem="m5y-IZ-s1s" secondAttribute="height" priority="999" id="dz9-Ob-dvG"/>
+                            <constraint firstItem="V23-mQ-QK3" firstAttribute="width" secondItem="m5y-IZ-s1s" secondAttribute="width" priority="999" id="gKZ-48-BBM"/>
+                            <constraint firstItem="V23-mQ-QK3" firstAttribute="centerY" secondItem="m5y-IZ-s1s" secondAttribute="centerY" id="nFV-JK-T8X"/>
+                            <constraint firstItem="V23-mQ-QK3" firstAttribute="height" relation="lessThanOrEqual" secondItem="m5y-IZ-s1s" secondAttribute="height" id="uYf-UT-jTO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tsView" destination="V23-mQ-QK3" id="qny-Mq-aG6"/>
+                    </connections>
+                </viewController>
+                <customObject id="pu5-KL-yxg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="1127"/>
+        </scene>
     </scenes>
 </document>
