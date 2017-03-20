@@ -820,5 +820,37 @@
             </objects>
             <point key="canvasLocation" x="789" y="1127"/>
         </scene>
+        <!--Compass View Controller-->
+        <scene sceneID="xw4-gm-Jm5">
+            <objects>
+                <viewController storyboardIdentifier="compass" id="bkB-4A-jUV" customClass="CompassViewController" customModule="LJ_STAND_macOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="FaM-GF-aMl">
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="416"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="V3w-8G-bI0" customClass="CompassView" customModule="LJ_STAND_macOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="416" height="416"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="V3w-8G-bI0" secondAttribute="height" multiplier="1:1" id="AhU-ye-5WB"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="V3w-8G-bI0" firstAttribute="width" secondItem="FaM-GF-aMl" secondAttribute="width" priority="999" id="7ya-Yh-l3Q"/>
+                            <constraint firstItem="V3w-8G-bI0" firstAttribute="height" relation="lessThanOrEqual" secondItem="FaM-GF-aMl" secondAttribute="height" id="FLg-Fd-4nA"/>
+                            <constraint firstItem="V3w-8G-bI0" firstAttribute="height" secondItem="FaM-GF-aMl" secondAttribute="height" priority="999" id="LX6-g5-CRd"/>
+                            <constraint firstItem="V3w-8G-bI0" firstAttribute="centerX" secondItem="FaM-GF-aMl" secondAttribute="centerX" id="MV0-hD-YG0"/>
+                            <constraint firstItem="V3w-8G-bI0" firstAttribute="width" relation="lessThanOrEqual" secondItem="FaM-GF-aMl" secondAttribute="width" id="Qci-yj-81B"/>
+                            <constraint firstItem="V3w-8G-bI0" firstAttribute="centerY" secondItem="FaM-GF-aMl" secondAttribute="centerY" id="ZzS-Wu-XA8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="compassView" destination="V3w-8G-bI0" id="8ga-nd-kJq"/>
+                    </connections>
+                </viewController>
+                <customObject id="Ttr-tg-W2F" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="1595"/>
+        </scene>
     </scenes>
 </document>

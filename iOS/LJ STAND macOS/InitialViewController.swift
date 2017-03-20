@@ -26,7 +26,12 @@ class InitialViewController: NSViewController {
 	}
     
 	@IBAction func compassActions(_ sender: Any) {
+        let viewID = "compass"
+        let compass = getViewControllerFromID(viewID)
         
+        compass.title = "Compass"
+        
+        self.presentViewControllerAsModalWindow(compass)
 	}
     
 	@IBAction func tsopAction(_ sender: Any) {

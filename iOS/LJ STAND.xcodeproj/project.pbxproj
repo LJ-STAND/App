@@ -86,6 +86,7 @@
 		EFED2CBE1E7F649700E02440 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CBC1E7F649700E02440 /* InitialViewController.swift */; };
 		EFED2CC01E7F657900E02440 /* LightSensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CBF1E7F657900E02440 /* LightSensorViewController.swift */; };
 		EFED2CC21E7F6C2200E02440 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CC11E7F6C2200E02440 /* TSOPViewController.swift */; };
+		EFED2CC41E7F6D5900E02440 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */; };
 		EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA381E469A4E005BEE4E /* WMWindow.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
 		EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */; };
@@ -192,6 +193,7 @@
 		EFED2CBC1E7F649700E02440 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		EFED2CBF1E7F657900E02440 /* LightSensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightSensorViewController.swift; sourceTree = "<group>"; };
 		EFED2CC11E7F6C2200E02440 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
+		EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EFEDAA381E469A4E005BEE4E /* WMWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMWindow.swift; sourceTree = "<group>"; };
 		EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
 		EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInterfaceIdom.swift; sourceTree = "<group>"; };
@@ -421,6 +423,7 @@
 				EFED2CBC1E7F649700E02440 /* InitialViewController.swift */,
 				EFED2CBF1E7F657900E02440 /* LightSensorViewController.swift */,
 				EFED2CC11E7F6C2200E02440 /* TSOPViewController.swift */,
+				EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */,
 				EFED2C841E7F497300E02440 /* Assets.xcassets */,
 				EFED2C861E7F497300E02440 /* Main.storyboard */,
 				EFED2C891E7F497300E02440 /* Info.plist */,
@@ -724,6 +727,7 @@
 				EFED2CA11E7F4A1800E02440 /* DefaultKeys.swift in Sources */,
 				EFED2C9F1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */,
 				EFED2CC01E7F657900E02440 /* LightSensorViewController.swift in Sources */,
+				EFED2CC41E7F6D5900E02440 /* CompassViewController.swift in Sources */,
 				EFED2CBB1E7F60C100E02440 /* CompassView.swift in Sources */,
 				EFED2C811E7F497300E02440 /* AppDelegate.swift in Sources */,
 				EFED2CB81E7F601900E02440 /* TSOPRingView.swift in Sources */,
