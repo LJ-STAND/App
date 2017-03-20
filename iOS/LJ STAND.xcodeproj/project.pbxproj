@@ -75,6 +75,7 @@
 		EFED2CA81E7F4A1800E02440 /* PartParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C9B1E7F4A1800E02440 /* PartParser.swift */; };
 		EFED2CA91E7F4A1800E02440 /* PartParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C9B1E7F4A1800E02440 /* PartParser.swift */; };
 		EFED2CAB1E7F4DCF00E02440 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */; };
+		EFED2CAE1E7F535500E02440 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2CAD1E7F535500E02440 /* CloudKit.framework */; };
 		EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA381E469A4E005BEE4E /* WMWindow.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
 		EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */; };
@@ -173,6 +174,8 @@
 		EFED2C9A1E7F4A1800E02440 /* Part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		EFED2C9B1E7F4A1800E02440 /* PartParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartParser.swift; sourceTree = "<group>"; };
 		EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
+		EFED2CAC1E7F532300E02440 /* LJ STAND macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "LJ STAND macOS.entitlements"; path = "LJ STAND macOS/LJ STAND macOS.entitlements"; sourceTree = "<group>"; };
+		EFED2CAD1E7F535500E02440 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		EFEDAA381E469A4E005BEE4E /* WMWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMWindow.swift; sourceTree = "<group>"; };
 		EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
 		EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInterfaceIdom.swift; sourceTree = "<group>"; };
@@ -198,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFED2CAB1E7F4DCF00E02440 /* CoreBluetooth.framework in Frameworks */,
+				EFED2CAE1E7F535500E02440 /* CloudKit.framework in Frameworks */,
 				EFED2C911E7F49A100E02440 /* MKUtilityKit.framework in Frameworks */,
 				EFED2C8E1E7F49A100E02440 /* MKKit.framework in Frameworks */,
 			);
@@ -228,6 +232,7 @@
 		4A3FAAA8F24E251A68153041 = {
 			isa = PBXGroup;
 			children = (
+				EFED2CAC1E7F532300E02440 /* LJ STAND macOS.entitlements */,
 				EFC213881E5A636000233E6E /* LJ STAND.entitlements */,
 				EFED2C941E7F49CF00E02440 /* Common */,
 				AB3793622466EE2A02CBADDD /* iOS */,
@@ -261,6 +266,7 @@
 		534AB7A34A3D72BAFA984F6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFED2CAD1E7F535500E02440 /* CloudKit.framework */,
 				EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */,
 				EFED2C901E7F49A100E02440 /* MKUtilityKit.framework */,
 				EFED2C8D1E7F49A100E02440 /* MKKit.framework */,
@@ -517,6 +523,17 @@
 					EFED2C7D1E7F497300E02440 = {
 						CreatedOnToolsVersion = 8.3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.Mac = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -918,7 +935,8 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = "LJ STAND macOS/LJ STAND macOS.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = QSCWPBA77U;
@@ -930,6 +948,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lachlangrant.LJSTAND.macOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -945,7 +964,8 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = "LJ STAND macOS/LJ STAND macOS.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -958,6 +978,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lachlangrant.LJSTAND.macOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
 			};
