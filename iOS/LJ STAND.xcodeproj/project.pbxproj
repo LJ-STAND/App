@@ -76,6 +76,14 @@
 		EFED2CA91E7F4A1800E02440 /* PartParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C9B1E7F4A1800E02440 /* PartParser.swift */; };
 		EFED2CAB1E7F4DCF00E02440 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */; };
 		EFED2CAE1E7F535500E02440 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2CAD1E7F535500E02440 /* CloudKit.framework */; };
+		EFED2CB11E7F5E4700E02440 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB01E7F5E4700E02440 /* TypeAlias.swift */; };
+		EFED2CB21E7F5E4700E02440 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB01E7F5E4700E02440 /* TypeAlias.swift */; };
+		EFED2CB41E7F5E8400E02440 /* LightSensorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB31E7F5E8400E02440 /* LightSensorView.swift */; };
+		EFED2CB51E7F5E8400E02440 /* LightSensorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB31E7F5E8400E02440 /* LightSensorView.swift */; };
+		EFED2CB71E7F601900E02440 /* TSOPRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB61E7F601900E02440 /* TSOPRingView.swift */; };
+		EFED2CB81E7F601900E02440 /* TSOPRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB61E7F601900E02440 /* TSOPRingView.swift */; };
+		EFED2CBA1E7F60C100E02440 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB91E7F60C100E02440 /* CompassView.swift */; };
+		EFED2CBB1E7F60C100E02440 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB91E7F60C100E02440 /* CompassView.swift */; };
 		EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA381E469A4E005BEE4E /* WMWindow.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
 		EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */; };
@@ -176,6 +184,10 @@
 		EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		EFED2CAC1E7F532300E02440 /* LJ STAND macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "LJ STAND macOS.entitlements"; path = "LJ STAND macOS/LJ STAND macOS.entitlements"; sourceTree = "<group>"; };
 		EFED2CAD1E7F535500E02440 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		EFED2CB01E7F5E4700E02440 /* TypeAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
+		EFED2CB31E7F5E8400E02440 /* LightSensorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightSensorView.swift; sourceTree = "<group>"; };
+		EFED2CB61E7F601900E02440 /* TSOPRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPRingView.swift; sourceTree = "<group>"; };
+		EFED2CB91E7F60C100E02440 /* CompassView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		EFEDAA381E469A4E005BEE4E /* WMWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMWindow.swift; sourceTree = "<group>"; };
 		EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
 		EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInterfaceIdom.swift; sourceTree = "<group>"; };
@@ -414,6 +426,7 @@
 		EFED2C941E7F49CF00E02440 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				EFED2CB01E7F5E4700E02440 /* TypeAlias.swift */,
 				EFED2C951E7F4A1800E02440 /* BluetoothController.swift */,
 				EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */,
 				EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */,
@@ -421,6 +434,9 @@
 				EFED2C991E7F4A1800E02440 /* NotificationKeys.swift */,
 				EFED2C9A1E7F4A1800E02440 /* Part.swift */,
 				EFED2C9B1E7F4A1800E02440 /* PartParser.swift */,
+				EFED2CB31E7F5E8400E02440 /* LightSensorView.swift */,
+				EFED2CB61E7F601900E02440 /* TSOPRingView.swift */,
+				EFED2CB91E7F60C100E02440 /* CompassView.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -654,6 +670,7 @@
 				EFAA53651DB6FCC600EBFA89 /* DesignTableViewController.swift in Sources */,
 				D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */,
 				EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */,
+				EFED2CB41E7F5E8400E02440 /* LightSensorView.swift in Sources */,
 				EFED2C9C1E7F4A1800E02440 /* BluetoothController.swift in Sources */,
 				CD2A02941E46EB080037C8E5 /* ResizableViewController.swift in Sources */,
 				EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */,
@@ -665,6 +682,7 @@
 				CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */,
 				EFAA53611DB6EAC700EBFA89 /* PartDetailViewController.swift in Sources */,
 				EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */,
+				EFED2CBA1E7F60C100E02440 /* CompassView.swift in Sources */,
 				EFAA535F1DB6E90B00EBFA89 /* PartsListTableViewController.swift in Sources */,
 				EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */,
 				EFED2CA61E7F4A1800E02440 /* Part.swift in Sources */,
@@ -675,10 +693,12 @@
 				EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */,
 				EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */,
 				EFAFC6861E61068D00DB37E3 /* DockViewController.swift in Sources */,
+				EFED2CB11E7F5E4700E02440 /* TypeAlias.swift in Sources */,
 				EFED2CA21E7F4A1800E02440 /* MKKitExt.swift in Sources */,
 				EFAA53631DB6FB0C00EBFA89 /* WebViewController.swift in Sources */,
 				EFED2CA81E7F4A1800E02440 /* PartParser.swift in Sources */,
 				EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */,
+				EFED2CB71E7F601900E02440 /* TSOPRingView.swift in Sources */,
 				CD7C1EBB1E4753DE006F8512 /* HexButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,10 +711,14 @@
 				EFED2C831E7F497300E02440 /* ViewController.swift in Sources */,
 				EFED2C9D1E7F4A1800E02440 /* BluetoothController.swift in Sources */,
 				EFED2CA31E7F4A1800E02440 /* MKKitExt.swift in Sources */,
+				EFED2CB51E7F5E8400E02440 /* LightSensorView.swift in Sources */,
+				EFED2CB21E7F5E4700E02440 /* TypeAlias.swift in Sources */,
 				EFED2CA71E7F4A1800E02440 /* Part.swift in Sources */,
 				EFED2CA11E7F4A1800E02440 /* DefaultKeys.swift in Sources */,
 				EFED2C9F1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */,
+				EFED2CBB1E7F60C100E02440 /* CompassView.swift in Sources */,
 				EFED2C811E7F497300E02440 /* AppDelegate.swift in Sources */,
+				EFED2CB81E7F601900E02440 /* TSOPRingView.swift in Sources */,
 				EFED2CA91E7F4A1800E02440 /* PartParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1032,6 +1056,7 @@
 				EFED2C8B1E7F497300E02440 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJ STAND" */ = {
 			isa = XCConfigurationList;
