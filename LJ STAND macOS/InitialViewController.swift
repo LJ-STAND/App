@@ -13,37 +13,37 @@ import MKUtilityKit
 class InitialViewController: NSViewController {
     
 	@IBAction func serialAction(_ sender: Any) {
-        
 	}
     
 	@IBAction func lightSensorsAction(_ sender: Any) {
-        let viewID = "lightsensor"
-        let lightSensor = getViewControllerFromID(viewID)
-        
-        lightSensor.title = "Light Sensors"
-        
-        self.presentViewControllerAsModalWindow(lightSensor)
+        presentViewWithID("lightsensor", title: "Light Sensors")
 	}
     
 	@IBAction func compassActions(_ sender: Any) {
-        let viewID = "compass"
-        let compass = getViewControllerFromID(viewID)
-        
-        compass.title = "Compass"
-        
-        self.presentViewControllerAsModalWindow(compass)
+        presentViewWithID("compass", title: "Compass")
 	}
     
 	@IBAction func tsopAction(_ sender: Any) {
-        let viewID = "tsop"
-        let tsop = getViewControllerFromID(viewID)
-        
-        tsop.title = "TSOP"
-        
-        self.presentViewControllerAsModalWindow(tsop)
+        presentViewWithID("tsop", title: "TSOP")
     }
     
     func getViewControllerFromID(_ id: String) -> NSViewController {
         return NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: id) as! NSViewController
     }
+    
+    func presentViewWithID(_ id: String, title: String) {
+        let vcToPresent = getViewControllerFromID(id)
+        vcToPresent.title = title
+
+        self.presentViewControllerAsModalWindow(vcToPresent)
+//        let newWindow = NSWindow(contentViewController: vcToPresent)
+//        newWindow.makeKeyAndOrderFront(nil)
+    }
+	
+	@IBAction func dumpBluetooth(_ sender: Any) {
+        let bt = BluetoothController.shared
+        
+        let array = [bt.bluetoothDebug, bt.connected]
+		MKULog.shared.info("[BLUETOOTH] - \(array)")
+	}
 }

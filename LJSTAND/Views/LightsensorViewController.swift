@@ -9,7 +9,6 @@
 import UIKit
 import MKKit
 import MKUtilityKit
-@IBOutlet weak var lsView: lightSensorView!
 import MKUIKit
 import Chameleon
 import QuartzCore

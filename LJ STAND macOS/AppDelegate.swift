@@ -19,6 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         BluetoothController.shared.compassDelegate = self
         BluetoothController.shared.serialDelegate = self
         BluetoothController.shared.tsopDelegate = self
+        BluetoothController.shared.bluetoothDebug = true
         MKULog.shared.logDetails()
 	}
 }

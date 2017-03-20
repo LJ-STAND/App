@@ -130,13 +130,13 @@
 		581C1A4891F43E30617A28DB /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		886869AA91C9C729AA88271F /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFE59898617C260F3B4780CF /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C8E706015D603F83004748A1 /* LJ STAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LJ STAND.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8E706015D603F83004748A1 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD29B26D1E48076A00EEF6B7 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundViewController.swift; path = LJSTAND/Views/BackgroundViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewController.swift; sourceTree = "<group>"; };
 		CD7C1EBA1E4753DE006F8512 /* HexButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexButton.swift; path = LJSTAND/Views/HexButton.swift; sourceTree = SOURCE_ROOT; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
-		EF1705C81E682D910029DD0E /* LJ STAND Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LJ STAND Stickers.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF1705C81E682D910029DD0E /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1705CA1E682D910029DD0E /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		EF1705CC1E682D910029DD0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1E983F1E61019D00C70420 /* Dock.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dock.storyboard; sourceTree = "<group>"; };
@@ -168,9 +168,9 @@
 		EFAFC6851E61068D00DB37E3 /* DockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockViewController.swift; sourceTree = "<group>"; };
 		EFB29C681E3F1D7800906D5A /* Chameleon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chameleon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
-		EFC213881E5A636000233E6E /* LJ STAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LJ STAND.entitlements"; sourceTree = "<group>"; };
+		EFC213881E5A636000233E6E /* LJ STAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "LJ STAND.entitlements"; path = "../LJ STAND.entitlements"; sourceTree = "<group>"; };
 		EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		EFED2C7E1E7F497300E02440 /* LJ STAND macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LJ STAND macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFED2C7E1E7F497300E02440 /* LJ STAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LJ STAND.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFED2C801E7F497300E02440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFED2C841E7F497300E02440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFED2C871E7F497300E02440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		EFED2C9A1E7F4A1800E02440 /* Part.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Part.swift; sourceTree = "<group>"; };
 		EFED2C9B1E7F4A1800E02440 /* PartParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartParser.swift; sourceTree = "<group>"; };
 		EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
-		EFED2CAC1E7F532300E02440 /* LJ STAND macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "LJ STAND macOS.entitlements"; path = "LJ STAND macOS/LJ STAND macOS.entitlements"; sourceTree = "<group>"; };
+		EFED2CAC1E7F532300E02440 /* LJ STAND macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LJ STAND macOS.entitlements"; sourceTree = "<group>"; };
 		EFED2CAD1E7F535500E02440 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		EFED2CB01E7F5E4700E02440 /* TypeAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		EFED2CB31E7F5E8400E02440 /* LightSensorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightSensorView.swift; sourceTree = "<group>"; };
@@ -251,8 +251,6 @@
 		4A3FAAA8F24E251A68153041 = {
 			isa = PBXGroup;
 			children = (
-				EFED2CAC1E7F532300E02440 /* LJ STAND macOS.entitlements */,
-				EFC213881E5A636000233E6E /* LJ STAND.entitlements */,
 				EFED2C941E7F49CF00E02440 /* Common */,
 				AB3793622466EE2A02CBADDD /* iOS */,
 				EFED2C7F1E7F497300E02440 /* macOS */,
@@ -368,6 +366,7 @@
 		AB3793622466EE2A02CBADDD /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EFC213881E5A636000233E6E /* LJ STAND.entitlements */,
 				75D7C917E0C54D37E9FEED01 /* Extensions */,
 				C8BB61B6AAC040A7B0BF5B9C /* Protocols */,
 				924BCA1E22B5177CDCE5286D /* Models */,
@@ -383,9 +382,9 @@
 		AC5953FE6C17FE0FB64BBF47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C8E706015D603F83004748A1 /* LJ STAND.app */,
-				EF1705C81E682D910029DD0E /* LJ STAND Stickers.appex */,
-				EFED2C7E1E7F497300E02440 /* LJ STAND macOS.app */,
+				C8E706015D603F83004748A1 /* iOS.app */,
+				EF1705C81E682D910029DD0E /* Stickers.appex */,
+				EFED2C7E1E7F497300E02440 /* LJ STAND.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -420,6 +419,7 @@
 		EFED2C7F1E7F497300E02440 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				EFED2CAC1E7F532300E02440 /* LJ STAND macOS.entitlements */,
 				EFED2C801E7F497300E02440 /* AppDelegate.swift */,
 				EFED2CBC1E7F649700E02440 /* InitialViewController.swift */,
 				EFED2CBF1E7F657900E02440 /* LightSensorViewController.swift */,
@@ -454,9 +454,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D020986916FA04E7BBD68098 /* LJ STAND */ = {
+		D020986916FA04E7BBD68098 /* iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJ STAND" */;
+			buildConfigurationList = F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "iOS" */;
 			buildPhases = (
 				876DD3D9D9926CE2EBE64DDB /* Sources */,
 				E103AE9143FC4D78FD557160 /* Resources */,
@@ -469,14 +469,14 @@
 			);
 			dependencies = (
 			);
-			name = "LJ STAND";
+			name = iOS;
 			productName = Layers;
-			productReference = C8E706015D603F83004748A1 /* LJ STAND.app */;
+			productReference = C8E706015D603F83004748A1 /* iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EF1705C71E682D910029DD0E /* LJ STAND Stickers */ = {
+		EF1705C71E682D910029DD0E /* Stickers */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EF1705D31E682D910029DD0E /* Build configuration list for PBXNativeTarget "LJ STAND Stickers" */;
+			buildConfigurationList = EF1705D31E682D910029DD0E /* Build configuration list for PBXNativeTarget "Stickers" */;
 			buildPhases = (
 				EF1705C61E682D910029DD0E /* Resources */,
 			);
@@ -484,14 +484,14 @@
 			);
 			dependencies = (
 			);
-			name = "LJ STAND Stickers";
+			name = Stickers;
 			productName = "LJ STAND Stickers";
-			productReference = EF1705C81E682D910029DD0E /* LJ STAND Stickers.appex */;
+			productReference = EF1705C81E682D910029DD0E /* Stickers.appex */;
 			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
-		EFED2C7D1E7F497300E02440 /* LJ STAND macOS */ = {
+		EFED2C7D1E7F497300E02440 /* macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EFED2C8C1E7F497300E02440 /* Build configuration list for PBXNativeTarget "LJ STAND macOS" */;
+			buildConfigurationList = EFED2C8C1E7F497300E02440 /* Build configuration list for PBXNativeTarget "macOS" */;
 			buildPhases = (
 				EFED2C7A1E7F497300E02440 /* Sources */,
 				EFED2C7B1E7F497300E02440 /* Frameworks */,
@@ -503,9 +503,9 @@
 			);
 			dependencies = (
 			);
-			name = "LJ STAND macOS";
+			name = macOS;
 			productName = "LJ STAND macOS";
-			productReference = EFED2C7E1E7F497300E02440 /* LJ STAND macOS.app */;
+			productReference = EFED2C7E1E7F497300E02440 /* LJ STAND.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -580,9 +580,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D020986916FA04E7BBD68098 /* LJ STAND */,
-				EF1705C71E682D910029DD0E /* LJ STAND Stickers */,
-				EFED2C7D1E7F497300E02440 /* LJ STAND macOS */,
+				D020986916FA04E7BBD68098 /* iOS */,
+				EF1705C71E682D910029DD0E /* Stickers */,
+				EFED2C7D1E7F497300E02440 /* macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -1005,7 +1005,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lachlangrant.LJSTAND.macOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "LJ STAND";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1035,7 +1035,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lachlangrant.LJSTAND.macOS;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "LJ STAND";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 3.0;
@@ -1054,7 +1054,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF1705D31E682D910029DD0E /* Build configuration list for PBXNativeTarget "LJ STAND Stickers" */ = {
+		EF1705D31E682D910029DD0E /* Build configuration list for PBXNativeTarget "Stickers" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF1705D11E682D910029DD0E /* Debug */,
@@ -1063,7 +1063,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EFED2C8C1E7F497300E02440 /* Build configuration list for PBXNativeTarget "LJ STAND macOS" */ = {
+		EFED2C8C1E7F497300E02440 /* Build configuration list for PBXNativeTarget "macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EFED2C8A1E7F497300E02440 /* Debug */,
@@ -1072,7 +1072,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJ STAND" */ = {
+		F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F703D29C38C3E92F300FDC2 /* Release */,

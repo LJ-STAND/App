@@ -745,9 +745,21 @@
                                     <real value="3.4028234663852886e+38"/>
                                 </customSpacing>
                             </stackView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i8A-pp-Gdk">
+                                <rect key="frame" x="14" y="222" width="181" height="32"/>
+                                <buttonCell key="cell" type="push" title="Dump Bluetooth Status" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NRA-ML-jVa">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dumpBluetooth:" target="XfG-lQ-9wD" id="VDV-ET-0qu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="i8A-pp-Gdk" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="Z8q-We-TKc"/>
                             <constraint firstItem="mgr-9r-PcQ" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="i5v-cN-IXt"/>
+                            <constraint firstItem="i8A-pp-Gdk" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="n92-8w-h6J"/>
                             <constraint firstItem="mgr-9r-PcQ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="wWP-Ru-c7d"/>
                         </constraints>
                     </view>
@@ -760,7 +772,7 @@
         <scene sceneID="Aag-pU-MDR">
             <objects>
                 <viewController storyboardIdentifier="lightsensor" id="CdD-rb-atl" customClass="LightSensorViewController" customModule="LJ_STAND_macOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="Pkw-Dc-ei8">
+                    <view key="view" id="Pkw-Dc-ei8">
                         <rect key="frame" x="0.0" y="0.0" width="416" height="416"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>

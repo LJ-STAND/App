@@ -50,6 +50,7 @@ class BluetoothController {
     var overrideConnect = false
     
     var connected: Bool = false
+    var bluetoothDebug: Bool = false
     
     init() {
         serial = BluetoothSerial(delegate: self)
@@ -141,6 +142,10 @@ extension BluetoothController: BluetoothSerialDelegate {
         let tsop = "2"
         let light = "3"
         let compass = "4"
+        
+        if bluetoothDebug {
+            MKULog.shared.info("[BLUETOOTH] - \(comps)")
+        }
         
         if comps.count > 1 {
             if comps[0] == tsop {
