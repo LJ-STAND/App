@@ -37,6 +37,10 @@
 	<string>1000</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>App requires bluetooth to communicate to the robot.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>iTC Complained that this App Requires access to your photos, idk why</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
