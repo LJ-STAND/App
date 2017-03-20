@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EFED2C7D1E7F497300E02440"
-               BuildableName = "macOS.app"
+               BuildableName = "LJ STAND.app"
                BlueprintName = "macOS"
                ReferencedContainer = "container:LJ STAND.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EFED2C7D1E7F497300E02440"
-            BuildableName = "macOS.app"
+            BuildableName = "LJ STAND.app"
             BlueprintName = "macOS"
             ReferencedContainer = "container:LJ STAND.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EFED2C7D1E7F497300E02440"
-            BuildableName = "macOS.app"
+            BuildableName = "LJ STAND.app"
             BlueprintName = "macOS"
             ReferencedContainer = "container:LJ STAND.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EFED2C7D1E7F497300E02440"
-            BuildableName = "macOS.app"
+            BuildableName = "LJ STAND.app"
             BlueprintName = "macOS"
             ReferencedContainer = "container:LJ STAND.xcodeproj">
          </BuildableReference>
