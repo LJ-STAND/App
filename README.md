@@ -1,3 +1,3 @@
-# LJ STAND Apps
+# LJ-Stand iOS #
 
-LJ STAND iOS & Processing Apps
+Just a lil bluetooth thingo <3

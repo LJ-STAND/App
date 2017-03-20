@@ -1,1 +1,33 @@
-**/.DS_Store
+# OS X Finder
+.DS_Store
+
+# Xcode per-user config
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+xcuserdata
+*.xccheckout
+
+# Automatic backup files
+*~.nib/
+*.swp
+*~
+*.dat
+*.dep
+
+# Cocoapods
+Pods
+#Carthage/Build
+
+# AppCode specific files
+.idea/
+*.iml
+
+#Build/
+build.conf
+*.bcsymbolmap
+#*.framework.dSYM
+Icons/OverlayIcon.appiconset/
