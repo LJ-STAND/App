@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12117" systemVersion="16E191a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12117" systemVersion="16E191a" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="XfG-lQ-9wD">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12117"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -678,34 +680,113 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--MacOS View Controller-->
+        <!--LJ STAND-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="MacOSViewController" customModule="LJ_STAND_macOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LJ STAND" id="XfG-lQ-9wD" customClass="InitialViewController" customModule="LJ_STAND_macOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="W4E-GB-dMJ" customClass="lightSensorView" customModule="LJ_STAND_macOS" customModuleProvider="target">
-                                <rect key="frame" x="20" y="75" width="175" height="175"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="btb-uL-pTt"/>
-                                    <constraint firstAttribute="width" constant="175" id="pBL-5Q-YkJ"/>
-                                </constraints>
-                            </customView>
+                            <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mgr-9r-PcQ">
+                                <rect key="frame" x="184" y="81" width="112" height="108"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4ZP-pa-Uce">
+                                        <rect key="frame" x="19" y="80" width="74" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Serial" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cII-C3-Ygm">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="serialAction:" target="XfG-lQ-9wD" id="aTg-1L-44I"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hju-2y-4gg">
+                                        <rect key="frame" x="-6" y="51" width="124" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Light Sensors" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="h8O-TB-Dim">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="lightSensorsAction:" target="XfG-lQ-9wD" id="tEY-Mf-U3b"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aJe-yh-jT1">
+                                        <rect key="frame" x="7.5" y="22" width="97" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Compass" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Zm-va-nHw">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="compassActions:" target="XfG-lQ-9wD" id="96q-f2-h03"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ozC-er-6cO">
+                                        <rect key="frame" x="14.5" y="-7" width="83" height="32"/>
+                                        <buttonCell key="cell" type="push" title="TSOPS" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vH9-C7-lqq">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="tsopAction:" target="XfG-lQ-9wD" id="llO-FZ-fr1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="W4E-GB-dMJ" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="PCI-9m-XPk"/>
-                            <constraint firstItem="W4E-GB-dMJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="WEz-LB-mZb"/>
+                            <constraint firstItem="mgr-9r-PcQ" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="i5v-cN-IXt"/>
+                            <constraint firstItem="mgr-9r-PcQ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="wWP-Ru-c7d"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="lightSensor" destination="W4E-GB-dMJ" id="4cf-6I-I1Y"/>
-                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+        <!--Light Sensor View Controller-->
+        <scene sceneID="Aag-pU-MDR">
+            <objects>
+                <viewController storyboardIdentifier="lightsensor" id="CdD-rb-atl" customClass="LightSensorViewController" customModule="LJ_STAND_macOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" misplaced="YES" id="Pkw-Dc-ei8">
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="416"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Imt-Il-2Fa" customClass="lightSensorView" customModule="LJ_STAND_macOS" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="416" height="416"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Imt-Il-2Fa" secondAttribute="height" multiplier="1:1" id="8Fq-el-7l4"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Imt-Il-2Fa" firstAttribute="height" relation="lessThanOrEqual" secondItem="Pkw-Dc-ei8" secondAttribute="height" id="0Qb-18-g3S"/>
+                            <constraint firstItem="Imt-Il-2Fa" firstAttribute="centerX" secondItem="Pkw-Dc-ei8" secondAttribute="centerX" id="1Ku-71-0z8"/>
+                            <constraint firstItem="Imt-Il-2Fa" firstAttribute="width" secondItem="Pkw-Dc-ei8" secondAttribute="width" priority="999" id="H7F-ZJ-eaF"/>
+                            <constraint firstItem="Imt-Il-2Fa" firstAttribute="height" secondItem="Pkw-Dc-ei8" secondAttribute="height" priority="999" id="dz4-wV-CDA"/>
+                            <constraint firstItem="Imt-Il-2Fa" firstAttribute="width" relation="lessThanOrEqual" secondItem="Pkw-Dc-ei8" secondAttribute="width" id="pmY-rj-OnB"/>
+                            <constraint firstItem="Imt-Il-2Fa" firstAttribute="centerY" secondItem="Pkw-Dc-ei8" secondAttribute="centerY" id="rM0-Me-zv2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lsView" destination="Imt-Il-2Fa" id="k2x-Xb-p3g"/>
+                    </connections>
+                </viewController>
+                <customObject id="Nq7-Y5-gCp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.5" y="638"/>
         </scene>
     </scenes>
 </document>
