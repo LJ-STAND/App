@@ -16,10 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		BluetoothController.shared.messageDelegate = self
-        BluetoothController.shared.compassDelegate = self
-        BluetoothController.shared.serialDelegate = self
-        BluetoothController.shared.tsopDelegate = self
-        BluetoothController.shared.bluetoothDebug = true
+        BluetoothController.shared.bluetoothDebug = false
         MKULog.shared.logDetails()
 	}
 }
@@ -51,20 +48,6 @@ extension AppDelegate: BluetoothMessageDelegate {
         alert.addButton(withTitle: "Close")
         alert.delegate = self
         alert.runModal()
-    }
-}
-
-extension AppDelegate: BluetoothControllerTSOPDelegate, BluetoothControllerSerialDelegate,BluetoothControllerCompassDelegate {
-    func hasNewHeading(_ angle: Double) {
-        commonAlert("Angle: \(angle)")
-    }
-    
-    func hasNewOutput(_ serial: String) {
-        commonAlert(serial)
-    }
-    
-    func hasNewActiveTSOP(_ tsopNum: Int) {
-        commonAlert("TSOP: \(tsopNum)")
     }
 }
 

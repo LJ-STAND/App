@@ -144,7 +144,7 @@ extension BluetoothController: BluetoothSerialDelegate {
         let compass = "4"
         
         if bluetoothDebug {
-            MKULog.shared.info("[BLUETOOTH] - \(comps)")
+            MKULog.shared.debug("[BLUETOOTH] - \(comps)")
         }
         
         if comps.count > 1 {

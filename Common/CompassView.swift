@@ -89,6 +89,11 @@ import Foundation
     
     func rotate(_ angle:Double) {
         needleAngle = angle
+        
+        #if os(macOS)
+                needleAngle = 180 - angle
+        #endif
+        
         setNeedsDisplay(bounds)
     }
     
