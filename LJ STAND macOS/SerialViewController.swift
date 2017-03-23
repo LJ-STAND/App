@@ -14,10 +14,14 @@ class SerialViewController: NSViewController {
     
     override func viewDidLoad() {
         BluetoothController.shared.serialDelegate = self
+        messageTextField.target = self
+        messageTextField.action = #selector(self.sendMessageAction(_:))
     }
     
     @IBAction func sendMessageAction(_ sender: Any) {
-        BluetoothController.shared.serialDelegate?.hasNewOutput(messageTextField.stringValue)
+        //TODO: Just for development testing
+        serial.sendMessageToDevice(messageTextField.stringValue)
+        messageTextField.stringValue = ""
     }
 }
 
