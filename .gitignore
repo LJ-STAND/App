@@ -20,7 +20,7 @@ xcuserdata
 
 # Cocoapods
 Pods
-#Carthage/Build
+#Carthage/*
 
 # AppCode specific files
 .idea/
@@ -31,3 +31,4 @@ build.conf
 *.bcsymbolmap
 #*.framework.dSYM
 Icons/OverlayIcon.appiconset/
+
