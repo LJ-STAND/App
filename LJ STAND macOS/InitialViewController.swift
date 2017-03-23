@@ -17,7 +17,15 @@ class InitialViewController: NSViewController {
     var serialWindowController: NSWindowController?
     
 	@IBAction func serialAction(_ sender: Any) {
-        
+        if serialWindowController == nil {
+            let vc = getViewControllerFromID("serial")
+            vc.title = "Serial"
+            
+            serialWindowController = NSWindowController(window: NSWindow(contentViewController: vc))
+            serialWindowController?.showWindow(self)
+        } else {
+            serialWindowController?.showWindow(self)
+        }
 	}
     
 	@IBAction func lightSensorsAction(_ sender: Any) {

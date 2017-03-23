@@ -776,6 +776,80 @@
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
+        <!--Serial View Controller-->
+        <scene sceneID="t9J-jd-lWT">
+            <objects>
+                <viewController storyboardIdentifier="serial" id="qHq-tb-xE2" customClass="SerialViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="D4L-GF-PLR">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2t4-LZ-6Yo">
+                                <rect key="frame" x="20" y="50" width="410" height="230"/>
+                                <clipView key="contentView" id="tKF-KI-eiH">
+                                    <rect key="frame" x="1" y="1" width="408" height="228"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Tea-Ck-Ctn">
+                                            <rect key="frame" x="0.0" y="0.0" width="408" height="228"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <size key="minSize" width="408" height="228"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="XuO-Nq-J0w">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Fo2-hd-jFF">
+                                    <rect key="frame" x="393" y="1" width="16" height="228"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJq-JN-3eY">
+                                <rect key="frame" x="20" y="20" width="343" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="Message" drawsBackground="YES" id="eBc-wk-cMB">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="j4C-cy-Lxw">
+                                <rect key="frame" x="365" y="13" width="71" height="32"/>
+                                <buttonCell key="cell" type="push" title="Send" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ED0-QI-cs8">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="sendMessageAction:" target="qHq-tb-xE2" id="p5G-SZ-ySa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2t4-LZ-6Yo" secondAttribute="trailing" constant="20" id="I92-FV-0YP"/>
+                            <constraint firstItem="2t4-LZ-6Yo" firstAttribute="top" secondItem="D4L-GF-PLR" secondAttribute="top" constant="20" id="JHV-u9-2je"/>
+                            <constraint firstItem="nJq-JN-3eY" firstAttribute="top" secondItem="2t4-LZ-6Yo" secondAttribute="bottom" constant="8" id="Nip-vh-NJE"/>
+                            <constraint firstItem="nJq-JN-3eY" firstAttribute="leading" secondItem="D4L-GF-PLR" secondAttribute="leading" constant="20" id="Wv2-pL-dZG"/>
+                            <constraint firstAttribute="trailing" secondItem="j4C-cy-Lxw" secondAttribute="trailing" constant="20" id="fj4-vj-dd6"/>
+                            <constraint firstAttribute="bottom" secondItem="nJq-JN-3eY" secondAttribute="bottom" constant="20" id="fuS-UC-ark"/>
+                            <constraint firstItem="2t4-LZ-6Yo" firstAttribute="leading" secondItem="D4L-GF-PLR" secondAttribute="leading" constant="20" id="mTR-QK-DeI"/>
+                            <constraint firstItem="j4C-cy-Lxw" firstAttribute="leading" secondItem="nJq-JN-3eY" secondAttribute="trailing" constant="8" id="wHm-9Z-Jxd"/>
+                            <constraint firstAttribute="bottom" secondItem="j4C-cy-Lxw" secondAttribute="bottom" constant="20" id="xRi-Jl-UgI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextField" destination="nJq-JN-3eY" id="Y7A-A7-0J3"/>
+                        <outlet property="serialTextView" destination="Tea-Ck-Ctn" id="F0L-ar-q9w"/>
+                    </connections>
+                </viewController>
+                <customObject id="9Zt-5J-JHg" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="806" y="173"/>
+        </scene>
         <!--Light Sensor View Controller-->
         <scene sceneID="Aag-pU-MDR">
             <objects>
