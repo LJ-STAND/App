@@ -18,17 +18,9 @@ xcuserdata
 *.dat
 *.dep
 
-# Cocoapods
-Pods
-Carthage/*
-
 # AppCode specific files
 .idea/
 *.iml
 
-#Build/
 build.conf
-*.bcsymbolmap
-#*.framework.dSYM
-Icons/OverlayIcon.appiconset/
 
