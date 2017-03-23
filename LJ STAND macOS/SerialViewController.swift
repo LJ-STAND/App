@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import MKUtilityKit
+import MKKit
 
 class SerialViewController: NSViewController {
     @IBOutlet weak var serialTextView: NSTextView!
@@ -19,8 +21,15 @@ class SerialViewController: NSViewController {
     }
     
     @IBAction func sendMessageAction(_ sender: Any) {
-        serial.sendMessageToDevice(messageTextField.stringValue)
-        messageTextField.stringValue = ""
+        if serial.connectedPeripheral != nil {
+            //Should be connected
+            serial.sendMessageToDevice(messageTextField.stringValue)
+            messageTextField.stringValue = ""
+        } else {
+            let message = "[SERIAL] No Device Connected."
+            BluetoothController.shared.messageDelegate?.showError(message)
+            MKULog.shared.error(message)
+        }
     }
 }
 
