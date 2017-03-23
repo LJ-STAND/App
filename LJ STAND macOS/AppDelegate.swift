@@ -43,6 +43,7 @@ extension AppDelegate: BluetoothMessageDelegate {
     }
     
     func dismissNotifications() {
+        //TODO: Find a way to dismiss NSAlert
     }
     
     func foundDevices(_ peripherals: [CBPeripheral]) {

@@ -19,7 +19,6 @@ class SerialViewController: NSViewController {
     }
     
     @IBAction func sendMessageAction(_ sender: Any) {
-        //TODO: Just for development testing
         serial.sendMessageToDevice(messageTextField.stringValue)
         messageTextField.stringValue = ""
     }
