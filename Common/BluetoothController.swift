@@ -138,13 +138,15 @@ extension BluetoothController: BluetoothSerialDelegate {
     func serialDidReceiveString(_ message: String) {
         let comps = message.components(separatedBy: ";")
         
-        let string = "1"
+        let noDataType = "0" // Shouldn't recieve
+        let serial = "1" //Info is Serial
         let tsop = "2"
         let light = "3"
         let compass = "4"
+        let raw = "5" // Shouldn't recieve
         
         if bluetoothDebug {
-            MKULog.shared.debug("[BLUETOOTH] - \(comps)")
+            MKULog.shared.debug("[BLUETOOTH] [CONTROLLER] - \(comps)")
         }
         
         if comps.count > 1 {
@@ -205,8 +207,11 @@ extension BluetoothController: BluetoothSerialDelegate {
                 }
                 
                 compassDelegate?.hasNewHeading(angle)
-            } else if comps[0] == string {
+            } else if comps[0] == serial {
+                //Info is serial
                 serialDelegate?.hasNewOutput(comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n")))
+            } else if comps[0] == noDataType || comps[0] == raw {
+                MKULog.shared.error("[BLUETOOTH] [CONTROLLER] Message Didn't contain a data type.")
             }
         } else {
             serialDelegate?.hasNewOutput(message)
