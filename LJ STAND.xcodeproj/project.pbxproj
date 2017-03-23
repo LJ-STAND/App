@@ -17,6 +17,10 @@
 		D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE59898617C260F3B4780CF /* Images.xcassets */; };
 		D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */; };
 		EF156E9F1E8390DD00D825F7 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156E9E1E8390DD00D825F7 /* SerialViewController.swift */; };
+		EF156EA11E839D8800D825F7 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF156EA01E839D8800D825F7 /* MKUtilityKit.framework */; };
+		EF156EA21E839D8800D825F7 /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF156EA01E839D8800D825F7 /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF156EA41E839D8800D825F7 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF156EA31E839D8800D825F7 /* RESTKit.framework */; };
+		EF156EA51E839D8800D825F7 /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF156EA31E839D8800D825F7 /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */; };
 		EF1705CB1E682D910029DD0E /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1705CA1E682D910029DD0E /* Stickers.xcassets */; };
 		EF1E98401E61019D00C70420 /* Dock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1E983F1E61019D00C70420 /* Dock.storyboard */; };
@@ -116,8 +120,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EF156EA21E839D8800D825F7 /* MKUtilityKit.framework in Embed Frameworks */,
 				EFED2C921E7F49A100E02440 /* MKUtilityKit.framework in Embed Frameworks */,
 				EFED2C8F1E7F49A100E02440 /* MKKit.framework in Embed Frameworks */,
+				EF156EA51E839D8800D825F7 /* RESTKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +143,8 @@
 		CD7C1EBA1E4753DE006F8512 /* HexButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexButton.swift; path = LJSTAND/Views/HexButton.swift; sourceTree = SOURCE_ROOT; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		EF156E9E1E8390DD00D825F7 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
+		EF156EA01E839D8800D825F7 /* MKUtilityKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUtilityKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF156EA31E839D8800D825F7 /* RESTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RESTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
 		EF1705C81E682D910029DD0E /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1705CA1E682D910029DD0E /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
@@ -222,9 +230,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFED2CAB1E7F4DCF00E02440 /* CoreBluetooth.framework in Frameworks */,
+				EF156EA11E839D8800D825F7 /* MKUtilityKit.framework in Frameworks */,
 				EFED2CAE1E7F535500E02440 /* CloudKit.framework in Frameworks */,
 				EFED2C911E7F49A100E02440 /* MKUtilityKit.framework in Frameworks */,
 				EFED2C8E1E7F49A100E02440 /* MKKit.framework in Frameworks */,
+				EF156EA41E839D8800D825F7 /* RESTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +263,8 @@
 		4A3FAAA8F24E251A68153041 = {
 			isa = PBXGroup;
 			children = (
+				EF156EA31E839D8800D825F7 /* RESTKit.framework */,
+				EF156EA01E839D8800D825F7 /* MKUtilityKit.framework */,
 				EFED2C941E7F49CF00E02440 /* Common */,
 				AB3793622466EE2A02CBADDD /* iOS */,
 				EFED2C7F1E7F497300E02440 /* macOS */,
