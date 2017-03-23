@@ -17,10 +17,6 @@
 		D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE59898617C260F3B4780CF /* Images.xcassets */; };
 		D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */; };
 		EF156E9F1E8390DD00D825F7 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156E9E1E8390DD00D825F7 /* SerialViewController.swift */; };
-		EF156EA11E839D8800D825F7 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF156EA01E839D8800D825F7 /* MKUtilityKit.framework */; };
-		EF156EA21E839D8800D825F7 /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF156EA01E839D8800D825F7 /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF156EA41E839D8800D825F7 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF156EA31E839D8800D825F7 /* RESTKit.framework */; };
-		EF156EA51E839D8800D825F7 /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF156EA31E839D8800D825F7 /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */; };
 		EF1705CB1E682D910029DD0E /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1705CA1E682D910029DD0E /* Stickers.xcassets */; };
 		EF1E98401E61019D00C70420 /* Dock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1E983F1E61019D00C70420 /* Dock.storyboard */; };
@@ -28,16 +24,6 @@
 		EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF471E491DB6C31900CED76B /* ModelViewController.swift */; };
 		EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */ = {isa = PBXBuildFile; fileRef = EF471E4B1DB6C37900CED76B /* Robot.obj */; };
 		EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FDC1E639DE1005361F9 /* CloudKit.framework */; };
-		EF608FE61E63A331005361F9 /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE51E63A331005361F9 /* Chameleon.framework */; };
-		EF608FE71E63A331005361F9 /* Chameleon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE51E63A331005361F9 /* Chameleon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF608FE91E63A331005361F9 /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE81E63A331005361F9 /* MKKit.framework */; };
-		EF608FEA1E63A331005361F9 /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FE81E63A331005361F9 /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF608FEC1E63A331005361F9 /* MKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FEB1E63A331005361F9 /* MKUIKit.framework */; };
-		EF608FED1E63A331005361F9 /* MKUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FEB1E63A331005361F9 /* MKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF608FEF1E63A331005361F9 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */; };
-		EF608FF01E63A331005361F9 /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF608FF21E63A331005361F9 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FF11E63A331005361F9 /* RESTKit.framework */; };
-		EF608FF31E63A331005361F9 /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FF11E63A331005361F9 /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EF941FD81E7F73E00081B8F3 /* parts.csv in Resources */ = {isa = PBXBuildFile; fileRef = EFAA535C1DB6E36400EBFA89 /* parts.csv */; };
@@ -61,10 +47,6 @@
 		EFED2C811E7F497300E02440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C801E7F497300E02440 /* AppDelegate.swift */; };
 		EFED2C851E7F497300E02440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFED2C841E7F497300E02440 /* Assets.xcassets */; };
 		EFED2C881E7F497300E02440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFED2C861E7F497300E02440 /* Main.storyboard */; };
-		EFED2C8E1E7F49A100E02440 /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2C8D1E7F49A100E02440 /* MKKit.framework */; };
-		EFED2C8F1E7F49A100E02440 /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2C8D1E7F49A100E02440 /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EFED2C911E7F49A100E02440 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2C901E7F49A100E02440 /* MKUtilityKit.framework */; };
-		EFED2C921E7F49A100E02440 /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2C901E7F49A100E02440 /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EFED2C9C1E7F4A1800E02440 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C951E7F4A1800E02440 /* BluetoothController.swift */; };
 		EFED2C9D1E7F4A1800E02440 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C951E7F4A1800E02440 /* BluetoothController.swift */; };
 		EFED2C9E1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */; };
@@ -105,11 +87,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EF608FED1E63A331005361F9 /* MKUIKit.framework in Embed Frameworks */,
-				EF608FF31E63A331005361F9 /* RESTKit.framework in Embed Frameworks */,
-				EF608FE71E63A331005361F9 /* Chameleon.framework in Embed Frameworks */,
-				EF608FF01E63A331005361F9 /* MKUtilityKit.framework in Embed Frameworks */,
-				EF608FEA1E63A331005361F9 /* MKKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -120,10 +97,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EF156EA21E839D8800D825F7 /* MKUtilityKit.framework in Embed Frameworks */,
-				EFED2C921E7F49A100E02440 /* MKUtilityKit.framework in Embed Frameworks */,
-				EFED2C8F1E7F49A100E02440 /* MKKit.framework in Embed Frameworks */,
-				EF156EA51E839D8800D825F7 /* RESTKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,8 +116,6 @@
 		CD7C1EBA1E4753DE006F8512 /* HexButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexButton.swift; path = LJSTAND/Views/HexButton.swift; sourceTree = SOURCE_ROOT; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		EF156E9E1E8390DD00D825F7 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
-		EF156EA01E839D8800D825F7 /* MKUtilityKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUtilityKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF156EA31E839D8800D825F7 /* RESTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RESTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
 		EF1705C81E682D910029DD0E /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1705CA1E682D910029DD0E /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
@@ -154,11 +125,6 @@
 		EF471E491DB6C31900CED76B /* ModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
 		EF471E4B1DB6C37900CED76B /* Robot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Robot.obj; sourceTree = "<group>"; };
 		EF608FDC1E639DE1005361F9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		EF608FE51E63A331005361F9 /* Chameleon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chameleon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF608FE81E63A331005361F9 /* MKKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF608FEB1E63A331005361F9 /* MKUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUtilityKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF608FF11E63A331005361F9 /* RESTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RESTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EF9518231DB08CB4009B1F6F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -185,8 +151,6 @@
 		EFED2C841E7F497300E02440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFED2C871E7F497300E02440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EFED2C891E7F497300E02440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFED2C8D1E7F49A100E02440 /* MKKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFED2C901E7F49A100E02440 /* MKUtilityKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUtilityKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFED2C951E7F4A1800E02440 /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 		EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 		EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
@@ -215,13 +179,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF608FE91E63A331005361F9 /* MKKit.framework in Frameworks */,
 				EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */,
 				162D8C3B1E4A153094F4530A /* Foundation.framework in Frameworks */,
-				EF608FF21E63A331005361F9 /* RESTKit.framework in Frameworks */,
-				EF608FEC1E63A331005361F9 /* MKUIKit.framework in Frameworks */,
-				EF608FEF1E63A331005361F9 /* MKUtilityKit.framework in Frameworks */,
-				EF608FE61E63A331005361F9 /* Chameleon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,11 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFED2CAB1E7F4DCF00E02440 /* CoreBluetooth.framework in Frameworks */,
-				EF156EA11E839D8800D825F7 /* MKUtilityKit.framework in Frameworks */,
 				EFED2CAE1E7F535500E02440 /* CloudKit.framework in Frameworks */,
-				EFED2C911E7F49A100E02440 /* MKUtilityKit.framework in Frameworks */,
-				EFED2C8E1E7F49A100E02440 /* MKKit.framework in Frameworks */,
-				EF156EA41E839D8800D825F7 /* RESTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,8 +218,6 @@
 		4A3FAAA8F24E251A68153041 = {
 			isa = PBXGroup;
 			children = (
-				EF156EA31E839D8800D825F7 /* RESTKit.framework */,
-				EF156EA01E839D8800D825F7 /* MKUtilityKit.framework */,
 				EFED2C941E7F49CF00E02440 /* Common */,
 				AB3793622466EE2A02CBADDD /* iOS */,
 				EFED2C7F1E7F497300E02440 /* macOS */,
@@ -299,13 +252,6 @@
 			children = (
 				EFED2CAD1E7F535500E02440 /* CloudKit.framework */,
 				EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */,
-				EFED2C901E7F49A100E02440 /* MKUtilityKit.framework */,
-				EFED2C8D1E7F49A100E02440 /* MKKit.framework */,
-				EF608FF11E63A331005361F9 /* RESTKit.framework */,
-				EF608FEE1E63A331005361F9 /* MKUtilityKit.framework */,
-				EF608FEB1E63A331005361F9 /* MKUIKit.framework */,
-				EF608FE81E63A331005361F9 /* MKKit.framework */,
-				EF608FE51E63A331005361F9 /* Chameleon.framework */,
 				EF608FDC1E639DE1005361F9 /* CloudKit.framework */,
 				D83A68AAD9837795A414B570 /* iOS */,
 			);
