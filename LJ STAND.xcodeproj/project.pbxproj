@@ -11,7 +11,6 @@
 		1447C79F08D636C557DF6982 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E085BB7B9C78C52222DCA9 /* CoreTelephony.framework */; };
 		1456521EECC1E9D77A34D34D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524B57DAC9631E84D71D6A48 /* CoreText.framework */; };
 		159A92198E9588F7A807450D /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AC1944B0774FBE008F915DA /* BuddyBuildSDK.framework */; };
-		162D8C3B1E4A153094F4530A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4293BF4DD68684083470C404 /* Foundation.framework */; };
 		218D18E7F92E35FF218E8CA0 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4C2BFC74783AC6934B3C15 /* CoreVideo.framework */; };
 		3FF8AC2ACE390DC1FEBF146E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 515CE688BD4EC8E3160BEC28 /* SystemConfiguration.framework */; };
 		4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581C1A4891F43E30617A28DB /* LaunchScreen.xib */; };
@@ -139,7 +138,6 @@
 /* Begin PBXFileReference section */
 		22525608FFE2DEB5D519B0F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		315B2ED9785835FF2FE85EC7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		4293BF4DD68684083470C404 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		515CE688BD4EC8E3160BEC28 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		524B57DAC9631E84D71D6A48 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
@@ -193,7 +191,6 @@
 		EFAA536B1DB6FF7E00EBFA89 /* TSOP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TSOP.pdf; sourceTree = "<group>"; };
 		EFAA53781DB705B000EBFA89 /* Render 1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = "Render 1.bmp"; sourceTree = "<group>"; };
 		EFAFC6851E61068D00DB37E3 /* DockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockViewController.swift; sourceTree = "<group>"; };
-		EFB29C681E3F1D7800906D5A /* Chameleon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chameleon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 		EFC213881E5A636000233E6E /* LJ STAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "LJ STAND.entitlements"; path = "../LJ STAND.entitlements"; sourceTree = "<group>"; };
 		EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -233,7 +230,6 @@
 				EF8710B61E83DFDA00753FDD /* MKUtilityKit.framework in Frameworks */,
 				EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */,
 				EF8710B41E83DFDA00753FDD /* MKUIKit.framework in Frameworks */,
-				162D8C3B1E4A153094F4530A /* Foundation.framework in Frameworks */,
 				EF8710B01E83DFDA00753FDD /* Chameleon.framework in Frameworks */,
 				EF8710B21E83DFDA00753FDD /* MKKit.framework in Frameworks */,
 				EF8710B81E83DFDA00753FDD /* RESTKit.framework in Frameworks */,
@@ -331,7 +327,6 @@
 				EFED2CAD1E7F535500E02440 /* CloudKit.framework */,
 				EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */,
 				EF608FDC1E639DE1005361F9 /* CloudKit.framework */,
-				D83A68AAD9837795A414B570 /* iOS */,
 				7AC1944B0774FBE008F915DA /* BuddyBuildSDK.framework */,
 				B3BCBED9F25AAF8CE78902F2 /* AssetsLibrary.framework */,
 				524B57DAC9631E84D71D6A48 /* CoreText.framework */,
@@ -444,15 +439,6 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		D83A68AAD9837795A414B570 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				EFB29C681E3F1D7800906D5A /* Chameleon.framework */,
-				4293BF4DD68684083470C404 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		EF1705C91E682D910029DD0E /* Stickers */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +514,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "iOS" */;
 			buildPhases = (
+				EF8710DF1E84662600753FDD /* Carthage Copy Framewokrs */,
 				876DD3D9D9926CE2EBE64DDB /* Sources */,
 				E103AE9143FC4D78FD557160 /* Resources */,
 				35EDF3B6A1B1848E58424BF3 /* Warn for TODO and FIXME comments */,
@@ -728,6 +715,25 @@
 			shellPath = /bin/sh;
 			shellScript = "${SRCROOT}/bin/gitVersion";
 		};
+		EF8710DF1E84662600753FDD /* Carthage Copy Framewokrs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/MKKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Chameleon.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MKUIKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MKUtilityKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RESTKit.framework",
+			);
+			name = "Carthage Copy Framewokrs";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 		EFED2CAF1E7F53B200E02440 /* Set Version Number */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -832,6 +838,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = QSCWPBA77U;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -988,6 +995,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QSCWPBA77U;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
