@@ -36,7 +36,7 @@ extension AppDelegate: BluetoothMessageDelegate {
     func showInformation(_ message: String) {
         if message != lastMessage {
             lastMessage = message
-            commonAlert(message)
+//            scommonAlert(message)
         }
         
         MKULog.shared.info(message)
@@ -53,7 +53,7 @@ extension AppDelegate: BluetoothMessageDelegate {
     }
     
     func commonAlert(_ message: String) {
-        
+            
         alert = NSAlert()
         alert?.alertStyle = NSAlertStyle.warning
         alert?.messageText = message

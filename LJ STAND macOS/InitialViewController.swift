@@ -76,4 +76,9 @@ class InitialViewController: NSViewController {
 		MKULog.shared.debug(debugString)
         BluetoothController.shared.messageDelegate?.showInformation(debugString)
 	}
+	
+	@IBAction func scanForDevicesAction(_ sender: Any) {
+        BluetoothController.shared.connectCount = 0
+		BluetoothController.shared.connect()
+	}
 }
