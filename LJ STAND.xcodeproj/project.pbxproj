@@ -26,6 +26,22 @@
 		EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FDC1E639DE1005361F9 /* CloudKit.framework */; };
 		EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
+		EF8710B01E83DFDA00753FDD /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AB1E83DFDA00753FDD /* Chameleon.framework */; };
+		EF8710B11E83DFDA00753FDD /* Chameleon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AB1E83DFDA00753FDD /* Chameleon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF8710B21E83DFDA00753FDD /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AC1E83DFDA00753FDD /* MKKit.framework */; };
+		EF8710B31E83DFDA00753FDD /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AC1E83DFDA00753FDD /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF8710B41E83DFDA00753FDD /* MKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AD1E83DFDA00753FDD /* MKUIKit.framework */; };
+		EF8710B51E83DFDA00753FDD /* MKUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AD1E83DFDA00753FDD /* MKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF8710B61E83DFDA00753FDD /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AE1E83DFDA00753FDD /* MKUtilityKit.framework */; };
+		EF8710B71E83DFDA00753FDD /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AE1E83DFDA00753FDD /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF8710B81E83DFDA00753FDD /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AF1E83DFDA00753FDD /* RESTKit.framework */; };
+		EF8710B91E83DFDA00753FDD /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AF1E83DFDA00753FDD /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF8710BE1E83DFF000753FDD /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BB1E83DFF000753FDD /* MKKit.framework */; };
+		EF8710BF1E83DFF000753FDD /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BB1E83DFF000753FDD /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF8710C01E83DFF000753FDD /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BC1E83DFF000753FDD /* MKUtilityKit.framework */; };
+		EF8710C11E83DFF000753FDD /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BC1E83DFF000753FDD /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF8710C21E83DFF000753FDD /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BD1E83DFF000753FDD /* RESTKit.framework */; };
+		EF8710C31E83DFF000753FDD /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BD1E83DFF000753FDD /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF941FD81E7F73E00081B8F3 /* parts.csv in Resources */ = {isa = PBXBuildFile; fileRef = EFAA535C1DB6E36400EBFA89 /* parts.csv */; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
 		EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */; };
@@ -87,6 +103,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EF8710B51E83DFDA00753FDD /* MKUIKit.framework in Embed Frameworks */,
+				EF8710B91E83DFDA00753FDD /* RESTKit.framework in Embed Frameworks */,
+				EF8710B11E83DFDA00753FDD /* Chameleon.framework in Embed Frameworks */,
+				EF8710B71E83DFDA00753FDD /* MKUtilityKit.framework in Embed Frameworks */,
+				EF8710B31E83DFDA00753FDD /* MKKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +118,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				EF8710C11E83DFF000753FDD /* MKUtilityKit.framework in Embed Frameworks */,
+				EF8710BF1E83DFF000753FDD /* MKKit.framework in Embed Frameworks */,
+				EF8710C31E83DFF000753FDD /* RESTKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,6 +151,14 @@
 		EF608FDC1E639DE1005361F9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
+		EF8710AB1E83DFDA00753FDD /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
+		EF8710AC1E83DFDA00753FDD /* MKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKKit.framework; path = Carthage/Build/iOS/MKKit.framework; sourceTree = "<group>"; };
+		EF8710AD1E83DFDA00753FDD /* MKUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKUIKit.framework; path = Carthage/Build/iOS/MKUIKit.framework; sourceTree = "<group>"; };
+		EF8710AE1E83DFDA00753FDD /* MKUtilityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKUtilityKit.framework; path = Carthage/Build/iOS/MKUtilityKit.framework; sourceTree = "<group>"; };
+		EF8710AF1E83DFDA00753FDD /* RESTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESTKit.framework; path = Carthage/Build/iOS/RESTKit.framework; sourceTree = "<group>"; };
+		EF8710BB1E83DFF000753FDD /* MKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKKit.framework; path = Carthage/Build/Mac/MKKit.framework; sourceTree = "<group>"; };
+		EF8710BC1E83DFF000753FDD /* MKUtilityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKUtilityKit.framework; path = Carthage/Build/Mac/MKUtilityKit.framework; sourceTree = "<group>"; };
+		EF8710BD1E83DFF000753FDD /* RESTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESTKit.framework; path = Carthage/Build/Mac/RESTKit.framework; sourceTree = "<group>"; };
 		EF9518231DB08CB4009B1F6F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsensorViewController.swift; sourceTree = "<group>"; };
 		EFAA535C1DB6E36400EBFA89 /* parts.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parts.csv; sourceTree = "<group>"; };
@@ -179,8 +211,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8710B61E83DFDA00753FDD /* MKUtilityKit.framework in Frameworks */,
 				EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */,
+				EF8710B41E83DFDA00753FDD /* MKUIKit.framework in Frameworks */,
 				162D8C3B1E4A153094F4530A /* Foundation.framework in Frameworks */,
+				EF8710B01E83DFDA00753FDD /* Chameleon.framework in Frameworks */,
+				EF8710B21E83DFDA00753FDD /* MKKit.framework in Frameworks */,
+				EF8710B81E83DFDA00753FDD /* RESTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +226,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFED2CAB1E7F4DCF00E02440 /* CoreBluetooth.framework in Frameworks */,
+				EF8710C21E83DFF000753FDD /* RESTKit.framework in Frameworks */,
+				EF8710BE1E83DFF000753FDD /* MKKit.framework in Frameworks */,
+				EF8710C01E83DFF000753FDD /* MKUtilityKit.framework in Frameworks */,
 				EFED2CAE1E7F535500E02440 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +290,8 @@
 		534AB7A34A3D72BAFA984F6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF8710C41E83DFF300753FDD /* macOS */,
+				EF8710BA1E83DFDD00753FDD /* iOS */,
 				EFED2CAD1E7F535500E02440 /* CloudKit.framework */,
 				EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */,
 				EF608FDC1E639DE1005361F9 /* CloudKit.framework */,
@@ -374,6 +416,28 @@
 			);
 			name = Stickers;
 			path = "LJ STAND Stickers";
+			sourceTree = "<group>";
+		};
+		EF8710BA1E83DFDD00753FDD /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EF8710AB1E83DFDA00753FDD /* Chameleon.framework */,
+				EF8710AC1E83DFDA00753FDD /* MKKit.framework */,
+				EF8710AD1E83DFDA00753FDD /* MKUIKit.framework */,
+				EF8710AE1E83DFDA00753FDD /* MKUtilityKit.framework */,
+				EF8710AF1E83DFDA00753FDD /* RESTKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		EF8710C41E83DFF300753FDD /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				EF8710BB1E83DFF000753FDD /* MKKit.framework */,
+				EF8710BC1E83DFF000753FDD /* MKUtilityKit.framework */,
+				EF8710BD1E83DFF000753FDD /* RESTKit.framework */,
+			);
+			name = macOS;
 			sourceTree = "<group>";
 		};
 		EFED2C7F1E7F497300E02440 /* macOS */ = {
@@ -960,6 +1024,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = QSCWPBA77U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "LJ STAND macOS/Info.plist";
@@ -990,6 +1058,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QSCWPBA77U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = "LJ STAND macOS/Info.plist";
