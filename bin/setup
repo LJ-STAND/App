@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-sudo rm -rf /Library/Frameworks/CarthageKit.framework
-brew update
-brew install carthage
