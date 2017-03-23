@@ -20,7 +20,7 @@ xcuserdata
 
 # Cocoapods
 Pods
-#Carthage/*
+Carthage/*
 
 # AppCode specific files
 .idea/
