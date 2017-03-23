@@ -1,3 +1,3 @@
-# LJ-Stand iOS #
+# LJ STAND Bluetooth #
 
-Just a lil bluetooth thingo <3
+iOS and macOS apps.
