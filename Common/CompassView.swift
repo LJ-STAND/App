@@ -14,7 +14,7 @@ import Foundation
     import UIKit
 #endif
 
-@IBDesignable class CompassView: View {
+class CompassView: View {
     var needleAngle: Double!
     
     override init(frame: CGRect) {

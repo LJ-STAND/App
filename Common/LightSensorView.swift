@@ -14,7 +14,7 @@ import Foundation
     import UIKit
 #endif
 
-@IBDesignable class lightSensorView: View {
+class lightSensorView: View {
     var lights: [Bool] = [Bool]()
     
     override init(frame: CGRect) {

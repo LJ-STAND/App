@@ -14,7 +14,7 @@ import Foundation
     import UIKit
 #endif
 
-@IBDesignable class TSOPRingView: View {
+class TSOPRingView: View {
     var tsops: [Bool] = [Bool]()
     
     override init(frame: CGRect) {
