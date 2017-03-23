@@ -13,6 +13,8 @@ import CoreBluetooth
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
+    var lastMessage: String?
+    var alert: NSAlert?
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		BluetoothController.shared.messageDelegate = self
@@ -23,15 +25,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 extension AppDelegate: BluetoothMessageDelegate {
     func showError(_ message: String) {
-        commonAlert(message)
+        if message != lastMessage {
+            lastMessage = message
+            commonAlert(message)
+        }
+        
+        MKULog.shared.error(message)
     }
     
     func showInformation(_ message: String) {
-        commonAlert(message)
+        if message != lastMessage {
+            lastMessage = message
+            commonAlert(message)
+        }
+        
+        MKULog.shared.info(message)
     }
     
     func dismissNotifications() {
-        //TODO:
     }
     
     func foundDevices(_ peripherals: [CBPeripheral]) {
@@ -41,13 +52,13 @@ extension AppDelegate: BluetoothMessageDelegate {
     }
     
     func commonAlert(_ message: String) {
-        let alert = NSAlert()
         
-        alert.alertStyle = NSAlertStyle.warning
-        alert.messageText = message
-        alert.addButton(withTitle: "Close")
-        alert.delegate = self
-        alert.runModal()
+        alert = NSAlert()
+        alert?.alertStyle = NSAlertStyle.warning
+        alert?.messageText = message
+        alert?.addButton(withTitle: "Close")
+        alert?.delegate = self
+        alert?.runModal()
     }
 }
 

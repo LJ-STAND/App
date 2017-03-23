@@ -13,9 +13,7 @@ class CompassViewController: NSViewController {
     @IBOutlet weak var compassView: CompassView!
     
     override func viewDidLoad() {
-        BluetoothController.shared.connected = true
         BluetoothController.shared.compassDelegate = self
-        BluetoothController.shared.messageDelegate?.showInformation("Set Compass Delegate")
     }
 }
 
