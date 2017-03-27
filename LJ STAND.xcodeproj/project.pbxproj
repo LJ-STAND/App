@@ -30,6 +30,7 @@
 		EF8233E41E8925F800423F03 /* MKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AD1E83DFDA00753FDD /* MKUIKit.framework */; };
 		EF8233E51E8925F800423F03 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AE1E83DFDA00753FDD /* MKUtilityKit.framework */; };
 		EF8233E61E8925F800423F03 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AF1E83DFDA00753FDD /* RESTKit.framework */; };
+		EF8233E81E892A8E00423F03 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8233E71E892A8E00423F03 /* CloudKit.framework */; };
 		EF8710BE1E83DFF000753FDD /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BB1E83DFF000753FDD /* MKKit.framework */; };
 		EF8710BF1E83DFF000753FDD /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BB1E83DFF000753FDD /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF8710C01E83DFF000753FDD /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BC1E83DFF000753FDD /* MKUtilityKit.framework */; };
@@ -129,6 +130,7 @@
 		EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EF8233DF1E89204C00423F03 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		EF8233E71E892A8E00423F03 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EF8710AB1E83DFDA00753FDD /* Chameleon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Chameleon.framework; path = Carthage/Build/iOS/Chameleon.framework; sourceTree = "<group>"; };
 		EF8710AC1E83DFDA00753FDD /* MKKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKKit.framework; path = Carthage/Build/iOS/MKKit.framework; sourceTree = "<group>"; };
 		EF8710AD1E83DFDA00753FDD /* MKUIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MKUIKit.framework; path = Carthage/Build/iOS/MKUIKit.framework; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8233E81E892A8E00423F03 /* CloudKit.framework in Frameworks */,
 				EF8233E21E8925F800423F03 /* Chameleon.framework in Frameworks */,
 				EF8233E31E8925F800423F03 /* MKKit.framework in Frameworks */,
 				EF8233E41E8925F800423F03 /* MKUIKit.framework in Frameworks */,
@@ -273,6 +276,7 @@
 		534AB7A34A3D72BAFA984F6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EF8233E71E892A8E00423F03 /* CloudKit.framework */,
 				EF8233DF1E89204C00423F03 /* CoreBluetooth.framework */,
 				EF8710C41E83DFF300753FDD /* macOS */,
 				EF8710BA1E83DFDD00753FDD /* iOS */,
@@ -532,13 +536,13 @@
 								enabled = 0;
 							};
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.WAC = {
 								enabled = 0;
 							};
 							com.apple.iCloud = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
