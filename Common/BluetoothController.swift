@@ -153,7 +153,12 @@ extension BluetoothController: BluetoothSerialDelegate {
             MKULog.shared.debug("[BLUETOOTH] [CONTROLLER] - \(comps)")
         }
         
-        if comps.count > 1 {
+        if comps[0].characters.count != 1 {
+            return
+        }
+        
+        if comps.count == 2 {
+            
             if comps[0] == tsop {
                 let tsopstr = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
                 
@@ -217,8 +222,12 @@ extension BluetoothController: BluetoothSerialDelegate {
             } else if comps[0] == noDataType || comps[0] == raw {
                 MKULog.shared.error("[BLUETOOTH] [CONTROLLER] Message Didn't contain a data type.")
             }
-        } else {
+        } else if comps.count == 1 {
+            // Just accept all messages without prefixes as serial output
             serialDelegate?.hasNewOutput(message)
+        } else {
+            // 2 or more prefixes in the same message, usually happens when the string is too long.
+            MKULog.shared.error("[BLUETOOTH] [CONTROLLER] Message Contains multiple ';' symbols")
         }
     }
     
