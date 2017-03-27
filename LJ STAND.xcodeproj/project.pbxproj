@@ -25,16 +25,11 @@
 		EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EF8233E01E89204C00423F03 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8233DF1E89204C00423F03 /* CoreBluetooth.framework */; };
-		EF8710B01E83DFDA00753FDD /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AB1E83DFDA00753FDD /* Chameleon.framework */; };
-		EF8710B11E83DFDA00753FDD /* Chameleon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AB1E83DFDA00753FDD /* Chameleon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF8710B21E83DFDA00753FDD /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AC1E83DFDA00753FDD /* MKKit.framework */; };
-		EF8710B31E83DFDA00753FDD /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AC1E83DFDA00753FDD /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF8710B41E83DFDA00753FDD /* MKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AD1E83DFDA00753FDD /* MKUIKit.framework */; };
-		EF8710B51E83DFDA00753FDD /* MKUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AD1E83DFDA00753FDD /* MKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF8710B61E83DFDA00753FDD /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AE1E83DFDA00753FDD /* MKUtilityKit.framework */; };
-		EF8710B71E83DFDA00753FDD /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AE1E83DFDA00753FDD /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF8710B81E83DFDA00753FDD /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AF1E83DFDA00753FDD /* RESTKit.framework */; };
-		EF8710B91E83DFDA00753FDD /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AF1E83DFDA00753FDD /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EF8233E21E8925F800423F03 /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AB1E83DFDA00753FDD /* Chameleon.framework */; };
+		EF8233E31E8925F800423F03 /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AC1E83DFDA00753FDD /* MKKit.framework */; };
+		EF8233E41E8925F800423F03 /* MKUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AD1E83DFDA00753FDD /* MKUIKit.framework */; };
+		EF8233E51E8925F800423F03 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AE1E83DFDA00753FDD /* MKUtilityKit.framework */; };
+		EF8233E61E8925F800423F03 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AF1E83DFDA00753FDD /* RESTKit.framework */; };
 		EF8710BE1E83DFF000753FDD /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BB1E83DFF000753FDD /* MKKit.framework */; };
 		EF8710BF1E83DFF000753FDD /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BB1E83DFF000753FDD /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF8710C01E83DFF000753FDD /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BC1E83DFF000753FDD /* MKUtilityKit.framework */; };
@@ -96,21 +91,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EF608FF41E63A331005361F9 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				EF8710B51E83DFDA00753FDD /* MKUIKit.framework in Embed Frameworks */,
-				EF8710B91E83DFDA00753FDD /* RESTKit.framework in Embed Frameworks */,
-				EF8710B11E83DFDA00753FDD /* Chameleon.framework in Embed Frameworks */,
-				EF8710B71E83DFDA00753FDD /* MKUtilityKit.framework in Embed Frameworks */,
-				EF8710B31E83DFDA00753FDD /* MKKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EFED2C931E7F49A100E02440 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,12 +188,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8233E21E8925F800423F03 /* Chameleon.framework in Frameworks */,
+				EF8233E31E8925F800423F03 /* MKKit.framework in Frameworks */,
+				EF8233E41E8925F800423F03 /* MKUIKit.framework in Frameworks */,
+				EF8233E51E8925F800423F03 /* MKUtilityKit.framework in Frameworks */,
+				EF8233E61E8925F800423F03 /* RESTKit.framework in Frameworks */,
 				EF8233E01E89204C00423F03 /* CoreBluetooth.framework in Frameworks */,
-				EF8710B61E83DFDA00753FDD /* MKUtilityKit.framework in Frameworks */,
-				EF8710B41E83DFDA00753FDD /* MKUIKit.framework in Frameworks */,
-				EF8710B01E83DFDA00753FDD /* Chameleon.framework in Frameworks */,
-				EF8710B21E83DFDA00753FDD /* MKKit.framework in Frameworks */,
-				EF8710B81E83DFDA00753FDD /* RESTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,7 +462,6 @@
 				35EDF3B6A1B1848E58424BF3 /* Warn for TODO and FIXME comments */,
 				5848C3664EFEE9C0725AEAFA /* Frameworks */,
 				9A0DC08F846703B65F22E608 /* Set version number */,
-				EF608FF41E63A331005361F9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
