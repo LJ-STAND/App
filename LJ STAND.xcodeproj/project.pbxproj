@@ -22,7 +22,6 @@
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
 		EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF471E491DB6C31900CED76B /* ModelViewController.swift */; };
 		EF471E4C1DB6C37900CED76B /* Robot.obj in Resources */ = {isa = PBXBuildFile; fileRef = EF471E4B1DB6C37900CED76B /* Robot.obj */; };
-		EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF608FDC1E639DE1005361F9 /* CloudKit.framework */; };
 		EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EF8233E01E89204C00423F03 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8233DF1E89204C00423F03 /* CoreBluetooth.framework */; };
@@ -147,7 +146,6 @@
 		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EF471E491DB6C31900CED76B /* ModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelViewController.swift; sourceTree = "<group>"; };
 		EF471E4B1DB6C37900CED76B /* Robot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Robot.obj; sourceTree = "<group>"; };
-		EF608FDC1E639DE1005361F9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EF8233DF1E89204C00423F03 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -212,7 +210,6 @@
 			files = (
 				EF8233E01E89204C00423F03 /* CoreBluetooth.framework in Frameworks */,
 				EF8710B61E83DFDA00753FDD /* MKUtilityKit.framework in Frameworks */,
-				EF608FDD1E639DE1005361F9 /* CloudKit.framework in Frameworks */,
 				EF8710B41E83DFDA00753FDD /* MKUIKit.framework in Frameworks */,
 				EF8710B01E83DFDA00753FDD /* Chameleon.framework in Frameworks */,
 				EF8710B21E83DFDA00753FDD /* MKKit.framework in Frameworks */,
@@ -301,7 +298,6 @@
 				EF8710BA1E83DFDD00753FDD /* iOS */,
 				EFED2CAD1E7F535500E02440 /* CloudKit.framework */,
 				EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */,
-				EF608FDC1E639DE1005361F9 /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -558,13 +554,13 @@
 								enabled = 0;
 							};
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.WAC = {
 								enabled = 0;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
