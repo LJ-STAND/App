@@ -228,10 +228,12 @@ extension AppDelegate {
 extension AppDelegate: BluetoothMessageDelegate {
     func showInformation(_ message: String) {
         MKUIToast.shared.showNotification(text: message, alignment: .center, color: .flatBlue, identifier: nil, callback: {})
+        MKULog.shared.info(message)
     }
     
     func showError(_ message: String) {
         MKUIToast.shared.showNotification(text: message, alignment: .center, color: .flatRed, identifier: nil, callback: {})
+        MKULog.shared.error(message)
     }
     
     func foundDevices(_ peripherals: [CBPeripheral]) {

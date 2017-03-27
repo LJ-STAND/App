@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		BluetoothController.shared.messageDelegate = self
-        BluetoothController.shared.bluetoothDebug = false
+        BluetoothController.shared.bluetoothDebug = true
         MKULog.shared.logDetails()
 	}
 }
@@ -36,7 +36,6 @@ extension AppDelegate: BluetoothMessageDelegate {
     func showInformation(_ message: String) {
         if message != lastMessage {
             lastMessage = message
-//            scommonAlert(message)
         }
         
         MKULog.shared.info(message)

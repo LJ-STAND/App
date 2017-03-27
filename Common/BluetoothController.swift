@@ -118,7 +118,8 @@ extension BluetoothController: BluetoothSerialDelegate {
     
     func serialDidConnect(_ peripheral: CBPeripheral) {
         messageDelegate?.dismissNotifications()
-        messageDelegate?.showInformation("Connected to \(peripheral.name ?? "")")
+        messageDelegate?.showInformation("[BLUETOOTH] [CONTROLLER] Conntected to \(peripheral.name!)")
+        MKULog.shared.info("[BLUETOOTH] [CONTROLLER] Peripheral Details: \(peripheral.description)")
         
         let text = "Connected to \(peripheral.name ?? "")"
         serialDelegate?.hasNewOutput(text)
@@ -136,6 +137,9 @@ extension BluetoothController: BluetoothSerialDelegate {
     }
     
     func serialDidReceiveString(_ message: String) {
+        if bluetoothDebug {
+            MKULog.shared.debug("[BLUETOOTH] [CONTROLLER] String before processing: \(message)")
+        }
         let comps = message.components(separatedBy: ";")
         
         let noDataType = "0" // Shouldn't recieve
