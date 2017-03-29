@@ -47,7 +47,7 @@ extension AppDelegate: BluetoothMessageDelegate {
     
     func foundDevices(_ peripherals: [CBPeripheral]) {
         if peripherals.count == 1 {
-            BluetoothController.shared.connectTo(peripheral: peripherals.first!)
+            BluetoothController.shared.connectTo(peripherals.first!)
         }
     }
     
