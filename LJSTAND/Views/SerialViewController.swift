@@ -177,7 +177,7 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
         return true
     }
     
-    private var returnKeyType: UIReturnKeyType {
+    fileprivate var returnKeyType: UIReturnKeyType {
         return UIReturnKeyType.send
     }
 }

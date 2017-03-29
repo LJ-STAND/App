@@ -57,7 +57,7 @@ class BluetoothController {
         serial.writeType = .withoutResponse
     }
     
-    func connectTo(peripheral: CBPeripheral) {
+    func connectTo(_ peripheral: CBPeripheral) {
         self.selectedPeripheral = peripheral
         serial.connectToPeripheral(peripheral)
     }

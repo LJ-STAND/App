@@ -240,7 +240,7 @@ extension AppDelegate: BluetoothMessageDelegate {
         
         for item in peripherals {
             alert.addAction(UIAlertAction(title: item.name, style: .default, handler: { (action) in
-                BluetoothController.shared.connectTo(peripheral: item)
+                BluetoothController.shared.connectTo(item)
             }))
         }
         

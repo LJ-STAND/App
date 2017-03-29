@@ -523,7 +523,7 @@
 				ORGANIZATIONNAME = "Lachlan Grant";
 				TargetAttributes = {
 					D020986916FA04E7BBD68098 = {
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
