@@ -31,6 +31,11 @@ class SerialViewController: NSViewController {
             MKULog.shared.error(message)
         }
     }
+    
+    
+    deinit {
+        BluetoothController.shared.serialDelegate = nil
+    }
 }
 
 extension SerialViewController: BluetoothControllerSerialDelegate {

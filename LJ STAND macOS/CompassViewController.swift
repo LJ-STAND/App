@@ -15,6 +15,10 @@ class CompassViewController: NSViewController {
     override func viewDidLoad() {
         BluetoothController.shared.compassDelegate = self
     }
+    
+    deinit {
+        BluetoothController.shared.compassDelegate = nil
+    }
 }
 
 extension CompassViewController: BluetoothControllerCompassDelegate {

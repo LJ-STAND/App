@@ -37,11 +37,45 @@ protocol BluetoothControllerLightSensorDelegate {
 class BluetoothController {
     static let shared = BluetoothController()
     
-    var serialDelegate: BluetoothControllerSerialDelegate?
-    var tsopDelegate: BluetoothControllerTSOPDelegate?
-    var compassDelegate: BluetoothControllerCompassDelegate?
-    var lightSensDelegate: BluetoothControllerLightSensorDelegate?
-    var messageDelegate: BluetoothMessageDelegate?
+    var serialDelegate: BluetoothControllerSerialDelegate? {
+        didSet {
+            if !connected {
+                connect()
+            }
+        }
+    }
+    
+    var tsopDelegate: BluetoothControllerTSOPDelegate? {
+        didSet {
+            if !connected {
+                connect()
+            }
+        }
+    }
+    var compassDelegate: BluetoothControllerCompassDelegate? {
+        didSet {
+            if !connected {
+                connect()
+            }
+        }
+    }
+    
+    var lightSensDelegate: BluetoothControllerLightSensorDelegate? {
+        didSet {
+            if !connected {
+                connect()
+            }
+        }
+    }
+    
+    var messageDelegate: BluetoothMessageDelegate? {
+        didSet {
+            if !connected {
+                connect()
+            }
+        }
+    }
+    
     
     var peripherals: [CBPeripheral] = []
     var rssis: [Float] = []
