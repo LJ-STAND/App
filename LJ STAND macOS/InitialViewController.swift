@@ -15,6 +15,7 @@ class InitialViewController: NSViewController {
     var compassWindowController: NSWindowController?
     var tsopWindowController: NSWindowController?
     var serialWindowController: NSWindowController?
+    var settingsWindowController: NSWindowController?
     
 	@IBAction func serialAction(_ sender: Any) {
         if serialWindowController == nil {
@@ -81,4 +82,16 @@ class InitialViewController: NSViewController {
         BluetoothController.shared.connectCount = 0
 		BluetoothController.shared.connect()
 	}
+    
+    @IBAction func settingsAction(_ sender: Any) {
+        if settingsWindowController == nil {
+            let vc = getViewControllerFromID("settings")
+            vc.title = "Settings"
+            
+            settingsWindowController = NSWindowController(window: NSWindow(contentViewController: vc))
+            settingsWindowController?.showWindow(self)
+        } else {
+            settingsWindowController?.showWindow(self)
+        }
+    }
 }

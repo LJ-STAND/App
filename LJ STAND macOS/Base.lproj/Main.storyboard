@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E192b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="XfG-lQ-9wD">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="XfG-lQ-9wD">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
@@ -158,10 +158,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mgr-9r-PcQ">
-                                <rect key="frame" x="155.5" y="52" width="169" height="166"/>
+                                <rect key="frame" x="156" y="38" width="169" height="195"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4ZP-pa-Uce">
-                                        <rect key="frame" x="47.5" y="138" width="74" height="32"/>
+                                        <rect key="frame" x="48" y="167" width="74" height="32"/>
                                         <buttonCell key="cell" type="push" title="Serial" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cII-C3-Ygm">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -173,7 +173,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hju-2y-4gg">
-                                        <rect key="frame" x="22.5" y="109" width="124" height="32"/>
+                                        <rect key="frame" x="23" y="138" width="124" height="32"/>
                                         <buttonCell key="cell" type="push" title="Light Sensors" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="h8O-TB-Dim">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -185,7 +185,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aJe-yh-jT1">
-                                        <rect key="frame" x="36" y="80" width="97" height="32"/>
+                                        <rect key="frame" x="36" y="109" width="97" height="32"/>
                                         <buttonCell key="cell" type="push" title="Compass" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Zm-va-nHw">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -197,7 +197,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ozC-er-6cO">
-                                        <rect key="frame" x="43" y="51" width="83" height="32"/>
+                                        <rect key="frame" x="43" y="80" width="83" height="32"/>
                                         <buttonCell key="cell" type="push" title="TSOPS" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vH9-C7-lqq">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -209,7 +209,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i8A-pp-Gdk">
-                                        <rect key="frame" x="-6" y="22" width="181" height="32"/>
+                                        <rect key="frame" x="-6" y="51" width="181" height="32"/>
                                         <buttonCell key="cell" type="push" title="Dump Bluetooth Status" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NRA-ML-jVa">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -219,13 +219,23 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jPI-ZZ-mwr">
-                                        <rect key="frame" x="13.5" y="-7" width="142" height="32"/>
+                                        <rect key="frame" x="14" y="22" width="142" height="32"/>
                                         <buttonCell key="cell" type="push" title="Scan for Devices" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="QKd-3c-VxD">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
                                             <action selector="scanForDevicesAction:" target="XfG-lQ-9wD" id="uX5-w3-nlJ"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XEZ-cb-SLY">
+                                        <rect key="frame" x="39" y="-7" width="91" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Settings" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="y10-2j-R4w">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="settingsAction:" target="XfG-lQ-9wD" id="RJB-nL-hIf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -236,8 +246,10 @@
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -257,6 +269,75 @@
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Kat-R1-YzR">
+            <objects>
+                <viewController storyboardIdentifier="settings" id="CNd-lj-BNm" customClass="SettingsViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="gFC-Bh-I6Z">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gfd-gs-PqG">
+                                <rect key="frame" x="20" y="222" width="118" height="58"/>
+                                <subviews>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="Cfp-Sa-tM5">
+                                        <rect key="frame" x="-2" y="42" width="101" height="18"/>
+                                        <buttonCell key="cell" type="check" title="TSOP Debug" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="N6R-2D-k4o">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="tsopAction:" target="CNd-lj-BNm" id="XTh-dO-4o0"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="F7t-0j-wsm">
+                                        <rect key="frame" x="-2" y="20" width="97" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Light Debug" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="gFQ-SS-SUX">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="lightAction:" target="CNd-lj-BNm" id="hJ7-pc-9fX"/>
+                                        </connections>
+                                    </button>
+                                    <button translatesAutoresizingMaskIntoConstraints="NO" id="hDK-P9-JDa">
+                                        <rect key="frame" x="-2" y="-2" width="122" height="18"/>
+                                        <buttonCell key="cell" type="check" title="Compass Debug" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="9jL-jA-MXo">
+                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="compassAction:" target="CNd-lj-BNm" id="Qw5-nm-c56"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Gfd-gs-PqG" firstAttribute="top" secondItem="gFC-Bh-I6Z" secondAttribute="top" constant="20" id="Gma-qk-VK0"/>
+                            <constraint firstItem="Gfd-gs-PqG" firstAttribute="leading" secondItem="gFC-Bh-I6Z" secondAttribute="leading" constant="20" id="f53-RV-RZF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="compassDebug" destination="hDK-P9-JDa" id="yTm-vR-j3G"/>
+                        <outlet property="lightDebug" destination="F7t-0j-wsm" id="BKH-QR-4Gl"/>
+                        <outlet property="tsopDebug" destination="Cfp-Sa-tM5" id="a6a-Tl-r8f"/>
+                    </connections>
+                </viewController>
+                <customObject id="ZWu-hP-WIq" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="1082"/>
+        </scene>
         <!--Serial View Controller-->
         <scene sceneID="t9J-jd-lWT">
             <objects>
@@ -268,14 +349,14 @@
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2t4-LZ-6Yo">
                                 <rect key="frame" x="20" y="50" width="410" height="230"/>
                                 <clipView key="contentView" id="tKF-KI-eiH">
-                                    <rect key="frame" x="1" y="1" width="408" height="228"/>
+                                    <rect key="frame" x="1" y="1" width="393" height="228"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="Tea-Ck-Ctn">
-                                            <rect key="frame" x="0.0" y="0.0" width="408" height="228"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="228"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="408" height="228"/>
+                                            <size key="minSize" width="393" height="228"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
@@ -287,11 +368,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Fo2-hd-jFF">
-                                    <rect key="frame" x="393" y="1" width="16" height="228"/>
+                                    <rect key="frame" x="394" y="1" width="15" height="228"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJq-JN-3eY">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nJq-JN-3eY">
                                 <rect key="frame" x="20" y="20" width="343" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="Message" drawsBackground="YES" id="eBc-wk-cMB">
                                     <font key="font" metaFont="system"/>

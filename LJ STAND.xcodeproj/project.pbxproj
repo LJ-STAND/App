@@ -43,18 +43,7 @@
 		EFA2DEE61E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */; };
 		EFA2DEE81E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */; };
 		EFA2DEE91E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */; };
-		EFAA535D1DB6E36400EBFA89 /* parts.csv in Resources */ = {isa = PBXBuildFile; fileRef = EFAA535C1DB6E36400EBFA89 /* parts.csv */; };
 		EFAA535F1DB6E90B00EBFA89 /* PartsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */; };
-		EFAA53611DB6EAC700EBFA89 /* PartDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */; };
-		EFAA53631DB6FB0C00EBFA89 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53621DB6FB0C00EBFA89 /* WebViewController.swift */; };
-		EFAA53651DB6FCC600EBFA89 /* DesignTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53641DB6FCC600EBFA89 /* DesignTableViewController.swift */; };
-		EFAA53721DB701AB00EBFA89 /* Fuse.PDF in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53661DB6FF7E00EBFA89 /* Fuse.PDF */; };
-		EFAA53731DB701AB00EBFA89 /* LM.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53671DB6FF7E00EBFA89 /* LM.pdf */; };
-		EFAA53741DB701AB00EBFA89 /* MotorCtrl.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53681DB6FF7E00EBFA89 /* MotorCtrl.pdf */; };
-		EFAA53751DB701AB00EBFA89 /* Photo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53691DB6FF7E00EBFA89 /* Photo.pdf */; };
-		EFAA53761DB701AB00EBFA89 /* Regulator.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA536A1DB6FF7E00EBFA89 /* Regulator.pdf */; };
-		EFAA53771DB701AB00EBFA89 /* TSOP.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EFAA536B1DB6FF7E00EBFA89 /* TSOP.pdf */; };
-		EFAA53791DB705B000EBFA89 /* Render 1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53781DB705B000EBFA89 /* Render 1.bmp */; };
 		EFAFC6861E61068D00DB37E3 /* DockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFC6851E61068D00DB37E3 /* DockViewController.swift */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
 		EFC49C8D1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC49C8C1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift */; };
@@ -92,6 +81,7 @@
 		EFED2CC41E7F6D5900E02440 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */; };
 		EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA381E469A4E005BEE4E /* WMWindow.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
+		EFFB66031E96653C0001C4FA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB66021E96653C0001C4FA /* SettingsViewController.swift */; };
 		EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */; };
 /* End PBXBuildFile section */
 
@@ -146,18 +136,7 @@
 		EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothDataType.swift; sourceTree = "<group>"; };
 		EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothProtocols.swift; sourceTree = "<group>"; };
 		EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BluetoothController+Serial.swift"; sourceTree = "<group>"; };
-		EFAA535C1DB6E36400EBFA89 /* parts.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parts.csv; sourceTree = "<group>"; };
 		EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartsListTableViewController.swift; sourceTree = "<group>"; };
-		EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartDetailViewController.swift; sourceTree = "<group>"; };
-		EFAA53621DB6FB0C00EBFA89 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		EFAA53641DB6FCC600EBFA89 /* DesignTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignTableViewController.swift; sourceTree = "<group>"; };
-		EFAA53661DB6FF7E00EBFA89 /* Fuse.PDF */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Fuse.PDF; sourceTree = "<group>"; };
-		EFAA53671DB6FF7E00EBFA89 /* LM.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = LM.pdf; sourceTree = "<group>"; };
-		EFAA53681DB6FF7E00EBFA89 /* MotorCtrl.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MotorCtrl.pdf; sourceTree = "<group>"; };
-		EFAA53691DB6FF7E00EBFA89 /* Photo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Photo.pdf; sourceTree = "<group>"; };
-		EFAA536A1DB6FF7E00EBFA89 /* Regulator.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Regulator.pdf; sourceTree = "<group>"; };
-		EFAA536B1DB6FF7E00EBFA89 /* TSOP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = TSOP.pdf; sourceTree = "<group>"; };
-		EFAA53781DB705B000EBFA89 /* Render 1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = "Render 1.bmp"; sourceTree = "<group>"; };
 		EFAFC6851E61068D00DB37E3 /* DockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockViewController.swift; sourceTree = "<group>"; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 		EFC213881E5A636000233E6E /* LJ STAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "LJ STAND.entitlements"; path = "../LJ STAND.entitlements"; sourceTree = "<group>"; };
@@ -188,6 +167,7 @@
 		EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EFEDAA381E469A4E005BEE4E /* WMWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMWindow.swift; sourceTree = "<group>"; };
 		EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
+		EFFB66021E96653C0001C4FA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInterfaceIdom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -420,6 +400,7 @@
 				EFED2CBF1E7F657900E02440 /* LightSensorViewController.swift */,
 				EFED2CC11E7F6C2200E02440 /* TSOPViewController.swift */,
 				EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */,
+				EFFB66021E96653C0001C4FA /* SettingsViewController.swift */,
 				EFED2C841E7F497300E02440 /* Assets.xcassets */,
 				EFED2C861E7F497300E02440 /* Main.storyboard */,
 				EFED2C891E7F497300E02440 /* Info.plist */,
@@ -702,8 +683,6 @@
 				EFED2CBA1E7F60C100E02440 /* CompassView.swift in Sources */,
 				EFAA535F1DB6E90B00EBFA89 /* PartsListTableViewController.swift in Sources */,
 				EFC49C8D1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift in Sources */,
-				EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */,
-				EFED2CA61E7F4A1800E02440 /* Part.swift in Sources */,
 				EFE7366B1E95EB3900C8AF16 /* BluetoothController+Sending.swift in Sources */,
 				EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */,
 				EFE7366E1E95EBFD00C8AF16 /* AppSettingsProtocol.swift in Sources */,
@@ -730,6 +709,7 @@
 			files = (
 				EFA2DEE91E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */,
 				EFED2CA51E7F4A1800E02440 /* NotificationKeys.swift in Sources */,
+				EFFB66031E96653C0001C4FA /* SettingsViewController.swift in Sources */,
 				EFED2CBE1E7F649700E02440 /* InitialViewController.swift in Sources */,
 				EFA2DEE61E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */,
 				EFED2C9D1E7F4A1800E02440 /* BluetoothController.swift in Sources */,
