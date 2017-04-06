@@ -46,10 +46,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             performShortcutDelegate = false
         }
+        
         application.setStatusBarStyle(.lightContent, animated: false)
         
         BluetoothController.shared.messageDelegate = self
-        BluetoothController.shared.bluetoothDebug = true
+        BluetoothController.shared.bluetoothDebug = false   
         
         let bluetoothPermission = MKUPermission.bluetooth
         

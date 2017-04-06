@@ -18,7 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		BluetoothController.shared.overrideConnect = true
-        BluetoothController.shared.bluetoothDebug = true
+        BluetoothController.shared.bluetoothDebug = false
         BluetoothController.shared.messageDelegate = self
         
         MKULog.shared.logDetails()

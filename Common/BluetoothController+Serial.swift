@@ -62,13 +62,50 @@ extension BluetoothController: BluetoothSerialDelegate {
             let angle = processed.1
             
             guard let ang = Double(angle) else {
-                let mess = "[Compass] Angle was unable to be converted into Double: \(angle)"
-                serialDelegate?.hasNewOutput(mess)
-                messageDelegate?.showInformation(mess)
                 return
             }
             
             compassDelegate?.hasNewHeading(ang)
+            
+        case .light:
+            let boolArr = Array(processed.1.characters)
+            
+            if boolArr.count == 12 {
+                var sensorStatus: [Int] = []
+                
+                for i in 0...11 {
+                    let item = boolArr[i]
+                    let intValue = Int(String(item))
+                    
+                    if intValue == 1 {
+                        sensorStatus.append(1)
+                        sensorStatus.append(0)
+                    } else if intValue == 2 {
+                        sensorStatus.append(0)
+                        sensorStatus.append(1)
+                    } else if intValue == 3 {
+                        sensorStatus.append(1)
+                        sensorStatus.append(1)
+                    } else {
+                        sensorStatus.append(0)
+                        sensorStatus.append(0)
+                    }
+                    
+                    var sensorNumbers: [Int] = []
+                    
+                    if sensorStatus.count == 24 {
+                        for i in 0...23 {
+                            let value = sensorStatus[i]
+                            
+                            if value == 1 {
+                                sensorNumbers.append(i)
+                            }
+                        }
+                        
+                        lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers)
+                    }
+                }
+            }
             
         default:
             MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")
