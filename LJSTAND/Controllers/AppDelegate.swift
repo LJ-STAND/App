@@ -58,6 +58,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if status == .denied || status == .disabled || status == .notDetermined {
             BluetoothController.shared.overrideConnect = true
         }
+        
+        if UIDevice.current.isSimulator == true {
+            BluetoothController.shared.overrideConnect = true
+        }
 
 
         return performShortcutDelegate
