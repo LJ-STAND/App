@@ -73,7 +73,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N1j-xz-rAf" firstAttribute="top" secondItem="D9q-hX-ULH" secondAttribute="bottom" id="2PK-3v-9Uu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="D9q-hX-ULH" secondAttribute="trailing" constant="-8" id="6rC-0z-7HY"/>
@@ -84,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bM8-G9-FAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-287.19999999999999" y="204.64767616191907"/>
+            <point key="canvasLocation" x="-271.19999999999999" y="224.4377811094453"/>
         </scene>
     </scenes>
 </document>

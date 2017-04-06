@@ -11,7 +11,6 @@ enum WMResizeAxis {
     case wmResizeNone, wmResizeLeft, wmResizeRight, wmResizeTop, wmResizeBottom
 }
 
-let kStatusBarHeight:CGFloat = UIApplication.shared.statusBarFrame.height
 let kTitleBarHeight:CGFloat = 0.0
 let kMoveGrabHeight:CGFloat = 44.0
 let kWindowButtonFrameSize:CGFloat = 44.0
@@ -142,7 +141,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         UIView.beginAnimations(nil, context: nil)
         if self.maximized {
             _savedFrame = self.frame
-            self.frame = CGRectMake(-kWindowResizeGutterSize, kStatusBarHeight + -kWindowResizeGutterSize, rootWindow.bounds.size.width+(kWindowResizeGutterSize*2), rootWindow.bounds.size.height-kStatusBarHeight+(kWindowResizeGutterSize*2))
+            self.frame = CGRectMake(-kWindowResizeGutterSize,  -kWindowResizeGutterSize, rootWindow.bounds.size.width+(kWindowResizeGutterSize*2), rootWindow.bounds.size.height+(kWindowResizeGutterSize*2))
         } else {
             self.frame = _savedFrame
             
@@ -264,7 +263,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
             }
         } else if recognizer.state == .changed {
             if _inWindowMove {
-                self.frame = CGRectMake(gp.x-_originPoint.x, min(max(gp.y-_originPoint.y, kStatusBarHeight - kWindowResizeGutterSize), UIScreen.main.bounds.height - (kWindowButtonFrameSize + kWindowResizeGutterSize)), self.frame.size.width, self.frame.size.height)
+                self.frame = CGRectMake(gp.x-_originPoint.x, min(max(gp.y-_originPoint.y, kWindowResizeGutterSize), UIScreen.main.bounds.height - (kWindowButtonFrameSize + kWindowResizeGutterSize)), self.frame.size.width, self.frame.size.height)
                
                 if let navVC = self.rootViewController as? UINavigationController {
                     if let viewController = navVC.visibleViewController as? ResizableViewController {
