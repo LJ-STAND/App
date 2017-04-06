@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12113" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F43c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12078"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,7 +30,7 @@
         <!--TSOP-->
         <scene sceneID="TxB-IO-KJ3">
             <objects>
-                <viewController id="E0X-v7-XBp" customClass="TSOPViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E0X-v7-XBp" customClass="TSOPViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ALV-hk-cw2"/>
                         <viewControllerLayoutGuide type="bottom" id="hNp-3d-cHv"/>
@@ -66,7 +66,7 @@
         <!--Compass-->
         <scene sceneID="HWR-1T-B3b">
             <objects>
-                <viewController id="NAj-T6-Tpc" customClass="CompassViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NAj-T6-Tpc" customClass="CompassViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cKU-Wc-0uI"/>
                         <viewControllerLayoutGuide type="bottom" id="H7A-Wt-MZU"/>
@@ -85,7 +85,7 @@
         <!--Window Manager Table View Controller-->
         <scene sceneID="TdB-4Q-LZH">
             <objects>
-                <tableViewController storyboardIdentifier="viewsTable" id="pSo-4m-SRB" customClass="WindowManagerTableViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="viewsTable" id="pSo-4m-SRB" customClass="WindowManagerTableViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mH2-Ti-k7Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,7 +140,7 @@
         <!--Light-->
         <scene sceneID="prY-m9-hEO">
             <objects>
-                <viewController id="RCm-C9-Q4j" customClass="LightSensorViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RCm-C9-Q4j" customClass="LightSensorViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vLE-sk-MY2"/>
                         <viewControllerLayoutGuide type="bottom" id="sLD-4a-ZxY"/>
@@ -159,7 +159,7 @@
         <!--Parts List-->
         <scene sceneID="WVq-qX-XbE">
             <objects>
-                <tableViewController id="POn-ZJ-F77" customClass="PartsListTableViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="POn-ZJ-F77" customClass="PartsListTableViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="978-g9-KDN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,7 +204,7 @@
         <!--Settings-->
         <scene sceneID="aWo-WJ-ojr">
             <objects>
-                <tableViewController id="LhF-dY-CPs" customClass="SettingsTableViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="LhF-dY-CPs" customClass="SettingsTableViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="VhY-3M-A0g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,10 +213,10 @@
                             <tableViewSection headerTitle="Settings" id="hui-pl-n6Y">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3OU-mR-qYA">
-                                        <rect key="frame" x="0.0" y="55" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3OU-mR-qYA" id="NaR-hS-KGP">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Log Window" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pog-Me-uWS">
@@ -241,10 +241,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="abh-gE-B8Q">
-                                        <rect key="frame" x="0.0" y="99" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="abh-gE-B8Q" id="5Ot-C0-WYe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dock on Right" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffr-BE-Ai9">
@@ -289,7 +289,7 @@
         <!--WebView-->
         <scene sceneID="HAK-OP-gmn">
             <objects>
-                <viewController storyboardIdentifier="webView" id="Tnc-QS-U4D" customClass="WebViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="webView" id="Tnc-QS-U4D" customClass="WebViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5yG-kd-NRB"/>
                         <viewControllerLayoutGuide type="bottom" id="kIO-dz-7i3"/>
@@ -337,7 +337,7 @@
         <!--Part Detail View Controller-->
         <scene sceneID="ees-QF-doY">
             <objects>
-                <viewController storyboardIdentifier="partDetail" id="4hD-fg-HtJ" customClass="PartDetailViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="partDetail" id="4hD-fg-HtJ" customClass="PartDetailViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R5v-8b-5cV"/>
                         <viewControllerLayoutGuide type="bottom" id="oMS-Hi-E98"/>
@@ -501,7 +501,7 @@
         <!--3D Model-->
         <scene sceneID="1OM-fR-3uz">
             <objects>
-                <viewController id="kaJ-uW-EiT" customClass="ModelViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kaJ-uW-EiT" customClass="ModelViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n9i-g3-uQ4"/>
                         <viewControllerLayoutGuide type="bottom" id="BDz-Ny-gPo"/>
@@ -537,7 +537,7 @@
         <!--Serial-->
         <scene sceneID="sNR-0n-DaY">
             <objects>
-                <viewController id="l7V-Go-gFU" customClass="SerialViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="l7V-Go-gFU" customClass="SerialViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1ru-ga-Wna"/>
                         <viewControllerLayoutGuide type="bottom" id="Q8e-0Z-A9j"/>
@@ -592,7 +592,7 @@
         <!--Design-->
         <scene sceneID="IBn-GL-ddn">
             <objects>
-                <tableViewController id="6jJ-8Z-QeX" customClass="DesignTableViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="6jJ-8Z-QeX" customClass="DesignTableViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="ysJ-tX-mAE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -601,7 +601,7 @@
                             <tableViewSection headerTitle="Parts" id="shu-Kg-dhh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="fC9-FZ-4bR" style="IBUITableViewCellStyleDefault" id="vsa-wH-Wd4">
-                                        <rect key="frame" x="0.0" y="55" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vsa-wH-Wd4" id="ght-eo-bai">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
@@ -625,7 +625,7 @@
                             <tableViewSection headerTitle="Design" id="qFX-tA-e0M">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="GjE-bJ-cuK" style="IBUITableViewCellStyleDefault" id="A8N-M8-GHF">
-                                        <rect key="frame" x="0.0" y="155" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="155.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A8N-M8-GHF" id="hOf-pT-QTr">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
@@ -645,7 +645,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="vmE-hI-XQ6" style="IBUITableViewCellStyleDefault" id="iFs-C0-aLX">
-                                        <rect key="frame" x="0.0" y="199" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="199.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iFs-C0-aLX" id="7je-K1-SEV">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
@@ -666,7 +666,7 @@
                             <tableViewSection headerTitle="DataSheets" id="z2X-1d-YyP">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="rKz-wP-Mbt" style="IBUITableViewCellStyleDefault" id="mQP-dY-l2Y">
-                                        <rect key="frame" x="0.0" y="299" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="299.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mQP-dY-l2Y" id="1b9-qZ-4az">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
@@ -683,7 +683,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="S5n-i6-pf8" style="IBUITableViewCellStyleDefault" id="A7h-nh-7e9">
-                                        <rect key="frame" x="0.0" y="343" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="343.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A7h-nh-7e9" id="z4h-do-bDX">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
@@ -700,7 +700,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="oGP-1v-WsH" style="IBUITableViewCellStyleDefault" id="iMO-yi-nqK">
-                                        <rect key="frame" x="0.0" y="387" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="387.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iMO-yi-nqK" id="ClI-DV-O6z">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
@@ -717,7 +717,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="jGH-Wt-ySt" style="IBUITableViewCellStyleDefault" id="LdW-hE-5fK">
-                                        <rect key="frame" x="0.0" y="431" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="431.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LdW-hE-5fK" id="B0L-fB-1vy">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
@@ -734,7 +734,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="XoV-2x-EdA" style="IBUITableViewCellStyleDefault" id="IlD-yC-m1v">
-                                        <rect key="frame" x="0.0" y="475" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="475.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IlD-yC-m1v" id="zMf-Wx-Dtu">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
@@ -751,7 +751,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="AQS-0H-QPL" style="IBUITableViewCellStyleDefault" id="feC-kO-TcL">
-                                        <rect key="frame" x="0.0" y="519" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="519.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="feC-kO-TcL" id="Yqb-2G-CbD">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="43.666666666666664"/>
@@ -787,7 +787,7 @@
         <!--Background View Controller-->
         <scene sceneID="DPE-if-FyA">
             <objects>
-                <viewController storyboardIdentifier="background" id="9OB-xp-bHD" customClass="BackgroundViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="background" id="9OB-xp-bHD" customClass="BackgroundViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eBZ-J8-2mV"/>
                         <viewControllerLayoutGuide type="bottom" id="8uM-ZS-gcz"/>
@@ -830,7 +830,7 @@
         <!--Menu-->
         <scene sceneID="wxg-Y1-tcF">
             <objects>
-                <viewController id="fm1-5b-pXa" customClass="WindowManagerViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fm1-5b-pXa" customClass="WindowManagerViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bov-jf-Hga"/>
                         <viewControllerLayoutGuide type="bottom" id="4y4-uu-FIe"/>
@@ -845,6 +845,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgY-jD-eQD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2260" y="-738"/>
+        </scene>
+        <!--Authorize Bluetooth View Controller-->
+        <scene sceneID="1fj-Kp-8bA">
+            <objects>
+                <viewController storyboardIdentifier="Auth Bluetooth" id="CmT-Pw-vfN" customClass="AuthorizeBluetoothViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OhC-Ee-0IW"/>
+                        <viewControllerLayoutGuide type="bottom" id="tBM-nS-LeP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Jb-8K-m8h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RjW-Hg-Wtj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3083" y="-739"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8T1-Fj-SbE">

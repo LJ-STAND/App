@@ -17,9 +17,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var alert: NSAlert?
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		BluetoothController.shared.messageDelegate = self
+		BluetoothController.shared.overrideConnect = true
         BluetoothController.shared.bluetoothDebug = false
+        BluetoothController.shared.messageDelegate = self
+        
         MKULog.shared.logDetails()
+        BluetoothController.shared.overrideConnect = false
 	}
 }
 
@@ -42,17 +45,16 @@ extension AppDelegate: BluetoothMessageDelegate {
     }
     
     func dismissNotifications() {
-        //TODO: Find a way to dismiss NSAlert
+        //TODO: Find a way to dismiss all NSAlert's
     }
     
     func foundDevices(_ peripherals: [CBPeripheral]) {
         if peripherals.count == 1 {
-            BluetoothController.shared.connectTo(peripheral: peripherals.first!)
+            BluetoothController.shared.connectTo(peripherals.first!)
         }
     }
     
     func commonAlert(_ message: String) {
-            
         alert = NSAlert()
         alert?.alertStyle = NSAlertStyle.warning
         alert?.messageText = message

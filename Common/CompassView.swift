@@ -29,6 +29,10 @@ class CompassView: View {
     
     func commonInit() {
         needleAngle = 0
+        
+        #if os(macOS)
+//            self.rotate(byDegrees: 180.0)
+        #endif
     }
     
     override func draw(_ rect: CGRect) {
@@ -89,11 +93,6 @@ class CompassView: View {
     
     func rotate(_ angle:Double) {
         needleAngle = angle
-        
-        #if os(macOS)
-                needleAngle = 180 - angle
-        #endif
-        
         setNeedsDisplay(bounds)
     }
     

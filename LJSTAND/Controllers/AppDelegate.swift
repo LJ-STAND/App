@@ -46,9 +46,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             performShortcutDelegate = false
         }
+        
         application.setStatusBarStyle(.lightContent, animated: false)
         
         BluetoothController.shared.messageDelegate = self
+        BluetoothController.shared.bluetoothDebug = false   
+        
+        let bluetoothPermission = MKUPermission.bluetooth
+        
+        if bluetoothPermission.status != .authorized {
+            addWindow(viewName: "Auth Bluetooth")
+        }
+
         return performShortcutDelegate
     }
     
@@ -240,7 +249,7 @@ extension AppDelegate: BluetoothMessageDelegate {
         
         for item in peripherals {
             alert.addAction(UIAlertAction(title: item.name, style: .default, handler: { (action) in
-                BluetoothController.shared.connectTo(peripheral: item)
+                BluetoothController.shared.connectTo(item)
             }))
         }
         

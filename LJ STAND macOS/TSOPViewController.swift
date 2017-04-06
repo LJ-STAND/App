@@ -14,6 +14,10 @@ class TSOPViewController: NSViewController {
     override func viewDidLoad() {
         BluetoothController.shared.tsopDelegate = self
     }
+    
+    deinit {
+        BluetoothController.shared.tsopDelegate = nil
+    }
 }
 
 extension TSOPViewController: BluetoothControllerTSOPDelegate {

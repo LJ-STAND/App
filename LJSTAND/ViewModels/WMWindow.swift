@@ -128,9 +128,6 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-//        if self != nil {
-//            self._commonInit()
-//        }
         self._commonInit()
     }
     

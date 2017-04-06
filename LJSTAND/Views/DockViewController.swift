@@ -16,31 +16,31 @@ class DockViewController: UIViewController {
     }
     
     
-    func commonAction(name: String) {
+    func commonAction(_ name: String) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addWindow"), object: name)
     }
     
     @IBAction func serialAction(_ sender: Any) {
-        commonAction(name: (sender as! HexButton).text)
+        commonAction((sender as! HexButton).text)
     }
     
     @IBAction func tsopAction(_ sender: Any) {
-        commonAction(name: (sender as! HexButton).text)
+        commonAction((sender as! HexButton).text)
     }
     
     @IBAction func lightAction(_ sender: Any) {
-        commonAction(name: (sender as! HexButton).text)
+        commonAction((sender as! HexButton).text)
     }
     
     @IBAction func compassAction(_ sender: Any) {
-        commonAction(name: (sender as! HexButton).text)
+        commonAction((sender as! HexButton).text)
     }
     
     @IBAction func designAction(_ sender: Any) {
-        commonAction(name: (sender as! HexButton).text)
+        commonAction((sender as! HexButton).text)
     }
     
     @IBAction func settingsAction(_ sender: Any) {
-        commonAction(name: (sender as! HexButton).text)
+        commonAction((sender as! HexButton).text)
     }
 }

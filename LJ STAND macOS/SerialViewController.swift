@@ -22,7 +22,6 @@ class SerialViewController: NSViewController {
     
     @IBAction func sendMessageAction(_ sender: Any) {
         if serial.connectedPeripheral != nil {
-            //Should be connected
             serial.sendMessageToDevice(messageTextField.stringValue)
             messageTextField.stringValue = ""
         } else {
@@ -30,6 +29,11 @@ class SerialViewController: NSViewController {
             BluetoothController.shared.messageDelegate?.showError(message)
             MKULog.shared.error(message)
         }
+    }
+    
+    
+    deinit {
+        BluetoothController.shared.serialDelegate = nil
     }
 }
 

@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+carthage bootstrap --toolchain com.apple.dt.toolchain.Swift_3_0

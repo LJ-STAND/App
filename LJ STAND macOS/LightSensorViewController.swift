@@ -14,6 +14,10 @@ class LightSensorViewController: NSViewController {
     override func viewDidLoad() {
         BluetoothController.shared.lightSensDelegate = self
     }
+    
+    deinit {
+        BluetoothController.shared.lightSensDelegate = nil
+    }
 }
 
 extension LightSensorViewController: BluetoothControllerLightSensorDelegate {

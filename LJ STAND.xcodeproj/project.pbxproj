@@ -40,6 +40,12 @@
 		EF941FD81E7F73E00081B8F3 /* parts.csv in Resources */ = {isa = PBXBuildFile; fileRef = EFAA535C1DB6E36400EBFA89 /* parts.csv */; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
 		EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */; };
+		EFA2DEE21E95DCA100A8FEC9 /* BluetoothDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */; };
+		EFA2DEE31E95DCA100A8FEC9 /* BluetoothDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */; };
+		EFA2DEE51E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */; };
+		EFA2DEE61E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */; };
+		EFA2DEE81E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */; };
+		EFA2DEE91E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */; };
 		EFAA535D1DB6E36400EBFA89 /* parts.csv in Resources */ = {isa = PBXBuildFile; fileRef = EFAA535C1DB6E36400EBFA89 /* parts.csv */; };
 		EFAA535F1DB6E90B00EBFA89 /* PartsListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */; };
 		EFAA53611DB6EAC700EBFA89 /* PartDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */; };
@@ -54,6 +60,7 @@
 		EFAA53791DB705B000EBFA89 /* Render 1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = EFAA53781DB705B000EBFA89 /* Render 1.bmp */; };
 		EFAFC6861E61068D00DB37E3 /* DockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFC6851E61068D00DB37E3 /* DockViewController.swift */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
+		EFC49C8D1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC49C8C1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift */; };
 		EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */; };
 		EFED2C811E7F497300E02440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C801E7F497300E02440 /* AppDelegate.swift */; };
 		EFED2C851E7F497300E02440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFED2C841E7F497300E02440 /* Assets.xcassets */; };
@@ -141,6 +148,9 @@
 		EF8710BD1E83DFF000753FDD /* RESTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESTKit.framework; path = Carthage/Build/Mac/RESTKit.framework; sourceTree = "<group>"; };
 		EF9518231DB08CB4009B1F6F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsensorViewController.swift; sourceTree = "<group>"; };
+		EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothDataType.swift; sourceTree = "<group>"; };
+		EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothProtocols.swift; sourceTree = "<group>"; };
+		EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BluetoothController+Serial.swift"; sourceTree = "<group>"; };
 		EFAA535C1DB6E36400EBFA89 /* parts.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = parts.csv; sourceTree = "<group>"; };
 		EFAA535E1DB6E90B00EBFA89 /* PartsListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartsListTableViewController.swift; sourceTree = "<group>"; };
 		EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartDetailViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +166,7 @@
 		EFAFC6851E61068D00DB37E3 /* DockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockViewController.swift; sourceTree = "<group>"; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 		EFC213881E5A636000233E6E /* LJ STAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "LJ STAND.entitlements"; path = "../LJ STAND.entitlements"; sourceTree = "<group>"; };
+		EFC49C8C1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeBluetoothViewController.swift; sourceTree = "<group>"; };
 		EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		EFED2C7E1E7F497300E02440 /* LJ STAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LJ STAND.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFED2C801E7F497300E02440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -347,6 +358,7 @@
 				EFAA53601DB6EAC700EBFA89 /* PartDetailViewController.swift */,
 				EFAA53621DB6FB0C00EBFA89 /* WebViewController.swift */,
 				EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */,
+				EFC49C8C1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -440,6 +452,9 @@
 			children = (
 				EFED2CB01E7F5E4700E02440 /* TypeAlias.swift */,
 				EFED2C951E7F4A1800E02440 /* BluetoothController.swift */,
+				EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */,
+				EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */,
+				EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */,
 				EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */,
 				EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */,
 				EFED2C981E7F4A1800E02440 /* MKKitExt.swift */,
@@ -523,7 +538,7 @@
 				ORGANIZATIONNAME = "Lachlan Grant";
 				TargetAttributes = {
 					D020986916FA04E7BBD68098 = {
-						LastSwiftMigration = 0820;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -717,6 +732,7 @@
 				EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */,
 				EFED2CBA1E7F60C100E02440 /* CompassView.swift in Sources */,
 				EFAA535F1DB6E90B00EBFA89 /* PartsListTableViewController.swift in Sources */,
+				EFC49C8D1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift in Sources */,
 				EF471E4A1DB6C31900CED76B /* ModelViewController.swift in Sources */,
 				EFED2CA61E7F4A1800E02440 /* Part.swift in Sources */,
 				EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */,
@@ -727,12 +743,15 @@
 				EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */,
 				EFAFC6861E61068D00DB37E3 /* DockViewController.swift in Sources */,
 				EFED2CB11E7F5E4700E02440 /* TypeAlias.swift in Sources */,
+				EFA2DEE21E95DCA100A8FEC9 /* BluetoothDataType.swift in Sources */,
 				EFED2CA21E7F4A1800E02440 /* MKKitExt.swift in Sources */,
 				EFAA53631DB6FB0C00EBFA89 /* WebViewController.swift in Sources */,
 				EFED2CA81E7F4A1800E02440 /* PartParser.swift in Sources */,
 				EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */,
 				EFED2CB71E7F601900E02440 /* TSOPRingView.swift in Sources */,
+				EFA2DEE51E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */,
 				CD7C1EBB1E4753DE006F8512 /* HexButton.swift in Sources */,
+				EFA2DEE81E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,8 +759,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFA2DEE91E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */,
 				EFED2CA51E7F4A1800E02440 /* NotificationKeys.swift in Sources */,
 				EFED2CBE1E7F649700E02440 /* InitialViewController.swift in Sources */,
+				EFA2DEE61E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */,
 				EFED2C9D1E7F4A1800E02440 /* BluetoothController.swift in Sources */,
 				EFED2CA31E7F4A1800E02440 /* MKKitExt.swift in Sources */,
 				EFED2CC21E7F6C2200E02440 /* TSOPViewController.swift in Sources */,
@@ -750,6 +771,7 @@
 				EFED2CA71E7F4A1800E02440 /* Part.swift in Sources */,
 				EFED2CA11E7F4A1800E02440 /* DefaultKeys.swift in Sources */,
 				EFED2C9F1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */,
+				EFA2DEE31E95DCA100A8FEC9 /* BluetoothDataType.swift in Sources */,
 				EFED2CC01E7F657900E02440 /* LightSensorViewController.swift in Sources */,
 				EFED2CC41E7F6D5900E02440 /* CompassViewController.swift in Sources */,
 				EFED2CBB1E7F60C100E02440 /* CompassView.swift in Sources */,
