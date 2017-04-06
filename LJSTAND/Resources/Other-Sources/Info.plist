@@ -39,10 +39,22 @@
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>iTC Complained that this App Requires access to this, idk why</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>App requires bluetooth to communicate to the robot.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>iTC Complained that this App Requires access to this, idk why</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>iTC Complained that this App Requires access to this, idk why</string>
+	<key>NSMotionUsageDescription</key>
+	<string>iTC Complained that this App Requires access to this, idk why</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>iTC Complained that this App Requires access to your photos, idk why</string>
+	<string>iTC Complained that this App Requires access to this, idk why</string>
+	<key>NSSiriUsageDescription</key>
+	<string>iTC Complained that this App Requires access to this, idk why</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>iTC Complained that this App Requires access to this, idk why</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
