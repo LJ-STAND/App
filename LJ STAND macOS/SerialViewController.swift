@@ -22,7 +22,6 @@ class SerialViewController: NSViewController {
     
     @IBAction func sendMessageAction(_ sender: Any) {
         if serial.connectedPeripheral != nil {
-            //Should be connected
             serial.sendMessageToDevice(messageTextField.stringValue)
             messageTextField.stringValue = ""
         } else {

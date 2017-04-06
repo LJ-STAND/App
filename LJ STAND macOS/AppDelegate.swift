@@ -17,8 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var alert: NSAlert?
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		BluetoothController.shared.bluetoothDebug = true
-        BluetoothController.shared.overrideConnect = true
+		BluetoothController.shared.overrideConnect = true
+        BluetoothController.shared.bluetoothDebug = true
         BluetoothController.shared.messageDelegate = self
         
         MKULog.shared.logDetails()
@@ -55,7 +55,6 @@ extension AppDelegate: BluetoothMessageDelegate {
     }
     
     func commonAlert(_ message: String) {
-            
         alert = NSAlert()
         alert?.alertStyle = NSAlertStyle.warning
         alert?.messageText = message

@@ -11,6 +11,17 @@ import CoreBluetooth
 import MKKit
 import MKUtilityKit
 
+enum BluetoothDataType: Int {
+    case noDataType
+    case info
+    case tsop
+    case light
+    case compass
+    case rawData
+    case linePosition
+    case robotPoisition
+}
+
 protocol BluetoothMessageDelegate {
     func showInformation(_ message: String)
     func showError(_ message: String)
@@ -174,102 +185,54 @@ extension BluetoothController: BluetoothSerialDelegate {
         if bluetoothDebug {
             MKULog.shared.debug("[BLUETOOTH] [CONTROLLER] String before processing: \(message)")
         }
-        let comps = message.components(separatedBy: ";")
         
-        let noDataType = "0" // Shouldn't recieve
-        let serial = "1" //Info is Serial
-        let tsop = "2"
-        let light = "3"
-        let compass = "4"
-        let raw = "5" // Shouldn't recieve
+        let processed = processString(str: message)
         
-        if bluetoothDebug {
-            MKULog.shared.debug("[BLUETOOTH] [CONTROLLER] - \(comps)")
-        }
-        
-        if comps[0].characters.count != 1 {
-            return
-        }
-        
-        if comps.count == 2 {
+        switch processed.0 {
+        case .noDataType:
+            serialDelegate?.hasNewOutput("No Data Type: \(processed.1)")
             
-            if comps[0] == tsop {
-                let tsopstr = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
-                
-                guard let active = Int(tsopstr) else {
-                    return
-                }
-                
-                tsopDelegate?.hasNewActiveTSOP(active)
-                
-            } else if comps[0] == light {
-                let string = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
-                let boolArr = Array(string.characters)
-                
-                if boolArr.count == 12 {
-                    var sensorStatus: [Int] = []
-                    
-                    for i in 0...11 {
-                        let item = boolArr[i]
-                        let intValue = Int(String(item))
-                        
-                        if intValue == 1 {
-                            sensorStatus.append(1)
-                            sensorStatus.append(0)
-                        } else if intValue == 2 {
-                            sensorStatus.append(0)
-                            sensorStatus.append(1)
-                        } else if intValue == 3 {
-                            sensorStatus.append(1)
-                            sensorStatus.append(1)
-                        } else {
-                            sensorStatus.append(0)
-                            sensorStatus.append(0)
-                        }
-                        
-                        var sensorNumbers: [Int] = []
-                        
-                        if sensorStatus.count == 24 {
-                            for i in 0...23 {
-                                let value = sensorStatus[i]
-                                
-                                if value == 1 {
-                                    sensorNumbers.append(i)
-                                }
-                            }
-                            
-                            lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers)
-                        }
-                    }
-                }
-            } else if comps[0] == compass {
-                let ang = comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n"))
-                
-                guard let angle = Double(ang) else {
-                    return
-                }
-                
-                compassDelegate?.hasNewHeading(angle)
-            } else if comps[0] == serial {
-                //Info is serial
-                serialDelegate?.hasNewOutput(comps[1].trimmingCharacters(in: CharacterSet.init(charactersIn: "\r\n")))
-            } else if comps[0] == noDataType || comps[0] == raw {
-                MKULog.shared.error("[BLUETOOTH] [CONTROLLER] Message Didn't contain a data type.")
+        case .info:
+            serialDelegate?.hasNewOutput(processed.1)
+            
+        case .compass:
+            let angle = processed.1
+            
+            guard let ang = Double(angle) else {
+                let mess = "[Compass] Angle was unable to be converted into Double: \(angle)"
+                serialDelegate?.hasNewOutput(mess)
+                messageDelegate?.showInformation(mess)
+                return
             }
-        } else if comps.count == 1 {
-            // Just accept all messages without prefixes as serial output
-            serialDelegate?.hasNewOutput(message)
-        } else {
-            // 2 or more prefixes in the same message, usually happens when the string is too long.
-            MKULog.shared.error("[BLUETOOTH] [CONTROLLER] Message Contains multiple ';' symbols")
+            
+            compassDelegate?.hasNewHeading(ang)
+            
+        default:
+            MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")
         }
     }
     
+    func processString(str: String) -> (BluetoothDataType, String) {
+        let comps = str.components(separatedBy: ";")
+        
+        if comps.count == 2 {
+            guard let dataType = BluetoothDataType(rawValue: (Int(comps.first!))!) else {
+                return (BluetoothDataType.noDataType, comps[1])
+            }
+            
+            let message = comps[1]
+            
+            return (dataType, message)
+        }
+        
+        return (.noDataType, "")
+    }
+ 
     func serialDidChangeState() {
         self.connectCount = 0
         connect()
     }
-    
+ 
     func serialDidDisconnect(_ peripheral: CBPeripheral, error: NSError?) {
         self.connected = false
         self.connectCount = 0
