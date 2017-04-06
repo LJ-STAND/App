@@ -7,37 +7,48 @@
 //
 
 import UIKit
+import MKUIKit
+import MKUtilityKit
+import MKKit
 
 class BackgroundViewController: UIViewController {
-    var serialButton: HexButton!
-    var TSOPButton: HexButton!
-    var lightButton: HexButton!
-    var compassButton: HexButton!
-    var designButton: HexButton!
-    
-    @IBOutlet weak var dockView: UIView!
-
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = UIBezierPath(roundedRect: dockView.bounds, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSizeMake(5.0, 5.0)).cgPath
-        maskLayer.frame = dockView.bounds
-        dockView.layer.mask = maskLayer
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-    
-    func buttonTapped(_ sender: UIButton) {
-        if let hexButton = sender as? HexButton {
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addWindow"), object: hexButton.text)
+        let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
+        
+        if defaults.bool(forKey: DefaultKeys.showLog) == true {
+            let logView = MKUConsoleViewController().view!
+            
+            logView.frame = view.frame
+            view.addSubview(logView)
+            logView.translatesAutoresizingMaskIntoConstraints = false
+            
+            generateConstraints(superView: view, subView: logView)
+            
+            
+            for subview in logView.subviews {
+                subview.backgroundColor = .clear
+            }
+            
+            
+            let blurEffect = UIBlurEffect(style: .dark)
+            let blurView = UIVisualEffectView(effect: blurEffect)
+            
+            blurView.frame = view.frame
+            
+            view.addSubview(blurView)
+            
+            view.sendSubview(toBack: blurView)
+            view.sendSubview(toBack: imageView)
+            
+            
+            view.layoutIfNeeded()
         }
     }
     
-    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation) {
-        let dockHeight = self.view.frame.height / 10
-        dockView.frame = CGRect(x: 0.0, y: self.view.frame.height - dockHeight, width: self.view.frame.width, height: dockHeight)
+    func generateConstraints(superView: UIView, subView: UIView) {
+        superView.addConstraints([NSLayoutConstraint.init(item: subView, attribute: .top, relatedBy: .equal, toItem: superView, attribute: .top, multiplier: 1.0, constant: 0.0), NSLayoutConstraint(item: subView, attribute: .bottom, relatedBy: .equal, toItem: superView, attribute: .bottom, multiplier: 1.0, constant: 0.0), NSLayoutConstraint.init(item: subView, attribute: .left, relatedBy: .equal, toItem: superView, attribute: .left, multiplier: 1.0, constant: 0.0), NSLayoutConstraint.init(item: subView, attribute: .right, relatedBy: .equal, toItem: superView, attribute: .right, multiplier: 1.0, constant: 0.0)])
     }
 }

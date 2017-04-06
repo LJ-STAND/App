@@ -6,6 +6,10 @@
 //  Copyright © 2017 Lachlan Grant. All rights reserved.
 //
 
+/*
+ BluetoothController Protocols
+*/
+
 import Foundation
 import CoreBluetooth
 
@@ -30,4 +34,13 @@ protocol BluetoothControllerCompassDelegate {
 
 protocol BluetoothControllerLightSensorDelegate {
     func updatedCurrentLightSensors(_ sensors: [Int])
+}
+
+protocol BluetoothControllerSettingsDelegate {
+    func updatedSettings(compass: Bool, light: Bool, tsop: Bool)
+}
+
+protocol BluetoothControllerSendDelegate {
+    func requestSettings()
+    func sendSettings(compass: Bool, tsop: Bool, light: Bool)
 }

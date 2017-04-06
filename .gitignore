@@ -26,3 +26,4 @@ build.conf
 
 # Carthage
 Carthage
+Cartfile.resolved

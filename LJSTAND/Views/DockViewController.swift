@@ -36,10 +36,6 @@ class DockViewController: UIViewController {
         commonAction((sender as! HexButton).text)
     }
     
-    @IBAction func designAction(_ sender: Any) {
-        commonAction((sender as! HexButton).text)
-    }
-    
     @IBAction func settingsAction(_ sender: Any) {
         commonAction((sender as! HexButton).text)
     }

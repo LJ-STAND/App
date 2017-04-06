@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreBluetooth
+import MKUtilityKit
 
 var serial: BluetoothSerial!
 
@@ -98,6 +99,7 @@ final class BluetoothSerial: NSObject, CBCentralManagerDelegate, CBPeripheralDel
         
         if let data = message.data(using: String.Encoding.utf8) {
             connectedPeripheral!.writeValue(data, for: writeCharacteristic!, type: writeType)
+            MKULog.shared.debug("[BLUETOOTH][SENT] \(message)")
         }
     }
     
