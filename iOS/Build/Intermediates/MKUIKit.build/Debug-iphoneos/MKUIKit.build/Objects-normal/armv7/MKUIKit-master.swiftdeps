@@ -1,0 +1,11 @@
+version: "Apple Swift version 3.0 (swiftlang-802.0.27.2 clang-802.0.27.2)"
+options: "b26aacd1ba8176a8ded07ad9ada8b609"
+build_time: [541815034, 170462000]
+inputs:
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/Ext/DropDownCell.swift": [541815014, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/Ext/DropDown.swift": [541815014, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/Ext/DPDConstants.swift": [541815014, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/MKUIToast.swift": [541815014, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/Ext/DPDUIView+Extension.swift": [541815014, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/Ext/DPDKeyboardListener.swift": [541815014, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/Ext/DropDown+Appearance.swift": [541815014, 0]

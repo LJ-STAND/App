@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Intermediates/Chameleon.build/Debug-iphoneos/Chameleon.build/unextended-module.modulemap',
+    }]
+  }]
+}

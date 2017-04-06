@@ -1,0 +1,273 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "DPDConstant"
+provides-nominal:
+- "V7MKUIKit11DPDConstant"
+- "VV7MKUIKit11DPDConstant7KeyPath"
+- "VV7MKUIKit11DPDConstant18ReusableIdentifier"
+- "VV7MKUIKit11DPDConstant2UI"
+- "VVV7MKUIKit11DPDConstant2UI6Shadow"
+- "VV7MKUIKit11DPDConstant9Animation"
+provides-member:
+- ["V7MKUIKit11DPDConstant", ""]
+- ["VV7MKUIKit11DPDConstant7KeyPath", ""]
+- ["VV7MKUIKit11DPDConstant18ReusableIdentifier", ""]
+- ["VV7MKUIKit11DPDConstant2UI", ""]
+- ["VVV7MKUIKit11DPDConstant2UI6Shadow", ""]
+- ["VV7MKUIKit11DPDConstant9Animation", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "UIViewAnimationOptions"
+- "Float"
+- "UIColor"
+- "StringLiteralType"
+- "UIFont"
+- "CGSize"
+- "CGAffineTransform"
+- "CGFloat"
+- "DPDConstant"
+- "Array"
+depends-member:
+- ["VV7MKUIKit11DPDConstant9Animation", "CGAffineTransform"]
+- ["VV7MKUIKit11DPDConstant9Animation", "DownScaleTransform"]
+- ["VV7MKUIKit11DPDConstant9Animation", "Duration"]
+- ["VV7MKUIKit11DPDConstant9Animation", "EntranceOptions"]
+- ["VV7MKUIKit11DPDConstant9Animation", "ExitOptions"]
+- ["VV7MKUIKit11DPDConstant9Animation", "UIViewAnimationOptions"]
+- ["VV7MKUIKit11DPDConstant9Animation", "init"]
+- ["Ps9AnyObject", "black"]
+- ["Ps9AnyObject", "clear"]
+- ["Ps9AnyObject", "darkGray"]
+- ["Ps9AnyObject", "init"]
+- ["Ps9AnyObject", "systemFont"]
+- ["VSC17CGAffineTransform", "deinit"]
+- ["VSC17CGAffineTransform", "init"]
+- ["V12CoreGraphics7CGFloat", "deinit"]
+- ["VSC6CGSize", "deinit"]
+- ["VSC6CGSize", "zero"]
+- ["Ps7CVarArg", "black"]
+- ["Ps7CVarArg", "clear"]
+- ["Ps7CVarArg", "darkGray"]
+- ["Ps7CVarArg", "init"]
+- ["Ps7CVarArg", "systemFont"]
+- ["Ps10Comparable", "init"]
+- ["Ps28CustomDebugStringConvertible", "black"]
+- ["Ps28CustomDebugStringConvertible", "clear"]
+- ["Ps28CustomDebugStringConvertible", "darkGray"]
+- ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "systemFont"]
+- ["Ps28CustomDebugStringConvertible", "zero"]
+- ["Ps29CustomPlaygroundQuickLookable", "init"]
+- ["Ps29CustomPlaygroundQuickLookable", "zero"]
+- ["Ps17CustomReflectable", "init"]
+- ["Ps17CustomReflectable", "zero"]
+- ["Ps23CustomStringConvertible", "black"]
+- ["Ps23CustomStringConvertible", "clear"]
+- ["Ps23CustomStringConvertible", "darkGray"]
+- ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "systemFont"]
+- ["V7MKUIKit11DPDConstant", "Animation"]
+- ["V7MKUIKit11DPDConstant", "CGAffineTransform"]
+- ["V7MKUIKit11DPDConstant", "CGFloat"]
+- ["V7MKUIKit11DPDConstant", "CGSize"]
+- ["V7MKUIKit11DPDConstant", "Float"]
+- ["V7MKUIKit11DPDConstant", "KeyPath"]
+- ["V7MKUIKit11DPDConstant", "ReusableIdentifier"]
+- ["V7MKUIKit11DPDConstant", "UI"]
+- ["V7MKUIKit11DPDConstant", "UIColor"]
+- ["V7MKUIKit11DPDConstant", "UIFont"]
+- ["V7MKUIKit11DPDConstant", "UIViewAnimationOptions"]
+- ["V7MKUIKit11DPDConstant", "init"]
+- ["Sd", "deinit"]
+- ["Ps9Equatable", "Element"]
+- ["Ps9Equatable", "allowUserInteraction"]
+- ["Ps9Equatable", "black"]
+- ["Ps9Equatable", "clear"]
+- ["Ps9Equatable", "curveEaseIn"]
+- ["Ps9Equatable", "curveEaseOut"]
+- ["Ps9Equatable", "darkGray"]
+- ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "systemFont"]
+- ["Ps9Equatable", "zero"]
+- ["Ps25ExpressibleByArrayLiteral", "Element"]
+- ["Ps25ExpressibleByArrayLiteral", "allowUserInteraction"]
+- ["Ps25ExpressibleByArrayLiteral", "curveEaseIn"]
+- ["Ps25ExpressibleByArrayLiteral", "curveEaseOut"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- ["Ps32ExpressibleByStringInterpolation", "init"]
+- ["Ps26ExpressibleByStringLiteral", "init"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- ["Sf", "deinit"]
+- ["Ps8Hashable", "black"]
+- ["Ps8Hashable", "clear"]
+- ["Ps8Hashable", "darkGray"]
+- ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "systemFont"]
+- ["VV7MKUIKit11DPDConstant7KeyPath", "Frame"]
+- ["VV7MKUIKit11DPDConstant7KeyPath", "init"]
+- ["Ps25LosslessStringConvertible", "init"]
+- ["Ps10MirrorPath", "init"]
+- ["PSo8NSCoding", "black"]
+- ["PSo8NSCoding", "clear"]
+- ["PSo8NSCoding", "darkGray"]
+- ["PSo8NSCoding", "init"]
+- ["PSo9NSCopying", "black"]
+- ["PSo9NSCopying", "clear"]
+- ["PSo9NSCopying", "darkGray"]
+- ["PSo9NSCopying", "init"]
+- ["PSo9NSCopying", "systemFont"]
+- ["PSo16NSMutableCopying", "init"]
+- ["CSo8NSObject", "black"]
+- ["CSo8NSObject", "clear"]
+- ["CSo8NSObject", "darkGray"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "systemFont"]
+- ["PSo16NSObjectProtocol", "black"]
+- ["PSo16NSObjectProtocol", "clear"]
+- ["PSo16NSObjectProtocol", "darkGray"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "systemFont"]
+- ["PSo14NSSecureCoding", "black"]
+- ["PSo14NSSecureCoding", "clear"]
+- ["PSo14NSSecureCoding", "darkGray"]
+- ["PSo14NSSecureCoding", "init"]
+- ["CSo8NSString", "init"]
+- ["Ps9OptionSet", "Element"]
+- ["Ps9OptionSet", "allowUserInteraction"]
+- ["Ps9OptionSet", "curveEaseIn"]
+- ["Ps9OptionSet", "curveEaseOut"]
+- ["Ps16RawRepresentable", "Element"]
+- ["Ps16RawRepresentable", "allowUserInteraction"]
+- ["Ps16RawRepresentable", "curveEaseIn"]
+- ["Ps16RawRepresentable", "curveEaseOut"]
+- ["VV7MKUIKit11DPDConstant18ReusableIdentifier", "DropDownCell"]
+- ["VV7MKUIKit11DPDConstant18ReusableIdentifier", "init"]
+- ["Ps10SetAlgebra", "Element"]
+- ["Ps10SetAlgebra", "allowUserInteraction"]
+- ["Ps10SetAlgebra", "curveEaseIn"]
+- ["Ps10SetAlgebra", "curveEaseOut"]
+- ["VVV7MKUIKit11DPDConstant2UI6Shadow", "CGFloat"]
+- ["VVV7MKUIKit11DPDConstant2UI6Shadow", "CGSize"]
+- ["VVV7MKUIKit11DPDConstant2UI6Shadow", "Color"]
+- ["VVV7MKUIKit11DPDConstant2UI6Shadow", "Float"]
+- ["VVV7MKUIKit11DPDConstant2UI6Shadow", "Offset"]
+- ["VVV7MKUIKit11DPDConstant2UI6Shadow", "Opacity"]
+- ["VVV7MKUIKit11DPDConstant2UI6Shadow", "Radius"]
+- ["VVV7MKUIKit11DPDConstant2UI6Shadow", "UIColor"]
+- ["VVV7MKUIKit11DPDConstant2UI6Shadow", "init"]
+- ["SS", "deinit"]
+- ["SS", "init"]
+- ["Ps16TextOutputStream", "init"]
+- ["Ps20TextOutputStreamable", "init"]
+- ["VV7MKUIKit11DPDConstant2UI", "BackgroundColor"]
+- ["VV7MKUIKit11DPDConstant2UI", "CGFloat"]
+- ["VV7MKUIKit11DPDConstant2UI", "CGSize"]
+- ["VV7MKUIKit11DPDConstant2UI", "CornerRadius"]
+- ["VV7MKUIKit11DPDConstant2UI", "Float"]
+- ["VV7MKUIKit11DPDConstant2UI", "HeightPadding"]
+- ["VV7MKUIKit11DPDConstant2UI", "RowHeight"]
+- ["VV7MKUIKit11DPDConstant2UI", "SelectionBackgroundColor"]
+- ["VV7MKUIKit11DPDConstant2UI", "SeparatorColor"]
+- ["VV7MKUIKit11DPDConstant2UI", "Shadow"]
+- ["VV7MKUIKit11DPDConstant2UI", "TextColor"]
+- ["VV7MKUIKit11DPDConstant2UI", "TextFont"]
+- ["VV7MKUIKit11DPDConstant2UI", "UIColor"]
+- ["VV7MKUIKit11DPDConstant2UI", "UIFont"]
+- ["VV7MKUIKit11DPDConstant2UI", "init"]
+- ["CSo7UIColor", "black"]
+- ["CSo7UIColor", "clear"]
+- ["CSo7UIColor", "darkGray"]
+- ["CSo7UIColor", "deinit"]
+- ["CSo7UIColor", "init"]
+- ["CSo6UIFont", "deinit"]
+- ["CSo6UIFont", "systemFont"]
+- ["VSC22UIViewAnimationOptions", "Element"]
+- ["VSC22UIViewAnimationOptions", "allowUserInteraction"]
+- ["VSC22UIViewAnimationOptions", "curveEaseIn"]
+- ["VSC22UIViewAnimationOptions", "curveEaseOut"]
+- ["VSC22UIViewAnimationOptions", "deinit"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- ["Ps26_ExpressibleByColorLiteral", "black"]
+- ["Ps26_ExpressibleByColorLiteral", "clear"]
+- ["Ps26_ExpressibleByColorLiteral", "darkGray"]
+- ["Ps26_ExpressibleByColorLiteral", "init"]
+- ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- ["Ps9_Hashable", "black"]
+- ["Ps9_Hashable", "clear"]
+- ["Ps9_Hashable", "darkGray"]
+- ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "systemFont"]
+- ["Ps21_ObjectiveCBridgeable", "init"]
+- ["Ps21_ObjectiveCBridgeable", "zero"]
+depends-nominal:
+- "VV7MKUIKit11DPDConstant9Animation"
+- "Ps9AnyObject"
+- "VSC17CGAffineTransform"
+- "V12CoreGraphics7CGFloat"
+- "VSC6CGSize"
+- "Ps7CVarArg"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "V7MKUIKit11DPDConstant"
+- "Sd"
+- "Ps9Equatable"
+- "Ps25ExpressibleByArrayLiteral"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps32ExpressibleByStringInterpolation"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Sf"
+- "Ps8Hashable"
+- "VV7MKUIKit11DPDConstant7KeyPath"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
+- "PSo8NSCoding"
+- "PSo9NSCopying"
+- "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "PSo14NSSecureCoding"
+- "CSo8NSString"
+- "Ps9OptionSet"
+- "Ps16RawRepresentable"
+- "VV7MKUIKit11DPDConstant18ReusableIdentifier"
+- "Ps10SetAlgebra"
+- "VVV7MKUIKit11DPDConstant2UI6Shadow"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- "VV7MKUIKit11DPDConstant2UI"
+- "CSo7UIColor"
+- "CSo6UIFont"
+- "VSC22UIViewAnimationOptions"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- "Ps26_ExpressibleByColorLiteral"
+- "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/Ext/CRToastManager.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/Ext/CRToastConfig.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/MKUIKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Intermediates/MKUIKit.build/Debug-iphonesimulator/MKUIKit.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "c0d5cb91f09648077382d3acc0ccf7b5"

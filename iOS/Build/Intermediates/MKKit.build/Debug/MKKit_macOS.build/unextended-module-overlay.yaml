@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': '/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug/MKKit.framework/Modules'
+    'contents': [{
+      'type': 'file',
+      'name': 'module.modulemap',
+      'external-contents': '/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Intermediates/MKKit.build/Debug/MKKit_macOS.build/unextended-module.modulemap',
+    }]
+  }]
+}

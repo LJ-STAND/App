@@ -1,0 +1,170 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "URLStringConvertible"
+provides-nominal:
+- "P12MKUtilityKit20URLStringConvertible"
+- "SS"
+provides-member:
+- ["P12MKUtilityKit20URLStringConvertible", ""]
+- ["SS", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "String"
+- "URL"
+- "URLStringConvertible"
+depends-member:
+- !private ["Ps7CVarArg", "URL"]
+- ["Ps7CVarArg", "string"]
+- ["Ps7CVarArg", "url"]
+- !private ["Ps10Comparable", "URL"]
+- ["Ps10Comparable", "string"]
+- ["Ps10Comparable", "url"]
+- !private ["Ps28CustomDebugStringConvertible", "URL"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- ["Ps28CustomDebugStringConvertible", "string"]
+- ["Ps28CustomDebugStringConvertible", "url"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "URL"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- ["Ps29CustomPlaygroundQuickLookable", "string"]
+- ["Ps29CustomPlaygroundQuickLookable", "url"]
+- !private ["Ps17CustomReflectable", "URL"]
+- ["Ps17CustomReflectable", "string"]
+- ["Ps17CustomReflectable", "url"]
+- !private ["Ps23CustomStringConvertible", "URL"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- ["Ps23CustomStringConvertible", "string"]
+- ["Ps23CustomStringConvertible", "url"]
+- !private ["Ps9Equatable", "URL"]
+- !private ["Ps9Equatable", "init"]
+- ["Ps9Equatable", "string"]
+- ["Ps9Equatable", "url"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "URL"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "string"]
+- ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "url"]
+- !private ["Ps26ExpressibleByStringLiteral", "URL"]
+- ["Ps26ExpressibleByStringLiteral", "string"]
+- ["Ps26ExpressibleByStringLiteral", "url"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "URL"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "string"]
+- ["Ps33ExpressibleByUnicodeScalarLiteral", "url"]
+- !private ["Ps8Hashable", "URL"]
+- !private ["Ps8Hashable", "init"]
+- ["Ps8Hashable", "string"]
+- ["Ps8Hashable", "url"]
+- !private ["Ps25LosslessStringConvertible", "URL"]
+- ["Ps25LosslessStringConvertible", "string"]
+- ["Ps25LosslessStringConvertible", "url"]
+- !private ["Ps10MirrorPath", "URL"]
+- ["Ps10MirrorPath", "string"]
+- ["Ps10MirrorPath", "url"]
+- !private ["P12MKUtilityKit14OptionalString", "URL"]
+- ["P12MKUtilityKit14OptionalString", "string"]
+- ["P12MKUtilityKit14OptionalString", "url"]
+- !private ["P7RESTKit19RKJSONSubscriptType", "URL"]
+- ["P7RESTKit19RKJSONSubscriptType", "string"]
+- ["P7RESTKit19RKJSONSubscriptType", "url"]
+- !private ["P10Foundation20ReferenceConvertible", "init"]
+- ["SS", "String"]
+- ["SS", "URL"]
+- ["SS", "deinit"]
+- ["SS", "string"]
+- ["SS", "url"]
+- !private ["Ps16TextOutputStream", "URL"]
+- ["Ps16TextOutputStream", "string"]
+- ["Ps16TextOutputStream", "url"]
+- !private ["Ps20TextOutputStreamable", "URL"]
+- ["Ps20TextOutputStreamable", "string"]
+- ["Ps20TextOutputStreamable", "url"]
+- !private ["V10Foundation3URL", "init"]
+- ["P12MKUtilityKit20URLStringConvertible", "String"]
+- ["P12MKUtilityKit20URLStringConvertible", "URL"]
+- ["P12MKUtilityKit20URLStringConvertible", "string"]
+- ["P12MKUtilityKit20URLStringConvertible", "url"]
+- ["P12MKUtilityKit20URLStringConvertible", ""]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "URL"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "string"]
+- ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "url"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "URL"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "string"]
+- ["Ps34_ExpressibleByBuiltinStringLiteral", "url"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "URL"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "string"]
+- ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "url"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "URL"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "string"]
+- ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "url"]
+- !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "URL"]
+- ["Ps33_ExpressibleByStringInterpolation", "string"]
+- ["Ps33_ExpressibleByStringInterpolation", "url"]
+- !private ["Ps9_Hashable", "URL"]
+- !private ["Ps9_Hashable", "init"]
+- ["Ps9_Hashable", "string"]
+- ["Ps9_Hashable", "url"]
+- !private ["Ps21_ObjectiveCBridgeable", "URL"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- ["Ps21_ObjectiveCBridgeable", "string"]
+- ["Ps21_ObjectiveCBridgeable", "url"]
+depends-nominal:
+- "Ps7CVarArg"
+- "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- "Ps29CustomPlaygroundQuickLookable"
+- "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- "Ps26ExpressibleByStringLiteral"
+- "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- "Ps25LosslessStringConvertible"
+- "Ps10MirrorPath"
+- "P12MKUtilityKit14OptionalString"
+- "P7RESTKit19RKJSONSubscriptType"
+- !private "P10Foundation20ReferenceConvertible"
+- "SS"
+- "Ps16TextOutputStream"
+- "Ps20TextOutputStreamable"
+- !private "V10Foundation3URL"
+- "P12MKUtilityKit20URLStringConvertible"
+- "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- "Ps34_ExpressibleByBuiltinStringLiteral"
+- "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps34_ExpressibleByFileReferenceLiteral"
+- "Ps33_ExpressibleByStringInterpolation"
+- "Ps9_Hashable"
+- "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.apinotesc"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/MKUtilityKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Intermediates/MKUtilityKit.build/Debug-iphoneos/MKUtilityKit_iOS.build/unextended-module.modulemap"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Metal.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreText.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/QuartzCore.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Modules/RESTKit.swiftmodule/arm.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Headers/RESTKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Headers/RESTKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Modules/module.modulemap"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/MessageUI.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CloudKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Contacts.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CloudKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Contacts.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+interface-hash: "091a53fb4708f7329899b5f3e2437ce8"

@@ -1,0 +1,20 @@
+version: "Apple Swift version 3.0 (swiftlang-802.0.27.2 clang-802.0.27.2)"
+options: "2615c54e3f904bb685e7b69b14bc244f"
+build_time: [543557504, 211853000]
+inputs:
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/Common/NotificationKeys.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/LJ STAND macOS/InitialViewController.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/Common/BluetoothController.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/Common/MKKitExt.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/LJ STAND macOS/TSOPViewController.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/Common/LightSensorView.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/Common/TypeAlias.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/Common/Part.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/Common/DefaultKeys.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/Common/BluetoothSerial.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/LJ STAND macOS/LightSensorViewController.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/LJ STAND macOS/CompassViewController.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/Common/CompassView.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/LJ STAND macOS/AppDelegate.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/Common/TSOPRingView.swift": !dirty [543557159, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/Common/PartParser.swift": !dirty [543557159, 0]

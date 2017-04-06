@@ -1,0 +1,447 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AuthorizeBluetoothViewController"
+provides-nominal:
+- "C3iOS32AuthorizeBluetoothViewController"
+provides-member:
+- ["C3iOS32AuthorizeBluetoothViewController", ""]
+provides-dynamic-lookup:
+- "authorized"
+- "updateAuthorization"
+- "viewDidLoad"
+depends-top-level:
+- !private "=="
+- !private "AppDelegate"
+- "AssignmentPrecedence"
+- "AuthorizeBluetoothViewController"
+- "BooleanLiteralType"
+- !private "CastingPrecedence"
+- !private "MKUAsync"
+- !private "MKUPermission"
+- "StringLiteralType"
+- !private "UIApplication"
+- "UIViewController"
+- !private "||"
+depends-member:
+- !private ["Ps9AnyObject", "MKUAsync"]
+- !private ["Ps9AnyObject", "MKUPermission"]
+- !private ["Ps9AnyObject", "UIApplication"]
+- !private ["Ps9AnyObject", "authorized"]
+- !private ["Ps9AnyObject", "bluetooth"]
+- !private ["Ps9AnyObject", "delegate"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "removeWindow"]
+- !private ["Ps9AnyObject", "request"]
+- !private ["Ps9AnyObject", "shared"]
+- !private ["Ps9AnyObject", "status"]
+- !private ["Ps9AnyObject", "updateAuthorization"]
+- ["Ps9AnyObject", ""]
+- !private ["C3iOS11AppDelegate", "removeWindow"]
+- !private ["C3iOS32AuthorizeBluetoothViewController", "AppDelegate"]
+- !private ["C3iOS32AuthorizeBluetoothViewController", "MKUAsync"]
+- !private ["C3iOS32AuthorizeBluetoothViewController", "MKUPermission"]
+- !private ["C3iOS32AuthorizeBluetoothViewController", "UIApplication"]
+- ["C3iOS32AuthorizeBluetoothViewController", "authorized"]
+- ["C3iOS32AuthorizeBluetoothViewController", "deinit"]
+- ["C3iOS32AuthorizeBluetoothViewController", "init"]
+- ["C3iOS32AuthorizeBluetoothViewController", "updateAuthorization"]
+- ["C3iOS32AuthorizeBluetoothViewController", "viewDidLoad"]
+- !private ["P3iOS24BluetoothMessageDelegate", "removeWindow"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["PSo27CBPeripheralManagerDelegate", "bluetooth"]
+- !private ["PSo27CBPeripheralManagerDelegate", "request"]
+- !private ["PSo27CBPeripheralManagerDelegate", "status"]
+- !private ["PSo13CKRecordValue", "init"]
+- !private ["PSo25CLLocationManagerDelegate", "bluetooth"]
+- !private ["PSo25CLLocationManagerDelegate", "request"]
+- !private ["PSo25CLLocationManagerDelegate", "status"]
+- !private ["PSo15CNKeyDescriptor", "init"]
+- !private ["Ps7CVarArg", "MKUAsync"]
+- !private ["Ps7CVarArg", "MKUPermission"]
+- !private ["Ps7CVarArg", "UIApplication"]
+- !private ["Ps7CVarArg", "authorized"]
+- !private ["Ps7CVarArg", "bluetooth"]
+- !private ["Ps7CVarArg", "delegate"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "removeWindow"]
+- !private ["Ps7CVarArg", "request"]
+- !private ["Ps7CVarArg", "shared"]
+- !private ["Ps7CVarArg", "status"]
+- !private ["Ps7CVarArg", "updateAuthorization"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "MKUAsync"]
+- !private ["Ps28CustomDebugStringConvertible", "MKUPermission"]
+- !private ["Ps28CustomDebugStringConvertible", "UIApplication"]
+- !private ["Ps28CustomDebugStringConvertible", "authorized"]
+- !private ["Ps28CustomDebugStringConvertible", "bluetooth"]
+- !private ["Ps28CustomDebugStringConvertible", "delegate"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "removeWindow"]
+- !private ["Ps28CustomDebugStringConvertible", "request"]
+- !private ["Ps28CustomDebugStringConvertible", "shared"]
+- !private ["Ps28CustomDebugStringConvertible", "status"]
+- !private ["Ps28CustomDebugStringConvertible", "updateAuthorization"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "MKUAsync"]
+- !private ["Ps23CustomStringConvertible", "MKUPermission"]
+- !private ["Ps23CustomStringConvertible", "UIApplication"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "authorized"]
+- !private ["Ps23CustomStringConvertible", "bluetooth"]
+- !private ["Ps23CustomStringConvertible", "delegate"]
+- !private ["Ps23CustomStringConvertible", "denied"]
+- !private ["Ps23CustomStringConvertible", "disabled"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "notDetermined"]
+- !private ["Ps23CustomStringConvertible", "removeWindow"]
+- !private ["Ps23CustomStringConvertible", "request"]
+- !private ["Ps23CustomStringConvertible", "shared"]
+- !private ["Ps23CustomStringConvertible", "status"]
+- !private ["Ps23CustomStringConvertible", "updateAuthorization"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "MKUAsync"]
+- !private ["Ps9Equatable", "MKUPermission"]
+- !private ["Ps9Equatable", "UIApplication"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "authorized"]
+- !private ["Ps9Equatable", "bluetooth"]
+- !private ["Ps9Equatable", "delegate"]
+- !private ["Ps9Equatable", "denied"]
+- !private ["Ps9Equatable", "disabled"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "notDetermined"]
+- !private ["Ps9Equatable", "removeWindow"]
+- !private ["Ps9Equatable", "request"]
+- !private ["Ps9Equatable", "shared"]
+- !private ["Ps9Equatable", "status"]
+- !private ["Ps9Equatable", "updateAuthorization"]
+- ["Ps9Equatable", ""]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "MKUAsync"]
+- !private ["Ps8Hashable", "MKUPermission"]
+- !private ["Ps8Hashable", "UIApplication"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "authorized"]
+- !private ["Ps8Hashable", "bluetooth"]
+- !private ["Ps8Hashable", "delegate"]
+- !private ["Ps8Hashable", "denied"]
+- !private ["Ps8Hashable", "disabled"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "notDetermined"]
+- !private ["Ps8Hashable", "removeWindow"]
+- !private ["Ps8Hashable", "request"]
+- !private ["Ps8Hashable", "shared"]
+- !private ["Ps8Hashable", "status"]
+- !private ["Ps8Hashable", "updateAuthorization"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["V12MKUtilityKit13MKUAsyncBlock", "background"]
+- !private ["V12MKUtilityKit13MKUAsyncBlock", "main"]
+- !private ["C12MKUtilityKit13MKUPermission", "bluetooth"]
+- !private ["C12MKUtilityKit13MKUPermission", "request"]
+- !private ["C12MKUtilityKit13MKUPermission", "status"]
+- !private ["O12MKUtilityKit19MKUPermissionStatus", "authorized"]
+- !private ["O12MKUtilityKit19MKUPermissionStatus", "denied"]
+- !private ["O12MKUtilityKit19MKUPermissionStatus", "disabled"]
+- !private ["O12MKUtilityKit19MKUPermissionStatus", "notDetermined"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["PSo8NSCoding", "MKUAsync"]
+- !private ["PSo8NSCoding", "MKUPermission"]
+- !private ["PSo8NSCoding", "UIApplication"]
+- !private ["PSo8NSCoding", "authorized"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "updateAuthorization"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "MKUAsync"]
+- !private ["PSo26NSExtensionRequestHandling", "MKUPermission"]
+- !private ["PSo26NSExtensionRequestHandling", "UIApplication"]
+- !private ["PSo26NSExtensionRequestHandling", "authorized"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "updateAuthorization"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "AppDelegate"]
+- !private ["CSo8NSObject", "MKUAsync"]
+- !private ["CSo8NSObject", "MKUPermission"]
+- !private ["CSo8NSObject", "UIApplication"]
+- ["CSo8NSObject", "authorized"]
+- !private ["CSo8NSObject", "bluetooth"]
+- !private ["CSo8NSObject", "delegate"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "removeWindow"]
+- !private ["CSo8NSObject", "request"]
+- !private ["CSo8NSObject", "shared"]
+- !private ["CSo8NSObject", "status"]
+- ["CSo8NSObject", "updateAuthorization"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "MKUAsync"]
+- !private ["PSo16NSObjectProtocol", "MKUPermission"]
+- !private ["PSo16NSObjectProtocol", "UIApplication"]
+- !private ["PSo16NSObjectProtocol", "authorized"]
+- !private ["PSo16NSObjectProtocol", "bluetooth"]
+- !private ["PSo16NSObjectProtocol", "delegate"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "removeWindow"]
+- !private ["PSo16NSObjectProtocol", "request"]
+- !private ["PSo16NSObjectProtocol", "shared"]
+- !private ["PSo16NSObjectProtocol", "status"]
+- !private ["PSo16NSObjectProtocol", "updateAuthorization"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["P12MKUtilityKit14OptionalString", "init"]
+- !private ["P7RESTKit19RKJSONSubscriptType", "init"]
+- !private ["Ps16RawRepresentable", "authorized"]
+- !private ["Ps16RawRepresentable", "denied"]
+- !private ["Ps16RawRepresentable", "disabled"]
+- !private ["Ps16RawRepresentable", "notDetermined"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo21UIAppearanceContainer", "MKUAsync"]
+- !private ["PSo21UIAppearanceContainer", "MKUPermission"]
+- !private ["PSo21UIAppearanceContainer", "UIApplication"]
+- !private ["PSo21UIAppearanceContainer", "authorized"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "updateAuthorization"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo13UIApplication", "delegate"]
+- !private ["CSo13UIApplication", "shared"]
+- !private ["PSo21UIApplicationDelegate", "removeWindow"]
+- !private ["PSo18UIContentContainer", "MKUAsync"]
+- !private ["PSo18UIContentContainer", "MKUPermission"]
+- !private ["PSo18UIContentContainer", "UIApplication"]
+- !private ["PSo18UIContentContainer", "authorized"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "updateAuthorization"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo18UIFocusEnvironment", "MKUAsync"]
+- !private ["PSo18UIFocusEnvironment", "MKUPermission"]
+- !private ["PSo18UIFocusEnvironment", "UIApplication"]
+- !private ["PSo18UIFocusEnvironment", "authorized"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "updateAuthorization"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["CSo11UIResponder", "AppDelegate"]
+- !private ["CSo11UIResponder", "MKUAsync"]
+- !private ["CSo11UIResponder", "MKUPermission"]
+- !private ["CSo11UIResponder", "UIApplication"]
+- ["CSo11UIResponder", "authorized"]
+- !private ["CSo11UIResponder", "delegate"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "removeWindow"]
+- !private ["CSo11UIResponder", "shared"]
+- ["CSo11UIResponder", "updateAuthorization"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "MKUAsync"]
+- !private ["PSo30UIResponderStandardEditActions", "MKUPermission"]
+- !private ["PSo30UIResponderStandardEditActions", "UIApplication"]
+- !private ["PSo30UIResponderStandardEditActions", "authorized"]
+- !private ["PSo30UIResponderStandardEditActions", "delegate"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "removeWindow"]
+- !private ["PSo30UIResponderStandardEditActions", "shared"]
+- !private ["PSo30UIResponderStandardEditActions", "updateAuthorization"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "MKUAsync"]
+- !private ["PSo16UIStateRestoring", "MKUPermission"]
+- !private ["PSo16UIStateRestoring", "UIApplication"]
+- !private ["PSo16UIStateRestoring", "authorized"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "updateAuthorization"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "MKUAsync"]
+- !private ["PSo18UITraitEnvironment", "MKUPermission"]
+- !private ["PSo18UITraitEnvironment", "UIApplication"]
+- !private ["PSo18UITraitEnvironment", "authorized"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "updateAuthorization"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo16UIViewController", "AppDelegate"]
+- !private ["CSo16UIViewController", "MKUAsync"]
+- !private ["CSo16UIViewController", "MKUPermission"]
+- !private ["CSo16UIViewController", "UIApplication"]
+- ["CSo16UIViewController", "authorized"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "updateAuthorization"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["P12MKUtilityKit20URLStringConvertible", "init"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "MKUAsync"]
+- !private ["Ps9_Hashable", "MKUPermission"]
+- !private ["Ps9_Hashable", "UIApplication"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "authorized"]
+- !private ["Ps9_Hashable", "bluetooth"]
+- !private ["Ps9_Hashable", "delegate"]
+- !private ["Ps9_Hashable", "denied"]
+- !private ["Ps9_Hashable", "disabled"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "notDetermined"]
+- !private ["Ps9_Hashable", "removeWindow"]
+- !private ["Ps9_Hashable", "request"]
+- !private ["Ps9_Hashable", "shared"]
+- !private ["Ps9_Hashable", "status"]
+- !private ["Ps9_Hashable", "updateAuthorization"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "C3iOS11AppDelegate"
+- "C3iOS32AuthorizeBluetoothViewController"
+- !private "P3iOS24BluetoothMessageDelegate"
+- !private "Sb"
+- !private "PSo27CBPeripheralManagerDelegate"
+- !private "PSo13CKRecordValue"
+- !private "PSo25CLLocationManagerDelegate"
+- !private "PSo15CNKeyDescriptor"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "V12MKUtilityKit13MKUAsyncBlock"
+- !private "C12MKUtilityKit13MKUPermission"
+- !private "O12MKUtilityKit19MKUPermissionStatus"
+- !private "Ps10MirrorPath"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "P12MKUtilityKit14OptionalString"
+- !private "P7RESTKit19RKJSONSubscriptType"
+- !private "Ps16RawRepresentable"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- "PSo21UIAppearanceContainer"
+- !private "CSo13UIApplication"
+- !private "PSo21UIApplicationDelegate"
+- "PSo18UIContentContainer"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- "CSo16UIViewController"
+- !private "P12MKUtilityKit20URLStringConvertible"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreText.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKKit.framework/Modules/MKKit.swiftmodule/arm64.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKKit.framework/Headers/MKKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKKit.framework/Headers/MKKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUtilityKit.framework/Modules/MKUtilityKit.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AudioToolbox.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreMedia.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreAudio.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CloudKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Contacts.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreBluetooth.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/EventKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Intents.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Intents.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/MessageUI.apinotesc"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUtilityKit.framework/Headers/MKUtilityKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUtilityKit.framework/Headers/MKUtilityKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUtilityKit.framework/Modules/module.modulemap"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/MediaPlayer.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Photos.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Photos.apinotesc"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/RESTKit.framework/Modules/RESTKit.swiftmodule/arm64.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/RESTKit.framework/Headers/RESTKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/RESTKit.framework/Headers/RESTKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/RESTKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Modules/MKUIKit.swiftmodule/arm64.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/MKUIKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/CRToastManager.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/CRToastConfig.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/MKUIKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Modules/Chameleon.swiftmodule/arm64.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/UIAppearance+Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/UIView+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/UIImage+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/UIColor+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/UILabel+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/UIButton+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/UIViewController+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/UINavigationController+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/NSArray+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/UIColor+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/ChameleonMacros.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/ChameleonEnums.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/ChameleonConstants.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon_.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Modules/module.modulemap"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/WebKit.apinotesc"
+interface-hash: "74ace20c599bcc4ecb4b2d6e53b28eef"

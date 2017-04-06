@@ -1,0 +1,21 @@
+version: "Apple Swift version 3.0 (swiftlang-802.0.27.2 clang-802.0.27.2)"
+options: "f6f28eed3705242dd4b8bba9ba144eff"
+build_time: [542702744, 793036000]
+inputs:
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/UIStoryboard+MKU.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/String+Validation.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/String+Regex.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/String+Core.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/Date+DateTime.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/MKUAppSettings.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/MKUDefaults.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/String+URL.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/TypeAlias.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/MKUAsync.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/Date+Extensions.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/MKULog.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/MKUCloudKit.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/MKUFileController.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/String+Empty.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/MKUReachability.swift": [541815015, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUtilityKit/CommonSource/MKUJSON.swift": [541815015, 0]

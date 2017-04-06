@@ -1,0 +1,10 @@
+framework module Chameleon {
+  umbrella header "Chameleon.h"
+
+  export *
+  module * { export * }
+}
+
+module Chameleon.__Swift {
+    exclude header "Chameleon-Swift.h"
+}

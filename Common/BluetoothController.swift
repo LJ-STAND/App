@@ -63,6 +63,8 @@ class BluetoothController {
     var connected: Bool = false
     var bluetoothDebug: Bool = false
     
+    var textRecieved = ""
+    
     init() {
         serial = BluetoothSerial(delegate: self)
         serial.writeType = .withoutResponse

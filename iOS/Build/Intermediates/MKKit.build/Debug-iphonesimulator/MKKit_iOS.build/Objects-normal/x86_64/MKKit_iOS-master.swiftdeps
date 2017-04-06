@@ -1,0 +1,8 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "a6fd498e4ed70ad2ef25263857b1296e"
+build_time: [543556896, 563561000]
+inputs:
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKKit/CommonSource/MKBundleID.swift": [541815013, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKKit/CommonSource/MKAppGroups.swift": [541815013, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKKit/CommonSource/MKCloudKitContainers.swift": [541815013, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKKit/CommonSource/MKStoreProductID.swift": [541815013, 0]

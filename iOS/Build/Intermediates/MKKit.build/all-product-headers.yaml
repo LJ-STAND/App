@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphonesimulator/MKKit.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "MKKit-Swift.h",
+          'external-contents': "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphonesimulator/MKKit.framework/Headers/MKKit-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "MKKit.h",
+          'external-contents': "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKKit/CommonSource/MKKit.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphonesimulator/MKKit.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Intermediates/MKKit.build/Debug-iphonesimulator/MKKit_iOS.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

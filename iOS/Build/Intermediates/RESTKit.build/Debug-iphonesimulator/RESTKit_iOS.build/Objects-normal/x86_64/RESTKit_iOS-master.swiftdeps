@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
+options: "3323f502dd3f25b19105453b237d1067"
+build_time: [543556899, 567362000]
+inputs:
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/RESTKit/CommonSource/RKJSON.swift": [541815014, 0]
+  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/RESTKit/CommonSource/RKHTTP.swift": [541815014, 0]

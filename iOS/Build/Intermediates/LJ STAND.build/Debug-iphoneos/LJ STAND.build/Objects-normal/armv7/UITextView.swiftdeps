@@ -1,0 +1,291 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+provides-nominal:
+provides-member:
+- ["CSo10UITextView", ""]
+- ["CSo10UITextView", "scrollToBottom"]
+provides-dynamic-lookup:
+- "scrollToBottom"
+depends-top-level:
+- !private "-"
+- !private "NSMakeRange"
+- "UITextView"
+depends-member:
+- !private ["P7MKUIKit10AnchorView", "NSMakeRange"]
+- !private ["P7MKUIKit10AnchorView", "scrollRangeToVisible"]
+- !private ["P7MKUIKit10AnchorView", "text"]
+- !private ["Ps9AnyObject", "NSMakeRange"]
+- !private ["Ps9AnyObject", "characters"]
+- !private ["Ps9AnyObject", "scrollRangeToVisible"]
+- !private ["Ps9AnyObject", "text"]
+- !private ["Ps23BidirectionalCollection", "count"]
+- !private ["PSo15CALayerDelegate", "NSMakeRange"]
+- !private ["PSo15CALayerDelegate", "scrollRangeToVisible"]
+- !private ["PSo15CALayerDelegate", "text"]
+- !private ["PSo13CKRecordValue", "characters"]
+- !private ["PSo15CNKeyDescriptor", "characters"]
+- !private ["Ps7CVarArg", "NSMakeRange"]
+- !private ["Ps7CVarArg", "characters"]
+- !private ["Ps7CVarArg", "scrollRangeToVisible"]
+- !private ["Ps7CVarArg", "text"]
+- !private ["VSS13CharacterView", "count"]
+- !private ["Ps10Collection", "count"]
+- !private ["Ps10Comparable", "characters"]
+- !private ["Ps28CustomDebugStringConvertible", "NSMakeRange"]
+- !private ["Ps28CustomDebugStringConvertible", "characters"]
+- !private ["Ps28CustomDebugStringConvertible", "scrollRangeToVisible"]
+- !private ["Ps28CustomDebugStringConvertible", "text"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "characters"]
+- !private ["Ps17CustomReflectable", "characters"]
+- !private ["Ps23CustomStringConvertible", "NSMakeRange"]
+- !private ["Ps23CustomStringConvertible", "characters"]
+- !private ["Ps23CustomStringConvertible", "scrollRangeToVisible"]
+- !private ["Ps23CustomStringConvertible", "text"]
+- !private ["Ps9Equatable", "NSMakeRange"]
+- !private ["Ps9Equatable", "characters"]
+- !private ["Ps9Equatable", "scrollRangeToVisible"]
+- !private ["Ps9Equatable", "text"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "characters"]
+- !private ["Ps26ExpressibleByStringLiteral", "characters"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "characters"]
+- !private ["Ps8Hashable", "NSMakeRange"]
+- !private ["Ps8Hashable", "characters"]
+- !private ["Ps8Hashable", "scrollRangeToVisible"]
+- !private ["Ps8Hashable", "text"]
+- !private ["Ps25LosslessStringConvertible", "characters"]
+- !private ["Ps10MirrorPath", "characters"]
+- !private ["PSo8NSCoding", "NSMakeRange"]
+- !private ["PSo8NSCoding", "characters"]
+- !private ["PSo8NSCoding", "scrollRangeToVisible"]
+- !private ["PSo8NSCoding", "text"]
+- !private ["PSo9NSCopying", "characters"]
+- !private ["PSo16NSMutableCopying", "characters"]
+- !private ["CSo8NSObject", "NSMakeRange"]
+- !private ["CSo8NSObject", "characters"]
+- !private ["CSo8NSObject", "scrollRangeToVisible"]
+- ["CSo8NSObject", "scrollToBottom"]
+- !private ["CSo8NSObject", "text"]
+- !private ["PSo16NSObjectProtocol", "NSMakeRange"]
+- !private ["PSo16NSObjectProtocol", "characters"]
+- !private ["PSo16NSObjectProtocol", "scrollRangeToVisible"]
+- !private ["PSo16NSObjectProtocol", "text"]
+- !private ["PSo14NSSecureCoding", "characters"]
+- !private ["CSo8NSString", "characters"]
+- !private ["P12MKUtilityKit14OptionalString", "characters"]
+- !private ["P7RESTKit19RKJSONSubscriptType", "characters"]
+- !private ["Ps26RangeReplaceableCollection", "count"]
+- !private ["Ps8Sequence", "count"]
+- !private ["SS", "characters"]
+- !private ["Ps16TextOutputStream", "characters"]
+- !private ["Ps20TextOutputStreamable", "characters"]
+- !private ["PSo29UIAccessibilityIdentification", "NSMakeRange"]
+- !private ["PSo29UIAccessibilityIdentification", "scrollRangeToVisible"]
+- !private ["PSo29UIAccessibilityIdentification", "text"]
+- !private ["PSo12UIAppearance", "NSMakeRange"]
+- !private ["PSo12UIAppearance", "scrollRangeToVisible"]
+- !private ["PSo12UIAppearance", "text"]
+- !private ["PSo21UIAppearanceContainer", "NSMakeRange"]
+- !private ["PSo21UIAppearanceContainer", "scrollRangeToVisible"]
+- !private ["PSo21UIAppearanceContainer", "text"]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "NSMakeRange"]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "scrollRangeToVisible"]
+- !private ["PSo30UIContentSizeCategoryAdjusting", "text"]
+- !private ["PSo17UICoordinateSpace", "NSMakeRange"]
+- !private ["PSo17UICoordinateSpace", "scrollRangeToVisible"]
+- !private ["PSo17UICoordinateSpace", "text"]
+- !private ["PSo13UIDynamicItem", "NSMakeRange"]
+- !private ["PSo13UIDynamicItem", "scrollRangeToVisible"]
+- !private ["PSo13UIDynamicItem", "text"]
+- !private ["PSo18UIFocusEnvironment", "NSMakeRange"]
+- !private ["PSo18UIFocusEnvironment", "scrollRangeToVisible"]
+- !private ["PSo18UIFocusEnvironment", "text"]
+- !private ["PSo11UIFocusItem", "NSMakeRange"]
+- !private ["PSo11UIFocusItem", "scrollRangeToVisible"]
+- !private ["PSo11UIFocusItem", "text"]
+- !private ["PSo10UIKeyInput", "NSMakeRange"]
+- !private ["PSo10UIKeyInput", "scrollRangeToVisible"]
+- !private ["PSo10UIKeyInput", "text"]
+- !private ["CSo11UIResponder", "NSMakeRange"]
+- !private ["CSo11UIResponder", "scrollRangeToVisible"]
+- ["CSo11UIResponder", "scrollToBottom"]
+- !private ["CSo11UIResponder", "text"]
+- !private ["PSo30UIResponderStandardEditActions", "NSMakeRange"]
+- !private ["PSo30UIResponderStandardEditActions", "scrollRangeToVisible"]
+- !private ["PSo30UIResponderStandardEditActions", "text"]
+- !private ["CSo12UIScrollView", "NSMakeRange"]
+- !private ["CSo12UIScrollView", "scrollRangeToVisible"]
+- ["CSo12UIScrollView", "scrollToBottom"]
+- !private ["CSo12UIScrollView", "text"]
+- !private ["PSo11UITextInput", "NSMakeRange"]
+- !private ["PSo11UITextInput", "scrollRangeToVisible"]
+- !private ["PSo11UITextInput", "text"]
+- !private ["PSo17UITextInputTraits", "NSMakeRange"]
+- !private ["PSo17UITextInputTraits", "scrollRangeToVisible"]
+- !private ["PSo17UITextInputTraits", "text"]
+- !private ["CSo10UITextView", "NSMakeRange"]
+- !private ["CSo10UITextView", "scrollRangeToVisible"]
+- ["CSo10UITextView", "scrollToBottom"]
+- !private ["CSo10UITextView", "text"]
+- !private ["PSo18UITraitEnvironment", "NSMakeRange"]
+- !private ["PSo18UITraitEnvironment", "scrollRangeToVisible"]
+- !private ["PSo18UITraitEnvironment", "text"]
+- !private ["CSo6UIView", "NSMakeRange"]
+- !private ["CSo6UIView", "scrollRangeToVisible"]
+- ["CSo6UIView", "scrollToBottom"]
+- !private ["CSo6UIView", "text"]
+- !private ["P12MKUtilityKit20URLStringConvertible", "characters"]
+- !private ["Ps23_BidirectionalIndexable", "count"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "NSMakeRange"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "scrollRangeToVisible"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "text"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "characters"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "characters"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "characters"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "characters"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "characters"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "characters"]
+- !private ["Ps9_Hashable", "NSMakeRange"]
+- !private ["Ps9_Hashable", "characters"]
+- !private ["Ps9_Hashable", "scrollRangeToVisible"]
+- !private ["Ps9_Hashable", "text"]
+- !private ["Ps10_Indexable", "count"]
+- !private ["Ps14_IndexableBase", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "characters"]
+- !private ["Ps26_RangeReplaceableIndexable", "count"]
+depends-nominal:
+- !private "P7MKUIKit10AnchorView"
+- !private "Ps9AnyObject"
+- !private "Ps23BidirectionalCollection"
+- !private "PSo15CALayerDelegate"
+- !private "PSo13CKRecordValue"
+- !private "PSo15CNKeyDescriptor"
+- !private "Ps7CVarArg"
+- !private "VSS13CharacterView"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- !private "Ps23CustomStringConvertible"
+- !private "Ps9Equatable"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "P12MKUtilityKit14OptionalString"
+- !private "P7RESTKit19RKJSONSubscriptType"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps8Sequence"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- !private "PSo21UIAppearanceContainer"
+- !private "PSo30UIContentSizeCategoryAdjusting"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- !private "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- !private "PSo10UIKeyInput"
+- "CSo11UIResponder"
+- !private "PSo30UIResponderStandardEditActions"
+- "CSo12UIScrollView"
+- !private "PSo11UITextInput"
+- !private "PSo17UITextInputTraits"
+- "CSo10UITextView"
+- !private "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- !private "P12MKUtilityKit20URLStringConvertible"
+- !private "Ps23_BidirectionalIndexable"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- !private "Ps9_Hashable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps26_RangeReplaceableIndexable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Metal.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreText.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/QuartzCore.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKKit.framework/Modules/MKKit.swiftmodule/arm.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKKit.framework/Headers/MKKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKKit.framework/Headers/MKKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUtilityKit.framework/Modules/MKUtilityKit.swiftmodule/arm.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CloudKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Contacts.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CloudKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Contacts.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/MessageUI.apinotesc"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUtilityKit.framework/Headers/MKUtilityKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUtilityKit.framework/Headers/MKUtilityKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUtilityKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Modules/RESTKit.swiftmodule/arm.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Headers/RESTKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Headers/RESTKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Modules/MKUIKit.swiftmodule/arm.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Headers/MKUIKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Headers/CRToastManager.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Headers/CRToastConfig.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Headers/MKUIKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Modules/Chameleon.swiftmodule/arm.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/Chameleon-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIAppearance+Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIView+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIImage+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIColor+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UILabel+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIButton+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIViewController+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UINavigationController+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/NSArray+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIColor+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/ChameleonMacros.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/ChameleonEnums.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/ChameleonConstants.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/Chameleon_.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Modules/module.modulemap"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreBluetooth.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SceneKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/GLKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SceneKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/GLKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/simd.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/WebKit.apinotesc"
+interface-hash: "966dd0814445ee06f8d4a5fb8dc37417"

@@ -1,0 +1,10 @@
+framework module MKUtilityKit {
+  umbrella header "MKUtilityKit.h"
+
+  export *
+  module * { export * }
+}
+
+module MKUtilityKit.__Swift {
+    exclude header "MKUtilityKit-Swift.h"
+}

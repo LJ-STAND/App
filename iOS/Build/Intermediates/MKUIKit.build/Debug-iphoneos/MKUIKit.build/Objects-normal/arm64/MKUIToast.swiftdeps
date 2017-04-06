@@ -1,0 +1,138 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "MKUIToast"
+provides-nominal:
+- "C7MKUIKit9MKUIToast"
+provides-member:
+- ["C7MKUIKit9MKUIToast", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- "AssignmentPrecedence"
+- "Bool"
+- !private "CRToastManager"
+- "CastingPrecedence"
+- !private "Dictionary"
+- "MKUIToast"
+- "NSTextAlignment"
+- "String"
+- "UIColor"
+- "Void"
+- !private "kCRToastBackgroundColorKey"
+- !private "kCRToastIdentifierKey"
+- !private "kCRToastTextKey"
+depends-member:
+- !private ["Ps9AnyObject", "CRToastManager"]
+- ["Ps9AnyObject", "MKUIToast"]
+- !private ["Ps9AnyObject", "dismissAllNotifications"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "kCRToastBackgroundColorKey"]
+- !private ["Ps9AnyObject", "kCRToastIdentifierKey"]
+- !private ["Ps9AnyObject", "kCRToastTextKey"]
+- !private ["Ps9AnyObject", "showNotification"]
+- ["Ps9AnyObject", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["CSo14CRToastManager", "dismissAllNotifications"]
+- !private ["CSo14CRToastManager", "showNotification"]
+- !private ["Ps7CVarArg", "dismissAllNotifications"]
+- !private ["Ps7CVarArg", "showNotification"]
+- !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps10Collection", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "dismissAllNotifications"]
+- !private ["Ps28CustomDebugStringConvertible", "showNotification"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "dismissAllNotifications"]
+- !private ["Ps23CustomStringConvertible", "showNotification"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Vs10Dictionary", "subscript"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "dismissAllNotifications"]
+- !private ["Ps9Equatable", "showNotification"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps30ExpressibleByDictionaryLiteral", "subscript"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "dismissAllNotifications"]
+- !private ["Ps8Hashable", "showNotification"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- ["C7MKUIKit9MKUIToast", "Bool"]
+- !private ["C7MKUIKit9MKUIToast", "CRToastManager"]
+- ["C7MKUIKit9MKUIToast", "MKUIToast"]
+- ["C7MKUIKit9MKUIToast", "NSTextAlignment"]
+- ["C7MKUIKit9MKUIToast", "String"]
+- ["C7MKUIKit9MKUIToast", "UIColor"]
+- ["C7MKUIKit9MKUIToast", "Void"]
+- ["C7MKUIKit9MKUIToast", "deinit"]
+- ["C7MKUIKit9MKUIToast", "dismissAllNotifications"]
+- ["C7MKUIKit9MKUIToast", "dismissNotification"]
+- ["C7MKUIKit9MKUIToast", "init"]
+- !private ["C7MKUIKit9MKUIToast", "kCRToastBackgroundColorKey"]
+- !private ["C7MKUIKit9MKUIToast", "kCRToastIdentifierKey"]
+- !private ["C7MKUIKit9MKUIToast", "kCRToastTextKey"]
+- ["C7MKUIKit9MKUIToast", "shared"]
+- ["C7MKUIKit9MKUIToast", "showNotification"]
+- !private ["CSo8NSObject", "dismissAllNotifications"]
+- !private ["CSo8NSObject", "showNotification"]
+- !private ["PSo16NSObjectProtocol", "dismissAllNotifications"]
+- !private ["PSo16NSObjectProtocol", "showNotification"]
+- !private ["Ps8Sequence", "subscript"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "dismissAllNotifications"]
+- !private ["Ps9_Hashable", "showNotification"]
+- !private ["Ps10_Indexable", "subscript"]
+- !private ["Ps14_IndexableBase", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Sb"
+- !private "CSo14CRToastManager"
+- !private "Ps7CVarArg"
+- !private "Ps10Collection"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- !private "Ps23CustomStringConvertible"
+- !private "Vs10Dictionary"
+- !private "Ps9Equatable"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps30ExpressibleByDictionaryLiteral"
+- !private "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- "C7MKUIKit9MKUIToast"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "Ps8Sequence"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps9_Hashable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreText.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.apinotesc"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/Ext/CRToastManager.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/Ext/CRToastConfig.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/MKUIKit/MKUIKit/MKUIKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Intermediates/MKUIKit.build/Debug-iphoneos/MKUIKit.build/unextended-module.modulemap"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "ed1128093656d56b0f74a55b3ee791c0"

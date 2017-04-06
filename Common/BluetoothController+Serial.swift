@@ -12,7 +12,6 @@ import MKKit
 import MKUtilityKit
 
 extension BluetoothController: BluetoothSerialDelegate {
-    
     func serialDidDiscoverPeripheral(_ peripheral: CBPeripheral, RSSI: NSNumber?) {
         for exisiting in peripherals {
             if exisiting.identifier == peripheral.identifier { return }
@@ -44,71 +43,92 @@ extension BluetoothController: BluetoothSerialDelegate {
         connect()
     }
     
+    func matches(for regex: String, in text: String) -> [String] {
+        do {
+            let regex = try NSRegularExpression(pattern: regex)
+            let nsString = text as NSString
+            let results = regex.matches(in: text, range: NSRange(location: 0, length: nsString.length))
+            return results.map { nsString.substring(with: $0.range)}
+        } catch let error {
+            print("invalid regex: \(error.localizedDescription)")
+            return []
+        }
+    }
+    
     func serialDidReceiveString(_ message: String) {
         if bluetoothDebug {
             MKULog.shared.debug("[BLUETOOTH] [CONTROLLER] String before processing: \(message)")
         }
+    
+        textRecieved += message
         
-        let processed = processString(str: message)
-        
-        switch processed.0 {
-        case .noDataType:
-            serialDelegate?.hasNewOutput("No Data Type: \(processed.1)")
+        if textRecieved.contains("-") {
+            let matched = matches(for: "(-[^-]+-)", in: textRecieved)
+            if matched.count > 0 {
+                let strToProcess = matched[0].replacingOccurrences(of: "-", with: "")
+                textRecieved = ""
             
-        case .info:
-            serialDelegate?.hasNewOutput(processed.1)
-            
-        case .compass:
-            let angle = processed.1
-            
-            guard let ang = Double(angle) else {
-                return
-            }
-            
-            compassDelegate?.hasNewHeading(ang)
-            
-        case .light:
-            let boolArr = Array(processed.1.characters)
-            
-            if boolArr.count == 12 {
-                var sensorStatus: [Int] = []
+                let processed = processString(str: strToProcess)
                 
-                for i in 0...11 {
-                    let item = boolArr[i]
-                    let intValue = Int(String(item))
+                switch processed.0 {
+                case .noDataType:
+                    serialDelegate?.hasNewOutput("No Data Type: \(processed.1)")
                     
-                    if intValue == 1 {
-                        sensorStatus.append(1)
-                        sensorStatus.append(0)
-                    } else if intValue == 2 {
-                        sensorStatus.append(0)
-                        sensorStatus.append(1)
-                    } else if intValue == 3 {
-                        sensorStatus.append(1)
-                        sensorStatus.append(1)
-                    } else {
-                        sensorStatus.append(0)
-                        sensorStatus.append(0)
+                case .info:
+                    serialDelegate?.hasNewOutput(processed.1)
+                    
+                case .compass:
+                    let angle = processed.1
+                    
+                    guard let ang = Double(angle) else {
+                        return
                     }
                     
-                    var sensorNumbers: [Int] = []
+                    compassDelegate?.hasNewHeading(ang)
                     
-                    if sensorStatus.count == 24 {
-                        for i in 0...23 {
-                            let value = sensorStatus[i]
+                case .light:
+                    let boolArr = Array(processed.1.characters)
+                    
+                    if boolArr.count == 12 {
+                        var sensorStatus: [Int] = []
+                        
+                        for i in 0...11 {
+                            let item = boolArr[i]
+                            let intValue = Int(String(item))
                             
-                            if value == 1 {
-                                sensorNumbers.append(i)
+                            if intValue == 1 {
+                                sensorStatus.append(1)
+                                sensorStatus.append(0)
+                            } else if intValue == 2 {
+                                sensorStatus.append(0)
+                                sensorStatus.append(1)
+                            } else if intValue == 3 {
+                                sensorStatus.append(1)
+                                sensorStatus.append(1)
+                            } else {
+                                sensorStatus.append(0)
+                                sensorStatus.append(0)
+                            }
+                            
+                            var sensorNumbers: [Int] = []
+                            
+                            if sensorStatus.count == 24 {
+                                for i in 0...23 {
+                                    let value = sensorStatus[i]
+                                    
+                                    if value == 1 {
+                                        sensorNumbers.append(i)
+                                    }
+                                }
+                                
+                                lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers)
                             }
                         }
-                        
-                        lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers)
                     }
+                default:
+                    MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")
                 }
             }
-            
-        default:
-            MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")
         }
     }
     

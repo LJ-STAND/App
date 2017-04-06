@@ -1,0 +1,719 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ModelViewController"
+provides-nominal:
+- "C8LJ_STAND19ModelViewController"
+provides-member:
+- ["C8LJ_STAND19ModelViewController", ""]
+provides-dynamic-lookup:
+- "sceneView"
+- "viewDidLoad"
+depends-top-level:
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- !private "Bundle"
+- "ModelViewController"
+- !private "SCNAntialiasingMode"
+- !private "SCNScene"
+- "SCNView"
+- !private "StringLiteralType"
+- !private "UIColor"
+- "UIViewController"
+- !private "URL"
+depends-member:
+- !private ["P7MKUIKit10AnchorView", "addSubview"]
+- !private ["P7MKUIKit10AnchorView", "allowsCameraControl"]
+- !private ["P7MKUIKit10AnchorView", "antialiasingMode"]
+- !private ["P7MKUIKit10AnchorView", "autoenablesDefaultLighting"]
+- !private ["P7MKUIKit10AnchorView", "backgroundColor"]
+- !private ["P7MKUIKit10AnchorView", "frame"]
+- !private ["P7MKUIKit10AnchorView", "init"]
+- !private ["P7MKUIKit10AnchorView", "preferredFramesPerSecond"]
+- !private ["P7MKUIKit10AnchorView", "scene"]
+- !private ["P7MKUIKit10AnchorView", "sizeToFit"]
+- !private ["Ps9AnyObject", "Bundle"]
+- !private ["Ps9AnyObject", "SCNAntialiasingMode"]
+- !private ["Ps9AnyObject", "SCNScene"]
+- !private ["Ps9AnyObject", "SCNView"]
+- !private ["Ps9AnyObject", "UIColor"]
+- !private ["Ps9AnyObject", "URL"]
+- !private ["Ps9AnyObject", "addSubview"]
+- !private ["Ps9AnyObject", "allowsCameraControl"]
+- !private ["Ps9AnyObject", "antialiasingMode"]
+- !private ["Ps9AnyObject", "autoenablesDefaultLighting"]
+- !private ["Ps9AnyObject", "backgroundColor"]
+- !private ["Ps9AnyObject", "flatBlack"]
+- !private ["Ps9AnyObject", "frame"]
+- !private ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "main"]
+- !private ["Ps9AnyObject", "path"]
+- !private ["Ps9AnyObject", "preferredFramesPerSecond"]
+- !private ["Ps9AnyObject", "scene"]
+- !private ["Ps9AnyObject", "sceneView"]
+- !private ["Ps9AnyObject", "sizeToFit"]
+- !private ["Ps9AnyObject", "tintNavigationController"]
+- !private ["Ps9AnyObject", "view"]
+- !private ["Ps9AnyObject", "viewDidLoad"]
+- ["Ps9AnyObject", ""]
+- !private ["CSo6Bundle", "main"]
+- !private ["CSo6Bundle", "path"]
+- !private ["PSo15CALayerDelegate", "addSubview"]
+- !private ["PSo15CALayerDelegate", "allowsCameraControl"]
+- !private ["PSo15CALayerDelegate", "antialiasingMode"]
+- !private ["PSo15CALayerDelegate", "autoenablesDefaultLighting"]
+- !private ["PSo15CALayerDelegate", "backgroundColor"]
+- !private ["PSo15CALayerDelegate", "frame"]
+- !private ["PSo15CALayerDelegate", "init"]
+- !private ["PSo15CALayerDelegate", "preferredFramesPerSecond"]
+- !private ["PSo15CALayerDelegate", "scene"]
+- !private ["PSo15CALayerDelegate", "sizeToFit"]
+- !private ["PSo13CKRecordValue", "init"]
+- !private ["PSo15CNKeyDescriptor", "init"]
+- !private ["Ps7CVarArg", "Bundle"]
+- !private ["Ps7CVarArg", "SCNAntialiasingMode"]
+- !private ["Ps7CVarArg", "SCNScene"]
+- !private ["Ps7CVarArg", "SCNView"]
+- !private ["Ps7CVarArg", "UIColor"]
+- !private ["Ps7CVarArg", "URL"]
+- !private ["Ps7CVarArg", "addSubview"]
+- !private ["Ps7CVarArg", "allowsCameraControl"]
+- !private ["Ps7CVarArg", "antialiasingMode"]
+- !private ["Ps7CVarArg", "autoenablesDefaultLighting"]
+- !private ["Ps7CVarArg", "backgroundColor"]
+- !private ["Ps7CVarArg", "flatBlack"]
+- !private ["Ps7CVarArg", "frame"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "main"]
+- !private ["Ps7CVarArg", "path"]
+- !private ["Ps7CVarArg", "preferredFramesPerSecond"]
+- !private ["Ps7CVarArg", "scene"]
+- !private ["Ps7CVarArg", "sceneView"]
+- !private ["Ps7CVarArg", "sizeToFit"]
+- !private ["Ps7CVarArg", "tintNavigationController"]
+- !private ["Ps7CVarArg", "view"]
+- !private ["Ps7CVarArg", "viewDidLoad"]
+- ["Ps7CVarArg", ""]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "Bundle"]
+- !private ["Ps28CustomDebugStringConvertible", "SCNAntialiasingMode"]
+- !private ["Ps28CustomDebugStringConvertible", "SCNScene"]
+- !private ["Ps28CustomDebugStringConvertible", "SCNView"]
+- !private ["Ps28CustomDebugStringConvertible", "UIColor"]
+- !private ["Ps28CustomDebugStringConvertible", "URL"]
+- !private ["Ps28CustomDebugStringConvertible", "addSubview"]
+- !private ["Ps28CustomDebugStringConvertible", "allowsCameraControl"]
+- !private ["Ps28CustomDebugStringConvertible", "antialiasingMode"]
+- !private ["Ps28CustomDebugStringConvertible", "autoenablesDefaultLighting"]
+- !private ["Ps28CustomDebugStringConvertible", "backgroundColor"]
+- !private ["Ps28CustomDebugStringConvertible", "flatBlack"]
+- !private ["Ps28CustomDebugStringConvertible", "frame"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "main"]
+- !private ["Ps28CustomDebugStringConvertible", "path"]
+- !private ["Ps28CustomDebugStringConvertible", "preferredFramesPerSecond"]
+- !private ["Ps28CustomDebugStringConvertible", "scene"]
+- !private ["Ps28CustomDebugStringConvertible", "sceneView"]
+- !private ["Ps28CustomDebugStringConvertible", "sizeToFit"]
+- !private ["Ps28CustomDebugStringConvertible", "tintNavigationController"]
+- !private ["Ps28CustomDebugStringConvertible", "view"]
+- !private ["Ps28CustomDebugStringConvertible", "viewDidLoad"]
+- ["Ps28CustomDebugStringConvertible", ""]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps23CustomStringConvertible", "Bundle"]
+- !private ["Ps23CustomStringConvertible", "SCNAntialiasingMode"]
+- !private ["Ps23CustomStringConvertible", "SCNScene"]
+- !private ["Ps23CustomStringConvertible", "SCNView"]
+- !private ["Ps23CustomStringConvertible", "UIColor"]
+- !private ["Ps23CustomStringConvertible", "URL"]
+- !private ["Ps23CustomStringConvertible", "addSubview"]
+- !private ["Ps23CustomStringConvertible", "allowsCameraControl"]
+- !private ["Ps23CustomStringConvertible", "antialiasingMode"]
+- !private ["Ps23CustomStringConvertible", "autoenablesDefaultLighting"]
+- !private ["Ps23CustomStringConvertible", "backgroundColor"]
+- !private ["Ps23CustomStringConvertible", "flatBlack"]
+- !private ["Ps23CustomStringConvertible", "frame"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "main"]
+- !private ["Ps23CustomStringConvertible", "path"]
+- !private ["Ps23CustomStringConvertible", "preferredFramesPerSecond"]
+- !private ["Ps23CustomStringConvertible", "scene"]
+- !private ["Ps23CustomStringConvertible", "sceneView"]
+- !private ["Ps23CustomStringConvertible", "sizeToFit"]
+- !private ["Ps23CustomStringConvertible", "tintNavigationController"]
+- !private ["Ps23CustomStringConvertible", "view"]
+- !private ["Ps23CustomStringConvertible", "viewDidLoad"]
+- ["Ps23CustomStringConvertible", ""]
+- !private ["Ps9Equatable", "Bundle"]
+- !private ["Ps9Equatable", "SCNAntialiasingMode"]
+- !private ["Ps9Equatable", "SCNScene"]
+- !private ["Ps9Equatable", "SCNView"]
+- !private ["Ps9Equatable", "UIColor"]
+- !private ["Ps9Equatable", "URL"]
+- !private ["Ps9Equatable", "addSubview"]
+- !private ["Ps9Equatable", "allowsCameraControl"]
+- !private ["Ps9Equatable", "antialiasingMode"]
+- !private ["Ps9Equatable", "autoenablesDefaultLighting"]
+- !private ["Ps9Equatable", "backgroundColor"]
+- !private ["Ps9Equatable", "flatBlack"]
+- !private ["Ps9Equatable", "frame"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "main"]
+- !private ["Ps9Equatable", "multisampling2X"]
+- !private ["Ps9Equatable", "path"]
+- !private ["Ps9Equatable", "preferredFramesPerSecond"]
+- !private ["Ps9Equatable", "scene"]
+- !private ["Ps9Equatable", "sceneView"]
+- !private ["Ps9Equatable", "sizeToFit"]
+- !private ["Ps9Equatable", "tintNavigationController"]
+- !private ["Ps9Equatable", "view"]
+- !private ["Ps9Equatable", "viewDidLoad"]
+- ["Ps9Equatable", ""]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps8Hashable", "Bundle"]
+- !private ["Ps8Hashable", "SCNAntialiasingMode"]
+- !private ["Ps8Hashable", "SCNScene"]
+- !private ["Ps8Hashable", "SCNView"]
+- !private ["Ps8Hashable", "UIColor"]
+- !private ["Ps8Hashable", "URL"]
+- !private ["Ps8Hashable", "addSubview"]
+- !private ["Ps8Hashable", "allowsCameraControl"]
+- !private ["Ps8Hashable", "antialiasingMode"]
+- !private ["Ps8Hashable", "autoenablesDefaultLighting"]
+- !private ["Ps8Hashable", "backgroundColor"]
+- !private ["Ps8Hashable", "flatBlack"]
+- !private ["Ps8Hashable", "frame"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "main"]
+- !private ["Ps8Hashable", "multisampling2X"]
+- !private ["Ps8Hashable", "path"]
+- !private ["Ps8Hashable", "preferredFramesPerSecond"]
+- !private ["Ps8Hashable", "scene"]
+- !private ["Ps8Hashable", "sceneView"]
+- !private ["Ps8Hashable", "sizeToFit"]
+- !private ["Ps8Hashable", "tintNavigationController"]
+- !private ["Ps8Hashable", "view"]
+- !private ["Ps8Hashable", "viewDidLoad"]
+- ["Ps8Hashable", ""]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["C8LJ_STAND19ModelViewController", "Bundle"]
+- !private ["C8LJ_STAND19ModelViewController", "SCNAntialiasingMode"]
+- !private ["C8LJ_STAND19ModelViewController", "SCNScene"]
+- ["C8LJ_STAND19ModelViewController", "SCNView"]
+- !private ["C8LJ_STAND19ModelViewController", "UIColor"]
+- !private ["C8LJ_STAND19ModelViewController", "URL"]
+- ["C8LJ_STAND19ModelViewController", "deinit"]
+- ["C8LJ_STAND19ModelViewController", "init"]
+- ["C8LJ_STAND19ModelViewController", "sceneView"]
+- !private ["C8LJ_STAND19ModelViewController", "tintNavigationController"]
+- !private ["C8LJ_STAND19ModelViewController", "view"]
+- ["C8LJ_STAND19ModelViewController", "viewDidLoad"]
+- !private ["PSo8NSCoding", "Bundle"]
+- !private ["PSo8NSCoding", "SCNAntialiasingMode"]
+- !private ["PSo8NSCoding", "SCNScene"]
+- !private ["PSo8NSCoding", "SCNView"]
+- !private ["PSo8NSCoding", "UIColor"]
+- !private ["PSo8NSCoding", "URL"]
+- !private ["PSo8NSCoding", "addSubview"]
+- !private ["PSo8NSCoding", "allowsCameraControl"]
+- !private ["PSo8NSCoding", "antialiasingMode"]
+- !private ["PSo8NSCoding", "autoenablesDefaultLighting"]
+- !private ["PSo8NSCoding", "backgroundColor"]
+- !private ["PSo8NSCoding", "flatBlack"]
+- !private ["PSo8NSCoding", "frame"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "preferredFramesPerSecond"]
+- !private ["PSo8NSCoding", "scene"]
+- !private ["PSo8NSCoding", "sceneView"]
+- !private ["PSo8NSCoding", "sizeToFit"]
+- !private ["PSo8NSCoding", "tintNavigationController"]
+- !private ["PSo8NSCoding", "view"]
+- !private ["PSo8NSCoding", "viewDidLoad"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "flatBlack"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "Bundle"]
+- !private ["PSo26NSExtensionRequestHandling", "SCNAntialiasingMode"]
+- !private ["PSo26NSExtensionRequestHandling", "SCNScene"]
+- !private ["PSo26NSExtensionRequestHandling", "SCNView"]
+- !private ["PSo26NSExtensionRequestHandling", "UIColor"]
+- !private ["PSo26NSExtensionRequestHandling", "URL"]
+- !private ["PSo26NSExtensionRequestHandling", "init"]
+- !private ["PSo26NSExtensionRequestHandling", "sceneView"]
+- !private ["PSo26NSExtensionRequestHandling", "tintNavigationController"]
+- !private ["PSo26NSExtensionRequestHandling", "view"]
+- !private ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
+- ["PSo26NSExtensionRequestHandling", ""]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["CSo8NSObject", "Bundle"]
+- !private ["CSo8NSObject", "SCNAntialiasingMode"]
+- !private ["CSo8NSObject", "SCNScene"]
+- ["CSo8NSObject", "SCNView"]
+- !private ["CSo8NSObject", "UIColor"]
+- !private ["CSo8NSObject", "URL"]
+- !private ["CSo8NSObject", "addSubview"]
+- !private ["CSo8NSObject", "allowsCameraControl"]
+- !private ["CSo8NSObject", "antialiasingMode"]
+- !private ["CSo8NSObject", "autoenablesDefaultLighting"]
+- !private ["CSo8NSObject", "backgroundColor"]
+- !private ["CSo8NSObject", "flatBlack"]
+- !private ["CSo8NSObject", "frame"]
+- ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "main"]
+- !private ["CSo8NSObject", "path"]
+- !private ["CSo8NSObject", "preferredFramesPerSecond"]
+- !private ["CSo8NSObject", "scene"]
+- ["CSo8NSObject", "sceneView"]
+- !private ["CSo8NSObject", "sizeToFit"]
+- !private ["CSo8NSObject", "tintNavigationController"]
+- !private ["CSo8NSObject", "view"]
+- ["CSo8NSObject", "viewDidLoad"]
+- !private ["PSo16NSObjectProtocol", "Bundle"]
+- !private ["PSo16NSObjectProtocol", "SCNAntialiasingMode"]
+- !private ["PSo16NSObjectProtocol", "SCNScene"]
+- !private ["PSo16NSObjectProtocol", "SCNView"]
+- !private ["PSo16NSObjectProtocol", "UIColor"]
+- !private ["PSo16NSObjectProtocol", "URL"]
+- !private ["PSo16NSObjectProtocol", "addSubview"]
+- !private ["PSo16NSObjectProtocol", "allowsCameraControl"]
+- !private ["PSo16NSObjectProtocol", "antialiasingMode"]
+- !private ["PSo16NSObjectProtocol", "autoenablesDefaultLighting"]
+- !private ["PSo16NSObjectProtocol", "backgroundColor"]
+- !private ["PSo16NSObjectProtocol", "flatBlack"]
+- !private ["PSo16NSObjectProtocol", "frame"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "main"]
+- !private ["PSo16NSObjectProtocol", "path"]
+- !private ["PSo16NSObjectProtocol", "preferredFramesPerSecond"]
+- !private ["PSo16NSObjectProtocol", "scene"]
+- !private ["PSo16NSObjectProtocol", "sceneView"]
+- !private ["PSo16NSObjectProtocol", "sizeToFit"]
+- !private ["PSo16NSObjectProtocol", "tintNavigationController"]
+- !private ["PSo16NSObjectProtocol", "view"]
+- !private ["PSo16NSObjectProtocol", "viewDidLoad"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["PSo14NSSecureCoding", "flatBlack"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "init"]
+- !private ["P12MKUtilityKit14OptionalString", "init"]
+- !private ["P7RESTKit19RKJSONSubscriptType", "init"]
+- !private ["Ps16RawRepresentable", "multisampling2X"]
+- !private ["P10Foundation20ReferenceConvertible", "init"]
+- !private ["OSC19SCNAntialiasingMode", "multisampling2X"]
+- !private ["CSo8SCNScene", "init"]
+- !private ["PSo16SCNSceneRenderer", "allowsCameraControl"]
+- !private ["PSo16SCNSceneRenderer", "antialiasingMode"]
+- !private ["PSo16SCNSceneRenderer", "autoenablesDefaultLighting"]
+- !private ["PSo16SCNSceneRenderer", "backgroundColor"]
+- !private ["PSo16SCNSceneRenderer", "init"]
+- !private ["PSo16SCNSceneRenderer", "preferredFramesPerSecond"]
+- !private ["PSo16SCNSceneRenderer", "scene"]
+- !private ["PSo16SCNSceneRenderer", "sizeToFit"]
+- !private ["PSo19SCNTechniqueSupport", "allowsCameraControl"]
+- !private ["PSo19SCNTechniqueSupport", "antialiasingMode"]
+- !private ["PSo19SCNTechniqueSupport", "autoenablesDefaultLighting"]
+- !private ["PSo19SCNTechniqueSupport", "backgroundColor"]
+- !private ["PSo19SCNTechniqueSupport", "init"]
+- !private ["PSo19SCNTechniqueSupport", "preferredFramesPerSecond"]
+- !private ["PSo19SCNTechniqueSupport", "scene"]
+- !private ["PSo19SCNTechniqueSupport", "sizeToFit"]
+- !private ["CSo7SCNView", "allowsCameraControl"]
+- !private ["CSo7SCNView", "antialiasingMode"]
+- !private ["CSo7SCNView", "autoenablesDefaultLighting"]
+- !private ["CSo7SCNView", "backgroundColor"]
+- !private ["CSo7SCNView", "init"]
+- !private ["CSo7SCNView", "preferredFramesPerSecond"]
+- !private ["CSo7SCNView", "scene"]
+- !private ["CSo7SCNView", "sizeToFit"]
+- !private ["SS", "init"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "addSubview"]
+- !private ["PSo29UIAccessibilityIdentification", "allowsCameraControl"]
+- !private ["PSo29UIAccessibilityIdentification", "antialiasingMode"]
+- !private ["PSo29UIAccessibilityIdentification", "autoenablesDefaultLighting"]
+- !private ["PSo29UIAccessibilityIdentification", "backgroundColor"]
+- !private ["PSo29UIAccessibilityIdentification", "frame"]
+- !private ["PSo29UIAccessibilityIdentification", "init"]
+- !private ["PSo29UIAccessibilityIdentification", "preferredFramesPerSecond"]
+- !private ["PSo29UIAccessibilityIdentification", "scene"]
+- !private ["PSo29UIAccessibilityIdentification", "sizeToFit"]
+- !private ["PSo12UIAppearance", "addSubview"]
+- !private ["PSo12UIAppearance", "allowsCameraControl"]
+- !private ["PSo12UIAppearance", "antialiasingMode"]
+- !private ["PSo12UIAppearance", "autoenablesDefaultLighting"]
+- !private ["PSo12UIAppearance", "backgroundColor"]
+- !private ["PSo12UIAppearance", "frame"]
+- !private ["PSo12UIAppearance", "init"]
+- !private ["PSo12UIAppearance", "preferredFramesPerSecond"]
+- !private ["PSo12UIAppearance", "scene"]
+- !private ["PSo12UIAppearance", "sizeToFit"]
+- !private ["PSo21UIAppearanceContainer", "Bundle"]
+- !private ["PSo21UIAppearanceContainer", "SCNAntialiasingMode"]
+- !private ["PSo21UIAppearanceContainer", "SCNScene"]
+- !private ["PSo21UIAppearanceContainer", "SCNView"]
+- !private ["PSo21UIAppearanceContainer", "UIColor"]
+- !private ["PSo21UIAppearanceContainer", "URL"]
+- !private ["PSo21UIAppearanceContainer", "addSubview"]
+- !private ["PSo21UIAppearanceContainer", "allowsCameraControl"]
+- !private ["PSo21UIAppearanceContainer", "antialiasingMode"]
+- !private ["PSo21UIAppearanceContainer", "autoenablesDefaultLighting"]
+- !private ["PSo21UIAppearanceContainer", "backgroundColor"]
+- !private ["PSo21UIAppearanceContainer", "frame"]
+- !private ["PSo21UIAppearanceContainer", "init"]
+- !private ["PSo21UIAppearanceContainer", "preferredFramesPerSecond"]
+- !private ["PSo21UIAppearanceContainer", "scene"]
+- !private ["PSo21UIAppearanceContainer", "sceneView"]
+- !private ["PSo21UIAppearanceContainer", "sizeToFit"]
+- !private ["PSo21UIAppearanceContainer", "tintNavigationController"]
+- !private ["PSo21UIAppearanceContainer", "view"]
+- !private ["PSo21UIAppearanceContainer", "viewDidLoad"]
+- ["PSo21UIAppearanceContainer", ""]
+- !private ["CSo7UIColor", "flatBlack"]
+- !private ["PSo18UIContentContainer", "Bundle"]
+- !private ["PSo18UIContentContainer", "SCNAntialiasingMode"]
+- !private ["PSo18UIContentContainer", "SCNScene"]
+- !private ["PSo18UIContentContainer", "SCNView"]
+- !private ["PSo18UIContentContainer", "UIColor"]
+- !private ["PSo18UIContentContainer", "URL"]
+- !private ["PSo18UIContentContainer", "init"]
+- !private ["PSo18UIContentContainer", "sceneView"]
+- !private ["PSo18UIContentContainer", "tintNavigationController"]
+- !private ["PSo18UIContentContainer", "view"]
+- !private ["PSo18UIContentContainer", "viewDidLoad"]
+- ["PSo18UIContentContainer", ""]
+- !private ["PSo17UICoordinateSpace", "addSubview"]
+- !private ["PSo17UICoordinateSpace", "allowsCameraControl"]
+- !private ["PSo17UICoordinateSpace", "antialiasingMode"]
+- !private ["PSo17UICoordinateSpace", "autoenablesDefaultLighting"]
+- !private ["PSo17UICoordinateSpace", "backgroundColor"]
+- !private ["PSo17UICoordinateSpace", "frame"]
+- !private ["PSo17UICoordinateSpace", "init"]
+- !private ["PSo17UICoordinateSpace", "preferredFramesPerSecond"]
+- !private ["PSo17UICoordinateSpace", "scene"]
+- !private ["PSo17UICoordinateSpace", "sizeToFit"]
+- !private ["PSo13UIDynamicItem", "addSubview"]
+- !private ["PSo13UIDynamicItem", "allowsCameraControl"]
+- !private ["PSo13UIDynamicItem", "antialiasingMode"]
+- !private ["PSo13UIDynamicItem", "autoenablesDefaultLighting"]
+- !private ["PSo13UIDynamicItem", "backgroundColor"]
+- !private ["PSo13UIDynamicItem", "frame"]
+- !private ["PSo13UIDynamicItem", "init"]
+- !private ["PSo13UIDynamicItem", "preferredFramesPerSecond"]
+- !private ["PSo13UIDynamicItem", "scene"]
+- !private ["PSo13UIDynamicItem", "sizeToFit"]
+- !private ["PSo18UIFocusEnvironment", "Bundle"]
+- !private ["PSo18UIFocusEnvironment", "SCNAntialiasingMode"]
+- !private ["PSo18UIFocusEnvironment", "SCNScene"]
+- !private ["PSo18UIFocusEnvironment", "SCNView"]
+- !private ["PSo18UIFocusEnvironment", "UIColor"]
+- !private ["PSo18UIFocusEnvironment", "URL"]
+- !private ["PSo18UIFocusEnvironment", "addSubview"]
+- !private ["PSo18UIFocusEnvironment", "allowsCameraControl"]
+- !private ["PSo18UIFocusEnvironment", "antialiasingMode"]
+- !private ["PSo18UIFocusEnvironment", "autoenablesDefaultLighting"]
+- !private ["PSo18UIFocusEnvironment", "backgroundColor"]
+- !private ["PSo18UIFocusEnvironment", "frame"]
+- !private ["PSo18UIFocusEnvironment", "init"]
+- !private ["PSo18UIFocusEnvironment", "preferredFramesPerSecond"]
+- !private ["PSo18UIFocusEnvironment", "scene"]
+- !private ["PSo18UIFocusEnvironment", "sceneView"]
+- !private ["PSo18UIFocusEnvironment", "sizeToFit"]
+- !private ["PSo18UIFocusEnvironment", "tintNavigationController"]
+- !private ["PSo18UIFocusEnvironment", "view"]
+- !private ["PSo18UIFocusEnvironment", "viewDidLoad"]
+- ["PSo18UIFocusEnvironment", ""]
+- !private ["PSo11UIFocusItem", "addSubview"]
+- !private ["PSo11UIFocusItem", "allowsCameraControl"]
+- !private ["PSo11UIFocusItem", "antialiasingMode"]
+- !private ["PSo11UIFocusItem", "autoenablesDefaultLighting"]
+- !private ["PSo11UIFocusItem", "backgroundColor"]
+- !private ["PSo11UIFocusItem", "frame"]
+- !private ["PSo11UIFocusItem", "init"]
+- !private ["PSo11UIFocusItem", "preferredFramesPerSecond"]
+- !private ["PSo11UIFocusItem", "scene"]
+- !private ["PSo11UIFocusItem", "sizeToFit"]
+- !private ["CSo11UIResponder", "Bundle"]
+- !private ["CSo11UIResponder", "SCNAntialiasingMode"]
+- !private ["CSo11UIResponder", "SCNScene"]
+- ["CSo11UIResponder", "SCNView"]
+- !private ["CSo11UIResponder", "UIColor"]
+- !private ["CSo11UIResponder", "URL"]
+- !private ["CSo11UIResponder", "addSubview"]
+- !private ["CSo11UIResponder", "allowsCameraControl"]
+- !private ["CSo11UIResponder", "antialiasingMode"]
+- !private ["CSo11UIResponder", "autoenablesDefaultLighting"]
+- !private ["CSo11UIResponder", "backgroundColor"]
+- !private ["CSo11UIResponder", "frame"]
+- ["CSo11UIResponder", "init"]
+- !private ["CSo11UIResponder", "preferredFramesPerSecond"]
+- !private ["CSo11UIResponder", "scene"]
+- ["CSo11UIResponder", "sceneView"]
+- !private ["CSo11UIResponder", "sizeToFit"]
+- !private ["CSo11UIResponder", "tintNavigationController"]
+- !private ["CSo11UIResponder", "view"]
+- ["CSo11UIResponder", "viewDidLoad"]
+- !private ["PSo30UIResponderStandardEditActions", "Bundle"]
+- !private ["PSo30UIResponderStandardEditActions", "SCNAntialiasingMode"]
+- !private ["PSo30UIResponderStandardEditActions", "SCNScene"]
+- !private ["PSo30UIResponderStandardEditActions", "SCNView"]
+- !private ["PSo30UIResponderStandardEditActions", "UIColor"]
+- !private ["PSo30UIResponderStandardEditActions", "URL"]
+- !private ["PSo30UIResponderStandardEditActions", "addSubview"]
+- !private ["PSo30UIResponderStandardEditActions", "allowsCameraControl"]
+- !private ["PSo30UIResponderStandardEditActions", "antialiasingMode"]
+- !private ["PSo30UIResponderStandardEditActions", "autoenablesDefaultLighting"]
+- !private ["PSo30UIResponderStandardEditActions", "backgroundColor"]
+- !private ["PSo30UIResponderStandardEditActions", "frame"]
+- !private ["PSo30UIResponderStandardEditActions", "init"]
+- !private ["PSo30UIResponderStandardEditActions", "preferredFramesPerSecond"]
+- !private ["PSo30UIResponderStandardEditActions", "scene"]
+- !private ["PSo30UIResponderStandardEditActions", "sceneView"]
+- !private ["PSo30UIResponderStandardEditActions", "sizeToFit"]
+- !private ["PSo30UIResponderStandardEditActions", "tintNavigationController"]
+- !private ["PSo30UIResponderStandardEditActions", "view"]
+- !private ["PSo30UIResponderStandardEditActions", "viewDidLoad"]
+- ["PSo30UIResponderStandardEditActions", ""]
+- !private ["PSo16UIStateRestoring", "Bundle"]
+- !private ["PSo16UIStateRestoring", "SCNAntialiasingMode"]
+- !private ["PSo16UIStateRestoring", "SCNScene"]
+- !private ["PSo16UIStateRestoring", "SCNView"]
+- !private ["PSo16UIStateRestoring", "UIColor"]
+- !private ["PSo16UIStateRestoring", "URL"]
+- !private ["PSo16UIStateRestoring", "init"]
+- !private ["PSo16UIStateRestoring", "sceneView"]
+- !private ["PSo16UIStateRestoring", "tintNavigationController"]
+- !private ["PSo16UIStateRestoring", "view"]
+- !private ["PSo16UIStateRestoring", "viewDidLoad"]
+- ["PSo16UIStateRestoring", ""]
+- !private ["PSo18UITraitEnvironment", "Bundle"]
+- !private ["PSo18UITraitEnvironment", "SCNAntialiasingMode"]
+- !private ["PSo18UITraitEnvironment", "SCNScene"]
+- !private ["PSo18UITraitEnvironment", "SCNView"]
+- !private ["PSo18UITraitEnvironment", "UIColor"]
+- !private ["PSo18UITraitEnvironment", "URL"]
+- !private ["PSo18UITraitEnvironment", "addSubview"]
+- !private ["PSo18UITraitEnvironment", "allowsCameraControl"]
+- !private ["PSo18UITraitEnvironment", "antialiasingMode"]
+- !private ["PSo18UITraitEnvironment", "autoenablesDefaultLighting"]
+- !private ["PSo18UITraitEnvironment", "backgroundColor"]
+- !private ["PSo18UITraitEnvironment", "frame"]
+- !private ["PSo18UITraitEnvironment", "init"]
+- !private ["PSo18UITraitEnvironment", "preferredFramesPerSecond"]
+- !private ["PSo18UITraitEnvironment", "scene"]
+- !private ["PSo18UITraitEnvironment", "sceneView"]
+- !private ["PSo18UITraitEnvironment", "sizeToFit"]
+- !private ["PSo18UITraitEnvironment", "tintNavigationController"]
+- !private ["PSo18UITraitEnvironment", "view"]
+- !private ["PSo18UITraitEnvironment", "viewDidLoad"]
+- ["PSo18UITraitEnvironment", ""]
+- !private ["CSo6UIView", "addSubview"]
+- !private ["CSo6UIView", "allowsCameraControl"]
+- !private ["CSo6UIView", "antialiasingMode"]
+- !private ["CSo6UIView", "autoenablesDefaultLighting"]
+- !private ["CSo6UIView", "backgroundColor"]
+- !private ["CSo6UIView", "frame"]
+- !private ["CSo6UIView", "init"]
+- !private ["CSo6UIView", "preferredFramesPerSecond"]
+- !private ["CSo6UIView", "scene"]
+- !private ["CSo6UIView", "sizeToFit"]
+- !private ["CSo16UIViewController", "Bundle"]
+- !private ["CSo16UIViewController", "SCNAntialiasingMode"]
+- !private ["CSo16UIViewController", "SCNScene"]
+- ["CSo16UIViewController", "SCNView"]
+- !private ["CSo16UIViewController", "UIColor"]
+- !private ["CSo16UIViewController", "URL"]
+- ["CSo16UIViewController", "init"]
+- ["CSo16UIViewController", "sceneView"]
+- !private ["CSo16UIViewController", "tintNavigationController"]
+- !private ["CSo16UIViewController", "view"]
+- ["CSo16UIViewController", "viewDidLoad"]
+- ["CSo16UIViewController", ""]
+- !private ["V10Foundation3URL", "init"]
+- !private ["P12MKUtilityKit20URLStringConvertible", "init"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "addSubview"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "allowsCameraControl"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "antialiasingMode"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "autoenablesDefaultLighting"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "backgroundColor"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "frame"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "init"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "preferredFramesPerSecond"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "scene"]
+- !private ["Ps37_DefaultCustomPlaygroundQuickLookable", "sizeToFit"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps26_ExpressibleByColorLiteral", "flatBlack"]
+- !private ["Ps34_ExpressibleByFileReferenceLiteral", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps9_Hashable", "Bundle"]
+- !private ["Ps9_Hashable", "SCNAntialiasingMode"]
+- !private ["Ps9_Hashable", "SCNScene"]
+- !private ["Ps9_Hashable", "SCNView"]
+- !private ["Ps9_Hashable", "UIColor"]
+- !private ["Ps9_Hashable", "URL"]
+- !private ["Ps9_Hashable", "addSubview"]
+- !private ["Ps9_Hashable", "allowsCameraControl"]
+- !private ["Ps9_Hashable", "antialiasingMode"]
+- !private ["Ps9_Hashable", "autoenablesDefaultLighting"]
+- !private ["Ps9_Hashable", "backgroundColor"]
+- !private ["Ps9_Hashable", "flatBlack"]
+- !private ["Ps9_Hashable", "frame"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "main"]
+- !private ["Ps9_Hashable", "multisampling2X"]
+- !private ["Ps9_Hashable", "path"]
+- !private ["Ps9_Hashable", "preferredFramesPerSecond"]
+- !private ["Ps9_Hashable", "scene"]
+- !private ["Ps9_Hashable", "sceneView"]
+- !private ["Ps9_Hashable", "sizeToFit"]
+- !private ["Ps9_Hashable", "tintNavigationController"]
+- !private ["Ps9_Hashable", "view"]
+- !private ["Ps9_Hashable", "viewDidLoad"]
+- ["Ps9_Hashable", ""]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+depends-nominal:
+- !private "P7MKUIKit10AnchorView"
+- "Ps9AnyObject"
+- !private "CSo6Bundle"
+- !private "PSo15CALayerDelegate"
+- !private "PSo13CKRecordValue"
+- !private "PSo15CNKeyDescriptor"
+- "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- "Ps23CustomStringConvertible"
+- "Ps9Equatable"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- "Ps8Hashable"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- "C8LJ_STAND19ModelViewController"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "PSo26NSExtensionRequestHandling"
+- !private "PSo16NSMutableCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "P12MKUtilityKit14OptionalString"
+- !private "P7RESTKit19RKJSONSubscriptType"
+- !private "Ps16RawRepresentable"
+- !private "P10Foundation20ReferenceConvertible"
+- !private "OSC19SCNAntialiasingMode"
+- !private "CSo8SCNScene"
+- !private "PSo16SCNSceneRenderer"
+- !private "PSo19SCNTechniqueSupport"
+- !private "CSo7SCNView"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "PSo29UIAccessibilityIdentification"
+- !private "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- !private "CSo7UIColor"
+- "PSo18UIContentContainer"
+- !private "PSo17UICoordinateSpace"
+- !private "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- !private "PSo11UIFocusItem"
+- "CSo11UIResponder"
+- "PSo30UIResponderStandardEditActions"
+- "PSo16UIStateRestoring"
+- "PSo18UITraitEnvironment"
+- !private "CSo6UIView"
+- "CSo16UIViewController"
+- !private "V10Foundation3URL"
+- !private "P12MKUtilityKit20URLStringConvertible"
+- !private "Ps37_DefaultCustomPlaygroundQuickLookable"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps26_ExpressibleByColorLiteral"
+- !private "Ps34_ExpressibleByFileReferenceLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- "Ps9_Hashable"
+- !private "Ps21_ObjectiveCBridgeable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Swift.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Darwin.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Dispatch.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/ObjectiveC.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreGraphics.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Foundation.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Metal.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreText.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/UIKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/QuartzCore.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKKit.framework/Modules/MKKit.swiftmodule/arm.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKKit.framework/Headers/MKKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKKit.framework/Headers/MKKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUtilityKit.framework/Modules/MKUtilityKit.swiftmodule/arm.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CloudKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Contacts.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CloudKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/Contacts.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/MessageUI.apinotesc"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUtilityKit.framework/Headers/MKUtilityKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUtilityKit.framework/Headers/MKUtilityKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUtilityKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Modules/RESTKit.swiftmodule/arm.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Headers/RESTKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Headers/RESTKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/RESTKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Modules/MKUIKit.swiftmodule/arm.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Headers/MKUIKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Headers/CRToastManager.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Headers/CRToastConfig.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Headers/MKUIKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/MKUIKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Modules/Chameleon.swiftmodule/arm.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/Chameleon-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIAppearance+Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIView+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIImage+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIColor+ChameleonPrivate.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UILabel+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIButton+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIViewController+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UINavigationController+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/NSArray+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/UIColor+Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/ChameleonMacros.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/ChameleonEnums.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/ChameleonConstants.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/Chameleon_.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Headers/Chameleon.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Build/Products/Debug-iphoneos/Chameleon.framework/Modules/module.modulemap"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreBluetooth.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SceneKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/GLKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/SceneKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/GLKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/simd.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/WebKit.apinotesc"
+interface-hash: "c02c04c6925ce5607070d367109f68f5"

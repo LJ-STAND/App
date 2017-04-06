@@ -1,0 +1,662 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "BluetoothMessageDelegate"
+- "BluetoothControllerSerialDelegate"
+- "BluetoothControllerTSOPDelegate"
+- "BluetoothControllerCompassDelegate"
+- "BluetoothControllerLightSensorDelegate"
+- "BluetoothController"
+provides-nominal:
+- "P8LJ_STAND24BluetoothMessageDelegate"
+- "P8LJ_STAND33BluetoothControllerSerialDelegate"
+- "P8LJ_STAND31BluetoothControllerTSOPDelegate"
+- "P8LJ_STAND34BluetoothControllerCompassDelegate"
+- "P8LJ_STAND38BluetoothControllerLightSensorDelegate"
+- "C8LJ_STAND19BluetoothController"
+provides-member:
+- ["P8LJ_STAND24BluetoothMessageDelegate", ""]
+- ["P8LJ_STAND33BluetoothControllerSerialDelegate", ""]
+- ["P8LJ_STAND31BluetoothControllerTSOPDelegate", ""]
+- ["P8LJ_STAND34BluetoothControllerCompassDelegate", ""]
+- ["P8LJ_STAND38BluetoothControllerLightSensorDelegate", ""]
+- ["C8LJ_STAND19BluetoothController", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!"
+- !private "&&"
+- !private "..."
+- !private "<"
+- !private "=="
+- !private ">"
+- !private "??"
+- !private "Array"
+- "AssignmentPrecedence"
+- "BluetoothController"
+- "BluetoothControllerCompassDelegate"
+- "BluetoothControllerLightSensorDelegate"
+- "BluetoothControllerSerialDelegate"
+- "BluetoothControllerTSOPDelegate"
+- "BluetoothMessageDelegate"
+- !private "BluetoothSerial"
+- "BluetoothSerialDelegate"
+- "Bool"
+- "BooleanLiteralType"
+- "CBPeripheral"
+- !private "CharacterSet"
+- "Double"
+- !private "ExtendedGraphemeClusterType"
+- "Float"
+- "FloatLiteralType"
+- "Int"
+- "IntegerLiteralType"
+- !private "MKUAsync"
+- !private "MKUDefaults"
+- !private "MKULog"
+- "NSError"
+- "NSNumber"
+- "String"
+- !private "StringLiteralType"
+- !private "UnicodeScalarType"
+- !private "serial"
+- !private "sleep"
+- !private "||"
+depends-member:
+- !private ["Ps9AnyObject", "Array"]
+- ["Ps9AnyObject", "BluetoothController"]
+- !private ["Ps9AnyObject", "BluetoothSerial"]
+- !private ["Ps9AnyObject", "CharacterSet"]
+- !private ["Ps9AnyObject", "Double"]
+- !private ["Ps9AnyObject", "Int"]
+- !private ["Ps9AnyObject", "MKUAsync"]
+- !private ["Ps9AnyObject", "MKUDefaults"]
+- !private ["Ps9AnyObject", "MKULog"]
+- !private ["Ps9AnyObject", "String"]
+- !private ["Ps9AnyObject", "bluetoothDebug"]
+- !private ["Ps9AnyObject", "characters"]
+- !private ["Ps9AnyObject", "compassDelegate"]
+- !private ["Ps9AnyObject", "components"]
+- !private ["Ps9AnyObject", "connect"]
+- !private ["Ps9AnyObject", "connectCount"]
+- !private ["Ps9AnyObject", "connectToPeripheral"]
+- !private ["Ps9AnyObject", "connected"]
+- !private ["Ps9AnyObject", "floatValue"]
+- !private ["Ps9AnyObject", "identifier"]
+- ["Ps9AnyObject", "init"]
+- !private ["Ps9AnyObject", "lightSensDelegate"]
+- !private ["Ps9AnyObject", "localizedDescription"]
+- !private ["Ps9AnyObject", "messageDelegate"]
+- !private ["Ps9AnyObject", "name"]
+- !private ["Ps9AnyObject", "overrideConnect"]
+- !private ["Ps9AnyObject", "peripherals"]
+- !private ["Ps9AnyObject", "rssis"]
+- !private ["Ps9AnyObject", "selectedPeripheral"]
+- !private ["Ps9AnyObject", "serial"]
+- !private ["Ps9AnyObject", "serialDelegate"]
+- ["Ps9AnyObject", "serialDidChangeState"]
+- ["Ps9AnyObject", "serialDidConnect"]
+- ["Ps9AnyObject", "serialDidDisconnect"]
+- ["Ps9AnyObject", "serialDidDiscoverPeripheral"]
+- ["Ps9AnyObject", "serialDidFailToConnect"]
+- ["Ps9AnyObject", "serialDidReadRSSI"]
+- ["Ps9AnyObject", "serialDidReceiveBytes"]
+- ["Ps9AnyObject", "serialDidReceiveData"]
+- ["Ps9AnyObject", "serialDidReceiveString"]
+- ["Ps9AnyObject", "serialIsReady"]
+- !private ["Ps9AnyObject", "sleep"]
+- !private ["Ps9AnyObject", "trimmingCharacters"]
+- !private ["Ps9AnyObject", "tsopDelegate"]
+- !private ["Ps9AnyObject", "writeType"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps10Arithmetic", "init"]
+- !private ["Sa", "append"]
+- !private ["Sa", "count"]
+- !private ["Sa", "init"]
+- !private ["Sa", "subscript"]
+- !private ["Ps23BidirectionalCollection", "append"]
+- !private ["Ps23BidirectionalCollection", "count"]
+- !private ["Ps23BidirectionalCollection", "init"]
+- !private ["Ps23BidirectionalCollection", "subscript"]
+- !private ["Ps19BinaryFloatingPoint", "init"]
+- !private ["Ps17BitwiseOperations", "init"]
+- !private ["C8LJ_STAND19BluetoothController", "Array"]
+- ["C8LJ_STAND19BluetoothController", "BluetoothController"]
+- ["C8LJ_STAND19BluetoothController", "BluetoothControllerCompassDelegate"]
+- ["C8LJ_STAND19BluetoothController", "BluetoothControllerLightSensorDelegate"]
+- ["C8LJ_STAND19BluetoothController", "BluetoothControllerSerialDelegate"]
+- ["C8LJ_STAND19BluetoothController", "BluetoothControllerTSOPDelegate"]
+- ["C8LJ_STAND19BluetoothController", "BluetoothMessageDelegate"]
+- !private ["C8LJ_STAND19BluetoothController", "BluetoothSerial"]
+- ["C8LJ_STAND19BluetoothController", "Bool"]
+- ["C8LJ_STAND19BluetoothController", "CBPeripheral"]
+- !private ["C8LJ_STAND19BluetoothController", "CharacterSet"]
+- !private ["C8LJ_STAND19BluetoothController", "Double"]
+- ["C8LJ_STAND19BluetoothController", "Float"]
+- !private ["C8LJ_STAND19BluetoothController", "Int"]
+- !private ["C8LJ_STAND19BluetoothController", "MKUAsync"]
+- !private ["C8LJ_STAND19BluetoothController", "MKUDefaults"]
+- !private ["C8LJ_STAND19BluetoothController", "MKULog"]
+- ["C8LJ_STAND19BluetoothController", "NSError"]
+- ["C8LJ_STAND19BluetoothController", "NSNumber"]
+- ["C8LJ_STAND19BluetoothController", "String"]
+- ["C8LJ_STAND19BluetoothController", "bluetoothDebug"]
+- ["C8LJ_STAND19BluetoothController", "compassDelegate"]
+- ["C8LJ_STAND19BluetoothController", "connect"]
+- ["C8LJ_STAND19BluetoothController", "connectCount"]
+- ["C8LJ_STAND19BluetoothController", "connectTo"]
+- ["C8LJ_STAND19BluetoothController", "connected"]
+- ["C8LJ_STAND19BluetoothController", "deinit"]
+- ["C8LJ_STAND19BluetoothController", "init"]
+- ["C8LJ_STAND19BluetoothController", "lightSensDelegate"]
+- ["C8LJ_STAND19BluetoothController", "messageDelegate"]
+- ["C8LJ_STAND19BluetoothController", "overrideConnect"]
+- ["C8LJ_STAND19BluetoothController", "peripherals"]
+- ["C8LJ_STAND19BluetoothController", "rssis"]
+- ["C8LJ_STAND19BluetoothController", "selectedPeripheral"]
+- !private ["C8LJ_STAND19BluetoothController", "serial"]
+- ["C8LJ_STAND19BluetoothController", "serialDelegate"]
+- ["C8LJ_STAND19BluetoothController", "serialDidChangeState"]
+- ["C8LJ_STAND19BluetoothController", "serialDidConnect"]
+- ["C8LJ_STAND19BluetoothController", "serialDidDisconnect"]
+- ["C8LJ_STAND19BluetoothController", "serialDidDiscoverPeripheral"]
+- ["C8LJ_STAND19BluetoothController", "serialDidFailToConnect"]
+- ["C8LJ_STAND19BluetoothController", "serialDidReadRSSI"]
+- ["C8LJ_STAND19BluetoothController", "serialDidReceiveBytes"]
+- ["C8LJ_STAND19BluetoothController", "serialDidReceiveData"]
+- ["C8LJ_STAND19BluetoothController", "serialDidReceiveString"]
+- ["C8LJ_STAND19BluetoothController", "serialIsReady"]
+- ["C8LJ_STAND19BluetoothController", "shared"]
+- !private ["C8LJ_STAND19BluetoothController", "sleep"]
+- ["C8LJ_STAND19BluetoothController", "tsopDelegate"]
+- ["P8LJ_STAND34BluetoothControllerCompassDelegate", "Double"]
+- ["P8LJ_STAND34BluetoothControllerCompassDelegate", "hasNewHeading"]
+- ["P8LJ_STAND38BluetoothControllerLightSensorDelegate", "Int"]
+- ["P8LJ_STAND38BluetoothControllerLightSensorDelegate", "updatedCurrentLightSensors"]
+- ["P8LJ_STAND33BluetoothControllerSerialDelegate", "String"]
+- ["P8LJ_STAND33BluetoothControllerSerialDelegate", "hasNewOutput"]
+- ["P8LJ_STAND31BluetoothControllerTSOPDelegate", "Int"]
+- ["P8LJ_STAND31BluetoothControllerTSOPDelegate", "hasNewActiveTSOP"]
+- ["P8LJ_STAND24BluetoothMessageDelegate", "CBPeripheral"]
+- ["P8LJ_STAND24BluetoothMessageDelegate", "String"]
+- ["P8LJ_STAND24BluetoothMessageDelegate", "dismissNotifications"]
+- ["P8LJ_STAND24BluetoothMessageDelegate", "foundDevices"]
+- ["P8LJ_STAND24BluetoothMessageDelegate", "showError"]
+- ["P8LJ_STAND24BluetoothMessageDelegate", "showInformation"]
+- !private ["C8LJ_STAND15BluetoothSerial", "connectToPeripheral"]
+- !private ["C8LJ_STAND15BluetoothSerial", "init"]
+- !private ["C8LJ_STAND15BluetoothSerial", "writeType"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "Array"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "BluetoothController"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "BluetoothSerial"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "CharacterSet"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "Double"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "Int"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "MKUAsync"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "MKUDefaults"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "MKULog"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "String"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "bluetoothDebug"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "compassDelegate"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "connect"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "connectCount"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "connected"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "init"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "lightSensDelegate"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "messageDelegate"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "overrideConnect"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "peripherals"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "rssis"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "selectedPeripheral"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "serial"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "serialDelegate"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "serialDidChangeState"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "serialDidConnect"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "serialDidDisconnect"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "serialDidDiscoverPeripheral"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "serialDidFailToConnect"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "serialDidReadRSSI"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "serialDidReceiveBytes"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "serialDidReceiveData"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "serialDidReceiveString"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", "serialIsReady"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "sleep"]
+- !private ["P8LJ_STAND23BluetoothSerialDelegate", "tsopDelegate"]
+- ["P8LJ_STAND23BluetoothSerialDelegate", ""]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["PSo24CBCentralManagerDelegate", "connectToPeripheral"]
+- !private ["PSo24CBCentralManagerDelegate", "init"]
+- !private ["PSo24CBCentralManagerDelegate", "writeType"]
+- !private ["OSC25CBCharacteristicWriteType", "withoutResponse"]
+- !private ["CSo12CBPeripheral", "identifier"]
+- !private ["CSo12CBPeripheral", "name"]
+- !private ["PSo20CBPeripheralDelegate", "connectToPeripheral"]
+- !private ["PSo20CBPeripheralDelegate", "init"]
+- !private ["PSo20CBPeripheralDelegate", "writeType"]
+- !private ["Ps7CVarArg", "append"]
+- !private ["Ps7CVarArg", "characters"]
+- !private ["Ps7CVarArg", "components"]
+- !private ["Ps7CVarArg", "connectToPeripheral"]
+- !private ["Ps7CVarArg", "count"]
+- !private ["Ps7CVarArg", "floatValue"]
+- !private ["Ps7CVarArg", "identifier"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "localizedDescription"]
+- !private ["Ps7CVarArg", "name"]
+- !private ["Ps7CVarArg", "subscript"]
+- !private ["Ps7CVarArg", "trimmingCharacters"]
+- !private ["Ps7CVarArg", "writeType"]
+- !private ["V10Foundation12CharacterSet", "init"]
+- !private ["Ps10Collection", "append"]
+- !private ["Ps10Collection", "count"]
+- !private ["Ps10Collection", "init"]
+- !private ["Ps10Collection", "subscript"]
+- !private ["Ps10Comparable", "characters"]
+- !private ["Ps10Comparable", "components"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "trimmingCharacters"]
+- !private ["Ps28CustomDebugStringConvertible", "append"]
+- !private ["Ps28CustomDebugStringConvertible", "characters"]
+- !private ["Ps28CustomDebugStringConvertible", "components"]
+- !private ["Ps28CustomDebugStringConvertible", "connectToPeripheral"]
+- !private ["Ps28CustomDebugStringConvertible", "count"]
+- !private ["Ps28CustomDebugStringConvertible", "floatValue"]
+- !private ["Ps28CustomDebugStringConvertible", "identifier"]
+- !private ["Ps28CustomDebugStringConvertible", "init"]
+- !private ["Ps28CustomDebugStringConvertible", "localizedDescription"]
+- !private ["Ps28CustomDebugStringConvertible", "name"]
+- !private ["Ps28CustomDebugStringConvertible", "subscript"]
+- !private ["Ps28CustomDebugStringConvertible", "trimmingCharacters"]
+- !private ["Ps28CustomDebugStringConvertible", "writeType"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "characters"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "components"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "trimmingCharacters"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "append"]
+- !private ["Ps17CustomReflectable", "characters"]
+- !private ["Ps17CustomReflectable", "components"]
+- !private ["Ps17CustomReflectable", "count"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "subscript"]
+- !private ["Ps17CustomReflectable", "trimmingCharacters"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "append"]
+- !private ["Ps23CustomStringConvertible", "characters"]
+- !private ["Ps23CustomStringConvertible", "components"]
+- !private ["Ps23CustomStringConvertible", "connectToPeripheral"]
+- !private ["Ps23CustomStringConvertible", "count"]
+- !private ["Ps23CustomStringConvertible", "floatValue"]
+- !private ["Ps23CustomStringConvertible", "identifier"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "localizedDescription"]
+- !private ["Ps23CustomStringConvertible", "name"]
+- !private ["Ps23CustomStringConvertible", "subscript"]
+- !private ["Ps23CustomStringConvertible", "trimmingCharacters"]
+- !private ["Ps23CustomStringConvertible", "writeType"]
+- !private ["Sd", "init"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "characters"]
+- !private ["Ps9Equatable", "components"]
+- !private ["Ps9Equatable", "connectToPeripheral"]
+- !private ["Ps9Equatable", "floatValue"]
+- !private ["Ps9Equatable", "identifier"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "localizedDescription"]
+- !private ["Ps9Equatable", "name"]
+- !private ["Ps9Equatable", "trimmingCharacters"]
+- !private ["Ps9Equatable", "withoutResponse"]
+- !private ["Ps9Equatable", "writeType"]
+- !private ["Ps5Error", "localizedDescription"]
+- !private ["Ps25ExpressibleByArrayLiteral", "append"]
+- !private ["Ps25ExpressibleByArrayLiteral", "count"]
+- !private ["Ps25ExpressibleByArrayLiteral", "init"]
+- !private ["Ps25ExpressibleByArrayLiteral", "subscript"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "floatValue"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "characters"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "components"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps43ExpressibleByExtendedGraphemeClusterLiteral", "trimmingCharacters"]
+- !private ["Ps25ExpressibleByFloatLiteral", "floatValue"]
+- !private ["Ps25ExpressibleByFloatLiteral", "init"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "floatValue"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "characters"]
+- !private ["Ps26ExpressibleByStringLiteral", "components"]
+- !private ["Ps26ExpressibleByStringLiteral", "init"]
+- !private ["Ps26ExpressibleByStringLiteral", "trimmingCharacters"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "characters"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "components"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "init"]
+- !private ["Ps33ExpressibleByUnicodeScalarLiteral", "trimmingCharacters"]
+- !private ["Ps13FloatingPoint", "init"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "characters"]
+- !private ["Ps8Hashable", "components"]
+- !private ["Ps8Hashable", "connectToPeripheral"]
+- !private ["Ps8Hashable", "floatValue"]
+- !private ["Ps8Hashable", "identifier"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "localizedDescription"]
+- !private ["Ps8Hashable", "name"]
+- !private ["Ps8Hashable", "trimmingCharacters"]
+- !private ["Ps8Hashable", "withoutResponse"]
+- !private ["Ps8Hashable", "writeType"]
+- !private ["Si", "init"]
+- !private ["Ps7Integer", "init"]
+- !private ["Ps17IntegerArithmetic", "init"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "characters"]
+- !private ["Ps25LosslessStringConvertible", "components"]
+- !private ["Ps25LosslessStringConvertible", "init"]
+- !private ["Ps25LosslessStringConvertible", "trimmingCharacters"]
+- !private ["Ps10MirrorPath", "characters"]
+- !private ["Ps10MirrorPath", "components"]
+- !private ["Ps10MirrorPath", "init"]
+- !private ["Ps10MirrorPath", "trimmingCharacters"]
+- !private ["Ps17MutableCollection", "append"]
+- !private ["Ps17MutableCollection", "count"]
+- !private ["Ps17MutableCollection", "init"]
+- !private ["Ps17MutableCollection", "subscript"]
+- !private ["PSo8NSCoding", "characters"]
+- !private ["PSo8NSCoding", "components"]
+- !private ["PSo8NSCoding", "floatValue"]
+- !private ["PSo8NSCoding", "init"]
+- !private ["PSo8NSCoding", "localizedDescription"]
+- !private ["PSo8NSCoding", "trimmingCharacters"]
+- !private ["PSo9NSCopying", "characters"]
+- !private ["PSo9NSCopying", "components"]
+- !private ["PSo9NSCopying", "floatValue"]
+- !private ["PSo9NSCopying", "identifier"]
+- !private ["PSo9NSCopying", "init"]
+- !private ["PSo9NSCopying", "localizedDescription"]
+- !private ["PSo9NSCopying", "name"]
+- !private ["PSo9NSCopying", "trimmingCharacters"]
+- !private ["CSo7NSError", "localizedDescription"]
+- !private ["PSo20NSFetchRequestResult", "floatValue"]
+- !private ["PSo16NSMutableCopying", "characters"]
+- !private ["PSo16NSMutableCopying", "components"]
+- !private ["PSo16NSMutableCopying", "init"]
+- !private ["PSo16NSMutableCopying", "trimmingCharacters"]
+- !private ["CSo8NSNumber", "floatValue"]
+- !private ["CSo8NSObject", "characters"]
+- !private ["CSo8NSObject", "components"]
+- !private ["CSo8NSObject", "connectToPeripheral"]
+- !private ["CSo8NSObject", "floatValue"]
+- !private ["CSo8NSObject", "identifier"]
+- !private ["CSo8NSObject", "init"]
+- !private ["CSo8NSObject", "localizedDescription"]
+- !private ["CSo8NSObject", "name"]
+- !private ["CSo8NSObject", "trimmingCharacters"]
+- !private ["CSo8NSObject", "writeType"]
+- !private ["PSo16NSObjectProtocol", "characters"]
+- !private ["PSo16NSObjectProtocol", "components"]
+- !private ["PSo16NSObjectProtocol", "connectToPeripheral"]
+- !private ["PSo16NSObjectProtocol", "floatValue"]
+- !private ["PSo16NSObjectProtocol", "identifier"]
+- !private ["PSo16NSObjectProtocol", "init"]
+- !private ["PSo16NSObjectProtocol", "localizedDescription"]
+- !private ["PSo16NSObjectProtocol", "name"]
+- !private ["PSo16NSObjectProtocol", "trimmingCharacters"]
+- !private ["PSo16NSObjectProtocol", "writeType"]
+- !private ["PSo19NSPasteboardReading", "characters"]
+- !private ["PSo19NSPasteboardReading", "components"]
+- !private ["PSo19NSPasteboardReading", "init"]
+- !private ["PSo19NSPasteboardReading", "trimmingCharacters"]
+- !private ["PSo19NSPasteboardWriting", "characters"]
+- !private ["PSo19NSPasteboardWriting", "components"]
+- !private ["PSo19NSPasteboardWriting", "init"]
+- !private ["PSo19NSPasteboardWriting", "trimmingCharacters"]
+- !private ["PSo14NSSecureCoding", "characters"]
+- !private ["PSo14NSSecureCoding", "components"]
+- !private ["PSo14NSSecureCoding", "floatValue"]
+- !private ["PSo14NSSecureCoding", "init"]
+- !private ["PSo14NSSecureCoding", "localizedDescription"]
+- !private ["PSo14NSSecureCoding", "trimmingCharacters"]
+- !private ["CSo8NSString", "characters"]
+- !private ["CSo8NSString", "components"]
+- !private ["CSo8NSString", "init"]
+- !private ["CSo8NSString", "trimmingCharacters"]
+- !private ["CSo7NSValue", "floatValue"]
+- !private ["Ps22RandomAccessCollection", "append"]
+- !private ["Ps22RandomAccessCollection", "count"]
+- !private ["Ps22RandomAccessCollection", "init"]
+- !private ["Ps22RandomAccessCollection", "subscript"]
+- !private ["Ps26RangeReplaceableCollection", "append"]
+- !private ["Ps26RangeReplaceableCollection", "count"]
+- !private ["Ps26RangeReplaceableCollection", "init"]
+- !private ["Ps26RangeReplaceableCollection", "subscript"]
+- !private ["Ps16RawRepresentable", "withoutResponse"]
+- !private ["P10Foundation20ReferenceConvertible", "init"]
+- !private ["Ps8Sequence", "append"]
+- !private ["Ps8Sequence", "count"]
+- !private ["Ps8Sequence", "init"]
+- !private ["Ps8Sequence", "subscript"]
+- !private ["Ps10SetAlgebra", "init"]
+- !private ["Ps13SignedInteger", "init"]
+- !private ["Ps12SignedNumber", "init"]
+- !private ["Ps10Strideable", "init"]
+- !private ["SS", "characters"]
+- !private ["SS", "components"]
+- !private ["SS", "init"]
+- !private ["SS", "trimmingCharacters"]
+- !private ["Ps16TextOutputStream", "characters"]
+- !private ["Ps16TextOutputStream", "components"]
+- !private ["Ps16TextOutputStream", "init"]
+- !private ["Ps16TextOutputStream", "trimmingCharacters"]
+- !private ["Ps20TextOutputStreamable", "characters"]
+- !private ["Ps20TextOutputStreamable", "components"]
+- !private ["Ps20TextOutputStreamable", "init"]
+- !private ["Ps20TextOutputStreamable", "trimmingCharacters"]
+- !private ["Ps14_ArrayProtocol", "append"]
+- !private ["Ps14_ArrayProtocol", "count"]
+- !private ["Ps14_ArrayProtocol", "init"]
+- !private ["Ps14_ArrayProtocol", "subscript"]
+- !private ["Ps23_BidirectionalIndexable", "append"]
+- !private ["Ps23_BidirectionalIndexable", "count"]
+- !private ["Ps23_BidirectionalIndexable", "init"]
+- !private ["Ps23_BidirectionalIndexable", "subscript"]
+- !private ["Ps15_CVarArgAligned", "init"]
+- !private ["Ps22_CVarArgPassedAsDouble", "init"]
+- !private ["Ps24_DestructorSafeContainer", "append"]
+- !private ["Ps24_DestructorSafeContainer", "count"]
+- !private ["Ps24_DestructorSafeContainer", "init"]
+- !private ["Ps24_DestructorSafeContainer", "subscript"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "characters"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "components"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "init"]
+- !private ["Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral", "trimmingCharacters"]
+- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "init"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "characters"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "components"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "init"]
+- !private ["Ps34_ExpressibleByBuiltinStringLiteral", "trimmingCharacters"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "characters"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "components"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "init"]
+- !private ["Ps39_ExpressibleByBuiltinUTF16StringLiteral", "trimmingCharacters"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "characters"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "components"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "init"]
+- !private ["Ps41_ExpressibleByBuiltinUnicodeScalarLiteral", "trimmingCharacters"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "characters"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "components"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "init"]
+- !private ["Ps33_ExpressibleByStringInterpolation", "trimmingCharacters"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "characters"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "components"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "floatValue"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "init"]
+- !private ["Ps35_HasCustomAnyHashableRepresentation", "trimmingCharacters"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "characters"]
+- !private ["Ps9_Hashable", "components"]
+- !private ["Ps9_Hashable", "connectToPeripheral"]
+- !private ["Ps9_Hashable", "floatValue"]
+- !private ["Ps9_Hashable", "identifier"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "localizedDescription"]
+- !private ["Ps9_Hashable", "name"]
+- !private ["Ps9_Hashable", "trimmingCharacters"]
+- !private ["Ps9_Hashable", "withoutResponse"]
+- !private ["Ps9_Hashable", "writeType"]
+- !private ["Ps14_Incrementable", "init"]
+- !private ["Ps10_Indexable", "append"]
+- !private ["Ps10_Indexable", "count"]
+- !private ["Ps10_Indexable", "init"]
+- !private ["Ps10_Indexable", "subscript"]
+- !private ["Ps14_IndexableBase", "append"]
+- !private ["Ps14_IndexableBase", "count"]
+- !private ["Ps14_IndexableBase", "init"]
+- !private ["Ps14_IndexableBase", "subscript"]
+- !private ["Ps8_Integer", "init"]
+- !private ["Ps18_IntegerArithmetic", "init"]
+- !private ["Ps17_MutableIndexable", "append"]
+- !private ["Ps17_MutableIndexable", "count"]
+- !private ["Ps17_MutableIndexable", "init"]
+- !private ["Ps17_MutableIndexable", "subscript"]
+- !private ["P10Foundation18_MutablePairBoxing", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "append"]
+- !private ["Ps21_ObjectiveCBridgeable", "characters"]
+- !private ["Ps21_ObjectiveCBridgeable", "components"]
+- !private ["Ps21_ObjectiveCBridgeable", "count"]
+- !private ["Ps21_ObjectiveCBridgeable", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "subscript"]
+- !private ["Ps21_ObjectiveCBridgeable", "trimmingCharacters"]
+- !private ["Ps22_RandomAccessIndexable", "append"]
+- !private ["Ps22_RandomAccessIndexable", "count"]
+- !private ["Ps22_RandomAccessIndexable", "init"]
+- !private ["Ps22_RandomAccessIndexable", "subscript"]
+- !private ["Ps26_RangeReplaceableIndexable", "append"]
+- !private ["Ps26_RangeReplaceableIndexable", "count"]
+- !private ["Ps26_RangeReplaceableIndexable", "init"]
+- !private ["Ps26_RangeReplaceableIndexable", "subscript"]
+- !private ["Ps14_SignedInteger", "init"]
+- !private ["Ps11_Strideable", "init"]
+depends-nominal:
+- "Ps9AnyObject"
+- !private "Ps10Arithmetic"
+- !private "Sa"
+- !private "Ps23BidirectionalCollection"
+- !private "Ps19BinaryFloatingPoint"
+- !private "Ps17BitwiseOperations"
+- "C8LJ_STAND19BluetoothController"
+- "P8LJ_STAND34BluetoothControllerCompassDelegate"
+- "P8LJ_STAND38BluetoothControllerLightSensorDelegate"
+- "P8LJ_STAND33BluetoothControllerSerialDelegate"
+- "P8LJ_STAND31BluetoothControllerTSOPDelegate"
+- "P8LJ_STAND24BluetoothMessageDelegate"
+- !private "C8LJ_STAND15BluetoothSerial"
+- "P8LJ_STAND23BluetoothSerialDelegate"
+- !private "Sb"
+- !private "PSo24CBCentralManagerDelegate"
+- !private "OSC25CBCharacteristicWriteType"
+- !private "CSo12CBPeripheral"
+- !private "PSo20CBPeripheralDelegate"
+- !private "Ps7CVarArg"
+- !private "V10Foundation12CharacterSet"
+- !private "Ps10Collection"
+- !private "Ps10Comparable"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- !private "Ps23CustomStringConvertible"
+- !private "Sd"
+- !private "Ps9Equatable"
+- !private "Ps5Error"
+- !private "Ps25ExpressibleByArrayLiteral"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps43ExpressibleByExtendedGraphemeClusterLiteral"
+- !private "Ps25ExpressibleByFloatLiteral"
+- !private "Ps27ExpressibleByIntegerLiteral"
+- !private "Ps26ExpressibleByStringLiteral"
+- !private "Ps33ExpressibleByUnicodeScalarLiteral"
+- !private "Ps13FloatingPoint"
+- !private "Ps8Hashable"
+- !private "Si"
+- !private "Ps7Integer"
+- !private "Ps17IntegerArithmetic"
+- !private "Ps25LosslessStringConvertible"
+- !private "Ps10MirrorPath"
+- !private "Ps17MutableCollection"
+- !private "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- !private "CSo7NSError"
+- !private "PSo20NSFetchRequestResult"
+- !private "PSo16NSMutableCopying"
+- !private "CSo8NSNumber"
+- !private "CSo8NSObject"
+- !private "PSo16NSObjectProtocol"
+- !private "PSo19NSPasteboardReading"
+- !private "PSo19NSPasteboardWriting"
+- !private "PSo14NSSecureCoding"
+- !private "CSo8NSString"
+- !private "CSo7NSValue"
+- !private "Ps22RandomAccessCollection"
+- !private "Ps26RangeReplaceableCollection"
+- !private "Ps16RawRepresentable"
+- !private "P10Foundation20ReferenceConvertible"
+- !private "Ps8Sequence"
+- !private "Ps10SetAlgebra"
+- !private "Ps13SignedInteger"
+- !private "Ps12SignedNumber"
+- !private "Ps10Strideable"
+- !private "SS"
+- !private "Ps16TextOutputStream"
+- !private "Ps20TextOutputStreamable"
+- !private "Ps14_ArrayProtocol"
+- !private "Ps23_BidirectionalIndexable"
+- !private "Ps15_CVarArgAligned"
+- !private "Ps22_CVarArgPassedAsDouble"
+- !private "Ps24_DestructorSafeContainer"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps51_ExpressibleByBuiltinExtendedGraphemeClusterLiteral"
+- !private "Ps33_ExpressibleByBuiltinFloatLiteral"
+- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
+- !private "Ps34_ExpressibleByBuiltinStringLiteral"
+- !private "Ps39_ExpressibleByBuiltinUTF16StringLiteral"
+- !private "Ps41_ExpressibleByBuiltinUnicodeScalarLiteral"
+- !private "Ps33_ExpressibleByStringInterpolation"
+- !private "Ps35_HasCustomAnyHashableRepresentation"
+- !private "Ps9_Hashable"
+- !private "Ps14_Incrementable"
+- !private "Ps10_Indexable"
+- !private "Ps14_IndexableBase"
+- !private "Ps8_Integer"
+- !private "Ps18_IntegerArithmetic"
+- !private "Ps17_MutableIndexable"
+- !private "P10Foundation18_MutablePairBoxing"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps22_RandomAccessIndexable"
+- !private "Ps26_RangeReplaceableIndexable"
+- !private "Ps14_SignedInteger"
+- !private "Ps11_Strideable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreText.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Metal.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.apinotesc"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/AppKit.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/XPC.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreBluetooth.apinotesc"
+interface-hash: "0649812f6111612d10ba7428c95f5c4e"
