@@ -57,6 +57,16 @@ class BluetoothController {
         }
     }
     
+    var settingsDelegate: BluetoothControllerSettingsDelegate? {
+        didSet {
+            if !connected {
+                connect()
+            }
+        }
+    }
+    
+    var sendingDelegate: BluetoothControllerSendDelegate?
+    
     
     var peripherals: [CBPeripheral] = []
     var rssis: [Float] = []
@@ -70,6 +80,7 @@ class BluetoothController {
     init() {
         serial = BluetoothSerial(delegate: self)
         serial.writeType = .withoutResponse
+        sendingDelegate = self
     }
     
     func connectTo(_ peripheral: CBPeripheral) {

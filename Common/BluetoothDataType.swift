@@ -17,4 +17,5 @@ enum BluetoothDataType: Int {
     case rawData
     case linePosition
     case robotPoisition
+    case settings
 }

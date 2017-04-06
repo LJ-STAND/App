@@ -111,6 +111,11 @@ extension BluetoothController: BluetoothSerialDelegate {
                 }
             }
             
+        case .settings:
+            //TODO:
+            break
+            
+            
         default:
             MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")
         }

@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.setStatusBarStyle(.lightContent, animated: false)
         
         BluetoothController.shared.messageDelegate = self
-        BluetoothController.shared.bluetoothDebug = false   
+        BluetoothController.shared.bluetoothDebug = false
         
         let bluetoothPermission = MKUPermission.bluetooth
         
@@ -149,6 +149,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.addSubview(newWindow)
             
             if (UIDevice.current.userInterfaceIdiom == .phone) {
+                newWindow.maximized = true
+                newWindow._savedFrame = CGRect(x: 44, y: 44, width: 300, height: 300)
+                newWindow.setFrame(frame: CGRectMake(-kWindowResizeGutterSize, kStatusBarHeight + -kWindowResizeGutterSize, (window?.bounds.size.width)!+(kWindowResizeGutterSize*2), (window?.bounds.size.height)!-kStatusBarHeight+(kWindowResizeGutterSize*2)))
+            }
+            
+            if viewName == "App Log" {
                 newWindow.maximized = true
                 newWindow._savedFrame = CGRect(x: 44, y: 44, width: 300, height: 300)
                 newWindow.setFrame(frame: CGRectMake(-kWindowResizeGutterSize, kStatusBarHeight + -kWindowResizeGutterSize, (window?.bounds.size.width)!+(kWindowResizeGutterSize*2), (window?.bounds.size.height)!-kStatusBarHeight+(kWindowResizeGutterSize*2)))
@@ -259,5 +265,23 @@ extension AppDelegate: BluetoothMessageDelegate {
     
     func dismissNotifications() {
         MKUIToast.shared.dismissAllNotifications(animated: false)
+    }
+}
+
+extension AppDelegate: AppSettingsDelegate {
+    func setDockOnRight(right: Bool) {
+        defaults.set(right, forKey: DefaultKeys.isDockOnRight)
+        setFrames()
+        orientationDidChange()
+    }
+    
+    func setLogWindow(enabled: Bool) {
+        if enabled == true {
+            addWindow(viewName: "App Log")
+        } else {
+            removeWindow(name: "App Log")
+        }
+
+        defaults.set(enabled, forKey: DefaultKeys.showLog)
     }
 }

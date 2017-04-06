@@ -35,3 +35,12 @@ protocol BluetoothControllerCompassDelegate {
 protocol BluetoothControllerLightSensorDelegate {
     func updatedCurrentLightSensors(_ sensors: [Int])
 }
+
+protocol BluetoothControllerSettingsDelegate {
+    func updatedSettings(compass: Bool, light: Bool, tsop: Bool)
+}
+
+protocol BluetoothControllerSendDelegate {
+    func requestSettings()
+    func sendSettings(compass: Bool, tsop: Bool, light: Bool)
+}
