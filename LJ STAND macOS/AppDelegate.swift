@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var alert: NSAlert?
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
-		BluetoothController.shared.bluetoothDebug = false
+		BluetoothController.shared.bluetoothDebug = true
         BluetoothController.shared.overrideConnect = true
         BluetoothController.shared.messageDelegate = self
         
@@ -45,7 +45,7 @@ extension AppDelegate: BluetoothMessageDelegate {
     }
     
     func dismissNotifications() {
-        //TODO: Find a way to dismiss NSAlert
+        //TODO: Find a way to dismiss all NSAlert's
     }
     
     func foundDevices(_ peripherals: [CBPeripheral]) {
