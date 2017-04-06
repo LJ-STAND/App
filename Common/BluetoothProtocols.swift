@@ -6,6 +6,10 @@
 //  Copyright © 2017 Lachlan Grant. All rights reserved.
 //
 
+/*
+ BluetoothController Protocols
+*/
+
 import Foundation
 import CoreBluetooth
 

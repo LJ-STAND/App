@@ -6,6 +6,10 @@
 //  Copyright © 2017 Lachlan Grant. All rights reserved.
 //
 
+/*
+ This file is extension of Serial Delegate
+*/
+
 import Foundation
 import CoreBluetooth
 import MKKit

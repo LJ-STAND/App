@@ -6,6 +6,10 @@
 //  Copyright © 2016 Lachlan Grant. All rights reserved.
 //
 
+/*
+ This file contains delegates, connection functions & class variables
+*/
+
 import Foundation
 import CoreBluetooth
 import MKKit
