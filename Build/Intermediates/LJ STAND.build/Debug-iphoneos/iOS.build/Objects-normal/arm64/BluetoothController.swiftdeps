@@ -18,7 +18,9 @@ depends-top-level:
 - "BluetoothController"
 - "BluetoothControllerCompassDelegate"
 - "BluetoothControllerLightSensorDelegate"
+- "BluetoothControllerSendDelegate"
 - "BluetoothControllerSerialDelegate"
+- "BluetoothControllerSettingsDelegate"
 - "BluetoothControllerTSOPDelegate"
 - "BluetoothMessageDelegate"
 - !private "BluetoothSerial"
@@ -46,6 +48,7 @@ depends-member:
 - !private ["Ps9AnyObject", "overrideConnect"]
 - !private ["Ps9AnyObject", "peripherals"]
 - !private ["Ps9AnyObject", "selectedPeripheral"]
+- !private ["Ps9AnyObject", "sendingDelegate"]
 - !private ["Ps9AnyObject", "serial"]
 - !private ["Ps9AnyObject", "sleep"]
 - !private ["Ps9AnyObject", "standard"]
@@ -59,7 +62,9 @@ depends-member:
 - ["C3iOS19BluetoothController", "BluetoothController"]
 - ["C3iOS19BluetoothController", "BluetoothControllerCompassDelegate"]
 - ["C3iOS19BluetoothController", "BluetoothControllerLightSensorDelegate"]
+- ["C3iOS19BluetoothController", "BluetoothControllerSendDelegate"]
 - ["C3iOS19BluetoothController", "BluetoothControllerSerialDelegate"]
+- ["C3iOS19BluetoothController", "BluetoothControllerSettingsDelegate"]
 - ["C3iOS19BluetoothController", "BluetoothControllerTSOPDelegate"]
 - ["C3iOS19BluetoothController", "BluetoothMessageDelegate"]
 - !private ["C3iOS19BluetoothController", "BluetoothSerial"]
@@ -82,12 +87,29 @@ depends-member:
 - ["C3iOS19BluetoothController", "peripherals"]
 - ["C3iOS19BluetoothController", "rssis"]
 - ["C3iOS19BluetoothController", "selectedPeripheral"]
+- ["C3iOS19BluetoothController", "sendingDelegate"]
 - !private ["C3iOS19BluetoothController", "serial"]
 - ["C3iOS19BluetoothController", "serialDelegate"]
+- ["C3iOS19BluetoothController", "settingsDelegate"]
 - ["C3iOS19BluetoothController", "shared"]
 - !private ["C3iOS19BluetoothController", "sleep"]
 - ["C3iOS19BluetoothController", "textRecieved"]
 - ["C3iOS19BluetoothController", "tsopDelegate"]
+- ["P3iOS31BluetoothControllerSendDelegate", "BluetoothController"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "BluetoothSerial"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "MKUAsync"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "UserDefaults"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "connect"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "connectCount"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "connected"]
+- ["P3iOS31BluetoothControllerSendDelegate", "init"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "messageDelegate"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "overrideConnect"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "peripherals"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "selectedPeripheral"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "sendingDelegate"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "serial"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "sleep"]
 - !private ["P3iOS24BluetoothMessageDelegate", "dismissNotifications"]
 - !private ["P3iOS24BluetoothMessageDelegate", "foundDevices"]
 - !private ["P3iOS24BluetoothMessageDelegate", "showInformation"]
@@ -108,6 +130,7 @@ depends-member:
 - !private ["P3iOS23BluetoothSerialDelegate", "overrideConnect"]
 - !private ["P3iOS23BluetoothSerialDelegate", "peripherals"]
 - !private ["P3iOS23BluetoothSerialDelegate", "selectedPeripheral"]
+- !private ["P3iOS23BluetoothSerialDelegate", "sendingDelegate"]
 - !private ["P3iOS23BluetoothSerialDelegate", "serial"]
 - !private ["P3iOS23BluetoothSerialDelegate", "sleep"]
 - !private ["Sb", "_getBuiltinLogicValue"]
@@ -259,6 +282,7 @@ depends-nominal:
 - !private "Sa"
 - !private "Ps23BidirectionalCollection"
 - "C3iOS19BluetoothController"
+- "P3iOS31BluetoothControllerSendDelegate"
 - !private "P3iOS24BluetoothMessageDelegate"
 - !private "C3iOS15BluetoothSerial"
 - "P3iOS23BluetoothSerialDelegate"
@@ -346,6 +370,12 @@ depends-external:
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKKit.framework/Headers/MKKit-Swift.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKKit.framework/Headers/MKKit.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Modules/MKUIKit.swiftmodule/arm64.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/MKUIKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/CRToastManager.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/CRToastConfig.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/MKUIKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Modules/module.modulemap"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUtilityKit.framework/Modules/MKUtilityKit.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AudioToolbox.apinotesc"
@@ -373,12 +403,6 @@ depends-external:
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/RESTKit.framework/Headers/RESTKit-Swift.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/RESTKit.framework/Headers/RESTKit.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/RESTKit.framework/Modules/module.modulemap"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Modules/MKUIKit.swiftmodule/arm64.swiftmodule"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/MKUIKit-Swift.h"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/CRToastManager.h"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/CRToastConfig.h"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/MKUIKit.h"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Modules/module.modulemap"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Modules/Chameleon.swiftmodule/arm64.swiftmodule"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon-Swift.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/UIAppearance+Swift.h"
@@ -397,10 +421,4 @@ depends-external:
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon_.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Modules/module.modulemap"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.apinotesc"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.apinotesc"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/WebKit.apinotesc"
-interface-hash: "771b779bc117b9125f1db13617585c0f"
+interface-hash: "c0741d875c7b9e3d60ce897dc182c332"

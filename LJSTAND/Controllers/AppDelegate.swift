@@ -30,10 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setUpWindows()
         
-        if defaults.bool(forKey: DefaultKeys.showLog) == true {
-            addWindow(viewName: "App Log")
-        }
-        
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.orientationDidChange), name: Notification.Name.UIDeviceOrientationDidChange, object: nil)
         
@@ -50,12 +46,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         application.setStatusBarStyle(.lightContent, animated: false)
         
         BluetoothController.shared.messageDelegate = self
-        BluetoothController.shared.bluetoothDebug = false   
+        BluetoothController.shared.bluetoothDebug = false
         
-        let bluetoothPermission = MKUPermission.bluetooth
+        let bluetooth = MKUPermission.bluetooth
+        let status = bluetooth.status
         
-        if bluetoothPermission.status != .authorized {
-            addWindow(viewName: "Auth Bluetooth")
+        if status == .denied || status == .disabled || status == .notDetermined {
+            BluetoothController.shared.overrideConnect = true
+        }
+        
+        if UIDevice.current.isSimulator == true {
+            BluetoothController.shared.overrideConnect = true
         }
 
         return performShortcutDelegate
@@ -127,19 +128,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             newWindow.windowLevel = 1
             
             var mainView: UIViewController?
-            
-            if viewName == "App Log" {
-                let logVc = MKUConsoleViewController()
-                
-                mainView = UINavigationController(rootViewController: logVc)
-                mainView?.title = viewName
-                logVc.title = viewName
-                (mainView as! UINavigationController).navigationBar.isTranslucent = false
-                (mainView as! UINavigationController).navigationBar.barStyle = .black
-            } else {
-                mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: viewName)
-                mainView?.title = viewName
-            }
+            mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: viewName)
+            mainView?.title = viewName
             
             newWindow.rootViewController = mainView
             newWindow.makeKeyAndVisible()
@@ -151,7 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if (UIDevice.current.userInterfaceIdiom == .phone) {
                 newWindow.maximized = true
                 newWindow._savedFrame = CGRect(x: 44, y: 44, width: 300, height: 300)
-                newWindow.setFrame(frame: CGRectMake(-kWindowResizeGutterSize, kStatusBarHeight + -kWindowResizeGutterSize, (window?.bounds.size.width)!+(kWindowResizeGutterSize*2), (window?.bounds.size.height)!-kStatusBarHeight+(kWindowResizeGutterSize*2)))
+                newWindow.setFrame(frame: CGRectMake(-kWindowResizeGutterSize, -kWindowResizeGutterSize, (window?.bounds.size.width)!+(kWindowResizeGutterSize*2), (window?.bounds.size.height)!+(kWindowResizeGutterSize*2)))
             }
             
         } else {
@@ -177,7 +167,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func removeWindow(name: String) {
-        print(name)
         for item in windows {
             if item.title == name {
                 item.close(self)
@@ -259,5 +248,18 @@ extension AppDelegate: BluetoothMessageDelegate {
     
     func dismissNotifications() {
         MKUIToast.shared.dismissAllNotifications(animated: false)
+    }
+}
+
+extension AppDelegate: AppSettingsDelegate {
+    func setDockOnRight(right: Bool) {
+        defaults.set(right, forKey: DefaultKeys.isDockOnRight)
+        setFrames()
+        orientationDidChange()
+    }
+    
+    func setLogWindow(enabled: Bool) {
+        defaults.set(enabled, forKey: DefaultKeys.showLog)
+        exit(0)
     }
 }

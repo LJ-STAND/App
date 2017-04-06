@@ -102,6 +102,8 @@ depends-member:
 - !private ["Ps19BinaryFloatingPoint", "pi"]
 - !private ["C3iOS19BluetoothController", "connected"]
 - !private ["C3iOS19BluetoothController", "shared"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "connected"]
+- !private ["P3iOS31BluetoothControllerSendDelegate", "shared"]
 - !private ["P3iOS23BluetoothSerialDelegate", "connected"]
 - !private ["P3iOS23BluetoothSerialDelegate", "shared"]
 - !private ["Sb", "_getBuiltinLogicValue"]
@@ -850,6 +852,7 @@ depends-nominal:
 - "Ps23BidirectionalCollection"
 - !private "Ps19BinaryFloatingPoint"
 - !private "C3iOS19BluetoothController"
+- !private "P3iOS31BluetoothControllerSendDelegate"
 - !private "P3iOS23BluetoothSerialDelegate"
 - !private "Sb"
 - "PSo15CALayerDelegate"
@@ -939,6 +942,12 @@ depends-external:
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKKit.framework/Headers/MKKit-Swift.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKKit.framework/Headers/MKKit.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKKit.framework/Modules/module.modulemap"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Modules/MKUIKit.swiftmodule/arm64.swiftmodule"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/MKUIKit-Swift.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/CRToastManager.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/CRToastConfig.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/MKUIKit.h"
+- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Modules/module.modulemap"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUtilityKit.framework/Modules/MKUtilityKit.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AVFoundation.swiftmodule"
 - "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/AudioToolbox.apinotesc"
@@ -966,12 +975,6 @@ depends-external:
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/RESTKit.framework/Headers/RESTKit-Swift.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/RESTKit.framework/Headers/RESTKit.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/RESTKit.framework/Modules/module.modulemap"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Modules/MKUIKit.swiftmodule/arm64.swiftmodule"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/MKUIKit-Swift.h"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/CRToastManager.h"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/CRToastConfig.h"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Headers/MKUIKit.h"
-- "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/MKUIKit.framework/Modules/module.modulemap"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Modules/Chameleon.swiftmodule/arm64.swiftmodule"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon-Swift.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/UIAppearance+Swift.h"
@@ -990,10 +993,4 @@ depends-external:
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon_.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Headers/Chameleon.h"
 - "/Users/jamesyelland/Developer/git/Robotics/Apps/Carthage/Build/iOS/Chameleon.framework/Modules/module.modulemap"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.apinotesc"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SceneKit.apinotesc"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/GLKit.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/simd.swiftmodule"
-- "/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/WebKit.apinotesc"
 interface-hash: "2b83f7e57ec5e610e18fe40a07908f7c"

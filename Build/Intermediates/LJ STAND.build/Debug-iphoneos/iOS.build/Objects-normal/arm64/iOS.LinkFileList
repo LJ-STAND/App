@@ -1,4 +1,3 @@
-/Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/DesignTableViewController.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/AppDelegate.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/UIViewController.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/LightSensorView.o
@@ -11,14 +10,12 @@
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/CompassViewController.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/BluetoothSerial.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/UIBezierPath.o
-/Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/PartDetailViewController.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/UIView.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/CompassView.o
-/Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/PartsListTableViewController.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/AuthorizeBluetoothViewController.o
-/Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/ModelViewController.o
-/Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/Part.o
+/Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/BluetoothController+Sending.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/SettingsTableViewController.o
+/Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/AppSettingsProtocol.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/NotificationKeys.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/BackgroundViewController.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/DefaultKeys.o
@@ -28,8 +25,6 @@
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/TypeAlias.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/BluetoothDataType.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/MKKitExt.o
-/Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/WebViewController.o
-/Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/PartParser.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/TSOPViewController.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/TSOPRingView.o
 /Users/jamesyelland/Developer/git/Robotics/Apps/Build/Intermediates/LJ STAND.build/Debug-iphoneos/iOS.build/Objects-normal/arm64/BluetoothProtocols.o
