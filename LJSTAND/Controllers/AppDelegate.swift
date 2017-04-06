@@ -52,11 +52,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BluetoothController.shared.messageDelegate = self
         BluetoothController.shared.bluetoothDebug = false
         
-        let bluetoothPermission = MKUPermission.bluetooth
+        let bluetooth = MKUPermission.bluetooth
+        let status = bluetooth.status
         
-        if bluetoothPermission.status != .authorized {
-            addWindow(viewName: "Auth Bluetooth")
+        if status == .denied || status == .disabled || status == .notDetermined {
+            BluetoothController.shared.overrideConnect = true
         }
+
 
         return performShortcutDelegate
     }
