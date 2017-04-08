@@ -1,5 +1,0 @@
-version: "Apple Swift version 3.0.2 (swiftlang-800.0.63 clang-800.0.42.1)"
-options: "100d56229a3c06e30bfa1685f0d29062"
-build_time: [543556903, 775565000]
-inputs:
-  "/Users/jamesyelland/Developer/git/Robotics/Apps/iOS/Carthage/Checkouts/Chameleon-Swift3.0.2/Pod/Classes/Swift/ChameleonShorthand.swift": [541815013, 0]
