@@ -18,6 +18,8 @@ class LightSensorViewController: UIViewController, ResizableViewController {
     
     var lightSensView: lightSensorView!
     
+    var windowView: WindowView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         BluetoothController.shared.lightSensDelegate = self
@@ -26,7 +28,11 @@ class LightSensorViewController: UIViewController, ResizableViewController {
         
         lightSensView = lightSensorView(frame: calculateFrame())
         
-        self.view.addSubview(lightSensView)
+        windowView = WindowView(frame: self.view.frame)
+        self.view = windowView
+        
+        windowView.contentView = lightSensView
+        windowView.title = "LIGHT"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,7 +48,7 @@ class LightSensorViewController: UIViewController, ResizableViewController {
     }
     
     func windowWasResized() {
-        lightSensView.frame = calculateFrame()
+        windowView.resize()
         lightSensView.setNeedsDisplay()
     }
 }

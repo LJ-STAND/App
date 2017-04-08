@@ -18,6 +18,7 @@ class TSOPViewController: UIViewController, ResizableViewController {
     internal var tappedButton: UIButton?
     
     var tsopView: TSOPRingView!
+    var windowView: WindowView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,11 @@ class TSOPViewController: UIViewController, ResizableViewController {
         
         tsopView = TSOPRingView(frame: calculateFrame())
         
-        self.view.addSubview(tsopView)
+        windowView = WindowView(frame: self.view.frame)
+        self.view = windowView
+        
+        windowView.contentView = tsopView
+        windowView.title = "TSOP"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -33,7 +38,7 @@ class TSOPViewController: UIViewController, ResizableViewController {
     }
     
     func windowWasResized() {
-        tsopView.frame = calculateFrame()
+        windowView.resize()
         tsopView.setNeedsDisplay()
     }
     

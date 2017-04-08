@@ -36,17 +36,16 @@ class CompassView: View {
     }
     
     override func draw(_ rect: CGRect) {
-        let backgroundPath = BezierPath(rect: rect)
-        Color.white.setFill()
-        backgroundPath.fill()
+        let maxSize = min(rect.size.width, rect.size.height)
+        let square = CGRect(x: rect.origin.x + rect.size.width / 2 - maxSize / 2, y: rect.origin.y + rect.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
+        let path = BezierPath(ovalIn: CGRect(origin: CGPoint(x: square.origin.x + 0.05 * square.size.width, y: square.origin.y + 0.05 * square.size.width), size: CGSize(width: 0.9 * square.size.width, height: 0.9 * square.size.height)))
         
-        let path = BezierPath(ovalIn: CGRect(origin: CGPoint(x: rect.origin.x + 0.05 * rect.size.width, y: rect.origin.y + 0.05 * rect.size.width), size: CGSize(width: 0.9 * rect.size.width, height: 0.9 * rect.size.height)))
-        Color.black.setStroke()
+        Color.white.setStroke()
         path.lineWidth = 3
         path.stroke()
         
         if !BluetoothController.shared.connected {
-            let ovalRect = rect.insetBy(dx: 0.9 * (rect.size.width / 2), dy: 0.9 * (rect.size.height / 2))
+            let ovalRect = square.insetBy(dx: 0.9 * (square.size.width / 2), dy: 0.9 * (square.size.height / 2))
             let ovalPath = BezierPath(ovalIn: ovalRect)
             ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*(Double.pi / 4)))))
 
@@ -67,7 +66,7 @@ class CompassView: View {
             
             let angleRadians = degToRad((360 - needleAngle) - 90)
             
-            let needleRadius = (0.8 * Double(self.frame.width)) / 2
+            let needleRadius = (0.8 * Double(square.size.width)) / 2
             let xPoint = xCenter + (needleRadius * sin(angleRadians))
             let yPoint = yCenter + (needleRadius * cos(angleRadians))
             

@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var shortcutItem: UIApplicationShortcutItem?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+        let fontURL = Bundle.main.url(forResource: "Dosis-Light", withExtension: "ttf")
+        CTFontManagerRegisterFontsForURL(fontURL! as CFURL, CTFontManagerScope.process, nil)
         
         setUpWindows()
         
@@ -65,11 +67,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setUpWindows() {
         setFrames()
         
-        dock = UIWindow(frame: dockFrame)
-        dock?.windowLevel = 3
-        dock?.rootViewController = viewController(fromStoryboardWithName: "Dock", viewControllerWithIdentifier: "init")
-        dock?.isHidden = false
-        dock?.backgroundColor = .clear
+//        dock = UIWindow(frame: dockFrame)
+//        dock?.windowLevel = 3
+//        dock?.rootViewController = viewController(fromStoryboardWithName: "Dock", viewControllerWithIdentifier: "init")
+//        dock?.isHidden = false
+//        dock?.backgroundColor = .clear
         
         let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
         window = UIWindow(frame: windowFrame)
@@ -91,17 +93,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setFrames() {
         let screenBounds = UIScreen.main.bounds
-        let dockWidth = 100
+//        let dockWidth = 100
+//        
+//        let isDockOnRight = defaults.bool(forKey: DefaultKeys.isDockOnRight)
+//        
+//        if isDockOnRight == true {
+//            windowFrame = CGRect(x: 0, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
+//            dockFrame = CGRect(x: (Int(screenBounds.width) - dockWidth), y: 0, width: dockWidth, height: Int(screenBounds.height))
+//        } else {
+//            dockFrame = CGRect(x: 0, y: 0, width: dockWidth, height: Int(screenBounds.height))
+//            windowFrame = CGRect(x: dockWidth, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
+//        }
         
-        let isDockOnRight = defaults.bool(forKey: DefaultKeys.isDockOnRight)
-        
-        if isDockOnRight == true {
-            windowFrame = CGRect(x: 0, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
-            dockFrame = CGRect(x: (Int(screenBounds.width) - dockWidth), y: 0, width: dockWidth, height: Int(screenBounds.height))
-        } else {
-            dockFrame = CGRect(x: 0, y: 0, width: dockWidth, height: Int(screenBounds.height))
-            windowFrame = CGRect(x: dockWidth, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
-        }
+        windowFrame = CGRect(x: 0.0, y: 0.0, width: screenBounds.width, height: screenBounds.height)
     }
     
     func orientationDidChange() {

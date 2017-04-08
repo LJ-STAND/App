@@ -34,29 +34,27 @@ class lightSensorView: View {
     }
     
     override func draw(_ rect: CGRect) {
-        let path = BezierPath(rect: rect)
-        Color.white.setFill()
-        
-        path.fill()
+        let maxSize = min(rect.size.width, rect.size.height)
+        let square = CGRect(x: rect.origin.x + rect.size.width / 2 - maxSize / 2, y: rect.origin.y + rect.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
         
         let numberOfLights = 24
         
-        let radOfLight = Double(self.frame.width / 24)
+        let radOfLight = Double(square.size.width / 20)
         let offset = radOfLight / 2.0
         
         let interval = Double(360 / numberOfLights)
-        let hypt = Double(self.frame.width/2) - radOfLight
+        let hypt = Double(square.size.width / 2) - radOfLight
         
         for i in 0..<numberOfLights {
             let angle = 360 - ((interval * Double(i)) + 90)
             let angleRad = degToRad(angle)
             
-            let xVal = (Double(self.frame.width/2) + (hypt * sin(angleRad)) - offset)
-            let yVal = (Double(self.frame.height/2) + (hypt * cos(angleRad)) - offset)
+            let xVal = (Double(square.midX) + (hypt * sin(angleRad)) - offset)
+            let yVal = (Double(square.midY) + (hypt * cos(angleRad)) - offset)
             
             let path = BezierPath(ovalIn: CGRect(x: xVal, y: yVal, width: radOfLight, height: radOfLight))
-            Color.black.setFill()
-            Color.black.setStroke()
+            Color.white.setFill()
+            Color.white.setStroke()
             
             if lights[i] {
                 path.fill()
@@ -66,7 +64,7 @@ class lightSensorView: View {
         }
         
         if !BluetoothController.shared.connected {
-            let ovalRect = rect.insetBy(dx: 0.9 * (rect.size.width / 2), dy: 0.9 * (rect.size.height / 2))
+            let ovalRect = square.insetBy(dx: 0.9 * (square.size.width / 2), dy: 0.9 * (square.size.height / 2))
             let ovalPath = BezierPath(ovalIn: ovalRect)
             ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*(Double.pi / 4)))))
             
