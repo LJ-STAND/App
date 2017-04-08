@@ -39,6 +39,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
     var resizeAxis: WMResizeAxis = WMResizeAxis.wmResizeNone
     var title: String?
     var windowButtons: Array<UIButton>?
+    var resizeButtons: Array<UIButton>?
     var maximized: Bool = false
     var minSize: CGSize = CGSize(width: kWindowButtonFrameSize * 5 + kWindowResizeGutterSize * 2, height: kWindowResizeGutterKnobSize + kWindowResizeGutterSize * 2)
     
@@ -144,7 +145,6 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
             self.frame = CGRectMake(-kWindowResizeGutterSize,  -kWindowResizeGutterSize, rootWindow.bounds.size.width+(kWindowResizeGutterSize*2), rootWindow.bounds.size.height+(kWindowResizeGutterSize*2))
         } else {
             self.frame = _savedFrame
-            
         }
         
         if let navVC = self.rootViewController as? UINavigationController {
@@ -263,7 +263,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
             }
         } else if recognizer.state == .changed {
             if _inWindowMove {
-                self.frame = CGRectMake(gp.x-_originPoint.x, min(max(gp.y-_originPoint.y, kWindowResizeGutterSize), UIScreen.main.bounds.height - (kWindowButtonFrameSize + kWindowResizeGutterSize)), self.frame.size.width, self.frame.size.height)
+                self.frame = CGRectMake(gp.x-_originPoint.x, min(max(gp.y-_originPoint.y, 0), UIScreen.main.bounds.height - (kWindowButtonFrameSize + kWindowResizeGutterSize)), self.frame.size.width, self.frame.size.height)
                
                 if let navVC = self.rootViewController as? UINavigationController {
                     if let viewController = navVC.visibleViewController as? ResizableViewController {

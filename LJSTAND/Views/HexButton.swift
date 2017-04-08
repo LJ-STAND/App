@@ -56,7 +56,7 @@ class HexButton: UIButton {
         style.alignment = NSTextAlignment.center
         style.lineBreakMode = NSLineBreakMode.byTruncatingTail
         
-        let font = UIFont.systemFont(ofSize: frame.height / 8)
+        let font = UIFont.systemFont(ofSize: frame.height / 10)
         
         let attributes: [String : Any] = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName : font, NSParagraphStyleAttributeName : style]
         let string = text as NSString

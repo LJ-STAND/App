@@ -66,73 +66,82 @@ extension BluetoothController: BluetoothSerialDelegate {
     
         textRecieved += message
         
-        if textRecieved.contains("-") {
-            let matched = matches(for: "(-[^-]+-)", in: textRecieved)
-            if matched.count > 0 {
-                let strToProcess = matched[0].replacingOccurrences(of: "-", with: "")
-                textRecieved = ""
+        let matched = matches(for: "(-[^-]+-)", in: textRecieved)
+        
+        for match: String in matched {
+            let strToProcess = match.replacingOccurrences(of: "-", with: "")
+        
+            let processed = processString(str: strToProcess)
             
-                let processed = processString(str: strToProcess)
+            switch processed.0 {
+            case .noDataType:
+                serialDelegate?.hasNewOutput("No Data Type: \(processed.1)")
                 
-                switch processed.0 {
-                case .noDataType:
-                    serialDelegate?.hasNewOutput("No Data Type: \(processed.1)")
+            case .info:
+                serialDelegate?.hasNewOutput(processed.1)
+                
+            case .compass:
+                let angle = processed.1
+                
+                guard let ang = Double(angle) else {
+                    break
+                }
+                
+                compassDelegate?.hasNewHeading(ang)
+                
+            case .light:
+                let boolArr = Array(processed.1.characters)
+                
+                if boolArr.count == 12 {
+                    var sensorStatus: [Int] = []
                     
-                case .info:
-                    serialDelegate?.hasNewOutput(processed.1)
-                    
-                case .compass:
-                    let angle = processed.1
-                    
-                    guard let ang = Double(angle) else {
-                        return
-                    }
-                    
-                    compassDelegate?.hasNewHeading(ang)
-                    
-                case .light:
-                    let boolArr = Array(processed.1.characters)
-                    
-                    if boolArr.count == 12 {
-                        var sensorStatus: [Int] = []
+                    for i in 0...11 {
+                        let item = boolArr[i]
+                        let intValue = Int(String(item))
                         
-                        for i in 0...11 {
-                            let item = boolArr[i]
-                            let intValue = Int(String(item))
-                            
-                            if intValue == 1 {
-                                sensorStatus.append(1)
-                                sensorStatus.append(0)
-                            } else if intValue == 2 {
-                                sensorStatus.append(0)
-                                sensorStatus.append(1)
-                            } else if intValue == 3 {
-                                sensorStatus.append(1)
-                                sensorStatus.append(1)
-                            } else {
-                                sensorStatus.append(0)
-                                sensorStatus.append(0)
-                            }
-                            
-                            var sensorNumbers: [Int] = []
-                            
-                            if sensorStatus.count == 24 {
-                                for i in 0...23 {
-                                    let value = sensorStatus[i]
-                                    
-                                    if value == 1 {
-                                        sensorNumbers.append(i)
-                                    }
-                                }
+                        if intValue == 1 {
+                            sensorStatus.append(1)
+                            sensorStatus.append(0)
+                        } else if intValue == 2 {
+                            sensorStatus.append(0)
+                            sensorStatus.append(1)
+                        } else if intValue == 3 {
+                            sensorStatus.append(1)
+                            sensorStatus.append(1)
+                        } else {
+                            sensorStatus.append(0)
+                            sensorStatus.append(0)
+                        }
+                        
+                        var sensorNumbers: [Int] = []
+                        
+                        if sensorStatus.count == 24 {
+                            for i in 0...23 {
+                                let value = sensorStatus[i]
                                 
-                                lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers)
+                                if value == 1 {
+                                    sensorNumbers.append(i)
+                                }
                             }
+                            
+                            lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers)
                         }
                     }
-                default:
-                    MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")
                 }
+            default:
+                MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")
             }
+        }
+        
+        let comps = textRecieved.components(separatedBy: "-")
+        
+        if comps.count > 1 {
+            if comps[comps.count - 2] == "" && comps.last == "" {
+                textRecieved = "-"
+            } else {
+                textRecieved = "-" + comps.last!
+            }
+
         }
     }
     
