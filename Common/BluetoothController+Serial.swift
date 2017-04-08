@@ -138,10 +138,11 @@ extension BluetoothController: BluetoothSerialDelegate {
         if comps.count > 1 {
             if comps[comps.count - 2] == "" && comps.last == "" {
                 textRecieved = "-"
-            } else {
+            } else if comps.last != "" {
                 textRecieved = "-" + comps.last!
+            } else {
+                textRecieved = ""
             }
-
         }
     }
     
