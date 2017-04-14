@@ -27,11 +27,9 @@ class BackgroundViewController: UIViewController {
             
             generateConstraints(superView: view, subView: logView)
             
-            
             for subview in logView.subviews {
                 subview.backgroundColor = .clear
             }
-            
             
             let blurEffect = UIBlurEffect(style: .dark)
             let blurView = UIVisualEffectView(effect: blurEffect)
@@ -42,10 +40,9 @@ class BackgroundViewController: UIViewController {
             
             view.sendSubview(toBack: blurView)
             view.sendSubview(toBack: imageView)
-            
-            
-            view.layoutIfNeeded()
         }
+        
+        view.layoutIfNeeded()
     }
     
     func generateConstraints(superView: UIView, subView: UIView) {

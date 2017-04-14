@@ -15,6 +15,7 @@ class CompassViewController: UIViewController, ResizableViewController {
     internal var tappedButton: UIButton?
 
     var compass: CompassView!
+    var windowView: WindowView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +23,14 @@ class CompassViewController: UIViewController, ResizableViewController {
         BluetoothController.shared.compassDelegate = self
         
         super.viewDidLoad()
-        
+
         compass = CompassView(frame: calculateFrame())
         
-        self.view.addSubview(compass)
+        windowView = WindowView(frame: self.view.frame)
+        self.view = windowView
+        
+        windowView.contentView = compass
+        windowView.title = "COMPASS"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -41,7 +46,7 @@ class CompassViewController: UIViewController, ResizableViewController {
     }
     
     func windowWasResized() {
-        compass.frame = calculateFrame()
+        windowView.resize()
         compass.setNeedsDisplay()
     }
 }

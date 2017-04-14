@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,65 +20,7 @@
                     <view key="view" contentMode="scaleToFill" id="tnP-hh-05t">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="D9q-hX-ULH">
-                                <rect key="frame" x="8" y="20" width="359" height="647"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZu-z9-Gie" customClass="HexButton" customModule="iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="129.5"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Serial"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="serialAction:" destination="Hds-tK-bSw" eventType="touchUpInside" id="6Mi-fa-bDK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctq-d9-8x2" customClass="HexButton" customModule="iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="129.5" width="359" height="129.5"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="TSOP"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="tsopAction:" destination="Hds-tK-bSw" eventType="touchUpInside" id="Cgv-3z-8Bt"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csz-YJ-F98" customClass="HexButton" customModule="iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="259" width="359" height="129"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Light"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="lightAction:" destination="Hds-tK-bSw" eventType="touchUpInside" id="7CO-GA-zVg"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7om-Zu-CsK" customClass="HexButton" customModule="iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="388" width="359" height="129.5"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Compass"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="compassAction:" destination="Hds-tK-bSw" eventType="touchUpInside" id="CSp-9b-uEW"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LJ9-hr-yeL" customClass="HexButton" customModule="iOS" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="517.5" width="359" height="129.5"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="text" value="Settings"/>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="settingsAction:" destination="Hds-tK-bSw" eventType="touchUpInside" id="xTV-xM-cCi"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="N1j-xz-rAf" firstAttribute="top" secondItem="D9q-hX-ULH" secondAttribute="bottom" id="2PK-3v-9Uu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="D9q-hX-ULH" secondAttribute="trailing" constant="-8" id="6rC-0z-7HY"/>
-                            <constraint firstItem="D9q-hX-ULH" firstAttribute="leading" secondItem="tnP-hh-05t" secondAttribute="leadingMargin" constant="-8" id="Fwu-DZ-VC1"/>
-                            <constraint firstItem="D9q-hX-ULH" firstAttribute="top" secondItem="zW3-RY-AMe" secondAttribute="bottom" id="JsE-G8-gga"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bM8-G9-FAm" userLabel="First Responder" sceneMemberID="firstResponder"/>

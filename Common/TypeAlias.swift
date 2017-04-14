@@ -14,10 +14,22 @@ import Foundation
     typealias View = NSView
     typealias BezierPath = NSBezierPath
     typealias Point = NSPoint
+    typealias Rect = NSRect
 #else
     import UIKit
     typealias Color = UIColor
     typealias View = UIView
     typealias BezierPath = UIBezierPath
     typealias Point = CGPoint
+    typealias Rect = CGRect
 #endif
+
+
+
+func RectFill(_ rect: Rect) {
+    #if os(macOS)
+    NSRectFill(rect)
+    #else
+    UIRectFill(rect)
+    #endif
+}

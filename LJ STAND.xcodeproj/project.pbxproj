@@ -11,6 +11,10 @@
 		4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581C1A4891F43E30617A28DB /* LaunchScreen.xib */; };
 		CD29B26E1E48076A00EEF6B7 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD29B26D1E48076A00EEF6B7 /* BackgroundViewController.swift */; };
 		CD2A02941E46EB080037C8E5 /* ResizableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */; };
+		CD2B605F1E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */; };
+		CD2B60601E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */; };
+		CD2B60621E98F55D00A6B1E1 /* CenteredTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2B60611E98F55D00A6B1E1 /* CenteredTextView.swift */; };
+		CD2B60651E99015900A6B1E1 /* WindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2B60641E99015900A6B1E1 /* WindowView.swift */; };
 		CD7C1EBB1E4753DE006F8512 /* HexButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C1EBA1E4753DE006F8512 /* HexButton.swift */; };
 		CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */; };
 		D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE59898617C260F3B4780CF /* Images.xcassets */; };
@@ -109,6 +113,9 @@
 		C8E706015D603F83004748A1 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD29B26D1E48076A00EEF6B7 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundViewController.swift; path = LJSTAND/Views/BackgroundViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewController.swift; sourceTree = "<group>"; };
+		CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Light.ttf"; sourceTree = "<group>"; };
+		CD2B60611E98F55D00A6B1E1 /* CenteredTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredTextView.swift; sourceTree = "<group>"; };
+		CD2B60641E99015900A6B1E1 /* WindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowView.swift; sourceTree = "<group>"; };
 		CD7C1EBA1E4753DE006F8512 /* HexButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexButton.swift; path = LJSTAND/Views/HexButton.swift; sourceTree = SOURCE_ROOT; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		EF156E9E1E8390DD00D825F7 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
@@ -228,6 +235,7 @@
 		4A3FAAA8F24E251A68153041 = {
 			isa = PBXGroup;
 			children = (
+				CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */,
 				EFED2C941E7F49CF00E02440 /* Common */,
 				AB3793622466EE2A02CBADDD /* iOS */,
 				EFED2C7F1E7F497300E02440 /* macOS */,
@@ -318,6 +326,8 @@
 				EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */,
 				EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */,
 				EFC49C8C1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift */,
+				CD2B60611E98F55D00A6B1E1 /* CenteredTextView.swift */,
+				CD2B60641E99015900A6B1E1 /* WindowView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -573,6 +583,7 @@
 				D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */,
 				EF1E98401E61019D00C70420 /* Dock.storyboard in Resources */,
 				0FE982DBB7126C7560A3FE1B /* Main.storyboard in Resources */,
+				CD2B605F1E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */,
 				4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -590,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFED2C851E7F497300E02440 /* Assets.xcassets in Resources */,
+				CD2B60601E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */,
 				EFED2C881E7F497300E02440 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -694,8 +706,10 @@
 				EFED2CA21E7F4A1800E02440 /* MKKitExt.swift in Sources */,
 				EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */,
 				EFED2CB71E7F601900E02440 /* TSOPRingView.swift in Sources */,
+				CD2B60621E98F55D00A6B1E1 /* CenteredTextView.swift in Sources */,
 				EFA2DEE51E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */,
 				CD7C1EBB1E4753DE006F8512 /* HexButton.swift in Sources */,
+				CD2B60651E99015900A6B1E1 /* WindowView.swift in Sources */,
 				EFA2DEE81E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

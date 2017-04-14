@@ -13,6 +13,8 @@ class LightSensorViewController: NSViewController {
     
     override func viewDidLoad() {
         BluetoothController.shared.lightSensDelegate = self
+        lsView.drawBackground = true
+        lsView.setNeedsDisplay(lsView.bounds)
     }
     
     deinit {

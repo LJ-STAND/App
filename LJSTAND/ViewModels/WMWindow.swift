@@ -19,6 +19,7 @@ let kWindowResizeGutterSize:CGFloat = 8.0
 let kWindowResizeGutterTargetSize:CGFloat = 24.0
 let kWindowResizeGutterKnobSize:CGFloat = 48.0
 let kWindowResizeGutterKnobWidth:CGFloat = 4.0
+let kBorderWidth:CGFloat = 2.5
 
 
 func CGRectMake(_ x:CGFloat , _ y:CGFloat , _ w:CGFloat , _ h:CGFloat ) -> CGRect {
@@ -31,7 +32,6 @@ func CGSizeMake(_ w:CGFloat , _ h:CGFloat ) -> CGSize {
 
 
 class WMWindow : UIWindow, UIGestureRecognizerDelegate {
-    
     var _savedFrame: CGRect = CGRect.zero
     var _inWindowMove: Bool = false
     var _inWindowResize: Bool = false
@@ -47,56 +47,30 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         self.windowButtons = Array()
         var windowButton: UIButton = UIButton(type: .custom)
         
-        windowButton.frame = CGRectMake(kWindowResizeGutterSize, kWindowResizeGutterSize, kWindowButtonFrameSize, kWindowButtonFrameSize)
+        windowButton.frame = CGRectMake(self.bounds.width - kWindowResizeGutterSize - kWindowButtonFrameSize, kWindowResizeGutterSize, kWindowButtonFrameSize, kWindowButtonFrameSize)
         windowButton.contentMode = .center
         windowButton.adjustsImageWhenHighlighted = true
         windowButton.addTarget(self, action: #selector(WMWindow.close(_:)), for: .touchUpInside)
-        var fillColor: UIColor = UIColor(red: 0.953, green: 0.278, blue: 0.275, alpha: 1.000)
-        var strokeColor: UIColor = UIColor(red: 0.839, green: 0.188, blue: 0.192, alpha: 1.000)
+        var fillColor: UIColor = UIColor.white//UIColor(red: 0.953, green: 0.278, blue: 0.275, alpha: 1.000)
+        var strokeColor: UIColor = UIColor.white//UIColor(red: 0.839, green: 0.188, blue: 0.192, alpha: 1.000)
         var inactiveFillColor: UIColor = UIColor(white: 0.765, alpha: 1.000)
         var inactiveStrokeColor: UIColor = UIColor(white: 0.608, alpha: 1.000)
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(kWindowButtonSize, kWindowButtonSize), false, UIScreen.main.scale)
         fillColor.setFill()
         strokeColor.setStroke()
-        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).fill()
-        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).stroke()
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 1, y: 1))
+        path.addLine(to: CGPoint(x: kWindowButtonSize-1, y: kWindowButtonSize-1))
+        path.move(to: CGPoint(x: 1, y: kWindowButtonSize-1))
+        path.addLine(to: CGPoint(x: kWindowButtonSize-1, y: 1))
+        path.stroke()
         var img = UIGraphicsGetImageFromCurrentImageContext()
         windowButton.setImage(img, for: .normal)
         UIGraphicsEndImageContext()
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(kWindowButtonSize, kWindowButtonSize), false, UIScreen.main.scale)
         inactiveFillColor.setFill()
         inactiveStrokeColor.setStroke()
-        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).fill()
-        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).stroke()
-        img = UIGraphicsGetImageFromCurrentImageContext()
-        windowButton.setImage(img, for: .disabled)
-        UIGraphicsEndImageContext()
-        self.addSubview(windowButton)
-        self.windowButtons?.append(windowButton)
-        
-        windowButton = UIButton(type: .custom)
-        windowButton.frame = CGRectMake(kWindowResizeGutterSize+12+kWindowButtonSize, kWindowResizeGutterSize, kWindowButtonFrameSize, kWindowButtonFrameSize)
-        windowButton.contentMode = .center
-        windowButton.adjustsImageWhenHighlighted = true
-        windowButton.addTarget(self, action: #selector(WMWindow.maximize(_:)), for: .touchUpInside)
-        fillColor = UIColor(red: 0.188, green: 0.769, blue: 0.196, alpha: 1.000)
-        strokeColor = UIColor(red: 0.165, green: 0.624, blue: 0.125, alpha: 1.000)
-        inactiveFillColor = UIColor(white: 0.765, alpha: 1.000)
-        inactiveStrokeColor = UIColor(white: 0.608, alpha: 1.000)
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(kWindowButtonSize, kWindowButtonSize), false, UIScreen.main.scale)
-        fillColor.setFill()
-        strokeColor.setStroke()
-        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).fill()
-        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).stroke()
-        img = UIGraphicsGetImageFromCurrentImageContext()
-        windowButton.setImage(img, for: .normal)
-        UIGraphicsEndImageContext()
-        UIGraphicsBeginImageContextWithOptions(CGSizeMake(kWindowButtonSize, kWindowButtonSize), false, UIScreen.main.scale)
-        inactiveFillColor.setFill()
-        inactiveStrokeColor.setStroke()
-        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).fill()
-        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).stroke()
-        
+        path.stroke()
         img = UIGraphicsGetImageFromCurrentImageContext()
         windowButton.setImage(img, for: .disabled)
         UIGraphicsEndImageContext()
@@ -263,7 +237,9 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
             }
         } else if recognizer.state == .changed {
             if _inWindowMove {
-                self.frame = CGRectMake(gp.x-_originPoint.x, min(max(gp.y-_originPoint.y, 0), UIScreen.main.bounds.height - (kWindowButtonFrameSize + kWindowResizeGutterSize)), self.frame.size.width, self.frame.size.height)
+                let minY = CGFloat(0)
+                
+                self.frame = CGRectMake(gp.x-_originPoint.x, min(max(gp.y-_originPoint.y, minY), UIScreen.main.bounds.height - (kWindowButtonFrameSize + kWindowResizeGutterSize)), self.frame.size.width, self.frame.size.height)
                
                 if let navVC = self.rootViewController as? UINavigationController {
                     if let viewController = navVC.visibleViewController as? ResizableViewController {
@@ -300,7 +276,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         let contentBounds: CGRect = self.rootViewController!.view.bounds
         let contentFrame: CGRect = CGRectMake(self.bounds.origin.x+kWindowResizeGutterSize, self.bounds.origin.y+kWindowResizeGutterSize, self.bounds.size.width-(kWindowResizeGutterSize*2), self.bounds.size.height-(kWindowResizeGutterSize*2))
         let maskLayer: CAShapeLayer = CAShapeLayer()
-        maskLayer.path = UIBezierPath(roundedRect: contentBounds, byRoundingCorners: [.topLeft, .topRight, .bottomLeft, .bottomRight], cornerRadii: CGSizeMake(8.0, 8.0)).cgPath
+        maskLayer.path = UIBezierPath(rect: contentBounds).cgPath//, byRoundingCorners: [.topLeft, .topRight, .bottomLeft, .bottomRight], cornerRadii: CGSizeMake(8.0, 8.0)).cgPath
         maskLayer.frame = contentBounds
         self.rootViewController?.view.layer.mask = maskLayer
         self.layer.shadowPath = UIBezierPath(roundedRect: contentFrame, byRoundingCorners: [.topLeft, .topRight, .bottomLeft, .bottomRight], cornerRadii: CGSizeMake(8.0, 8.0)).cgPath
@@ -314,6 +290,10 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
     }
     
     override func draw(_ rect: CGRect) {
+        windowButtons?[0].frame = CGRectMake(self.bounds.width - kWindowResizeGutterSize - kWindowButtonFrameSize, kWindowResizeGutterSize, kWindowButtonFrameSize, kWindowButtonFrameSize)
+        
+        UIColor.white.setStroke()
+        
         if self.isKeyWindow && !self.maximized {
             if _inWindowResize {
                 let leftResizeRect: CGRect = CGRectMake(self.bounds.origin.x, self.bounds.origin.y+kWindowResizeGutterSize, kWindowResizeGutterSize, self.bounds.size.height-(kWindowResizeGutterSize*2))
@@ -331,10 +311,28 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
                     UIBezierPath(roundedRect: bottomResizeRect, cornerRadius: 3.0).fill()
                 }
             }
-            UIColor(white: 1, alpha: 0.3).setFill()
-            UIBezierPath(roundedRect: CGRectMake(self.bounds.midX-kWindowResizeGutterKnobSize/2, self.bounds.maxY-kWindowResizeGutterKnobWidth-(kWindowResizeGutterSize-kWindowResizeGutterKnobWidth)/2, kWindowResizeGutterKnobSize, kWindowResizeGutterKnobWidth), cornerRadius: 2).fill()
-            UIBezierPath(roundedRect: CGRectMake((kWindowResizeGutterSize-kWindowResizeGutterKnobWidth)/2, self.bounds.midY-kWindowResizeGutterKnobSize/2, kWindowResizeGutterKnobWidth, kWindowResizeGutterKnobSize), cornerRadius: 2).fill()
-            UIBezierPath(roundedRect: CGRectMake(self.bounds.maxX-kWindowResizeGutterKnobWidth-(kWindowResizeGutterSize-kWindowResizeGutterKnobWidth)/2, self.bounds.midY-kWindowResizeGutterKnobSize/2, kWindowResizeGutterKnobWidth, kWindowResizeGutterKnobSize), cornerRadius: 2).fill()
+            
+            let contentFrame: CGRect = CGRectMake(self.bounds.origin.x+kWindowResizeGutterSize, self.bounds.origin.y+kWindowResizeGutterSize, self.bounds.size.width-(kWindowResizeGutterSize*2), self.bounds.size.height-(kWindowResizeGutterSize*2))
+            let borderPath = UIBezierPath(rect: contentFrame)
+            borderPath.lineWidth = kBorderWidth
+            borderPath.stroke()
+            
+            let bottomPath = UIBezierPath(rect: CGRectMake(self.bounds.midX-kWindowResizeGutterKnobSize/2, self.bounds.maxY-kWindowResizeGutterKnobWidth-(kWindowResizeGutterSize-kWindowResizeGutterKnobWidth)/2 - (kBorderWidth), kWindowResizeGutterKnobSize, kWindowResizeGutterKnobWidth + kBorderWidth))
+            bottomPath.lineWidth = kBorderWidth
+            bottomPath.stroke()
+            
+            let leftPath = UIBezierPath(rect: CGRectMake((kWindowResizeGutterSize-kWindowResizeGutterKnobWidth)/2, self.bounds.midY-kWindowResizeGutterKnobSize/2, kWindowResizeGutterKnobWidth + kBorderWidth, kWindowResizeGutterKnobSize))
+            leftPath.lineWidth = kBorderWidth
+            leftPath.stroke()
+            
+            let rightPath = UIBezierPath(rect: CGRectMake(self.bounds.maxX-kWindowResizeGutterKnobWidth-(kWindowResizeGutterSize-kWindowResizeGutterKnobWidth)/2 - (kBorderWidth), self.bounds.midY-kWindowResizeGutterKnobSize/2, kWindowResizeGutterKnobWidth + (kBorderWidth), kWindowResizeGutterKnobSize))
+            rightPath.lineWidth = kBorderWidth
+            rightPath.stroke()
+        } else {
+            let contentFrame: CGRect = CGRectMake(self.bounds.origin.x+kWindowResizeGutterSize, self.bounds.origin.y+kWindowResizeGutterSize, self.bounds.size.width-(kWindowResizeGutterSize*2), self.bounds.size.height-(kWindowResizeGutterSize*2))
+            let borderPath = UIBezierPath(rect: contentFrame)
+            borderPath.lineWidth = kBorderWidth
+            borderPath.stroke()
         }
     }
     

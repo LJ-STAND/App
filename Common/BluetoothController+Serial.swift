@@ -60,9 +60,6 @@ extension BluetoothController: BluetoothSerialDelegate {
     }
     
     func serialDidReceiveString(_ message: String) {
-        if bluetoothDebug {
-            MKULog.shared.debug("[BLUETOOTH] [CONTROLLER] String before processing: \(message)")
-        }
     
         textRecieved += message
         
@@ -70,6 +67,10 @@ extension BluetoothController: BluetoothSerialDelegate {
         
         for match: String in matched {
             let strToProcess = match.replacingOccurrences(of: "-", with: "")
+            
+            if bluetoothDebug {
+                MKULog.shared.debug("[BLUETOOTH][SERIAL] Processing: \(strToProcess)")
+            }
         
             let processed = processString(str: strToProcess)
             

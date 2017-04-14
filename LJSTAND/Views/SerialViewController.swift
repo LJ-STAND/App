@@ -18,13 +18,14 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
         return true
     }
 
-    @IBOutlet weak var serialOutputTextView: UITextView!
+    var serialOutputTextView: UITextView!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     
     var connectCount = 0
     var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
     var selectedPeripheral: CBPeripheral?
     var blinkOn: Bool = false
+    var windowView: WindowView!
     
     var enteredText: String = ""
     var previousText: String = ""
@@ -32,9 +33,17 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
     var keyboardFrame: CGRect = CGRect.zero
     
     override func viewDidLoad() {
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barStyle = .black
+        windowView = WindowView(frame: self.view.frame)
+        self.view = windowView
+        
+        serialOutputTextView = UITextView()
+        serialOutputTextView.font = UIFont(name: "Menlo", size: 17.0)
+        serialOutputTextView.textAlignment = .left
+        serialOutputTextView.textColor = UIColor.white
+        serialOutputTextView.backgroundColor = UIColor.clear
+        
+        windowView.contentView = serialOutputTextView
+        windowView.title = "SERIAL"
         
         BluetoothController.shared.serialDelegate = self
         reloadView()
@@ -43,33 +52,15 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
         
         self.automaticallyAdjustsScrollViewInsets = false
         
-        _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.blink), userInfo: nil, repeats: true)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     func keyboardWillShow(_ notification: Notification) {
-        var info = (notification as NSNotification).userInfo!
-        let value = info[UIKeyboardFrameEndUserInfoKey] as! NSValue
-        keyboardFrame = value.cgRectValue
-        
-        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
-            if let window = UIApplication.shared.keyWindow {
-                let difference = -((UIScreen.main.bounds.height - (window.frame.origin.y + window.frame.height - kWindowResizeGutterSize)) - self.keyboardFrame.size.height)
-                self.bottomConstraint.constant = difference > 0 ? difference : 0
-            }
-        }, completion: { Bool -> Void in
-            self.serialOutputTextView.scrollToBottom()
-        })
+        self.serialOutputTextView.scrollToBottom()
     }
     
-    func keyboardWillHide(_ notification: Notification) {
-        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
-            self.bottomConstraint.constant = 0
-        }, completion: nil)
-        
-    }
+    func keyboardWillHide(_ notification: Notification) {}
     
     func windowWasResized() {
         if self.isFirstResponder {
@@ -142,7 +133,7 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
         if text == "\n" {
             send()
         } else {
-            enteredText.append(text)
+            enteredText.append("> " + text)
             updateText()
         }
     }
