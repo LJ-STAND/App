@@ -67,11 +67,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setUpWindows() {
         setFrames()
         
-//        dock = UIWindow(frame: dockFrame)
-//        dock?.windowLevel = 3
-//        dock?.rootViewController = viewController(fromStoryboardWithName: "Dock", viewControllerWithIdentifier: "init")
-//        dock?.isHidden = false
-//        dock?.backgroundColor = .clear
+        dock = UIWindow(frame: dockFrame)
+        dock?.windowLevel = 3
+        dock?.rootViewController = viewController(fromStoryboardWithName: "Dock", viewControllerWithIdentifier: "init")
+        dock?.isHidden = false
+        dock?.backgroundColor = .clear
         
         let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
         window = UIWindow(frame: windowFrame)
@@ -84,6 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UITabBar.appearance().tintColor = ljStandGreen
         
+        UIApplication.shared.setStatusBarHidden(true, with: UIStatusBarAnimation.none)
     }
     
     func addWindow(notification: NSNotification) {
@@ -93,10 +94,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setFrames() {
         let screenBounds = UIScreen.main.bounds
-//        let dockWidth = 100
-//        
-//        let isDockOnRight = defaults.bool(forKey: DefaultKeys.isDockOnRight)
-//        
+        
+        let dockHeight = 120.0
+        
 //        if isDockOnRight == true {
 //            windowFrame = CGRect(x: 0, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
 //            dockFrame = CGRect(x: (Int(screenBounds.width) - dockWidth), y: 0, width: dockWidth, height: Int(screenBounds.height))
@@ -104,8 +104,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            dockFrame = CGRect(x: 0, y: 0, width: dockWidth, height: Int(screenBounds.height))
 //            windowFrame = CGRect(x: dockWidth, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
 //        }
-        
-        windowFrame = CGRect(x: 0.0, y: 0.0, width: screenBounds.width, height: screenBounds.height)
+        dockFrame = CGRect(x: 0.0, y: 0.0, width: Double(screenBounds.width), height: dockHeight)
+        windowFrame = CGRect(x: 0.0, y: dockHeight, width: Double(screenBounds.width), height: Double(screenBounds.height) - dockHeight)
     }
     
     func orientationDidChange() {
