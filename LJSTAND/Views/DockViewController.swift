@@ -22,10 +22,10 @@ class DockViewController: UIViewController {
         titleView.horizontalAlignment = NSTextAlignment.left
         titleView.backgroundColor = UIColor.clear
         
-        let lineView = UIView(frame: CGRect(x: lineX, y: headerHeight, width: lineWidth, height: 1))
-        lineView.backgroundColor = UIColor.white
-        
-        view.addSubview(lineView)
+//        let lineView = UIView(frame: CGRect(x: lineX, y: headerHeight, width: lineWidth, height: 1))
+//        lineView.backgroundColor = UIColor.white
+//        
+//        view.addSubview(lineView)
         view.addSubview(titleView)
         
         let textWidth = titleView.textWidth()
@@ -65,7 +65,8 @@ class DockViewController: UIViewController {
         
         view.layoutIfNeeded()
         
-        view.backgroundColor = ljStandGreen
+        let frac = CGFloat(25)/255
+        view.backgroundColor = UIColor(red: frac, green: frac, blue: frac, alpha: 1.0)
     }
     
     func buttonPressed(_ sender: Any) {

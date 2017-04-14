@@ -52,45 +52,27 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
         
         self.automaticallyAdjustsScrollViewInsets = false
         
-        _ = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(self.blink), userInfo: nil, repeats: true)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     func keyboardWillShow(_ notification: Notification) {
-//        var info = (notification as NSNotification).userInfo!
-//        let value = info[UIKeyboardFrameEndUserInfoKey] as! NSValue
-//        keyboardFrame = value.cgRectValue
-//        
-//        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
-//            if let window = UIApplication.shared.keyWindow {
-//                let difference = -((UIScreen.main.bounds.height - (window.frame.origin.y + window.frame.height - kWindowResizeGutterSize)) - self.keyboardFrame.size.height)
-//                self.bottomConstraint.constant = difference > 0 ? difference : 0
-//            }
-//        }, completion: { Bool -> Void in
-//            self.serialOutputTextView.scrollToBottom()
-//        })
+        self.serialOutputTextView.scrollToBottom()
     }
     
-    func keyboardWillHide(_ notification: Notification) {
-//        UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
-//            self.bottomConstraint.constant = 0
-//        }, completion: nil)
-        
-    }
+    func keyboardWillHide(_ notification: Notification) {}
     
     func windowWasResized() {
-//        if self.isFirstResponder {
-//            UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
-//                if let window = UIApplication.shared.keyWindow {
-//                    let difference = -((UIScreen.main.bounds.height - (window.frame.origin.y + window.frame.height - kWindowResizeGutterSize)) - self.keyboardFrame.size.height)
-//                    self.bottomConstraint.constant = difference > 0 ? difference : 0
-//                }
-//            }, completion: { Bool -> Void in
-//                self.serialOutputTextView.scrollToBottom()
-//            })
-//        }
+        if self.isFirstResponder {
+            UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
+                if let window = UIApplication.shared.keyWindow {
+                    let difference = -((UIScreen.main.bounds.height - (window.frame.origin.y + window.frame.height - kWindowResizeGutterSize)) - self.keyboardFrame.size.height)
+                    self.bottomConstraint.constant = difference > 0 ? difference : 0
+                }
+            }, completion: { Bool -> Void in
+                self.serialOutputTextView.scrollToBottom()
+            })
+        }
     }
     
     func windowWasMoved() {

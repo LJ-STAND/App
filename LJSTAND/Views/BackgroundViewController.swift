@@ -30,17 +30,17 @@ class BackgroundViewController: UIViewController {
             for subview in logView.subviews {
                 subview.backgroundColor = .clear
             }
+            
+            let blurEffect = UIBlurEffect(style: .dark)
+            let blurView = UIVisualEffectView(effect: blurEffect)
+            
+            blurView.frame = view.frame
+            
+            view.addSubview(blurView)
+            
+            view.sendSubview(toBack: blurView)
+            view.sendSubview(toBack: imageView)
         }
-        
-        let blurEffect = UIBlurEffect(style: .dark)
-        let blurView = UIVisualEffectView(effect: blurEffect)
-        
-        blurView.frame = view.frame
-        
-        view.addSubview(blurView)
-        
-        view.sendSubview(toBack: blurView)
-        view.sendSubview(toBack: imageView)
         
         view.layoutIfNeeded()
     }
