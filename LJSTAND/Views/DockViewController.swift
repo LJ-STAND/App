@@ -34,56 +34,42 @@ class DockViewController: UIViewController {
         let buttonStart = lineX + (textWidth * 1.2)
         
         let serialButton = HexButton(frame: CGRect(x: buttonStart + buttonSpacing * 0 + (buttonSpacing - buttonWidth) / 2, y: 0, width: buttonWidth, height: view.frame.height * 0.15))
-        serialButton.text = "SERIAL"
-        serialButton.addTarget(self, action: #selector(self.serialButtonPressed(_:)), for: UIControlEvents.touchUpInside)
+        serialButton.text = "Serial"
+        serialButton.addTarget(self, action: #selector(self.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         view.addSubview(serialButton)
         
         let tsopButton = HexButton(frame: CGRect(x: buttonStart + buttonSpacing * 1 + (buttonSpacing - buttonWidth) / 2, y: 0, width: buttonWidth, height: view.frame.height * 0.15))
         tsopButton.text = "TSOP"
-        tsopButton.addTarget(self, action: #selector(self.tsopButtonPressed(_:)), for: UIControlEvents.touchUpInside)
+        tsopButton.addTarget(self, action: #selector(self.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         view.addSubview(tsopButton)
         
         let lightButton = HexButton(frame: CGRect(x: buttonStart + buttonSpacing * 2 + (buttonSpacing - buttonWidth) / 2, y: 0, width: buttonWidth, height: view.frame.height * 0.15))
-        lightButton.text = "LIGHT"
-        lightButton.addTarget(self, action: #selector(self.lightButtonPressed(_:)), for: UIControlEvents.touchUpInside)
+        lightButton.text = "Light"
+        lightButton.addTarget(self, action: #selector(self.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         view.addSubview(lightButton)
         
         let compassButton = HexButton(frame: CGRect(x: buttonStart + buttonSpacing * 3 + (buttonSpacing - buttonWidth) / 2, y: 0, width: buttonWidth, height: view.frame.height * 0.15))
-        compassButton.text = "COMPASS"
-        compassButton.addTarget(self, action: #selector(self.compassButtonPressed(_:)), for: UIControlEvents.touchUpInside)
+        compassButton.text = "Compass"
+        compassButton.addTarget(self, action: #selector(self.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         view.addSubview(compassButton)
         
         let settingsButton = HexButton(frame: CGRect(x: buttonStart + buttonSpacing * 4 + (buttonSpacing - buttonWidth) / 2, y: 0, width: buttonWidth, height: view.frame.height * 0.15))
-        settingsButton.text = "SETTINGS"
-        settingsButton.addTarget(self, action: #selector(self.settingsButtonPressed(_:)), for: UIControlEvents.touchUpInside)
+        settingsButton.text = "Settings"
+        settingsButton.addTarget(self, action: #selector(self.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         view.addSubview(settingsButton)
         
         view.layoutIfNeeded()
+        
+        view.backgroundColor = ljStandGreen
     }
     
-    func serialButtonPressed(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addWindow"), object: "Serial")
-    }
-    
-    func tsopButtonPressed(_ snder: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addWindow"), object: "TSOP")
-    }
-    
-    func lightButtonPressed(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addWindow"), object: "Light")
-    }
-    
-    func compassButtonPressed(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addWindow"), object: "Compass")
-    }
-    
-    func settingsButtonPressed(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addWindow"), object: "Settings")
+    func buttonPressed(_ sender: Any) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addWindow"), object: (sender as! HexButton).text)
     }
     
     func generateConstraints(superView: UIView, subView: UIView) {

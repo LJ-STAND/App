@@ -21,3 +21,12 @@ import Foundation
     typealias BezierPath = UIBezierPath
     typealias Point = CGPoint
 #endif
+
+
+func RectFill(_ rect: NSRect) {
+    #if os(macOS)
+    NSRectFill(rect)
+    #else
+    UIRectFill(rect)
+    #endif
+}

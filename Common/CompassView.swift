@@ -16,6 +16,7 @@ import Foundation
 
 class CompassView: View {
     var needleAngle: Double!
+    var drawBackground = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,11 +33,22 @@ class CompassView: View {
     }
     
     override func draw(_ rect: CGRect) {
+        
+        if drawBackground {
+            Color.white.setFill()
+            RectFill(rect)
+        }
+        
         let maxSize = min(rect.size.width, rect.size.height)
         let square = CGRect(x: rect.origin.x + rect.size.width / 2 - maxSize / 2, y: rect.origin.y + rect.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
         let path = BezierPath(ovalIn: CGRect(origin: CGPoint(x: square.origin.x + 0.05 * square.size.width, y: square.origin.y + 0.05 * square.size.width), size: CGSize(width: 0.9 * square.size.width, height: 0.9 * square.size.height)))
         
-        Color.white.setStroke()
+        if drawBackground {
+            Color.black.setStroke()
+        } else {
+            Color.white.setStroke()
+        }
+        
         path.lineWidth = 3
         path.stroke()
         

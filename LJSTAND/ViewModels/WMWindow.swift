@@ -77,35 +77,6 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         self.addSubview(windowButton)
         self.windowButtons?.append(windowButton)
         
-//        windowButton = UIButton(type: .custom)
-//        windowButton.frame = CGRectMake(kWindowResizeGutterSize+12+kWindowButtonSize, kWindowResizeGutterSize, kWindowButtonFrameSize, kWindowButtonFrameSize)
-//        windowButton.contentMode = .center
-//        windowButton.adjustsImageWhenHighlighted = true
-//        windowButton.addTarget(self, action: #selector(WMWindow.maximize(_:)), for: .touchUpInside)
-//        fillColor = UIColor(red: 0.188, green: 0.769, blue: 0.196, alpha: 1.000)
-//        strokeColor = UIColor(red: 0.165, green: 0.624, blue: 0.125, alpha: 1.000)
-//        inactiveFillColor = UIColor(white: 0.765, alpha: 1.000)
-//        inactiveStrokeColor = UIColor(white: 0.608, alpha: 1.000)
-//        UIGraphicsBeginImageContextWithOptions(CGSizeMake(kWindowButtonSize, kWindowButtonSize), false, UIScreen.main.scale)
-//        fillColor.setFill()
-//        strokeColor.setStroke()
-//        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).fill()
-//        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).stroke()
-//        img = UIGraphicsGetImageFromCurrentImageContext()
-//        windowButton.setImage(img, for: .normal)
-//        UIGraphicsEndImageContext()
-//        UIGraphicsBeginImageContextWithOptions(CGSizeMake(kWindowButtonSize, kWindowButtonSize), false, UIScreen.main.scale)
-//        inactiveFillColor.setFill()
-//        inactiveStrokeColor.setStroke()
-//        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).fill()
-//        UIBezierPath(ovalIn: CGRectMake(1, 1, kWindowButtonSize-2, kWindowButtonSize-2)).stroke()
-//        
-//        img = UIGraphicsGetImageFromCurrentImageContext()
-//        windowButton.setImage(img, for: .disabled)
-//        UIGraphicsEndImageContext()
-//        self.addSubview(windowButton)
-//        self.windowButtons?.append(windowButton)
-        
         let panRecognizer: UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action:#selector(WMWindow.didPan(_:)))
         panRecognizer.delegate = self
         self.addGestureRecognizer(panRecognizer)
@@ -266,7 +237,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
             }
         } else if recognizer.state == .changed {
             if _inWindowMove {
-                let minY = UIScreen.main.bounds.height * 0.15
+                let minY = CGFloat(0)
                 
                 self.frame = CGRectMake(gp.x-_originPoint.x, min(max(gp.y-_originPoint.y, minY), UIScreen.main.bounds.height - (kWindowButtonFrameSize + kWindowResizeGutterSize)), self.frame.size.width, self.frame.size.height)
                

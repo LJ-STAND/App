@@ -13,6 +13,8 @@ class TSOPViewController: NSViewController {
     
     override func viewDidLoad() {
         BluetoothController.shared.tsopDelegate = self
+        tsView.drawBackground = true
+        tsView.setNeedsDisplay(tsView.bounds)
     }
     
     deinit {

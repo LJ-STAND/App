@@ -14,6 +14,8 @@ class CompassViewController: NSViewController {
     
     override func viewDidLoad() {
         BluetoothController.shared.compassDelegate = self
+        compassView.drawBackground = true
+        compassView.setNeedsDisplay(compassView.bounds)
     }
     
     deinit {

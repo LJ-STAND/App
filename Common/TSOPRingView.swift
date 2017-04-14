@@ -16,6 +16,7 @@ import Foundation
 
 class TSOPRingView: View {
     var tsops: [Bool] = [Bool]()
+    var drawBackground = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,6 +37,10 @@ class TSOPRingView: View {
     }
     
     override func draw(_ rect: CGRect) {
+        if drawBackground {
+            Color.white.setFill()
+            RectFill(rect)
+        }
         let maxSize = min(rect.size.width, rect.size.height)
         let square = CGRect(x: rect.origin.x + rect.size.width / 2 - maxSize / 2, y: rect.origin.y + rect.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
         
@@ -55,8 +60,15 @@ class TSOPRingView: View {
             let yVal = (Double(square.midY) + (hypt * cos(angleRad)) - offset)
             
             let path = BezierPath(ovalIn: CGRect(x: xVal, y: yVal, width: radOfTSOP, height: radOfTSOP))
-            Color.white.setFill()
-            Color.white.setStroke()
+            
+            var tempColor = Color.white
+            
+            if drawBackground {
+                tempColor = .black
+            }
+            
+            tempColor.setStroke()
+            tempColor.setFill()
             
             if tsops[i] {
                 path.fill()
