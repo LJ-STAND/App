@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		0FE982DBB7126C7560A3FE1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886869AA91C9C729AA88271F /* Main.storyboard */; };
 		4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581C1A4891F43E30617A28DB /* LaunchScreen.xib */; };
-		CD29B26E1E48076A00EEF6B7 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD29B26D1E48076A00EEF6B7 /* BackgroundViewController.swift */; };
 		CD2A02941E46EB080037C8E5 /* ResizableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */; };
 		CD2B605F1E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */; };
 		CD2B60601E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */; };
 		CD2B60621E98F55D00A6B1E1 /* CenteredTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2B60611E98F55D00A6B1E1 /* CenteredTextView.swift */; };
 		CD2B60651E99015900A6B1E1 /* WindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2B60641E99015900A6B1E1 /* WindowView.swift */; };
-		CD7C1EBB1E4753DE006F8512 /* HexButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7C1EBA1E4753DE006F8512 /* HexButton.swift */; };
 		CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */; };
 		D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE59898617C260F3B4780CF /* Images.xcassets */; };
 		D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */; };
@@ -50,6 +48,8 @@
 		EFAFC6861E61068D00DB37E3 /* DockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFC6851E61068D00DB37E3 /* DockViewController.swift */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
 		EFC49C8D1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC49C8C1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift */; };
+		EFCCB5061EA0B696000F6E66 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCB5041EA0B696000F6E66 /* BackgroundViewController.swift */; };
+		EFCCB5071EA0B696000F6E66 /* HexButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCB5051EA0B696000F6E66 /* HexButton.swift */; };
 		EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */; };
 		EFE7366B1E95EB3900C8AF16 /* BluetoothController+Sending.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7366A1E95EB3900C8AF16 /* BluetoothController+Sending.swift */; };
 		EFE7366C1E95EB3C00C8AF16 /* BluetoothController+Sending.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7366A1E95EB3900C8AF16 /* BluetoothController+Sending.swift */; };
@@ -111,12 +111,10 @@
 		886869AA91C9C729AA88271F /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFE59898617C260F3B4780CF /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8E706015D603F83004748A1 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD29B26D1E48076A00EEF6B7 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundViewController.swift; path = LJSTAND/Views/BackgroundViewController.swift; sourceTree = SOURCE_ROOT; };
 		CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewController.swift; sourceTree = "<group>"; };
 		CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Light.ttf"; sourceTree = "<group>"; };
 		CD2B60611E98F55D00A6B1E1 /* CenteredTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredTextView.swift; sourceTree = "<group>"; };
 		CD2B60641E99015900A6B1E1 /* WindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowView.swift; sourceTree = "<group>"; };
-		CD7C1EBA1E4753DE006F8512 /* HexButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HexButton.swift; path = LJSTAND/Views/HexButton.swift; sourceTree = SOURCE_ROOT; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		EF156E9E1E8390DD00D825F7 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
@@ -144,8 +142,10 @@
 		EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BluetoothController+Serial.swift"; sourceTree = "<group>"; };
 		EFAFC6851E61068D00DB37E3 /* DockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockViewController.swift; sourceTree = "<group>"; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
-		EFC213881E5A636000233E6E /* LJ STAND.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = "LJ STAND.entitlements"; path = "../LJ STAND.entitlements"; sourceTree = "<group>"; };
+		EFC213881E5A636000233E6E /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
 		EFC49C8C1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeBluetoothViewController.swift; sourceTree = "<group>"; };
+		EFCCB5041EA0B696000F6E66 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
+		EFCCB5051EA0B696000F6E66 /* HexButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexButton.swift; sourceTree = "<group>"; };
 		EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		EFE7366A1E95EB3900C8AF16 /* BluetoothController+Sending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BluetoothController+Sending.swift"; sourceTree = "<group>"; };
 		EFE7366D1E95EBFD00C8AF16 /* AppSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettingsProtocol.swift; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 		EFED2C981E7F4A1800E02440 /* MKKitExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKKitExt.swift; sourceTree = "<group>"; };
 		EFED2C991E7F4A1800E02440 /* NotificationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
 		EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
-		EFED2CAC1E7F532300E02440 /* LJ STAND macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LJ STAND macOS.entitlements"; sourceTree = "<group>"; };
+		EFED2CAC1E7F532300E02440 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		EFED2CAD1E7F535500E02440 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		EFED2CB01E7F5E4700E02440 /* TypeAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		EFED2CB31E7F5E8400E02440 /* LightSensorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightSensorView.swift; sourceTree = "<group>"; };
@@ -318,8 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				EFAFC6851E61068D00DB37E3 /* DockViewController.swift */,
-				CD29B26D1E48076A00EEF6B7 /* BackgroundViewController.swift */,
-				CD7C1EBA1E4753DE006F8512 /* HexButton.swift */,
+				EFCCB5041EA0B696000F6E66 /* BackgroundViewController.swift */,
+				EFCCB5051EA0B696000F6E66 /* HexButton.swift */,
 				EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */,
 				EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */,
 				EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */,
@@ -335,7 +335,7 @@
 		AB3793622466EE2A02CBADDD /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EFC213881E5A636000233E6E /* LJ STAND.entitlements */,
+				EFC213881E5A636000233E6E /* iOS.entitlements */,
 				75D7C917E0C54D37E9FEED01 /* Extensions */,
 				C8BB61B6AAC040A7B0BF5B9C /* Protocols */,
 				924BCA1E22B5177CDCE5286D /* Models */,
@@ -344,8 +344,7 @@
 				977C38B4FBB19B1FBC4ACC8D /* Views */,
 				1071F4B8BC77949A586EFAB9 /* Resources */,
 			);
-			name = iOS;
-			path = LJSTAND;
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		AC5953FE6C17FE0FB64BBF47 /* Products */ = {
@@ -401,7 +400,7 @@
 		EFED2C7F1E7F497300E02440 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
-				EFED2CAC1E7F532300E02440 /* LJ STAND macOS.entitlements */,
+				EFED2CAC1E7F532300E02440 /* macOS.entitlements */,
 				EFED2C801E7F497300E02440 /* AppDelegate.swift */,
 				EFED2CBC1E7F649700E02440 /* InitialViewController.swift */,
 				EF156E9E1E8390DD00D825F7 /* SerialViewController.swift */,
@@ -413,8 +412,7 @@
 				EFED2C861E7F497300E02440 /* Main.storyboard */,
 				EFED2C891E7F497300E02440 /* Info.plist */,
 			);
-			name = macOS;
-			path = "LJ STAND macOS";
+			path = macOS;
 			sourceTree = "<group>";
 		};
 		EFED2C941E7F49CF00E02440 /* Common */ = {
@@ -678,6 +676,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */,
+				EFCCB5071EA0B696000F6E66 /* HexButton.swift in Sources */,
 				EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */,
 				EFED2CB41E7F5E8400E02440 /* LightSensorView.swift in Sources */,
 				EFED2C9C1E7F4A1800E02440 /* BluetoothController.swift in Sources */,
@@ -696,7 +695,6 @@
 				EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */,
 				EFE7366E1E95EBFD00C8AF16 /* AppSettingsProtocol.swift in Sources */,
 				EFED2CA41E7F4A1800E02440 /* NotificationKeys.swift in Sources */,
-				CD29B26E1E48076A00EEF6B7 /* BackgroundViewController.swift in Sources */,
 				EFED2CA01E7F4A1800E02440 /* DefaultKeys.swift in Sources */,
 				EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */,
 				EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */,
@@ -708,7 +706,7 @@
 				EFED2CB71E7F601900E02440 /* TSOPRingView.swift in Sources */,
 				CD2B60621E98F55D00A6B1E1 /* CenteredTextView.swift in Sources */,
 				EFA2DEE51E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */,
-				CD7C1EBB1E4753DE006F8512 /* HexButton.swift in Sources */,
+				EFCCB5061EA0B696000F6E66 /* BackgroundViewController.swift in Sources */,
 				CD2B60651E99015900A6B1E1 /* WindowView.swift in Sources */,
 				EFA2DEE81E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */,
 			);
@@ -761,7 +759,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "LJ STAND.entitlements";
+				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = QSCWPBA77U;
@@ -776,7 +774,7 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/LJSTAND/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -918,7 +916,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "LJ STAND.entitlements";
+				CODE_SIGN_ENTITLEMENTS = iOS/iOS.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = QSCWPBA77U;
@@ -934,7 +932,7 @@
 				);
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/LJSTAND/Resources/Other-Sources/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Resources/Other-Sources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -1002,7 +1000,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_ENTITLEMENTS = "LJ STAND macOS/LJ STAND macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1013,7 +1011,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "LJ STAND macOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -1035,7 +1033,7 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_ENTITLEMENTS = "LJ STAND macOS/LJ STAND macOS.entitlements";
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
@@ -1047,7 +1045,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "LJ STAND macOS/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
