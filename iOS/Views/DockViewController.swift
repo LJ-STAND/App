@@ -16,22 +16,27 @@ class DockViewController: UIViewController {
         let lineWidth = view.frame.width * 0.9
         let lineX = (view.frame.width - lineWidth) / 2
         
-        let titleView = CenteredTextView(frame: CGRect(x: lineX, y: 0.0, width: lineWidth, height: headerHeight))
-        titleView.text = "LJ STAND"
-        titleView.textSize = view.frame.height * 0.1
-        titleView.horizontalAlignment = NSTextAlignment.left
-        titleView.backgroundColor = UIColor.clear
+        var textWidth = CGFloat(0)
+        var buttonSpacing = ((lineWidth) / 5) + 2
+        var buttonWidth = lineWidth / 5
+        var buttonStart = lineX + (textWidth * 1.2)
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            let titleView = CenteredTextView(frame: CGRect(x: lineX, y: 0.0, width: lineWidth, height: headerHeight))
+            titleView.text = "LJ STAND"
+            titleView.textSize = view.frame.height * 0.1
+            titleView.horizontalAlignment = NSTextAlignment.left
+            titleView.backgroundColor = UIColor.clear
+            
+            view.addSubview(titleView)
+            
+            textWidth = titleView.textWidth()
+            
+            buttonSpacing = (lineWidth - (textWidth * 1.2)) / 5
+            buttonWidth = buttonSpacing * 0.7
+            buttonStart = lineX + (textWidth * 1.2)
+        }
         
-//        let lineView = UIView(frame: CGRect(x: lineX, y: headerHeight, width: lineWidth, height: 1))
-//        lineView.backgroundColor = UIColor.white
-//        
-//        view.addSubview(lineView)
-        view.addSubview(titleView)
         
-        let textWidth = titleView.textWidth()
-        let buttonSpacing = (lineWidth - (textWidth * 1.2)) / 5
-        let buttonWidth = buttonSpacing * 0.7
-        let buttonStart = lineX + (textWidth * 1.2)
         
         let serialButton = HexButton(frame: CGRect(x: buttonStart + buttonSpacing * 0 + (buttonSpacing - buttonWidth) / 2, y: 0, width: buttonWidth, height: view.frame.height * 0.15))
         serialButton.text = "Serial"
