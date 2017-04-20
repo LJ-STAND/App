@@ -51,10 +51,10 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         windowButton.contentMode = .center
         windowButton.adjustsImageWhenHighlighted = true
         windowButton.addTarget(self, action: #selector(WMWindow.close(_:)), for: .touchUpInside)
-        var fillColor: UIColor = UIColor.white//UIColor(red: 0.953, green: 0.278, blue: 0.275, alpha: 1.000)
-        var strokeColor: UIColor = UIColor.white//UIColor(red: 0.839, green: 0.188, blue: 0.192, alpha: 1.000)
-        var inactiveFillColor: UIColor = UIColor(white: 0.765, alpha: 1.000)
-        var inactiveStrokeColor: UIColor = UIColor(white: 0.608, alpha: 1.000)
+        let fillColor: UIColor = UIColor.white
+        let strokeColor: UIColor = UIColor.white
+        let inactiveFillColor: UIColor = UIColor(white: 0.765, alpha: 1.000)
+        let inactiveStrokeColor: UIColor = UIColor(white: 0.608, alpha: 1.000)
         UIGraphicsBeginImageContextWithOptions(CGSizeMake(kWindowButtonSize, kWindowButtonSize), false, UIScreen.main.scale)
         fillColor.setFill()
         strokeColor.setStroke()
@@ -240,7 +240,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
                 let minY = CGFloat(0)
                 
                 self.frame = CGRectMake(gp.x-_originPoint.x, min(max(gp.y-_originPoint.y, minY), UIScreen.main.bounds.height - (kWindowButtonFrameSize + kWindowResizeGutterSize)), self.frame.size.width, self.frame.size.height)
-               
+                
                 if let navVC = self.rootViewController as? UINavigationController {
                     if let viewController = navVC.visibleViewController as? ResizableViewController {
                         viewController.windowWasMoved?()
