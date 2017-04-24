@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var dockFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
     var windowFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
+    var appLogDelegate: AppLogDelegate?
     @nonobjc var windows: [WMWindow] = []
     
     var shortcutItem: UIApplicationShortcutItem?

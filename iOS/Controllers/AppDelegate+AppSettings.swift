@@ -17,6 +17,6 @@ extension AppDelegate: AppSettingsDelegate {
     
     func setLogWindow(enabled: Bool) {
         defaults.set(enabled, forKey: DefaultKeys.showLog)
-        exit(0)
+        (UIApplication.shared.delegate as! AppDelegate).appLogDelegate?.enableAppLogging(enabled: enabled)
     }
 }

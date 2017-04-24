@@ -12,3 +12,7 @@ protocol AppSettingsDelegate {
     func setLogWindow(enabled: Bool)
     func setDockOnRight(right: Bool)
 }
+
+protocol AppLogDelegate {
+    func enableAppLogging(enabled: Bool)
+}

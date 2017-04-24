@@ -24,14 +24,17 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Setting UI
         logWindowSwitch.isOn = defaults.bool(forKey: DefaultKeys.showLog)
         dockOnRightSwitch.isOn = defaults.bool(forKey: DefaultKeys.isDockOnRight)
+        
+        //Requesting current settings from robot and setting ble delegate
         BluetoothController.shared.sendingDelegate?.requestSettings()
         BluetoothController.shared.settingsDelegate = self
     }
 
 	@IBAction func logWindowAction(_ sender: Any) {
-        delegate.setLogWindow(enabled: (sender as! UISwitch).isOn)
+        delegate.setLogWindow(enabled: logWindowSwitch.isOn)
 	}
 	
 	@IBAction func dockOnRightAction(_ sender: Any) {
