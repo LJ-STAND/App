@@ -13,55 +13,41 @@ import MKUtilityKit
 import Chameleon
 import CoreBluetooth
 
+//Globals
 let ljStandGreen = UIColor.flatGreenDark
+let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var dock: UIWindow?
-    let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
+    
     var dockFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
     var windowFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
-    
     @nonobjc var windows: [WMWindow] = []
+    
     var shortcutItem: UIApplicationShortcutItem?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
-        let fontURL = Bundle.main.url(forResource: "Dosis-Light", withExtension: "ttf")
-        CTFontManagerRegisterFontsForURL(fontURL! as CFURL, CTFontManagerScope.process, nil)
         
+        setUpFonts()
         setUpWindows()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.orientationDidChange), name: Notification.Name.UIDeviceOrientationDidChange, object: nil)
-        
-        var performShortcutDelegate = true
-        
-        if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsKey.shortcutItem] as? UIApplicationShortcutItem {
-            
-            print("Application launched via shortcut")
-            self.shortcutItem = shortcutItem
-            
-            performShortcutDelegate = false
-        }
+        handleBluetoothStatus()
+        setUpNotifications()
         
         application.setStatusBarStyle(.lightContent, animated: false)
         
-        BluetoothController.shared.messageDelegate = self
-        BluetoothController.shared.bluetoothDebug = false
-        
-        let bluetooth = MKUPermission.bluetooth
-        let status = bluetooth.status
-        
-        if status == .denied || status == .disabled || status == .notDetermined {
-            BluetoothController.shared.overrideConnect = true
-        }
-        
-        if UIDevice.current.isSimulator == true {
-            BluetoothController.shared.overrideConnect = true
-        }
-
-        return performShortcutDelegate
+        return performShortcutDelegate(launchOptions: launchOptions)
+    }
+    
+    func setUpFonts() {
+        let fontURL = Bundle.main.url(forResource: "Dosis-Light", withExtension: "ttf")
+        CTFontManagerRegisterFontsForURL(fontURL! as CFURL, CTFontManagerScope.process, nil)
+    }
+    
+    func setUpNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.addWindow(notification:)), name: NSNotification.Name(rawValue: "addWindow"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.orientationDidChange), name: Notification.Name.UIDeviceOrientationDidChange, object: nil)
     }
     
     func setUpWindows() {
@@ -96,14 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let screenBounds = UIScreen.main.bounds
         
         let dockHeight = 120.0
-        
-//        if isDockOnRight == true {
-//            windowFrame = CGRect(x: 0, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
-//            dockFrame = CGRect(x: (Int(screenBounds.width) - dockWidth), y: 0, width: dockWidth, height: Int(screenBounds.height))
-//        } else {
-//            dockFrame = CGRect(x: 0, y: 0, width: dockWidth, height: Int(screenBounds.height))
-//            windowFrame = CGRect(x: dockWidth, y: 0, width: (Int(screenBounds.width) - dockWidth), height: Int(screenBounds.height))
-//        }
+
         dockFrame = CGRect(x: 0.0, y: 0.0, width: Double(screenBounds.width), height: dockHeight)
         windowFrame = CGRect(x: 0.0, y: dockHeight, width: Double(screenBounds.width), height: Double(screenBounds.height) - dockHeight)
     }
@@ -176,94 +155,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 item.close(self)
             }
         }
-    }
-}
-
-struct ShortcutIDS {
-    static let base = "com.lachlangrant.LJSTAND"
-    static let tsop = base + ".tsop"
-    static let light = base + ".light"
-    static let compass = base + ".compass"
-    static let settings = base + ".settings"
-}
-
-extension AppDelegate {
-    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        print("Application performActionForShortcutItem")
-        completionHandler( handleShortcut(shortcutItem: shortcutItem) )
-    }
-    
-    func handleShortcut( shortcutItem:UIApplicationShortcutItem ) -> Bool {
-        var succeeded = false
-        var view = ""
-        switch shortcutItem.type {
-        case ShortcutIDS.tsop:
-            view = "TSOP"
-        case ShortcutIDS.compass:
-            view = "Compass"
-        case ShortcutIDS.light:
-            view = "Light"
-        case ShortcutIDS.settings:
-            view = "Settings"
-        default:
-            view = ""
-        }
-        
-        if (view != "") {
-            addWindow(viewName: view)
-            succeeded = true
-        }
-        
-        return succeeded
-    }
-    
-    func applicationDidBecomeActive(application: UIApplication) {
-        guard let shortcut = shortcutItem else { return }
-        handleShortcut(shortcutItem: shortcut)
-        self.shortcutItem = nil
-        
-    }
-}
-
-
-extension AppDelegate: BluetoothMessageDelegate {
-    func showInformation(_ message: String) {
-        MKUIToast.shared.showNotification(text: message, alignment: .center, color: .flatBlue, identifier: nil, callback: {})
-        MKULog.shared.info(message)
-    }
-    
-    func showError(_ message: String) {
-        MKUIToast.shared.showNotification(text: message, alignment: .center, color: .flatRed, identifier: nil, callback: {})
-        MKULog.shared.error(message)
-    }
-    
-    func foundDevices(_ peripherals: [CBPeripheral]) {
-        let alert = UIAlertController(title: "Connect to Device", message: nil, preferredStyle: .alert)
-        
-        for item in peripherals {
-            alert.addAction(UIAlertAction(title: item.name, style: .default, handler: { (action) in
-                BluetoothController.shared.connectTo(item)
-            }))
-        }
-        
-        window?.rootViewController?.present(alert, animated: true, completion: nil)
-        
-    }
-    
-    func dismissNotifications() {
-        MKUIToast.shared.dismissAllNotifications(animated: false)
-    }
-}
-
-extension AppDelegate: AppSettingsDelegate {
-    func setDockOnRight(right: Bool) {
-        defaults.set(right, forKey: DefaultKeys.isDockOnRight)
-        setFrames()
-        orientationDidChange()
-    }
-    
-    func setLogWindow(enabled: Bool) {
-        defaults.set(enabled, forKey: DefaultKeys.showLog)
-        exit(0)
     }
 }

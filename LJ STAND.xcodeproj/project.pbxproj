@@ -39,6 +39,9 @@
 		EF8710C31E83DFF000753FDD /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BD1E83DFF000753FDD /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
 		EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */; };
+		EF9A24F21EAD862900F5D5A3 /* AppDelegate+3DTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A24F11EAD862900F5D5A3 /* AppDelegate+3DTouch.swift */; };
+		EF9A24F41EAD87A500F5D5A3 /* AppDelegate+Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A24F31EAD87A500F5D5A3 /* AppDelegate+Bluetooth.swift */; };
+		EF9A24F61EAD87D200F5D5A3 /* AppDelegate+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A24F51EAD87D200F5D5A3 /* AppDelegate+AppSettings.swift */; };
 		EFA2DEE21E95DCA100A8FEC9 /* BluetoothDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */; };
 		EFA2DEE31E95DCA100A8FEC9 /* BluetoothDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */; };
 		EFA2DEE51E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */; };
@@ -137,6 +140,9 @@
 		EF8710BD1E83DFF000753FDD /* RESTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RESTKit.framework; path = Carthage/Build/Mac/RESTKit.framework; sourceTree = "<group>"; };
 		EF9518231DB08CB4009B1F6F /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightsensorViewController.swift; sourceTree = "<group>"; };
+		EF9A24F11EAD862900F5D5A3 /* AppDelegate+3DTouch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+3DTouch.swift"; sourceTree = "<group>"; };
+		EF9A24F31EAD87A500F5D5A3 /* AppDelegate+Bluetooth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Bluetooth.swift"; sourceTree = "<group>"; };
+		EF9A24F51EAD87D200F5D5A3 /* AppDelegate+AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+AppSettings.swift"; sourceTree = "<group>"; };
 		EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothDataType.swift; sourceTree = "<group>"; };
 		EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothProtocols.swift; sourceTree = "<group>"; };
 		EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BluetoothController+Serial.swift"; sourceTree = "<group>"; };
@@ -273,6 +279,9 @@
 			isa = PBXGroup;
 			children = (
 				47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */,
+				EF9A24F11EAD862900F5D5A3 /* AppDelegate+3DTouch.swift */,
+				EF9A24F31EAD87A500F5D5A3 /* AppDelegate+Bluetooth.swift */,
+				EF9A24F51EAD87D200F5D5A3 /* AppDelegate+AppSettings.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -686,6 +695,7 @@
 				EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */,
 				EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */,
 				EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */,
+				EF9A24F41EAD87A500F5D5A3 /* AppDelegate+Bluetooth.swift in Sources */,
 				EFED2C9E1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */,
 				CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */,
 				EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */,
@@ -693,6 +703,7 @@
 				EFC49C8D1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift in Sources */,
 				EFE7366B1E95EB3900C8AF16 /* BluetoothController+Sending.swift in Sources */,
 				EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */,
+				EF9A24F21EAD862900F5D5A3 /* AppDelegate+3DTouch.swift in Sources */,
 				EFE7366E1E95EBFD00C8AF16 /* AppSettingsProtocol.swift in Sources */,
 				EFED2CA41E7F4A1800E02440 /* NotificationKeys.swift in Sources */,
 				EFED2CA01E7F4A1800E02440 /* DefaultKeys.swift in Sources */,
@@ -704,6 +715,7 @@
 				EFED2CA21E7F4A1800E02440 /* MKKitExt.swift in Sources */,
 				EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */,
 				EFED2CB71E7F601900E02440 /* TSOPRingView.swift in Sources */,
+				EF9A24F61EAD87D200F5D5A3 /* AppDelegate+AppSettings.swift in Sources */,
 				CD2B60621E98F55D00A6B1E1 /* CenteredTextView.swift in Sources */,
 				EFA2DEE51E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */,
 				EFCCB5061EA0B696000F6E66 /* BackgroundViewController.swift in Sources */,
