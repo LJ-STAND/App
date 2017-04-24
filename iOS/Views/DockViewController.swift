@@ -36,34 +36,37 @@ class DockViewController: UIViewController {
             buttonStart = lineX + (textWidth * 1.2)
         }
         
-        
-        
         let serialButton = HexButton(frame: CGRect(x: buttonStart + buttonSpacing * 0 + (buttonSpacing - buttonWidth) / 2, y: 0, width: buttonWidth, height: view.frame.height * 0.15))
-        serialButton.text = "Serial"
+        serialButton.text = "SERIAL"
+        serialButton.viewName = "Serial"
         serialButton.addTarget(self, action: #selector(self.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         view.addSubview(serialButton)
         
         let tsopButton = HexButton(frame: CGRect(x: buttonStart + buttonSpacing * 1 + (buttonSpacing - buttonWidth) / 2, y: 0, width: buttonWidth, height: view.frame.height * 0.15))
         tsopButton.text = "TSOP"
+        tsopButton.viewName = "TSOP"
         tsopButton.addTarget(self, action: #selector(self.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         view.addSubview(tsopButton)
         
         let lightButton = HexButton(frame: CGRect(x: buttonStart + buttonSpacing * 2 + (buttonSpacing - buttonWidth) / 2, y: 0, width: buttonWidth, height: view.frame.height * 0.15))
-        lightButton.text = "Light"
+        lightButton.text = "LIGHT"
+        lightButton.viewName = "Light"
         lightButton.addTarget(self, action: #selector(self.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         view.addSubview(lightButton)
         
         let compassButton = HexButton(frame: CGRect(x: buttonStart + buttonSpacing * 3 + (buttonSpacing - buttonWidth) / 2, y: 0, width: buttonWidth, height: view.frame.height * 0.15))
-        compassButton.text = "Compass"
+        compassButton.text = "COMPASS"
+        compassButton.viewName = "Compass"
         compassButton.addTarget(self, action: #selector(self.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         view.addSubview(compassButton)
         
         let settingsButton = HexButton(frame: CGRect(x: buttonStart + buttonSpacing * 4 + (buttonSpacing - buttonWidth) / 2, y: 0, width: buttonWidth, height: view.frame.height * 0.15))
-        settingsButton.text = "Settings"
+        settingsButton.text = "SETTINGS"
+        settingsButton.viewName = "Settings"
         settingsButton.addTarget(self, action: #selector(self.buttonPressed(_:)), for: UIControlEvents.touchUpInside)
         
         view.addSubview(settingsButton)
@@ -75,7 +78,7 @@ class DockViewController: UIViewController {
     }
     
     func buttonPressed(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addWindow"), object: (sender as! HexButton).text)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "addWindow"), object: (sender as! HexButton).viewName)
     }
     
     func generateConstraints(superView: UIView, subView: UIView) {

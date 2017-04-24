@@ -11,6 +11,7 @@ import UIKit
 @IBDesignable
 class HexButton: UIButton {
     @IBInspectable var text: String = ""
+    var viewName: String = ""
     
     override var frame: CGRect {
         didSet {
