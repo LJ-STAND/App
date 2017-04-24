@@ -15,9 +15,10 @@ class BackgroundViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
-        
+        checkShoudShowLogView()
+    }
+    
+    func checkShoudShowLogView() {
         if defaults.bool(forKey: DefaultKeys.showLog) == true {
             let logView = MKUConsoleViewController().view!
             

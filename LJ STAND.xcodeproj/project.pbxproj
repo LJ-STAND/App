@@ -50,7 +50,6 @@
 		EFA2DEE91E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */; };
 		EFAFC6861E61068D00DB37E3 /* DockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAFC6851E61068D00DB37E3 /* DockViewController.swift */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
-		EFC49C8D1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC49C8C1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift */; };
 		EFCCB5061EA0B696000F6E66 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCB5041EA0B696000F6E66 /* BackgroundViewController.swift */; };
 		EFCCB5071EA0B696000F6E66 /* HexButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCB5051EA0B696000F6E66 /* HexButton.swift */; };
 		EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */; };
@@ -149,7 +148,6 @@
 		EFAFC6851E61068D00DB37E3 /* DockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DockViewController.swift; sourceTree = "<group>"; };
 		EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 		EFC213881E5A636000233E6E /* iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOS.entitlements; sourceTree = "<group>"; };
-		EFC49C8C1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizeBluetoothViewController.swift; sourceTree = "<group>"; };
 		EFCCB5041EA0B696000F6E66 /* BackgroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundViewController.swift; sourceTree = "<group>"; };
 		EFCCB5051EA0B696000F6E66 /* HexButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexButton.swift; sourceTree = "<group>"; };
 		EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
@@ -334,7 +332,6 @@
 				EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */,
 				EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */,
 				EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */,
-				EFC49C8C1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift */,
 				CD2B60611E98F55D00A6B1E1 /* CenteredTextView.swift */,
 				CD2B60641E99015900A6B1E1 /* WindowView.swift */,
 			);
@@ -700,7 +697,6 @@
 				CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */,
 				EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */,
 				EFED2CBA1E7F60C100E02440 /* CompassView.swift in Sources */,
-				EFC49C8D1E919F5400E0D483 /* AuthorizeBluetoothViewController.swift in Sources */,
 				EFE7366B1E95EB3900C8AF16 /* BluetoothController+Sending.swift in Sources */,
 				EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */,
 				EF9A24F21EAD862900F5D5A3 /* AppDelegate+3DTouch.swift in Sources */,
