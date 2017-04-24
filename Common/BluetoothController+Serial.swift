@@ -151,8 +151,11 @@ extension BluetoothController: BluetoothSerialDelegate {
         let comps = str.components(separatedBy: ";")
         
         if comps.count == 2 {
-            //TODO: Crashes macOS
-            guard let dataType = BluetoothDataType(rawValue: (Int(comps.first!))!) else {
+            guard let unwrappedString = Int(comps.first!) else {
+                return (BluetoothDataType.noDataType, comps[1])
+            }
+            
+            guard let dataType = BluetoothDataType(rawValue: unwrappedString) else {
                 return (BluetoothDataType.noDataType, comps[1])
             }
             
