@@ -1,3 +1,8 @@
+Dist/build
+Dist/build_debug
+Dist/Apps
+Dist/LJ STAND.app
+
 # OS X Finder
 .DS_Store
 
