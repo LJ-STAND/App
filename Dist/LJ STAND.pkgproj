@@ -871,6 +871,8 @@
 				</dict>
 				<key>PAYLOAD_TYPE</key>
 				<integer>0</integer>
+				<key>SPLIT_FORKS</key>
+				<true/>
 				<key>VERSION</key>
 				<integer>4</integer>
 			</dict>
@@ -884,24 +886,7 @@
 					<integer>1</integer>
 				</dict>
 				<key>RESOURCES</key>
-				<array>
-					<dict>
-						<key>CHILDREN</key>
-						<array/>
-						<key>GID</key>
-						<integer>0</integer>
-						<key>PATH</key>
-						<string>buildFromSource.sh</string>
-						<key>PATH_TYPE</key>
-						<integer>1</integer>
-						<key>PERMISSIONS</key>
-						<integer>493</integer>
-						<key>TYPE</key>
-						<integer>3</integer>
-						<key>UID</key>
-						<integer>0</integer>
-					</dict>
-				</array>
+				<array/>
 			</dict>
 			<key>PACKAGE_SETTINGS</key>
 			<dict>
@@ -1100,7 +1085,19 @@
 			<key>INTRODUCTION</key>
 			<dict>
 				<key>LOCALIZATIONS</key>
-				<array/>
+				<array>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>English</string>
+						<key>VALUE</key>
+						<dict>
+							<key>PATH</key>
+							<string>Intro.txt</string>
+							<key>PATH_TYPE</key>
+							<integer>1</integer>
+						</dict>
+					</dict>
+				</array>
 			</dict>
 			<key>LICENSE</key>
 			<dict>
@@ -1121,12 +1118,36 @@
 			<key>README</key>
 			<dict>
 				<key>LOCALIZATIONS</key>
-				<array/>
+				<array>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>English</string>
+						<key>VALUE</key>
+						<dict>
+							<key>PATH</key>
+							<string>Readme.txt</string>
+							<key>PATH_TYPE</key>
+							<integer>1</integer>
+						</dict>
+					</dict>
+				</array>
 			</dict>
 			<key>SUMMARY</key>
 			<dict>
 				<key>LOCALIZATIONS</key>
-				<array/>
+				<array>
+					<dict>
+						<key>LANGUAGE</key>
+						<string>English</string>
+						<key>VALUE</key>
+						<dict>
+							<key>PATH</key>
+							<string>Summary.txt</string>
+							<key>PATH_TYPE</key>
+							<integer>1</integer>
+						</dict>
+					</dict>
+				</array>
 			</dict>
 			<key>TITLE</key>
 			<dict>
@@ -1144,7 +1165,31 @@
 		<key>PROJECT_REQUIREMENTS</key>
 		<dict>
 			<key>LIST</key>
-			<array/>
+			<array>
+				<dict>
+					<key>BEHAVIOR</key>
+					<integer>3</integer>
+					<key>DICTIONARY</key>
+					<dict>
+						<key>IC_REQUIREMENT_OS_DISK_TYPE</key>
+						<integer>0</integer>
+						<key>IC_REQUIREMENT_OS_DISTRIBUTION_TYPE</key>
+						<integer>0</integer>
+						<key>IC_REQUIREMENT_OS_MINIMUM_VERSION</key>
+						<integer>101100</integer>
+					</dict>
+					<key>IC_REQUIREMENT_CHECK_TYPE</key>
+					<integer>1</integer>
+					<key>IDENTIFIER</key>
+					<string>fr.whitebox.Packages.requirement.os</string>
+					<key>MESSAGE</key>
+					<array/>
+					<key>NAME</key>
+					<string>Operating System</string>
+					<key>STATE</key>
+					<true/>
+				</dict>
+			</array>
 			<key>POSTINSTALL_PATH</key>
 			<dict/>
 			<key>PREINSTALL_PATH</key>
@@ -1157,7 +1202,10 @@
 		<key>PROJECT_SETTINGS</key>
 		<dict>
 			<key>ADVANCED_OPTIONS</key>
-			<dict/>
+			<dict>
+				<key>installer-script.options:allow-external-scripts</key>
+				<true/>
+			</dict>
 			<key>BUILD_FORMAT</key>
 			<integer>0</integer>
 			<key>BUILD_PATH</key>
@@ -1338,6 +1386,11 @@
 			<key>NAME</key>
 			<string>LJ STAND</string>
 		</dict>
+	</dict>
+	<key>SHARED_GLOBAL_DATA</key>
+	<dict>
+		<key>IC_REQUIREMENT_JAVASCRIPT_SHARED_SOURCE_CODE</key>
+		<string></string>
 	</dict>
 	<key>TYPE</key>
 	<integer>0</integer>
