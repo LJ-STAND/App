@@ -16,13 +16,11 @@ import CoreBluetooth
 //Globals
 let ljStandGreen = UIColor.flatGreenDark
 let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
+let appSettings = MKUAppSettings()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var dock: UIWindow?
-    
-    var dockFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
     var windowFrame = CGRect(x: 0, y: 0, width: 0, height: 0)
     var appLogDelegate: AppLogDelegate?
     @nonobjc var windows: [WMWindow] = []
@@ -53,25 +51,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setUpWindows() {
         setFrames()
-        
-        dock = UIWindow(frame: dockFrame)
-        dock?.windowLevel = 3
-        dock?.rootViewController = viewController(fromStoryboardWithName: "Dock", viewControllerWithIdentifier: "init")
-        dock?.isHidden = false
-        dock?.backgroundColor = .clear
-        
         let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
+        
+        let nav = UINavigationController(rootViewController: view)
+        nav.navigationBar.barStyle = .blackTranslucent
+        nav.navigationBar.topItem?.title = "LJ STAND"
+        nav.navigationBar.topItem?.prompt = "Build: \(appSettings.build) - \(appSettings.pID)"
+        nav.setStatusBarStyle(.lightContent)
         window = UIWindow(frame: windowFrame)
-        window?.rootViewController = view
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
         window?.windowLevel = 1
         
         swizzleUIWindow()
-        
-        UITabBar.appearance().tintColor = ljStandGreen
-        
-        UIApplication.shared.setStatusBarHidden(true, with: UIStatusBarAnimation.none)
     }
     
     func addWindow(notification: NSNotification) {
@@ -81,18 +74,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setFrames() {
         let screenBounds = UIScreen.main.bounds
-        
-        let dockHeight = 120.0
 
-        dockFrame = CGRect(x: 0.0, y: 0.0, width: Double(screenBounds.width), height: dockHeight)
-        windowFrame = CGRect(x: 0.0, y: dockHeight, width: Double(screenBounds.width), height: Double(screenBounds.height) - dockHeight)
+        windowFrame = CGRect(x: 0.0, y: 0.0, width: Double(screenBounds.width), height: Double(screenBounds.height))
     }
     
     func orientationDidChange() {
-        dock?.frame = dockFrame
         window?.frame = windowFrame
-        
-        dock?.layoutIfNeeded()
         window?.layoutIfNeeded()
     }
     
@@ -125,7 +112,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if (UIDevice.current.userInterfaceIdiom == .phone) {
                 newWindow.maximized = true
                 newWindow._savedFrame = CGRect(x: 44, y: 44, width: 300, height: 300)
-                newWindow.setFrame(frame: CGRectMake(-kWindowResizeGutterSize, -kWindowResizeGutterSize, (window?.bounds.size.width)!+(kWindowResizeGutterSize*2), (window?.bounds.size.height)!+(kWindowResizeGutterSize*2)))
+                newWindow.setFrame(frame: CGRectMake(-kWindowResizeGutterSize, -kWindowResizeGutterSize + 95, (window?.bounds.size.width)!+(kWindowResizeGutterSize*2), (window?.bounds.size.height)!+(kWindowResizeGutterSize*2) - 95))
             }
             
         } else {

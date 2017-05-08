@@ -20,7 +20,7 @@ let kWindowResizeGutterTargetSize:CGFloat = 24.0
 let kWindowResizeGutterKnobSize:CGFloat = 48.0
 let kWindowResizeGutterKnobWidth:CGFloat = 4.0
 let kBorderWidth:CGFloat = 2.5
-
+let minY = CGFloat(95)
 
 func CGRectMake(_ x:CGFloat , _ y:CGFloat , _ w:CGFloat , _ h:CGFloat ) -> CGRect {
     return CGRect(x: x, y: y, width: w, height: h)
@@ -116,7 +116,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
         UIView.beginAnimations(nil, context: nil)
         if self.maximized {
             _savedFrame = self.frame
-            self.frame = CGRectMake(-kWindowResizeGutterSize,  -kWindowResizeGutterSize, rootWindow.bounds.size.width+(kWindowResizeGutterSize*2), rootWindow.bounds.size.height+(kWindowResizeGutterSize*2))
+            self.frame = CGRectMake(-kWindowResizeGutterSize,  -kWindowResizeGutterSize + minY, rootWindow.bounds.size.width+(kWindowResizeGutterSize*2), rootWindow.bounds.size.height+(kWindowResizeGutterSize*2) - minY)
         } else {
             self.frame = _savedFrame
         }
@@ -237,7 +237,7 @@ class WMWindow : UIWindow, UIGestureRecognizerDelegate {
             }
         } else if recognizer.state == .changed {
             if _inWindowMove {
-                let minY = CGFloat(0)
+                
                 
                 self.frame = CGRectMake(gp.x-_originPoint.x, min(max(gp.y-_originPoint.y, minY), UIScreen.main.bounds.height - (kWindowButtonFrameSize + kWindowResizeGutterSize)), self.frame.size.width, self.frame.size.height)
                 
