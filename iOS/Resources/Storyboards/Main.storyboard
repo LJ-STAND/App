@@ -20,7 +20,7 @@
             <objects>
                 <navigationController storyboardIdentifier="TSOP" navigationBarHidden="YES" id="vek-ZW-9HW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="TSOPs" image="TSOP" selectedImage="TSOP" id="B8D-Qc-zwr"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eAC-oI-1pS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="eAC-oI-1pS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -51,12 +51,47 @@
             </objects>
             <point key="canvasLocation" x="2958" y="2052"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G8a-9I-Agz">
+            <objects>
+                <navigationController storyboardIdentifier="Robot Pos" navigationBarHidden="YES" id="RTx-rj-Irr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PRs-pN-Kd9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uh9-8k-2cC" kind="relationship" relationship="rootViewController" id="cka-S4-7RH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuc-v6-Gdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2286" y="2700"/>
+        </scene>
+        <!--Robot Position View Controller-->
+        <scene sceneID="1Us-CE-2lD">
+            <objects>
+                <viewController id="uh9-8k-2cC" customClass="RobotPositionViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u4d-2L-sUU"/>
+                        <viewControllerLayoutGuide type="bottom" id="PIo-G9-swi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aYI-3V-Oms">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vkv-fa-x04"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGW-zt-ssj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2958" y="2699"/>
+        </scene>
         <!--Compass-->
         <scene sceneID="htm-jU-Hfm">
             <objects>
                 <navigationController storyboardIdentifier="Compass" navigationBarHidden="YES" id="1DO-3C-ZrT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Compass" image="Compass" selectedImage="Compass" id="a7o-Ta-xa9"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="flT-P0-Jtn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="flT-P0-Jtn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -92,7 +127,7 @@
             <objects>
                 <navigationController storyboardIdentifier="Light" navigationBarHidden="YES" id="GDY-YW-mEW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Light Sens" image="LightBulb" selectedImage="LightBulb" id="RIf-VN-80a"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wlr-hl-FK5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="wlr-hl-FK5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -304,7 +339,7 @@
             <objects>
                 <navigationController storyboardIdentifier="Serial" navigationBarHidden="YES" id="J9g-Tb-cbQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Serial" image="Serial" selectedImage="Serial" id="D7a-Pn-g6x"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z2Z-bl-PQQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="z2Z-bl-PQQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -402,7 +437,7 @@
             <objects>
                 <navigationController storyboardIdentifier="Settings" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="G5J-kh-il8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HVH-Nt-GfE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="HVH-Nt-GfE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

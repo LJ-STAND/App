@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12100" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="XfG-lQ-9wD">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="XfG-lQ-9wD">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12100"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="stacking Non-gravity area distributions on NSStackView" minToolsVersion="7.0" minSystemVersion="10.11"/>
@@ -158,10 +158,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fillEqually" orientation="vertical" alignment="centerX" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mgr-9r-PcQ">
-                                <rect key="frame" x="156" y="38" width="169" height="195"/>
+                                <rect key="frame" x="156" y="23" width="169" height="224"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4ZP-pa-Uce">
-                                        <rect key="frame" x="48" y="167" width="74" height="32"/>
+                                        <rect key="frame" x="48" y="196" width="74" height="32"/>
                                         <buttonCell key="cell" type="push" title="Serial" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cII-C3-Ygm">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -173,7 +173,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hju-2y-4gg">
-                                        <rect key="frame" x="23" y="138" width="124" height="32"/>
+                                        <rect key="frame" x="23" y="167" width="124" height="32"/>
                                         <buttonCell key="cell" type="push" title="Light Sensors" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="h8O-TB-Dim">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -185,7 +185,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aJe-yh-jT1">
-                                        <rect key="frame" x="36" y="109" width="97" height="32"/>
+                                        <rect key="frame" x="36" y="138" width="97" height="32"/>
                                         <buttonCell key="cell" type="push" title="Compass" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3Zm-va-nHw">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -197,7 +197,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ozC-er-6cO">
-                                        <rect key="frame" x="43" y="80" width="83" height="32"/>
+                                        <rect key="frame" x="43" y="109" width="83" height="32"/>
                                         <buttonCell key="cell" type="push" title="TSOPS" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vH9-C7-lqq">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -206,6 +206,16 @@
                                         </buttonCell>
                                         <connections>
                                             <action selector="tsopAction:" target="XfG-lQ-9wD" id="llO-FZ-fr1"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qw5-Qb-uO2">
+                                        <rect key="frame" x="21" y="80" width="128" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Robot Position" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Vsv-hw-TbE">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="robotPositionAction:" target="XfG-lQ-9wD" id="HSO-OV-elQ"/>
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="i8A-pp-Gdk">
@@ -247,8 +257,10 @@
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -372,7 +384,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nJq-JN-3eY">
+                            <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJq-JN-3eY">
                                 <rect key="frame" x="20" y="20" width="343" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="Message" drawsBackground="YES" id="eBc-wk-cMB">
                                     <font key="font" metaFont="system"/>
@@ -507,6 +519,38 @@
                 <customObject id="Ttr-tg-W2F" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="789" y="1595"/>
+        </scene>
+        <!--Robot Position View Controller-->
+        <scene sceneID="f67-GV-K3m">
+            <objects>
+                <viewController storyboardIdentifier="robot" id="Shf-NQ-cu1" customClass="RobotPositionViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="TJG-49-b2a">
+                        <rect key="frame" x="0.0" y="0.0" width="416" height="416"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="s8F-7d-8Pg" customClass="RobotPositionView" customModule="LJ_STAND" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="416" height="416"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s8F-7d-8Pg" secondAttribute="height" multiplier="1:1" id="CXN-Ro-SB2"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="s8F-7d-8Pg" firstAttribute="centerX" secondItem="TJG-49-b2a" secondAttribute="centerX" id="KND-qV-Ooh"/>
+                            <constraint firstItem="s8F-7d-8Pg" firstAttribute="height" relation="lessThanOrEqual" secondItem="TJG-49-b2a" secondAttribute="height" id="RKl-Da-k0v"/>
+                            <constraint firstItem="s8F-7d-8Pg" firstAttribute="width" relation="lessThanOrEqual" secondItem="TJG-49-b2a" secondAttribute="width" id="bfb-ex-wGP"/>
+                            <constraint firstItem="s8F-7d-8Pg" firstAttribute="centerY" secondItem="TJG-49-b2a" secondAttribute="centerY" id="n28-Vj-VWu"/>
+                            <constraint firstItem="s8F-7d-8Pg" firstAttribute="width" secondItem="TJG-49-b2a" secondAttribute="width" priority="999" id="pWK-mA-TZp"/>
+                            <constraint firstItem="s8F-7d-8Pg" firstAttribute="height" secondItem="TJG-49-b2a" secondAttribute="height" priority="999" id="qZZ-wE-keY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="robotPosView" destination="s8F-7d-8Pg" id="xMP-En-D9N"/>
+                    </connections>
+                </viewController>
+                <customObject id="3lc-mY-fot" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="2067"/>
         </scene>
     </scenes>
 </document>

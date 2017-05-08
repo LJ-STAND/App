@@ -56,6 +56,12 @@ class BackgroundViewController: UIViewController {
         view.layoutIfNeeded()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        (UIApplication.shared.delegate as! AppDelegate).addWindow(viewName: "Robot Pos")
+    }
+    
     func removeAppLog() {
         for item in self.view.subviews {
             if item.tag == 999 {

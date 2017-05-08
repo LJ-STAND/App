@@ -16,6 +16,7 @@ class InitialViewController: NSViewController {
     var tsopWindowController: NSWindowController?
     var serialWindowController: NSWindowController?
     var settingsWindowController: NSWindowController?
+	var robotPositionWindowController: NSWindowController?
     
 	@IBAction func serialAction(_ sender: Any) {
         if serialWindowController == nil {
@@ -64,6 +65,18 @@ class InitialViewController: NSViewController {
             tsopWindowController?.showWindow(self)
         }
     }
+	
+	@IBAction func robotPositionAction(_ sender: Any) {
+		if robotPositionWindowController == nil {
+			let vc = getViewControllerFromID("robot")
+			vc.title = "Robot Position"
+			
+			robotPositionWindowController = NSWindowController(window: NSWindow(contentViewController: vc))
+			robotPositionWindowController?.showWindow(self)
+		} else {
+			robotPositionWindowController?.showWindow(self)
+		}
+	}
     
     func getViewControllerFromID(_ id: String) -> NSViewController {
         return NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: id) as! NSViewController

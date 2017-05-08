@@ -44,3 +44,7 @@ protocol BluetoothControllerSendDelegate {
     func requestSettings()
     func sendSettings(compass: Bool, tsop: Bool, light: Bool)
 }
+
+protocol BluetoothControllerRobotPositionDelegate {
+    func updatePosition(position: RobotPosition)
+}

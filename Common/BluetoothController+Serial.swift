@@ -129,6 +129,20 @@ extension BluetoothController: BluetoothSerialDelegate {
                         }
                     }
                 }
+                
+            case .robotPoisition:
+                let positionString = processed.1
+                
+                guard let positionInt = Int(positionString) else {
+                    return
+                }
+                
+                guard let position = RobotPosition(rawValue: positionInt) else {
+                    return
+                }
+                
+                robotPositionDelegate?.updatePosition(position: position)
+                
             default:
                 MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")
             }

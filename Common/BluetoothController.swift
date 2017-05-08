@@ -65,6 +65,14 @@ class BluetoothController {
         }
     }
     
+    var robotPositionDelegate: BluetoothControllerRobotPositionDelegate? {
+        didSet {
+            if !connected {
+                connect()
+            }
+        }
+    }
+    
     var sendingDelegate: BluetoothControllerSendDelegate?
     
     var peripherals: [CBPeripheral] = []
