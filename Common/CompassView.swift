@@ -14,9 +14,11 @@ import Foundation
     import UIKit
 #endif
 
+@IBDesignable
 class CompassView: View {
-    var needleAngle: Double!
-    var drawBackground = false
+    
+    @IBInspectable var needleAngle: Double!
+    @IBInspectable var drawBackground = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)

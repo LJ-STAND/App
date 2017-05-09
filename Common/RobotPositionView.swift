@@ -56,7 +56,7 @@ class RobotPositionView: View {
     
     fileprivate func sharedInit() {
         robot.backgroundColor = Color.blue
-        self.backgroundColor = Color.gray
+//        self.backgroundColor = Color.gray
         self.addSubview(robot)
     }
     

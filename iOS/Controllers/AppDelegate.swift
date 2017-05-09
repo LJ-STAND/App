@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let nav = UINavigationController(rootViewController: view)
         nav.navigationBar.barStyle = .blackTranslucent
-        nav.navigationBar.isTranslucent = false
+//        nav.navigationBar.isTranslucent = false
         nav.navigationBar.topItem?.title = "LJ STAND"
         nav.navigationBar.topItem?.prompt = "Build: \(appSettings.build) - \(appSettings.pID)"
         nav.setStatusBarStyle(.lightContent)

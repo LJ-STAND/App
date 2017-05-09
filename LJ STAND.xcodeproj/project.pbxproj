@@ -21,6 +21,7 @@
 		EF156E9F1E8390DD00D825F7 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156E9E1E8390DD00D825F7 /* SerialViewController.swift */; };
 		EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */; };
 		EF1705CB1E682D910029DD0E /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1705CA1E682D910029DD0E /* Stickers.xcassets */; };
+		EF1D11E61EC19BBF00C8E390 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1D11E51EC19BBF00C8E390 /* UITableViewVibrantCell.swift */; };
 		EF1E98401E61019D00C70420 /* Dock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1E983F1E61019D00C70420 /* Dock.storyboard */; };
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
 		EF4170171EC0774C00EA2CD6 /* RobotPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4170161EC0774C00EA2CD6 /* RobotPositionView.swift */; };
@@ -129,6 +130,7 @@
 		EF1705C81E682D910029DD0E /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1705CA1E682D910029DD0E /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		EF1705CC1E682D910029DD0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF1D11E51EC19BBF00C8E390 /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewVibrantCell.swift; sourceTree = "<group>"; };
 		EF1E983F1E61019D00C70420 /* Dock.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dock.storyboard; sourceTree = "<group>"; };
 		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EF4170161EC0774C00EA2CD6 /* RobotPositionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotPositionView.swift; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 		924BCA1E22B5177CDCE5286D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				EF1D11E51EC19BBF00C8E390 /* UITableViewVibrantCell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -717,6 +720,7 @@
 				EFE7366E1E95EBFD00C8AF16 /* AppSettingsProtocol.swift in Sources */,
 				EFED2CA41E7F4A1800E02440 /* NotificationKeys.swift in Sources */,
 				EFED2CA01E7F4A1800E02440 /* DefaultKeys.swift in Sources */,
+				EF1D11E61EC19BBF00C8E390 /* UITableViewVibrantCell.swift in Sources */,
 				EF41701C1EC07AA700EA2CD6 /* RobotPositionViewController.swift in Sources */,
 				EF5462581EC146AD0005EAEB /* SideMenuController.swift in Sources */,
 				EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */,

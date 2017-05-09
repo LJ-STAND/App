@@ -24,6 +24,14 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if (!UIAccessibilityIsReduceTransparencyEnabled()) {
+            tableView.backgroundColor = .clear
+            let blurEffect = UIBlurEffect(style: .dark)
+            let blurEffectView = UIVisualEffectView(effect: blurEffect)
+            tableView.backgroundView = blurEffectView
+            tableView.separatorStyle = .none
+        }
+        
         //Setting UI
         logWindowSwitch.isOn = defaults.bool(forKey: DefaultKeys.showLog)
         dockOnRightSwitch.isOn = defaults.bool(forKey: DefaultKeys.isDockOnRight)
