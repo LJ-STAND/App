@@ -34,11 +34,11 @@ class SettingsTableViewController: UITableViewController {
     }
 
 	@IBAction func logWindowAction(_ sender: Any) {
-        delegate.setLogWindow(enabled: logWindowSwitch.isOn)
+//        delegate.setLogWindow(enabled: logWindowSwitch.isOn)
 	}
 	
 	@IBAction func dockOnRightAction(_ sender: Any) {
-		delegate.setDockOnRight(right: (sender as! UISwitch).isOn)
+//		delegate.setDockOnRight(right: (sender as! UISwitch).isOn)
 	}
 	
 	@IBAction func tsopDebug(_ sender: Any) {

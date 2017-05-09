@@ -11,7 +11,7 @@ import MKKit
 import MKUtilityKit
 import MKUIKit
 
-class RobotPositionViewController: UIViewController, ResizableViewController {
+class RobotPositionViewController: UIViewController {
     var robotPos: RobotPositionView!
     var windowView: WindowView!
     

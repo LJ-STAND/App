@@ -53,8 +53,7 @@ extension AppDelegate {
         }
         
         if (view != "") {
-            addWindow(viewName: view)
-            succeeded = true
+            //TODO:
         }
         
         return succeeded

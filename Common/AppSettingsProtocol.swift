@@ -9,7 +9,6 @@
 import Foundation
 
 protocol AppSettingsDelegate {
-    func setLogWindow(enabled: Bool)
     func setDockOnRight(right: Bool)
 }
 

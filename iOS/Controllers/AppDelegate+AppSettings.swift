@@ -8,15 +8,10 @@
 
 import UIKit
 
-extension AppDelegate: AppSettingsDelegate {
-    func setDockOnRight(right: Bool) {
-        defaults.set(right, forKey: DefaultKeys.isDockOnRight)
-        setFrames()
-        orientationDidChange()
-    }
-    
-    func setLogWindow(enabled: Bool) {
-        defaults.set(enabled, forKey: DefaultKeys.showLog)
-        (UIApplication.shared.delegate as! AppDelegate).appLogDelegate?.enableAppLogging(enabled: enabled)
-    }
-}
+//extension AppDelegate: AppSettingsDelegate {
+//    
+//    func setLogWindow(enabled: Bool) {
+//        defaults.set(enabled, forKey: DefaultKeys.showLog)
+//        (UIApplication.shared.delegate as! AppDelegate).appLogDelegate?.enableAppLogging(enabled: enabled)
+//    }
+//}

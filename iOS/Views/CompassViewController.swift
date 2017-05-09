@@ -11,7 +11,7 @@ import MKKit
 import MKUtilityKit
 import MKUIKit
 
-class CompassViewController: UIViewController, ResizableViewController {
+class CompassViewController: UIViewController {
     internal var tappedButton: UIButton?
 
     var compass: CompassView!

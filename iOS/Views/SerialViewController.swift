@@ -13,7 +13,7 @@ import MKUIKit
 import CoreBluetooth
 import Chameleon
 
-class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, ResizableViewController {
+class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits {
     open var hasText: Bool {
         return true
     }
@@ -62,23 +62,6 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
     
     func keyboardWillHide(_ notification: Notification) {}
     
-    func windowWasResized() {
-        if self.isFirstResponder {
-            UIView.animate(withDuration: 1, delay: 0, options: UIViewAnimationOptions(), animations: { () -> Void in
-                if let window = UIApplication.shared.keyWindow {
-                    let difference = -((UIScreen.main.bounds.height - (window.frame.origin.y + window.frame.height - kWindowResizeGutterSize)) - self.keyboardFrame.size.height)
-                    self.bottomConstraint.constant = difference > 0 ? difference : 0
-                }
-            }, completion: { Bool -> Void in
-                self.serialOutputTextView.scrollToBottom()
-            })
-        }
-    }
-    
-    func windowWasMoved() {
-        resignFirstResponder()
-    }
-    
     override func becomeFirstResponder() -> Bool {
         return false
     }
@@ -114,13 +97,10 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits, Res
         if !self.isFirstResponder {
             if let navVC = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
                 if navVC.visibleViewController == self {
-                    if let window = UIApplication.shared.keyWindow as? WMWindow {
+                    if let window = UIApplication.shared.keyWindow {
                         let point = rec.location(in: window)
-                        let titleBarRect: CGRect = CGRectMake(window.bounds.origin.x, window.bounds.origin.y, window.bounds.size.width, kMoveGrabHeight)
-
-                        if !titleBarRect.contains(point) {
-                            super.becomeFirstResponder()
-                        }
+                        super.becomeFirstResponder()
+                        //TODO: Test
                     }
                 }
             }

@@ -14,7 +14,7 @@ import MKUtilityKit
 import QuartzCore
 import Chameleon
 
-class TSOPViewController: UIViewController, ResizableViewController {
+class TSOPViewController: UIViewController {
     internal var tappedButton: UIButton?
     
     var tsopView: TSOPRingView!

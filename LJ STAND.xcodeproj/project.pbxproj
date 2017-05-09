@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0FE982DBB7126C7560A3FE1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886869AA91C9C729AA88271F /* Main.storyboard */; };
 		4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581C1A4891F43E30617A28DB /* LaunchScreen.xib */; };
-		CD2A02941E46EB080037C8E5 /* ResizableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */; };
 		CD2B605F1E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */; };
 		CD2B60601E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */; };
 		CD2B60621E98F55D00A6B1E1 /* CenteredTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2B60611E98F55D00A6B1E1 /* CenteredTextView.swift */; };
@@ -90,7 +89,6 @@
 		EFED2CC01E7F657900E02440 /* LightSensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CBF1E7F657900E02440 /* LightSensorViewController.swift */; };
 		EFED2CC21E7F6C2200E02440 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CC11E7F6C2200E02440 /* TSOPViewController.swift */; };
 		EFED2CC41E7F6D5900E02440 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */; };
-		EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA381E469A4E005BEE4E /* WMWindow.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
 		EFF460BB1EC106E200B02E7E /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF460BA1EC106E200B02E7E /* MenuTableViewController.swift */; };
 		EFFB66031E96653C0001C4FA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB66021E96653C0001C4FA /* SettingsViewController.swift */; };
@@ -120,7 +118,6 @@
 		886869AA91C9C729AA88271F /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFE59898617C260F3B4780CF /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8E706015D603F83004748A1 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResizableViewController.swift; sourceTree = "<group>"; };
 		CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Light.ttf"; sourceTree = "<group>"; };
 		CD2B60611E98F55D00A6B1E1 /* CenteredTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredTextView.swift; sourceTree = "<group>"; };
 		CD2B60641E99015900A6B1E1 /* WindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowView.swift; sourceTree = "<group>"; };
@@ -185,7 +182,6 @@
 		EFED2CBF1E7F657900E02440 /* LightSensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightSensorViewController.swift; sourceTree = "<group>"; };
 		EFED2CC11E7F6C2200E02440 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
 		EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
-		EFEDAA381E469A4E005BEE4E /* WMWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMWindow.swift; sourceTree = "<group>"; };
 		EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
 		EFF460BA1EC106E200B02E7E /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		EFFB66021E96653C0001C4FA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -329,7 +325,6 @@
 		936507FA3BB785D3F5247E64 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				EFEDAA381E469A4E005BEE4E /* WMWindow.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -380,7 +375,6 @@
 		C8BB61B6AAC040A7B0BF5B9C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				CD2A02931E46EB080037C8E5 /* ResizableViewController.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -703,9 +697,7 @@
 				EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */,
 				EFED2CB41E7F5E8400E02440 /* LightSensorView.swift in Sources */,
 				EFED2C9C1E7F4A1800E02440 /* BluetoothController.swift in Sources */,
-				CD2A02941E46EB080037C8E5 /* ResizableViewController.swift in Sources */,
 				EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */,
-				EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */,
 				EFF460BB1EC106E200B02E7E /* MenuTableViewController.swift in Sources */,
 				EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */,
 				EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */,

@@ -13,7 +13,7 @@ import MKUIKit
 import Chameleon
 import QuartzCore
 
-class LightSensorViewController: UIViewController, ResizableViewController {
+class LightSensorViewController: UIViewController {
     internal var tappedButton: UIButton?
     
     var lightSensView: lightSensorView!
