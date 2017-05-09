@@ -15,6 +15,10 @@ class BackgroundViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.slideMenuController()?.addLeftGestures()
+//        self.slideMenuController()?.addLeftBarButtonWithImage(UIImage(named: "hamB")!)
+        
+        self.addLeftBarButtonWithImage(UIImage(named: "hamB")!)
         checkShoudShowLogView()
     }
     
@@ -54,12 +58,6 @@ class BackgroundViewController: UIViewController {
         view.sendSubview(toBack: blurView)
         view.sendSubview(toBack: imageView)
         view.layoutIfNeeded()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        (UIApplication.shared.delegate as! AppDelegate).addWindow(viewName: "Robot Pos")
     }
     
     func removeAppLog() {

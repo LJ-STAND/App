@@ -28,6 +28,7 @@
 		EF4170181EC0774C00EA2CD6 /* RobotPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4170161EC0774C00EA2CD6 /* RobotPositionView.swift */; };
 		EF41701A1EC0785100EA2CD6 /* RobotPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4170191EC0785100EA2CD6 /* RobotPositionViewController.swift */; };
 		EF41701C1EC07AA700EA2CD6 /* RobotPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41701B1EC07AA700EA2CD6 /* RobotPositionViewController.swift */; };
+		EF5462581EC146AD0005EAEB /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5462571EC146AD0005EAEB /* SideMenuController.swift */; };
 		EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */; };
 		EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */; };
 		EF8233E01E89204C00423F03 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8233DF1E89204C00423F03 /* CoreBluetooth.framework */; };
@@ -91,6 +92,7 @@
 		EFED2CC41E7F6D5900E02440 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */; };
 		EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA381E469A4E005BEE4E /* WMWindow.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
+		EFF460BB1EC106E200B02E7E /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF460BA1EC106E200B02E7E /* MenuTableViewController.swift */; };
 		EFFB66031E96653C0001C4FA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB66021E96653C0001C4FA /* SettingsViewController.swift */; };
 		EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */; };
 /* End PBXBuildFile section */
@@ -134,6 +136,7 @@
 		EF4170161EC0774C00EA2CD6 /* RobotPositionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotPositionView.swift; sourceTree = "<group>"; };
 		EF4170191EC0785100EA2CD6 /* RobotPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotPositionViewController.swift; sourceTree = "<group>"; };
 		EF41701B1EC07AA700EA2CD6 /* RobotPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotPositionViewController.swift; sourceTree = "<group>"; };
+		EF5462571EC146AD0005EAEB /* SideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		EF608FF81E63AD52005361F9 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		EF734BAF1DAF5C53007D2ADA /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EF8233DF1E89204C00423F03 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
@@ -184,6 +187,7 @@
 		EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EFEDAA381E469A4E005BEE4E /* WMWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMWindow.swift; sourceTree = "<group>"; };
 		EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
+		EFF460BA1EC106E200B02E7E /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		EFFB66021E96653C0001C4FA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInterfaceIdom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -288,6 +292,7 @@
 				EF9A24F11EAD862900F5D5A3 /* AppDelegate+3DTouch.swift */,
 				EF9A24F31EAD87A500F5D5A3 /* AppDelegate+Bluetooth.swift */,
 				EF9A24F51EAD87D200F5D5A3 /* AppDelegate+AppSettings.swift */,
+				EF5462571EC146AD0005EAEB /* SideMenuController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 		977C38B4FBB19B1FBC4ACC8D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EFF460BA1EC106E200B02E7E /* MenuTableViewController.swift */,
 				EFCCB5041EA0B696000F6E66 /* BackgroundViewController.swift */,
 				EFCCB5051EA0B696000F6E66 /* HexButton.swift */,
 				EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */,
@@ -700,6 +706,7 @@
 				CD2A02941E46EB080037C8E5 /* ResizableViewController.swift in Sources */,
 				EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */,
 				EFEDAA391E469A4E005BEE4E /* WMWindow.swift in Sources */,
+				EFF460BB1EC106E200B02E7E /* MenuTableViewController.swift in Sources */,
 				EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */,
 				EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */,
 				EF734BB01DAF5C53007D2ADA /* CompassViewController.swift in Sources */,
@@ -716,6 +723,7 @@
 				EFED2CA41E7F4A1800E02440 /* NotificationKeys.swift in Sources */,
 				EFED2CA01E7F4A1800E02440 /* DefaultKeys.swift in Sources */,
 				EF41701C1EC07AA700EA2CD6 /* RobotPositionViewController.swift in Sources */,
+				EF5462581EC146AD0005EAEB /* SideMenuController.swift in Sources */,
 				EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */,
 				EF4170171EC0774C00EA2CD6 /* RobotPositionView.swift in Sources */,
 				EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */,

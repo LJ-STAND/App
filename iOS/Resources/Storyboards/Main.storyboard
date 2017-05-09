@@ -55,7 +55,7 @@
         <scene sceneID="G8a-9I-Agz">
             <objects>
                 <navigationController storyboardIdentifier="Robot Pos" navigationBarHidden="YES" id="RTx-rj-Irr" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PRs-pN-Kd9">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="PRs-pN-Kd9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -161,7 +161,7 @@
         <!--Settings-->
         <scene sceneID="aWo-WJ-ojr">
             <objects>
-                <tableViewController id="LhF-dY-CPs" customClass="SettingsTableViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Settings2" id="LhF-dY-CPs" customClass="SettingsTableViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="VhY-3M-A0g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

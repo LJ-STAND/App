@@ -58,11 +58,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nav.navigationBar.topItem?.title = "LJ STAND"
         nav.navigationBar.topItem?.prompt = "Build: \(appSettings.build) - \(appSettings.pID)"
         nav.setStatusBarStyle(.lightContent)
+        
+        let sideMenuController = SlideMenuController(mainViewController: nav, leftMenuViewController: MenuTableViewController())
+        sideMenuController.view.backgroundColor = .black
+        
         window = UIWindow(frame: windowFrame)
-        window?.rootViewController = nav
+        window?.rootViewController = sideMenuController
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
-        window?.windowLevel = 1
+        window?.windowLevel = UIWindowLevelAlert
         
         swizzleUIWindow()
     }
@@ -74,8 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func setFrames() {
         let screenBounds = UIScreen.main.bounds
-
-        windowFrame = CGRect(x: 0.0, y: 0.0, width: Double(screenBounds.width), height: Double(screenBounds.height))
+        windowFrame = UIScreen.main.bounds
     }
     
     func orientationDidChange() {
@@ -96,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if !isShown {
             let newWindow = WMWindow(frame: CGRectMake(44, 344, 300, 300))
             newWindow.title = viewName
-            newWindow.windowLevel = 1
+            newWindow.windowLevel = UIWindowLevelNormal
             
             var mainView: UIViewController?
             mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: viewName)
@@ -120,21 +123,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         NotificationCenter.default.post(name: NotificationKeys.addedWindow, object: viewName)
-    }
-    
-    func initialWindow() {
-        let window1 = WMWindow(frame: CGRectMake(44, 44, 300, 300))
-        window1.title = "Root"
-        
-        let mainView = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "windowMain")
-        mainView.title = "Root"
-        
-        window1.rootViewController = mainView
-        window1.makeKeyAndVisible()
-        window1.disableClose()
-        
-        windows.append(window1)
-        window?.addSubview(window1)
     }
     
     func removeWindow(name: String) {
