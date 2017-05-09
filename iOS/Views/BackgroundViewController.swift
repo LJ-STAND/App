@@ -93,13 +93,11 @@ extension BackgroundViewController: AppLogDelegate {
 
 extension BackgroundViewController: ViewManager {
     func changeView(_ viewName: String) {
-        print("Changing View")
         let newVC = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: viewName)
         guard let newView = newVC.view else {
             return
         }
         
-//        newView = UIView(frame: container.bounds)
         newView.bounds = container.bounds
         newView.backgroundColor = .clear
         
