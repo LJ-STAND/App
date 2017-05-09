@@ -22,7 +22,7 @@ let appSettings = MKUAppSettings()
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var appLogDelegate: AppLogDelegate?
-    
+    var viewManager: ViewManager?
     var shortcutItem: UIApplicationShortcutItem?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
@@ -47,10 +47,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpWindows() {
-        let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background")
+        let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background") as! BackgroundViewController
+        
+        viewManager = view
         
         let nav = UINavigationController(rootViewController: view)
         nav.navigationBar.barStyle = .blackTranslucent
+        nav.navigationBar.isTranslucent = false
         nav.navigationBar.topItem?.title = "LJ STAND"
         nav.navigationBar.topItem?.prompt = "Build: \(appSettings.build) - \(appSettings.pID)"
         nav.setStatusBarStyle(.lightContent)

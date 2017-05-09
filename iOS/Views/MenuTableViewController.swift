@@ -96,8 +96,8 @@ class MenuTableViewController: UITableViewController {
         default:
             break
         }
-        
-        NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "addWindow"), object: viewName)
+        (UIApplication.shared.delegate as! AppDelegate).viewManager?.clearView()
+        (UIApplication.shared.delegate as! AppDelegate).viewManager?.changeView(viewName)
         self.slideMenuController()?.closeLeft()
     }
 }
