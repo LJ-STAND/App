@@ -58,6 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sideMenuController = SlideMenuController(mainViewController: nav, leftMenuViewController: MenuTableViewController())
         sideMenuController.view.backgroundColor = .black
         
+        sideMenuController.delegate = self
+        
         let consoleManager = MKUConsoleManager.shared.getWindow(withRootViewController: sideMenuController, withBounds: UIScreen.main.bounds)
         
         window = consoleManager
