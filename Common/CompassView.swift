@@ -32,6 +32,7 @@ class CompassView: View {
     
     func commonInit() {
         needleAngle = 0
+        self.backgroundColor = .clear
     }
     
     override func draw(_ rect: CGRect) {

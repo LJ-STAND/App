@@ -13,9 +13,28 @@ import MKKit
 
 class BackgroundViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
+    var blurEffect: UIBlurEffect {
+        get {
+            return UIBlurEffect(style: .dark)
+        }
+    }
+    var blurView: UIVisualEffectView {
+        get {
+            let tempView = UIVisualEffectView(effect: blurEffect)
+            tempView.frame = view.frame
+            tempView.tag = 999
+            
+            return tempView
+        }
+    }
     var container: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addSubview(blurView)
+        
+        view.sendSubview(toBack: blurView)
+        view.sendSubview(toBack: imageView)
         
         container = UIView(frame: self.view.bounds)
         container.backgroundColor = .clear
@@ -58,15 +77,7 @@ class BackgroundViewController: UIViewController {
             subview.backgroundColor = .clear
         }
         
-        let blurEffect = UIBlurEffect(style: .dark)
-        let blurView = UIVisualEffectView(effect: blurEffect)
         
-        blurView.frame = view.frame
-        blurView.tag = 999
-        view.addSubview(blurView)
-        
-        view.sendSubview(toBack: blurView)
-        view.sendSubview(toBack: imageView)
         view.layoutIfNeeded()
     }
     

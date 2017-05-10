@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-carthage update --toolchain com.apple.dt.toolchain.Swift_3_0
+carthage update

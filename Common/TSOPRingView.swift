@@ -29,6 +29,8 @@ class TSOPRingView: View {
     }
     
     func commonInit() {
+        self.backgroundColor = .clear
+        
         for _ in 1...24 {
             tsops.append(false)
         }
