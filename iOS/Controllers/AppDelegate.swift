@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         handleBluetoothStatus()
         setUpNotifications()
         
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         return performShortcutDelegate(launchOptions: launchOptions)
     }
     
@@ -53,7 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         nav.navigationBar.barStyle = .blackTranslucent
         nav.navigationBar.topItem?.title = "LJ STAND"
         nav.navigationBar.topItem?.prompt = "Build: \(appSettings.build) - \(appSettings.pID)"
-        nav.setStatusBarStyle(.lightContent)
         
         let sideMenuController = SlideMenuController(mainViewController: nav, leftMenuViewController: MenuTableViewController())
         sideMenuController.view.backgroundColor = .black
@@ -63,10 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let consoleManager = MKUConsoleManager.shared.getWindow(withRootViewController: sideMenuController, withBounds: UIScreen.main.bounds)
         
         window = consoleManager
-//        window?.rootViewController = consoleManager
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
-//        window?.windowLevel = UIWindowLevelAlert
     }
     
     func orientationDidChange() {
