@@ -32,8 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         handleBluetoothStatus()
         setUpNotifications()
         
-        
-        
         return performShortcutDelegate(launchOptions: launchOptions)
     }
     
@@ -60,11 +58,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let sideMenuController = SlideMenuController(mainViewController: nav, leftMenuViewController: MenuTableViewController())
         sideMenuController.view.backgroundColor = .black
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = sideMenuController
+        let consoleManager = MKUConsoleManager.shared.getWindow(withRootViewController: sideMenuController, withBounds: UIScreen.main.bounds)
+        
+        window = consoleManager
+//        window?.rootViewController = consoleManager
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
-        window?.windowLevel = UIWindowLevelAlert
+//        window?.windowLevel = UIWindowLevelAlert
     }
     
     func orientationDidChange() {
