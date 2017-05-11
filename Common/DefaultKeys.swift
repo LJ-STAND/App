@@ -11,5 +11,4 @@ import Foundation
 struct DefaultKeys {
     static let base = "com.lachlangrant.LJSTAND"
     static let showLog = base + ".showLogWindow"
-    static let isDockOnRight = base + ".isDockOnRight"
 }

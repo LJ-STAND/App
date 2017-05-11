@@ -34,7 +34,7 @@ class SettingsTableViewController: UITableViewController {
         
         //Setting UI
         logWindowSwitch.isOn = defaults.bool(forKey: DefaultKeys.showLog)
-        dockOnRightSwitch.isOn = defaults.bool(forKey: DefaultKeys.isDockOnRight)
+//        dockOnRightSwitch.isOn = defaults.bool(forKey: DefaultKeys.isDockOnRight)
         
         //Requesting current settings from robot and setting ble delegate
         BluetoothController.shared.sendingDelegate?.requestSettings()
@@ -42,11 +42,10 @@ class SettingsTableViewController: UITableViewController {
     }
 
 	@IBAction func logWindowAction(_ sender: Any) {
-//        delegate.setLogWindow(enabled: logWindowSwitch.isOn)
+        delegate.setAppLogging(enabled: logWindowSwitch.isOn)
 	}
 	
 	@IBAction func dockOnRightAction(_ sender: Any) {
-//		delegate.setDockOnRight(right: (sender as! UISwitch).isOn)
 	}
 	
 	@IBAction func tsopDebug(_ sender: Any) {

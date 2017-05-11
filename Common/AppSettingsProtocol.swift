@@ -9,9 +9,10 @@
 import Foundation
 
 protocol AppSettingsDelegate {
-    func setDockOnRight(right: Bool)
+    func setAppLogging(enabled: Bool)
+//    func setDockOnRight(right: Bool)
 }
 
-protocol AppLogDelegate {
-    func enableAppLogging(enabled: Bool)
-}
+//protocol AppLogDelegate {
+//    func enableAppLogging(enabled: Bool)
+//}

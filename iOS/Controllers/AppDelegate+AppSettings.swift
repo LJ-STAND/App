@@ -7,11 +7,21 @@
 //
 
 import UIKit
+import MKUtilityKit
 
-//extension AppDelegate: AppSettingsDelegate {
-//    
-//    func setLogWindow(enabled: Bool) {
-//        defaults.set(enabled, forKey: DefaultKeys.showLog)
-//        (UIApplication.shared.delegate as! AppDelegate).appLogDelegate?.enableAppLogging(enabled: enabled)
-//    }
-//}
+extension AppDelegate: AppSettingsDelegate {
+    func setAppLogging(enabled: Bool) {
+        defaults.set(enabled, forKey: DefaultKeys.showLog)
+        closeApp()
+    }
+    
+    var appLogEnabled: Bool {
+        get {
+            return defaults.bool(forKey: DefaultKeys.showLog)
+        }
+    }
+    
+    func closeApp() {
+        exit(0)
+    }
+}

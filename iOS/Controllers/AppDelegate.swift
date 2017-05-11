@@ -21,9 +21,9 @@ let appSettings = MKUAppSettings()
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    var appLogDelegate: AppLogDelegate?
     var viewManager: ViewManager?
     var shortcutItem: UIApplicationShortcutItem?
+    var settingsDelegate: AppSettingsDelegate!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -31,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setUpWindows()
         handleBluetoothStatus()
         setUpNotifications()
+        
+        settingsDelegate = self
         
         UIApplication.shared.statusBarStyle = .lightContent
         
@@ -61,9 +63,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         sideMenuController.delegate = self
         
-        let consoleManager = MKUConsoleManager.shared.getWindow(withRootViewController: sideMenuController, withBounds: UIScreen.main.bounds)
+        if appLogEnabled {
+            let consoleManager = MKUConsoleManager.shared.getWindow(withRootViewController: sideMenuController, withBounds: UIScreen.main.bounds)
+            
+            window = consoleManager
+        } else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.rootViewController = sideMenuController
+        }
         
-        window = consoleManager
         window?.makeKeyAndVisible()
         window?.backgroundColor = .white
     }
