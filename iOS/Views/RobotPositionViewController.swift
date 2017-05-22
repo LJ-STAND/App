@@ -33,14 +33,6 @@ class RobotPositionViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         windowWasResized()
-        
-//        Test View
-        MKUAsync.background {
-            for i in 0...24 {
-                MKUAsync.main { self.updatePosition(position: RobotPosition(rawValue: i)!) }
-                sleep(1)
-            }
-        }
     }
     
     func calculateFrame() -> CGRect {
