@@ -39,6 +39,8 @@ class RobotPositionView: View {
     fileprivate let horizontalLineOffset = 60.0
     fileprivate let verticalOffset = 60.0
     fileprivate let robot = View(frame: Rect(x: 0, y: 0, width: 0, height: 0))
+    fileprivate var field = View(frame: Rect(x: 0, y: 0, width: 0, height: 0))
+    
     
     #if os(macOS)
         override var isFlipped: Bool { return true }
@@ -56,6 +58,27 @@ class RobotPositionView: View {
     
     fileprivate func sharedInit() {
         robot.backgroundColor = .blue
+        
+        field = View(frame: CGRect(x: horizontalLineOffset, y: verticalOffset, width: (Double(self.bounds.width) - (2 * horizontalLineOffset)), height: (Double(self.bounds.height) - (2 * verticalOffset))))
+        field.backgroundColor = .green
+        
+        field.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.addSubview(field)
+        
+        self.addConstraint(NSLayoutConstraint(item: field, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1.0, constant: CGFloat(horizontalLineOffset)))
+        
+        self.addConstraint(NSLayoutConstraint(item: field, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1.0, constant: CGFloat(-horizontalLineOffset)))
+        
+        self.addConstraint(NSLayoutConstraint(item: field, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: CGFloat(verticalOffset)))
+        
+        self.addConstraint(NSLayoutConstraint(item: field, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: CGFloat(-verticalOffset)))
+        
+        self.layoutIfNeeded()
+        
+        field.layer.borderWidth = 5.0
+        field.layer.borderColor = Color.white.cgColor
+        
         self.backgroundColor = .clear
         self.addSubview(robot)
     }
