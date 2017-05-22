@@ -94,19 +94,19 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits {
     }
     
     func showHideKeyboard(_ rec: UIGestureRecognizer) {
-        if !self.isFirstResponder {
-            if let navVC = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
-                if navVC.visibleViewController == self {
-                    if let window = UIApplication.shared.keyWindow {
-                        let point = rec.location(in: window)
-                        super.becomeFirstResponder()
-                        //TODO: Test
-                    }
-                }
-            }
-        } else {
-            self.resignFirstResponder()
-        }
+//        if !self.isFirstResponder {
+//            if let navVC = UIApplication.shared.keyWindow?.rootViewController as? UINavigationController {
+//                if navVC.visibleViewController == self {
+//                    if let window = UIApplication.shared.keyWindow {
+//                        let point = rec.location(in: window)
+//                        super.becomeFirstResponder()
+//                        //TODO: Test
+//                    }
+//                }
+//            }
+//        } else {
+//            self.resignFirstResponder()
+//        }
     }
 
     func insertText(_ text: String) {
