@@ -15,11 +15,13 @@ extension AppDelegate: BluetoothMessageDelegate {
     func showInformation(_ message: String) {
         MKUIToast.shared.showNotification(text: message, alignment: .center, color: .flatBlue, identifier: nil, callback: {})
         MKULog.shared.info(message)
+        scheduleDismiss()
     }
     
     func showError(_ message: String) {
         MKUIToast.shared.showNotification(text: message, alignment: .center, color: .flatRed, identifier: nil, callback: {})
         MKULog.shared.error(message)
+        scheduleDismiss()
     }
     
     func foundDevices(_ peripherals: [CBPeripheral]) {
@@ -35,8 +37,16 @@ extension AppDelegate: BluetoothMessageDelegate {
         
     }
     
+    fileprivate func scheduleDismiss() {
+        MKUAsync.background {
+            sleep(1)
+        }.main {_ in
+                self.dismissNotifications()
+        }
+    }
+    
     func dismissNotifications() {
-        MKUIToast.shared.dismissAllNotifications(animated: false)
+        MKUIToast.shared.dismissAllNotifications(animated: true)
     }
 }
 
