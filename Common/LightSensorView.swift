@@ -29,6 +29,7 @@ class lightSensorView: View {
     }
     
     func commonInit() {
+        BluetoothController.shared.checkConnect()
         self.backgroundColor = .clear
         for _ in 1...24 {
             lights.append(false)

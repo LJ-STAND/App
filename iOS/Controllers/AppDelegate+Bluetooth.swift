@@ -38,21 +38,5 @@ extension AppDelegate: BluetoothMessageDelegate {
     func dismissNotifications() {
         MKUIToast.shared.dismissAllNotifications(animated: false)
     }
-    
-    func handleBluetoothStatus() {
-        BluetoothController.shared.messageDelegate = self
-        BluetoothController.shared.bluetoothDebug = false
-        
-        let bluetooth = MKUPermission.bluetooth
-        let status = bluetooth.status
-        
-        if status == .denied || status == .disabled || status == .notDetermined {
-            BluetoothController.shared.overrideConnect = true
-        }
-        
-        if UIDevice.current.isSimulator == true {
-            BluetoothController.shared.overrideConnect = true
-        }
-    }
 }
 

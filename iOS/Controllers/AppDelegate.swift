@@ -29,12 +29,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         setUpFonts()
         setUpWindows()
-        handleBluetoothStatus()
         setUpNotifications()
         
         settingsDelegate = self
         
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        BluetoothController.shared.messageDelegate = self
+        BluetoothController.shared.bluetoothDebug = false
         
         return performShortcutDelegate(launchOptions: launchOptions)
     }
