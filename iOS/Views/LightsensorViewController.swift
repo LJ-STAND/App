@@ -51,6 +51,10 @@ class LightSensorViewController: UIViewController {
         windowView.resize()
         lightSensView.setNeedsDisplay()
     }
+    
+    deinit {
+        BluetoothController.shared.lightSensDelegate = nil
+    }
 }
 
 extension LightSensorViewController: BluetoothControllerLightSensorDelegate {

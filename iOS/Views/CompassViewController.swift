@@ -49,6 +49,10 @@ class CompassViewController: UIViewController {
         windowView.resize()
         compass.setNeedsDisplay()
     }
+    
+    deinit {
+        BluetoothController.shared.compassDelegate = nil
+    }
 }
 
 extension CompassViewController: BluetoothControllerCompassDelegate {
