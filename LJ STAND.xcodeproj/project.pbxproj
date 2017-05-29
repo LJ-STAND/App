@@ -677,8 +677,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "carthage copy-frameworks";
+			shellPath = /bin/bash;
+			shellScript = "cart=$(which carthage)\n$cart copy-frameworks";
 		};
 		EFED2CAF1E7F53B200E02440 /* Set Version Number */ = {
 			isa = PBXShellScriptBuildPhase;
