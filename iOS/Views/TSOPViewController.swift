@@ -17,14 +17,14 @@ import Chameleon
 class TSOPViewController: UIViewController {
     internal var tappedButton: UIButton?
     
-    var tsopView: TSOPRingView!
+    var tsopView: CompassView!
     var windowView: WindowView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         BluetoothController.shared.tsopDelegate = self
         
-        tsopView = TSOPRingView(frame: calculateFrame())
+        tsopView = CompassView(frame: calculateFrame())
         
         windowView = WindowView(frame: self.view.frame)
         self.view = windowView
@@ -52,8 +52,8 @@ class TSOPViewController: UIViewController {
 }
 
 extension TSOPViewController: BluetoothControllerTSOPDelegate {
-    func hasNewActiveTSOP(_ tsopNum: Int) {
-        tsopView.setCurrent(tsopNum)
+    func hasNewDirection(_ angle: Double) {
+        tsopView.rotate(angle)
     }
 }
 

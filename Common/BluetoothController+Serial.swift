@@ -90,6 +90,16 @@ extension BluetoothController: BluetoothSerialDelegate {
                 
                 compassDelegate?.hasNewHeading(ang)
                 
+            case .tsop:
+                let angle = processed.1
+                
+                guard let ang = Double(angle) else {
+                    break
+                }
+                
+//                compassDelegate?.hasNewHeading(ang)
+                
+                tsopDelegate?.hasNewDirection(ang)
             case .light:
                 let boolArr = Array(processed.1.characters)
                 
@@ -190,7 +200,7 @@ extension BluetoothController: BluetoothSerialDelegate {
         self.connected = false
         self.connectCount = 0
         serialDelegate?.hasNewOutput("Disconnected from \(peripheral.name!)")
-        tsopDelegate?.hasNewActiveTSOP(-1)
+        tsopDelegate?.hasNewDirection(0)
         compassDelegate?.hasNewHeading(0)
         lightSensDelegate?.updatedCurrentLightSensors([])
         connect()
