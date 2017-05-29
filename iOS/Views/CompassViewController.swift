@@ -19,11 +19,6 @@ class CompassViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        BluetoothController.shared.compassDelegate = self
-        
-        super.viewDidLoad()
-
         compass = CompassView(frame: calculateFrame())
         
         windowView = WindowView(frame: self.view.frame)
@@ -34,7 +29,14 @@ class CompassViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        BluetoothController.shared.compassDelegate = self
         windowWasResized()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        BluetoothController.shared.compassDelegate = nil
     }
     
     func calculateFrame() -> CGRect {
@@ -48,10 +50,6 @@ class CompassViewController: UIViewController {
     func windowWasResized() {
         windowView.resize()
         compass.setNeedsDisplay()
-    }
-    
-    deinit {
-        BluetoothController.shared.compassDelegate = nil
     }
 }
 

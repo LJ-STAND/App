@@ -22,7 +22,6 @@ class TSOPViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        BluetoothController.shared.tsopDelegate = self
         
         tsopView = CompassView(frame: calculateFrame())
         
@@ -35,6 +34,12 @@ class TSOPViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         windowWasResized()
+        BluetoothController.shared.tsopDelegate = self
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        BluetoothController.shared.tsopDelegate = nil
     }
     
     func windowWasResized() {

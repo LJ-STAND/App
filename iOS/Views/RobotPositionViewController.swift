@@ -18,10 +18,6 @@ class RobotPositionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        BluetoothController.shared.robotPositionDelegate = self
-        
-        super.viewDidLoad()
-        
         robotPos = RobotPositionView(frame: calculateFrame())
         
         windowView = WindowView(frame: self.view.frame)
@@ -32,7 +28,14 @@ class RobotPositionViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         windowWasResized()
+        BluetoothController.shared.robotPositionDelegate = self
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        BluetoothController.shared.robotPositionDelegate = nil
     }
     
     func calculateFrame() -> CGRect {
@@ -46,10 +49,6 @@ class RobotPositionViewController: UIViewController {
     func windowWasResized() {
         windowView.resize()
         robotPos.setNeedsDisplay()
-    }
-    
-    deinit {
-        BluetoothController.shared.robotPositionDelegate = nil
     }
 }
 

@@ -22,9 +22,6 @@ class LightSensorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        BluetoothController.shared.lightSensDelegate = self
-
-        super.viewDidLoad()
         
         lightSensView = lightSensorView(frame: calculateFrame())
         
@@ -36,7 +33,14 @@ class LightSensorViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         windowWasResized()
+        BluetoothController.shared.lightSensDelegate = self
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        BluetoothController.shared.lightSensDelegate = nil
     }
     
     func calculateFrame() -> CGRect {
@@ -50,10 +54,6 @@ class LightSensorViewController: UIViewController {
     func windowWasResized() {
         windowView.resize()
         lightSensView.setNeedsDisplay()
-    }
-    
-    deinit {
-        BluetoothController.shared.lightSensDelegate = nil
     }
 }
 
