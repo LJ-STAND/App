@@ -20,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		BluetoothController.shared.overrideConnect = true
         BluetoothController.shared.bluetoothDebug = false
         BluetoothController.shared.messageDelegate = self
+        BluetoothController.shared.checkConnect()
         
         MKULog.shared.logDetails()
         BluetoothController.shared.overrideConnect = false

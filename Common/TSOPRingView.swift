@@ -29,6 +29,8 @@ class TSOPRingView: View {
     }
     
     func commonInit() {
+        BluetoothController.shared.checkConnect()
+        
         self.backgroundColor = .clear
         
         for _ in 1...24 {

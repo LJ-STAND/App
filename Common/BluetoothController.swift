@@ -15,71 +15,27 @@ import CoreBluetooth
 import MKKit
 import MKUtilityKit
 
+#if os(iOS)
+    import UIKit
+#endif
+
 class BluetoothController {
     static let shared = BluetoothController()
     
-    var serialDelegate: BluetoothControllerSerialDelegate? {
-        didSet {
-            if !connected {
-                connect()
-            }
-        }
-    }
-    
-    var tsopDelegate: BluetoothControllerTSOPDelegate? {
-        didSet {
-            if !connected {
-                connect()
-            }
-        }
-    }
-    var compassDelegate: BluetoothControllerCompassDelegate? {
-        didSet {
-            if !connected {
-                connect()
-            }
-        }
-    }
-    
-    var lightSensDelegate: BluetoothControllerLightSensorDelegate? {
-        didSet {
-            if !connected {
-                connect()
-            }
-        }
-    }
-    
-    var messageDelegate: BluetoothMessageDelegate? {
-        didSet {
-            if !connected {
-                connect()
-            }
-        }
-    }
-    
-    var settingsDelegate: BluetoothControllerSettingsDelegate? {
-        didSet {
-            if !connected {
-                connect()
-            }
-        }
-    }
-    
-    var robotPositionDelegate: BluetoothControllerRobotPositionDelegate? {
-        didSet {
-            if !connected {
-                connect()
-            }
-        }
-    }
-    
+    var serialDelegate: BluetoothControllerSerialDelegate?
+    var tsopDelegate: BluetoothControllerTSOPDelegate?
+    var compassDelegate: BluetoothControllerCompassDelegate?
+    var lightSensDelegate: BluetoothControllerLightSensorDelegate?
+    var messageDelegate: BluetoothMessageDelegate?
+    var settingsDelegate: BluetoothControllerSettingsDelegate?
+    var robotPositionDelegate: BluetoothControllerRobotPositionDelegate?
     var sendingDelegate: BluetoothControllerSendDelegate?
     
     var peripherals: [CBPeripheral] = []
     var rssis: [Float] = []
     var selectedPeripheral: CBPeripheral?
     var connectCount = 0
-    var overrideConnect = false
+    var overrideConnect: Bool = false
     
     var connected: Bool = false
     var bluetoothDebug: Bool = false
@@ -87,9 +43,37 @@ class BluetoothController {
     var textRecieved = ""
     
     init() {
+        self.debugBluetooth(message: "init()")
         serial = BluetoothSerial(delegate: self)
         serial.writeType = .withoutResponse
         sendingDelegate = self
+        checkConnect()
+    }
+    
+    func checkDisabledStatus() -> Bool {
+        self.debugBluetooth(message: "checkDisabledStatus()")
+        let bluetooth = MKUPermission.bluetooth
+        let status = bluetooth.status
+        
+        if status == .denied || status == .disabled || status == .notDetermined {
+            return true
+        }
+        
+        #if os(iOS)
+        if UIDevice.current.isSimulator == true {
+            return true
+        }
+        #endif
+        
+        return false
+    }
+    
+    func checkConnect() {
+        self.debugBluetooth(message: "checkConnect()")
+        if self.connected == false && self.overrideConnect == false {
+            connectCount = 0
+            self.connect()
+        }
     }
     
     func connectTo(_ peripheral: CBPeripheral) {
@@ -98,6 +82,7 @@ class BluetoothController {
     }
     
     func connect() {
+        self.debugBluetooth(message: "connect()")
         if !overrideConnect && connectCount < 3 {
             MKUAsync.main {
                 self.messageDelegate?.showInformation("Scanning for Bluetooth Devices...")
@@ -133,6 +118,15 @@ class BluetoothController {
             }
         } else {
             messageDelegate?.dismissNotifications()
+        }
+    }
+    
+    fileprivate func debugBluetooth(message: String) {
+        if self.bluetoothDebug == true {
+            MKULog.shared.debug(message)
+            MKULog.shared.debug("Connected, Override, Peripherals")
+            MKULog.shared.debug([self.connected, self.overrideConnect, self.peripherals])
+            MKULog.shared.mark()
         }
     }
 }

@@ -63,6 +63,10 @@ class SettingsTableViewController: UITableViewController {
     func sendUpdatedSettings() {
         BluetoothController.shared.sendingDelegate?.sendSettings(compass: compassSwitch.isOn, tsop: tsopSwitch.isOn, light: lightSwitch.isOn)
     }
+    
+    deinit {
+        BluetoothController.shared.settingsDelegate = nil
+    }
 }
 
 extension SettingsTableViewController: BluetoothControllerSettingsDelegate {

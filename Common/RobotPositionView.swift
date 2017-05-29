@@ -57,6 +57,8 @@ class RobotPositionView: View {
     }
     
     fileprivate func sharedInit() {
+        BluetoothController.shared.checkConnect()
+        
         robot.backgroundColor = .blue
         
         field = View(frame: CGRect(x: horizontalLineOffset, y: verticalOffset, width: (Double(self.bounds.width) - (2 * horizontalLineOffset)), height: (Double(self.bounds.height) - (2 * verticalOffset))))

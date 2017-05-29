@@ -47,6 +47,10 @@ class RobotPositionViewController: UIViewController {
         windowView.resize()
         robotPos.setNeedsDisplay()
     }
+    
+    deinit {
+        BluetoothController.shared.robotPositionDelegate = nil
+    }
 }
 
 extension RobotPositionViewController: BluetoothControllerRobotPositionDelegate {

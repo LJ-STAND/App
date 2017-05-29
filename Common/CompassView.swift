@@ -31,6 +31,7 @@ class CompassView: View {
     }
     
     func commonInit() {
+        BluetoothController.shared.checkConnect()
         needleAngle = 0
         self.backgroundColor = .clear
     }
