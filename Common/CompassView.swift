@@ -20,6 +20,7 @@ class CompassView: View {
     @IBInspectable var needleAngle: Double!
     @IBInspectable var drawBackground = false
     @IBInspectable var secondNeedleAngle: Double!
+    var drawSecondNeedle = false
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -103,30 +104,34 @@ class CompassView: View {
             needlePath.stroke()
             
             
-            Color.green.setStroke()
+            if drawSecondNeedle {
+                Color.green.setStroke()
+                
+                let twoAngleRads = degToRad((360 - secondNeedleAngle) - 90)
+                
+                let xPointTwo = xCenter + (needleRadius * sin(twoAngleRads))
+                let yPointTwo = yCenter + (needleRadius * cos(twoAngleRads))
+                
+                let secondNeedlePath = BezierPath()
+                
+                secondNeedlePath.move(to: CGPoint(x: xCenter, y: yCenter))
+                
+                let secpoint = Point(x: xPointTwo, y: yPointTwo)
+                
+                #if os(macOS)
+                    secondNeedlePath.line(to: secpoint)
+                    secondNeedlePath.lineCapStyle = .roundLineCapStyle
+                #else
+                    secondNeedlePath.addLine(to: secpoint)
+                    secondNeedlePath.lineCapStyle = .round
+                #endif
+                
+                secondNeedlePath.lineWidth = 3
+                
+                secondNeedlePath.stroke()
+
+            }
             
-            let twoAngleRads = degToRad((360 - secondNeedleAngle) - 90)
-            
-            let xPointTwo = xCenter + (needleRadius * sin(twoAngleRads))
-            let yPointTwo = yCenter + (needleRadius * cos(twoAngleRads))
-            
-            let secondNeedlePath = BezierPath()
-            
-            secondNeedlePath.move(to: CGPoint(x: xCenter, y: yCenter))
-            
-            let secpoint = Point(x: xPointTwo, y: yPointTwo)
-            
-            #if os(macOS)
-                secondNeedlePath.line(to: secpoint)
-                secondNeedlePath.lineCapStyle = .roundLineCapStyle
-            #else
-                secondNeedlePath.addLine(to: secpoint)
-                secondNeedlePath.lineCapStyle = .round
-            #endif
-            
-            secondNeedlePath.lineWidth = 3
-            
-            secondNeedlePath.stroke()
         }
     }
     
@@ -137,6 +142,7 @@ class CompassView: View {
     
     func rotateSecondNeedle(_ angle: Double) {
         secondNeedleAngle = angle
+        drawSecondNeedle = true
         setNeedsDisplay(bounds)
     }
     
