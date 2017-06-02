@@ -38,7 +38,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BluetoothController.shared.messageDelegate = self
         BluetoothController.shared.bluetoothDebug = false
         
-        return performShortcutDelegate(launchOptions: launchOptions)
+        guard let debuggingOverlayClass = NSClassFromString("UIDebuggingInformationOverlay") as? UIWindow.Type else {
+            MKULog.shared.info("UIDebuggingInformationOverlay not found")
+            return true
+        }
+        
+        debuggingOverlayClass.perform(Selector("prepareDebuggingOverlay"))
+        let overlay = debuggingOverlayClass.perform(Selector("overlay")).takeUnretainedValue() as? UIWindow
+        
+        _ = overlay?.perform(Selector("toggleVisibility"))
+        
+//        return performShortcutDelegate(launchOptions: launchOptions)
+        
+        return true
     }
     
     func setUpFonts() {
