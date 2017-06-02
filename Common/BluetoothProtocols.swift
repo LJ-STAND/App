@@ -25,8 +25,8 @@ protocol BluetoothControllerSerialDelegate {
 }
 
 protocol BluetoothControllerTSOPDelegate {
-//    func hasNewActiveTSOP(_ tsopNum: Int)
     func hasNewDirection(_ angle: Double)
+    func hasNewOrbitAngle(_ angle: Double)
 }
 
 protocol BluetoothControllerCompassDelegate {

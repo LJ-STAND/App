@@ -153,6 +153,15 @@ extension BluetoothController: BluetoothSerialDelegate {
                 
                 robotPositionDelegate?.updatePosition(position: position)
                 
+            case .orbitAngle:
+                let angle = processed.1
+                
+                guard let ang = Double(angle) else {
+                    break
+                }
+                
+                tsopDelegate?.hasNewOrbitAngle(ang)
+                
             default:
                 MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")
             }
