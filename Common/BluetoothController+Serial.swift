@@ -97,8 +97,6 @@ extension BluetoothController: BluetoothSerialDelegate {
                     break
                 }
                 
-//                compassDelegate?.hasNewHeading(ang)
-                
                 tsopDelegate?.hasNewDirection(ang)
             case .light:
                 let boolArr = Array(processed.1.characters)
@@ -161,6 +159,15 @@ extension BluetoothController: BluetoothSerialDelegate {
                 }
                 
                 tsopDelegate?.hasNewOrbitAngle(ang)
+                
+            case .settings:
+                if processed.1.isNumber() {
+                    let robotNumber = Int(processed.1)
+                    
+                    
+                }
+                
+                
                 
             default:
                 MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")

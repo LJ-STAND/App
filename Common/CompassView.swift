@@ -7,15 +7,10 @@
 //
 
 import Foundation
-
-#if os(macOS)
-    import Cocoa
-#elseif os(iOS)
-    import UIKit
-#endif
+import UIKit
 
 @IBDesignable
-class CompassView: View {
+class CompassView: UIView {
     
     @IBInspectable var needleAngle: Double!
     @IBInspectable var drawBackground = false
@@ -42,18 +37,18 @@ class CompassView: View {
     override func draw(_ rect: CGRect) {
         
         if drawBackground {
-            Color.white.setFill()
-            RectFill(rect)
+            UIColor.white.setFill()
+            UIRectFill(rect)
         }
         
         let maxSize = min(rect.size.width, rect.size.height)
         let square = CGRect(x: rect.origin.x + rect.size.width / 2 - maxSize / 2, y: rect.origin.y + rect.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
-        let path = BezierPath(ovalIn: CGRect(origin: CGPoint(x: square.origin.x + 0.05 * square.size.width, y: square.origin.y + 0.05 * square.size.width), size: CGSize(width: 0.9 * square.size.width, height: 0.9 * square.size.height)))
+        let path = UIBezierPath(ovalIn: CGRect(origin: CGPoint(x: square.origin.x + 0.05 * square.size.width, y: square.origin.y + 0.05 * square.size.width), size: CGSize(width: 0.9 * square.size.width, height: 0.9 * square.size.height)))
         
         if drawBackground {
-            Color.black.setStroke()
+            UIColor.black.setStroke()
         } else {
-            Color.white.setStroke()
+            UIColor.white.setStroke()
         }
         
         path.lineWidth = 3
@@ -61,18 +56,14 @@ class CompassView: View {
         
         if !BluetoothController.shared.connected {
             let ovalRect = square.insetBy(dx: 0.9 * (square.size.width / 2), dy: 0.9 * (square.size.height / 2))
-            let ovalPath = BezierPath(ovalIn: ovalRect)
+            let ovalPath = UIBezierPath(ovalIn: ovalRect)
             ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*(Double.pi / 4)))))
 
-            let ovalPathPoint = Point(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-(Double.pi / 4))))
+            let ovalPathPoint = CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-(Double.pi / 4))))
             
-            #if os(macOS)
-                ovalPath.line(to: ovalPathPoint)
-            #else
-                ovalPath.addLine(to: ovalPathPoint)
-            #endif
+            ovalPath.addLine(to: ovalPathPoint)
             
-            Color.red.setStroke()
+            UIColor.red.setStroke()
             ovalPath.lineWidth = 3
             ovalPath.stroke()
         } else {
@@ -85,19 +76,14 @@ class CompassView: View {
             let xPoint = xCenter + (needleRadius * sin(angleRadians))
             let yPoint = yCenter + (needleRadius * cos(angleRadians))
             
-            let needlePath = BezierPath()
+            let needlePath = UIBezierPath()
             
             needlePath.move(to: CGPoint(x: xCenter, y: yCenter))
             
-            let point = Point(x: xPoint, y: yPoint)
+            let point = CGPoint(x: xPoint, y: yPoint)
             
-            #if os(macOS)
-                needlePath.line(to: point)
-                needlePath.lineCapStyle = .roundLineCapStyle
-            #else
-                needlePath.addLine(to: point)
-                needlePath.lineCapStyle = .round
-            #endif
+            needlePath.addLine(to: point)
+            needlePath.lineCapStyle = .round
             
             needlePath.lineWidth = 3
             
@@ -105,26 +91,21 @@ class CompassView: View {
             
             
             if drawSecondNeedle {
-                Color.green.setStroke()
+                UIColor.green.setStroke()
                 
                 let twoAngleRads = degToRad((360 - secondNeedleAngle) - 90)
                 
                 let xPointTwo = xCenter + (needleRadius * sin(twoAngleRads))
                 let yPointTwo = yCenter + (needleRadius * cos(twoAngleRads))
                 
-                let secondNeedlePath = BezierPath()
+                let secondNeedlePath = UIBezierPath()
                 
                 secondNeedlePath.move(to: CGPoint(x: xCenter, y: yCenter))
                 
-                let secpoint = Point(x: xPointTwo, y: yPointTwo)
+                let secpoint = CGPoint(x: xPointTwo, y: yPointTwo)
                 
-                #if os(macOS)
-                    secondNeedlePath.line(to: secpoint)
-                    secondNeedlePath.lineCapStyle = .roundLineCapStyle
-                #else
-                    secondNeedlePath.addLine(to: secpoint)
-                    secondNeedlePath.lineCapStyle = .round
-                #endif
+                secondNeedlePath.addLine(to: secpoint)
+                secondNeedlePath.lineCapStyle = .round
                 
                 secondNeedlePath.lineWidth = 3
                 

@@ -10,23 +10,18 @@
 		0FE982DBB7126C7560A3FE1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886869AA91C9C729AA88271F /* Main.storyboard */; };
 		4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 581C1A4891F43E30617A28DB /* LaunchScreen.xib */; };
 		CD2B605F1E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */; };
-		CD2B60601E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */; };
 		CD2B60621E98F55D00A6B1E1 /* CenteredTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2B60611E98F55D00A6B1E1 /* CenteredTextView.swift */; };
 		CD2B60651E99015900A6B1E1 /* WindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2B60641E99015900A6B1E1 /* WindowView.swift */; };
 		CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */; };
 		D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE59898617C260F3B4780CF /* Images.xcassets */; };
 		D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */; };
 		EF1528A11EC0437200F63356 /* RobotPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1528A01EC0437200F63356 /* RobotPosition.swift */; };
-		EF1528A21EC0437200F63356 /* RobotPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1528A01EC0437200F63356 /* RobotPosition.swift */; };
-		EF156E9F1E8390DD00D825F7 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF156E9E1E8390DD00D825F7 /* SerialViewController.swift */; };
 		EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */; };
 		EF1705CB1E682D910029DD0E /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1705CA1E682D910029DD0E /* Stickers.xcassets */; };
 		EF1D11E61EC19BBF00C8E390 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1D11E51EC19BBF00C8E390 /* UITableViewVibrantCell.swift */; };
 		EF1E98401E61019D00C70420 /* Dock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1E983F1E61019D00C70420 /* Dock.storyboard */; };
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
 		EF4170171EC0774C00EA2CD6 /* RobotPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4170161EC0774C00EA2CD6 /* RobotPositionView.swift */; };
-		EF4170181EC0774C00EA2CD6 /* RobotPositionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4170161EC0774C00EA2CD6 /* RobotPositionView.swift */; };
-		EF41701A1EC0785100EA2CD6 /* RobotPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4170191EC0785100EA2CD6 /* RobotPositionViewController.swift */; };
 		EF41701C1EC07AA700EA2CD6 /* RobotPositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF41701B1EC07AA700EA2CD6 /* RobotPositionViewController.swift */; };
 		EF5462581EC146AD0005EAEB /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5462571EC146AD0005EAEB /* SideMenuController.swift */; };
 		EF54625A1EC14EC40005EAEB /* ViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5462591EC14EC40005EAEB /* ViewManager.swift */; };
@@ -40,79 +35,32 @@
 		EF8233E51E8925F800423F03 /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AE1E83DFDA00753FDD /* MKUtilityKit.framework */; };
 		EF8233E61E8925F800423F03 /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710AF1E83DFDA00753FDD /* RESTKit.framework */; };
 		EF8233E81E892A8E00423F03 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8233E71E892A8E00423F03 /* CloudKit.framework */; };
-		EF8710BE1E83DFF000753FDD /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BB1E83DFF000753FDD /* MKKit.framework */; };
-		EF8710BF1E83DFF000753FDD /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BB1E83DFF000753FDD /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF8710C01E83DFF000753FDD /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BC1E83DFF000753FDD /* MKUtilityKit.framework */; };
-		EF8710C11E83DFF000753FDD /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BC1E83DFF000753FDD /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EF8710C21E83DFF000753FDD /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BD1E83DFF000753FDD /* RESTKit.framework */; };
-		EF8710C31E83DFF000753FDD /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EF8710BD1E83DFF000753FDD /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF9518241DB08CB4009B1F6F /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518231DB08CB4009B1F6F /* UIView.swift */; };
 		EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9518271DB100CD009B1F6F /* LightsensorViewController.swift */; };
 		EF9A24F21EAD862900F5D5A3 /* AppDelegate+3DTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A24F11EAD862900F5D5A3 /* AppDelegate+3DTouch.swift */; };
 		EF9A24F41EAD87A500F5D5A3 /* AppDelegate+Bluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A24F31EAD87A500F5D5A3 /* AppDelegate+Bluetooth.swift */; };
 		EF9A24F61EAD87D200F5D5A3 /* AppDelegate+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9A24F51EAD87D200F5D5A3 /* AppDelegate+AppSettings.swift */; };
 		EFA2DEE21E95DCA100A8FEC9 /* BluetoothDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */; };
-		EFA2DEE31E95DCA100A8FEC9 /* BluetoothDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */; };
 		EFA2DEE51E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */; };
-		EFA2DEE61E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */; };
 		EFA2DEE81E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */; };
-		EFA2DEE91E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
 		EFCCB5061EA0B696000F6E66 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCB5041EA0B696000F6E66 /* BackgroundViewController.swift */; };
 		EFCCB5071EA0B696000F6E66 /* HexButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCB5051EA0B696000F6E66 /* HexButton.swift */; };
 		EFE1AF241DC1DCDD00054E4C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */; };
 		EFE7366B1E95EB3900C8AF16 /* BluetoothController+Sending.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7366A1E95EB3900C8AF16 /* BluetoothController+Sending.swift */; };
-		EFE7366C1E95EB3C00C8AF16 /* BluetoothController+Sending.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7366A1E95EB3900C8AF16 /* BluetoothController+Sending.swift */; };
 		EFE7366E1E95EBFD00C8AF16 /* AppSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7366D1E95EBFD00C8AF16 /* AppSettingsProtocol.swift */; };
-		EFE7366F1E95EBFD00C8AF16 /* AppSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE7366D1E95EBFD00C8AF16 /* AppSettingsProtocol.swift */; };
-		EFED2C811E7F497300E02440 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C801E7F497300E02440 /* AppDelegate.swift */; };
-		EFED2C851E7F497300E02440 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFED2C841E7F497300E02440 /* Assets.xcassets */; };
-		EFED2C881E7F497300E02440 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFED2C861E7F497300E02440 /* Main.storyboard */; };
 		EFED2C9C1E7F4A1800E02440 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C951E7F4A1800E02440 /* BluetoothController.swift */; };
-		EFED2C9D1E7F4A1800E02440 /* BluetoothController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C951E7F4A1800E02440 /* BluetoothController.swift */; };
 		EFED2C9E1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */; };
-		EFED2C9F1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */; };
 		EFED2CA01E7F4A1800E02440 /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */; };
-		EFED2CA11E7F4A1800E02440 /* DefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */; };
 		EFED2CA21E7F4A1800E02440 /* MKKitExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C981E7F4A1800E02440 /* MKKitExt.swift */; };
-		EFED2CA31E7F4A1800E02440 /* MKKitExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C981E7F4A1800E02440 /* MKKitExt.swift */; };
 		EFED2CA41E7F4A1800E02440 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C991E7F4A1800E02440 /* NotificationKeys.swift */; };
-		EFED2CA51E7F4A1800E02440 /* NotificationKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2C991E7F4A1800E02440 /* NotificationKeys.swift */; };
-		EFED2CAB1E7F4DCF00E02440 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */; };
-		EFED2CAE1E7F535500E02440 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFED2CAD1E7F535500E02440 /* CloudKit.framework */; };
-		EFED2CB11E7F5E4700E02440 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB01E7F5E4700E02440 /* TypeAlias.swift */; };
-		EFED2CB21E7F5E4700E02440 /* TypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB01E7F5E4700E02440 /* TypeAlias.swift */; };
 		EFED2CB41E7F5E8400E02440 /* LightSensorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB31E7F5E8400E02440 /* LightSensorView.swift */; };
-		EFED2CB51E7F5E8400E02440 /* LightSensorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB31E7F5E8400E02440 /* LightSensorView.swift */; };
 		EFED2CB71E7F601900E02440 /* TSOPRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB61E7F601900E02440 /* TSOPRingView.swift */; };
-		EFED2CB81E7F601900E02440 /* TSOPRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB61E7F601900E02440 /* TSOPRingView.swift */; };
 		EFED2CBA1E7F60C100E02440 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB91E7F60C100E02440 /* CompassView.swift */; };
-		EFED2CBB1E7F60C100E02440 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB91E7F60C100E02440 /* CompassView.swift */; };
-		EFED2CBE1E7F649700E02440 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CBC1E7F649700E02440 /* InitialViewController.swift */; };
-		EFED2CC01E7F657900E02440 /* LightSensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CBF1E7F657900E02440 /* LightSensorViewController.swift */; };
-		EFED2CC21E7F6C2200E02440 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CC11E7F6C2200E02440 /* TSOPViewController.swift */; };
-		EFED2CC41E7F6D5900E02440 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
 		EFF460BB1EC106E200B02E7E /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF460BA1EC106E200B02E7E /* MenuTableViewController.swift */; };
-		EFFB66031E96653C0001C4FA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFB66021E96653C0001C4FA /* SettingsViewController.swift */; };
 		EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		EFED2C931E7F49A100E02440 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				EF8710C11E83DFF000753FDD /* MKUtilityKit.framework in Embed Frameworks */,
-				EF8710BF1E83DFF000753FDD /* MKKit.framework in Embed Frameworks */,
-				EF8710C31E83DFF000753FDD /* RESTKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		22525608FFE2DEB5D519B0F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,7 +74,6 @@
 		CD2B60641E99015900A6B1E1 /* WindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowView.swift; sourceTree = "<group>"; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		EF1528A01EC0437200F63356 /* RobotPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotPosition.swift; sourceTree = "<group>"; };
-		EF156E9E1E8390DD00D825F7 /* SerialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
 		EF1705C81E682D910029DD0E /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1705CA1E682D910029DD0E /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
@@ -135,7 +82,6 @@
 		EF1E983F1E61019D00C70420 /* Dock.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dock.storyboard; sourceTree = "<group>"; };
 		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		EF4170161EC0774C00EA2CD6 /* RobotPositionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotPositionView.swift; sourceTree = "<group>"; };
-		EF4170191EC0785100EA2CD6 /* RobotPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotPositionViewController.swift; sourceTree = "<group>"; };
 		EF41701B1EC07AA700EA2CD6 /* RobotPositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotPositionViewController.swift; sourceTree = "<group>"; };
 		EF5462571EC146AD0005EAEB /* SideMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
 		EF5462591EC14EC40005EAEB /* ViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewManager.swift; sourceTree = "<group>"; };
@@ -167,30 +113,18 @@
 		EFE1AF231DC1DCDD00054E4C /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		EFE7366A1E95EB3900C8AF16 /* BluetoothController+Sending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "BluetoothController+Sending.swift"; sourceTree = "<group>"; };
 		EFE7366D1E95EBFD00C8AF16 /* AppSettingsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSettingsProtocol.swift; sourceTree = "<group>"; };
-		EFED2C7E1E7F497300E02440 /* LJ STAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LJ STAND.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFED2C801E7F497300E02440 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EFED2C841E7F497300E02440 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EFED2C871E7F497300E02440 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EFED2C891E7F497300E02440 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFED2C951E7F4A1800E02440 /* BluetoothController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothController.swift; sourceTree = "<group>"; };
 		EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
 		EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultKeys.swift; sourceTree = "<group>"; };
 		EFED2C981E7F4A1800E02440 /* MKKitExt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKKitExt.swift; sourceTree = "<group>"; };
 		EFED2C991E7F4A1800E02440 /* NotificationKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationKeys.swift; sourceTree = "<group>"; };
 		EFED2CAA1E7F4DCF00E02440 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
-		EFED2CAC1E7F532300E02440 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		EFED2CAD1E7F535500E02440 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
-		EFED2CB01E7F5E4700E02440 /* TypeAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeAlias.swift; sourceTree = "<group>"; };
 		EFED2CB31E7F5E8400E02440 /* LightSensorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightSensorView.swift; sourceTree = "<group>"; };
 		EFED2CB61E7F601900E02440 /* TSOPRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPRingView.swift; sourceTree = "<group>"; };
 		EFED2CB91E7F60C100E02440 /* CompassView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
-		EFED2CBC1E7F649700E02440 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
-		EFED2CBF1E7F657900E02440 /* LightSensorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightSensorViewController.swift; sourceTree = "<group>"; };
-		EFED2CC11E7F6C2200E02440 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
-		EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
 		EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Simulator.swift"; sourceTree = "<group>"; };
 		EFF460BA1EC106E200B02E7E /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
-		EFFB66021E96653C0001C4FA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInterfaceIdom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -213,18 +147,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EFED2C7B1E7F497300E02440 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EFED2CAB1E7F4DCF00E02440 /* CoreBluetooth.framework in Frameworks */,
-				EF8710C21E83DFF000753FDD /* RESTKit.framework in Frameworks */,
-				EF8710BE1E83DFF000753FDD /* MKKit.framework in Frameworks */,
-				EF8710C01E83DFF000753FDD /* MKUtilityKit.framework in Frameworks */,
-				EFED2CAE1E7F535500E02440 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +178,6 @@
 				CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */,
 				EFED2C941E7F49CF00E02440 /* Common */,
 				AB3793622466EE2A02CBADDD /* iOS */,
-				EFED2C7F1E7F497300E02440 /* macOS */,
 				EF1705C91E682D910029DD0E /* Stickers */,
 				534AB7A34A3D72BAFA984F6B /* Frameworks */,
 				AC5953FE6C17FE0FB64BBF47 /* Products */,
@@ -375,7 +296,6 @@
 			children = (
 				C8E706015D603F83004748A1 /* iOS.app */,
 				EF1705C81E682D910029DD0E /* Stickers.appex */,
-				EFED2C7E1E7F497300E02440 /* LJ STAND.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -420,29 +340,9 @@
 			name = macOS;
 			sourceTree = "<group>";
 		};
-		EFED2C7F1E7F497300E02440 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				EFED2CAC1E7F532300E02440 /* macOS.entitlements */,
-				EFED2C801E7F497300E02440 /* AppDelegate.swift */,
-				EFED2CBC1E7F649700E02440 /* InitialViewController.swift */,
-				EF156E9E1E8390DD00D825F7 /* SerialViewController.swift */,
-				EFED2CBF1E7F657900E02440 /* LightSensorViewController.swift */,
-				EFED2CC11E7F6C2200E02440 /* TSOPViewController.swift */,
-				EFED2CC31E7F6D5900E02440 /* CompassViewController.swift */,
-				EFFB66021E96653C0001C4FA /* SettingsViewController.swift */,
-				EF4170191EC0785100EA2CD6 /* RobotPositionViewController.swift */,
-				EFED2C841E7F497300E02440 /* Assets.xcassets */,
-				EFED2C861E7F497300E02440 /* Main.storyboard */,
-				EFED2C891E7F497300E02440 /* Info.plist */,
-			);
-			path = macOS;
-			sourceTree = "<group>";
-		};
 		EFED2C941E7F49CF00E02440 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				EFED2CB01E7F5E4700E02440 /* TypeAlias.swift */,
 				EFED2C951E7F4A1800E02440 /* BluetoothController.swift */,
 				EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */,
 				EFE7366A1E95EB3900C8AF16 /* BluetoothController+Sending.swift */,
@@ -501,25 +401,6 @@
 			productReference = EF1705C81E682D910029DD0E /* Stickers.appex */;
 			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
-		EFED2C7D1E7F497300E02440 /* macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EFED2C8C1E7F497300E02440 /* Build configuration list for PBXNativeTarget "macOS" */;
-			buildPhases = (
-				EFED2C7A1E7F497300E02440 /* Sources */,
-				EFED2C7B1E7F497300E02440 /* Frameworks */,
-				EFED2C7C1E7F497300E02440 /* Resources */,
-				EFED2CAF1E7F53B200E02440 /* Set Version Number */,
-				EFED2C931E7F49A100E02440 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = macOS;
-			productName = "LJ STAND macOS";
-			productReference = EFED2C7E1E7F497300E02440 /* LJ STAND.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -559,24 +440,6 @@
 						CreatedOnToolsVersion = 8.3;
 						ProvisioningStyle = Automatic;
 					};
-					EFED2C7D1E7F497300E02440 = {
-						CreatedOnToolsVersion = 8.3;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.Mac = {
-								enabled = 1;
-							};
-							com.apple.Push = {
-								enabled = 1;
-							};
-							com.apple.Sandbox = {
-								enabled = 0;
-							};
-							com.apple.iCloud = {
-								enabled = 1;
-							};
-						};
-					};
 				};
 			};
 			buildConfigurationList = 4B642AFBC9C0D7805E207890 /* Build configuration list for PBXProject "LJ STAND" */;
@@ -594,7 +457,6 @@
 			targets = (
 				D020986916FA04E7BBD68098 /* iOS */,
 				EF1705C71E682D910029DD0E /* Stickers */,
-				EFED2C7D1E7F497300E02440 /* macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -617,16 +479,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF1705CB1E682D910029DD0E /* Stickers.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EFED2C7C1E7F497300E02440 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EFED2C851E7F497300E02440 /* Assets.xcassets in Resources */,
-				CD2B60601E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */,
-				EFED2C881E7F497300E02440 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,20 +532,6 @@
 			shellPath = /bin/bash;
 			shellScript = "cd $(SRCROOT)\n$(which carthage) copy-frameworks";
 		};
-		EFED2CAF1E7F53B200E02440 /* Set Version Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Set Version Number";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "${SRCROOT}/bin/gitVersion";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -730,7 +568,6 @@
 				EF9518281DB100CD009B1F6F /* LightsensorViewController.swift in Sources */,
 				EF4170171EC0774C00EA2CD6 /* RobotPositionView.swift in Sources */,
 				EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */,
-				EFED2CB11E7F5E4700E02440 /* TypeAlias.swift in Sources */,
 				EFA2DEE21E95DCA100A8FEC9 /* BluetoothDataType.swift in Sources */,
 				EFED2CA21E7F4A1800E02440 /* MKKitExt.swift in Sources */,
 				EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */,
@@ -745,49 +582,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EFED2C7A1E7F497300E02440 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EFA2DEE91E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */,
-				EFED2CA51E7F4A1800E02440 /* NotificationKeys.swift in Sources */,
-				EF41701A1EC0785100EA2CD6 /* RobotPositionViewController.swift in Sources */,
-				EFFB66031E96653C0001C4FA /* SettingsViewController.swift in Sources */,
-				EFED2CBE1E7F649700E02440 /* InitialViewController.swift in Sources */,
-				EF4170181EC0774C00EA2CD6 /* RobotPositionView.swift in Sources */,
-				EFA2DEE61E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */,
-				EFED2C9D1E7F4A1800E02440 /* BluetoothController.swift in Sources */,
-				EFED2CA31E7F4A1800E02440 /* MKKitExt.swift in Sources */,
-				EFED2CC21E7F6C2200E02440 /* TSOPViewController.swift in Sources */,
-				EFED2CB51E7F5E8400E02440 /* LightSensorView.swift in Sources */,
-				EFE7366F1E95EBFD00C8AF16 /* AppSettingsProtocol.swift in Sources */,
-				EFED2CB21E7F5E4700E02440 /* TypeAlias.swift in Sources */,
-				EFED2CA11E7F4A1800E02440 /* DefaultKeys.swift in Sources */,
-				EFED2C9F1E7F4A1800E02440 /* BluetoothSerial.swift in Sources */,
-				EFA2DEE31E95DCA100A8FEC9 /* BluetoothDataType.swift in Sources */,
-				EFED2CC01E7F657900E02440 /* LightSensorViewController.swift in Sources */,
-				EF1528A21EC0437200F63356 /* RobotPosition.swift in Sources */,
-				EFED2CC41E7F6D5900E02440 /* CompassViewController.swift in Sources */,
-				EFED2CBB1E7F60C100E02440 /* CompassView.swift in Sources */,
-				EFED2C811E7F497300E02440 /* AppDelegate.swift in Sources */,
-				EFED2CB81E7F601900E02440 /* TSOPRingView.swift in Sources */,
-				EFE7366C1E95EB3C00C8AF16 /* BluetoothController+Sending.swift in Sources */,
-				EF156E9F1E8390DD00D825F7 /* SerialViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		EFED2C861E7F497300E02440 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EFED2C871E7F497300E02440 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1328577D1210908FA29C34EC /* Debug */ = {
@@ -1030,73 +825,6 @@
 			};
 			name = Release;
 		};
-		EFED2C8A1E7F497300E02440 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = MacIcon;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = QSCWPBA77U;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "$(SRCROOT)/macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lachlangrant.LJSTAND.macOS;
-				PRODUCT_NAME = "LJ STAND";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		EFED2C8B1E7F497300E02440 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = MacIcon;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = QSCWPBA77U;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "$(SRCROOT)/macOS/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_SWIFT_FLAGS = "-Xfrontend -debug-time-function-bodies";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lachlangrant.LJSTAND.macOS;
-				PRODUCT_NAME = "LJ STAND";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1114,15 +842,6 @@
 			buildConfigurations = (
 				EF1705D11E682D910029DD0E /* Debug */,
 				EF1705D21E682D910029DD0E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EFED2C8C1E7F497300E02440 /* Build configuration list for PBXNativeTarget "macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EFED2C8A1E7F497300E02440 /* Debug */,
-				EFED2C8B1E7F497300E02440 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

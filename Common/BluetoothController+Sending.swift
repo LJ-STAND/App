@@ -11,10 +11,13 @@ import MKUtilityKit
 
 extension BluetoothController: BluetoothControllerSendDelegate {
     
+    func pollForRobotNumber() {
+        let msgToSend = generateMessage(type: .settings, message: "0")
+        serial.sendMessageToDevice(msgToSend)
+    }
+    
     func requestSettings() {
-        let dataType = BluetoothDataType.settings
-        let message = "9"
-        let msgToSend = "\(dataType.rawValue);\(message)"
+        let msgToSend = generateMessage(type: .settings, message: "9")
         serial.sendMessageToDevice(msgToSend)
     }
     
@@ -27,10 +30,14 @@ extension BluetoothController: BluetoothControllerSendDelegate {
             binaryString += String(item.hashValue)
         }
         
-        let type = BluetoothDataType.settings.rawValue
+        let type = BluetoothDataType.settings
         
-        let finalString = "\(type);\(binaryString)"
+        let finalString = generateMessage(type: type, message: binaryString)
         
         serial.sendMessageToDevice(finalString)
+    }
+    
+    fileprivate func generateMessage(type: BluetoothDataType, message: String) -> String {
+        return "\(type);\(message)"
     }
 }

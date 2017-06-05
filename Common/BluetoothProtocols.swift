@@ -42,6 +42,7 @@ protocol BluetoothControllerSettingsDelegate {
 }
 
 protocol BluetoothControllerSendDelegate {
+    func pollForRobotNumber()
     func requestSettings()
     func sendSettings(compass: Bool, tsop: Bool, light: Bool)
 }

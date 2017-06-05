@@ -14,10 +14,7 @@ import Foundation
 import CoreBluetooth
 import MKKit
 import MKUtilityKit
-
-#if os(iOS)
-    import UIKit
-#endif
+import UIKit
 
 class BluetoothController {
     static let shared = BluetoothController()
@@ -55,15 +52,9 @@ class BluetoothController {
         let bluetooth = MKUPermission.bluetooth
         let status = bluetooth.status
         
-        if status == .denied || status == .disabled || status == .notDetermined {
+        if status == .denied || status == .disabled || status == .notDetermined || UIDevice.current.isSimulator == true {
             return true
         }
-        
-        #if os(iOS)
-        if UIDevice.current.isSimulator == true {
-            return true
-        }
-        #endif
         
         return false
     }

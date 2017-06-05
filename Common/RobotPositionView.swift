@@ -7,46 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
-#if os(macOS)
-    import Cocoa
-    
-    extension NSView {
-        
-        var backgroundColor: NSColor? {
-            
-            get {
-                if let colorRef = self.layer?.backgroundColor {
-                    return NSColor(cgColor: colorRef)
-                } else {
-                    return nil
-                }
-            }
-            
-            set {
-                self.wantsLayer = true
-                self.layer?.backgroundColor = newValue?.cgColor
-            }
-        }
-    }
-    
-    
-#elseif os(iOS)
-    import UIKit
-#endif
-
-class RobotPositionView: View {
+class RobotPositionView: UIView {
     fileprivate let horizontalLineOffset = 60.0
     fileprivate let verticalOffset = 60.0
-    fileprivate let robot = View(frame: Rect(x: 0, y: 0, width: 0, height: 0))
-    fileprivate var field = View(frame: Rect(x: 0, y: 0, width: 0, height: 0))
+    fileprivate let robot = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    fileprivate var field = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
     
-    
-    #if os(macOS)
-        override var isFlipped: Bool { return true }
-    #endif
-    
-    override init(frame frameRect: Rect) {
+    override init(frame frameRect: CGRect) {
         super.init(frame: frameRect)
         sharedInit()
     }
@@ -61,7 +30,7 @@ class RobotPositionView: View {
         
         robot.backgroundColor = .blue
         
-        field = View(frame: CGRect(x: horizontalLineOffset, y: verticalOffset, width: (Double(self.bounds.width) - (2 * horizontalLineOffset)), height: (Double(self.bounds.height) - (2 * verticalOffset))))
+        field = UIView(frame: CGRect(x: horizontalLineOffset, y: verticalOffset, width: (Double(self.bounds.width) - (2 * horizontalLineOffset)), height: (Double(self.bounds.height) - (2 * verticalOffset))))
         field.backgroundColor = .green
         
         field.translatesAutoresizingMaskIntoConstraints = false
@@ -79,7 +48,7 @@ class RobotPositionView: View {
         self.layoutIfNeeded()
         
         field.layer.borderWidth = 5.0
-        field.layer.borderColor = Color.white.cgColor
+        field.layer.borderColor = UIColor.white.cgColor
         
         self.backgroundColor = .clear
         self.addSubview(robot)
@@ -87,7 +56,7 @@ class RobotPositionView: View {
     
     public func setRobotPosition(_ pos: RobotPosition) {
         let size: CGFloat = 50.0
-        var position = Rect(x: 0.0, y: 0.0, width: size, height: size)
+        var position = CGRect(x: 0.0, y: 0.0, width: size, height: size)
         
         switch pos {
             

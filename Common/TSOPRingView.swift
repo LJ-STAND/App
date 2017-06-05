@@ -7,14 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-#if os(macOS)
-    import Cocoa
-#elseif os(iOS)
-    import UIKit
-#endif
-
-class TSOPRingView: View {
+class TSOPRingView: UIView {
     var tsops: [Bool] = [Bool]()
     var drawBackground = false
     
@@ -42,8 +37,8 @@ class TSOPRingView: View {
     
     override func draw(_ rect: CGRect) {
         if drawBackground {
-            Color.white.setFill()
-            RectFill(rect)
+            UIColor.white.setFill()
+            UIRectFill(rect)
         }
         let maxSize = min(rect.size.width, rect.size.height)
         let square = CGRect(x: rect.origin.x + rect.size.width / 2 - maxSize / 2, y: rect.origin.y + rect.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
@@ -63,9 +58,9 @@ class TSOPRingView: View {
             let xVal = (Double(square.midX) + (hypt * sin(angleRad)) - offset)
             let yVal = (Double(square.midY) + (hypt * cos(angleRad)) - offset)
             
-            let path = BezierPath(ovalIn: CGRect(x: xVal, y: yVal, width: radOfTSOP, height: radOfTSOP))
+            let path = UIBezierPath(ovalIn: CGRect(x: xVal, y: yVal, width: radOfTSOP, height: radOfTSOP))
             
-            var tempColor = Color.white
+            var tempColor = UIColor.white
             
             if drawBackground {
                 tempColor = .black
@@ -83,18 +78,14 @@ class TSOPRingView: View {
         
         if !BluetoothController.shared.connected {
             let ovalRect = square.insetBy(dx: 0.9 * (square.size.width / 2), dy: 0.9 * (square.size.height / 2))
-            let ovalPath = BezierPath(ovalIn: ovalRect)
+            let ovalPath = UIBezierPath(ovalIn: ovalRect)
             ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*(Double.pi / 4)))))
             
-            let ovalPathPoint = Point(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-(Double.pi / 4))))
+            let ovalPathPoint = CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-(Double.pi / 4))))
+
+            ovalPath.addLine(to: ovalPathPoint)
             
-            #if os(macOS)
-                ovalPath.line(to: ovalPathPoint)
-            #else
-                ovalPath.addLine(to: ovalPathPoint)
-            #endif
-            
-            Color.red.setStroke()
+            UIColor.red.setStroke()
             ovalPath.lineWidth = 3
             ovalPath.stroke()
         }
