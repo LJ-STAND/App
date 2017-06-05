@@ -74,32 +74,34 @@ extension BluetoothController: BluetoothSerialDelegate {
         
             let processed = processString(str: strToProcess)
             
-            switch processed.0 {
+            let robot = processed.0
+            
+            switch processed.1 {
             case .noDataType:
-                serialDelegate?.hasNewOutput("No Data Type: \(processed.1)")
+                serialDelegate?.hasNewOutput("No Data Type: \(processed.2)")
                 
             case .info:
-                serialDelegate?.hasNewOutput(processed.1)
+                serialDelegate?.hasNewOutput(processed.2)
                 
             case .compass:
-                let angle = processed.1
+                let angle = processed.2
                 
                 guard let ang = Double(angle) else {
                     break
                 }
                 
-                compassDelegate?.hasNewHeading(ang)
+                compassDelegate?.hasNewHeading(ang, robot: robot)
                 
             case .tsop:
-                let angle = processed.1
+                let angle = processed.2
                 
                 guard let ang = Double(angle) else {
                     break
                 }
                 
-                tsopDelegate?.hasNewDirection(ang)
+                tsopDelegate?.hasNewDirection(ang, robot: robot)
             case .light:
-                let boolArr = Array(processed.1.characters)
+                let boolArr = Array(processed.2.characters)
                 
                 if boolArr.count == 12 {
                     var sensorStatus: [Int] = []
@@ -133,13 +135,13 @@ extension BluetoothController: BluetoothSerialDelegate {
                                 }
                             }
                             
-                            lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers)
+                            lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers, robot: robot)
                         }
                     }
                 }
                 
             case .robotPoisition:
-                let positionString = processed.1
+                let positionString = processed.2
                 
                 guard let positionInt = Int(positionString) else {
                     return
@@ -149,25 +151,16 @@ extension BluetoothController: BluetoothSerialDelegate {
                     return
                 }
                 
-                robotPositionDelegate?.updatePosition(position: position)
+                robotPositionDelegate?.updatePosition(position: position, robot: robot)
                 
             case .orbitAngle:
-                let angle = processed.1
+                let angle = processed.2
                 
                 guard let ang = Double(angle) else {
                     break
                 }
                 
-                tsopDelegate?.hasNewOrbitAngle(ang)
-                
-            case .settings:
-                if processed.1.isNumber() {
-                    let robotNumber = Int(processed.1)
-                    
-                    
-                }
-                
-                
+                tsopDelegate?.hasNewOrbitAngle(ang, robot: robot)
                 
             default:
                 MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")
@@ -187,24 +180,34 @@ extension BluetoothController: BluetoothSerialDelegate {
         }
     }
     
-    func processString(str: String) -> (BluetoothDataType, String) {
+    func processString(str: String) -> (RobotNumber, BluetoothDataType, String) {
         let comps = str.components(separatedBy: ";")
         
-        if comps.count == 2 {
-            guard let unwrappedString = Int(comps.first!) else {
-                return (BluetoothDataType.noDataType, comps[1])
+        if comps.count == 3 {
+            
+            guard let robotNumber = Int(comps.first!) else {
+                return (.neverShouldBeThis, .noDataType, "")
             }
             
-            guard let dataType = BluetoothDataType(rawValue: unwrappedString) else {
-                return (BluetoothDataType.noDataType, comps[1])
+            guard let dataInt = Int(comps[1]) else {
+                return (.neverShouldBeThis, .noDataType, "")
             }
             
-            let message = comps[1]
+            guard let robotType = RobotNumber(rawValue: robotNumber) else {
+                return (.neverShouldBeThis, .noDataType, "")
+            }
             
-            return (dataType, message)
+            guard let dataType = BluetoothDataType(rawValue: dataInt) else {
+                return (.neverShouldBeThis, .noDataType, "")
+            }
+            
+            let message = comps[2]
+            
+            return (robotType, dataType, message)
+            
         }
         
-        return (.noDataType, "")
+        return (.neverShouldBeThis, .noDataType, "")
     }
     
     func serialDidChangeState() {
@@ -216,9 +219,9 @@ extension BluetoothController: BluetoothSerialDelegate {
         self.connected = false
         self.connectCount = 0
         serialDelegate?.hasNewOutput("Disconnected from \(peripheral.name!)")
-        tsopDelegate?.hasNewDirection(0)
-        compassDelegate?.hasNewHeading(0)
-        lightSensDelegate?.updatedCurrentLightSensors([])
+        tsopDelegate?.hasNewDirection(0, robot: .neverShouldBeThis)
+        compassDelegate?.hasNewHeading(0, robot: .neverShouldBeThis)
+        lightSensDelegate?.updatedCurrentLightSensors([], robot: .neverShouldBeThis)
         connect()
     }
 }

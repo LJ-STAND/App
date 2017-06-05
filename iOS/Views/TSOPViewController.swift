@@ -57,11 +57,11 @@ class TSOPViewController: UIViewController {
 }
 
 extension TSOPViewController: BluetoothControllerTSOPDelegate {
-    func hasNewDirection(_ angle: Double) {
+    func hasNewDirection(_ angle: Double, robot: RobotNumber) {
         tsopView.rotate(angle)
     }
     
-    func hasNewOrbitAngle(_ angle: Double) {
+    func hasNewOrbitAngle(_ angle: Double, robot: RobotNumber) {
         tsopView.rotateSecondNeedle(angle)
     }
 }

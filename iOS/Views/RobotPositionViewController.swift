@@ -53,7 +53,7 @@ class RobotPositionViewController: UIViewController {
 }
 
 extension RobotPositionViewController: BluetoothControllerRobotPositionDelegate {
-    func updatePosition(position: RobotPosition) {
+    func updatePosition(position: RobotPosition, robot: RobotNumber) {
         self.robotPos.setRobotPosition(position)
     }
 }

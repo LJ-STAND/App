@@ -11,11 +11,6 @@ import MKUtilityKit
 
 extension BluetoothController: BluetoothControllerSendDelegate {
     
-    func pollForRobotNumber() {
-        let msgToSend = generateMessage(type: .settings, message: "0")
-        serial.sendMessageToDevice(msgToSend)
-    }
-    
     func requestSettings() {
         let msgToSend = generateMessage(type: .settings, message: "9")
         serial.sendMessageToDevice(msgToSend)

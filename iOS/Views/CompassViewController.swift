@@ -54,7 +54,7 @@ class CompassViewController: UIViewController {
 }
 
 extension CompassViewController: BluetoothControllerCompassDelegate {
-    func hasNewHeading(_ angle: Double) {
+    func hasNewHeading(_ angle: Double, robot: RobotNumber) {
         self.compass.rotate(angle)
     }
 }

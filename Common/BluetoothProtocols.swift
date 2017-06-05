@@ -25,16 +25,16 @@ protocol BluetoothControllerSerialDelegate {
 }
 
 protocol BluetoothControllerTSOPDelegate {
-    func hasNewDirection(_ angle: Double)
-    func hasNewOrbitAngle(_ angle: Double)
+    func hasNewDirection(_ angle: Double, robot: RobotNumber)
+    func hasNewOrbitAngle(_ angle: Double, robot: RobotNumber)
 }
 
 protocol BluetoothControllerCompassDelegate {
-    func hasNewHeading(_ angle: Double)
+    func hasNewHeading(_ angle: Double, robot: RobotNumber)
 }
 
 protocol BluetoothControllerLightSensorDelegate {
-    func updatedCurrentLightSensors(_ sensors: [Int])
+    func updatedCurrentLightSensors(_ sensors: [Int], robot: RobotNumber)
 }
 
 protocol BluetoothControllerSettingsDelegate {
@@ -42,11 +42,10 @@ protocol BluetoothControllerSettingsDelegate {
 }
 
 protocol BluetoothControllerSendDelegate {
-    func pollForRobotNumber()
     func requestSettings()
     func sendSettings(compass: Bool, tsop: Bool, light: Bool)
 }
 
 protocol BluetoothControllerRobotPositionDelegate {
-    func updatePosition(position: RobotPosition)
+    func updatePosition(position: RobotPosition, robot: RobotNumber)
 }
