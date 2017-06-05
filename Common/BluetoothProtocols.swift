@@ -34,7 +34,7 @@ protocol BluetoothControllerCompassDelegate {
 }
 
 protocol BluetoothControllerLightSensorDelegate {
-    func updatedCurrentLightSensors(_ sensors: [Int], robot: RobotNumber)
+    func updatedCurrentLightSensors(_ sensors: [Int])
 }
 
 protocol BluetoothControllerSettingsDelegate {

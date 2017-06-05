@@ -135,7 +135,7 @@ extension BluetoothController: BluetoothSerialDelegate {
                                 }
                             }
                             
-                            lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers, robot: robot)
+                            lightSensDelegate?.updatedCurrentLightSensors(sensorNumbers)
                         }
                     }
                 }
@@ -221,7 +221,7 @@ extension BluetoothController: BluetoothSerialDelegate {
         serialDelegate?.hasNewOutput("Disconnected from \(peripheral.name!)")
         tsopDelegate?.hasNewDirection(0, robot: .neverShouldBeThis)
         compassDelegate?.hasNewHeading(0, robot: .neverShouldBeThis)
-        lightSensDelegate?.updatedCurrentLightSensors([], robot: .neverShouldBeThis)
+        lightSensDelegate?.updatedCurrentLightSensors([])
         connect()
     }
 }

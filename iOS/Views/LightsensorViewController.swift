@@ -58,7 +58,7 @@ class LightSensorViewController: UIViewController {
 }
 
 extension LightSensorViewController: BluetoothControllerLightSensorDelegate {
-    func updatedCurrentLightSensors(_ sensors: [Int], robot: RobotNumber) {
+    func updatedCurrentLightSensors(_ sensors: [Int]) {
         self.lightSensView.clearValues()
         
         for item in sensors {
