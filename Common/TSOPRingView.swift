@@ -12,6 +12,7 @@ import UIKit
 class TSOPRingView: UIView {
     var tsops: [Bool] = [Bool]()
     var drawBackground = false
+    var robot: RobotNumber = .neverShouldBeThis
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -65,6 +66,7 @@ class TSOPRingView: UIView {
             if drawBackground {
                 tempColor = .black
             }
+            
             
             tempColor.setStroke()
             tempColor.setFill()
