@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0900"
    wasCreatedForAppExtension = "YES"
    version = "2.0">
    <BuildAction
@@ -30,8 +30,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D020986916FA04E7BBD68098"
-               BuildableName = "iOS.app"
-               BlueprintName = "iOS"
+               BuildableName = "LJ STAND.app"
+               BlueprintName = "LJ STAND"
                ReferencedContainer = "container:LJ STAND.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -72,8 +72,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D020986916FA04E7BBD68098"
-            BuildableName = "iOS.app"
-            BlueprintName = "iOS"
+            BuildableName = "LJ STAND.app"
+            BlueprintName = "LJ STAND"
             ReferencedContainer = "container:LJ STAND.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -92,8 +92,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D020986916FA04E7BBD68098"
-            BuildableName = "iOS.app"
-            BlueprintName = "iOS"
+            BuildableName = "LJ STAND.app"
+            BlueprintName = "LJ STAND"
             ReferencedContainer = "container:LJ STAND.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

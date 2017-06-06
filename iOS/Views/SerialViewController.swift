@@ -56,11 +56,11 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWillShow(_ notification: Notification) {
+    @objc func keyboardWillShow(_ notification: Notification) {
         self.serialOutputTextView.scrollToBottom()
     }
     
-    func keyboardWillHide(_ notification: Notification) {}
+    @objc func keyboardWillHide(_ notification: Notification) {}
     
     override func becomeFirstResponder() -> Bool {
         return false

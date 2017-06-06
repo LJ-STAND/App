@@ -42,7 +42,7 @@ class BackgroundViewController: UIViewController {
         
         view.addSubview(container)
         
-        generateConstraints(superView: view, subView: container, topPadding: 94.0)
+        generateConstraints(superView: view, subView: container, topPadding: 64.0)
         
         view.layoutIfNeeded()
         

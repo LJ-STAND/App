@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-carthage update
+carthage update --no-build

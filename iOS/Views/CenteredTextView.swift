@@ -35,10 +35,10 @@ class CenteredTextView: UIView {
         
         let font = UIFont(name: "Dosis-Light", size: textSize)!
         
-        let attributes: [String : Any] = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName : font, NSParagraphStyleAttributeName : style]
+        let attributes: [NSAttributedStringKey : Any] = [NSAttributedStringKey.foregroundColor : UIColor.white, NSAttributedStringKey.font : font, NSAttributedStringKey.paragraphStyle : style]
         let string = text as NSString
         
-        let size = string.size(attributes: attributes)
+        let size = string.size(withAttributes: attributes)
         
         var textRect: CGRect
         
@@ -59,11 +59,10 @@ class CenteredTextView: UIView {
         style.lineBreakMode = NSLineBreakMode.byTruncatingTail
         
         let font = UIFont(name: "Dosis-Light", size: textSize)!
-        
-        let attributes: [String : Any] = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName : font, NSParagraphStyleAttributeName : style]
+        let attributes: [NSAttributedStringKey : Any] = [NSAttributedStringKey.foregroundColor : UIColor.white, NSAttributedStringKey.font : font, NSAttributedStringKey.paragraphStyle : style]
         let string = text as NSString
         
-        let size = string.size(attributes: attributes)
+        let size = string.size(withAttributes: attributes)
         
         return size.width
     }

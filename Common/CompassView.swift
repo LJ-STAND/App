@@ -12,9 +12,9 @@ import UIKit
 @IBDesignable
 class CompassView: UIView {
     
-    @IBInspectable var needleAngle: Double!
-    @IBInspectable var drawBackground = false
-    @IBInspectable var secondNeedleAngle: Double!
+    var needleAngle: Double!
+    var drawBackground = false
+    var secondNeedleAngle: Double!
     var drawSecondNeedle = false
     
     override init(frame: CGRect) {

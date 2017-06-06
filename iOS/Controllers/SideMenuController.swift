@@ -361,7 +361,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         static var lastState : UIGestureRecognizerState = .ended
     }
     
-    func handleLeftPanGesture(_ panGesture: UIPanGestureRecognizer) {
+    @objc func handleLeftPanGesture(_ panGesture: UIPanGestureRecognizer) {
         
         if !isTagetViewController() {
             return
@@ -441,7 +441,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         static var lastState : UIGestureRecognizerState = .ended
     }
     
-    func handleRightPanGesture(_ panGesture: UIPanGestureRecognizer) {
+    @objc func handleRightPanGesture(_ panGesture: UIPanGestureRecognizer) {
         
         if !isTagetViewController() {
             return
@@ -549,7 +549,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
     open func openRightWithVelocity(_ velocity: CGFloat) {
         let xOrigin: CGFloat = rightContainerView.frame.origin.x
         
-        //	CGFloat finalXOrigin = SlideMenuOptions.rightViewOverlapWidth
+        //    CGFloat finalXOrigin = SlideMenuOptions.rightViewOverlapWidth
         let finalXOrigin: CGFloat = view.bounds.width - rightContainerView.frame.size.width
         
         var frame = rightContainerView.frame
@@ -1054,26 +1054,26 @@ extension UIViewController {
         navigationItem.rightBarButtonItem = rightButton
     }
     
-    public func toggleLeft() {
+    @objc public func toggleLeft() {
         slideMenuController()?.toggleLeft()
     }
     
-    public func toggleRight() {
+    @objc public func toggleRight() {
         slideMenuController()?.toggleRight()
     }
     
-    public func openLeft() {
+    @objc public func openLeft() {
         slideMenuController()?.openLeft()
     }
     
-    public func openRight() {
+    @objc public func openRight() {
         slideMenuController()?.openRight()    }
     
-    public func closeLeft() {
+    @objc public func closeLeft() {
         slideMenuController()?.closeLeft()
     }
     
-    public func closeRight() {
+    @objc public func closeRight() {
         slideMenuController()?.closeRight()
     }
     

@@ -38,15 +38,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BluetoothController.shared.messageDelegate = self
         BluetoothController.shared.bluetoothDebug = false
         
-        guard let debuggingOverlayClass = NSClassFromString("UIDebuggingInformationOverlay") as? UIWindow.Type else {
-            MKULog.shared.info("UIDebuggingInformationOverlay not found")
-            return true
-        }
+//        guard let debuggingOverlayClass = NSClassFromString("UIDebuggingInformationOverlay") as? UIWindow.Type else {
+//            MKULog.shared.info("UIDebuggingInformationOverlay not found")
+//            return true
+//        }
         
-        debuggingOverlayClass.perform(Selector("prepareDebuggingOverlay"))
-        let overlay = debuggingOverlayClass.perform(Selector("overlay")).takeUnretainedValue() as? UIWindow
+//        debuggingOverlayClass.perform(Selector("prepareDebuggingOverlay"))
+//        let overlay = debuggingOverlayClass.perform(#sselectorgetter: CIBlendKernel.getteryCIBlendKernel.overlay)).takeUnretainedValue() as? UIWindow
         
-        _ = overlay?.perform(Selector("toggleVisibility"))
+//        debuggingOverlayClass.init().perform(Selector(("prepareDebuggingOverlay")))
+//
+//        let overlay = debuggingOverlayClass.init().perform(("overlay")).takeUnretainedValue() as? UIWindow
+//
+//        _ = overlay?.perform(Selector(("toggleVisibility")))
         
 //        return performShortcutDelegate(launchOptions: launchOptions)
         
@@ -70,7 +74,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let nav = UINavigationController(rootViewController: view)
         nav.navigationBar.barStyle = .blackTranslucent
         nav.navigationBar.topItem?.title = "LJ STAND"
-        nav.navigationBar.topItem?.prompt = "Build: \(appSettings.build) - \(appSettings.pID)"
+        
+//        if #available(iOS 11.0, *) {
+//            nav.navigationBar.prefersLargeTitles = true
+//        }
         
         let sideMenuController = SlideMenuController(mainViewController: nav, leftMenuViewController: MenuTableViewController())
         sideMenuController.view.backgroundColor = .black
@@ -90,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .white
     }
     
-    func orientationDidChange() {
+    @objc func orientationDidChange() {
         window?.frame = UIScreen.main.bounds
         window?.layoutIfNeeded()
     }

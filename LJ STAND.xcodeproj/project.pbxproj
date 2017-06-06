@@ -17,7 +17,6 @@
 		D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */; };
 		EF1528A11EC0437200F63356 /* RobotPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1528A01EC0437200F63356 /* RobotPosition.swift */; };
 		EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */; };
-		EF1705CB1E682D910029DD0E /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF1705CA1E682D910029DD0E /* Stickers.xcassets */; };
 		EF1D11E61EC19BBF00C8E390 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1D11E51EC19BBF00C8E390 /* UITableViewVibrantCell.swift */; };
 		EF1E98401E61019D00C70420 /* Dock.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF1E983F1E61019D00C70420 /* Dock.storyboard */; };
 		EF3D33D71DB5F1210022275E /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3D33D61DB5F1210022275E /* UITextView.swift */; };
@@ -38,6 +37,7 @@
 		EFA2DEE21E95DCA100A8FEC9 /* BluetoothDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */; };
 		EFA2DEE51E95DCB300A8FEC9 /* BluetoothProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */; };
 		EFA2DEE81E95DCCD00A8FEC9 /* BluetoothController+Serial.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */; };
+		EFAFEB781EE760A800111A25 /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF8AE081EE69E3A00F9D50D /* Chameleon.framework */; };
 		EFB35C1D1DADCDB20087BBE4 /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB35C1C1DADCDB20087BBE4 /* SerialViewController.swift */; };
 		EFCCB5061EA0B696000F6E66 /* BackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCB5041EA0B696000F6E66 /* BackgroundViewController.swift */; };
 		EFCCB5071EA0B696000F6E66 /* HexButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCCB5051EA0B696000F6E66 /* HexButton.swift */; };
@@ -54,7 +54,6 @@
 		EFED2CBA1E7F60C100E02440 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFED2CB91E7F60C100E02440 /* CompassView.swift */; };
 		EFEDAA3B1E46A372005BEE4E /* UIDevice+Simulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFEDAA3A1E46A372005BEE4E /* UIDevice+Simulator.swift */; };
 		EFF460BB1EC106E200B02E7E /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFF460BA1EC106E200B02E7E /* MenuTableViewController.swift */; };
-		EFF8AE091EE69E3A00F9D50D /* Chameleon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF8AE081EE69E3A00F9D50D /* Chameleon.framework */; };
 		EFF8AE0A1EE69E3A00F9D50D /* Chameleon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFF8AE081EE69E3A00F9D50D /* Chameleon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EFF8AE0C1EE69E3B00F9D50D /* MKKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF8AE0B1EE69E3B00F9D50D /* MKKit.framework */; };
 		EFF8AE0D1EE69E3B00F9D50D /* MKKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFF8AE0B1EE69E3B00F9D50D /* MKKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -62,8 +61,6 @@
 		EFF8AE101EE69E3B00F9D50D /* MKUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFF8AE0E1EE69E3B00F9D50D /* MKUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EFF8AE121EE69E3B00F9D50D /* MKUtilityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF8AE111EE69E3B00F9D50D /* MKUtilityKit.framework */; };
 		EFF8AE131EE69E3B00F9D50D /* MKUtilityKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFF8AE111EE69E3B00F9D50D /* MKUtilityKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		EFF8AE151EE69E3B00F9D50D /* RESTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFF8AE141EE69E3B00F9D50D /* RESTKit.framework */; };
-		EFF8AE161EE69E3B00F9D50D /* RESTKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EFF8AE141EE69E3B00F9D50D /* RESTKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EFFC36511E68FF860088A998 /* UIInterfaceIdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +72,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				EFF8AE101EE69E3B00F9D50D /* MKUIKit.framework in Embed Frameworks */,
-				EFF8AE161EE69E3B00F9D50D /* RESTKit.framework in Embed Frameworks */,
 				EFF8AE0A1EE69E3A00F9D50D /* Chameleon.framework in Embed Frameworks */,
 				EFF8AE131EE69E3B00F9D50D /* MKUtilityKit.framework in Embed Frameworks */,
 				EFF8AE0D1EE69E3B00F9D50D /* MKKit.framework in Embed Frameworks */,
@@ -91,16 +87,13 @@
 		581C1A4891F43E30617A28DB /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		886869AA91C9C729AA88271F /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		AFE59898617C260F3B4780CF /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C8E706015D603F83004748A1 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8E706015D603F83004748A1 /* LJ STAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LJ STAND.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Light.ttf"; sourceTree = "<group>"; };
 		CD2B60611E98F55D00A6B1E1 /* CenteredTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenteredTextView.swift; sourceTree = "<group>"; };
 		CD2B60641E99015900A6B1E1 /* WindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowView.swift; sourceTree = "<group>"; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
 		EF1528A01EC0437200F63356 /* RobotPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotPosition.swift; sourceTree = "<group>"; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
-		EF1705C81E682D910029DD0E /* Stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF1705CA1E682D910029DD0E /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
-		EF1705CC1E682D910029DD0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF1D11E51EC19BBF00C8E390 /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewVibrantCell.swift; sourceTree = "<group>"; };
 		EF1E983F1E61019D00C70420 /* Dock.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dock.storyboard; sourceTree = "<group>"; };
 		EF3D33D61DB5F1210022275E /* UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
@@ -142,7 +135,6 @@
 		EFF8AE0B1EE69E3B00F9D50D /* MKKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF8AE0E1EE69E3B00F9D50D /* MKUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF8AE111EE69E3B00F9D50D /* MKUtilityKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKUtilityKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFF8AE141EE69E3B00F9D50D /* RESTKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RESTKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFFC36501E68FF860088A998 /* UIInterfaceIdom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIInterfaceIdom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,17 +146,9 @@
 				EFF8AE121EE69E3B00F9D50D /* MKUtilityKit.framework in Frameworks */,
 				EF8233E81E892A8E00423F03 /* CloudKit.framework in Frameworks */,
 				EFF8AE0F1EE69E3B00F9D50D /* MKUIKit.framework in Frameworks */,
+				EFAFEB781EE760A800111A25 /* Chameleon.framework in Frameworks */,
 				EF8233E01E89204C00423F03 /* CoreBluetooth.framework in Frameworks */,
-				EFF8AE091EE69E3A00F9D50D /* Chameleon.framework in Frameworks */,
 				EFF8AE0C1EE69E3B00F9D50D /* MKKit.framework in Frameworks */,
-				EFF8AE151EE69E3B00F9D50D /* RESTKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5C1074D185808D59AC345BC2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,7 +180,6 @@
 				CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */,
 				EFED2C941E7F49CF00E02440 /* Common */,
 				AB3793622466EE2A02CBADDD /* iOS */,
-				EF1705C91E682D910029DD0E /* Stickers */,
 				534AB7A34A3D72BAFA984F6B /* Frameworks */,
 				AC5953FE6C17FE0FB64BBF47 /* Products */,
 			);
@@ -216,7 +199,6 @@
 		534AB7A34A3D72BAFA984F6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EFF8AE141EE69E3B00F9D50D /* RESTKit.framework */,
 				EFF8AE111EE69E3B00F9D50D /* MKUtilityKit.framework */,
 				EFF8AE0E1EE69E3B00F9D50D /* MKUIKit.framework */,
 				EFF8AE0B1EE69E3B00F9D50D /* MKKit.framework */,
@@ -313,8 +295,7 @@
 		AC5953FE6C17FE0FB64BBF47 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C8E706015D603F83004748A1 /* iOS.app */,
-				EF1705C81E682D910029DD0E /* Stickers.appex */,
+				C8E706015D603F83004748A1 /* LJ STAND.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,16 +306,6 @@
 				EF5462591EC14EC40005EAEB /* ViewManager.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		EF1705C91E682D910029DD0E /* Stickers */ = {
-			isa = PBXGroup;
-			children = (
-				EF1705CA1E682D910029DD0E /* Stickers.xcassets */,
-				EF1705CC1E682D910029DD0E /* Info.plist */,
-			);
-			name = Stickers;
-			path = "LJ STAND Stickers";
 			sourceTree = "<group>";
 		};
 		EFED2C941E7F49CF00E02440 /* Common */ = {
@@ -362,9 +333,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D020986916FA04E7BBD68098 /* iOS */ = {
+		D020986916FA04E7BBD68098 /* LJ STAND */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildConfigurationList = F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJ STAND" */;
 			buildPhases = (
 				EF8710DF1E84662600753FDD /* Carthage Copy Framewokrs */,
 				876DD3D9D9926CE2EBE64DDB /* Sources */,
@@ -378,26 +349,10 @@
 			);
 			dependencies = (
 			);
-			name = iOS;
+			name = "LJ STAND";
 			productName = Layers;
-			productReference = C8E706015D603F83004748A1 /* iOS.app */;
+			productReference = C8E706015D603F83004748A1 /* LJ STAND.app */;
 			productType = "com.apple.product-type.application";
-		};
-		EF1705C71E682D910029DD0E /* Stickers */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EF1705D31E682D910029DD0E /* Build configuration list for PBXNativeTarget "Stickers" */;
-			buildPhases = (
-				EF1705C61E682D910029DD0E /* Resources */,
-				5C1074D185808D59AC345BC2 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Stickers;
-			productName = "LJ STAND Stickers";
-			productReference = EF1705C81E682D910029DD0E /* Stickers.appex */;
-			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
 /* End PBXNativeTarget section */
 
@@ -407,11 +362,11 @@
 			attributes = {
 				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Lachlan Grant";
 				TargetAttributes = {
 					D020986916FA04E7BBD68098 = {
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -434,10 +389,6 @@
 							};
 						};
 					};
-					EF1705C71E682D910029DD0E = {
-						CreatedOnToolsVersion = 8.3;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = 4B642AFBC9C0D7805E207890 /* Build configuration list for PBXProject "LJ STAND" */;
@@ -453,8 +404,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D020986916FA04E7BBD68098 /* iOS */,
-				EF1705C71E682D910029DD0E /* Stickers */,
+				D020986916FA04E7BBD68098 /* LJ STAND */,
 			);
 		};
 /* End PBXProject section */
@@ -469,14 +419,6 @@
 				0FE982DBB7126C7560A3FE1B /* Main.storyboard in Resources */,
 				CD2B605F1E98DDB800A6B1E1 /* Dosis-Light.ttf in Resources */,
 				4F178A71166E23F14DAD31C9 /* LaunchScreen.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EF1705C61E682D910029DD0E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF1705CB1E682D910029DD0E /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,7 +470,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "cd $(SRCROOT)\n$(which carthage) copy-frameworks";
+			shellScript = "#cd $(SRCROOT)\n#$(which carthage) copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -616,7 +558,8 @@
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -631,7 +574,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
@@ -642,6 +587,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -694,7 +641,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
@@ -705,6 +654,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
@@ -775,51 +726,9 @@
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		EF1705D11E682D910029DD0E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = QSCWPBA77U;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "LJ STAND Stickers/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lachlangrant.LJSTAND.LJ-STAND-Stickers";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		EF1705D21E682D910029DD0E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = QSCWPBA77U;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = "LJ STAND Stickers/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.lachlangrant.LJSTAND.LJ-STAND-Stickers";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -835,16 +744,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EF1705D31E682D910029DD0E /* Build configuration list for PBXNativeTarget "Stickers" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EF1705D11E682D910029DD0E /* Debug */,
-				EF1705D21E682D910029DD0E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "iOS" */ = {
+		F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJ STAND" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F703D29C38C3E92F300FDC2 /* Release */,

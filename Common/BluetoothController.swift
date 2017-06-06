@@ -75,16 +75,19 @@ class BluetoothController {
     func connect() {
         self.debugBluetooth(message: "connect()")
         if !overrideConnect && connectCount < 3 {
-            MKUAsync.main {
+            
+            MKUAsync.main({ () -> Bool in
                 self.messageDelegate?.showInformation("Scanning for Bluetooth Devices...")
-            }.background {_ in 
+                return true
+            }).background({ (prev: Bool) -> Bool in
                 serial.startScan()
                 sleep(2)
-            }.main {
+                
+                return prev
+            }).main({ (prev: Bool) -> Bool in
                 serial.stopScan()
                 
                 if self.peripherals.count > 0 {
-                    
                     let lastDevice = UserDefaults.standard.string(forKey: "lastConnected")
                     
                     var last: CBPeripheral?
@@ -106,7 +109,9 @@ class BluetoothController {
                     self.connectCount = count
                     self.connect()
                 }
-            }
+                
+                return prev
+            })
         } else {
             messageDelegate?.dismissNotifications()
         }
