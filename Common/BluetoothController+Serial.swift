@@ -76,6 +76,10 @@ extension BluetoothController: BluetoothSerialDelegate {
             
             let robot = processed.0
             
+            if bluetoothDebug {
+                MKULog.shared.debug(processed)
+            }
+            
             switch processed.1 {
             case .noDataType:
                 serialDelegate?.hasNewOutput("No Data Type: \(processed.2)")
@@ -183,31 +187,55 @@ extension BluetoothController: BluetoothSerialDelegate {
     func processString(str: String) -> (RobotNumber, BluetoothDataType, String) {
         let comps = str.components(separatedBy: ";")
         
+        var robotNumber = RobotNumber.neverShouldBeThis
+        var dataType = BluetoothDataType.noDataType
+        var message = ""
+        
+        var rawRobotNumber: String?
+        var rawDataType: String?
+        var rawMessage: String?
+        
         if comps.count == 3 {
+            rawRobotNumber = comps[0]
+            rawDataType = comps[1]
+            rawMessage = comps[2]
             
-            guard let robotNumber = Int(comps.first!) else {
-                return (.neverShouldBeThis, .noDataType, "")
-            }
-            
-            guard let dataInt = Int(comps[1]) else {
-                return (.neverShouldBeThis, .noDataType, "")
-            }
-            
-            guard let robotType = RobotNumber(rawValue: robotNumber) else {
-                return (.neverShouldBeThis, .noDataType, "")
-            }
-            
-            guard let dataType = BluetoothDataType(rawValue: dataInt) else {
-                return (.neverShouldBeThis, .noDataType, "")
-            }
-            
-            let message = comps[2]
-            
-            return (robotType, dataType, message)
-            
+            robotNumber = processRobotNumber(rawRobotNumber: rawRobotNumber ?? "0")
+        } else if comps.count == 2 {
+            rawDataType = comps[0]
+            rawMessage = comps[1]
         }
         
-        return (.neverShouldBeThis, .noDataType, "")
+        message = rawMessage ?? ""
+        dataType = processDataType(rawDataType: rawDataType ?? "0")
+        
+        
+        
+        return (robotNumber, dataType, message)
+    }
+    
+    func processDataType(rawDataType: String) -> BluetoothDataType {
+        guard let dataInt = Int(rawDataType) else {
+            return .noDataType
+        }
+        
+        guard let dataType = BluetoothDataType(rawValue: dataInt) else {
+            return .noDataType
+        }
+        
+        return dataType
+    }
+    
+    func processRobotNumber(rawRobotNumber: String) -> RobotNumber {
+        guard let robotNumber = Int(rawRobotNumber) else {
+            return .neverShouldBeThis
+        }
+        
+        guard let robotType = RobotNumber(rawValue: robotNumber) else {
+            return .neverShouldBeThis
+        }
+        
+        return robotType
     }
     
     func serialDidChangeState() {
