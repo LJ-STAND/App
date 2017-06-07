@@ -54,6 +54,7 @@ class MenuTableViewController: UITableViewController {
             let viewName = viewNames[indexPath.row]
             (UIApplication.shared.delegate as! AppDelegate).viewManager?.clearView()
             (UIApplication.shared.delegate as! AppDelegate).viewManager?.changeView(viewName)
+            (UIApplication.shared.delegate as! AppDelegate).changeNavBarTitle(viewName)
 
         }
         self.slideMenuController()?.closeLeft()

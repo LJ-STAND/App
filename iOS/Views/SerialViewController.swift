@@ -25,7 +25,6 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits {
     var peripherals: [(peripheral: CBPeripheral, RSSI: Float)] = []
     var selectedPeripheral: CBPeripheral?
     var blinkOn: Bool = false
-    var windowView: WindowView!
     
     var enteredText: String = ""
     var previousText: String = ""
@@ -33,17 +32,11 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits {
     var keyboardFrame: CGRect = CGRect.zero
     
     override func viewDidLoad() {
-        windowView = WindowView(frame: self.view.frame)
-        self.view = windowView
-        
         serialOutputTextView = UITextView()
         serialOutputTextView.font = UIFont(name: "Menlo", size: 17.0)
         serialOutputTextView.textAlignment = .left
         serialOutputTextView.textColor = UIColor.white
         serialOutputTextView.backgroundColor = UIColor.clear
-        
-        windowView.contentView = serialOutputTextView
-        windowView.title = "SERIAL"
         
         BluetoothController.shared.serialDelegate = self
         reloadView()
@@ -54,6 +47,10 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        self.view.backgroundColor = .clear
+        self.view.addSubview(serialOutputTextView)
+        self.generateConstraints(superView: self.view, subView: serialOutputTextView)
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {

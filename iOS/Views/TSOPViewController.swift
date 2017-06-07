@@ -18,18 +18,16 @@ class TSOPViewController: UIViewController {
     internal var tappedButton: UIButton?
     
     var tsopView: CompassView!
-    var windowView: WindowView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.backgroundColor = .clear
         tsopView = CompassView(frame: calculateFrame())
         
-        windowView = WindowView(frame: self.view.frame)
-        self.view = windowView
+        self.view.addSubview(tsopView)
+        self.generateConstraints(superView: self.view, subView: tsopView)
         
-        windowView.contentView = tsopView
-        windowView.title = "TSOP"
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,7 +41,6 @@ class TSOPViewController: UIViewController {
     }
     
     func windowWasResized() {
-        windowView.resize()
         tsopView.setNeedsDisplay()
     }
     

@@ -36,7 +36,7 @@ extension AppDelegate {
         return performShortcutDelegate
     }
     
-    func handleShortcut( shortcutItem:UIApplicationShortcutItem ) -> Bool {
+    func handleShortcut(shortcutItem: UIApplicationShortcutItem) -> Bool {
         var succeeded = false
         var view = ""
         switch shortcutItem.type {
@@ -53,7 +53,7 @@ extension AppDelegate {
         }
         
         if (view != "") {
-            //TODO:
+            viewManager?.changeView(view)
         }
         
         return succeeded

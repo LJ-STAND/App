@@ -13,18 +13,17 @@ import MKUIKit
 
 class RobotPositionViewController: UIViewController {
     var robotPos: RobotPositionView!
-    var windowView: WindowView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         robotPos = RobotPositionView(frame: calculateFrame())
         
-        windowView = WindowView(frame: self.view.frame)
-        self.view = windowView
+        self.view.backgroundColor = .clear
         
-        windowView.contentView = robotPos
-        windowView.title = "ROBOT POSITION"
+        self.view.addSubview(robotPos)
+        
+        self.generateConstraints(superView: self.view, subView: robotPos)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,7 +46,6 @@ class RobotPositionViewController: UIViewController {
     }
     
     func windowWasResized() {
-        windowView.resize()
         robotPos.setNeedsDisplay()
     }
 }

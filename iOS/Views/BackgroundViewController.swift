@@ -42,16 +42,14 @@ class BackgroundViewController: UIViewController {
         
         view.addSubview(container)
         
-        generateConstraints(superView: view, subView: container, topPadding: 64.0)
+        
+        //TODO: Fix
+        self.generateConstraints(superView: view, subView: container, topPadding: 104.0)
         
         view.layoutIfNeeded()
         
         self.slideMenuController()?.addLeftGestures()
         self.addLeftBarButtonWithImage(UIImage(named: "hamB")!)
-    }
-    
-    func generateConstraints(superView: UIView, subView: UIView, topPadding: Double = 0) {
-        superView.addConstraints([NSLayoutConstraint.init(item: subView, attribute: .top, relatedBy: .equal, toItem: superView, attribute: .top, multiplier: 1.0, constant: CGFloat(topPadding)), NSLayoutConstraint(item: subView, attribute: .bottom, relatedBy: .equal, toItem: superView, attribute: .bottom, multiplier: 1.0, constant: 0.0), NSLayoutConstraint.init(item: subView, attribute: .left, relatedBy: .equal, toItem: superView, attribute: .left, multiplier: 1.0, constant: 0.0), NSLayoutConstraint.init(item: subView, attribute: .right, relatedBy: .equal, toItem: superView, attribute: .right, multiplier: 1.0, constant: 0.0)])
     }
 }
 

@@ -15,17 +15,15 @@ class CompassViewController: UIViewController {
     internal var tappedButton: UIButton?
 
     var compass: CompassView!
-    var windowView: WindowView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = .clear
         compass = CompassView(frame: calculateFrame())
         
-        windowView = WindowView(frame: self.view.frame)
-        self.view = windowView
+        self.view.addSubview(compass)
         
-        windowView.contentView = compass
-        windowView.title = "COMPASS"
+        self.generateConstraints(superView: self.view, subView: compass)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -48,7 +46,6 @@ class CompassViewController: UIViewController {
     }
     
     func windowWasResized() {
-        windowView.resize()
         compass.setNeedsDisplay()
     }
 }

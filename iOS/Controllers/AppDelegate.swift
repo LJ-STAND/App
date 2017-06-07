@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var viewManager: ViewManager?
     var shortcutItem: UIApplicationShortcutItem?
     var settingsDelegate: AppSettingsDelegate!
+    var navController: UINavigationController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -38,22 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BluetoothController.shared.messageDelegate = self
         BluetoothController.shared.bluetoothDebug = false
         
-//        guard let debuggingOverlayClass = NSClassFromString("UIDebuggingInformationOverlay") as? UIWindow.Type else {
-//            MKULog.shared.info("UIDebuggingInformationOverlay not found")
-//            return true
-//        }
-        
-//        debuggingOverlayClass.perform(Selector("prepareDebuggingOverlay"))
-//        let overlay = debuggingOverlayClass.perform(#sselectorgetter: CIBlendKernel.getteryCIBlendKernel.overlay)).takeUnretainedValue() as? UIWindow
-        
-//        debuggingOverlayClass.init().perform(Selector(("prepareDebuggingOverlay")))
-//
-//        let overlay = debuggingOverlayClass.init().perform(("overlay")).takeUnretainedValue() as? UIWindow
-//
-//        _ = overlay?.perform(Selector(("toggleVisibility")))
-        
-//        return performShortcutDelegate(launchOptions: launchOptions)
-        
         return true
     }
     
@@ -63,7 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.orientationDidChange), name: Notification.Name.UIDeviceOrientationDidChange, object: nil)
+        let selector = #selector(AppDelegate.orientationDidChange)
+        let notifName = Notification.Name.UIDeviceOrientationDidChange
+        NotificationCenter.default.addObserver(self, selector: selector, name: notifName, object: nil)
     }
     
     func setUpWindows() {
@@ -71,22 +58,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         viewManager = view
         
-        let nav = UINavigationController(rootViewController: view)
-        nav.navigationBar.barStyle = .blackTranslucent
-        nav.navigationBar.topItem?.title = "LJ STAND"
+        navController = UINavigationController(rootViewController: view)
+        navController?.navigationBar.barStyle = .blackTranslucent
+        navController?.navigationBar.topItem?.title = "LJ STAND"
         
-//        if #available(iOS 11.0, *) {
-//            nav.navigationBar.prefersLargeTitles = true
-//        }
+        if #available(iOS 11.0, *) {
+            navController?.navigationBar.prefersLargeTitles = true
+        }
         
-        let sideMenuController = SlideMenuController(mainViewController: nav, leftMenuViewController: MenuTableViewController())
+        let sideMenuController = SlideMenuController(mainViewController: navController!, leftMenuViewController: MenuTableViewController())
         sideMenuController.view.backgroundColor = .black
         
         sideMenuController.delegate = self
         
         if appLogEnabled {
             let consoleManager = MKUConsoleManager.shared.getWindow(withRootViewController: sideMenuController, withBounds: UIScreen.main.bounds)
-            
             window = consoleManager
         } else {
             window = UIWindow(frame: UIScreen.main.bounds)
@@ -100,6 +86,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     @objc func orientationDidChange() {
         window?.frame = UIScreen.main.bounds
         window?.layoutIfNeeded()
+    }
+    
+    func changeNavBarTitle(_ object: String) {
+        navController?.navigationBar.topItem?.title = "LJ STAND - \(object)"
+        
     }
 
 }
