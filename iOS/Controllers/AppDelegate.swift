@@ -89,8 +89,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func changeNavBarTitle(_ object: String) {
-        navController?.navigationBar.topItem?.title = "LJ STAND - \(object)"
-        
+        if object != "" {
+            navController?.navigationBar.topItem?.title = "LJ STAND - \(object)"
+        } else {
+            navController?.navigationBar.topItem?.title = "LJ STAND"
+        }
     }
 
 }

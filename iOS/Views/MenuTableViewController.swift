@@ -50,6 +50,7 @@ class MenuTableViewController: UITableViewController {
         if indexPath.row == 0 {
             //Close
             (UIApplication.shared.delegate as! AppDelegate).viewManager?.clearView()
+            (UIApplication.shared.delegate as! AppDelegate).changeNavBarTitle("")
         } else {
             let viewName = viewNames[indexPath.row]
             (UIApplication.shared.delegate as! AppDelegate).viewManager?.clearView()

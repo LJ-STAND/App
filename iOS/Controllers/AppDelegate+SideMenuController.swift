@@ -11,10 +11,14 @@ import MKUIKit
 
 extension AppDelegate: SlideMenuControllerDelegate {
     func leftDidOpen() {
-        MKUITapticEngine.impact.feedback(.heavy)
+        taptic()
     }
     
     func leftDidClose() {
-        MKUITapticEngine.impact.feedback(.heavy)
+        taptic()
+    }
+    
+    func taptic() {
+        MKUITapticEngine.impact.feedback(.medium)
     }
 }
