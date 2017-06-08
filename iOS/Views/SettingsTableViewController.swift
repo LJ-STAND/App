@@ -10,6 +10,7 @@ import UIKit
 import MKKit
 import MKUIKit
 import MKUtilityKit
+import SafariServices
 
 class SettingsTableViewController: UITableViewController {
 	@IBOutlet weak var logWindowSwitch: UISwitch!
@@ -67,6 +68,12 @@ class SettingsTableViewController: UITableViewController {
     deinit {
         BluetoothController.shared.settingsDelegate = nil
     }
+	
+	@IBAction func bugReportAction(_ sender: Any) {
+        let sfView = SFSafariViewController(url: URL.init(string: "https://github.com/LJ-STAND/Apps/issues/new")!)
+        
+        (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController?.present(sfView, animated: true, completion: nil)
+	}
 }
 
 extension SettingsTableViewController: BluetoothControllerSettingsDelegate {

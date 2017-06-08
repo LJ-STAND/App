@@ -193,31 +193,31 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="abh-gE-B8Q" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="79" width="414" height="44"/>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="" id="NTS-DR-c4w">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bwm-2f-3bD" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="115" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="abh-gE-B8Q" id="5Ot-C0-WYe">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bwm-2f-3bD" id="qPk-qW-lrP">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dock on Right" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffr-BE-Ai9">
-                                                    <rect key="frame" x="24" y="11" width="108" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d6C-xG-GYH">
-                                                    <rect key="frame" x="349" y="6" width="51" height="31"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpc-E3-1Is">
+                                                    <rect key="frame" x="8" y="6" width="398" height="30"/>
+                                                    <state key="normal" title="Bug Report">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
                                                     <connections>
-                                                        <action selector="dockOnRightAction:" destination="LhF-dY-CPs" eventType="valueChanged" id="7nF-RO-Jsc"/>
+                                                        <action selector="bugReportAction:" destination="LhF-dY-CPs" eventType="touchUpInside" id="mi7-0Q-rp6"/>
                                                     </connections>
-                                                </switch>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Ffr-BE-Ai9" firstAttribute="leading" secondItem="5Ot-C0-WYe" secondAttribute="leadingMargin" constant="16" id="0ys-NN-iGy"/>
-                                                <constraint firstItem="Ffr-BE-Ai9" firstAttribute="centerY" secondItem="5Ot-C0-WYe" secondAttribute="centerY" id="5zA-43-Oyd"/>
-                                                <constraint firstItem="d6C-xG-GYH" firstAttribute="centerY" secondItem="5Ot-C0-WYe" secondAttribute="centerY" id="HNc-Zs-8Wi"/>
-                                                <constraint firstAttribute="trailing" secondItem="d6C-xG-GYH" secondAttribute="trailing" constant="16" id="tmF-Fw-1zX"/>
+                                                <constraint firstItem="Xpc-E3-1Is" firstAttribute="leading" secondItem="qPk-qW-lrP" secondAttribute="leading" constant="8" id="8FK-MQ-viL"/>
+                                                <constraint firstItem="Xpc-E3-1Is" firstAttribute="centerY" secondItem="qPk-qW-lrP" secondAttribute="centerY" id="Vkq-UL-Qng"/>
+                                                <constraint firstAttribute="trailing" secondItem="Xpc-E3-1Is" secondAttribute="trailing" constant="8" id="ktI-U6-U8M"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -227,7 +227,7 @@
                             <tableViewSection headerTitle="" id="8oD-xo-HdL">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="L1x-mb-eJY" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="159" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="195" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L1x-mb-eJY" id="hgf-ub-ByQ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -256,7 +256,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="J6V-3j-HEl" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="203" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="239" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J6V-3j-HEl" id="cij-0k-XHh">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -285,7 +285,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="csj-Bv-BkO" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="247" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="283" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="csj-Bv-BkO" id="9MW-Y1-TcF">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -324,7 +324,6 @@
                     <navigationItem key="navigationItem" title="Settings" id="9e3-ce-rgD"/>
                     <connections>
                         <outlet property="compassSwitch" destination="LTT-nV-J5i" id="cSk-3q-Nfu"/>
-                        <outlet property="dockOnRightSwitch" destination="d6C-xG-GYH" id="009-0H-RyH"/>
                         <outlet property="lightSwitch" destination="jIv-cA-h6K" id="4ej-vb-a9m"/>
                         <outlet property="logWindowSwitch" destination="vrq-d8-10Q" id="stv-aO-OOs"/>
                         <outlet property="tsopSwitch" destination="1Oa-56-SV0" id="PYT-PT-xar"/>
