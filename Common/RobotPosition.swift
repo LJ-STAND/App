@@ -33,5 +33,5 @@ enum RobotPosition: Int {
     case smallOnCornerFrontLeft
     case bigOnCornerFrontLeft
     case overCornerFrontLeft
-    case field
+    case field // Default, kinda
 }

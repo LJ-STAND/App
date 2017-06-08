@@ -16,6 +16,7 @@ import MKKit
 import MKUtilityKit
 
 extension BluetoothController: BluetoothSerialDelegate {
+    
     func serialDidDiscoverPeripheral(_ peripheral: CBPeripheral, RSSI: NSNumber?) {
         for exisiting in peripherals {
             if exisiting.identifier == peripheral.identifier { return }

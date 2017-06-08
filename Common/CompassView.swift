@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-@IBDesignable
 class CompassView: UIView {
     
     var needleAngle: Double!

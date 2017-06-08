@@ -14,7 +14,6 @@ import SafariServices
 
 class SettingsTableViewController: UITableViewController {
 	@IBOutlet weak var logWindowSwitch: UISwitch!
-	@IBOutlet weak var dockOnRightSwitch: UISwitch!
     @IBOutlet weak var tsopSwitch: UISwitch!
     @IBOutlet weak var lightSwitch: UISwitch!
     @IBOutlet weak var compassSwitch: UISwitch!
@@ -33,20 +32,14 @@ class SettingsTableViewController: UITableViewController {
             tableView.separatorStyle = .none
         }
         
-        //Setting UI
         logWindowSwitch.isOn = defaults.bool(forKey: DefaultKeys.showLog)
-//        dockOnRightSwitch.isOn = defaults.bool(forKey: DefaultKeys.isDockOnRight)
         
-        //Requesting current settings from robot and setting ble delegate
         BluetoothController.shared.sendingDelegate?.requestSettings()
         BluetoothController.shared.settingsDelegate = self
     }
 
 	@IBAction func logWindowAction(_ sender: Any) {
         delegate.setAppLogging(enabled: logWindowSwitch.isOn)
-	}
-	
-	@IBAction func dockOnRightAction(_ sender: Any) {
 	}
 	
 	@IBAction func tsopDebug(_ sender: Any) {
@@ -72,7 +65,7 @@ class SettingsTableViewController: UITableViewController {
 	@IBAction func bugReportAction(_ sender: Any) {
         let sfView = SFSafariViewController(url: URL.init(string: "https://github.com/LJ-STAND/Apps/issues/new")!)
         
-        (UIApplication.shared.delegate as! AppDelegate).window?.rootViewController?.present(sfView, animated: true, completion: nil)
+        delegate.window?.rootViewController?.present(sfView, animated: true, completion: nil)
 	}
 }
 
