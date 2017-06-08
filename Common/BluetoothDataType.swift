@@ -22,7 +22,7 @@ enum BluetoothDataType: Int {
 }
 
 enum RobotNumber: Int {
-    case neverShouldBeThis
+    case noRobot
     case one
     case two
 }

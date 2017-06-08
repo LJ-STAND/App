@@ -187,7 +187,7 @@ extension BluetoothController: BluetoothSerialDelegate {
     func processString(str: String) -> (RobotNumber, BluetoothDataType, String) {
         let comps = str.components(separatedBy: ";")
         
-        var robotNumber = RobotNumber.neverShouldBeThis
+        var robotNumber = RobotNumber.noRobot
         var dataType = BluetoothDataType.noDataType
         var message = ""
         
@@ -228,11 +228,11 @@ extension BluetoothController: BluetoothSerialDelegate {
     
     func processRobotNumber(rawRobotNumber: String) -> RobotNumber {
         guard let robotNumber = Int(rawRobotNumber) else {
-            return .neverShouldBeThis
+            return .noRobot
         }
         
         guard let robotType = RobotNumber(rawValue: robotNumber) else {
-            return .neverShouldBeThis
+            return .noRobot
         }
         
         return robotType
@@ -247,8 +247,8 @@ extension BluetoothController: BluetoothSerialDelegate {
         self.connected = false
         self.connectCount = 0
         serialDelegate?.hasNewOutput("Disconnected from \(peripheral.name!)")
-        tsopDelegate?.hasNewDirection(0, robot: .neverShouldBeThis)
-        compassDelegate?.hasNewHeading(0, robot: .neverShouldBeThis)
+        tsopDelegate?.hasNewDirection(0, robot: .noRobot)
+        compassDelegate?.hasNewHeading(0, robot: .noRobot)
         lightSensDelegate?.updatedCurrentLightSensors([])
         connect()
     }

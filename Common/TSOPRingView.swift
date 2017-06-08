@@ -12,7 +12,7 @@ import UIKit
 class TSOPRingView: UIView {
     var tsops: [Bool] = [Bool]()
     var drawBackground = false
-    var robot: RobotNumber = .neverShouldBeThis
+    var robot: RobotNumber = .noRobot
     
     override init(frame: CGRect) {
         super.init(frame: frame)
