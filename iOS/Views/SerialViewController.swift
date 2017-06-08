@@ -50,7 +50,7 @@ class SerialViewController: UIViewController, UIKeyInput, UITextInputTraits {
         
         self.view.backgroundColor = .clear
         self.view.addSubview(serialOutputTextView)
-        self.generateConstraints(superView: self.view, subView: serialOutputTextView)
+        self.generateConstraints(superView: self.view, subView: serialOutputTextView, topPadding: 40)
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {

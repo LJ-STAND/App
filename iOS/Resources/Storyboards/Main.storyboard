@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="17A264c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Dosis-Light.ttf">
-            <string>Dosis-Light</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--TSOPs-->
         <scene sceneID="FeA-wf-033">
@@ -35,7 +30,7 @@
         <!--TSOP-->
         <scene sceneID="TxB-IO-KJ3">
             <objects>
-                <viewController id="E0X-v7-XBp" customClass="TSOPViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E0X-v7-XBp" customClass="TSOPViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ALV-hk-cw2"/>
                         <viewControllerLayoutGuide type="bottom" id="hNp-3d-cHv"/>
@@ -70,7 +65,7 @@
         <!--Robot Position View Controller-->
         <scene sceneID="1Us-CE-2lD">
             <objects>
-                <viewController id="uh9-8k-2cC" customClass="RobotPositionViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uh9-8k-2cC" customClass="RobotPositionViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u4d-2L-sUU"/>
                         <viewControllerLayoutGuide type="bottom" id="PIo-G9-swi"/>
@@ -106,7 +101,7 @@
         <!--Compass-->
         <scene sceneID="HWR-1T-B3b">
             <objects>
-                <viewController id="NAj-T6-Tpc" customClass="CompassViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NAj-T6-Tpc" customClass="CompassViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cKU-Wc-0uI"/>
                         <viewControllerLayoutGuide type="bottom" id="H7A-Wt-MZU"/>
@@ -142,7 +137,7 @@
         <!--Light-->
         <scene sceneID="prY-m9-hEO">
             <objects>
-                <viewController id="RCm-C9-Q4j" customClass="LightSensorViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RCm-C9-Q4j" customClass="LightSensorViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vLE-sk-MY2"/>
                         <viewControllerLayoutGuide type="bottom" id="sLD-4a-ZxY"/>
@@ -161,7 +156,7 @@
         <!--Settings-->
         <scene sceneID="aWo-WJ-ojr">
             <objects>
-                <tableViewController storyboardIdentifier="Settings2" id="LhF-dY-CPs" customClass="SettingsTableViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Settings2" id="LhF-dY-CPs" customClass="SettingsTableViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="VhY-3M-A0g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,7 +164,7 @@
                         <sections>
                             <tableViewSection headerTitle="" id="hui-pl-n6Y">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3OU-mR-qYA" customClass="UITableViewVibrantCell" customModule="iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="3OU-mR-qYA" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="35" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3OU-mR-qYA" id="NaR-hS-KGP">
@@ -198,7 +193,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="abh-gE-B8Q" customClass="UITableViewVibrantCell" customModule="iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="abh-gE-B8Q" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="79" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="abh-gE-B8Q" id="5Ot-C0-WYe">
@@ -231,7 +226,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="8oD-xo-HdL">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="L1x-mb-eJY" customClass="UITableViewVibrantCell" customModule="iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="L1x-mb-eJY" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="159" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L1x-mb-eJY" id="hgf-ub-ByQ">
@@ -260,7 +255,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="J6V-3j-HEl" customClass="UITableViewVibrantCell" customModule="iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="J6V-3j-HEl" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="203" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J6V-3j-HEl" id="cij-0k-XHh">
@@ -289,7 +284,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="csj-Bv-BkO" customClass="UITableViewVibrantCell" customModule="iOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="csj-Bv-BkO" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="247" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="csj-Bv-BkO" id="9MW-Y1-TcF">
@@ -359,7 +354,7 @@
         <!--Serial-->
         <scene sceneID="sNR-0n-DaY">
             <objects>
-                <viewController id="l7V-Go-gFU" customClass="SerialViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="l7V-Go-gFU" customClass="SerialViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1ru-ga-Wna"/>
                         <viewControllerLayoutGuide type="bottom" id="Q8e-0Z-A9j"/>
@@ -367,28 +362,9 @@
                     <view key="view" contentMode="scaleToFill" id="bMD-Eg-5T2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZG-se-mjP">
-                                <rect key="frame" x="0.0" y="70" width="414" height="666"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Dosis-Light" family="Dosis" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="send"/>
-                            </textView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="iZG-se-mjP" firstAttribute="top" secondItem="1ru-ga-Wna" secondAttribute="bottom" constant="50" id="1ES-8X-sPu"/>
-                            <constraint firstItem="Q8e-0Z-A9j" firstAttribute="top" secondItem="iZG-se-mjP" secondAttribute="bottom" id="ASh-h0-9hb"/>
-                            <constraint firstItem="iZG-se-mjP" firstAttribute="leading" secondItem="bMD-Eg-5T2" secondAttribute="leading" id="Fqh-9x-FHf"/>
-                            <constraint firstAttribute="trailing" secondItem="iZG-se-mjP" secondAttribute="trailing" id="uPJ-g5-yUI"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Serial" id="CdX-az-MQE"/>
-                    <connections>
-                        <outlet property="bottomConstraint" destination="ASh-h0-9hb" id="bHw-4W-RsM"/>
-                        <outlet property="serialOutputTextView" destination="iZG-se-mjP" id="fxQ-Y1-Q0k"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdI-iF-AG9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -397,7 +373,7 @@
         <!--Background View Controller-->
         <scene sceneID="DPE-if-FyA">
             <objects>
-                <viewController storyboardIdentifier="background" id="9OB-xp-bHD" customClass="BackgroundViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="background" id="9OB-xp-bHD" customClass="BackgroundViewController" customModule="LJ_STAND" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eBZ-J8-2mV"/>
                         <viewControllerLayoutGuide type="bottom" id="8uM-ZS-gcz"/>
