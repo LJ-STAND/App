@@ -174,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */,
-				EFED2C941E7F49CF00E02440 /* Common */,
 				AB3793622466EE2A02CBADDD /* iOS */,
 				534AB7A34A3D72BAFA984F6B /* Frameworks */,
 				AC5953FE6C17FE0FB64BBF47 /* Products */,
@@ -214,6 +213,12 @@
 				EF9A24F51EAD87D200F5D5A3 /* AppDelegate+AppSettings.swift */,
 				EF670CE51EC3D723003A90D0 /* AppDelegate+SideMenuController.swift */,
 				EF5462571EC146AD0005EAEB /* SideMenuController.swift */,
+				EFED2C951E7F4A1800E02440 /* BluetoothController.swift */,
+				EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */,
+				EFE7366A1E95EB3900C8AF16 /* BluetoothController+Sending.swift */,
+				EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */,
+				EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */,
+				EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -250,6 +255,10 @@
 		936507FA3BB785D3F5247E64 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				EFED2CB31E7F5E8400E02440 /* LightSensorView.swift */,
+				EFED2CB61E7F601900E02440 /* TSOPRingView.swift */,
+				EFED2CB91E7F60C100E02440 /* CompassView.swift */,
+				EF4170161EC0774C00EA2CD6 /* RobotPositionView.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -297,31 +306,14 @@
 		C8BB61B6AAC040A7B0BF5B9C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				EF5462591EC14EC40005EAEB /* ViewManager.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		EFED2C941E7F49CF00E02440 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				EFED2C951E7F4A1800E02440 /* BluetoothController.swift */,
-				EFA2DEE71E95DCCD00A8FEC9 /* BluetoothController+Serial.swift */,
-				EFE7366A1E95EB3900C8AF16 /* BluetoothController+Sending.swift */,
-				EFA2DEE41E95DCB300A8FEC9 /* BluetoothProtocols.swift */,
-				EFA2DEE11E95DCA100A8FEC9 /* BluetoothDataType.swift */,
-				EFED2C961E7F4A1800E02440 /* BluetoothSerial.swift */,
 				EF1528A01EC0437200F63356 /* RobotPosition.swift */,
 				EFE7366D1E95EBFD00C8AF16 /* AppSettingsProtocol.swift */,
+				EF5462591EC14EC40005EAEB /* ViewManager.swift */,
 				EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */,
 				EFED2C981E7F4A1800E02440 /* MKKitExt.swift */,
 				EFED2C991E7F4A1800E02440 /* NotificationKeys.swift */,
-				EFED2CB31E7F5E8400E02440 /* LightSensorView.swift */,
-				EFED2CB61E7F601900E02440 /* TSOPRingView.swift */,
-				EFED2CB91E7F60C100E02440 /* CompassView.swift */,
-				EF4170161EC0774C00EA2CD6 /* RobotPositionView.swift */,
 			);
-			path = Common;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
