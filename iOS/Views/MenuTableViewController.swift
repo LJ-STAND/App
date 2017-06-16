@@ -10,8 +10,8 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
     
-    let displayNames: [String] = ["Close All", "Serial", "TSOP", "Compass", "Light Sensors", "Robot Position", "Settings"]
-    let viewNames: [String] = ["__CLOSE__", "Serial", "TSOP", "Compass", "Light", "Robot Pos", "Settings"]
+    let displayNames: [String] = ["Close All", "Serial", "TSOP", "Compass", "Light Sensors", "Robot Position", "Pixy", "Settings"]
+    let viewNames: [String] = ["__CLOSE__", "Serial", "TSOP", "Compass", "Light", "Robot Pos", "Pixy", "Settings"]
     
     init() {
         super.init(style: UITableViewStyle.grouped)

@@ -27,6 +27,7 @@ class BluetoothController {
     var settingsDelegate: BluetoothControllerSettingsDelegate?
     var robotPositionDelegate: BluetoothControllerRobotPositionDelegate?
     var sendingDelegate: BluetoothControllerSendDelegate?
+    var pixyDelegate: BluetoothControllerPixyDelegate?
     
     var peripherals: [CBPeripheral] = []
     var rssis: [Float] = []

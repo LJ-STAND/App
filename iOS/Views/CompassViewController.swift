@@ -23,7 +23,7 @@ class CompassViewController: UIViewController {
         
         self.view.addSubview(compass)
         
-        self.generateConstraints(superView: self.view, subView: compass)
+        self.generateConstraints(subView: compass)
     }
     
     override func viewDidAppear(_ animated: Bool) {

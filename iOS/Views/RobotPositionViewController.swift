@@ -23,7 +23,7 @@ class RobotPositionViewController: UIViewController {
         
         self.view.addSubview(robotPos)
         
-        self.generateConstraints(superView: self.view, subView: robotPos)
+        self.generateConstraints(subView: robotPos)
     }
     
     override func viewDidAppear(_ animated: Bool) {

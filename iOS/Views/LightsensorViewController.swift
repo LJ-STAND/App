@@ -26,7 +26,7 @@ class LightSensorViewController: UIViewController {
         lightSensView = lightSensorView(frame: calculateFrame())
         self.view.addSubview(lightSensView)
         
-        self.generateConstraints(superView: self.view, subView: lightSensView)
+        self.generateConstraints(subView: lightSensView)
     }
     
     override func viewDidAppear(_ animated: Bool) {

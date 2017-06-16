@@ -44,7 +44,7 @@ class BackgroundViewController: UIViewController {
         
         
         //TODO: Fix
-        self.generateConstraints(superView: view, subView: container, topPadding: 104.0)
+        self.generateConstraints(subView: container, topPadding: 104.0)
         
         view.layoutIfNeeded()
         
@@ -70,7 +70,7 @@ extension BackgroundViewController: ViewManager {
         
         container.addSubview(newView)
         
-        generateConstraints(superView: container, subView: newView)
+        generateConstraints(subView: newView)
         
         newView.layoutIfNeeded()
         container.layoutIfNeeded()

@@ -25,7 +25,7 @@ class TSOPViewController: UIViewController {
         tsopView = CompassView(frame: calculateFrame())
         
         self.view.addSubview(tsopView)
-        self.generateConstraints(superView: self.view, subView: tsopView)
+        self.generateConstraints(subView: tsopView)
         
         
     }

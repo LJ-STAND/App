@@ -19,6 +19,7 @@ enum BluetoothDataType: Int {
     case robotPoisition
     case settings
     case orbitAngle
+    case pixy
 }
 
 enum RobotNumber: Int {

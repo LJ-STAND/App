@@ -167,6 +167,24 @@ extension BluetoothController: BluetoothSerialDelegate {
                 
                 tsopDelegate?.hasNewOrbitAngle(ang, robot: robot)
                 
+            case .pixy:
+                let rawData = processed.2
+                
+                let rawArray = rawData.components(separatedBy: ",")
+                
+                var arrayData: [Double] = []
+                
+                for item in rawArray {
+                    let doubleVal = Double(item)
+                    arrayData.append(doubleVal!)
+                }
+                
+                guard case arrayData.count = 4 else {
+                    return
+                }
+                
+                pixyDelegate?.updatedGoalInformation(x: arrayData[0], y: arrayData[1], width: arrayData[2], height: arrayData[3])
+                
             default:
                 MKULog.shared.debug("[BLUETOOTH][Controller] Recieved: \(processed)")
             }
