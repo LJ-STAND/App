@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -193,12 +193,41 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SXe-jy-Dha" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="79" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SXe-jy-Dha" id="xVt-dj-hGT">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BT Debug (enable ^ first)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbh-ax-1LS">
+                                                    <rect key="frame" x="24" y="11" width="190.33333333333334" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d4B-Ck-AKT">
+                                                    <rect key="frame" x="349" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="bluetoothDebugAction:" destination="LhF-dY-CPs" eventType="valueChanged" id="pmY-n7-R5W"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d4B-Ck-AKT" firstAttribute="centerY" secondItem="xVt-dj-hGT" secondAttribute="centerY" id="Mik-AO-uNQ"/>
+                                                <constraint firstItem="xbh-ax-1LS" firstAttribute="leading" secondItem="xVt-dj-hGT" secondAttribute="leadingMargin" constant="16" id="NOZ-KC-ewe"/>
+                                                <constraint firstItem="xbh-ax-1LS" firstAttribute="centerY" secondItem="xVt-dj-hGT" secondAttribute="centerY" id="kmc-fI-qTb"/>
+                                                <constraint firstAttribute="trailing" secondItem="d4B-Ck-AKT" secondAttribute="trailing" constant="16" id="oXj-8K-BAO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="NTS-DR-c4w">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bwm-2f-3bD" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="115" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="159" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bwm-2f-3bD" id="qPk-qW-lrP">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -227,7 +256,7 @@
                             <tableViewSection headerTitle="" id="8oD-xo-HdL">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="L1x-mb-eJY" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="195" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="239" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L1x-mb-eJY" id="hgf-ub-ByQ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -256,7 +285,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="J6V-3j-HEl" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="239" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="283" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J6V-3j-HEl" id="cij-0k-XHh">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -285,7 +314,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="csj-Bv-BkO" customClass="UITableViewVibrantCell" customModule="LJ_STAND" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="283" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="327" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="csj-Bv-BkO" id="9MW-Y1-TcF">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
@@ -323,6 +352,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="9e3-ce-rgD"/>
                     <connections>
+                        <outlet property="bluetoothDebug" destination="d4B-Ck-AKT" id="boZ-HE-PES"/>
                         <outlet property="compassSwitch" destination="LTT-nV-J5i" id="cSk-3q-Nfu"/>
                         <outlet property="lightSwitch" destination="jIv-cA-h6K" id="4ej-vb-a9m"/>
                         <outlet property="logWindowSwitch" destination="vrq-d8-10Q" id="stv-aO-OOs"/>
@@ -331,7 +361,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wl0-YL-PeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2958" y="3371"/>
+            <point key="canvasLocation" x="2957.971014492754" y="3370.9239130434785"/>
         </scene>
         <!--Pixy View Controller-->
         <scene sceneID="hre-fM-2jM">

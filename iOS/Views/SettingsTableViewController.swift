@@ -17,6 +17,7 @@ class SettingsTableViewController: UITableViewController {
     @IBOutlet weak var tsopSwitch: UISwitch!
     @IBOutlet weak var lightSwitch: UISwitch!
     @IBOutlet weak var compassSwitch: UISwitch!
+    @IBOutlet weak var bluetoothDebug: UISwitch!
     
     let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
     let delegate = UIApplication.shared.delegate as! AppDelegate
@@ -33,6 +34,7 @@ class SettingsTableViewController: UITableViewController {
         }
         
         logWindowSwitch.isOn = defaults.bool(forKey: DefaultKeys.showLog)
+        bluetoothDebug.isOn = defaults.bool(forKey: DefaultKeys.bluetoothDebug)
         
         BluetoothController.shared.sendingDelegate?.requestSettings()
         BluetoothController.shared.settingsDelegate = self
@@ -42,7 +44,14 @@ class SettingsTableViewController: UITableViewController {
         delegate.setAppLogging(enabled: logWindowSwitch.isOn)
 	}
 	
-	@IBAction func tsopDebug(_ sender: Any) {
+    @IBAction func bluetoothDebugAction(_ sender: Any) {
+        defaults.set(bluetoothDebug.isOn, forKey: DefaultKeys.bluetoothDebug)
+        MKUIToast.shared.showNotification(text: "This will probably crash", alignment: NSTextAlignment.center, color: .flatRed, identifier: nil) {
+            BluetoothController.shared.bluetoothDebug = self.bluetoothDebug.isOn
+        }
+        
+    }
+    @IBAction func tsopDebug(_ sender: Any) {
         sendUpdatedSettings()
 	}
     

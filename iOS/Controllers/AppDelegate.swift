@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.statusBarStyle = .lightContent
         
         BluetoothController.shared.messageDelegate = self
-        BluetoothController.shared.bluetoothDebug = false
+        BluetoothController.shared.bluetoothDebug = defaults.bool(forKey: DefaultKeys.bluetoothDebug)
         
         return true
     }

@@ -13,7 +13,7 @@ import CoreBluetooth
 
 extension AppDelegate: BluetoothMessageDelegate {
     func showInformation(_ message: String) {
-        MKUIToast.shared.showNotification(text: message, alignment: .center, color: .flatBlue, identifier: nil, callback: {})
+        MKUIToast.shared.showNotification(text: message, alignment: .center, color: ljStandGreen, identifier: nil, callback: {})
         MKULog.shared.info(message)
         scheduleDismiss()
     }
