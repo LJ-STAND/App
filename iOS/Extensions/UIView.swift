@@ -23,6 +23,7 @@ extension UIViewController {
         self.view.layoutIfNeeded()
     }
     
+    //TODO: this might be broken
     func generateContraints(subView: UIView, padding: Double = 0) {
         subView.translatesAutoresizingMaskIntoConstraints = false
         let paddingFloat = CGFloat(padding)

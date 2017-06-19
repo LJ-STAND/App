@@ -9,13 +9,14 @@
 import UIKit
 
 class PixyView: UIView {
-    private let maxPixyHeight = 480.0
-    private let maxPixyWidth = 640.0
+    private let maxPixyHeight = 180.0
+    private let maxPixyWidth = 320.0
     
     var outline: UIView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         self.outline = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
         
         outline.backgroundColor = .clear
@@ -23,6 +24,9 @@ class PixyView: UIView {
         outline.layer.borderWidth = CGFloat(5.0)
         
         self.addSubview(outline)
+        
+        self.layer.borderColor = UIColor.white.cgColor
+        self.layer.borderWidth = CGFloat(5.0)
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -169,7 +169,6 @@ extension BluetoothController: BluetoothSerialDelegate {
                 
             case .pixy:
                 let rawData = processed.2
-                
                 let rawArray = rawData.components(separatedBy: ",")
                 
                 var arrayData: [Double] = []
@@ -177,10 +176,6 @@ extension BluetoothController: BluetoothSerialDelegate {
                 for item in rawArray {
                     let doubleVal = Double(item)
                     arrayData.append(doubleVal!)
-                }
-                
-                guard case arrayData.count = 4 else {
-                    return
                 }
                 
                 pixyDelegate?.updatedGoalInformation(x: arrayData[0], y: arrayData[1], width: arrayData[2], height: arrayData[3])
