@@ -31,6 +31,8 @@ class BackgroundViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.isTranslucent = false
+        
         view.addSubview(blurView)
         
         view.sendSubview(toBack: blurView)
@@ -42,9 +44,7 @@ class BackgroundViewController: UIViewController {
         
         view.addSubview(container)
         
-        
-        //TODO: Fix
-        self.generateConstraints(subView: container, topPadding: 104.0)
+        self.generateContraints(subView: container)
         
         view.layoutIfNeeded()
         
