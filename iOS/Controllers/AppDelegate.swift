@@ -62,6 +62,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navController?.navigationBar.barStyle = .blackTranslucent
         navController?.navigationBar.topItem?.title = "LJ STAND"
         
+        navController?.navigationBar.tintColor = ljStandGreen
+        
         if #available(iOS 11.0, *) {
             navController?.navigationBar.prefersLargeTitles = true
         }
