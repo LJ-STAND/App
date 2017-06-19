@@ -19,9 +19,7 @@ class PixyViewController: UIViewController {
         pixyView.backgroundColor = .gray
         self.view.addSubview(pixyView)
         
-        generateConstraints(subView: pixyView, topPadding: 150.0)
-        
-        pixyView.applyNewPixyData(x: 0, y: 0, width: 50, height: 50)
+        generateContraints(subView: pixyView)
     }
     
     override func viewDidAppear(_ animated: Bool) {

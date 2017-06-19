@@ -26,7 +26,9 @@ class PixyView: UIView {
         self.addSubview(outline)
         
         self.layer.borderColor = UIColor.white.cgColor
-        self.layer.borderWidth = CGFloat(5.0)
+        self.layer.borderWidth = CGFloat(2.5)
+        
+        self.applyNewPixyData(x: 0.0, y: 0.0, width: 0.0, height: 0.0)
     }
     
     required init?(coder aDecoder: NSCoder) {
