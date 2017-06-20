@@ -10,7 +10,6 @@ import UIKit
 
 enum UIUserInterfaceIdiom : Int {
     case unspecified
-    
     case phone
     case pad
 }
