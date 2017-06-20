@@ -20,9 +20,7 @@ class RobotPositionViewController: UIViewController {
         robotPos = RobotPositionView(frame: calculateFrame())
         
         self.view.backgroundColor = .clear
-        
         self.view.addSubview(robotPos)
-        
         self.generateConstraints(subView: robotPos)
     }
     

@@ -74,7 +74,6 @@ extension BackgroundViewController: ViewManager {
         
         newView.layoutIfNeeded()
         container.layoutIfNeeded()
-
     }
     
     func clearView() {

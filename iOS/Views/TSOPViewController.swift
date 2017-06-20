@@ -16,7 +16,6 @@ import Chameleon
 
 class TSOPViewController: UIViewController {
     internal var tappedButton: UIButton?
-    
     var tsopView: CompassView!
     
     override func viewDidLoad() {
@@ -26,8 +25,6 @@ class TSOPViewController: UIViewController {
         
         self.view.addSubview(tsopView)
         self.generateConstraints(subView: tsopView)
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {

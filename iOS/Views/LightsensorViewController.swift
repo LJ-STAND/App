@@ -46,11 +46,6 @@ class LightSensorViewController: UIViewController {
         
         return returnFrame
     }
-    
-    func windowWasResized() {
-//        windowView.resize()
-        lightSensView.setNeedsDisplay()
-    }
 }
 
 extension LightSensorViewController: BluetoothControllerLightSensorDelegate {

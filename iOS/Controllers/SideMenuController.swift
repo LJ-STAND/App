@@ -116,7 +116,7 @@ open class SlideMenuController: UIViewController, UIGestureRecognizerDelegate {
         initView()
     }
     
-    deinit { }
+    deinit {}
     
     open func initView() {
         mainContainerView = UIView(frame: view.bounds)

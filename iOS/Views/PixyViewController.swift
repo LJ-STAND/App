@@ -33,10 +33,8 @@ class PixyViewController: UIViewController {
     }
 }
 
-
 extension PixyViewController: BluetoothControllerPixyDelegate {
     func updatedGoalInformation(x: Double, y: Double, width: Double, height: Double) {
-//        MKULog.shared.debug([x, y, width, height])
         pixyView.applyNewPixyData(x: x, y: y, width: width, height: height)
     }
 }

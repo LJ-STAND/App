@@ -9,7 +9,6 @@
 import UIKit
 
 open class UITableViewVibrantCell: UITableViewCell {
-    
     fileprivate var vibrancyView:UIVisualEffectView = UIVisualEffectView()
     fileprivate var vibrancySelectedBackgroundView:UIVisualEffectView = UIVisualEffectView()
     fileprivate var defaultSelectedBackgroundView:UIView?
