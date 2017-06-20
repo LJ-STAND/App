@@ -12,16 +12,12 @@ import MKUtilityKit
 extension AppDelegate: AppSettingsDelegate {
     func setAppLogging(enabled: Bool) {
         defaults.set(enabled, forKey: DefaultKeys.showLog)
-        closeApp()
+        setUpWindows()
     }
     
     var appLogEnabled: Bool {
         get {
             return defaults.bool(forKey: DefaultKeys.showLog)
         }
-    }
-    
-    func closeApp() {
-        exit(0)
     }
 }
