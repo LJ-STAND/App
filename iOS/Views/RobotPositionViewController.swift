@@ -28,6 +28,13 @@ class RobotPositionViewController: UIViewController {
         super.viewDidAppear(animated)
         windowWasResized()
         BluetoothController.shared.robotPositionDelegate = self
+        
+        MKUAsync.background {
+            for item in 1...23 {
+                self.updatePosition(position: RobotPosition(rawValue: item)!, robot: RobotNumber.noRobot)
+                sleep(1)
+            }
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

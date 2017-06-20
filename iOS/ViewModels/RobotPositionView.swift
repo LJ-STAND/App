@@ -8,12 +8,13 @@
 
 import Foundation
 import UIKit
+import MKUtilityKit
 
 class RobotPositionView: UIView {
     fileprivate let horizontalLineOffset = 60.0
     fileprivate let verticalOffset = 60.0
     fileprivate let robot = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-    fileprivate var field = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    fileprivate var field = UIImageView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
     
     override init(frame frameRect: CGRect) {
         super.init(frame: frameRect)
@@ -30,8 +31,7 @@ class RobotPositionView: UIView {
         
         robot.backgroundColor = .blue
         
-        field = UIView(frame: CGRect(x: horizontalLineOffset, y: verticalOffset, width: (Double(self.bounds.width) - (2 * horizontalLineOffset)), height: (Double(self.bounds.height) - (2 * verticalOffset))))
-        field.backgroundColor = .green
+        field = UIImageView(frame: CGRect(x: horizontalLineOffset, y: verticalOffset, width: (Double(self.bounds.width) - (2 * horizontalLineOffset)), height: (Double(self.bounds.height) - (2 * verticalOffset))))
         
         field.translatesAutoresizingMaskIntoConstraints = false
         
@@ -47,11 +47,13 @@ class RobotPositionView: UIView {
         
         self.layoutIfNeeded()
         
-        field.layer.borderWidth = 5.0
-        field.layer.borderColor = UIColor.white.cgColor
+        field.image = UIImage(named: "Field")
         
         self.backgroundColor = .clear
         self.addSubview(robot)
+        
+        self.sendSubview(toBack: robot)
+        self.sendSubview(toBack: field)
     }
     
     public func setRobotPosition(_ pos: RobotPosition) {
@@ -136,6 +138,8 @@ class RobotPositionView: UIView {
             position.origin = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
         }
         
-        robot.frame = position      
+        MKUAsync.main {
+            self.robot.frame = position
+        }
     }
 }
