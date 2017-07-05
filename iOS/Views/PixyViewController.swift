@@ -20,6 +20,11 @@ class PixyViewController: UIViewController {
         self.view.addSubview(pixyView)
         
         generateContraints(subView: pixyView)
+        
+        if BluetoothController.shared.fakeData {
+            let data = BluetoothControllerFakeData.pixy
+            self.updatedGoalInformation(x: data[0], y: data[1], width: data[2], height: data[3])
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

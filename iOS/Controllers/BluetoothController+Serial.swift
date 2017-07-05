@@ -61,6 +61,10 @@ extension BluetoothController: BluetoothSerialDelegate {
     }
     
     func serialDidReceiveString(_ message: String) {
+        
+        guard self.overrideConnect == false else {
+            return
+        }
     
         textRecieved += message
         

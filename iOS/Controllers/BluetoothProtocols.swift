@@ -52,4 +52,5 @@ protocol BluetoothControllerRobotPositionDelegate {
 
 protocol BluetoothControllerPixyDelegate {
     func updatedGoalInformation(x: Double, y: Double, width: Double, height: Double)
+//    func updatedGoalPercentage(x: Double, y: Double, width: Double, height: Double)
 }

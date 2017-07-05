@@ -25,6 +25,11 @@ class TSOPViewController: UIViewController {
         
         self.view.addSubview(tsopView)
         self.generateConstraints(subView: tsopView)
+        
+        if BluetoothController.shared.fakeData {
+            self.hasNewOrbitAngle(BluetoothControllerFakeData.tsopOrbit, robot: .noRobot)
+            self.hasNewDirection(BluetoothControllerFakeData.tsopDirection, robot: .noRobot)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

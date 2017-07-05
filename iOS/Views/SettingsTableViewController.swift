@@ -76,6 +76,14 @@ class SettingsTableViewController: UITableViewController {
         
         delegate.window?.rootViewController?.present(sfView, animated: true, completion: nil)
 	}
+    
+    @IBAction func fakeBluetoothData(_ sender: Any) {
+        BluetoothController.shared.overrideConnect = true
+        BluetoothController.shared.connected = true
+        BluetoothController.shared.fakeData = true
+        MKULog.shared.info("[BLUETOOTH] Fake Data Enabled")
+        MKULog.shared.mark()
+    }
 }
 
 extension SettingsTableViewController: BluetoothControllerSettingsDelegate {

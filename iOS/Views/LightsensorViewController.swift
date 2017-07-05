@@ -27,6 +27,10 @@ class LightSensorViewController: UIViewController {
         self.view.addSubview(lightSensView)
         
         self.generateConstraints(subView: lightSensView)
+        
+        if BluetoothController.shared.fakeData {
+            self.updatedCurrentLightSensors(BluetoothControllerFakeData.lightSensors)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

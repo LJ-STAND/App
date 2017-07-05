@@ -24,6 +24,10 @@ class CompassViewController: UIViewController {
         self.view.addSubview(compass)
         
         self.generateConstraints(subView: compass)
+        
+        if BluetoothController.shared.fakeData {
+            self.hasNewHeading(BluetoothControllerFakeData.compassAngle, robot: .noRobot)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -36,6 +36,7 @@ class BluetoothController {
     var overrideConnect: Bool = false
     
     var connected: Bool = false
+    var fakeData: Bool = false
     var bluetoothDebug: Bool = false
     
     var textRecieved = ""
@@ -47,6 +48,23 @@ class BluetoothController {
         sendingDelegate = self
         checkConnect()
     }
+    
+//    func fakeData() {
+//        self.overrideConnect = true
+//
+//        tsopDelegate?.hasNewDirection(BluetoothControllerFakeData.tsopDirection, robot: .noRobot)
+//        tsopDelegate?.hasNewOrbitAngle(BluetoothControllerFakeData.tsopOrbit, robot: .noRobot)
+//
+//        compassDelegate?.hasNewHeading(BluetoothControllerFakeData.compassAngle, robot: .noRobot)
+//
+//        robotPositionDelegate?.updatePosition(position: BluetoothControllerFakeData.fieldPosition, robot: .noRobot)
+//
+//        lightSensDelegate?.updatedCurrentLightSensors(BluetoothControllerFakeData.lightSensors)
+//
+//
+//        let pixyData = BluetoothControllerFakeData.pixy
+//        pixyDelegate?.updatedGoalInformation(x: pixyData[0], y: pixyData[1], width: pixyData[2], height: pixyData[3])
+//    }
     
     func checkDisabledStatus() -> Bool {
         self.debugBluetooth(message: "checkDisabledStatus()")

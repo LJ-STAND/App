@@ -22,6 +22,11 @@ class RobotPositionViewController: UIViewController {
         self.view.backgroundColor = .clear
         self.view.addSubview(robotPos)
         self.generateConstraints(subView: robotPos)
+        
+        if BluetoothController.shared.fakeData {
+            self.updatePosition(position: BluetoothControllerFakeData.fieldPosition, robot: .noRobot)
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
