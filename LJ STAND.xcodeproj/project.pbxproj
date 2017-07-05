@@ -879,6 +879,7 @@
 				EF2B9F071F0D02C600D2E980 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F88B4143B1ADB9B8237C6425 /* Build configuration list for PBXNativeTarget "LJ STAND" */ = {
 			isa = XCConfigurationList;
