@@ -31,26 +31,13 @@ class RobotPositionView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        
-        if drawBackground {
-            
-        }
-        //TODO: Change to flat green
-//        UIColor.green.setFill()
-//        UIRectFill(rect)
-        
         let maxSize = min(rect.size.width, rect.size.height) * 0.75
         let square = CGRect(x: rect.origin.x + rect.size.width / 2 - maxSize / 2, y: rect.origin.y + rect.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
         let path = UIBezierPath(ovalIn: CGRect(origin: CGPoint(x: square.origin.x + 0.05 * square.size.width, y: square.origin.y + 0.05 * square.size.width), size: CGSize(width: 0.9 * square.size.width, height: 0.9 * square.size.height)))
         
-        //        if drawBackground {
-        //            UIColor.black.setStroke()
-        //        } else {
-        //            UIColor.white.setStroke()
-        //        }
         
-        UIColor.white.setStroke()
-        UIColor.green.setFill()
+        UIColor.flatWhite.setStroke()
+        UIColor.flatGreenDark.setFill()
         
         path.lineWidth = 10
         path.stroke()
@@ -81,36 +68,19 @@ class RobotPositionView: UIView {
             let yPoint = yCenter + (needleRadius * cos(angleRadians))
             
             let dimention = self.frame.width * 0.1
-            let cubeXPoint = xPoint - (Double(dimention) / 2)
-            let cubeYPoint = yPoint - (Double(dimention) / 2)
             
             let needle = UIBezierPath()
             
-            //            needle.move(to: CGPoint(x: xCenter, y: yCenter))
             
             needle.addArc(withCenter: CGPoint(x: xPoint, y: yPoint), radius: CGFloat(self.frame.width * 0.05), startAngle: 0.0, endAngle: (2 * CGFloat.pi), clockwise: true)
             
             needle.lineWidth = 10
             
-            UIColor.black.setFill()
-            UIColor.black.setStroke()
+            UIColor.flatBlack.setFill()
+            UIColor.flatWhiteDark.setStroke()
             
             needle.stroke()
             needle.fill()
-            
-            //            let needlePath = UIBezierPath()
-            //
-            //            needlePath.move(to: CGPoint(x: xCenter, y: yCenter))
-            //
-            //            let point = CGPoint(x: xPoint, y: yPoint)
-            //
-            //            needlePath.addLine(to: point)
-            //            needlePath.lineCapStyle = .round
-            //
-            //            needlePath.lineWidth = 10
-            //
-            //            needlePath.stroke()
-            
         }
     }
     
