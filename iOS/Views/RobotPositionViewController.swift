@@ -24,7 +24,7 @@ class RobotPositionViewController: UIViewController {
         self.generateConstraints(subView: robotPos)
         
         if BluetoothController.shared.fakeData {
-            MKULog.shared.error("[RobotPosition] View does not support fake data")
+            self.updatePosition(angle: BluetoothControllerFakeData.positionAngle, size: BluetoothControllerFakeData.positionSize, robot: RobotNumber.noRobot)
         }
         
     }

@@ -36,8 +36,8 @@ class RobotPositionView: UIView {
             
         }
         //TODO: Change to flat green
-        UIColor.green.setFill()
-        UIRectFill(rect)
+//        UIColor.green.setFill()
+//        UIRectFill(rect)
         
         let maxSize = min(rect.size.width, rect.size.height) * 0.75
         let square = CGRect(x: rect.origin.x + rect.size.width / 2 - maxSize / 2, y: rect.origin.y + rect.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
@@ -54,6 +54,7 @@ class RobotPositionView: UIView {
         
         path.lineWidth = 10
         path.stroke()
+        path.fill()
         
         let temp = false
         
