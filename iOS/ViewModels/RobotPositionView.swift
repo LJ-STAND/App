@@ -11,135 +11,143 @@ import UIKit
 import MKUtilityKit
 
 class RobotPositionView: UIView {
-    fileprivate let horizontalLineOffset = 60.0
-    fileprivate let verticalOffset = 60.0
-    fileprivate let robot = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-    fileprivate var field = UIImageView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+    var needleAngle: Double = 0.0
+    var positionSize: Double = 0.35
+    var drawBackground = false
     
-    override init(frame frameRect: CGRect) {
-        super.init(frame: frameRect)
-        sharedInit()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        sharedInit()
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
     }
     
-    fileprivate func sharedInit() {
-        BluetoothController.shared.checkConnect()
-        
-        robot.backgroundColor = .blue
-        
-        field = UIImageView(frame: CGRect(x: horizontalLineOffset, y: verticalOffset, width: (Double(self.bounds.width) - (2 * horizontalLineOffset)), height: (Double(self.bounds.height) - (2 * verticalOffset))))
-        
-        field.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.addSubview(field)
-        
-        self.addConstraint(NSLayoutConstraint(item: field, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1.0, constant: CGFloat(horizontalLineOffset)))
-        
-        self.addConstraint(NSLayoutConstraint(item: field, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1.0, constant: CGFloat(-horizontalLineOffset)))
-        
-        self.addConstraint(NSLayoutConstraint(item: field, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: CGFloat(verticalOffset)))
-        
-        self.addConstraint(NSLayoutConstraint(item: field, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: CGFloat(-verticalOffset)))
-        
-        self.layoutIfNeeded()
-        
-        field.image = UIImage(named: "Field")
-        
+    func commonInit() {
+        //        BluetoothController.shared.checkConnect()
         self.backgroundColor = .clear
-        self.addSubview(robot)
-        
-        self.sendSubview(toBack: robot)
-        self.sendSubview(toBack: field)
     }
     
-    public func setRobotPosition(_ pos: RobotPosition) {
-        let size: CGFloat = 50.0
-        var position = CGRect(x: 0.0, y: 0.0, width: size, height: size)
+    override func draw(_ rect: CGRect) {
         
-        switch pos {
+        if drawBackground {
             
-        case .smallOnFrontLine:
-            position.origin = CGPoint(x: ((self.frame.width / 2.0) - CGFloat(size / 2.0)), y: (CGFloat(2.0 * verticalOffset) - size))
+        }
+        //TODO: Change to flat green
+        UIColor.green.setFill()
+        UIRectFill(rect)
+        
+        let maxSize = min(rect.size.width, rect.size.height) * 0.75
+        let square = CGRect(x: rect.origin.x + rect.size.width / 2 - maxSize / 2, y: rect.origin.y + rect.size.height / 2 - maxSize / 2, width: maxSize, height: maxSize)
+        let path = UIBezierPath(ovalIn: CGRect(origin: CGPoint(x: square.origin.x + 0.05 * square.size.width, y: square.origin.y + 0.05 * square.size.width), size: CGSize(width: 0.9 * square.size.width, height: 0.9 * square.size.height)))
+        
+        //        if drawBackground {
+        //            UIColor.black.setStroke()
+        //        } else {
+        //            UIColor.white.setStroke()
+        //        }
+        
+        UIColor.white.setStroke()
+        UIColor.green.setFill()
+        
+        path.lineWidth = 10
+        path.stroke()
+        
+        let temp = false
+        
+        if /*!BluetoothController.shared.connected*/ temp == true {
+            let ovalRect = square.insetBy(dx: 0.9 * (square.size.width / 2), dy: 0.9 * (square.size.height / 2))
+            let ovalPath = UIBezierPath(ovalIn: ovalRect)
+            ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*(Double.pi / 4)))))
             
-        case .bigOnFrontLine:
-            position.origin = CGPoint(x: ((self.frame.width / 2.0) - CGFloat(size / 2.0)), y: (CGFloat(1.5 * verticalOffset) - size))
+            let ovalPathPoint = CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-(Double.pi / 4))))
             
-        case .overFrontLine:
-            position.origin = CGPoint(x: ((self.frame.width / 2.0) - CGFloat(size / 2.0)), y: (CGFloat(verticalOffset) - size))
+            ovalPath.addLine(to: ovalPathPoint)
             
-        case .smallOnRightLine:
-            position.origin = CGPoint(x: ((self.frame.width - CGFloat(2.0 * horizontalLineOffset))), y: (self.frame.height / 2))
+            UIColor.red.setStroke()
+            ovalPath.lineWidth = 10
+            ovalPath.stroke()
+        } else {
+            let xCenter = Double(self.frame.width / 2)
+            let yCenter = Double(self.frame.height / 2)
             
-        case .bigOnRightLine:
-            position.origin = CGPoint(x: ((self.frame.width - CGFloat(1.5 * horizontalLineOffset))), y: (self.frame.height / 2))
+            let angleRadians = degToRad((360 - needleAngle) - 90)
             
-        case .overRightLine:
-            position.origin = CGPoint(x: ((self.frame.width - CGFloat(horizontalLineOffset))), y: (self.frame.height / 2))
+            let needleRadius = (self.positionSize * Double(maxSize))
+            let xPoint = xCenter + (needleRadius * sin(angleRadians))
+            let yPoint = yCenter + (needleRadius * cos(angleRadians))
             
-        case .smallOnBackLine:
-            position.origin = CGPoint(x: (self.frame.width / 2.0), y: ((self.frame.height - CGFloat(2.0 * verticalOffset))))
+            let dimention = self.frame.width * 0.1
+            let cubeXPoint = xPoint - (Double(dimention) / 2)
+            let cubeYPoint = yPoint - (Double(dimention) / 2)
             
-        case .bigOnBackLine:
-            position.origin = CGPoint(x: (self.frame.width / 2.0), y: ((self.frame.height - CGFloat(1.5 * verticalOffset))))
+            let needle = UIBezierPath()
             
-        case .overBackLine:
-            position.origin = CGPoint(x: (self.frame.width / 2.0), y: ((self.frame.height - CGFloat(verticalOffset))))
+            //            needle.move(to: CGPoint(x: xCenter, y: yCenter))
             
-        case .smallOnLeftLine:
-            position.origin = CGPoint(x: CGFloat(2.0 * horizontalLineOffset) - size, y: ((self.frame.height / 2.0)))
+            needle.addArc(withCenter: CGPoint(x: xPoint, y: yPoint), radius: CGFloat(self.frame.width * 0.05), startAngle: 0.0, endAngle: (2 * CGFloat.pi), clockwise: true)
             
-        case .bigOnLeftLine:
-            position.origin = CGPoint(x: CGFloat(1.5 * horizontalLineOffset) - size, y: ((self.frame.height / 2.0)))
+            needle.lineWidth = 10
             
-        case .overLeftLine:
-            position.origin = CGPoint(x: CGFloat(horizontalLineOffset) - size, y: ((self.frame.height / 2.0)))
+            UIColor.black.setFill()
+            UIColor.black.setStroke()
             
-        case .smallOnCornerFrontRight:
-            position.origin = CGPoint(x: ((self.frame.width - CGFloat(2.0 * horizontalLineOffset))), y: (CGFloat(2.0 * verticalOffset) - size))
+            needle.stroke()
+            needle.fill()
             
-        case .bigOnCornerFrontRight:
-            position.origin = CGPoint(x: ((self.frame.width - CGFloat(1.5 * horizontalLineOffset))), y: (CGFloat(1.5 * verticalOffset) - size))
+            //            let needlePath = UIBezierPath()
+            //
+            //            needlePath.move(to: CGPoint(x: xCenter, y: yCenter))
+            //
+            //            let point = CGPoint(x: xPoint, y: yPoint)
+            //
+            //            needlePath.addLine(to: point)
+            //            needlePath.lineCapStyle = .round
+            //
+            //            needlePath.lineWidth = 10
+            //
+            //            needlePath.stroke()
             
-        case .overCornerFrontRight:
-            position.origin = CGPoint(x: ((self.frame.width - CGFloat(horizontalLineOffset))), y: (CGFloat(verticalOffset) - size))
+        }
+    }
+    
+    func rotate(_ angle:Double) {
+        needleAngle = angle
+        setNeedsDisplay(bounds)
+    }
+    
+    func applyData(angle: Double, size: Double) {
+        
+        if size == 3.0 {
+            //Fully off
+            self.positionSize = 0.58
+            setNeedsDisplay()
+            self.rotate(angle)
+        } else if size == 4.0 {
+            //Centre
+            self.positionSize = 0.0
+            setNeedsDisplay()
+            self.rotate(angle)
+        } else {
+            var multiplyer = 0.0
+            if size < 0.2 {
+                multiplyer = 0.2
+            } else {
+                multiplyer = size
+            }
             
-        case .smallOnCornerBackRight:
-            position.origin = CGPoint(x: ((self.frame.width - CGFloat(2.0 * horizontalLineOffset))), y: (self.frame.height - CGFloat(2.0 * verticalOffset)))
-            
-        case .bigOnCornerBackRight:
-            position.origin = CGPoint(x: ((self.frame.width - CGFloat(1.5 * horizontalLineOffset))), y: (self.frame.height - CGFloat(1.5 * verticalOffset)))
-            
-        case .overCornerBackRight:
-            position.origin = CGPoint(x: ((self.frame.width - CGFloat(horizontalLineOffset))), y: (self.frame.height - CGFloat(verticalOffset)))
-            
-        case .smallOnCornerBackLeft:
-            position.origin = CGPoint(x: (CGFloat(2.0 * horizontalLineOffset) - size), y: (self.frame.height - CGFloat(2.0 * verticalOffset)))
-            
-        case .bigOnCornerBackLeft:
-            position.origin = CGPoint(x: (CGFloat(1.5 * horizontalLineOffset) - size), y: (self.frame.height - CGFloat(1.5 * verticalOffset)))
-            
-        case .overCornerBackLeft:
-            position.origin = CGPoint(x: (CGFloat(horizontalLineOffset) - size), y: (self.frame.height - CGFloat(verticalOffset)))
-            
-        case .smallOnCornerFrontLeft:
-            position.origin = CGPoint(x: CGFloat(2.0 * horizontalLineOffset) - size, y: CGFloat(2.0 * verticalOffset) - size)
-            
-        case .bigOnCornerFrontLeft:
-            position.origin = CGPoint(x: CGFloat(1.5 * horizontalLineOffset) - size, y: CGFloat(1.5 * verticalOffset) - size)
-            
-        case .overCornerFrontLeft:
-            position.origin = CGPoint(x: CGFloat(horizontalLineOffset) - size, y: CGFloat(verticalOffset) - size)
-            
-        case .field:
-            position.origin = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
+            let actualSize = (multiplyer * 0.09) + 0.35
+            self.positionSize = actualSize
+            setNeedsDisplay(bounds)
+            self.rotate(angle)
         }
         
-        MKUAsync.main {
-            self.robot.frame = position
-        }
+        
+    }
+    
+    func degToRad(_ angle: Double) -> Double {
+        return (angle - 90) * Double.pi/180
     }
 }

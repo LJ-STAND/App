@@ -13,7 +13,6 @@
 		CDF09D741E3DBC0600D72CB8 /* UIBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */; };
 		D7BB019ABBBEDEB5B8D51401 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE59898617C260F3B4780CF /* Images.xcassets */; };
 		D7EA33190E89039932E4C5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47FD0E6214F5E5923C5A5F04 /* AppDelegate.swift */; };
-		EF1528A11EC0437200F63356 /* RobotPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1528A01EC0437200F63356 /* RobotPosition.swift */; };
 		EF1635D91DADC8CC00D71C66 /* TSOPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */; };
 		EF17C56C1EF35982005ED8C2 /* PixyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF17C56B1EF35982005ED8C2 /* PixyViewController.swift */; };
 		EF1D11E61EC19BBF00C8E390 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF1D11E51EC19BBF00C8E390 /* UITableViewVibrantCell.swift */; };
@@ -92,7 +91,6 @@
 		C8E706015D603F83004748A1 /* LJ STAND.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LJ STAND.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2B605E1E98DDB800A6B1E1 /* Dosis-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dosis-Light.ttf"; sourceTree = "<group>"; };
 		CDF09D731E3DBC0600D72CB8 /* UIBezierPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBezierPath.swift; sourceTree = "<group>"; };
-		EF1528A01EC0437200F63356 /* RobotPosition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RobotPosition.swift; sourceTree = "<group>"; };
 		EF1635D81DADC8CC00D71C66 /* TSOPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TSOPViewController.swift; sourceTree = "<group>"; };
 		EF17C56B1EF35982005ED8C2 /* PixyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixyViewController.swift; sourceTree = "<group>"; };
 		EF1D11E51EC19BBF00C8E390 /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewVibrantCell.swift; sourceTree = "<group>"; };
@@ -326,7 +324,6 @@
 		C8BB61B6AAC040A7B0BF5B9C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				EF1528A01EC0437200F63356 /* RobotPosition.swift */,
 				EFE7366D1E95EBFD00C8AF16 /* AppSettingsProtocol.swift */,
 				EF5462591EC14EC40005EAEB /* ViewManager.swift */,
 				EFED2C971E7F4A1800E02440 /* DefaultKeys.swift */,
@@ -546,7 +543,6 @@
 				EFE7366B1E95EB3900C8AF16 /* BluetoothController+Sending.swift in Sources */,
 				EF608FF91E63AD52005361F9 /* SettingsTableViewController.swift in Sources */,
 				EF9A24F21EAD862900F5D5A3 /* AppDelegate+3DTouch.swift in Sources */,
-				EF1528A11EC0437200F63356 /* RobotPosition.swift in Sources */,
 				EFE7366E1E95EBFD00C8AF16 /* AppSettingsProtocol.swift in Sources */,
 				EFED2CA41E7F4A1800E02440 /* NotificationKeys.swift in Sources */,
 				EFC3C0961F0CF85700AB6996 /* BluetoothController+FakeData.swift in Sources */,
