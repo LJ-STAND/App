@@ -26,7 +26,7 @@ class RobotPositionView: UIView {
     }
     
     func commonInit() {
-        //        BluetoothController.shared.checkConnect()
+        BluetoothController.shared.checkConnect()
         self.backgroundColor = .clear
     }
     

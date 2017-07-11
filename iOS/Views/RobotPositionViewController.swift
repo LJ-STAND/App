@@ -14,6 +14,9 @@ import MKUIKit
 class RobotPositionViewController: UIViewController {
     var robotPos: RobotPositionView!
     
+    @IBOutlet weak var angleLabel: UILabel!
+    @IBOutlet weak var sizeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,10 +26,12 @@ class RobotPositionViewController: UIViewController {
         self.view.addSubview(robotPos)
         self.generateConstraints(subView: robotPos)
         
+        angleLabel.text = "None"
+        sizeLabel.text = "None"
+        
         if BluetoothController.shared.fakeData {
             self.updatePosition(angle: BluetoothControllerFakeData.positionAngle, size: BluetoothControllerFakeData.positionSize, robot: RobotNumber.noRobot)
         }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -56,5 +61,7 @@ class RobotPositionViewController: UIViewController {
 extension RobotPositionViewController: BluetoothControllerRobotPositionDelegate {
     func updatePosition(angle: Double, size: Double, robot: RobotNumber) {
         robotPos.applyData(angle: angle, size: size)
+        sizeLabel.text = "\(size)"
+        angleLabel.text = "\(angle)°"
     }
 }
