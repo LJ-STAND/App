@@ -67,7 +67,8 @@ class SettingsTableViewController: UITableViewController {
         BluetoothController.shared.sendingDelegate?.sendSettings(compass: compassSwitch.isOn, tsop: tsopSwitch.isOn, light: lightSwitch.isOn)
     }
     
-    deinit {
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         BluetoothController.shared.settingsDelegate = nil
     }
 	
