@@ -30,6 +30,13 @@ class TSOPViewController: UIViewController {
             self.hasNewOrbitAngle(BluetoothControllerFakeData.tsopOrbit, robot: .noRobot)
             self.hasNewDirection(BluetoothControllerFakeData.tsopDirection, robot: .noRobot)
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(TSOPViewController.redrawSubView), name: NotificationKeys.resizedWindow, object: nil)
+    }
+    
+    @objc func redrawSubView() {
+        MKULog.shared.debug("Redrawing TSOP")
+        tsopView.draw(tsopView.frame)
     }
     
     override func viewDidAppear(_ animated: Bool) {

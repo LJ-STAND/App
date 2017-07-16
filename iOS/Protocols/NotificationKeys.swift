@@ -10,6 +10,5 @@ import Foundation
 
 struct NotificationKeys {
     static let base = "com.lachlangrant.LJSTAND.Notifications"
-    static let addedWindow = Notification.Name(rawValue: base + ".addedWindow")
-    static let closedWindow = Notification.Name(rawValue: base + ".closedWindow")
+    static let resizedWindow = Notification.Name(rawValue: base + ".resizedWindow")
 }

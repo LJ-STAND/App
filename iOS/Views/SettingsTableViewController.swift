@@ -45,12 +45,12 @@ class SettingsTableViewController: UITableViewController {
 	}
 	
     @IBAction func bluetoothDebugAction(_ sender: Any) {
-        defaults.set(bluetoothDebug.isOn, forKey: DefaultKeys.bluetoothDebug)
         MKUIToast.shared.showNotification(text: "This will probably crash", alignment: NSTextAlignment.center, color: .flatRed, identifier: nil) {
             BluetoothController.shared.bluetoothDebug = self.bluetoothDebug.isOn
         }
-        
+        defaults.set(bluetoothDebug.isOn, forKey: DefaultKeys.bluetoothDebug)
     }
+    
     @IBAction func tsopDebug(_ sender: Any) {
         sendUpdatedSettings()
 	}
@@ -84,6 +84,11 @@ class SettingsTableViewController: UITableViewController {
         BluetoothController.shared.fakeData = true
         MKULog.shared.info("[BLUETOOTH] Fake Data Enabled")
         MKULog.shared.mark()
+        
+        let button = sender as! UIButton
+        
+        button.isEnabled = false
+        button.setTitle("Fake Bluetooth Data ENABLED", for: UIControlState.normal)
     }
 }
 

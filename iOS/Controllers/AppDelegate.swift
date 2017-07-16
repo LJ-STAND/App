@@ -17,6 +17,7 @@ import CoreBluetooth
 let ljStandGreen = UIColor.flatGreenDark
 let defaults = MKUDefaults(suiteName: MKAppGroups.LJSTAND).defaults
 let appSettings = MKUAppSettings()
+let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -39,6 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BluetoothController.shared.messageDelegate = self
         BluetoothController.shared.bluetoothDebug = defaults.bool(forKey: DefaultKeys.bluetoothDebug)
         
+        if UIDevice.current.isSimulator {
+            BluetoothController.shared.overrideConnect = true
+            BluetoothController.shared.connected = true
+            BluetoothController.shared.fakeData = true
+        }
+        
         return true
     }
     
@@ -54,7 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpWindows() {
-        let view = viewController(fromStoryboardWithName: "Main", viewControllerWithIdentifier: "background") as! BackgroundViewController
+        let view = mainStoryboard.getViewController("background") as! BackgroundViewController
         
         viewManager = view
         
@@ -70,14 +77,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let sideMenuController = SlideMenuController(mainViewController: navController!, leftMenuViewController: MenuTableViewController())
         sideMenuController.view.backgroundColor = .black
-        
         sideMenuController.delegate = self
         
         if appLogEnabled {
-            let consoleManager = MKUConsoleManager.shared.getWindow(withRootViewController: sideMenuController, withBounds: UIScreen.main.bounds)
+            let consoleManager = MKUConsoleManager.shared.getWindowWithRootViewController(sideMenuController)
             window = consoleManager
         } else {
-            window = UIWindow(frame: UIScreen.main.bounds)
+            window = UIWindow()
             window?.rootViewController = sideMenuController
         }
         
@@ -86,13 +92,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     @objc func orientationDidChange() {
-        window?.frame = UIScreen.main.bounds
         window?.layoutIfNeeded()
     }
     
     func changeNavBarTitle(_ object: String) {
         if object != "" {
-            navController?.navigationBar.topItem?.title = "LJ STAND - \(object)"
+            navController?.navigationBar.topItem?.title = object
         } else {
             navController?.navigationBar.topItem?.title = "LJ STAND"
         }

@@ -1,4 +1,4 @@
 github "LachlanGrant/Chameleon-Swift4" "2.2.0.4"
 github "LachlanGrant/MKKit" "7.0.0"
-github "LachlanGrant/MKUIKit" "2.0.0"
-github "LachlanGrant/MKUtilityKit" "3.0.1"
+github "LachlanGrant/MKUIKit" "2.1.0"
+github "LachlanGrant/MKUtilityKit" "3.1.0"
