@@ -14,7 +14,7 @@ platform :ios do
   end
 
   lane :release do
-    gym(scheme: "iOS")
+    gym(scheme: "LJ STAND")
     deliver(force: true)
   end
 end
