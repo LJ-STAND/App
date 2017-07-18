@@ -30,9 +30,9 @@ class BackgroundViewController: UIViewController {
         blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = view.frame
         blurView.tag = 999
-        
+
         view.addSubview(blurView)
-        
+
         view.sendSubview(toBack: blurView)
         view.sendSubview(toBack: imageView)
         
