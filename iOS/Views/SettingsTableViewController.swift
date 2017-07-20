@@ -89,6 +89,8 @@ class SettingsTableViewController: UITableViewController {
         
         button.isEnabled = false
         button.setTitle("Fake Bluetooth Data ENABLED", for: UIControlState.normal)
+        
+        MKUIToast.shared.showNotification(text: "Fake Bluetooth Data enabled.", alignment: .center, color: .flatBlue, identifier: nil) {}
     }
 }
 
