@@ -37,6 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.statusBarStyle = .lightContent
         
+        setUpBluetoothController()
+        
+        return true
+    }
+    
+    func setUpBluetoothController() {
         BluetoothController.shared.messageDelegate = self
         BluetoothController.shared.bluetoothDebug = defaults.bool(forKey: DefaultKeys.bluetoothDebug)
         
@@ -45,8 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             BluetoothController.shared.connected = true
             BluetoothController.shared.fakeData = true
         }
-        
-        return true
     }
     
     func setUpFonts() {
@@ -55,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpNotifications() {
+        //TODO: This might not be needed
         let selector = #selector(AppDelegate.orientationDidChange)
         let notifName = Notification.Name.UIDeviceOrientationDidChange
         NotificationCenter.default.addObserver(self, selector: selector, name: notifName, object: nil)

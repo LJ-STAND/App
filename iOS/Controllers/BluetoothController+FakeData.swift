@@ -16,4 +16,5 @@ struct BluetoothControllerFakeData {
     static let positionSize = 3.0
     static let lightSensors = [4,5,6,7]
     static let pixy = [0.2, 0.3, 0.5, 0.6]
+    static let serial = "Connected to: *FAKE DATA*"
 }
