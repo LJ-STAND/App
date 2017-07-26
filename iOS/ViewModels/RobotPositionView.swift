@@ -43,45 +43,36 @@ class RobotPositionView: UIView {
         path.stroke()
         path.fill()
         
-        let temp = false
         
-        if /*!BluetoothController.shared.connected*/ temp == true {
-            let ovalRect = square.insetBy(dx: 0.9 * (square.size.width / 2), dy: 0.9 * (square.size.height / 2))
-            let ovalPath = UIBezierPath(ovalIn: ovalRect)
-            ovalPath.move(to: CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(3*(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(3*(Double.pi / 4)))))
-            
-            let ovalPathPoint = CGPoint(x: ovalRect.midX + (ovalRect.width / 2) * CGFloat(cos(-(Double.pi / 4))), y: ovalRect.midY + (ovalRect.width / 2) * CGFloat(sin(-(Double.pi / 4))))
-            
-            ovalPath.addLine(to: ovalPathPoint)
-            
-            UIColor.red.setStroke()
-            ovalPath.lineWidth = 10
-            ovalPath.stroke()
+        let xCenter = Double(self.frame.width / 2)
+        let yCenter = Double(self.frame.height / 2)
+        
+        let angleRadians = degToRad((360 - needleAngle) - 90)
+        
+        let needleRadius = (self.positionSize * Double(maxSize))
+        
+        var xPoint: Double
+        var yPoint: Double
+        
+        if (self.positionSize == 0.35 && self.needleAngle == 0.0) {
+            xPoint = xCenter
+            yPoint = yCenter
         } else {
-            let xCenter = Double(self.frame.width / 2)
-            let yCenter = Double(self.frame.height / 2)
-            
-            let angleRadians = degToRad((360 - needleAngle) - 90)
-            
-            let needleRadius = (self.positionSize * Double(maxSize))
-            let xPoint = xCenter + (needleRadius * sin(angleRadians))
-            let yPoint = yCenter + (needleRadius * cos(angleRadians))
-            
-            let dimention = self.frame.width * 0.1
-            
-            let needle = UIBezierPath()
-            
-            
-            needle.addArc(withCenter: CGPoint(x: xPoint, y: yPoint), radius: CGFloat(self.frame.width * 0.05), startAngle: 0.0, endAngle: (2 * CGFloat.pi), clockwise: true)
-            
-            needle.lineWidth = 10
-            
-            UIColor.flatBlack.setFill()
-            UIColor.flatWhiteDark.setStroke()
-            
-            needle.stroke()
-            needle.fill()
+            xPoint = xCenter + (needleRadius * sin(angleRadians))
+            yPoint = yCenter + (needleRadius * cos(angleRadians))
         }
+        
+        let needle = UIBezierPath()
+        
+        needle.addArc(withCenter: CGPoint(x: xPoint, y: yPoint), radius: CGFloat(self.frame.width * 0.05), startAngle: 0.0, endAngle: (2 * CGFloat.pi), clockwise: true)
+        
+        needle.lineWidth = 10
+        
+        UIColor.flatBlack.setFill()
+        UIColor.flatWhiteDark.setStroke()
+        
+        needle.stroke()
+        needle.fill()
     }
     
     func rotate(_ angle:Double) {
