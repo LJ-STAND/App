@@ -70,7 +70,9 @@ extension BluetoothController: BluetoothSerialDelegate {
             let strToProcess = match.replacingOccurrences(of: "-", with: "")
             
             if bluetoothDebug {
-                MKULog.shared.debug("[BLUETOOTH][SERIAL] Processing: \(strToProcess)")
+                MKUAsync.background {
+                    MKULog.shared.debug("[BLUETOOTH][SERIAL] Processing: \(strToProcess)")
+                }
             }
         
             let processed = processString(str: strToProcess)
@@ -78,7 +80,9 @@ extension BluetoothController: BluetoothSerialDelegate {
             let robot = processed.0
             
             if bluetoothDebug {
-                MKULog.shared.debug(processed)
+                MKUAsync.background {
+                    MKULog.shared.debug(processed)
+                }
             }
             
             switch processed.1 {
@@ -147,7 +151,6 @@ extension BluetoothController: BluetoothSerialDelegate {
                 
             case .robotPoisition:
                 let positionString = processed.2
-                
                 let items = positionString.components(separatedBy: ",")
                 
                 guard let angle = Double(items[0]) else {

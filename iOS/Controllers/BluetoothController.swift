@@ -118,9 +118,11 @@ class BluetoothController {
     
     fileprivate func debugBluetooth(message: String) {
         if self.bluetoothDebug == true {
-            MKULog.shared.debug(message)
-            MKULog.shared.debug(["Connected: \(self.connected)", "Override: \(self.overrideConnect)", "Peripherals: \(self.peripherals)"])
-            MKULog.shared.mark()
+            MKUAsync.background {
+                MKULog.shared.debug(message)
+                MKULog.shared.debug(["Connected: \(self.connected)", "Override: \(self.overrideConnect)", "Peripherals: \(self.peripherals)"])
+                MKULog.shared.mark()
+            }
         }
     }
 }
