@@ -47,15 +47,16 @@ class MenuTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
         if indexPath.row == 0 {
             //Close
-            (UIApplication.shared.delegate as! AppDelegate).viewManager?.clearView()
-            (UIApplication.shared.delegate as! AppDelegate).changeNavBarTitle("")
+            delegate.viewManager?.clearView()
+            delegate.changeNavBarTitle("")
         } else {
             let viewName = viewNames[indexPath.row]
-            (UIApplication.shared.delegate as! AppDelegate).viewManager?.clearView()
-            (UIApplication.shared.delegate as! AppDelegate).viewManager?.changeView(viewName)
-            (UIApplication.shared.delegate as! AppDelegate).changeNavBarTitle(viewName)
+            delegate.viewManager?.clearView()
+            delegate.viewManager?.changeView(viewName)
+            delegate.changeNavBarTitle(viewName)
 
         }
         self.slideMenuController()?.closeLeft()
