@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Layers
+//  LJ STAND
 //
 //  Created by Lachlan Grant on 10/10/16
 //  Copyright (c) 2016 Lachlan Grant. All rights reserved.
@@ -59,7 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setUpNotifications() {
-        //TODO: This might not be needed
         let selector = #selector(AppDelegate.orientationDidChange)
         let notifName = Notification.Name.UIDeviceOrientationDidChange
         NotificationCenter.default.addObserver(self, selector: selector, name: notifName, object: nil)
