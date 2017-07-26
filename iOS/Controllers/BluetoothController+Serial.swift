@@ -164,16 +164,6 @@ extension BluetoothController: BluetoothSerialDelegate {
                 
                 robotPositionDelegate?.updatePosition(angle: angle, size: size, robot: RobotNumber.noRobot)
                 
-//                guard let positionInt = Int(positionString) else {
-//                    return
-//                }
-//
-//                guard let position = RobotPosition(rawValue: positionInt) else {
-//                    return
-//                }
-//
-//                robotPositionDelegate?.updatePosition(position: position, robot: robot)
-                
             case .orbitAngle:
                 let angle = processed.2
                 
