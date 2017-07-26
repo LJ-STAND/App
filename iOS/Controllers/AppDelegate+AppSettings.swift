@@ -19,5 +19,9 @@ extension AppDelegate: AppSettingsDelegate {
         get {
             return defaults.bool(forKey: DefaultKeys.showLog)
         }
+        
+        set {
+            defaults.set(newValue, forKey: DefaultKeys.showLog)
+        }
     }
 }

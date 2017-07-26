@@ -46,6 +46,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         BluetoothController.shared.messageDelegate = self
         BluetoothController.shared.bluetoothDebug = defaults.bool(forKey: DefaultKeys.bluetoothDebug)
         
+        if MKUAppSettings.shared.hasDebuggerAttached {
+            let origional = appLogEnabled
+            
+            appLogEnabled = true
+            setUpWindows()
+            
+            appLogEnabled = origional
+        }
+        
         if UIDevice.current.isSimulator {
             BluetoothController.shared.overrideConnect = true
             BluetoothController.shared.connected = true
